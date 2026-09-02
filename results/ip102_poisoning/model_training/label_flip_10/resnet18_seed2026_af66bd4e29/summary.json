@@ -1,0 +1,229 @@
+{
+  "dataset": "label_flip_10",
+  "status": "COMPLETE",
+  "protocol": {
+    "dataset": "label_flip_10",
+    "seed": 2026,
+    "epochs": 20,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "pretrained": true,
+    "amp": true,
+    "max_train_samples": null,
+    "max_eval_samples": null,
+    "architecture": "resnet18",
+    "selected_labels": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ],
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "train_transform": "Compose(\n    RandomResizedCrop(size=(224, 224), scale=(0.75, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=True)\n    RandomHorizontalFlip(p=0.5)\n    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)\n    ColorJitter(brightness=(0.85, 1.15), contrast=(0.85, 1.15), saturation=(0.9, 1.1), hue=None)\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)",
+    "evaluation_transform": "Compose(\n    Resize(size=256, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)"
+  },
+  "protocol_hash": "af66bd4e29ad5c1f113e1a3c7478256d97dd82af0f11b625112e21ec9e2e6466",
+  "data_protocol": "D1-file-split-v1",
+  "trainer_sha256": "f5587340e50c02a32842611b9aa4a7a999c9c976b8e75b3412cb5b52e823ca53",
+  "manifest": "/mnt/e/研究生/高级计算机项目/data/ip102_poisoning/manifests/label_flip_10.csv",
+  "manifest_sha256": "a0af3b6102d2e4522abe9f3551597918d249a979ea40dcd59137b1b8fa54da9f",
+  "validation_split_sha256": "aedbc67be139ed92e5b39b590ed3fbe539eb6edd7adb06e5550ec58373d7edf3",
+  "test_split_sha256": "4940457c727c9a889ce22423895ff1cb74715be367e884fbac9093f0651a4960",
+  "pretrained_weights": "IMAGENET1K_V1",
+  "candidate_fields_only": true,
+  "training_samples": 1000,
+  "validation_samples": 366,
+  "test_samples": 1102,
+  "assigned_label_counts": {
+    "0": 198,
+    "1": 215,
+    "3": 187,
+    "4": 207,
+    "5": 193
+  },
+  "best_epoch": 18,
+  "validation": {
+    "accuracy": 0.650273,
+    "balanced_accuracy": 0.635937,
+    "macro_f1": 0.626148,
+    "targeted_0_to_1_rate": 0.117117,
+    "confusion_matrix": [
+      [
+        92,
+        13,
+        2,
+        3,
+        1
+      ],
+      [
+        11,
+        21,
+        13,
+        0,
+        3
+      ],
+      [
+        10,
+        12,
+        54,
+        24,
+        6
+      ],
+      [
+        4,
+        6,
+        9,
+        30,
+        1
+      ],
+      [
+        3,
+        4,
+        1,
+        2,
+        41
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "class_name": "rice leaf roller",
+        "precision": 0.766667,
+        "recall": 0.828829,
+        "f1": 0.796537,
+        "support": 111
+      },
+      "1": {
+        "class_name": "rice leaf caterpillar",
+        "precision": 0.375,
+        "recall": 0.4375,
+        "f1": 0.403846,
+        "support": 48
+      },
+      "3": {
+        "class_name": "asiatic rice borer",
+        "precision": 0.683544,
+        "recall": 0.509434,
+        "f1": 0.583784,
+        "support": 106
+      },
+      "4": {
+        "class_name": "yellow rice borer",
+        "precision": 0.508475,
+        "recall": 0.6,
+        "f1": 0.550459,
+        "support": 50
+      },
+      "5": {
+        "class_name": "rice gall midge",
+        "precision": 0.788462,
+        "recall": 0.803922,
+        "f1": 0.796117,
+        "support": 51
+      }
+    },
+    "loss": 1.384403,
+    "samples": 366
+  },
+  "test": {
+    "accuracy": 0.664247,
+    "balanced_accuracy": 0.665366,
+    "macro_f1": 0.652033,
+    "targeted_0_to_1_rate": 0.125373,
+    "confusion_matrix": [
+      [
+        261,
+        42,
+        14,
+        5,
+        13
+      ],
+      [
+        37,
+        86,
+        13,
+        4,
+        7
+      ],
+      [
+        40,
+        37,
+        167,
+        56,
+        16
+      ],
+      [
+        12,
+        12,
+        28,
+        94,
+        6
+      ],
+      [
+        10,
+        9,
+        6,
+        3,
+        124
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "class_name": "rice leaf roller",
+        "precision": 0.725,
+        "recall": 0.779104,
+        "f1": 0.751079,
+        "support": 335
+      },
+      "1": {
+        "class_name": "rice leaf caterpillar",
+        "precision": 0.462366,
+        "recall": 0.585034,
+        "f1": 0.516517,
+        "support": 147
+      },
+      "3": {
+        "class_name": "asiatic rice borer",
+        "precision": 0.732456,
+        "recall": 0.528481,
+        "f1": 0.613971,
+        "support": 316
+      },
+      "4": {
+        "class_name": "yellow rice borer",
+        "precision": 0.580247,
+        "recall": 0.618421,
+        "f1": 0.598726,
+        "support": 152
+      },
+      "5": {
+        "class_name": "rice gall midge",
+        "precision": 0.746988,
+        "recall": 0.815789,
+        "f1": 0.779874,
+        "support": 152
+      }
+    },
+    "loss": 1.343532,
+    "samples": 1102
+  },
+  "checkpoint": "/home/anima/s6-training-artifacts/checkpoints/label_flip_10/resnet18_seed2026_af66bd4e29/best.pt",
+  "tensorboard": "/home/anima/s6-training-artifacts/tensorboard/label_flip_10/resnet18_seed2026_af66bd4e29",
+  "result_dir": "/mnt/e/研究生/高级计算机项目/results/ip102_poisoning/model_training/label_flip_10/resnet18_seed2026_af66bd4e29",
+  "elapsed_seconds": 53.06,
+  "environment": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.13.0+cu130",
+    "torchvision": "0.28.0+cu130",
+    "device": "cuda",
+    "cuda_runtime": "13.0",
+    "cudnn": 92000,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "compute_capability": "12.0",
+    "gpu_memory_gib": 7.96
+  }
+}

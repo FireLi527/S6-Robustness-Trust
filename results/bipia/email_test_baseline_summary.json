@@ -1,0 +1,17 @@
+{
+  "baseline_warning": "Rule-based baseline only; independent authorisation and least privilege are still required.",
+  "attacked_samples": 11250,
+  "clean_samples": 50,
+  "attack_detection_rate": 0.9347,
+  "clean_allow_rate": 0.98,
+  "false_positive_rate": 0.02,
+  "attacked_decisions": {
+    "BLOCK": 6600,
+    "REVIEW": 3915,
+    "ALLOW": 735
+  },
+  "clean_decisions": {
+    "ALLOW": 49,
+    "REVIEW": 1
+  }
+}

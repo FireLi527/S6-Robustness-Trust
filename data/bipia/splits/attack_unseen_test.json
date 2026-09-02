@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "split": "unseen_test",
+  "source_bipia_split": "test",
+  "selection_policy": "all BIPIA test categories",
+  "categories": [
+    "Task Automation",
+    "Business Intelligence",
+    "Conversational Agent",
+    "Research Assistance",
+    "Sentiment Analysis",
+    "Substitution Ciphers",
+    "Base Encoding",
+    "Reverse Text",
+    "Emoji Substitution",
+    "Language Translation",
+    "Information Dissemination",
+    "Marketing & Advertising",
+    "Entertainment",
+    "Scams & Fraud",
+    "Misinformation & Propaganda"
+  ],
+  "attacks": [
+    {
+      "attack_name": "Task Automation-0",
+      "category": "Task Automation",
+      "variant": 0,
+      "attack_text_sha256": "7e0c99535970d21257be81aab7bf9ccc071bf586f5e05af43f5c9bd18fc9bb36"
+    },
+    {
+      "attack_name": "Task Automation-1",
+      "category": "Task Automation",
+      "variant": 1,
+      "attack_text_sha256": "49ff7876065b9e62de15aa56ad96ac1c6a17178a9f630242bfa7597daac1eb4e"
+    },
+    {
+      "attack_name": "Task Automation-2",
+      "category": "Task Automation",
+      "variant": 2,
+      "attack_text_sha256": "b6f823a7cd087f56fa5c51c9c3279f737ebea106247c806730071e76f3811474"
+    },
+    {
+      "attack_name": "Task Automation-3",
+      "category": "Task Automation",
+      "variant": 3,
+      "attack_text_sha256": "92e09194a7ae89a909b630b49d2ba25ce2c2969f4d71dc6d43eecd56c4dfc9b4"
+    },
+    {
+      "attack_name": "Task Automation-4",
+      "category": "Task Automation",
+      "variant": 4,
+      "attack_text_sha256": "307bd7647ad280a7134129de23cea46984631c6afbc5edccf5110d9d012a7e98"
+    },
+    {
+      "attack_name": "Business Intelligence-0",
+      "category": "Business Intelligence",
+      "variant": 0,
+      "attack_text_sha256": "f45a192182631db2d958d109c07ec184d82830da98a1cbb23ab48f1f5c3477b9"
+    },
+    {
+      "attack_name": "Business Intelligence-1",
+      "category": "Business Intelligence",
+      "variant": 1,
+      "attack_text_sha256": "532a1b9355960ff8bbddca289048a956588f87b386396074cc19c3a8c022ffd1"
+    },
+    {
+      "attack_name": "Business Intelligence-2",
+      "category": "Business Intelligence",
+      "variant": 2,
+      "attack_text_sha256": "e93a48baac0c54fc7a1ab9efe1786ffdf25bf3d0a28a322b947cdea3411057e7"
+    },
+    {
+      "attack_name": "Business Intelligence-3",
+      "category": "Business Intelligence",
+      "variant": 3,
+      "attack_text_sha256": "73f4199c0babfc97b834c54932e2f2eccbce1f7782776b7fbcb47287b70dd9a1"
+    },
+    {
+      "attack_name": "Business Intelligence-4",
+      "category": "Business Intelligence",
+      "variant": 4,
+      "attack_text_sha256": "912e377fec6e4e02cb8e1d3890a134403c082e33b05c60ac1865d1f4991ba6bf"
+    },
+    {
+      "attack_name": "Conversational Agent-0",
+      "category": "Conversational Agent",
+      "variant": 0,
+      "attack_text_sha256": "93c975a15ecc182ba41b2fe05cce1b5f6a0c8b9a15d3aa44a5b95a8659fbb342"
+    },
+    {
+      "attack_name": "Conversational Agent-1",
+      "category": "Conversational Agent",
+      "variant": 1,
+      "attack_text_sha256": "b09a3728faeb6d320ca70c4ec29084dc9e302854c508a9b16291b4f5885b923b"
+    },
+    {
+      "attack_name": "Conversational Agent-2",
+      "category": "Conversational Agent",
+      "variant": 2,
+      "attack_text_sha256": "51d679f4e363cbfe7d18d201655e729cdaa22788a11f24ee0753e851d624906d"
+    },
+    {
+      "attack_name": "Conversational Agent-3",
+      "category": "Conversational Agent",
+      "variant": 3,
+      "attack_text_sha256": "3b97e4beba5923b26b7cddcf60d0d2294c9f95dc73675671b21467ef5d679fcf"
+    },
+    {
+      "attack_name": "Conversational Agent-4",
+      "category": "Conversational Agent",
+      "variant": 4,
+      "attack_text_sha256": "55e0adbce9716242dc2d0a9d49e6f640e6c863a8860b0eaaed7ea51f14778dc0"
+    },
+    {
+      "attack_name": "Research Assistance-0",
+      "category": "Research Assistance",
+      "variant": 0,
+      "attack_text_sha256": "ea4802a85f18431f9ca7a46831fd04ea33c44663274c3a278220ea642fbf1f1b"
+    },
+    {
+      "attack_name": "Research Assistance-1",
+      "category": "Research Assistance",
+      "variant": 1,
+      "attack_text_sha256": "03e8be7db02ee628d01ad9f474a894f1bfe4327adf60d43d6c5bcaece2ca5eed"
+    },
+    {
+      "attack_name": "Research Assistance-2",
+      "category": "Research Assistance",
+      "variant": 2,
+      "attack_text_sha256": "026c7274c144199a4594520c4cf519ef66c05541a5dc0ffbd6ef06e3df458b16"
+    },
+    {
+      "attack_name": "Research Assistance-3",
+      "category": "Research Assistance",
+      "variant": 3,
+      "attack_text_sha256": "f6cf9c30ea6fd924db61899fa44316d47770f71d26b07c2272cdf2fe056405b0"
+    },
+    {
+      "attack_name": "Research Assistance-4",
+      "category": "Research Assistance",
+      "variant": 4,
+      "attack_text_sha256": "85865c89ca4e91aa73a5ba60fbc8abf6f136aaed08eff355e6f3a287d97086ae"
+    },
+    {
+      "attack_name": "Sentiment Analysis-0",
+      "category": "Sentiment Analysis",
+      "variant": 0,
+      "attack_text_sha256": "32fd2f830022a299267d33aa871c94e40d07cf2214f96777dae58954e73f2e49"
+    },
+    {
+      "attack_name": "Sentiment Analysis-1",
+      "category": "Sentiment Analysis",
+      "variant": 1,
+      "attack_text_sha256": "4c573bdd0927417157d86582a1ab37b175745b539f2529da8a95061b849218dd"
+    },
+    {
+      "attack_name": "Sentiment Analysis-2",
+      "category": "Sentiment Analysis",
+      "variant": 2,
+      "attack_text_sha256": "074132535b029fbe012bec849fa724249a609357c5b42f6ba74290801ff289b5"
+    },
+    {
+      "attack_name": "Sentiment Analysis-3",
+      "category": "Sentiment Analysis",
+      "variant": 3,
+      "attack_text_sha256": "46c3479aeaa367abe1b76d573cc5bf4a9b52d8e2c49d8694c79534a5180620b2"
+    },
+    {
+      "attack_name": "Sentiment Analysis-4",
+      "category": "Sentiment Analysis",
+      "variant": 4,
+      "attack_text_sha256": "82ab1bf056146083e5bb85376ffe19a200f6d1ea284d875cf310d81ee1349f9e"
+    },
+    {
+      "attack_name": "Substitution Ciphers-0",
+      "category": "Substitution Ciphers",
+      "variant": 0,
+      "attack_text_sha256": "1f90bf012d3285ab037005ca37870a0b8863c2b987ad7ec80481d24c92db0353"
+    },
+    {
+      "attack_name": "Substitution Ciphers-1",
+      "category": "Substitution Ciphers",
+      "variant": 1,
+      "attack_text_sha256": "66d018614df9cf077063994b539f503dc17234821dff0180f4765ad1fd96a13a"
+    },
+    {
+      "attack_name": "Substitution Ciphers-2",
+      "category": "Substitution Ciphers",
+      "variant": 2,
+      "attack_text_sha256": "08efd14a3ea8c318612e512a5af422820369f53cbf13e2a794d746638c60f139"
+    },
+    {
+      "attack_name": "Substitution Ciphers-3",
+      "category": "Substitution Ciphers",
+      "variant": 3,
+      "attack_text_sha256": "8db32c45ecd12c9ef84b4a0e7a4f3b59af7965b622d4053659500c1b3f415c16"
+    },
+    {
+      "attack_name": "Substitution Ciphers-4",
+      "category": "Substitution Ciphers",
+      "variant": 4,
+      "attack_text_sha256": "348709a0edef4df228feb6d8cf4fcfce0b0be2156fa1fd8b593f083b26840ebf"
+    },
+    {
+      "attack_name": "Base Encoding-0",
+      "category": "Base Encoding",
+      "variant": 0,
+      "attack_text_sha256": "304ea01cf705c80e80c20588cb3d55dc3d6eacaf322196642dce7c8e49889944"
+    },
+    {
+      "attack_name": "Base Encoding-1",
+      "category": "Base Encoding",
+      "variant": 1,
+      "attack_text_sha256": "bed187dd4be3542d5b6ff84136db054045ea7fa5c7efcaf18a932b059fdf9ec2"
+    },
+    {
+      "attack_name": "Base Encoding-2",
+      "category": "Base Encoding",
+      "variant": 2,
+      "attack_text_sha256": "40806620168d63ec9a2e866a6547671bbdbb317de33661693f2b28c09afee626"
+    },
+    {
+      "attack_name": "Base Encoding-3",
+      "category": "Base Encoding",
+      "variant": 3,
+      "attack_text_sha256": "166c20628680bd026a6c16ce51b54877254ac538fc2c1eeea8bffae6ee04161a"
+    },
+    {
+      "attack_name": "Base Encoding-4",
+      "category": "Base Encoding",
+      "variant": 4,
+      "attack_text_sha256": "339bf2df375966bba7f7ba4f4ea64e1673b43cb71282b7a97a125cf7f9c153cd"
+    },
+    {
+      "attack_name": "Reverse Text-0",
+      "category": "Reverse Text",
+      "variant": 0,
+      "attack_text_sha256": "44bd50840d4c4ebe964663733c91b57921e33fc1e5261775809f9ac8cde52edb"
+    },
+    {
+      "attack_name": "Reverse Text-1",
+      "category": "Reverse Text",
+      "variant": 1,
+      "attack_text_sha256": "0d2214a3a41a8e89295fba920375d1937f907899807a17e498446bf27372c914"
+    },
+    {
+      "attack_name": "Reverse Text-2",
+      "category": "Reverse Text",
+      "variant": 2,
+      "attack_text_sha256": "2f7da262af2747743b7e46f04a10820e2fd7c32f6051d7f1d3f59bda30edbfdb"
+    },
+    {
+      "attack_name": "Reverse Text-3",
+      "category": "Reverse Text",
+      "variant": 3,
+      "attack_text_sha256": "3c9ee1319a44d9c329d989009ea5d1d9989ee8b4aef52cbac54bc3074e68917a"
+    },
+    {
+      "attack_name": "Reverse Text-4",
+      "category": "Reverse Text",
+      "variant": 4,
+      "attack_text_sha256": "46651249e498d18f2b1c097e4dca23e9f854a7e508cbcac6df300c52aeeb0e90"
+    },
+    {
+      "attack_name": "Emoji Substitution-0",
+      "category": "Emoji Substitution",
+      "variant": 0,
+      "attack_text_sha256": "e844b830bcca9977ed26498fd70d78c5ce2ec104ed11d8250ec364af11bfb1d7"
+    },
+    {
+      "attack_name": "Emoji Substitution-1",
+      "category": "Emoji Substitution",
+      "variant": 1,
+      "attack_text_sha256": "d2ab89b1767e6dc680ae9344791a551b72922253a8975ebbb72a618fbc496a73"
+    },
+    {
+      "attack_name": "Emoji Substitution-2",
+      "category": "Emoji Substitution",
+      "variant": 2,
+      "attack_text_sha256": "aa9bf01763c9b354deca5b084474e8389b8ce7113676fe39e0f0bea65f1c210d"
+    },
+    {
+      "attack_name": "Emoji Substitution-3",
+      "category": "Emoji Substitution",
+      "variant": 3,
+      "attack_text_sha256": "85994ec6ffd5b41d083360701c200bdd8523b38628250fcce3872f871493af4b"
+    },
+    {
+      "attack_name": "Emoji Substitution-4",
+      "category": "Emoji Substitution",
+      "variant": 4,
+      "attack_text_sha256": "1855a95d7aedcd099a84b2e4afe93436f6ea9f235ea63fe6d66e71fdbcc9ac23"
+    },
+    {
+      "attack_name": "Language Translation-0",
+      "category": "Language Translation",
+      "variant": 0,
+      "attack_text_sha256": "788e3e3ca92ef3a45d9f5444e78cee5c0934a69085eceb728441326d9862213e"
+    },
+    {
+      "attack_name": "Language Translation-1",
+      "category": "Language Translation",
+      "variant": 1,
+      "attack_text_sha256": "07287490acbc7acc6c8c6aae7f86edbe6c8a7e254cfa998ffadf4ddf8c615028"
+    },
+    {
+      "attack_name": "Language Translation-2",
+      "category": "Language Translation",
+      "variant": 2,
+      "attack_text_sha256": "540c3afc37322143adb7e6e62ecfe5f0305ecf8614f4401483680fa83ec38c7b"
+    },
+    {
+      "attack_name": "Language Translation-3",
+      "category": "Language Translation",
+      "variant": 3,
+      "attack_text_sha256": "7185d5c4508d30378f6476879cfb4529dcfc884dc709fcc6756be2b26166a360"
+    },
+    {
+      "attack_name": "Language Translation-4",
+      "category": "Language Translation",
+      "variant": 4,
+      "attack_text_sha256": "22738c1fea4e93dcdb840e98548fa0a92a1b09d1fa9a1d3c8f25a9456f10e89c"
+    },
+    {
+      "attack_name": "Information Dissemination-0",
+      "category": "Information Dissemination",
+      "variant": 0,
+      "attack_text_sha256": "15b1b191893b8add7c54e13f3334c612ed89ee1d72c2403aee58c20c69ae12d6"
+    },
+    {
+      "attack_name": "Information Dissemination-1",
+      "category": "Information Dissemination",
+      "variant": 1,
+      "attack_text_sha256": "0118ea57f4c59b7b452207ad74355d0a1c1216726b855b58cdcf3e0908af2878"
+    },
+    {
+      "attack_name": "Information Dissemination-2",
+      "category": "Information Dissemination",
+      "variant": 2,
+      "attack_text_sha256": "63115efaffcb1656157e3490b2b54434ccd0c705f2fdeb39e1478fa7a0e88e0c"
+    },
+    {
+      "attack_name": "Information Dissemination-3",
+      "category": "Information Dissemination",
+      "variant": 3,
+      "attack_text_sha256": "42ab56e4c888ec4d6bd610440560d75b08c556941217c69dc13d151108670091"
+    },
+    {
+      "attack_name": "Information Dissemination-4",
+      "category": "Information Dissemination",
+      "variant": 4,
+      "attack_text_sha256": "35ebf68033fa534282085be4589e8731c2f75024fccd4c6fda19e1cb36cc3ba9"
+    },
+    {
+      "attack_name": "Marketing & Advertising-0",
+      "category": "Marketing & Advertising",
+      "variant": 0,
+      "attack_text_sha256": "cf9555a6dc885275f26b545b39006f13eef99a6976adc976f3e220913217b181"
+    },
+    {
+      "attack_name": "Marketing & Advertising-1",
+      "category": "Marketing & Advertising",
+      "variant": 1,
+      "attack_text_sha256": "7b90de4c8128290fdba463abd2df107237d8847699653551babd422c50808c89"
+    },
+    {
+      "attack_name": "Marketing & Advertising-2",
+      "category": "Marketing & Advertising",
+      "variant": 2,
+      "attack_text_sha256": "480153b57002d91a673ece5cb69421212743b7dcbf9a00a03361f66384fda735"
+    },
+    {
+      "attack_name": "Marketing & Advertising-3",
+      "category": "Marketing & Advertising",
+      "variant": 3,
+      "attack_text_sha256": "673207dba7bc929cfa5b4e5a1341973199b483f8b1dbf64f01d086e3f9944e3a"
+    },
+    {
+      "attack_name": "Marketing & Advertising-4",
+      "category": "Marketing & Advertising",
+      "variant": 4,
+      "attack_text_sha256": "e13a6c1f6236dca9f25b2eb0aaf65315795008ec459f4641ecb62365004998e9"
+    },
+    {
+      "attack_name": "Entertainment-0",
+      "category": "Entertainment",
+      "variant": 0,
+      "attack_text_sha256": "91dee690002bd3266bc754766cc66d75509093826c13f7b2b63dd5e210de3432"
+    },
+    {
+      "attack_name": "Entertainment-1",
+      "category": "Entertainment",
+      "variant": 1,
+      "attack_text_sha256": "b8483c41e11489b146dc5ff31a9887eba5c53490c65d37767d077bcbfddbcd3b"
+    },
+    {
+      "attack_name": "Entertainment-2",
+      "category": "Entertainment",
+      "variant": 2,
+      "attack_text_sha256": "c21c26ebf98e443756f579b7fef69ce97fd6620f330c7d85d8432cb39c12d359"
+    },
+    {
+      "attack_name": "Entertainment-3",
+      "category": "Entertainment",
+      "variant": 3,
+      "attack_text_sha256": "58a507995e2a465f30af38296c10d2535548c807e67da82d956edd7862de470e"
+    },
+    {
+      "attack_name": "Entertainment-4",
+      "category": "Entertainment",
+      "variant": 4,
+      "attack_text_sha256": "a077a04bb6c5cdd4ead0486411acceaed6d6f883a2ffb87ecb6b28f3d4bc0218"
+    },
+    {
+      "attack_name": "Scams & Fraud-0",
+      "category": "Scams & Fraud",
+      "variant": 0,
+      "attack_text_sha256": "6a6191352574a445044f1ce70790397738cce564fada203f7db5e43086b0f7e1"
+    },
+    {
+      "attack_name": "Scams & Fraud-1",
+      "category": "Scams & Fraud",
+      "variant": 1,
+      "attack_text_sha256": "d6c8dd59226ee5599575935533d92a56bbc96e064c66d9294a1f5e9c92602399"
+    },
+    {
+      "attack_name": "Scams & Fraud-2",
+      "category": "Scams & Fraud",
+      "variant": 2,
+      "attack_text_sha256": "e0f3f15fa6721c957b931398bef78662bb6885e51a45e65b4ec19db00c9f4bf6"
+    },
+    {
+      "attack_name": "Scams & Fraud-3",
+      "category": "Scams & Fraud",
+      "variant": 3,
+      "attack_text_sha256": "1926f794f3fa6424c273350e45292225b57b7e33a6fbfed2dbd002b965746c4f"
+    },
+    {
+      "attack_name": "Scams & Fraud-4",
+      "category": "Scams & Fraud",
+      "variant": 4,
+      "attack_text_sha256": "f3c38dccb804c97832c48fa38c9f5c81d0fcf0fc894a20daccd701777e0d0cec"
+    },
+    {
+      "attack_name": "Misinformation & Propaganda-0",
+      "category": "Misinformation & Propaganda",
+      "variant": 0,
+      "attack_text_sha256": "3c2a402928eaccfee89263169144b6e9225fe1c61de8b451880ffc10470dcdbe"
+    },
+    {
+      "attack_name": "Misinformation & Propaganda-1",
+      "category": "Misinformation & Propaganda",
+      "variant": 1,
+      "attack_text_sha256": "ca48ba78766ff972efbd0ffec7ddb379ee80e80451f797f76e3f46834faf189d"
+    },
+    {
+      "attack_name": "Misinformation & Propaganda-2",
+      "category": "Misinformation & Propaganda",
+      "variant": 2,
+      "attack_text_sha256": "65c5f67a831ca294679cc4a6b836751ece2da3b0f458151c0a49bf464056ec31"
+    },
+    {
+      "attack_name": "Misinformation & Propaganda-3",
+      "category": "Misinformation & Propaganda",
+      "variant": 3,
+      "attack_text_sha256": "2f591df10b2a6ad1dbab67968cd471d1db1570b72a2f8e6d0f7c43330ecdb9ae"
+    },
+    {
+      "attack_name": "Misinformation & Propaganda-4",
+      "category": "Misinformation & Propaganda",
+      "variant": 4,
+      "attack_text_sha256": "5529462ba8446f3728751884a55e24deb86eacb3f19cb8e15558a81448df48f0"
+    }
+  ]
+}

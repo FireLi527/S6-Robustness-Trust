@@ -1,0 +1,75 @@
+{
+  "detector": {
+    "detector": "s6-semantic-label-anomaly",
+    "version": "0.4.0",
+    "config_hash": "f92d336194e108d1c94caa5602be497cc92110b898493cde3c69f49ec6e24855"
+  },
+  "datasets": [
+    {
+      "dataset": "clean_subset",
+      "samples": 1000,
+      "poisoned_samples": 0,
+      "decision_counts": {
+        "REVIEW": 234,
+        "QUARANTINE": 104,
+        "ALLOW": 662
+      },
+      "mean_risk_score": 0.5302,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "clean_false_positive_rate": 0.338,
+      "roc_auc": null
+    },
+    {
+      "dataset": "label_flip_05",
+      "samples": 1000,
+      "poisoned_samples": 50,
+      "decision_counts": {
+        "REVIEW": 245,
+        "QUARANTINE": 108,
+        "ALLOW": 647
+      },
+      "mean_risk_score": 0.5363,
+      "precision": 0.102,
+      "recall": 0.72,
+      "f1": 0.1787,
+      "clean_false_positive_rate": 0.3337,
+      "roc_auc": 0.7399
+    },
+    {
+      "dataset": "label_flip_10",
+      "samples": 1000,
+      "poisoned_samples": 100,
+      "decision_counts": {
+        "REVIEW": 262,
+        "QUARANTINE": 118,
+        "ALLOW": 620
+      },
+      "mean_risk_score": 0.5623,
+      "precision": 0.1789,
+      "recall": 0.68,
+      "f1": 0.2833,
+      "clean_false_positive_rate": 0.3467,
+      "roc_auc": 0.78
+    },
+    {
+      "dataset": "targeted_0_to_1",
+      "samples": 1000,
+      "poisoned_samples": 40,
+      "decision_counts": {
+        "QUARANTINE": 116,
+        "ALLOW": 646,
+        "REVIEW": 238
+      },
+      "mean_risk_score": 0.5439,
+      "precision": 0.0395,
+      "recall": 0.35,
+      "f1": 0.0711,
+      "clean_false_positive_rate": 0.3542,
+      "roc_auc": 0.5384
+    }
+  ],
+  "flagged_sample_findings": 1425,
+  "important_limitation": "The classifier and centroid signals are fit on each manifest's own candidate labels, so at very high poison rates the reference statistics themselves become contaminated. This detector does not require a trusted baseline manifest for its per-sample decisions, unlike integrity_detector.py, but its accuracy has only been measured up to a 10% random-flip and a 20%-of-source-class targeted flip rate. Embeddings are now projected with an NCA (NeighborhoodComponentsAnalysis) fit on clean_subset.csv's trusted labels (out-of-fold across 5 folds), so the projection itself does rely on that trusted manifest; it has only been fit and evaluated on this fixed 1,000-image/5-class benchmark, so its generalization to genuinely new, unseen images of these classes is untested."
+}

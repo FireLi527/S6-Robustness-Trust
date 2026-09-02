@@ -1,0 +1,5 @@
+﻿dataset,samples,poisoned_samples,decision_counts,mean_risk_score,precision,recall,f1,clean_false_positive_rate,roc_auc
+clean_subset,1000,0,"{""REVIEW"": 234, ""QUARANTINE"": 104, ""ALLOW"": 662}",0.5302,,,,0.338,
+label_flip_05,1000,50,"{""REVIEW"": 245, ""QUARANTINE"": 108, ""ALLOW"": 647}",0.5363,0.102,0.72,0.1787,0.3337,0.7399
+label_flip_10,1000,100,"{""REVIEW"": 262, ""QUARANTINE"": 118, ""ALLOW"": 620}",0.5623,0.1789,0.68,0.2833,0.3467,0.78
+targeted_0_to_1,1000,40,"{""QUARANTINE"": 116, ""ALLOW"": 646, ""REVIEW"": 238}",0.5439,0.0395,0.35,0.0711,0.3542,0.5384

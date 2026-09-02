@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>S6 训练数据风险控制台</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      --bg:#071017; --surface:#0c171f; --raised:#101e28; --soft:#13232e;
+      --line:#203440; --line-strong:#31505f; --text:#ecf5f8; --text-soft:#b3c4cc; --muted:#79909c;
+      --accent:#53c7e8; --accent-strong:#82dcf3; --allow:#4fd39a; --allow-soft:#102a24;
+      --review:#f1b455; --review-soft:#2d2414; --block:#ff7a7a; --block-soft:#321b20;
+      --quarantine:#c49aff; --quarantine-soft:#281d38; --radius-lg:18px; --radius-md:12px;
+      --shadow:0 18px 50px rgba(0,0,0,.22);
+    }
+    * { box-sizing:border-box; }
+    [hidden] { display:none!important; }
+    body { margin:0; min-width:320px; background:var(--bg); color:var(--text); line-height:1.5; }
+    button,select { font:inherit; } button { color:inherit; }
+    code { font-family:"Cascadia Code","SFMono-Regular",Consolas,monospace; }
+    .app-shell { width:min(1320px,calc(100% - 40px)); margin:0 auto; padding:24px 0 56px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:72px; margin-bottom:18px; }
+    .brand { display:flex; align-items:center; gap:14px; min-width:0; }
+    .brand-mark { display:grid; place-items:center; width:44px; height:44px; flex:0 0 auto; border:1px solid #35677a; border-radius:12px; color:var(--accent-strong); background:#0c222d; font-size:.82rem; font-weight:800; letter-spacing:.08em; }
+    .eyebrow { margin:0 0 2px; color:var(--accent); font-size:.7rem; font-weight:750; letter-spacing:.13em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:0; font-size:clamp(1.18rem,2vw,1.55rem); line-height:1.25; letter-spacing:-.02em; }
+    h2 { margin-bottom:0; font-size:1.12rem; letter-spacing:-.01em; }
+    h3 { margin-bottom:6px; font-size:.96rem; }
+    .topbar-actions { display:flex; align-items:center; gap:10px; flex:0 0 auto; }
+    .language-toggle { display:flex; align-items:center; gap:2px; padding:3px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .language-button { min-width:36px; height:30px; padding:0 8px; border:0; border-radius:7px; color:var(--muted); background:transparent; cursor:pointer; font-size:.72rem; font-weight:750; }
+    .language-button:hover { color:var(--text-soft); }
+    .language-button[aria-pressed="true"] { color:var(--text); background:var(--soft); }
+    .connection { display:inline-flex; align-items:center; gap:8px; min-height:38px; padding:0 12px; border:1px solid var(--line); border-radius:999px; color:var(--text-soft); background:var(--surface); font-size:.82rem; }
+    .connection-dot { width:8px; height:8px; border-radius:50%; background:var(--review); box-shadow:0 0 0 4px rgba(241,180,85,.1); }
+    .connection.online .connection-dot { background:var(--allow); box-shadow:0 0 0 4px rgba(79,211,154,.1); }
+    .connection.offline .connection-dot { background:var(--block); box-shadow:0 0 0 4px rgba(255,122,122,.1); }
+    .icon-button,.primary-button,.dataset-button,.tab-button,.row-action { border:0; cursor:pointer; }
+    .icon-button { display:grid; place-items:center; width:38px; height:38px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .icon-button:hover { border-color:var(--line-strong); background:var(--raised); }
+    .icon-button svg { width:17px; height:17px; }
+    .status-strip { display:grid; grid-template-columns:repeat(4,1fr); margin-bottom:18px; border:1px solid var(--line); border-radius:var(--radius-md); background:var(--surface); overflow:hidden; }
+    .status-metric { min-width:0; padding:15px 18px; }
+    .status-metric + .status-metric { border-left:1px solid var(--line); }
+    .status-label { display:block; margin-bottom:4px; color:var(--muted); font-size:.74rem; }
+    .status-value { font-size:1.12rem; font-weight:760; letter-spacing:-.02em; }
+    .status-value small { margin-left:5px; color:var(--muted); font-size:.7rem; font-weight:500; }
+    .panel { border:1px solid var(--line); border-radius:var(--radius-lg); background:var(--surface); box-shadow:var(--shadow); overflow:hidden; }
+    .workspace-head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:20px 22px 18px; border-bottom:1px solid var(--line); }
+    .workspace-title { display:flex; align-items:center; gap:12px; min-width:0; }
+    .workspace-title-copy { min-width:0; }
+    .workspace-title-copy p { margin-bottom:0; color:var(--muted); font-size:.78rem; }
+    .workspace-actions { display:flex; align-items:center; gap:10px; }
+    .mobile-select { display:none; min-height:40px; padding:0 32px 0 12px; border:1px solid var(--line-strong); border-radius:9px; color:var(--text); background:var(--raised); }
+    .primary-button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:40px; padding:0 14px; border-radius:9px; color:#06202a; background:var(--accent); font-size:.84rem; font-weight:700; white-space:nowrap; }
+    .primary-button:hover { background:var(--accent-strong); }
+    .primary-button:disabled { cursor:wait; opacity:.65; }
+    .primary-button svg { width:16px; height:16px; }
+    .dataset-switcher { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border-bottom:1px solid var(--line); }
+    .dataset-button { position:relative; min-width:0; padding:14px 18px 15px; text-align:left; background:var(--surface); }
+    .dataset-button::after { content:""; position:absolute; right:16px; bottom:-1px; left:16px; height:2px; background:transparent; }
+    .dataset-button:hover,.dataset-button[aria-pressed="true"] { background:var(--raised); }
+    .dataset-button[aria-pressed="true"]::after { background:var(--accent); }
+    .dataset-name { display:block; overflow:hidden; font-size:.84rem; font-weight:720; text-overflow:ellipsis; white-space:nowrap; }
+    .dataset-meta { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:7px; color:var(--muted); font-size:.72rem; }
+    .badge { display:inline-flex; align-items:center; gap:6px; width:fit-content; min-height:25px; padding:3px 8px; border:1px solid currentColor; border-radius:999px; font-size:.67rem; font-weight:800; letter-spacing:.04em; white-space:nowrap; }
+    .badge::before { content:""; width:5px; height:5px; border-radius:50%; background:currentColor; }
+    .badge.allow { color:var(--allow); background:var(--allow-soft); }
+    .badge.review { color:var(--review); background:var(--review-soft); }
+    .badge.block { color:var(--block); background:var(--block-soft); }
+    .badge.quarantine { color:var(--quarantine); background:var(--quarantine-soft); }
+    .badge.neutral { color:var(--muted); background:var(--soft); }
+    .sample-layout { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(360px,.82fr); min-height:520px; }
+    .image-column { display:grid; grid-template-rows:minmax(420px,1fr) auto; min-width:0; border-right:1px solid var(--line); background:#081219; }
+    .image-stage { position:relative; display:grid; min-height:420px; place-items:center; padding:28px; overflow:hidden; }
+    .image-stage::before,.image-stage::after { content:""; position:absolute; pointer-events:none; }
+    .image-stage::before { inset:20px; border:1px solid rgba(121,144,156,.13); border-radius:12px; }
+    .image-stage::after { width:28px; height:28px; top:20px; left:20px; border-top:1px solid var(--accent); border-left:1px solid var(--accent); border-radius:12px 0 0; opacity:.7; }
+    .image-stage img { position:relative; z-index:1; display:block; max-width:100%; max-height:480px; border-radius:7px; object-fit:contain; box-shadow:0 14px 38px rgba(0,0,0,.35); }
+    .image-status { position:relative; z-index:1; display:grid; justify-items:center; gap:12px; max-width:320px; margin:0; color:var(--muted); text-align:center; font-size:.84rem; }
+    .loader { width:28px; height:28px; border:2px solid var(--line-strong); border-top-color:var(--accent); border-radius:50%; animation:spin .9s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .image-caption { display:flex; align-items:center; justify-content:space-between; gap:14px; min-width:0; min-height:58px; padding:10px 20px; border-top:1px solid var(--line); color:var(--muted); background:var(--surface); font-size:.74rem; }
+    .image-caption code { overflow:hidden; color:var(--text-soft); text-overflow:ellipsis; white-space:nowrap; }
+    .assessment { min-width:0; padding:22px; background:var(--surface); }
+    .assessment-block + .assessment-block { margin-top:20px; padding-top:20px; border-top:1px solid var(--line); }
+    .section-label { display:block; margin-bottom:9px; color:var(--muted); font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .decision-copy { margin:8px 0 13px; color:var(--text-soft); font-size:.82rem; }
+    .label-flow { display:grid; grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr); align-items:stretch; gap:8px; }
+    .label-card { min-width:0; padding:12px; border:1px solid var(--line); border-radius:10px; background:var(--raised); }
+    .label-card.changed { border-color:#7b3e47; background:var(--block-soft); }
+    .label-caption { display:block; margin-bottom:5px; color:var(--muted); font-size:.66rem; }
+    .label-value { display:block; overflow:hidden; font-size:.82rem; text-overflow:ellipsis; white-space:nowrap; }
+    .label-arrow { display:grid; place-items:center; color:var(--muted); }
+    .risk-line { display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+    .risk-value { font-size:1.55rem; font-weight:780; letter-spacing:-.04em; }
+    .risk-track { height:7px; margin:9px 0 12px; overflow:hidden; border-radius:99px; background:var(--soft); }
+    .risk-fill { width:0; height:100%; border-radius:inherit; background:var(--review); transition:width 240ms ease; }
+    .signal-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .signal { min-width:0; padding:10px 11px; border:1px solid var(--line); border-radius:9px; background:var(--raised); }
+    .signal span { display:block; color:var(--muted); font-size:.65rem; }
+    .signal strong { display:block; margin-top:2px; overflow:hidden; font-size:.8rem; text-overflow:ellipsis; white-space:nowrap; }
+    .reason-list { margin:8px 0 0; padding:0; list-style:none; }
+    .reason-list li { position:relative; margin-top:7px; padding-left:15px; color:var(--text-soft); font-size:.79rem; }
+    .reason-list li::before { content:""; position:absolute; top:.62em; left:0; width:5px; height:5px; border-radius:50%; background:var(--review); }
+    details.neighbor-details { margin-top:12px; }
+    details.neighbor-details summary { cursor:pointer; color:var(--accent); font-size:.78rem; }
+    .neighbor-list { display:grid; gap:5px; margin-top:10px; }
+    .neighbor-row { display:grid; grid-template-columns:20px minmax(0,1fr) auto; gap:8px; align-items:center; color:var(--muted); font-size:.7rem; }
+    .neighbor-row code { overflow:hidden; color:var(--text-soft); text-overflow:ellipsis; white-space:nowrap; }
+    .analytics { margin-top:18px; box-shadow:none; }
+    .tabs { display:flex; align-items:center; gap:4px; min-height:56px; padding:8px 12px; border-bottom:1px solid var(--line); overflow-x:auto; }
+    .tab-button { min-height:36px; padding:0 12px; border-radius:8px; color:var(--muted); background:transparent; font-size:.8rem; font-weight:700; white-space:nowrap; }
+    .tab-button:hover { color:var(--text-soft); background:var(--raised); }
+    .tab-button[aria-selected="true"] { color:var(--text); background:var(--soft); }
+    .tab-panel { padding:22px; }
+    .panel-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:16px; }
+    .panel-heading p { margin-bottom:0; color:var(--muted); font-size:.78rem; }
+    .dataset-list { border-top:1px solid var(--line); }
+    .dataset-row { display:grid; grid-template-columns:minmax(190px,1.2fr) minmax(230px,1.6fr) minmax(160px,.8fr) auto; gap:18px; align-items:center; min-height:78px; padding:13px 4px; border-bottom:1px solid var(--line); }
+    .dataset-row-title { display:flex; align-items:center; gap:10px; min-width:0; }
+    .dataset-row-title strong { overflow:hidden; font-size:.84rem; text-overflow:ellipsis; white-space:nowrap; }
+    .dataset-row small { display:block; color:var(--muted); font-size:.69rem; }
+    .semantic-bar { display:flex; height:6px; margin-bottom:7px; overflow:hidden; border-radius:99px; background:var(--soft); }
+    .semantic-bar span { height:100%; } .allow-segment { background:var(--allow); } .review-segment { background:var(--review); } .quarantine-segment { background:var(--quarantine); }
+    .row-action { min-height:34px; padding:0 10px; border-radius:7px; color:var(--accent); background:transparent; font-size:.75rem; font-weight:700; }
+    .row-action:hover { background:var(--raised); }
+    .table-wrap { width:100%; overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:.78rem; }
+    th,td { padding:12px 14px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+    th { color:var(--muted); font-size:.68rem; font-weight:750; letter-spacing:.04em; text-transform:uppercase; }
+    td { color:var(--text-soft); } tbody tr:hover { background:var(--raised); }
+    td:first-child { color:var(--text); font-weight:650; }
+    .count-cluster { display:flex; align-items:center; gap:12px; }
+    .count-item { display:inline-flex; align-items:center; gap:5px; }
+    .count-dot { width:6px; height:6px; border-radius:50%; }
+    .method-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .method-card { padding:18px; border:1px solid var(--line); border-radius:var(--radius-md); background:var(--raised); }
+    .method-card p { margin-bottom:12px; color:var(--text-soft); font-size:.81rem; }
+    .method-card ul { margin:0; padding-left:18px; color:var(--muted); font-size:.77rem; }
+    .method-card li + li { margin-top:5px; }
+    .method-note { margin:14px 0 0; padding:13px 15px; border-left:2px solid var(--review); color:var(--muted); background:var(--review-soft); font-size:.76rem; }
+    .error-banner { position:fixed; right:20px; bottom:20px; z-index:10; max-width:min(480px,calc(100% - 40px)); padding:12px 14px; border:1px solid #773d45; border-radius:10px; color:#ffd3d3; background:#2b171b; box-shadow:var(--shadow); font-size:.8rem; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media(max-width:980px){
+      .app-shell{width:min(100% - 28px,900px)} .dataset-switcher{display:none}.mobile-select{display:block}
+      .sample-layout{grid-template-columns:1fr}.image-column{border-right:0;border-bottom:1px solid var(--line)}
+      .dataset-row{grid-template-columns:minmax(180px,1.1fr) minmax(220px,1.5fr) auto}.dataset-row .dataset-risk{display:none}
+    }
+    @media(max-width:700px){
+      .app-shell{width:min(100% - 20px,620px);padding-top:14px}.topbar{align-items:flex-start}.connection span:last-child{display:none}
+      .status-strip{grid-template-columns:1fr 1fr}.status-metric:nth-child(3){border-left:0;border-top:1px solid var(--line)}.status-metric:nth-child(4){border-top:1px solid var(--line)}
+      .workspace-head{align-items:flex-start;padding:17px}.workspace-title{align-items:flex-start}.workspace-actions{align-items:stretch;flex-direction:column}
+      .mobile-select{width:100%;max-width:190px}.primary-button{min-height:38px}.image-stage{min-height:330px;padding:20px}
+      .image-column{grid-template-rows:minmax(330px,1fr) auto}.assessment,.tab-panel{padding:17px}
+      .dataset-row{grid-template-columns:1fr auto;gap:10px}.dataset-row .dataset-semantic,.dataset-row .dataset-risk{display:none}.method-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:480px){
+      .topbar{flex-wrap:wrap}.brand-mark{width:39px;height:39px}.topbar-actions{gap:6px;margin-left:auto}.connection{width:36px;min-height:36px;padding:0;justify-content:center}.icon-button{width:36px;height:36px}
+      .status-metric{padding:12px}.workspace-head{flex-direction:column}.workspace-actions{width:100%;flex-direction:row}.mobile-select{max-width:none;flex:1;min-width:0}
+      .label-flow{grid-template-columns:1fr}.label-arrow{height:18px;transform:rotate(90deg)}.signal-grid{grid-template-columns:1fr}.image-caption{align-items:flex-start;flex-direction:column;gap:3px}
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark" aria-hidden="true">S6</div><div><p class="eyebrow">Data Integrity Lab</p><h1 data-i18n="appTitle">训练数据风险控制台</h1></div></div>
+      <div class="topbar-actions">
+        <div class="language-toggle" role="group" aria-label="Language / 语言">
+          <button class="language-button" type="button" data-language="zh" aria-pressed="true">中文</button>
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <div class="connection" id="connection-status" title="本地检测服务状态"><span class="connection-dot" aria-hidden="true"></span><span id="connection-text">正在连接</span></div>
+        <button class="icon-button" id="refresh-all" type="button" aria-label="刷新全部检测数据" title="刷新全部检测数据"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg></button>
+      </div>
+    </header>
+
+    <section class="status-strip" aria-label="实验总览">
+      <div class="status-metric"><span class="status-label" data-i18n="candidateDatasets">候选数据集</span><span class="status-value" id="dataset-count">—</span></div>
+      <div class="status-metric"><span class="status-label" data-i18n="scannedSamples">扫描样本</span><span class="status-value" id="sample-count">—</span></div>
+      <div class="status-metric"><span class="status-label" data-i18n="integrityBlocks">完整性阻断</span><span class="status-value" id="blocked-count">—</span></div>
+      <div class="status-metric"><span class="status-label" data-i18n="semanticReview">语义待复核</span><span class="status-value" id="flagged-count">—</span></div>
+    </section>
+
+    <main>
+      <section class="panel" id="sample-panel" aria-labelledby="inspector-title" aria-busy="true">
+        <div class="workspace-head">
+          <div class="workspace-title"><span class="badge neutral" id="dataset-decision">载入中</span><div class="workspace-title-copy"><h2 id="inspector-title" data-i18n="sampleInspector">样本检查器</h2><p id="selected-dataset-meta">正在读取检测结果…</p></div></div>
+          <div class="workspace-actions">
+            <label class="sr-only" for="dataset-select" data-i18n="selectDataset">选择数据集</label>
+            <select class="mobile-select" id="dataset-select"><option value="clean_subset">干净子集</option><option value="label_flip_05">5% 随机翻转</option><option value="label_flip_10">10% 随机翻转</option><option value="targeted_0_to_1">定向 0 → 1</option></select>
+            <button class="primary-button" id="sample-button" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg><span>换一个样本</span></button>
+          </div>
+        </div>
+        <nav class="dataset-switcher" id="dataset-switcher" aria-label="候选数据集"></nav>
+        <div class="sample-layout">
+          <div class="image-column">
+            <div class="image-stage"><img id="pest-image" alt="随机抽取的 IP102 害虫图像" hidden><div class="image-status" id="image-status"><span class="loader" aria-hidden="true"></span><span>正在抽取样本并读取图像…</span></div></div>
+            <div class="image-caption"><span>IP102 / classification</span><code id="sample-id">等待样本</code></div>
+          </div>
+          <aside class="assessment" aria-label="当前样本检测结论">
+            <div class="assessment-block">
+              <span class="section-label" data-i18n="sampleIntegrity">样本级完整性</span><span class="badge neutral" id="sample-integrity-badge">等待检测</span>
+              <p class="decision-copy" id="sample-explanation">载入样本后，将比较可信标签、候选标签与文件哈希。</p>
+              <div class="label-flow"><div class="label-card"><span class="label-caption" data-i18n="trustedLabel">可信标签</span><strong class="label-value" id="original-label">—</strong></div><span class="label-arrow" aria-hidden="true">→</span><div class="label-card" id="assigned-card"><span class="label-caption" data-i18n="candidateLabel">候选训练标签</span><strong class="label-value" id="assigned-label">—</strong></div></div>
+            </div>
+            <div class="assessment-block">
+              <span class="section-label" data-i18n="semanticCheck">内容语义检测</span><div class="risk-line"><span class="badge neutral" id="semantic-decision">等待检测</span><strong class="risk-value" id="semantic-risk-value">—</strong></div>
+              <div class="risk-track" aria-hidden="true"><div class="risk-fill" id="semantic-risk-fill"></div></div>
+              <div class="signal-grid"><div class="signal"><span data-i18n="neighborAgreement">近邻标签一致率</span><strong id="neighbor-agreement">—</strong></div><div class="signal"><span data-i18n="classifierConfidence">分类器置信度</span><strong id="classifier-confidence">—</strong></div><div class="signal"><span data-i18n="centroidDistance">质心距离 Z 值</span><strong id="centroid-distance">—</strong></div><div class="signal"><span data-i18n="fileHash">文件哈希</span><strong id="hash-state">—</strong></div></div>
+              <ul class="reason-list" id="semantic-reasons"></ul>
+              <details class="neighbor-details" id="neighbor-details"><summary data-i18n="neighborEvidence">查看最近邻证据</summary><div class="neighbor-list" id="semantic-neighbors"></div></details>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel analytics" aria-label="检测详情">
+        <div class="tabs" role="tablist" aria-label="检测视图">
+          <button class="tab-button" id="tab-overview" role="tab" aria-controls="panel-overview" aria-selected="true" data-tab="overview" data-i18n="overviewTab">数据集总览</button>
+          <button class="tab-button" id="tab-integrity" role="tab" aria-controls="panel-integrity" aria-selected="false" data-tab="integrity" data-i18n="integrityTab">完整性明细</button>
+          <button class="tab-button" id="tab-semantic" role="tab" aria-controls="panel-semantic" aria-selected="false" data-tab="semantic" data-i18n="semanticTab">语义评估</button>
+          <button class="tab-button" id="tab-method" role="tab" aria-controls="panel-method" aria-selected="false" data-tab="method" data-i18n="methodTab">检测方法</button>
+        </div>
+        <div class="tab-panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+          <div class="panel-heading"><div><h2 data-i18n="overviewTitle">四组候选清单</h2><p data-i18n="overviewDescription">完整性结果与语义异常分布合并展示，点击任意一组继续检查。</p></div></div><div class="dataset-list" id="overview-list"></div>
+        </div>
+        <div class="tab-panel" id="panel-integrity" role="tabpanel" aria-labelledby="tab-integrity" hidden>
+          <div class="panel-heading"><div><h2 data-i18n="integrityTitle">完整性清单对比</h2><p data-i18n="integrityDescription">逐项比较可信基线与候选 manifest 的成员、标签、哈希和类别分布。</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th data-i18n="dataset">数据集</th><th data-i18n="decision">决策</th><th data-i18n="labelChanges">标签变化</th><th data-i18n="hashChanges">哈希变化</th><th data-i18n="missing">缺失</th><th data-i18n="unknown">未知</th><th data-i18n="distributionDrift">分布漂移</th></tr></thead><tbody id="integrity-table"></tbody></table></div>
+        </div>
+        <div class="tab-panel" id="panel-semantic" role="tabpanel" aria-labelledby="tab-semantic" hidden>
+          <div class="panel-heading"><div><h2 data-i18n="semanticTitle">语义异常评估</h2><p data-i18n="semanticDescription">候选标签与图像内容的一致性，以及离线评估指标。</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th data-i18n="dataset">数据集</th><th data-i18n="decisionDistribution">决策分布</th><th data-i18n="meanRisk">平均风险</th><th data-i18n="precision">精确率</th><th data-i18n="recall">召回率</th><th>F1</th><th>ROC-AUC</th><th data-i18n="cleanFpr">干净集 FPR</th></tr></thead><tbody id="semantic-table"></tbody></table></div>
+        </div>
+        <div class="tab-panel" id="panel-method" role="tabpanel" aria-labelledby="tab-method" hidden>
+          <div class="panel-heading"><div><h2 data-i18n="methodTitle">两条相互独立的检测路径</h2><p data-i18n="methodDescription">一条验证“数据是否被改过”，另一条判断“图像内容是否支持候选标签”。</p></div></div>
+          <div class="method-grid">
+            <article class="method-card"><span class="badge block">Integrity</span><h3 data-i18n="integrityMethodTitle">可信清单完整性检查</h3><p data-i18n-html="integrityMethodCopy"><code>integrity_detector.py</code> 将候选 manifest 与可信基线逐行对比；没有可信基线时，这条路径无法工作。</p><ul data-i18n-html="integrityMethodList"><li>核对样本成员、SHA-256 文件哈希与标签</li><li>检测重复 ID、未知样本、缺失样本和类别漂移</li><li>超过阈值时直接阻断训练清单</li></ul></article>
+            <article class="method-card"><span class="badge review">Semantic</span><h3 data-i18n="semanticMethodTitle">图像内容语义检查</h3><p data-i18n-html="semanticMethodCopy"><code>semantic_detector.py</code> 不读取隐藏真值；它组合 CLIP 图像特征、近邻一致率、交叉验证分类器置信度和类别质心距离。</p><ul data-i18n-html="semanticMethodList"><li>CLIP ViT-B/32 使用现成权重，不在当前数据上训练</li><li>NCA 投影只使用可信干净子集标签，并通过 5 折交叉验证隔离样本</li><li>仅下游分类器在候选标签上实时拟合</li></ul></article>
+          </div>
+          <p class="method-note" data-i18n="methodNote">实验限制：当前测量中，NCA 与早期 LDA 投影均未表现出优于原始 CLIP 特征的检测精度。它们保留用于方法研究，不代表性能提升。</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <p class="error-banner" id="error-banner" role="alert" hidden></p>
+
+  <script>
+    const translations = {
+      zh:{
+        appTitle:'训练数据风险控制台',candidateDatasets:'候选数据集',scannedSamples:'扫描样本',integrityBlocks:'完整性阻断',semanticReview:'语义待复核',
+        sampleInspector:'样本检查器',selectDataset:'选择数据集',sampleIntegrity:'样本级完整性',trustedLabel:'可信标签',candidateLabel:'候选训练标签',
+        semanticCheck:'内容语义检测',neighborAgreement:'近邻标签一致率',classifierConfidence:'分类器置信度',centroidDistance:'质心距离 Z 值',
+        fileHash:'文件哈希',neighborEvidence:'查看最近邻证据',overviewTab:'数据集总览',integrityTab:'完整性明细',semanticTab:'语义评估',methodTab:'检测方法',
+        overviewTitle:'四组候选清单',overviewDescription:'完整性结果与语义异常分布合并展示，点击任意一组继续检查。',
+        integrityTitle:'完整性清单对比',integrityDescription:'逐项比较可信基线与候选 manifest 的成员、标签、哈希和类别分布。',
+        semanticTitle:'语义异常评估',semanticDescription:'候选标签与图像内容的一致性，以及离线评估指标。',
+        methodTitle:'两条相互独立的检测路径',methodDescription:'一条验证“数据是否被改过”，另一条判断“图像内容是否支持候选标签”。',
+        dataset:'数据集',decision:'决策',labelChanges:'标签变化',hashChanges:'哈希变化',missing:'缺失',unknown:'未知',distributionDrift:'分布漂移',
+        decisionDistribution:'决策分布',meanRisk:'平均风险',precision:'精确率',recall:'召回率',cleanFpr:'干净集 FPR',
+        integrityMethodTitle:'可信清单完整性检查',semanticMethodTitle:'图像内容语义检查',
+        integrityMethodCopy:'<code>integrity_detector.py</code> 将候选 manifest 与可信基线逐行对比；没有可信基线时，这条路径无法工作。',
+        integrityMethodList:'<li>核对样本成员、SHA-256 文件哈希与标签</li><li>检测重复 ID、未知样本、缺失样本和类别漂移</li><li>超过阈值时直接阻断训练清单</li>',
+        semanticMethodCopy:'<code>semantic_detector.py</code> 不读取隐藏真值；它组合 CLIP 图像特征、近邻一致率、交叉验证分类器置信度和类别质心距离。',
+        semanticMethodList:'<li>CLIP ViT-B/32 使用现成权重，不在当前数据上训练</li><li>NCA 投影只使用可信干净子集标签，并通过 5 折交叉验证隔离样本</li><li>仅下游分类器在候选标签上实时拟合</li>',
+        methodNote:'实验限制：当前测量中，NCA 与早期 LDA 投影均未表现出优于原始 CLIP 特征的检测精度。它们保留用于方法研究，不代表性能提升。',
+        online:'本地服务在线',offline:'本地服务离线',connecting:'正在连接',loading:'载入中',awaitingCheck:'等待检测',sampleButton:'换一个样本',
+        sampling:'正在抽样…',loadingImage:'正在抽取样本并读取图像…',waitingSample:'等待样本',loadingSample:'正在载入',loadFailed:'载入失败',
+        records:'条记录',samples:'个样本',semanticPending:'个语义待复核',semanticLoading:'语义结果加载中',labelsChanged:'个标签变化',passed:'个通过',meanSemanticRisk:'平均语义风险',
+        inspectSample:'检查样本 →',hashMatch:'匹配',hashMismatch:'不匹配',noSemantic:'无语义结果',
+        intactExplanation:'该样本的候选标签与文件哈希均匹配可信基线。',
+        labelPoisonExplanation:'文件内容未变，但候选训练标签与可信标签不一致：这是标签投毒样本。',
+        hashTamperExplanation:'文件哈希与可信基线不一致，图像内容可能已被篡改。',
+        unavailable:'本地服务不可用，暂时无法读取样本。',imageFailed:'图像请求失败。本地后端可能已经停止，请重新启动 start.cmd。',
+        directFile:'请通过本地服务打开这个界面，而不是直接打开 HTML 文件。'
+      },
+      en:{
+        appTitle:'Training Data Risk Console',candidateDatasets:'Candidate datasets',scannedSamples:'Samples scanned',integrityBlocks:'Integrity blocks',semanticReview:'Semantic review queue',
+        sampleInspector:'Sample Inspector',selectDataset:'Select dataset',sampleIntegrity:'Sample integrity',trustedLabel:'Trusted label',candidateLabel:'Candidate training label',
+        semanticCheck:'Content semantic check',neighborAgreement:'Neighbor label agreement',classifierConfidence:'Classifier confidence',centroidDistance:'Centroid distance Z',
+        fileHash:'File hash',neighborEvidence:'View nearest-neighbor evidence',overviewTab:'Dataset overview',integrityTab:'Integrity details',semanticTab:'Semantic evaluation',methodTab:'Detection methods',
+        overviewTitle:'Four candidate manifests',overviewDescription:'Integrity outcomes and semantic anomaly distributions in one view. Select a dataset to inspect it.',
+        integrityTitle:'Integrity manifest comparison',integrityDescription:'Compare membership, labels, hashes, and class distribution against the trusted baseline.',
+        semanticTitle:'Semantic anomaly evaluation',semanticDescription:'Candidate-label consistency with image content, plus offline evaluation metrics.',
+        methodTitle:'Two independent detection paths',methodDescription:'One verifies whether data changed; the other asks whether image content supports its candidate label.',
+        dataset:'Dataset',decision:'Decision',labelChanges:'Label changes',hashChanges:'Hash changes',missing:'Missing',unknown:'Unknown',distributionDrift:'Distribution drift',
+        decisionDistribution:'Decision distribution',meanRisk:'Mean risk',precision:'Precision',recall:'Recall',cleanFpr:'Clean FPR',
+        integrityMethodTitle:'Trusted-manifest integrity check',semanticMethodTitle:'Image-content semantic check',
+        integrityMethodCopy:'<code>integrity_detector.py</code> compares the candidate manifest row by row with a trusted baseline. This path cannot operate without that baseline.',
+        integrityMethodList:'<li>Verify membership, SHA-256 file hashes, and labels</li><li>Detect duplicate IDs, unknown samples, missing samples, and class drift</li><li>Block a training manifest when thresholds are exceeded</li>',
+        semanticMethodCopy:'<code>semantic_detector.py</code> never reads hidden ground truth. It combines CLIP image features, neighbor agreement, cross-validated classifier confidence, and class-centroid distance.',
+        semanticMethodList:'<li>CLIP ViT-B/32 uses off-the-shelf weights and is not trained on this dataset</li><li>NCA is fit only on trusted clean labels with five-fold cross-validation</li><li>Only the downstream classifier is fit live on candidate labels</li>',
+        methodNote:'Experimental limitation: neither NCA nor the earlier LDA projection improved detection accuracy over raw CLIP features in current measurements. They remain for methodology research, not as demonstrated performance gains.',
+        online:'Local service online',offline:'Local service offline',connecting:'Connecting',loading:'Loading',awaitingCheck:'Awaiting check',sampleButton:'New sample',
+        sampling:'Sampling…',loadingImage:'Sampling and loading image…',waitingSample:'Waiting for sample',loadingSample:'Loading',loadFailed:'Load failed',
+        records:'records',samples:'samples',semanticPending:'semantic items to review',semanticLoading:'Semantic results loading',labelsChanged:'label changes',passed:'allowed',meanSemanticRisk:'Mean semantic risk',
+        inspectSample:'Inspect sample →',hashMatch:'Match',hashMismatch:'Mismatch',noSemantic:'No semantic result',
+        intactExplanation:'The candidate label and file hash both match the trusted baseline.',
+        labelPoisonExplanation:'The file is unchanged, but the candidate training label differs from the trusted label: this is label poisoning.',
+        hashTamperExplanation:'The file hash differs from the trusted baseline; the image content may have been tampered with.',
+        unavailable:'The local service is unavailable, so this sample cannot be loaded.',imageFailed:'The image request failed. Restart start.cmd if the local backend stopped.',
+        directFile:'Open this interface through the local service, not directly as an HTML file.'
+      }
+    };
+    const datasetInfo = {
+      clean_subset:{zh:'干净子集',en:'Clean subset'}, label_flip_05:{zh:'5% 随机标签翻转',en:'5% random label flip'},
+      label_flip_10:{zh:'10% 随机标签翻转',en:'10% random label flip'}, targeted_0_to_1:{zh:'定向标签 0 → 1',en:'Targeted label 0 → 1'}
+    };
+    const statusText = {zh:{ALLOW:'通过',REVIEW:'复核',BLOCK:'阻断',QUARANTINE:'隔离'},en:{ALLOW:'Allow',REVIEW:'Review',BLOCK:'Block',QUARANTINE:'Quarantine'}};
+    const datasetOrder = Object.keys(datasetInfo);
+    let savedLanguage='zh';
+    try{savedLanguage=localStorage.getItem('s6-language')||'zh';}catch(error){}
+    const state = {selectedDataset:'clean_subset',assessments:new Map(),semanticSummaries:new Map(),sampleRequest:0,currentSample:null,summaryLoading:false,language:savedLanguage==='en'?'en':'zh'};
+    const byId = id => document.getElementById(id);
+    const el = {
+      connection:byId('connection-status'), connectionText:byId('connection-text'), datasetCount:byId('dataset-count'),
+      sampleCount:byId('sample-count'), blockedCount:byId('blocked-count'), flaggedCount:byId('flagged-count'),
+      datasetDecision:byId('dataset-decision'), selectedDatasetMeta:byId('selected-dataset-meta'), datasetSwitcher:byId('dataset-switcher'),
+      datasetSelect:byId('dataset-select'), sampleButton:byId('sample-button'), samplePanel:byId('sample-panel'), pestImage:byId('pest-image'),
+      imageStatus:byId('image-status'), sampleId:byId('sample-id'), sampleIntegrityBadge:byId('sample-integrity-badge'),
+      sampleExplanation:byId('sample-explanation'), originalLabel:byId('original-label'), assignedLabel:byId('assigned-label'),
+      assignedCard:byId('assigned-card'), semanticDecision:byId('semantic-decision'), semanticRiskValue:byId('semantic-risk-value'),
+      semanticRiskFill:byId('semantic-risk-fill'), neighborAgreement:byId('neighbor-agreement'), classifierConfidence:byId('classifier-confidence'),
+      centroidDistance:byId('centroid-distance'), hashState:byId('hash-state'), semanticReasons:byId('semantic-reasons'),
+      semanticNeighbors:byId('semantic-neighbors'), neighborDetails:byId('neighbor-details'), overviewList:byId('overview-list'),
+      integrityTable:byId('integrity-table'), semanticTable:byId('semantic-table'), errorBanner:byId('error-banner')
+    };
+    const t=key=>translations[state.language][key]||translations.zh[key]||key;
+    const datasetName=dataset=>datasetInfo[dataset]?.[state.language]||dataset;
+    function applyStaticTranslations(){
+      document.documentElement.lang=state.language==='zh'?'zh-CN':'en';
+      document.title=state.language==='zh'?'S6 训练数据风险控制台':'S6 Training Data Risk Console';
+      for(const node of document.querySelectorAll('[data-i18n]'))node.textContent=t(node.dataset.i18n);
+      for(const node of document.querySelectorAll('[data-i18n-html]'))node.innerHTML=t(node.dataset.i18nHtml);
+      datasetOrder.forEach((dataset,index)=>{el.datasetSelect.options[index].textContent=datasetName(dataset);});
+      for(const button of document.querySelectorAll('[data-language]'))button.setAttribute('aria-pressed',String(button.dataset.language===state.language));
+      el.sampleButton.querySelector('span').textContent=el.sampleButton.disabled?t('sampling'):t('sampleButton');
+      const refresh=byId('refresh-all');
+      const refreshLabel=state.language==='zh'?'刷新全部检测数据':'Refresh all detection data';
+      refresh.setAttribute('aria-label',refreshLabel);refresh.title=refreshLabel;
+      el.pestImage.alt=state.language==='zh'?'随机抽取的 IP102 害虫图像':'Randomly sampled IP102 pest image';
+    }
+    function updateSummaryMetrics(){
+      const data=[...state.assessments.values()],semanticData=[...state.semanticSummaries.values()];
+      if(!data.length)return;
+      const totalSamples=data.reduce((sum,item)=>sum+(item.candidate_samples||0),0),blocked=data.filter(item=>item.decision==='BLOCK').length,flagged=semanticData.reduce((sum,item)=>sum+semanticFlagged(item),0);
+      el.datasetCount.textContent=data.length;
+      el.sampleCount.innerHTML=state.language==='zh'?fmtInteger(totalSamples)+'<small>'+t('records')+'</small>':fmtInteger(totalSamples)+'<small>'+t('records')+'</small>';
+      el.blockedCount.innerHTML=blocked+'<small>/ '+data.length+'</small>';
+      el.flaggedCount.innerHTML=semanticData.length?fmtInteger(flagged)+'<small>'+t('records')+'</small>':'—';
+    }
+    function applyLanguage(language,persist=true){
+      state.language=language==='en'?'en':'zh';
+      if(persist){try{localStorage.setItem('s6-language',state.language);}catch(error){}}
+      applyStaticTranslations();
+      if(state.assessments.size){
+        const data=datasetOrder.map(dataset=>state.assessments.get(dataset)).filter(Boolean);
+        updateSummaryMetrics();renderDatasetSwitcher(data);renderIntegrityTable(data);
+        if(state.semanticSummaries.size===datasetOrder.length){renderOverview(data);renderSemanticTable();}
+        updateDatasetHeader(state.selectedDataset);
+      }else{
+        setBadge(el.datasetDecision,null,t('loading'));setBadge(el.sampleIntegrityBadge,null,t('awaitingCheck'));setBadge(el.semanticDecision,null,t('awaitingCheck'));
+      }
+      if(state.currentSample)renderSample(state.currentSample,state.sampleRequest,false);
+      setConnection(el.connection.classList.contains('offline')?'offline':el.connection.classList.contains('online')?'online':'loading');
+    }
+
+    function setConnection(status){
+      el.connection.classList.remove('online','offline');
+      if(status==='online'){el.connection.classList.add('online');el.connectionText.textContent=t('online');}
+      else if(status==='offline'){el.connection.classList.add('offline');el.connectionText.textContent=t('offline');}
+      else el.connectionText.textContent=t('connecting');
+    }
+    function showError(message){el.errorBanner.textContent=message;el.errorBanner.hidden=!message;}
+    async function requestJson(url){
+      let response;
+      try{response=await fetch(url,{cache:'no-store'});}catch(error){setConnection('offline');throw new Error(state.language==='zh'?'无法连接 S6 本地服务。请启动 data_poisoning/start.cmd，然后刷新 http://127.0.0.1:8766/。':'Cannot reach the S6 local service. Start data_poisoning/start.cmd, then refresh http://127.0.0.1:8766/.');}
+      let payload;
+      try{payload=await response.json();}catch(error){throw new Error(state.language==='zh'?`服务返回了无法解析的响应（HTTP ${response.status}）。`:`The service returned an invalid response (HTTP ${response.status}).`);}
+      if(!response.ok) throw new Error(payload.error||(state.language==='zh'?`请求失败（HTTP ${response.status}）`:`Request failed (HTTP ${response.status})`));
+      setConnection('online'); return payload;
+    }
+    function badge(value,neutralText){
+      const span=document.createElement('span'),normalized=value&&statusText[state.language][value]?value:null;
+      span.className=`badge ${normalized?value.toLowerCase():'neutral'}`;
+      span.textContent=normalized?`${statusText[state.language][value]} · ${value}`:(neutralText||'—'); return span;
+    }
+    function setBadge(target,value,neutralText){const node=badge(value,neutralText);target.className=node.className;target.textContent=node.textContent;}
+    const fmtInteger=value=>new Intl.NumberFormat(state.language==='zh'?'zh-CN':'en-US').format(value||0);
+    const fmtPercent=(value,digits=1)=>value===null||value===undefined?'—':`${(Number(value)*100).toFixed(digits)}%`;
+    const fmtScore=value=>value===null||value===undefined?'—':Number(value).toFixed(4);
+    const semanticFlagged=summary=>{const counts=summary?.decision_counts||{};return(counts.REVIEW||0)+(counts.QUARANTINE||0);};
+    function localizeReason(reason){
+      if(state.language==='en')return reason;
+      let m=reason.match(/(\d+) of (\d+) nearest neighbours have a different candidate label/i);
+      if(m)return`${m[2]} 个最近邻中有 ${m[1]} 个使用不同的候选标签。`;
+      m=reason.match(/cross-validated classifier assigns only ([\d.]+)% confidence to the candidate label/i);
+      if(m)return`交叉验证分类器对候选标签的置信度仅为 ${m[1]}%。`;
+      m=reason.match(/candidate label is ([\d.]+) standard deviations from its class centroid/i);
+      if(m)return`该样本距候选类别质心 ${m[1]} 个标准差。`; return reason;
+    }
+
+    function renderDatasetSwitcher(data){
+      el.datasetSwitcher.replaceChildren();
+      for(const item of data){
+        const button=document.createElement('button');button.type='button';button.className='dataset-button';button.dataset.dataset=item.dataset;button.setAttribute('aria-pressed',String(item.dataset===state.selectedDataset));
+        const name=document.createElement('span');name.className='dataset-name';name.textContent=datasetName(item.dataset);
+        const meta=document.createElement('span');meta.className='dataset-meta';const changes=document.createElement('span');changes.textContent=state.language==='zh'?`${item.label_changes} 标签变化`:`${item.label_changes} label changes`;meta.append(changes,badge(item.decision));button.append(name,meta);el.datasetSwitcher.appendChild(button);
+      }
+    }
+    function renderOverview(data){
+      el.overviewList.replaceChildren();
+      for(const item of data){
+        const semantic=state.semanticSummaries.get(item.dataset),counts=semantic.decision_counts||{},samples=semantic.samples||1,flagged=semanticFlagged(semantic);
+        const row=document.createElement('article');row.className='dataset-row';
+        const title=document.createElement('div');title.className='dataset-row-title';title.append(badge(item.decision));
+        const titleCopy=document.createElement('div'),strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=datasetName(item.dataset);small.textContent=state.language==='zh'?`${fmtInteger(item.candidate_samples)} 个样本 · ${item.label_changes} 个标签变化`:`${fmtInteger(item.candidate_samples)} samples · ${item.label_changes} label changes`;titleCopy.append(strong,small);title.appendChild(titleCopy);
+        const semanticCell=document.createElement('div');semanticCell.className='dataset-semantic';const bar=document.createElement('div');bar.className='semantic-bar';
+        for(const[key,className]of[['ALLOW','allow-segment'],['REVIEW','review-segment'],['QUARANTINE','quarantine-segment']]){const segment=document.createElement('span');segment.className=className;segment.style.width=`${100*(counts[key]||0)/samples}%`;bar.appendChild(segment);}
+        const semanticText=document.createElement('small');semanticText.textContent=state.language==='zh'?`语义检测：${flagged} 个待复核 / 隔离，${counts.ALLOW||0} 个通过`:`Semantic check: ${flagged} review / quarantine, ${counts.ALLOW||0} allowed`;semanticCell.append(bar,semanticText);
+        const risk=document.createElement('div');risk.className='dataset-risk';const riskStrong=document.createElement('strong'),riskSmall=document.createElement('small');riskStrong.textContent=fmtPercent(semantic.mean_risk_score);riskSmall.textContent=t('meanSemanticRisk');risk.append(riskStrong,riskSmall);
+        const action=document.createElement('button');action.type='button';action.className='row-action';action.dataset.dataset=item.dataset;action.textContent=t('inspectSample');row.append(title,semanticCell,risk,action);el.overviewList.appendChild(row);
+      }
+    }
+    function renderIntegrityTable(data){
+      el.integrityTable.replaceChildren();
+      for(const item of data){const row=document.createElement('tr'),name=document.createElement('td'),decision=document.createElement('td');name.textContent=datasetName(item.dataset);decision.appendChild(badge(item.decision));row.append(name,decision);for(const value of[item.label_changes,item.hash_changes,item.missing_samples,item.unknown_samples,fmtScore(item.distribution_drift)]){const cell=document.createElement('td');cell.textContent=value;row.appendChild(cell);}el.integrityTable.appendChild(row);}
+    }
+    function renderSemanticTable(){
+      el.semanticTable.replaceChildren();
+      for(const dataset of datasetOrder){
+        const item=state.semanticSummaries.get(dataset);if(!item)continue;const counts=item.decision_counts||{},offline=item.offline_evaluation||{},row=document.createElement('tr'),name=document.createElement('td'),distribution=document.createElement('td'),cluster=document.createElement('div');
+        name.textContent=datasetName(dataset);cluster.className='count-cluster';
+        for(const[key,color]of[['ALLOW','var(--allow)'],['REVIEW','var(--review)'],['QUARANTINE','var(--quarantine)']]){const node=document.createElement('span'),dot=document.createElement('span');node.className='count-item';dot.className='count-dot';dot.style.background=color;node.append(dot,document.createTextNode(`${key[0]} ${counts[key]||0}`));cluster.appendChild(node);}
+        distribution.appendChild(cluster);row.append(name,distribution);
+        for(const value of[fmtPercent(item.mean_risk_score),fmtPercent(offline.precision),fmtPercent(offline.recall),fmtPercent(offline.f1),fmtPercent(offline.roc_auc),fmtPercent(offline.clean_false_positive_rate)]){const cell=document.createElement('td');cell.textContent=value;row.appendChild(cell);}el.semanticTable.appendChild(row);
+      }
+    }
+    function updateDatasetHeader(dataset){
+      const assessment=state.assessments.get(dataset);if(!assessment)return;setBadge(el.datasetDecision,assessment.decision);const semantic=state.semanticSummaries.get(dataset),flagged=semantic?semanticFlagged(semantic):null;
+      el.selectedDatasetMeta.textContent=state.language==='zh'
+        ?`${datasetName(dataset)} · ${fmtInteger(assessment.candidate_samples)} 个样本 · ${assessment.label_changes} 个标签变化 · ${flagged===null?t('semanticLoading'):flagged+' 个语义待复核'}`
+        :`${datasetName(dataset)} · ${fmtInteger(assessment.candidate_samples)} samples · ${assessment.label_changes} label changes · ${flagged===null?t('semanticLoading'):flagged+' semantic items to review'}`;
+      for(const button of el.datasetSwitcher.querySelectorAll('.dataset-button'))button.setAttribute('aria-pressed',String(button.dataset.dataset===dataset));el.datasetSelect.value=dataset;
+    }
+    function setSampleLoading(){
+      el.samplePanel.setAttribute('aria-busy','true');el.sampleButton.disabled=true;el.sampleButton.querySelector('span').textContent=t('sampling');el.pestImage.hidden=true;el.pestImage.removeAttribute('src');el.imageStatus.hidden=false;el.imageStatus.innerHTML='<span class="loader" aria-hidden="true"></span><span>'+t('loadingImage')+'</span>';el.sampleId.textContent=t('loadingSample');setBadge(el.sampleIntegrityBadge,null,t('awaitingCheck'));setBadge(el.semanticDecision,null,t('awaitingCheck'));el.semanticRiskValue.textContent='—';el.semanticRiskFill.style.width='0%';
+    }
+    function finishSampleLoading(){el.samplePanel.setAttribute('aria-busy','false');el.sampleButton.disabled=false;el.sampleButton.querySelector('span').textContent=t('sampleButton');}
+    function renderSample(data,requestId,updateImage=true){
+      state.currentSample=data;
+      el.sampleId.textContent=data.sample_id;el.originalLabel.textContent=`${data.original_label} · ${data.original_name}`;el.assignedLabel.textContent=`${data.assigned_label} · ${data.assigned_name}`;el.assignedCard.classList.toggle('changed',data.label_changed);
+      const integrityDecision=data.label_changed||data.hash_changed?'BLOCK':'ALLOW';setBadge(el.sampleIntegrityBadge,integrityDecision);
+      el.sampleExplanation.textContent=data.label_changed?t('labelPoisonExplanation'):data.hash_changed?t('hashTamperExplanation'):t('intactExplanation');el.hashState.textContent=data.hash_changed?t('hashMismatch'):t('hashMatch');
+      el.semanticReasons.replaceChildren();el.semanticNeighbors.replaceChildren();el.neighborDetails.open=false;
+      if(data.semantic){
+        const semantic=data.semantic,risk=Math.max(0,Math.min(1,Number(semantic.risk_score)||0));setBadge(el.semanticDecision,semantic.decision);el.semanticRiskValue.textContent=fmtPercent(risk,0);el.semanticRiskFill.style.width=`${risk*100}%`;el.semanticRiskFill.style.background=semantic.decision==='QUARANTINE'?'var(--quarantine)':semantic.decision==='REVIEW'?'var(--review)':'var(--allow)';
+        el.neighborAgreement.textContent=fmtPercent(semantic.neighbor_label_agreement);el.classifierConfidence.textContent=fmtPercent(semantic.classifier_confidence);el.centroidDistance.textContent=semantic.centroid_distance_z===null||semantic.centroid_distance_z===undefined?'—':Number(semantic.centroid_distance_z).toFixed(2);
+        for(const reason of semantic.reasons||[]){const item=document.createElement('li');item.textContent=localizeReason(reason);el.semanticReasons.appendChild(item);}
+        for(const[index,neighbor]of(semantic.neighbors||[]).entries()){const row=document.createElement('div'),rank=document.createElement('span'),sample=document.createElement('code'),meta=document.createElement('span');row.className='neighbor-row';rank.textContent=String(index+1).padStart(2,'0');sample.textContent=neighbor.sample_id;meta.textContent=state.language==='zh'?`标签 ${neighbor.assigned_label} · d=${neighbor.distance}`:`Label ${neighbor.assigned_label} · d=${neighbor.distance}`;row.append(rank,sample,meta);el.semanticNeighbors.appendChild(row);}el.neighborDetails.hidden=!(semantic.neighbors||[]).length;
+      }else{setBadge(el.semanticDecision,null,t('noSemantic'));el.semanticRiskValue.textContent='—';el.neighborAgreement.textContent='—';el.classifierConfidence.textContent='—';el.centroidDistance.textContent='—';el.neighborDetails.hidden=true;}
+      if(!updateImage)return;
+      el.pestImage.onload=()=>{if(requestId!==state.sampleRequest)return;el.pestImage.hidden=false;el.imageStatus.hidden=true;};
+      el.pestImage.onerror=()=>{if(requestId!==state.sampleRequest)return;el.pestImage.hidden=true;el.imageStatus.hidden=false;el.imageStatus.innerHTML='<span>'+t('imageFailed')+'</span>';showError(state.language==='zh'?`无法从本地服务读取 ${data.sample_id}。`:`Could not load ${data.sample_id} from the local service.`);};
+      const separator=data.image_url.includes('?')?'&':'?';el.pestImage.src=`${data.image_url}${separator}request=${Date.now()}`;
+    }
+    async function loadSample(){
+      const dataset=state.selectedDataset,requestId=++state.sampleRequest;showError('');setSampleLoading();
+      try{const data=await requestJson(`/api/sample?dataset=${encodeURIComponent(dataset)}`);if(requestId!==state.sampleRequest)return;renderSample(data,requestId);}catch(error){if(requestId!==state.sampleRequest)return;el.imageStatus.hidden=false;el.imageStatus.innerHTML='<span>'+t('unavailable')+'</span>';el.sampleId.textContent=t('loadFailed');showError(error.message);}finally{if(requestId===state.sampleRequest)finishSampleLoading();}
+    }
+    function selectDataset(dataset,shouldLoad=true){if(!datasetInfo[dataset])return;state.selectedDataset=dataset;updateDatasetHeader(dataset);if(shouldLoad)loadSample();}
+    async function loadSummary(){
+      if(state.summaryLoading)return;
+      state.summaryLoading=true;showError('');setConnection('loading');byId('refresh-all').disabled=true;el.sampleButton.disabled=true;el.sampleButton.querySelector('span').textContent=t('loading');
+      try{
+        const data=await requestJson('/api/summary');
+        state.assessments=new Map(data.map(item=>[item.dataset,item]));state.semanticSummaries=new Map();
+        updateSummaryMetrics();renderDatasetSwitcher(data);renderIntegrityTable(data);updateDatasetHeader(state.selectedDataset);
+        const waiting=document.createElement('p');waiting.className='decision-copy';waiting.textContent=t('semanticLoading')+'…';el.overviewList.replaceChildren(waiting);el.semanticTable.replaceChildren();
+        loadSample();
+        try{
+          const semanticData=await Promise.all(datasetOrder.map(dataset=>requestJson(`/api/semantic?dataset=${encodeURIComponent(dataset)}`)));
+          state.semanticSummaries=new Map(semanticData.map(item=>[item.dataset,item]));
+          updateSummaryMetrics();renderOverview(data);renderSemanticTable();updateDatasetHeader(state.selectedDataset);
+        }catch(error){
+          showError(state.language==='zh'?`完整性结果已载入，但语义摘要暂时不可用：${error.message}`:`Integrity results loaded, but semantic summaries are unavailable: ${error.message}`);
+        }
+      }finally{
+        state.summaryLoading=false;byId('refresh-all').disabled=false;
+      }
+    }
+    byId('refresh-all').addEventListener('click',()=>loadSummary().catch(error=>showError(error.message)));
+    el.sampleButton.addEventListener('click',loadSample);
+    el.datasetSelect.addEventListener('change',event=>selectDataset(event.target.value));
+    el.datasetSwitcher.addEventListener('click',event=>{const button=event.target.closest('[data-dataset]');if(button)selectDataset(button.dataset.dataset);});
+    el.overviewList.addEventListener('click',event=>{const button=event.target.closest('[data-dataset]');if(!button)return;selectDataset(button.dataset.dataset);byId('sample-panel').scrollIntoView({behavior:'smooth',block:'start'});});
+    document.querySelector('.language-toggle').addEventListener('click',event=>{const button=event.target.closest('[data-language]');if(button)applyLanguage(button.dataset.language);});
+    document.querySelector('.tabs').addEventListener('click',event=>{const tab=event.target.closest('[data-tab]');if(!tab)return;for(const button of document.querySelectorAll('.tab-button'))button.setAttribute('aria-selected',String(button===tab));for(const panel of document.querySelectorAll('.tab-panel'))panel.hidden=panel.id!==`panel-${tab.dataset.tab}`;});
+    applyLanguage(state.language,false);
+    if(window.location.protocol==='file:'){setConnection('offline');el.imageStatus.innerHTML='<span>'+t('directFile')+'</span>';showError(state.language==='zh'?'请启动 data_poisoning/start.cmd，并访问 http://127.0.0.1:8766/。':'Start data_poisoning/start.cmd and open http://127.0.0.1:8766/.');finishSampleLoading();}
+    else loadSummary().catch(error=>{el.imageStatus.innerHTML='<span>'+t('unavailable')+'</span>';finishSampleLoading();showError(error.message);});
+  </script>
+</body>
+</html>

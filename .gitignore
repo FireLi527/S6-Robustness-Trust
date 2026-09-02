@@ -1,0 +1,40 @@
+# Local environments and editor state
+.venv*/
+venv/
+.claude/
+.vscode/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local secrets and machine-specific configuration
+.env
+.env.*
+*.pem
+*.key
+CLAUDE.md
+
+# Private working notes
+资料/
+S6_Robustness_and_Trust_讨论总结.md
+
+# Upstream datasets and generated samples
+external/
+data/bipia/generated/
+
+# Embedding and model caches
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Large per-sample evaluation exports and mutable audit logs
+results/bipia/*_decisions.csv
+results/bipia/*_failures.csv
+results/bipia/tool_policy_audit.jsonl
+
+# OS files
+.DS_Store
+Thumbs.db

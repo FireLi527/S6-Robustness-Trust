@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>S6 提示词注入安全控制台</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #071017;
+      --surface: #0c171f;
+      --raised: #101e28;
+      --soft: #13232e;
+      --line: #203440;
+      --line-strong: #2d4b59;
+      --text: #ecf5f8;
+      --muted: #7e97a3;
+      --subtle: #58727f;
+      --accent: #53c7e8;
+      --accent-strong: #77dcf6;
+      --allow: #4fd39a;
+      --review: #f1b455;
+      --block: #ff7a7a;
+      --violet: #c49aff;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .22);
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 8% -5%, rgba(83, 199, 232, .08), transparent 28rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, input, textarea, select { font: inherit; }
+    button, select { cursor: pointer; }
+    button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .shell {
+      width: min(1480px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 34px 0 60px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 16px; min-width: 0; }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      flex: 0 0 auto;
+      border: 1px solid rgba(83, 199, 232, .35);
+      border-radius: 15px;
+      background: rgba(83, 199, 232, .08);
+      color: var(--accent-strong);
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .eyebrow {
+      margin: 0 0 5px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 { margin: 0; font-size: clamp(22px, 2.4vw, 32px); letter-spacing: -.03em; }
+
+    .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+    .language-switch {
+      display: flex;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .language-switch button {
+      min-width: 48px;
+      padding: 8px 10px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .language-switch button.active { background: var(--soft); color: var(--text); }
+
+    .connection-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .connection-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--review);
+      box-shadow: 0 0 0 5px rgba(241, 180, 85, .09);
+    }
+
+    .connection-pill.online .connection-dot { background: var(--allow); box-shadow: 0 0 0 5px rgba(79, 211, 154, .09); }
+    .connection-pill.offline .connection-dot { background: var(--block); box-shadow: 0 0 0 5px rgba(255, 122, 122, .09); }
+
+    .icon-button {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--muted);
+    }
+    .icon-button:hover { color: var(--text); border-color: var(--line-strong); }
+    .icon-button.loading svg { animation: spin 1s linear infinite; }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+      margin-bottom: 22px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--surface);
+    }
+
+    .status-item { min-width: 0; padding: 17px 21px; border-right: 1px solid var(--line); }
+    .status-item:last-child { border-right: 0; }
+    .status-label { display: block; margin-bottom: 7px; color: var(--muted); font-size: 12px; }
+    .status-value { display: block; overflow: hidden; color: var(--text); font-size: 18px; font-weight: 760; text-overflow: ellipsis; white-space: nowrap; }
+
+    .panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 25px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .heading-copy { display: flex; align-items: center; gap: 13px; min-width: 0; }
+    .stage-pill {
+      flex: 0 0 auto;
+      padding: 6px 10px;
+      border: 1px solid rgba(83, 199, 232, .34);
+      border-radius: 999px;
+      color: var(--accent-strong);
+      background: rgba(83, 199, 232, .07);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    h2, h3, p { margin-top: 0; }
+    h2 { margin-bottom: 4px; font-size: 18px; letter-spacing: -.01em; }
+    .panel-subtitle { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .keyboard-hint { color: var(--subtle); font-size: 12px; white-space: nowrap; }
+    kbd {
+      padding: 2px 6px;
+      border: 1px solid var(--line-strong);
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      background: var(--raised);
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 11px;
+    }
+
+    .workbench { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(370px, .88fr); }
+    .composer { padding: 24px; border-right: 1px solid var(--line); }
+    .decision-panel { min-width: 0; padding: 24px; background: rgba(16, 30, 40, .38); }
+
+    .quick-load {
+      display: grid;
+      grid-template-columns: minmax(130px, .8fr) minmax(120px, .72fr) auto;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .field { min-width: 0; margin-bottom: 17px; }
+    .field-row { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 12px; }
+    label { display: block; margin-bottom: 8px; color: #b7c8d0; font-size: 12px; font-weight: 700; }
+    .optional { color: var(--subtle); font-weight: 500; }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #09141b;
+      color: var(--text);
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+
+    input, select { min-height: 43px; padding: 0 12px; }
+    textarea { min-height: 212px; resize: vertical; padding: 14px; line-height: 1.58; }
+    input:hover, textarea:hover, select:hover { border-color: var(--line-strong); }
+    input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(83, 199, 232, .08); outline: none; }
+    input::placeholder, textarea::placeholder { color: #506975; }
+
+    .content-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .counter { color: var(--subtle); font-size: 11px; font-weight: 500; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 43px;
+      padding: 0 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--raised);
+      color: #cfe0e6;
+      font-weight: 740;
+      transition: transform .12s ease, border-color .15s ease, background .15s ease;
+    }
+    .button:hover:not(:disabled) { transform: translateY(-1px); border-color: var(--line-strong); background: #142631; }
+    .button:disabled { cursor: wait; opacity: .62; }
+    .button.primary { border-color: rgba(83, 199, 232, .62); background: var(--accent); color: #05202a; }
+    .button.primary:hover:not(:disabled) { background: var(--accent-strong); }
+    .button.ghost { background: transparent; color: var(--muted); }
+    .button.full { width: 100%; }
+    .button svg, .icon-button svg { width: 17px; height: 17px; }
+
+    .tool-row {
+      margin: 3px 0 18px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(19, 35, 46, .42);
+    }
+    .tool-row-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .tool-row-title strong { font-size: 13px; }
+    .scenario-button { border: 0; background: transparent; color: var(--accent); font-size: 12px; font-weight: 700; }
+    .scenario-button:hover { color: var(--accent-strong); }
+
+    .context-note {
+      display: none;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding: 11px 13px;
+      border-left: 2px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      background: rgba(83, 199, 232, .055);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .context-note.visible { display: block; }
+
+    .actions { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+    .error-banner {
+      display: none;
+      margin-top: 14px;
+      padding: 11px 13px;
+      border: 1px solid rgba(255, 122, 122, .28);
+      border-radius: 9px;
+      background: rgba(255, 122, 122, .07);
+      color: #ffc1c1;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .error-banner.visible { display: block; }
+
+    .result-empty {
+      display: grid;
+      min-height: 100%;
+      place-content: center;
+      text-align: center;
+      padding: 25px;
+    }
+    .empty-icon {
+      display: grid;
+      place-items: center;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 17px;
+      border: 1px solid var(--line-strong);
+      border-radius: 18px;
+      background: var(--soft);
+      color: var(--accent);
+    }
+    .empty-icon svg { width: 27px; height: 27px; }
+    .result-empty h3 { margin-bottom: 7px; font-size: 17px; }
+    .result-empty p { max-width: 360px; margin: 0 auto; color: var(--muted); font-size: 13px; line-height: 1.65; }
+
+    .result-loading { display: none; min-height: 100%; place-content: center; padding: 30px; text-align: center; }
+    .result-loading.visible { display: grid; }
+    .loader {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 17px;
+      border: 3px solid var(--line);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    .result-loading strong { display: block; margin-bottom: 7px; }
+    .result-loading p { margin-bottom: 8px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .elapsed { color: var(--accent); font-variant-numeric: tabular-nums; font-size: 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .result-content { display: none; }
+    .result-content.visible { display: block; }
+    .result-head { display: flex; justify-content: space-between; gap: 18px; margin-bottom: 19px; }
+    .result-kicker { display: block; margin-bottom: 7px; color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+    .result-head h3 { margin: 0; font-size: 20px; }
+    .result-score { text-align: right; }
+    .result-score strong { display: block; font-size: 22px; font-variant-numeric: tabular-nums; }
+    .result-score span { color: var(--muted); font-size: 11px; }
+
+    .risk-track { height: 6px; overflow: hidden; margin-bottom: 21px; border-radius: 999px; background: #182a34; }
+    .risk-fill { width: 0; height: 100%; border-radius: inherit; background: var(--accent); transition: width .3s ease; }
+    .risk-fill.allow { background: var(--allow); }
+    .risk-fill.review { background: var(--review); }
+    .risk-fill.block { background: var(--block); }
+
+    .decision-chain { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 20px; }
+    .chain-card { min-width: 0; padding: 13px; border: 1px solid var(--line); border-radius: 11px; background: #0b171f; }
+    .chain-top { display: flex; align-items: center; justify-content: space-between; gap: 7px; margin-bottom: 12px; }
+    .chain-name { color: #b6c9d1; font-size: 12px; font-weight: 750; }
+    .chain-value { display: block; overflow: hidden; color: var(--muted); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 25px;
+      padding: 0 8px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .badge.allow { border-color: rgba(79, 211, 154, .35); background: rgba(79, 211, 154, .08); color: var(--allow); }
+    .badge.review { border-color: rgba(241, 180, 85, .38); background: rgba(241, 180, 85, .08); color: var(--review); }
+    .badge.block { border-color: rgba(255, 122, 122, .38); background: rgba(255, 122, 122, .08); color: var(--block); }
+    .badge.hybrid { border-color: rgba(196, 154, 255, .36); background: rgba(196, 154, 255, .07); color: var(--violet); }
+
+    .reason-groups { display: grid; gap: 8px; }
+    .reason-groups details { border: 1px solid var(--line); border-radius: 10px; background: rgba(7, 16, 23, .42); }
+    .reason-groups summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 12px; color: #b8cbd3; cursor: pointer; font-size: 12px; font-weight: 700; list-style: none; }
+    .reason-groups summary::-webkit-details-marker { display: none; }
+    .reason-count { color: var(--subtle); font-size: 10px; font-weight: 600; }
+    .reason-groups ul { margin: 0; padding: 0 30px 13px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .reason-groups li + li { margin-top: 5px; }
+
+    .highlight-section { display: none; border-top: 1px solid var(--line); }
+    .highlight-section.visible { display: block; }
+    .highlight-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 16px 24px; border-bottom: 1px solid var(--line); }
+    .highlight-heading h3 { margin: 0; font-size: 13px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 13px; color: var(--muted); font-size: 11px; }
+    .legend i { display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 50%; }
+    .legend .p1 { background: var(--block); }
+    .legend .p2 { background: var(--violet); }
+    .legend .both { background: var(--review); }
+    .highlighted-content { max-height: 290px; overflow: auto; padding: 20px 24px 23px; color: #cad9de; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; line-height: 1.75; white-space: pre-wrap; word-break: break-word; }
+    mark { padding: 1px 2px; border-radius: 3px; color: inherit; }
+    mark.p1 { background: rgba(255, 122, 122, .22); box-shadow: inset 0 -1px var(--block); }
+    mark.p2 { background: rgba(196, 154, 255, .20); box-shadow: inset 0 -1px var(--violet); }
+    mark.both { background: rgba(241, 180, 85, .24); box-shadow: inset 0 -1px var(--review); }
+
+    .analytics { margin-top: 22px; box-shadow: none; }
+    .tabs { display: flex; gap: 4px; overflow-x: auto; padding: 11px 14px; border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+    .tab {
+      flex: 0 0 auto;
+      padding: 9px 13px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { background: var(--soft); color: var(--text); }
+    .tab-content { display: none; padding: 24px; }
+    .tab-content.active { display: block; }
+
+    .section-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
+    .section-intro h3 { margin-bottom: 5px; font-size: 16px; }
+    .section-intro p { max-width: 720px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+    .status-warning { color: var(--review) !important; }
+
+    .overview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .overview-card { padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: rgba(16, 30, 40, .55); }
+    .overview-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 17px; }
+    .overview-card h4 { margin: 0; font-size: 13px; }
+    .metric-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .metric-pair div { min-width: 0; padding: 10px; border-radius: 9px; background: #0a151c; }
+    .metric-pair span { display: block; margin-bottom: 5px; color: var(--subtle); font-size: 10px; }
+    .metric-pair strong { display: block; overflow: hidden; font-size: 16px; font-variant-numeric: tabular-nums; text-overflow: ellipsis; white-space: nowrap; }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; min-width: 760px; border-collapse: collapse; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; }
+    th { background: rgba(19, 35, 46, .62); color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    td { color: #bcced5; font-size: 12px; font-variant-numeric: tabular-nums; }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:hover { background: rgba(83, 199, 232, .025); }
+
+    .policy-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 15px; }
+    .policy-summary, .registry { padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: rgba(16, 30, 40, .48); }
+    .policy-summary h4, .registry h4 { margin: 0 0 14px; font-size: 13px; }
+    .policy-stat { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .policy-stat:last-child { border-bottom: 0; }
+    .policy-stat strong { color: var(--text); font-variant-numeric: tabular-nums; text-align: right; }
+    .registry-list { display: grid; gap: 7px; }
+    .registry-row { display: grid; grid-template-columns: minmax(90px, .7fr) minmax(90px, .55fr) minmax(140px, 1.35fr); gap: 12px; align-items: center; padding: 10px 11px; border-radius: 9px; background: #0a151c; font-size: 11px; }
+    .registry-row span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .registry-row span:nth-child(2), .registry-row span:nth-child(3) { color: var(--muted); }
+
+    .method-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .method-card { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: rgba(16, 30, 40, .48); }
+    .method-number { display: block; margin-bottom: 12px; color: var(--accent); font-size: 11px; font-weight: 850; letter-spacing: .08em; }
+    .method-card h4 { margin: 0 0 8px; font-size: 14px; }
+    .method-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+    .limitation-note { margin-top: 15px; padding: 14px 16px; border-left: 2px solid var(--review); border-radius: 0 9px 9px 0; background: rgba(241, 180, 85, .055); color: #afc0c7; font-size: 12px; line-height: 1.6; }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+    @media (max-width: 1040px) {
+      .workbench { grid-template-columns: 1fr; }
+      .composer { border-right: 0; border-bottom: 1px solid var(--line); }
+      .result-empty, .result-loading { min-height: 370px; }
+      .overview-grid, .method-grid { grid-template-columns: 1fr; }
+      .policy-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 24px, 1480px); padding-top: 20px; }
+      .topbar { align-items: flex-start; }
+      .brand-mark { width: 46px; height: 46px; }
+      .connection-pill { display: none; }
+      .status-strip { grid-template-columns: repeat(2, 1fr); }
+      .status-item:nth-child(2) { border-right: 0; }
+      .status-item:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .panel-heading { align-items: flex-start; padding: 18px; }
+      .keyboard-hint { display: none; }
+      .composer, .decision-panel, .tab-content { padding: 18px; }
+      .quick-load { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .quick-load .button { grid-column: 1 / -1; }
+      .field-row { grid-template-columns: 1fr; }
+      .highlight-heading { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 520px) {
+      .topbar { flex-direction: column; }
+      .header-actions { width: 100%; justify-content: space-between; }
+      .status-item { padding: 14px; }
+      .status-value { font-size: 15px; }
+      .decision-chain { grid-template-columns: 1fr; }
+      .actions { grid-template-columns: 1fr; }
+      .actions .button.ghost { order: 2; }
+      .metric-pair { grid-template-columns: 1fr; }
+      .registry-row { grid-template-columns: 1fr 1fr; }
+      .registry-row span:last-child { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">S6</div>
+        <div>
+          <p class="eyebrow">PROMPT SECURITY LAB</p>
+          <h1 data-i18n="appTitle">提示词注入安全控制台</h1>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="language-switch" aria-label="Language">
+          <button id="language-zh" class="active" type="button">中文</button>
+          <button id="language-en" type="button">EN</button>
+        </div>
+        <div id="connection-status" class="connection-pill">
+          <span class="connection-dot"></span>
+          <span id="connection-text" data-i18n="connecting">正在连接本地服务</span>
+        </div>
+        <button id="refresh-status" class="icon-button" type="button" data-i18n-aria="refreshStatus" aria-label="刷新状态">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M6.1 9a7 7 0 0 1 11.5-2.6L20 11M4 13l2.4 4.6A7 7 0 0 0 17.9 15"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="status-strip" aria-label="Detector status">
+      <div class="status-item"><span class="status-label" data-i18n="detectorVersion">规则检测器版本</span><strong id="status-version" class="status-value">—</strong></div>
+      <div class="status-item"><span class="status-label" data-i18n="categorySplit">开发 / 测试类别</span><strong id="status-splits" class="status-value">—</strong></div>
+      <div class="status-item"><span class="status-label" data-i18n="testDetection">P1 测试集检出率</span><strong id="status-detection" class="status-value">—</strong></div>
+      <div class="status-item"><span class="status-label" data-i18n="cleanFpr">P1 干净样本误报率</span><strong id="status-fpr" class="status-value">—</strong></div>
+    </section>
+
+    <section class="panel" aria-labelledby="workbench-title">
+      <div class="panel-heading">
+        <div class="heading-copy">
+          <span class="stage-pill">LIVE</span>
+          <div>
+            <h2 id="workbench-title" data-i18n="liveCheck">实时内容检查</h2>
+            <p class="panel-subtitle" data-i18n="liveSubtitle">沿 P1 规则、P2 语义和 P3 工具策略追踪完整判定链。</p>
+          </div>
+        </div>
+        <span class="keyboard-hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> <span data-i18n="runShortcut">运行检查</span></span>
+      </div>
+
+      <div class="workbench">
+        <div class="composer">
+          <div class="quick-load">
+            <div>
+              <label for="sample-split" data-i18n="sampleSplit">示例分组</label>
+              <select id="sample-split">
+                <option value="unseen_test">未见测试集</option>
+                <option value="development">开发集</option>
+              </select>
+            </div>
+            <div>
+              <label for="sample-encoding" data-i18n="sampleEncoding">攻击编码</label>
+              <select id="sample-encoding">
+                <option value="plain">明文</option>
+                <option value="stealth">隐蔽</option>
+              </select>
+            </div>
+            <button id="load-example" class="button" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66L20 8.68"/><path d="M20 4v4.68h-4.68"/></svg>
+              <span data-i18n="loadSample">随机样本</span>
+            </button>
+          </div>
+
+          <div id="context-note" class="context-note"></div>
+
+          <div class="field">
+            <label for="question"><span data-i18n="realTask">用户真实任务</span> <span class="optional" data-i18n="optionalSemantic">（可选，用于 P2 语义检查）</span></label>
+            <input id="question" type="text" data-i18n-placeholder="realTaskPlaceholder" placeholder="例如：总结这封邮件，并指出需要跟进的事项">
+          </div>
+
+          <div class="field">
+            <div class="content-heading">
+              <label for="content" data-i18n="untrustedContent">不可信内容</label>
+              <span id="content-count" class="counter">0 / 100,000 bytes</span>
+            </div>
+            <textarea id="content" data-i18n-placeholder="contentPlaceholder" placeholder="粘贴邮件、网页、文档或模型即将读取的外部内容……"></textarea>
+          </div>
+
+          <div class="tool-row">
+            <div class="tool-row-title">
+              <strong data-i18n="optionalToolCall">可选工具调用 · P3</strong>
+              <button id="load-scenario" class="scenario-button" type="button" data-i18n="loadScenario">载入混淆代理场景</button>
+            </div>
+            <div class="field-row">
+              <div>
+                <label for="tool-name" data-i18n="toolName">工具</label>
+                <select id="tool-name"><option value="">不检查工具调用</option></select>
+              </div>
+              <div>
+                <label for="tool-target" data-i18n="toolTarget">调用目标</label>
+                <input id="tool-target" type="text" data-i18n-placeholder="targetPlaceholder" placeholder="例如：external@example.com">
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button id="run-detection" class="button primary full" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8.1-8 9-4.6-.9-8-4-8-9V7l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span id="run-label" data-i18n="runCheck">运行安全检查</span>
+            </button>
+            <button id="clear-form" class="button ghost" type="button" data-i18n="clear">清空</button>
+          </div>
+          <div id="request-error" class="error-banner" role="alert"></div>
+        </div>
+
+        <aside class="decision-panel" aria-live="polite">
+          <div id="result-empty" class="result-empty">
+            <div class="empty-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8.1-8 9-4.6-.9-8-4-8-9V7l8-4Z"/><path d="M9 12h6M12 9v6"/></svg>
+            </div>
+            <h3 data-i18n="awaitingTitle">等待检查内容</h3>
+            <p data-i18n="awaitingBody">输入内容后，控制台会分别显示规则风险、任务一致性、混合内容门控与工具权限结果。</p>
+          </div>
+
+          <div id="result-loading" class="result-loading">
+            <div class="loader"></div>
+            <strong data-i18n="checkingTitle">正在执行判定链</strong>
+            <p data-i18n="checkingBody">首次启用 P2 时可能需要载入本地 MiniLM 模型；规则检查本身会更快完成。</p>
+            <span id="elapsed" class="elapsed">0.0 s</span>
+          </div>
+
+          <div id="result-content" class="result-content">
+            <div class="result-head">
+              <div>
+                <span class="result-kicker" data-i18n="contentGate">内容门控结果</span>
+                <h3><span id="headline-badge" class="badge">—</span></h3>
+              </div>
+              <div class="result-score"><strong id="headline-score">—</strong><span data-i18n="ruleRiskScore">P1 规则风险分</span></div>
+            </div>
+            <div class="risk-track"><div id="risk-fill" class="risk-fill"></div></div>
+
+            <div class="decision-chain">
+              <div class="chain-card">
+                <div class="chain-top"><span class="chain-name" data-i18n="p1Rules">P1 规则</span><span id="p1-badge" class="badge">—</span></div>
+                <span id="p1-value" class="chain-value">—</span>
+              </div>
+              <div class="chain-card">
+                <div class="chain-top"><span class="chain-name" data-i18n="p2Semantic">P2 语义</span><span id="p2-badge" class="badge">—</span></div>
+                <span id="p2-value" class="chain-value">—</span>
+              </div>
+              <div class="chain-card">
+                <div class="chain-top"><span class="chain-name" data-i18n="hybridGate">混合门控</span><span id="hybrid-badge" class="badge hybrid">—</span></div>
+                <span id="hybrid-value" class="chain-value">—</span>
+              </div>
+              <div class="chain-card">
+                <div class="chain-top"><span class="chain-name" data-i18n="p3Policy">P3 工具策略</span><span id="p3-badge" class="badge">—</span></div>
+                <span id="p3-value" class="chain-value">—</span>
+              </div>
+            </div>
+
+            <div id="reason-groups" class="reason-groups"></div>
+          </div>
+        </aside>
+      </div>
+
+      <section id="highlight-section" class="highlight-section">
+        <div class="highlight-heading">
+          <h3 data-i18n="evidenceTitle">命中证据</h3>
+          <div class="legend">
+            <span><i class="p1"></i><span data-i18n="p1Rules">P1 规则</span></span>
+            <span><i class="p2"></i><span data-i18n="p2Semantic">P2 语义</span></span>
+            <span><i class="both"></i><span data-i18n="overlap">重叠命中</span></span>
+          </div>
+        </div>
+        <div id="highlighted-content" class="highlighted-content"></div>
+      </section>
+    </section>
+
+    <section class="panel analytics">
+      <nav class="tabs" aria-label="Evaluation views">
+        <button class="tab active" type="button" data-tab="overview" data-i18n="tabOverview">评估概览</button>
+        <button class="tab" type="button" data-tab="p1" data-i18n="tabP1">P1 规则基线</button>
+        <button class="tab" type="button" data-tab="p2" data-i18n="tabP2">P2 语义混合</button>
+        <button class="tab" type="button" data-tab="p3" data-i18n="tabP3">P3 工具策略</button>
+        <button class="tab" type="button" data-tab="method" data-i18n="tabMethod">方法与边界</button>
+      </nav>
+
+      <div id="tab-overview" class="tab-content active">
+        <div class="section-intro">
+          <div><h3 data-i18n="overviewTitle">三层防护概览</h3><p data-i18n="overviewBody">下方统一使用固定未见测试集，便于区分内容检测能力和工具层危害抑制能力。</p></div>
+          <p id="status-warning" class="status-warning"></p>
+        </div>
+        <div class="overview-grid">
+          <article class="overview-card">
+            <div class="overview-card-top"><h4 data-i18n="p1RuleEngine">P1 · 规则引擎</h4><span id="overview-p1-badge" class="badge">—</span></div>
+            <div class="metric-pair"><div><span data-i18n="attackDetection">攻击检出率</span><strong id="overview-p1-detection">—</strong></div><div><span data-i18n="falsePositive">误报率</span><strong id="overview-p1-fpr">—</strong></div></div>
+          </article>
+          <article class="overview-card">
+            <div class="overview-card-top"><h4 data-i18n="p2HybridEngine">P2 · 混合语义</h4><span class="badge hybrid">HYBRID</span></div>
+            <div class="metric-pair"><div><span data-i18n="attackDetection">攻击检出率</span><strong id="overview-p2-detection">—</strong></div><div><span data-i18n="falsePositive">误报率</span><strong id="overview-p2-fpr">—</strong></div></div>
+          </article>
+          <article class="overview-card">
+            <div class="overview-card-top"><h4 data-i18n="p3Containment">P3 · 危害抑制</h4><span class="badge allow">POLICY</span></div>
+            <div class="metric-pair"><div><span data-i18n="containedHarm">危害抑制率</span><strong id="overview-p3-harm">—</strong></div><div><span data-i18n="frictionCost">摩擦成本</span><strong id="overview-p3-friction">—</strong></div></div>
+          </article>
+        </div>
+      </div>
+
+      <div id="tab-p1" class="tab-content">
+        <div class="section-intro"><div><h3 data-i18n="p1DetailTitle">规则基线评估</h3><p data-i18n="p1DetailBody">比较明文与隐蔽攻击在开发集、未见测试集上的检出、误报、F1 和延迟。</p></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th data-i18n="encoding">编码</th><th data-i18n="split">分组</th><th data-i18n="attackSamples">攻击样本</th><th data-i18n="cleanSamples">干净样本</th><th data-i18n="detectionRate">检出率</th><th data-i18n="fpr">误报率</th><th>F1</th><th data-i18n="medianLatency">中位延迟</th><th data-i18n="p95Latency">P95 延迟</th></tr></thead>
+          <tbody id="p1-metrics-body"><tr><td colspan="9">—</td></tr></tbody>
+        </table></div>
+      </div>
+
+      <div id="tab-p2" class="tab-content">
+        <div class="section-intro"><div><h3 data-i18n="p2DetailTitle">语义与混合评估</h3><p data-i18n="p2DetailBody">同一固定分组分别运行规则、语义和混合检测器，避免把开发集调参结果当成泛化能力。</p></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th data-i18n="encoding">编码</th><th data-i18n="split">分组</th><th data-i18n="detectorType">检测器</th><th data-i18n="attackSamples">攻击样本</th><th data-i18n="detectionRate">检出率</th><th data-i18n="fpr">误报率</th><th>F1</th></tr></thead>
+          <tbody id="p2-metrics-body"><tr><td colspan="7">—</td></tr></tbody>
+        </table></div>
+      </div>
+
+      <div id="tab-p3" class="tab-content">
+        <div class="section-intro"><div><h3 data-i18n="p3DetailTitle">工具策略与混淆代理防护</h3><p data-i18n="p3DetailBody">工具、权限和目标共同决定是否放行；内容判定只提供风险信号，不代替权限边界。</p></div></div>
+        <div class="policy-grid">
+          <article class="policy-summary"><h4 data-i18n="evaluationSummary">评估摘要</h4><div id="policy-stats"></div></article>
+          <article class="registry"><h4 data-i18n="toolRegistry">工具注册表</h4><div id="registry-list" class="registry-list"></div></article>
+        </div>
+      </div>
+
+      <div id="tab-method" class="tab-content">
+        <div class="section-intro"><div><h3 data-i18n="methodTitle">判定方法与适用边界</h3><p data-i18n="methodBody">三层结果应分别解读：内容风险、任务一致性和执行权限不是同一个问题。</p></div></div>
+        <div class="method-grid">
+          <article class="method-card"><span class="method-number">P1 · RULES</span><h4 data-i18n="methodP1Title">快速规则筛查</h4><p data-i18n="methodP1Body">对显式指令覆盖、角色劫持和数据外传模式进行加权匹配，速度快且证据可定位，适合作为稳定基线。</p></article>
+          <article class="method-card"><span class="method-number">P2 · SEMANTICS</span><h4 data-i18n="methodP2Title">任务一致性补充</h4><p data-i18n="methodP2Body">在提供用户真实任务时，用本地 MiniLM 比较内容与任务的语义关系，再与 P1 合成混合门控结果。</p></article>
+          <article class="method-card"><span class="method-number">P3 · POLICY</span><h4 data-i18n="methodP3Title">工具权限兜底</h4><p data-i18n="methodP3Body">对高影响工具、外部目标和不可信内容触发的调用实施阻断或人工复核，减少检测漏报转化为真实危害。</p></article>
+        </div>
+        <div class="limitation-note" data-i18n="limitation">边界：本控制台是研究基线，不应将 ALLOW 解读为内容绝对安全。生产系统还需要隔离执行、最小权限、审计与针对业务数据的持续评估。</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const translations = {
+      zh: {
+        appTitle: "提示词注入安全控制台", connecting: "正在连接本地服务", online: "本地服务在线", offline: "本地服务离线", refreshStatus: "刷新状态",
+        detectorVersion: "规则检测器版本", categorySplit: "开发 / 测试类别", testDetection: "P1 测试集检出率", cleanFpr: "P1 干净样本误报率",
+        liveCheck: "实时内容检查", liveSubtitle: "沿 P1 规则、P2 语义和 P3 工具策略追踪完整判定链。", runShortcut: "运行检查",
+        sampleSplit: "示例分组", sampleEncoding: "攻击编码", unseenTest: "未见测试集", development: "开发集", plain: "明文", stealth: "隐蔽", loadSample: "随机样本", loadingSample: "正在载入…",
+        realTask: "用户真实任务", optionalSemantic: "（可选，用于 P2 语义检查）", realTaskPlaceholder: "例如：总结这封邮件，并指出需要跟进的事项",
+        untrustedContent: "不可信内容", contentPlaceholder: "粘贴邮件、网页、文档或模型即将读取的外部内容……", optionalToolCall: "可选工具调用 · P3", loadScenario: "载入混淆代理场景", loadingScenario: "正在载入…", toolName: "工具", noTool: "不检查工具调用", toolTarget: "调用目标", targetPlaceholder: "例如：external@example.com", runCheck: "运行安全检查", checking: "正在检查…", clear: "清空",
+        awaitingTitle: "等待检查内容", awaitingBody: "输入内容后，控制台会分别显示规则风险、任务一致性、混合内容门控与工具权限结果。", checkingTitle: "正在执行判定链", checkingBody: "首次启用 P2 时可能需要载入本地 MiniLM 模型；规则检查本身会更快完成。",
+        contentGate: "内容门控结果", ruleRiskScore: "P1 规则风险分", p1Rules: "P1 规则", p2Semantic: "P2 语义", hybridGate: "混合门控", p3Policy: "P3 工具策略", evidenceTitle: "命中证据", overlap: "重叠命中",
+        tabOverview: "评估概览", tabP1: "P1 规则基线", tabP2: "P2 语义混合", tabP3: "P3 工具策略", tabMethod: "方法与边界",
+        overviewTitle: "三层防护概览", overviewBody: "下方统一使用固定未见测试集，便于区分内容检测能力和工具层危害抑制能力。", p1RuleEngine: "P1 · 规则引擎", p2HybridEngine: "P2 · 混合语义", p3Containment: "P3 · 危害抑制", attackDetection: "攻击检出率", falsePositive: "误报率", containedHarm: "危害抑制率", frictionCost: "摩擦成本",
+        p1DetailTitle: "规则基线评估", p1DetailBody: "比较明文与隐蔽攻击在开发集、未见测试集上的检出、误报、F1 和延迟。", p2DetailTitle: "语义与混合评估", p2DetailBody: "同一固定分组分别运行规则、语义和混合检测器，避免把开发集调参结果当成泛化能力。", p3DetailTitle: "工具策略与混淆代理防护", p3DetailBody: "工具、权限和目标共同决定是否放行；内容判定只提供风险信号，不代替权限边界。",
+        encoding: "编码", split: "分组", attackSamples: "攻击样本", cleanSamples: "干净样本", detectionRate: "检出率", fpr: "误报率", medianLatency: "中位延迟", p95Latency: "P95 延迟", detectorType: "检测器",
+        evaluationSummary: "评估摘要", toolRegistry: "工具注册表", scenarios: "评估场景", decisions: "决策分布", harmBefore: "策略前危害", harmAfter: "策略后危害", registryPermission: "权限", registryTargets: "可信目标", anyTarget: "任意目标", noTrustedTarget: "无可信目标",
+        methodTitle: "判定方法与适用边界", methodBody: "三层结果应分别解读：内容风险、任务一致性和执行权限不是同一个问题。", methodP1Title: "快速规则筛查", methodP1Body: "对显式指令覆盖、角色劫持和数据外传模式进行加权匹配，速度快且证据可定位，适合作为稳定基线。", methodP2Title: "任务一致性补充", methodP2Body: "在提供用户真实任务时，用本地 MiniLM 比较内容与任务的语义关系，再与 P1 合成混合门控结果。", methodP3Title: "工具权限兜底", methodP3Body: "对高影响工具、外部目标和不可信内容触发的调用实施阻断或人工复核，减少检测漏报转化为真实危害。", limitation: "边界：本控制台是研究基线，不应将 ALLOW 解读为内容绝对安全。生产系统还需要隔离执行、最小权限、审计与针对业务数据的持续评估。",
+        sampleLoaded: "已载入 {split} · {encoding} · {attack} · 位置 {position}", scenarioLoaded: "已载入场景 {id}：{description}", contentRequired: "请先输入需要检查的内容。", requestFailed: "请求失败：{message}", unknownError: "未知错误", statusMismatch: "注意：部分评估结果与当前检测器配置不一致。", statusCurrent: "当前配置", noReasons: "未返回额外理由。", findings: "{count} 条检测依据", skipped: "未运行", score: "分数 {value}", threshold: "阻断阈值 {value}", permission: "权限 {value}", noToolValue: "未提供工具调用", noTaskValue: "未提供真实任务", hybridUnavailable: "需提供真实任务", detectorOutput: "检测器原始输出", bytes: "bytes",
+        decisionAllow: "放行", decisionReview: "复核", decisionBlock: "阻断", decisionDeny: "拒绝", decisionHumanReview: "人工复核", posPrefix: "前部", posMiddle: "中部", posSuffix: "尾部", plainLabel: "明文", stealthLabel: "隐蔽", developmentLabel: "开发集", unseen_testLabel: "未见测试集"
+      },
+      en: {
+        appTitle: "Prompt-Injection Security Console", connecting: "Connecting to local service", online: "Local service online", offline: "Local service offline", refreshStatus: "Refresh status",
+        detectorVersion: "Rule detector version", categorySplit: "Dev / test categories", testDetection: "P1 test detection", cleanFpr: "P1 clean false positives",
+        liveCheck: "Live content check", liveSubtitle: "Trace the full decision chain across P1 rules, P2 semantics, and P3 tool policy.", runShortcut: "Run check",
+        sampleSplit: "Example split", sampleEncoding: "Attack encoding", unseenTest: "Unseen test", development: "Development", plain: "Plain", stealth: "Stealth", loadSample: "Random sample", loadingSample: "Loading…",
+        realTask: "User's real task", optionalSemantic: "(optional, enables P2 semantic check)", realTaskPlaceholder: "e.g. Summarize this email and list the required follow-ups",
+        untrustedContent: "Untrusted content", contentPlaceholder: "Paste an email, webpage, document, or other external content the model will read…", optionalToolCall: "Optional tool call · P3", loadScenario: "Load confused-deputy scenario", loadingScenario: "Loading…", toolName: "Tool", noTool: "Do not check a tool call", toolTarget: "Call target", targetPlaceholder: "e.g. external@example.com", runCheck: "Run security check", checking: "Checking…", clear: "Clear",
+        awaitingTitle: "Waiting for content", awaitingBody: "After you enter content, the console shows rule risk, task consistency, hybrid content gating, and tool authorization separately.", checkingTitle: "Running the decision chain", checkingBody: "The first P2 check may need to load the local MiniLM model; the rule check itself is faster.",
+        contentGate: "Content-gate result", ruleRiskScore: "P1 rule risk score", p1Rules: "P1 rules", p2Semantic: "P2 semantics", hybridGate: "Hybrid gate", p3Policy: "P3 tool policy", evidenceTitle: "Matched evidence", overlap: "Overlapping match",
+        tabOverview: "Evaluation overview", tabP1: "P1 rule engine baseline", tabP2: "P2 semantic hybrid", tabP3: "P3 tool policy", tabMethod: "Method & limits",
+        overviewTitle: "Three-layer defense overview", overviewBody: "These summaries use the fixed unseen-test split, separating content-detection performance from tool-layer harm containment.", p1RuleEngine: "P1 · Rule engine", p2HybridEngine: "P2 · Semantic hybrid", p3Containment: "P3 · Harm containment", attackDetection: "Attack detection", falsePositive: "False-positive rate", containedHarm: "Harm containment", frictionCost: "Friction cost",
+        p1DetailTitle: "Rule-baseline evaluation", p1DetailBody: "Compare detection, false positives, F1, and latency for plain and stealth attacks on development and unseen-test splits.", p2DetailTitle: "Semantic and hybrid evaluation", p2DetailBody: "Run rule, semantic, and hybrid detectors on the same fixed splits so tuned development results are not mistaken for generalization.", p3DetailTitle: "Tool policy and confused-deputy defense", p3DetailBody: "Tool, permission, and target jointly determine authorization; the content decision is a risk signal, not a permission boundary.",
+        encoding: "Encoding", split: "Split", attackSamples: "Attack samples", cleanSamples: "Clean samples", detectionRate: "Detection", fpr: "FPR", medianLatency: "Median latency", p95Latency: "P95 latency", detectorType: "Detector",
+        evaluationSummary: "Evaluation summary", toolRegistry: "Tool registry", scenarios: "Evaluation scenarios", decisions: "Decision distribution", harmBefore: "Harm before policy", harmAfter: "Harm after policy", registryPermission: "Permission", registryTargets: "Trusted targets", anyTarget: "Any target", noTrustedTarget: "No trusted target",
+        methodTitle: "Decision method and operating limits", methodBody: "Read the three layers separately: content risk, task consistency, and execution authority are different questions.", methodP1Title: "Fast rule screening", methodP1Body: "Weighted matches identify explicit instruction override, role hijacking, and exfiltration patterns. It is fast, locatable, and serves as the stable baseline.", methodP2Title: "Task-consistency supplement", methodP2Body: "When a real user task is supplied, local MiniLM compares content with task semantics and combines that signal with P1 into a hybrid gate.", methodP3Title: "Tool-permission backstop", methodP3Body: "High-impact tools, external targets, and calls triggered by untrusted content are blocked or sent for review, limiting the impact of detector misses.", limitation: "Limit: this console is a research baseline. ALLOW does not mean absolutely safe. Production systems still need execution isolation, least privilege, audit, and continuous evaluation on domain data.",
+        sampleLoaded: "Loaded {split} · {encoding} · {attack} · {position} position", scenarioLoaded: "Loaded scenario {id}: {description}", contentRequired: "Enter content to check first.", requestFailed: "Request failed: {message}", unknownError: "Unknown error", statusMismatch: "Note: some evaluation results do not match the current detector configuration.", statusCurrent: "Current config", noReasons: "No additional reason was returned.", findings: "{count} detector finding(s)", skipped: "Skipped", score: "Score {value}", threshold: "Block threshold {value}", permission: "Permission {value}", noToolValue: "No tool call supplied", noTaskValue: "No real task supplied", hybridUnavailable: "Requires a real task", detectorOutput: "Detector output", bytes: "bytes",
+        decisionAllow: "Allow", decisionReview: "Review", decisionBlock: "Block", decisionDeny: "Deny", decisionHumanReview: "Human review", posPrefix: "prefix", posMiddle: "middle", posSuffix: "suffix", plainLabel: "Plain", stealthLabel: "Stealth", developmentLabel: "Development", unseen_testLabel: "Unseen test"
+      }
+    };
+
+    const state = {
+      language: localStorage.getItem("s6-prompt-language") === "en" ? "en" : "zh",
+      connection: "loading",
+      snapshot: null,
+      currentResult: null,
+      sourceText: "",
+      sampleMeta: null,
+      scenarioMeta: null,
+      elapsedTimer: null,
+      startedAt: 0
+    };
+
+    const byId = id => document.getElementById(id);
+    const contentInput = byId("content");
+    const questionInput = byId("question");
+    const toolSelect = byId("tool-name");
+    const targetInput = byId("tool-target");
+
+    function t(key, replacements = {}) {
+      let value = translations[state.language][key] ?? translations.en[key] ?? key;
+      Object.entries(replacements).forEach(([name, replacement]) => {
+        value = value.replaceAll(`{${name}}`, String(replacement));
+      });
+      return value;
+    }
+
+    function percent(value, digits = 1) {
+      return Number.isFinite(Number(value)) ? `${(Number(value) * 100).toFixed(digits)}%` : "—";
+    }
+
+    function number(value, digits = 2) {
+      return Number.isFinite(Number(value)) ? Number(value).toFixed(digits) : "—";
+    }
+
+    function latency(value) {
+      return Number.isFinite(Number(value)) ? `${Number(value).toFixed(2)} ms` : "—";
+    }
+
+    function splitLabel(value) { return t(`${value}Label`); }
+    function encodingLabel(value) { return t(`${value}Label`); }
+    function positionLabel(value) { return t(`pos${String(value || "").charAt(0).toUpperCase()}${String(value || "").slice(1)}`) || value; }
+
+    function setConnection(connection) {
+      state.connection = connection;
+      const pill = byId("connection-status");
+      pill.classList.remove("online", "offline");
+      if (connection === "online") pill.classList.add("online");
+      if (connection === "offline") pill.classList.add("offline");
+      byId("connection-text").textContent = t(connection === "online" ? "online" : connection === "offline" ? "offline" : "connecting");
+    }
+
+    function setOptionLabels() {
+      byId("sample-split").querySelector('[value="unseen_test"]').textContent = t("unseenTest");
+      byId("sample-split").querySelector('[value="development"]').textContent = t("development");
+      byId("sample-encoding").querySelector('[value="plain"]').textContent = t("plain");
+      byId("sample-encoding").querySelector('[value="stealth"]').textContent = t("stealth");
+      const emptyTool = toolSelect.querySelector('option[value=""]');
+      if (emptyTool) emptyTool.textContent = t("noTool");
+    }
+
+    function applyLanguage(language) {
+      state.language = language;
+      localStorage.setItem("s6-prompt-language", language);
+      document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+      document.title = language === "zh" ? "S6 提示词注入安全控制台" : "S6 Prompt-Injection Security Console";
+      document.querySelectorAll("[data-i18n]").forEach(node => { node.textContent = t(node.dataset.i18n); });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(node => { node.placeholder = t(node.dataset.i18nPlaceholder); });
+      document.querySelectorAll("[data-i18n-aria]").forEach(node => { node.setAttribute("aria-label", t(node.dataset.i18nAria)); });
+      byId("language-zh").classList.toggle("active", language === "zh");
+      byId("language-en").classList.toggle("active", language === "en");
+      setOptionLabels();
+      setConnection(state.connection);
+      updateContextNote();
+      updateCounter();
+      if (state.snapshot) renderStatus(state.snapshot);
+      if (state.currentResult) renderResult(state.currentResult, false);
+    }
+
+    async function requestJson(url, options = {}) {
+      const response = await fetch(url, { cache: "no-store", ...options });
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(payload.error || `${response.status} ${response.statusText}`);
+      return payload;
+    }
+
+    function updateCounter() {
+      const bytes = new TextEncoder().encode(contentInput.value).length;
+      byId("content-count").textContent = `${bytes.toLocaleString(state.language === "zh" ? "zh-CN" : "en-US")} / 100,000 ${t("bytes")}`;
+    }
+
+    function updateContextNote() {
+      const note = byId("context-note");
+      if (state.sampleMeta) {
+        note.textContent = t("sampleLoaded", {
+          split: splitLabel(state.sampleMeta.split),
+          encoding: encodingLabel(state.sampleMeta.encoding),
+          attack: state.sampleMeta.attack_name,
+          position: positionLabel(state.sampleMeta.position)
+        });
+        note.classList.add("visible");
+      } else if (state.scenarioMeta) {
+        note.textContent = t("scenarioLoaded", { id: state.scenarioMeta.scenario_id, description: state.scenarioMeta.description });
+        note.classList.add("visible");
+      } else {
+        note.textContent = "";
+        note.classList.remove("visible");
+      }
+    }
+
+    function decisionClass(decision) {
+      if (decision === "ALLOW") return "allow";
+      if (decision === "REVIEW" || decision === "HUMAN_REVIEW") return "review";
+      if (decision === "BLOCK" || decision === "DENY") return "block";
+      return "";
+    }
+
+    function decisionText(decision) {
+      const map = { ALLOW: "decisionAllow", REVIEW: "decisionReview", BLOCK: "decisionBlock", DENY: "decisionDeny", HUMAN_REVIEW: "decisionHumanReview" };
+      return map[decision] ? `${t(map[decision])} · ${decision}` : t("skipped");
+    }
+
+    function setBadge(element, decision, extraClass = "") {
+      element.className = `badge ${decisionClass(decision)} ${extraClass}`.trim();
+      element.textContent = decisionText(decision);
+    }
+
+    function renderEvaluationTable(data) {
+      const body = byId("p1-metrics-body");
+      body.replaceChildren();
+      ["plain", "stealth"].forEach(encoding => {
+        const evaluation = data.evaluations?.[encoding];
+        ["development", "unseen_test"].forEach(split => {
+          const metric = evaluation?.splits?.[split];
+          if (!metric) return;
+          const row = document.createElement("tr");
+          [encodingLabel(encoding), splitLabel(split), metric.attacked_samples, metric.clean_samples, percent(metric.attack_detection_rate), percent(metric.false_positive_rate), number(metric.f1, 3), latency(metric.median_latency_ms), latency(metric.p95_latency_ms)].forEach(value => {
+            const cell = document.createElement("td"); cell.textContent = value ?? "—"; row.appendChild(cell);
+          });
+          body.appendChild(row);
+        });
+      });
+      if (!body.children.length) body.innerHTML = '<tr><td colspan="9">—</td></tr>';
+    }
+
+    function renderSemanticTable(data) {
+      const body = byId("p2-metrics-body");
+      body.replaceChildren();
+      ["plain", "stealth"].forEach(encoding => {
+        ["development", "unseen_test"].forEach(split => {
+          const splitData = data.p2_evaluations?.[encoding]?.splits?.[split];
+          ["rule", "semantic", "hybrid"].forEach(detector => {
+            const metric = splitData?.[detector];
+            if (!metric) return;
+            const row = document.createElement("tr");
+            [encodingLabel(encoding), splitLabel(split), detector.toUpperCase(), metric.attacked_samples, percent(metric.attack_detection_rate), percent(metric.false_positive_rate), number(metric.f1, 3)].forEach(value => {
+              const cell = document.createElement("td"); cell.textContent = value ?? "—"; row.appendChild(cell);
+            });
+            body.appendChild(row);
+          });
+        });
+      });
+      if (!body.children.length) body.innerHTML = '<tr><td colspan="7">—</td></tr>';
+    }
+
+    function extractHarmValue(harm, keys) {
+      for (const key of keys) if (Number.isFinite(Number(harm?.[key]))) return Number(harm[key]);
+      return null;
+    }
+
+    function formatHarm(value) {
+      if (!Number.isFinite(value)) return "—";
+      return value <= 1 ? percent(value) : String(value);
+    }
+
+    function renderPolicy(data) {
+      const policy = data.tool_policy || {};
+      const evaluation = policy.evaluation || {};
+      const harm = evaluation.harm_containment || {};
+      const friction = evaluation.friction_cost;
+      const before = extractHarmValue(harm, ["harmful_action_success_rate_without_policy", "before_policy", "harmful_before_policy", "before"]);
+      const after = extractHarmValue(harm, ["harmful_action_success_rate_with_policy", "after_policy", "harmful_after_policy", "after"]);
+      const containment = extractHarmValue(harm, ["containment_rate", "harm_containment_rate", "rate"]);
+      byId("overview-p3-harm").textContent = formatHarm(containment ?? (before && after !== null ? (before - after) / before : null));
+      const frictionRate = typeof friction === "object" ? extractHarmValue(friction, ["benign_high_impact_friction_rate", "friction_rate", "rate"]) : Number(friction);
+      byId("overview-p3-friction").textContent = formatHarm(frictionRate);
+
+      const stats = byId("policy-stats");
+      stats.replaceChildren();
+      const decisionTextValue = evaluation.decisions && typeof evaluation.decisions === "object"
+        ? Object.entries(evaluation.decisions).map(([key, value]) => `${key}: ${value}`).join(" · ")
+        : (evaluation.decisions ?? "—");
+      [[t("scenarios"), evaluation.scenario_count ?? "—"], [t("decisions"), decisionTextValue], [t("harmBefore"), formatHarm(before)], [t("harmAfter"), formatHarm(after)]].forEach(([label, value]) => {
+        const row = document.createElement("div"); row.className = "policy-stat";
+        const left = document.createElement("span"); left.textContent = label;
+        const right = document.createElement("strong"); right.textContent = value;
+        row.append(left, right); stats.appendChild(row);
+      });
+
+      const registry = byId("registry-list");
+      registry.replaceChildren();
+      Object.entries(policy.tool_registry || {}).forEach(([name, config]) => {
+        const row = document.createElement("div"); row.className = "registry-row";
+        const tool = document.createElement("span"); tool.textContent = name;
+        const permission = document.createElement("span"); permission.textContent = `${t("registryPermission")}: ${config.permission ?? "—"}`;
+        const targets = document.createElement("span");
+        const targetValues = config.trusted_targets;
+        targets.textContent = `${t("registryTargets")}: ${Array.isArray(targetValues) ? (targetValues.length ? targetValues.join(", ") : t("noTrustedTarget")) : (targetValues || t("anyTarget"))}`;
+        row.append(tool, permission, targets); registry.appendChild(row);
+      });
+    }
+
+    function populateTools(data) {
+      const selected = toolSelect.value;
+      const registry = data.tool_policy?.tool_registry || {};
+      toolSelect.replaceChildren();
+      const none = document.createElement("option"); none.value = ""; none.textContent = t("noTool"); toolSelect.appendChild(none);
+      Object.keys(registry).forEach(name => { const option = document.createElement("option"); option.value = name; option.textContent = name; toolSelect.appendChild(option); });
+      if ([...toolSelect.options].some(option => option.value === selected)) toolSelect.value = selected;
+    }
+
+    function renderStatus(data) {
+      const p1Test = data.evaluations?.plain?.splits?.unseen_test || {};
+      const p2Test = data.p2_evaluations?.plain?.splits?.unseen_test?.hybrid || {};
+      const devCount = data.split_status?.development?.categories;
+      const testCount = data.split_status?.unseen_test?.categories;
+      byId("status-version").textContent = data.version ? `v${data.version}` : (data.detector || "—");
+      byId("status-splits").textContent = `${devCount ?? "—"} / ${testCount ?? "—"}`;
+      byId("status-detection").textContent = percent(p1Test.attack_detection_rate);
+      byId("status-fpr").textContent = percent(p1Test.false_positive_rate);
+      byId("overview-p1-detection").textContent = percent(p1Test.attack_detection_rate);
+      byId("overview-p1-fpr").textContent = percent(p1Test.false_positive_rate);
+      byId("overview-p2-detection").textContent = percent(p2Test.attack_detection_rate);
+      byId("overview-p2-fpr").textContent = percent(p2Test.false_positive_rate);
+      const allCurrent = Object.values(data.evaluations || {}).every(item => item.matches_current_detector !== false);
+      setBadge(byId("overview-p1-badge"), allCurrent ? "ALLOW" : "REVIEW");
+      byId("overview-p1-badge").textContent = allCurrent ? t("statusCurrent") : t("decisionReview");
+      byId("status-warning").textContent = allCurrent ? (data.historical_exposure_warning || "") : t("statusMismatch");
+      renderEvaluationTable(data);
+      renderSemanticTable(data);
+      renderPolicy(data);
+      populateTools(data);
+    }
+
+    async function loadStatus() {
+      const button = byId("refresh-status");
+      button.classList.add("loading"); button.disabled = true;
+      setConnection("loading");
+      try {
+        state.snapshot = await requestJson("/api/status");
+        renderStatus(state.snapshot);
+        setConnection("online");
+      } catch (error) {
+        setConnection("offline");
+        byId("status-warning").textContent = t("requestFailed", { message: error.message || t("unknownError") });
+      } finally {
+        button.classList.remove("loading"); button.disabled = false;
+      }
+    }
+
+    async function loadExample() {
+      const button = byId("load-example");
+      const label = button.querySelector("span");
+      button.disabled = true; label.textContent = t("loadingSample"); hideError();
+      try {
+        const split = byId("sample-split").value;
+        const encoding = byId("sample-encoding").value;
+        const data = await requestJson(`/api/example?split=${encodeURIComponent(split)}&encoding=${encodeURIComponent(encoding)}`);
+        state.sampleMeta = data; state.scenarioMeta = null;
+        contentInput.value = data.text || "";
+        questionInput.value = data.question || "";
+        toolSelect.value = ""; targetInput.value = "";
+        updateContextNote(); updateCounter(); resetResult();
+      } catch (error) {
+        showError(error);
+      } finally {
+        button.disabled = false; label.textContent = t("loadSample");
+      }
+    }
+
+    async function loadScenario() {
+      const button = byId("load-scenario");
+      button.disabled = true; button.textContent = t("loadingScenario"); hideError();
+      try {
+        const data = await requestJson("/api/tool-scenario");
+        state.scenarioMeta = data; state.sampleMeta = null;
+        contentInput.value = data.content || "";
+        questionInput.value = "";
+        if (![...toolSelect.options].some(option => option.value === data.tool_name)) {
+          const option = document.createElement("option"); option.value = data.tool_name; option.textContent = data.tool_name; toolSelect.appendChild(option);
+        }
+        toolSelect.value = data.tool_name || "";
+        targetInput.value = data.target || "";
+        updateContextNote(); updateCounter(); resetResult();
+      } catch (error) {
+        showError(error);
+      } finally {
+        button.disabled = false; button.textContent = t("loadScenario");
+      }
+    }
+
+    function showError(error) {
+      const banner = byId("request-error");
+      banner.textContent = t("requestFailed", { message: error?.message || t("unknownError") });
+      banner.classList.add("visible");
+    }
+    function hideError() { byId("request-error").classList.remove("visible"); }
+
+    function setDetectionLoading(loading) {
+      const button = byId("run-detection");
+      button.disabled = loading;
+      byId("run-label").textContent = t(loading ? "checking" : "runCheck");
+      byId("result-empty").style.display = loading ? "none" : "";
+      byId("result-content").classList.remove("visible");
+      byId("result-loading").classList.toggle("visible", loading);
+      if (state.elapsedTimer) clearInterval(state.elapsedTimer);
+      state.elapsedTimer = null;
+      if (loading) {
+        state.startedAt = performance.now();
+        const tick = () => { byId("elapsed").textContent = `${((performance.now() - state.startedAt) / 1000).toFixed(1)} s`; };
+        tick(); state.elapsedTimer = setInterval(tick, 100);
+      }
+    }
+
+    async function runDetection() {
+      const text = contentInput.value.trim();
+      if (!text) {
+        const banner = byId("request-error"); banner.textContent = t("contentRequired"); banner.classList.add("visible"); contentInput.focus(); return;
+      }
+      hideError(); setDetectionLoading(true);
+      const payload = { text: contentInput.value };
+      if (questionInput.value.trim()) payload.question = questionInput.value.trim();
+      if (toolSelect.value) payload.tool_name = toolSelect.value;
+      if (targetInput.value.trim()) payload.target = targetInput.value.trim();
+      try {
+        const data = await requestJson("/api/detect", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+        state.sourceText = contentInput.value;
+        state.currentResult = data;
+        renderResult(data, true);
+      } catch (error) {
+        resetResult(); showError(error);
+      } finally {
+        setDetectionLoading(false);
+        if (state.currentResult) {
+          byId("result-empty").style.display = "none";
+          byId("result-content").classList.add("visible");
+        }
+      }
+    }
+
+    function addReasonGroup(container, title, reasons, open = false) {
+      const values = Array.isArray(reasons) && reasons.length ? reasons : [t("noReasons")];
+      const details = document.createElement("details"); details.open = open;
+      const summary = document.createElement("summary");
+      const name = document.createElement("span"); name.textContent = title;
+      const count = document.createElement("span"); count.className = "reason-count"; count.textContent = t("findings", { count: values.length });
+      summary.append(name, count);
+      const list = document.createElement("ul");
+      values.forEach(reason => { const item = document.createElement("li"); item.textContent = reason; list.appendChild(item); });
+      details.append(summary, list); container.appendChild(details);
+    }
+
+    function renderHighlights(text, p1Highlights = [], p2Highlights = []) {
+      const target = byId("highlighted-content");
+      target.replaceChildren();
+      const normalized = [];
+      [{ source: "p1", items: p1Highlights }, { source: "p2", items: p2Highlights }].forEach(group => {
+        (group.items || []).forEach(item => {
+          const start = Math.max(0, Math.min(text.length, Number(item.start)));
+          const end = Math.max(start, Math.min(text.length, Number(item.end)));
+          if (end > start) normalized.push({ start, end, source: group.source, label: item.label || "" });
+        });
+      });
+      if (!normalized.length) { target.textContent = text; return; }
+      const boundaries = [...new Set([0, text.length, ...normalized.flatMap(item => [item.start, item.end])])].sort((a, b) => a - b);
+      for (let index = 0; index < boundaries.length - 1; index += 1) {
+        const start = boundaries[index], end = boundaries[index + 1];
+        if (end <= start) continue;
+        const active = normalized.filter(item => item.start < end && item.end > start);
+        const chunk = text.slice(start, end);
+        if (!active.length) { target.appendChild(document.createTextNode(chunk)); continue; }
+        const sources = new Set(active.map(item => item.source));
+        const mark = document.createElement("mark");
+        mark.className = sources.size > 1 ? "both" : [...sources][0];
+        mark.title = active.map(item => item.label).filter(Boolean).join(" · ");
+        mark.textContent = chunk; target.appendChild(mark);
+      }
+    }
+
+    function renderResult(data, updateEvidence = true) {
+      const semantic = data.semantic;
+      const hybrid = data.hybrid;
+      const policy = data.tool_policy;
+      const contentDecision = hybrid?.decision || data.decision;
+      setBadge(byId("headline-badge"), contentDecision, hybrid ? "hybrid" : "");
+      byId("headline-score").textContent = Number.isFinite(Number(data.score)) ? Number(data.score).toFixed(1) : "—";
+      setBadge(byId("p1-badge"), data.decision);
+      byId("p1-value").textContent = `${t("score", { value: number(data.score, 1) })} · ${t("threshold", { value: state.snapshot?.thresholds?.block ?? "—" })}`;
+      setBadge(byId("p2-badge"), semantic?.decision);
+      byId("p2-value").textContent = semantic ? t("score", { value: number(semantic.score, 3) }) : t("noTaskValue");
+      setBadge(byId("hybrid-badge"), hybrid?.decision, "hybrid");
+      byId("hybrid-value").textContent = hybrid ? t("findings", { count: (hybrid.reasons || []).length }) : t("hybridUnavailable");
+      setBadge(byId("p3-badge"), policy?.decision);
+      byId("p3-value").textContent = policy ? t("permission", { value: policy.permission ?? "—" }) : t("noToolValue");
+
+      const blockThreshold = Number(state.snapshot?.thresholds?.block) || 4;
+      const riskWidth = Math.max(2, Math.min(100, (Number(data.score) / blockThreshold) * 100));
+      const risk = byId("risk-fill"); risk.style.width = `${riskWidth}%`; risk.className = `risk-fill ${decisionClass(data.decision)}`;
+
+      const groups = byId("reason-groups"); groups.replaceChildren();
+      addReasonGroup(groups, t("p1Rules"), data.reasons, true);
+      if (semantic) addReasonGroup(groups, t("p2Semantic"), semantic.reasons);
+      if (hybrid) addReasonGroup(groups, t("hybridGate"), hybrid.reasons);
+      if (policy) addReasonGroup(groups, t("p3Policy"), policy.reasons);
+
+      byId("result-empty").style.display = "none";
+      byId("result-content").classList.add("visible");
+      if (updateEvidence) renderHighlights(state.sourceText, data.highlights, semantic?.highlights);
+      byId("highlight-section").classList.toggle("visible", Boolean(state.sourceText));
+    }
+
+    function resetResult() {
+      state.currentResult = null; state.sourceText = "";
+      if (state.elapsedTimer) clearInterval(state.elapsedTimer);
+      state.elapsedTimer = null;
+      byId("result-loading").classList.remove("visible");
+      byId("result-content").classList.remove("visible");
+      byId("result-empty").style.display = "";
+      byId("highlight-section").classList.remove("visible");
+      byId("highlighted-content").replaceChildren();
+    }
+
+    function clearForm() {
+      contentInput.value = ""; questionInput.value = ""; toolSelect.value = ""; targetInput.value = "";
+      state.sampleMeta = null; state.scenarioMeta = null;
+      updateContextNote(); updateCounter(); hideError(); resetResult(); contentInput.focus();
+    }
+
+    document.querySelectorAll(".tab").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(item => item.classList.toggle("active", item === button));
+        document.querySelectorAll(".tab-content").forEach(panel => panel.classList.toggle("active", panel.id === `tab-${button.dataset.tab}`));
+      });
+    });
+    byId("language-zh").addEventListener("click", () => applyLanguage("zh"));
+    byId("language-en").addEventListener("click", () => applyLanguage("en"));
+    byId("refresh-status").addEventListener("click", loadStatus);
+    byId("load-example").addEventListener("click", loadExample);
+    byId("load-scenario").addEventListener("click", loadScenario);
+    byId("run-detection").addEventListener("click", runDetection);
+    byId("clear-form").addEventListener("click", clearForm);
+    contentInput.addEventListener("input", () => { updateCounter(); if (state.currentResult) resetResult(); });
+    questionInput.addEventListener("input", () => { if (state.currentResult) resetResult(); });
+    document.addEventListener("keydown", event => {
+      if ((event.ctrlKey || event.metaKey) && event.key === "Enter") { event.preventDefault(); runDetection(); }
+    });
+
+    applyLanguage(state.language);
+    loadStatus();
+  </script>
+</body>
+</html>

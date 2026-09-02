@@ -1,0 +1,8 @@
+# Windows-compatible dependencies for the semantic label-anomaly detector.
+# Install torch/torchvision from the CPU-only wheel index:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# Then install the remaining dependencies normally:
+#   pip install -r requirements-windows.txt
+scikit-learn
+pillow
+open_clip_torch

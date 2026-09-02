@@ -1,0 +1,11 @@
+# Windows-compatible dependencies for BIPIA data construction and basic S6 analysis.
+# Install the BIPIA repository itself with: pip install --no-deps -e external/BIPIA
+pandas
+jsonlines
+nltk
+transformers
+langdetect
+thefuzz
+emoji
+pyyaml
+openai==0.28.1

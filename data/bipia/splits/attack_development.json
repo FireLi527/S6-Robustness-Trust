@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "split": "development",
+  "source_bipia_split": "train",
+  "selection_policy": "all BIPIA train categories not present in BIPIA test",
+  "excluded_overlapping_categories": [
+    "Language Translation"
+  ],
+  "categories": [
+    "Information Retrieval",
+    "Content Creation",
+    "Learning and Tutoring",
+    "Programming Help",
+    "Alphanumeric Substitution",
+    "Homophonic Substitution",
+    "Misspelling Intentionally",
+    "Anagramming",
+    "Space Removal & Grouping",
+    "Instruction",
+    "Social Interaction",
+    "Persuasion",
+    "Clickbait",
+    "Malware Distribution"
+  ],
+  "attacks": [
+    {
+      "attack_name": "Information Retrieval-0",
+      "category": "Information Retrieval",
+      "variant": 0,
+      "attack_text_sha256": "1bb2f7bfcea048cbc97b5639ccaf367ca354e33319f39e0b72fa8256df73a59e"
+    },
+    {
+      "attack_name": "Information Retrieval-1",
+      "category": "Information Retrieval",
+      "variant": 1,
+      "attack_text_sha256": "4b0150ce932452e97fd6efa9b19693076f86172a17bb7baca9470d158ac9c79f"
+    },
+    {
+      "attack_name": "Information Retrieval-2",
+      "category": "Information Retrieval",
+      "variant": 2,
+      "attack_text_sha256": "eeb35993b58cf087e61821e3bb56cc4c4a124a0c1c62a9aae1c9c5269ddef20f"
+    },
+    {
+      "attack_name": "Information Retrieval-3",
+      "category": "Information Retrieval",
+      "variant": 3,
+      "attack_text_sha256": "3ffe098af165e9a5de1ed13433e3d00801e73f81e04ef1a84637bba09d604ea1"
+    },
+    {
+      "attack_name": "Information Retrieval-4",
+      "category": "Information Retrieval",
+      "variant": 4,
+      "attack_text_sha256": "4b47103313764a604ec9ade68932a1a835cbd6c0068e489d3b232521a6ef7682"
+    },
+    {
+      "attack_name": "Content Creation-0",
+      "category": "Content Creation",
+      "variant": 0,
+      "attack_text_sha256": "2eea2c1bc615d83f54144d3516ce2afd0466fb5df23a4adf9017a2a4dae5482e"
+    },
+    {
+      "attack_name": "Content Creation-1",
+      "category": "Content Creation",
+      "variant": 1,
+      "attack_text_sha256": "ad390e30c796abca902ce8a1751e31a41b0ae965d1ca1778d9a4714a6346a060"
+    },
+    {
+      "attack_name": "Content Creation-2",
+      "category": "Content Creation",
+      "variant": 2,
+      "attack_text_sha256": "fdc4a231b2763bb1cb0e76d816ba7b72440f40d9af4c4673270a3e7249fd10d2"
+    },
+    {
+      "attack_name": "Content Creation-3",
+      "category": "Content Creation",
+      "variant": 3,
+      "attack_text_sha256": "0df31c0f6715e330f092effb35aa627c370b6104bb1e48741ec94ca04edc5381"
+    },
+    {
+      "attack_name": "Content Creation-4",
+      "category": "Content Creation",
+      "variant": 4,
+      "attack_text_sha256": "420a3ea9eac9366bd2e10af005f5c4d71d3c9c1001150ca3e62f964879794c5b"
+    },
+    {
+      "attack_name": "Learning and Tutoring-0",
+      "category": "Learning and Tutoring",
+      "variant": 0,
+      "attack_text_sha256": "b9a8ff74d7fe715ca5feb8a9ff656454bea64b94fca73e03f6ce8be1bfeafb24"
+    },
+    {
+      "attack_name": "Learning and Tutoring-1",
+      "category": "Learning and Tutoring",
+      "variant": 1,
+      "attack_text_sha256": "432961acc3643ae261eb363d334e636bf092038ae7080729f8a9dd8605cada7b"
+    },
+    {
+      "attack_name": "Learning and Tutoring-2",
+      "category": "Learning and Tutoring",
+      "variant": 2,
+      "attack_text_sha256": "018f57a8d8b687aca54fcde86fc2a55090f34eb7c37dfe27f80ebaa06db8483d"
+    },
+    {
+      "attack_name": "Learning and Tutoring-3",
+      "category": "Learning and Tutoring",
+      "variant": 3,
+      "attack_text_sha256": "3a0ef7c6f24c707c5ae8895349fceb736b4259d39f83de480847789ef1ffcf2e"
+    },
+    {
+      "attack_name": "Learning and Tutoring-4",
+      "category": "Learning and Tutoring",
+      "variant": 4,
+      "attack_text_sha256": "0cd72edf6aea78d200354fd73800702867477ed82243d4453f0149e9bb29375e"
+    },
+    {
+      "attack_name": "Programming Help-0",
+      "category": "Programming Help",
+      "variant": 0,
+      "attack_text_sha256": "4576713d0cd5042462f0cb1d0c401536dfcccd7e2fd0ea2f466bccad70edd054"
+    },
+    {
+      "attack_name": "Programming Help-1",
+      "category": "Programming Help",
+      "variant": 1,
+      "attack_text_sha256": "aa109f01dbcd7e0cbeb0396a073ccb95af53abe9f72bd1472ca86df857bc534b"
+    },
+    {
+      "attack_name": "Programming Help-2",
+      "category": "Programming Help",
+      "variant": 2,
+      "attack_text_sha256": "68d61923eea57ca9c683a5b1f930c6b056855a2bc50f7f9b6c6ede16f4636e66"
+    },
+    {
+      "attack_name": "Programming Help-3",
+      "category": "Programming Help",
+      "variant": 3,
+      "attack_text_sha256": "172c4682fae87b154f03ebce24eabb8f7e30137bb043ce5c36dfefabd7ad34e9"
+    },
+    {
+      "attack_name": "Programming Help-4",
+      "category": "Programming Help",
+      "variant": 4,
+      "attack_text_sha256": "806ed4b9a9f7fd7d66b516f01cb5d964f2c9e5bef8b9e411535343cc93308bc4"
+    },
+    {
+      "attack_name": "Alphanumeric Substitution-0",
+      "category": "Alphanumeric Substitution",
+      "variant": 0,
+      "attack_text_sha256": "893ef0ba7ed8dbe60faa6fea7f2d8d2c59a2cb291fd2ec30ac8ce414edc86e25"
+    },
+    {
+      "attack_name": "Alphanumeric Substitution-1",
+      "category": "Alphanumeric Substitution",
+      "variant": 1,
+      "attack_text_sha256": "ba884cb37c0425d50704fee01e87d5cfb515a7368e20fd7e2abaac677b16dff6"
+    },
+    {
+      "attack_name": "Alphanumeric Substitution-2",
+      "category": "Alphanumeric Substitution",
+      "variant": 2,
+      "attack_text_sha256": "d944562c441fac85fd5fd10b968571af464be803f4ab5e533188ea74f6de586e"
+    },
+    {
+      "attack_name": "Alphanumeric Substitution-3",
+      "category": "Alphanumeric Substitution",
+      "variant": 3,
+      "attack_text_sha256": "83bc5e3d747ec688c501613963fc14de312e8ea97c38152f67ac40fbea612d3a"
+    },
+    {
+      "attack_name": "Alphanumeric Substitution-4",
+      "category": "Alphanumeric Substitution",
+      "variant": 4,
+      "attack_text_sha256": "92204466f53bb24eaaa0f8b20ffbdee27e55985735d0afec4eaa99dc31bbee30"
+    },
+    {
+      "attack_name": "Homophonic Substitution-0",
+      "category": "Homophonic Substitution",
+      "variant": 0,
+      "attack_text_sha256": "01be9f4ffff900516d0c5c65345570b7b4c6593a28b618cf5d0634baa921e2dc"
+    },
+    {
+      "attack_name": "Homophonic Substitution-1",
+      "category": "Homophonic Substitution",
+      "variant": 1,
+      "attack_text_sha256": "764d1222d005c8cb0c46fb766c35bf39ea212955992d1490652e950e35da02e0"
+    },
+    {
+      "attack_name": "Homophonic Substitution-2",
+      "category": "Homophonic Substitution",
+      "variant": 2,
+      "attack_text_sha256": "265261141a8dde6cf69e699120a9223a8efdb990f3f49b72388849ee70d06c94"
+    },
+    {
+      "attack_name": "Homophonic Substitution-3",
+      "category": "Homophonic Substitution",
+      "variant": 3,
+      "attack_text_sha256": "bd3c1e74cc506b67547bcad8ecdb85a2738e9b79053550cc2c6ed5c571692114"
+    },
+    {
+      "attack_name": "Homophonic Substitution-4",
+      "category": "Homophonic Substitution",
+      "variant": 4,
+      "attack_text_sha256": "acefab5977104a4c48840fbf4198de5e56f4e4edd30d1ecb7404b059785c7335"
+    },
+    {
+      "attack_name": "Misspelling Intentionally-0",
+      "category": "Misspelling Intentionally",
+      "variant": 0,
+      "attack_text_sha256": "dc3ad4be5d325a3378436cbddf72113e2bdd06abaa5045ddbbb4d16ad12e1d38"
+    },
+    {
+      "attack_name": "Misspelling Intentionally-1",
+      "category": "Misspelling Intentionally",
+      "variant": 1,
+      "attack_text_sha256": "67452cb8f02ecc9db0fe1c6e259523d4c995c163bba2e422f51fa7fed3e74cf6"
+    },
+    {
+      "attack_name": "Misspelling Intentionally-2",
+      "category": "Misspelling Intentionally",
+      "variant": 2,
+      "attack_text_sha256": "3fe3af1ca5252c83542e5b5d4cf9ad8ce4bbd1eec70e66c5bb918a530d42c5e3"
+    },
+    {
+      "attack_name": "Misspelling Intentionally-3",
+      "category": "Misspelling Intentionally",
+      "variant": 3,
+      "attack_text_sha256": "0980ea94febbd88a28d197377d16546904d1e266d9e03cc3406eb74502f63446"
+    },
+    {
+      "attack_name": "Misspelling Intentionally-4",
+      "category": "Misspelling Intentionally",
+      "variant": 4,
+      "attack_text_sha256": "65be2f8d610650dc111da7a42e93bf43045b25f82ed6c75bb2921c7fd078a7ac"
+    },
+    {
+      "attack_name": "Anagramming-0",
+      "category": "Anagramming",
+      "variant": 0,
+      "attack_text_sha256": "692b5474080568627ea11d533999e3c51c39bde67965340b6d2f7a94cd0ea24c"
+    },
+    {
+      "attack_name": "Anagramming-1",
+      "category": "Anagramming",
+      "variant": 1,
+      "attack_text_sha256": "1b92b8dc28696ec3d95997a138b33078df85d7136e3d5b401ed15e9ed7445851"
+    },
+    {
+      "attack_name": "Anagramming-2",
+      "category": "Anagramming",
+      "variant": 2,
+      "attack_text_sha256": "86004b966d4f2207b33d230a9f733fc5ebb31140c38bc86677d77cc2722eff0b"
+    },
+    {
+      "attack_name": "Anagramming-3",
+      "category": "Anagramming",
+      "variant": 3,
+      "attack_text_sha256": "5391eab35b3e5fab8c28eef63b0c3d4530d3c5b93ffc6edc39bd1ae6a797d866"
+    },
+    {
+      "attack_name": "Anagramming-4",
+      "category": "Anagramming",
+      "variant": 4,
+      "attack_text_sha256": "42541d075a78c5213b851736261769f28e4882e21545414bc9e3a692e96acff4"
+    },
+    {
+      "attack_name": "Space Removal & Grouping-0",
+      "category": "Space Removal & Grouping",
+      "variant": 0,
+      "attack_text_sha256": "abeda7efcc2721dde41672a6f725e80957c430fbee92387750bdc0a16a4caac9"
+    },
+    {
+      "attack_name": "Space Removal & Grouping-1",
+      "category": "Space Removal & Grouping",
+      "variant": 1,
+      "attack_text_sha256": "697da10827fe770d41fcef14a5b7c6d71f061e20754cdfa6beaa11548f4317c8"
+    },
+    {
+      "attack_name": "Space Removal & Grouping-2",
+      "category": "Space Removal & Grouping",
+      "variant": 2,
+      "attack_text_sha256": "ca36b12c330e7bec35ae7256642647e7e5baeaba501de85254a66d1988dc6b19"
+    },
+    {
+      "attack_name": "Space Removal & Grouping-3",
+      "category": "Space Removal & Grouping",
+      "variant": 3,
+      "attack_text_sha256": "74b8ebbd98f51508f96a34cf4e2f39d2238bf2c1d5a1d7608db1275cee21a62a"
+    },
+    {
+      "attack_name": "Space Removal & Grouping-4",
+      "category": "Space Removal & Grouping",
+      "variant": 4,
+      "attack_text_sha256": "862cdce8db4281fff1578222001dd313c0e0f86e2745db0ae7445e8d04f65d53"
+    },
+    {
+      "attack_name": "Instruction-0",
+      "category": "Instruction",
+      "variant": 0,
+      "attack_text_sha256": "6cf8543112cc4e23a579e89f28a38cd09a3f7add329a7de10b7c861fe4d7986e"
+    },
+    {
+      "attack_name": "Instruction-1",
+      "category": "Instruction",
+      "variant": 1,
+      "attack_text_sha256": "b510df66a428e57af6d0748a71298a56eb8e08486b5f05febb9e218140b6490f"
+    },
+    {
+      "attack_name": "Instruction-2",
+      "category": "Instruction",
+      "variant": 2,
+      "attack_text_sha256": "847c888d31ee66c0dd5ccc275c1c4fdd6f0b393574d7fe668d12391e70337866"
+    },
+    {
+      "attack_name": "Instruction-3",
+      "category": "Instruction",
+      "variant": 3,
+      "attack_text_sha256": "93302ccc46389b30a1d93727eb1d0bb35642f5f5b102e6fe3333485a83ed4aa2"
+    },
+    {
+      "attack_name": "Instruction-4",
+      "category": "Instruction",
+      "variant": 4,
+      "attack_text_sha256": "e0bdb3d2596c58a25929c5e1d2f3b5ea98ef829186fe891671f598154226e87c"
+    },
+    {
+      "attack_name": "Social Interaction-0",
+      "category": "Social Interaction",
+      "variant": 0,
+      "attack_text_sha256": "b112051180a85c91e1f924e0140fba2663925b800edf87eae74e293fc9967f47"
+    },
+    {
+      "attack_name": "Social Interaction-1",
+      "category": "Social Interaction",
+      "variant": 1,
+      "attack_text_sha256": "203efe00b06e9159cb9614d0e967953e33a331731243226261954ff6fffb243f"
+    },
+    {
+      "attack_name": "Social Interaction-2",
+      "category": "Social Interaction",
+      "variant": 2,
+      "attack_text_sha256": "5724e66d049ff8d62b5be249d65a35ff6206eab070ab2eff3950fdf4560d7daf"
+    },
+    {
+      "attack_name": "Social Interaction-3",
+      "category": "Social Interaction",
+      "variant": 3,
+      "attack_text_sha256": "03d56e8f840a7a0e3d8d86a465232480c1961cf8d3432fffad6377ba30101730"
+    },
+    {
+      "attack_name": "Social Interaction-4",
+      "category": "Social Interaction",
+      "variant": 4,
+      "attack_text_sha256": "300591efcc82347bd64cb6b42233a5e4d1d77752c44d9c8e5cab504e570758fc"
+    },
+    {
+      "attack_name": "Persuasion-0",
+      "category": "Persuasion",
+      "variant": 0,
+      "attack_text_sha256": "8d0adccb68e6de1c6f75a60eb5b86adafc0e0ab9aae9060ed86cdb5954ed314e"
+    },
+    {
+      "attack_name": "Persuasion-1",
+      "category": "Persuasion",
+      "variant": 1,
+      "attack_text_sha256": "80ccef323026aaedcaea72307959bb027f8583086c963b5b6f230c0f0a89e628"
+    },
+    {
+      "attack_name": "Persuasion-2",
+      "category": "Persuasion",
+      "variant": 2,
+      "attack_text_sha256": "d3a74a7c854e2b0b9dc0659e54b85aba3229373b6eb53c204d34c1d5fe9054b3"
+    },
+    {
+      "attack_name": "Persuasion-3",
+      "category": "Persuasion",
+      "variant": 3,
+      "attack_text_sha256": "533dc0feadc683625307a8e858014404ef41af536e932dc795ad763f6b2ab8c7"
+    },
+    {
+      "attack_name": "Persuasion-4",
+      "category": "Persuasion",
+      "variant": 4,
+      "attack_text_sha256": "db2159e70132fac65a341c6e74d2b52e0a90da04e1fb7d7666dfeb111a7cbbfd"
+    },
+    {
+      "attack_name": "Clickbait-0",
+      "category": "Clickbait",
+      "variant": 0,
+      "attack_text_sha256": "7c3fb54d525ce6f261c3b46c9643f1d36f3cd6941c8a8bb46a1cdf4a69e5f557"
+    },
+    {
+      "attack_name": "Clickbait-1",
+      "category": "Clickbait",
+      "variant": 1,
+      "attack_text_sha256": "2226e821d8c941cbba8bbe54c3f38cba2ccba9565abb6d5a347836e94db68c04"
+    },
+    {
+      "attack_name": "Clickbait-2",
+      "category": "Clickbait",
+      "variant": 2,
+      "attack_text_sha256": "248e80b400ef7ebdd19b41623b1753b80d2db2dad5229d5bcc35625260602c40"
+    },
+    {
+      "attack_name": "Clickbait-3",
+      "category": "Clickbait",
+      "variant": 3,
+      "attack_text_sha256": "c1ac63ac50cbcb8fe6b70dee416e2ae02b5c12f0fe7e6fd294f29945d3499810"
+    },
+    {
+      "attack_name": "Clickbait-4",
+      "category": "Clickbait",
+      "variant": 4,
+      "attack_text_sha256": "fe824c6a625eece2724337552121b0f42403ce8313768b5a76946f88df558be4"
+    },
+    {
+      "attack_name": "Malware Distribution-0",
+      "category": "Malware Distribution",
+      "variant": 0,
+      "attack_text_sha256": "22bebb776242bba5d9dc0dc18e598b51a04b10c0a3dc5d086857e283a7642c05"
+    },
+    {
+      "attack_name": "Malware Distribution-1",
+      "category": "Malware Distribution",
+      "variant": 1,
+      "attack_text_sha256": "8656a8eaa3e27550f52b4a63d12e8686d0774daf5e919366f6a382ef818c0a2b"
+    },
+    {
+      "attack_name": "Malware Distribution-2",
+      "category": "Malware Distribution",
+      "variant": 2,
+      "attack_text_sha256": "5a644a7307021400a456824c84a74bda67f2ea66626fa2dd5fb67b491d728a08"
+    },
+    {
+      "attack_name": "Malware Distribution-3",
+      "category": "Malware Distribution",
+      "variant": 3,
+      "attack_text_sha256": "beb58785d5904647be95821e73f33dfdb94f926ceb1318674c5732ce8eb7affb"
+    },
+    {
+      "attack_name": "Malware Distribution-4",
+      "category": "Malware Distribution",
+      "variant": 4,
+      "attack_text_sha256": "36fe2d71ce62b54a8a61fe53d8bfbb54b4e057d7216ee0226c26f238b1e9f6a0"
+    }
+  ]
+}

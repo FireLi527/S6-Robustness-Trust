@@ -1,0 +1,91 @@
+{
+  "source_dataset": "E:\\研究生\\高级计算机项目\\external\\IP102",
+  "source_is_modified": false,
+  "seed": 2026,
+  "selected_classes": {
+    "0": "rice leaf roller",
+    "1": "rice leaf caterpillar",
+    "3": "asiatic rice borer",
+    "4": "yellow rice borer",
+    "5": "rice gall midge"
+  },
+  "samples_per_class": 200,
+  "datasets": {
+    "clean_subset": {
+      "samples": 1000,
+      "poisoned_samples": 0,
+      "poison_rate": 0.0,
+      "assigned_label_counts": {
+        "0": 200,
+        "1": 200,
+        "3": 200,
+        "4": 200,
+        "5": 200
+      }
+    },
+    "label_flip_05": {
+      "samples": 1000,
+      "poisoned_samples": 50,
+      "poison_rate": 0.05,
+      "assigned_label_counts": {
+        "0": 200,
+        "1": 197,
+        "3": 198,
+        "4": 202,
+        "5": 203
+      }
+    },
+    "label_flip_10": {
+      "samples": 1000,
+      "poisoned_samples": 100,
+      "poison_rate": 0.1,
+      "assigned_label_counts": {
+        "0": 198,
+        "1": 215,
+        "3": 187,
+        "4": 207,
+        "5": 193
+      }
+    },
+    "targeted_0_to_1": {
+      "samples": 1000,
+      "poisoned_samples": 40,
+      "poison_rate": 0.04,
+      "assigned_label_counts": {
+        "0": 160,
+        "1": 240,
+        "3": 200,
+        "4": 200,
+        "5": 200
+      }
+    }
+  },
+  "blind_protocol": {
+    "version": "D1-file-split-v1",
+    "candidate_fields": [
+      "sample_id",
+      "source_relpath",
+      "sha256",
+      "assigned_label"
+    ],
+    "hidden_ground_truth_fields": [
+      "sample_id",
+      "original_label",
+      "poisoned",
+      "poison_type"
+    ],
+    "physically_separate_files": true
+  },
+  "manifests": {
+    "clean_subset": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\manifests\\clean_subset.csv",
+    "label_flip_05": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\manifests\\label_flip_05.csv",
+    "label_flip_10": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\manifests\\label_flip_10.csv",
+    "targeted_0_to_1": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\manifests\\targeted_0_to_1.csv"
+  },
+  "hidden_ground_truth": {
+    "clean_subset": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\hidden_ground_truth\\clean_subset.csv",
+    "label_flip_05": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\hidden_ground_truth\\label_flip_05.csv",
+    "label_flip_10": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\hidden_ground_truth\\label_flip_10.csv",
+    "targeted_0_to_1": "E:\\研究生\\高级计算机项目\\data\\ip102_poisoning\\hidden_ground_truth\\targeted_0_to_1.csv"
+  }
+}

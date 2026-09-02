@@ -1,0 +1,5 @@
+﻿decision,risk_score,reasons,trusted_samples,candidate_samples,label_changes,hash_changes,missing_samples,unknown_samples,duplicate_ids,distribution_drift,dataset
+ALLOW,0,candidate matches the trusted manifest,1000,1000,0,0,0,0,0,0.0,clean_subset
+BLOCK,6,"50 labels changed (5.00%), above the 2% block threshold",1000,1000,50,0,0,0,0,0.0050000000000000044,label_flip_05
+BLOCK,9,"100 labels changed (10.00%), above the 2% block threshold; class-distribution drift detected (TV distance 0.022)",1000,1000,100,0,0,0,0,0.021999999999999992,label_flip_10
+BLOCK,9,"40 labels changed (4.00%), above the 2% block threshold; class-distribution drift detected (TV distance 0.040)",1000,1000,40,0,0,0,0,0.039999999999999994,targeted_0_to_1

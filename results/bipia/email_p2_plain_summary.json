@@ -1,0 +1,1239 @@
+{
+  "schema_version": 1,
+  "rule_detector": {
+    "detector": "s6-rule-prompt-injection",
+    "version": "0.2.0",
+    "config_hash": "364b24b816b5d1687da814693fba55049f33da95d3bb1affba09716f35f5d87e"
+  },
+  "semantic_detector": {
+    "detector": "s6-semantic-task-consistency",
+    "version": "0.1.0",
+    "config_hash": "3da3b5a5840994d8c9b5dc6c7182d7b1f83d58b803397fbfbeef73c39b7404af"
+  },
+  "attack_encoding": "plain",
+  "evaluation_policy": "REVIEW and BLOCK count as detected; ALLOW counts as missed",
+  "note": "'rule' reproduces the P1 baseline (detector.py) on the exact same records evaluate_baseline.py scores; 'semantic' is the new P2 task-consistency signal alone; 'hybrid' takes the more severe of the two per record. The semantic detector's REVIEW_SIMILARITY/BLOCK_SIMILARITY thresholds were calibrated on the development split only; unseen_test numbers below were not used to retune them.",
+  "dataset_hashes": {
+    "data/bipia/splits/attack_development.json": "30e1c215b11402a92805e99b4b9ee649d1d59b96048b83f349569716c8fd341a",
+    "data/bipia/splits/attack_unseen_test.json": "6573560f43de6b6a83d249338a7197abba8d20df225b9bf7087f51c0ce603119",
+    "data/bipia/generated/email_train_plain.jsonl": "ddae662dcb629d07081230e3eca6fbce71b532f8a041b11bdf8c1103f4de62b0",
+    "data/bipia/generated/email_test_plain.jsonl": "81010d3ebb9eb6faa1fb13a83eb85ae19d76933e169a5f505e98b1d43d390f20",
+    "external/BIPIA/benchmark/email/train.jsonl": "0130a694116e295d821fcc186eb225cdef2b222c3dc96a1cd13d0766f964e3d9",
+    "external/BIPIA/benchmark/email/test.jsonl": "2d71aae20a84373089eadd20d7317e6040b4ef75a324588cbdc2e06e9c1a88c9"
+  },
+  "splits": {
+    "development": {
+      "rule": {
+        "attacked_samples": 10500,
+        "clean_samples": 50,
+        "confusion_counts": {
+          "true_positive": 6900,
+          "false_negative": 3600,
+          "false_positive": 0,
+          "true_negative": 50
+        },
+        "attack_detection_rate": 0.6571,
+        "precision": 1.0,
+        "f1": 0.7931,
+        "clean_allow_rate": 1.0,
+        "false_positive_rate": 0.0,
+        "human_review_rate": 0.1848,
+        "attacked_decisions": {
+          "ALLOW": 3600,
+          "REVIEW": 1950,
+          "BLOCK": 4950
+        },
+        "clean_decisions": {
+          "ALLOW": 50,
+          "REVIEW": 0,
+          "BLOCK": 0
+        },
+        "latency": {
+          "all": {
+            "median_ms": 0.0631,
+            "p95_ms": 0.1322
+          },
+          "attacked": {
+            "median_ms": 0.0631,
+            "p95_ms": 0.1322
+          },
+          "clean": {
+            "median_ms": 0.0538,
+            "p95_ms": 0.0717
+          }
+        },
+        "by_attack_category": {
+          "Alphanumeric Substitution": {
+            "samples": 750,
+            "detection_rate": 0.8,
+            "decisions": {
+              "ALLOW": 150,
+              "REVIEW": 150,
+              "BLOCK": 450
+            }
+          },
+          "Anagramming": {
+            "samples": 750,
+            "detection_rate": 0.4,
+            "decisions": {
+              "ALLOW": 450,
+              "REVIEW": 0,
+              "BLOCK": 300
+            }
+          },
+          "Clickbait": {
+            "samples": 750,
+            "detection_rate": 0.8,
+            "decisions": {
+              "ALLOW": 150,
+              "REVIEW": 0,
+              "BLOCK": 600
+            }
+          },
+          "Content Creation": {
+            "samples": 750,
+            "detection_rate": 0.4,
+            "decisions": {
+              "ALLOW": 450,
+              "REVIEW": 300,
+              "BLOCK": 0
+            }
+          },
+          "Homophonic Substitution": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 150,
+              "BLOCK": 600
+            }
+          },
+          "Information Retrieval": {
+            "samples": 750,
+            "detection_rate": 0.4,
+            "decisions": {
+              "ALLOW": 450,
+              "REVIEW": 300,
+              "BLOCK": 0
+            }
+          },
+          "Instruction": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Learning and Tutoring": {
+            "samples": 750,
+            "detection_rate": 0.6,
+            "decisions": {
+              "ALLOW": 300,
+              "REVIEW": 450,
+              "BLOCK": 0
+            }
+          },
+          "Malware Distribution": {
+            "samples": 750,
+            "detection_rate": 0.8,
+            "decisions": {
+              "ALLOW": 150,
+              "REVIEW": 0,
+              "BLOCK": 600
+            }
+          },
+          "Misspelling Intentionally": {
+            "samples": 750,
+            "detection_rate": 0.2,
+            "decisions": {
+              "ALLOW": 600,
+              "REVIEW": 0,
+              "BLOCK": 150
+            }
+          },
+          "Persuasion": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Programming Help": {
+            "samples": 750,
+            "detection_rate": 0.8,
+            "decisions": {
+              "ALLOW": 150,
+              "REVIEW": 600,
+              "BLOCK": 0
+            }
+          },
+          "Social Interaction": {
+            "samples": 750,
+            "detection_rate": 0.8,
+            "decisions": {
+              "ALLOW": 150,
+              "REVIEW": 0,
+              "BLOCK": 600
+            }
+          },
+          "Space Removal & Grouping": {
+            "samples": 750,
+            "detection_rate": 0.2,
+            "decisions": {
+              "ALLOW": 600,
+              "REVIEW": 0,
+              "BLOCK": 150
+            }
+          }
+        },
+        "by_position": {
+          "end": {
+            "samples": 3500,
+            "detection_rate": 0.6571,
+            "decisions": {
+              "ALLOW": 1200,
+              "REVIEW": 650,
+              "BLOCK": 1650
+            }
+          },
+          "middle": {
+            "samples": 3500,
+            "detection_rate": 0.6571,
+            "decisions": {
+              "ALLOW": 1200,
+              "REVIEW": 650,
+              "BLOCK": 1650
+            }
+          },
+          "start": {
+            "samples": 3500,
+            "detection_rate": 0.6571,
+            "decisions": {
+              "ALLOW": 1200,
+              "REVIEW": 650,
+              "BLOCK": 1650
+            }
+          }
+        }
+      },
+      "semantic": {
+        "attacked_samples": 10500,
+        "clean_samples": 50,
+        "confusion_counts": {
+          "true_positive": 4584,
+          "false_negative": 5916,
+          "false_positive": 2,
+          "true_negative": 48
+        },
+        "attack_detection_rate": 0.4366,
+        "precision": 0.9996,
+        "f1": 0.6077,
+        "clean_allow_rate": 0.96,
+        "false_positive_rate": 0.04,
+        "human_review_rate": 0.1253,
+        "attacked_decisions": {
+          "ALLOW": 5916,
+          "REVIEW": 1322,
+          "BLOCK": 3262
+        },
+        "clean_decisions": {
+          "ALLOW": 48,
+          "REVIEW": 0,
+          "BLOCK": 2
+        },
+        "latency": {
+          "all": {
+            "median_ms": 0.0284,
+            "p95_ms": 0.1036
+          },
+          "attacked": {
+            "median_ms": 0.0285,
+            "p95_ms": 0.1037
+          },
+          "clean": {
+            "median_ms": 0.0149,
+            "p95_ms": 0.0355
+          }
+        },
+        "by_attack_category": {
+          "Alphanumeric Substitution": {
+            "samples": 750,
+            "detection_rate": 0.0773,
+            "decisions": {
+              "ALLOW": 692,
+              "REVIEW": 23,
+              "BLOCK": 35
+            }
+          },
+          "Anagramming": {
+            "samples": 750,
+            "detection_rate": 0.1653,
+            "decisions": {
+              "ALLOW": 626,
+              "REVIEW": 53,
+              "BLOCK": 71
+            }
+          },
+          "Clickbait": {
+            "samples": 750,
+            "detection_rate": 0.6493,
+            "decisions": {
+              "ALLOW": 263,
+              "REVIEW": 157,
+              "BLOCK": 330
+            }
+          },
+          "Content Creation": {
+            "samples": 750,
+            "detection_rate": 0.5307,
+            "decisions": {
+              "ALLOW": 352,
+              "REVIEW": 107,
+              "BLOCK": 291
+            }
+          },
+          "Homophonic Substitution": {
+            "samples": 750,
+            "detection_rate": 0.0813,
+            "decisions": {
+              "ALLOW": 689,
+              "REVIEW": 23,
+              "BLOCK": 38
+            }
+          },
+          "Information Retrieval": {
+            "samples": 750,
+            "detection_rate": 0.4187,
+            "decisions": {
+              "ALLOW": 436,
+              "REVIEW": 112,
+              "BLOCK": 202
+            }
+          },
+          "Instruction": {
+            "samples": 750,
+            "detection_rate": 0.5867,
+            "decisions": {
+              "ALLOW": 310,
+              "REVIEW": 66,
+              "BLOCK": 374
+            }
+          },
+          "Learning and Tutoring": {
+            "samples": 750,
+            "detection_rate": 0.4333,
+            "decisions": {
+              "ALLOW": 425,
+              "REVIEW": 174,
+              "BLOCK": 151
+            }
+          },
+          "Malware Distribution": {
+            "samples": 750,
+            "detection_rate": 0.8413,
+            "decisions": {
+              "ALLOW": 119,
+              "REVIEW": 69,
+              "BLOCK": 562
+            }
+          },
+          "Misspelling Intentionally": {
+            "samples": 750,
+            "detection_rate": 0.624,
+            "decisions": {
+              "ALLOW": 282,
+              "REVIEW": 230,
+              "BLOCK": 238
+            }
+          },
+          "Persuasion": {
+            "samples": 750,
+            "detection_rate": 0.4213,
+            "decisions": {
+              "ALLOW": 434,
+              "REVIEW": 102,
+              "BLOCK": 214
+            }
+          },
+          "Programming Help": {
+            "samples": 750,
+            "detection_rate": 0.3387,
+            "decisions": {
+              "ALLOW": 496,
+              "REVIEW": 76,
+              "BLOCK": 178
+            }
+          },
+          "Social Interaction": {
+            "samples": 750,
+            "detection_rate": 0.7827,
+            "decisions": {
+              "ALLOW": 163,
+              "REVIEW": 62,
+              "BLOCK": 525
+            }
+          },
+          "Space Removal & Grouping": {
+            "samples": 750,
+            "detection_rate": 0.1613,
+            "decisions": {
+              "ALLOW": 629,
+              "REVIEW": 68,
+              "BLOCK": 53
+            }
+          }
+        },
+        "by_position": {
+          "end": {
+            "samples": 3500,
+            "detection_rate": 0.4286,
+            "decisions": {
+              "ALLOW": 2000,
+              "REVIEW": 431,
+              "BLOCK": 1069
+            }
+          },
+          "middle": {
+            "samples": 3500,
+            "detection_rate": 0.4526,
+            "decisions": {
+              "ALLOW": 1916,
+              "REVIEW": 460,
+              "BLOCK": 1124
+            }
+          },
+          "start": {
+            "samples": 3500,
+            "detection_rate": 0.4286,
+            "decisions": {
+              "ALLOW": 2000,
+              "REVIEW": 431,
+              "BLOCK": 1069
+            }
+          }
+        }
+      },
+      "hybrid": {
+        "attacked_samples": 10500,
+        "clean_samples": 50,
+        "confusion_counts": {
+          "true_positive": 8377,
+          "false_negative": 2123,
+          "false_positive": 2,
+          "true_negative": 48
+        },
+        "attack_detection_rate": 0.7978,
+        "precision": 0.9998,
+        "f1": 0.8874,
+        "clean_allow_rate": 0.96,
+        "false_positive_rate": 0.04,
+        "human_review_rate": 0.1891,
+        "attacked_decisions": {
+          "ALLOW": 2123,
+          "REVIEW": 1995,
+          "BLOCK": 6382
+        },
+        "clean_decisions": {
+          "ALLOW": 48,
+          "REVIEW": 0,
+          "BLOCK": 2
+        },
+        "latency": {
+          "all": {
+            "median_ms": 0.0907,
+            "p95_ms": 0.2316
+          },
+          "attacked": {
+            "median_ms": 0.0908,
+            "p95_ms": 0.2316
+          },
+          "clean": {
+            "median_ms": 0.0703,
+            "p95_ms": 0.106
+          }
+        },
+        "by_attack_category": {
+          "Alphanumeric Substitution": {
+            "samples": 750,
+            "detection_rate": 0.8107,
+            "decisions": {
+              "ALLOW": 142,
+              "REVIEW": 144,
+              "BLOCK": 464
+            }
+          },
+          "Anagramming": {
+            "samples": 750,
+            "detection_rate": 0.4613,
+            "decisions": {
+              "ALLOW": 404,
+              "REVIEW": 22,
+              "BLOCK": 324
+            }
+          },
+          "Clickbait": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 30,
+              "BLOCK": 720
+            }
+          },
+          "Content Creation": {
+            "samples": 750,
+            "detection_rate": 0.6733,
+            "decisions": {
+              "ALLOW": 245,
+              "REVIEW": 214,
+              "BLOCK": 291
+            }
+          },
+          "Homophonic Substitution": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 143,
+              "BLOCK": 607
+            }
+          },
+          "Information Retrieval": {
+            "samples": 750,
+            "detection_rate": 0.7027,
+            "decisions": {
+              "ALLOW": 223,
+              "REVIEW": 325,
+              "BLOCK": 202
+            }
+          },
+          "Instruction": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Learning and Tutoring": {
+            "samples": 750,
+            "detection_rate": 0.812,
+            "decisions": {
+              "ALLOW": 141,
+              "REVIEW": 458,
+              "BLOCK": 151
+            }
+          },
+          "Malware Distribution": {
+            "samples": 750,
+            "detection_rate": 0.964,
+            "decisions": {
+              "ALLOW": 27,
+              "REVIEW": 15,
+              "BLOCK": 708
+            }
+          },
+          "Misspelling Intentionally": {
+            "samples": 750,
+            "detection_rate": 0.656,
+            "decisions": {
+              "ALLOW": 258,
+              "REVIEW": 156,
+              "BLOCK": 336
+            }
+          },
+          "Persuasion": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Programming Help": {
+            "samples": 750,
+            "detection_rate": 0.8107,
+            "decisions": {
+              "ALLOW": 142,
+              "REVIEW": 430,
+              "BLOCK": 178
+            }
+          },
+          "Social Interaction": {
+            "samples": 750,
+            "detection_rate": 0.988,
+            "decisions": {
+              "ALLOW": 9,
+              "REVIEW": 18,
+              "BLOCK": 723
+            }
+          },
+          "Space Removal & Grouping": {
+            "samples": 750,
+            "detection_rate": 0.2907,
+            "decisions": {
+              "ALLOW": 532,
+              "REVIEW": 40,
+              "BLOCK": 178
+            }
+          }
+        },
+        "by_position": {
+          "end": {
+            "samples": 3500,
+            "detection_rate": 0.7951,
+            "decisions": {
+              "ALLOW": 717,
+              "REVIEW": 665,
+              "BLOCK": 2118
+            }
+          },
+          "middle": {
+            "samples": 3500,
+            "detection_rate": 0.8031,
+            "decisions": {
+              "ALLOW": 689,
+              "REVIEW": 665,
+              "BLOCK": 2146
+            }
+          },
+          "start": {
+            "samples": 3500,
+            "detection_rate": 0.7951,
+            "decisions": {
+              "ALLOW": 717,
+              "REVIEW": 665,
+              "BLOCK": 2118
+            }
+          }
+        }
+      }
+    },
+    "unseen_test": {
+      "rule": {
+        "attacked_samples": 11250,
+        "clean_samples": 50,
+        "confusion_counts": {
+          "true_positive": 10515,
+          "false_negative": 735,
+          "false_positive": 1,
+          "true_negative": 49
+        },
+        "attack_detection_rate": 0.9347,
+        "precision": 0.9999,
+        "f1": 0.9662,
+        "clean_allow_rate": 0.98,
+        "false_positive_rate": 0.02,
+        "human_review_rate": 0.3465,
+        "attacked_decisions": {
+          "ALLOW": 735,
+          "REVIEW": 3915,
+          "BLOCK": 6600
+        },
+        "clean_decisions": {
+          "ALLOW": 49,
+          "REVIEW": 1,
+          "BLOCK": 0
+        },
+        "latency": {
+          "all": {
+            "median_ms": 0.0632,
+            "p95_ms": 0.1001
+          },
+          "attacked": {
+            "median_ms": 0.0632,
+            "p95_ms": 0.1001
+          },
+          "clean": {
+            "median_ms": 0.0584,
+            "p95_ms": 0.0897
+          }
+        },
+        "by_attack_category": {
+          "Base Encoding": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 150,
+              "BLOCK": 600
+            }
+          },
+          "Business Intelligence": {
+            "samples": 750,
+            "detection_rate": 0.804,
+            "decisions": {
+              "ALLOW": 147,
+              "REVIEW": 603,
+              "BLOCK": 0
+            }
+          },
+          "Conversational Agent": {
+            "samples": 750,
+            "detection_rate": 0.804,
+            "decisions": {
+              "ALLOW": 147,
+              "REVIEW": 603,
+              "BLOCK": 0
+            }
+          },
+          "Emoji Substitution": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 150,
+              "BLOCK": 600
+            }
+          },
+          "Entertainment": {
+            "samples": 750,
+            "detection_rate": 0.804,
+            "decisions": {
+              "ALLOW": 147,
+              "REVIEW": 3,
+              "BLOCK": 600
+            }
+          },
+          "Information Dissemination": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Language Translation": {
+            "samples": 750,
+            "detection_rate": 0.804,
+            "decisions": {
+              "ALLOW": 147,
+              "REVIEW": 3,
+              "BLOCK": 600
+            }
+          },
+          "Marketing & Advertising": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Misinformation & Propaganda": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Research Assistance": {
+            "samples": 750,
+            "detection_rate": 0.804,
+            "decisions": {
+              "ALLOW": 147,
+              "REVIEW": 603,
+              "BLOCK": 0
+            }
+          },
+          "Reverse Text": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 150,
+              "BLOCK": 600
+            }
+          },
+          "Scams & Fraud": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Sentiment Analysis": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 750,
+              "BLOCK": 0
+            }
+          },
+          "Substitution Ciphers": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 150,
+              "BLOCK": 600
+            }
+          },
+          "Task Automation": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 750,
+              "BLOCK": 0
+            }
+          }
+        },
+        "by_position": {
+          "end": {
+            "samples": 3750,
+            "detection_rate": 0.9347,
+            "decisions": {
+              "ALLOW": 245,
+              "REVIEW": 1305,
+              "BLOCK": 2200
+            }
+          },
+          "middle": {
+            "samples": 3750,
+            "detection_rate": 0.9347,
+            "decisions": {
+              "ALLOW": 245,
+              "REVIEW": 1305,
+              "BLOCK": 2200
+            }
+          },
+          "start": {
+            "samples": 3750,
+            "detection_rate": 0.9347,
+            "decisions": {
+              "ALLOW": 245,
+              "REVIEW": 1305,
+              "BLOCK": 2200
+            }
+          }
+        }
+      },
+      "semantic": {
+        "attacked_samples": 11250,
+        "clean_samples": 50,
+        "confusion_counts": {
+          "true_positive": 4168,
+          "false_negative": 7082,
+          "false_positive": 2,
+          "true_negative": 48
+        },
+        "attack_detection_rate": 0.3705,
+        "precision": 0.9995,
+        "f1": 0.5406,
+        "clean_allow_rate": 0.96,
+        "false_positive_rate": 0.04,
+        "human_review_rate": 0.1692,
+        "attacked_decisions": {
+          "ALLOW": 7082,
+          "REVIEW": 1911,
+          "BLOCK": 2257
+        },
+        "clean_decisions": {
+          "ALLOW": 48,
+          "REVIEW": 1,
+          "BLOCK": 1
+        },
+        "latency": {
+          "all": {
+            "median_ms": 0.0268,
+            "p95_ms": 0.0506
+          },
+          "attacked": {
+            "median_ms": 0.0268,
+            "p95_ms": 0.0506
+          },
+          "clean": {
+            "median_ms": 0.0262,
+            "p95_ms": 0.0505
+          }
+        },
+        "by_attack_category": {
+          "Base Encoding": {
+            "samples": 750,
+            "detection_rate": 0.272,
+            "decisions": {
+              "ALLOW": 546,
+              "REVIEW": 151,
+              "BLOCK": 53
+            }
+          },
+          "Business Intelligence": {
+            "samples": 750,
+            "detection_rate": 0.3227,
+            "decisions": {
+              "ALLOW": 508,
+              "REVIEW": 145,
+              "BLOCK": 97
+            }
+          },
+          "Conversational Agent": {
+            "samples": 750,
+            "detection_rate": 0.58,
+            "decisions": {
+              "ALLOW": 315,
+              "REVIEW": 159,
+              "BLOCK": 276
+            }
+          },
+          "Emoji Substitution": {
+            "samples": 750,
+            "detection_rate": 0.392,
+            "decisions": {
+              "ALLOW": 456,
+              "REVIEW": 131,
+              "BLOCK": 163
+            }
+          },
+          "Entertainment": {
+            "samples": 750,
+            "detection_rate": 0.784,
+            "decisions": {
+              "ALLOW": 162,
+              "REVIEW": 207,
+              "BLOCK": 381
+            }
+          },
+          "Information Dissemination": {
+            "samples": 750,
+            "detection_rate": 0.4013,
+            "decisions": {
+              "ALLOW": 449,
+              "REVIEW": 165,
+              "BLOCK": 136
+            }
+          },
+          "Language Translation": {
+            "samples": 750,
+            "detection_rate": 0.1107,
+            "decisions": {
+              "ALLOW": 667,
+              "REVIEW": 57,
+              "BLOCK": 26
+            }
+          },
+          "Marketing & Advertising": {
+            "samples": 750,
+            "detection_rate": 0.1573,
+            "decisions": {
+              "ALLOW": 632,
+              "REVIEW": 89,
+              "BLOCK": 29
+            }
+          },
+          "Misinformation & Propaganda": {
+            "samples": 750,
+            "detection_rate": 0.2347,
+            "decisions": {
+              "ALLOW": 574,
+              "REVIEW": 135,
+              "BLOCK": 41
+            }
+          },
+          "Research Assistance": {
+            "samples": 750,
+            "detection_rate": 0.728,
+            "decisions": {
+              "ALLOW": 204,
+              "REVIEW": 254,
+              "BLOCK": 292
+            }
+          },
+          "Reverse Text": {
+            "samples": 750,
+            "detection_rate": 0.1533,
+            "decisions": {
+              "ALLOW": 635,
+              "REVIEW": 71,
+              "BLOCK": 44
+            }
+          },
+          "Scams & Fraud": {
+            "samples": 750,
+            "detection_rate": 0.1813,
+            "decisions": {
+              "ALLOW": 614,
+              "REVIEW": 66,
+              "BLOCK": 70
+            }
+          },
+          "Sentiment Analysis": {
+            "samples": 750,
+            "detection_rate": 0.4653,
+            "decisions": {
+              "ALLOW": 401,
+              "REVIEW": 84,
+              "BLOCK": 265
+            }
+          },
+          "Substitution Ciphers": {
+            "samples": 750,
+            "detection_rate": 0.0467,
+            "decisions": {
+              "ALLOW": 715,
+              "REVIEW": 15,
+              "BLOCK": 20
+            }
+          },
+          "Task Automation": {
+            "samples": 750,
+            "detection_rate": 0.728,
+            "decisions": {
+              "ALLOW": 204,
+              "REVIEW": 182,
+              "BLOCK": 364
+            }
+          }
+        },
+        "by_position": {
+          "end": {
+            "samples": 3750,
+            "detection_rate": 0.3659,
+            "decisions": {
+              "ALLOW": 2378,
+              "REVIEW": 641,
+              "BLOCK": 731
+            }
+          },
+          "middle": {
+            "samples": 3750,
+            "detection_rate": 0.3797,
+            "decisions": {
+              "ALLOW": 2326,
+              "REVIEW": 629,
+              "BLOCK": 795
+            }
+          },
+          "start": {
+            "samples": 3750,
+            "detection_rate": 0.3659,
+            "decisions": {
+              "ALLOW": 2378,
+              "REVIEW": 641,
+              "BLOCK": 731
+            }
+          }
+        }
+      },
+      "hybrid": {
+        "attacked_samples": 11250,
+        "clean_samples": 50,
+        "confusion_counts": {
+          "true_positive": 10922,
+          "false_negative": 328,
+          "false_positive": 2,
+          "true_negative": 48
+        },
+        "attack_detection_rate": 0.9708,
+        "precision": 0.9998,
+        "f1": 0.9851,
+        "clean_allow_rate": 0.96,
+        "false_positive_rate": 0.04,
+        "human_review_rate": 0.2598,
+        "attacked_decisions": {
+          "ALLOW": 328,
+          "REVIEW": 2935,
+          "BLOCK": 7987
+        },
+        "clean_decisions": {
+          "ALLOW": 48,
+          "REVIEW": 1,
+          "BLOCK": 1
+        },
+        "latency": {
+          "all": {
+            "median_ms": 0.0868,
+            "p95_ms": 0.1523
+          },
+          "attacked": {
+            "median_ms": 0.0869,
+            "p95_ms": 0.1523
+          },
+          "clean": {
+            "median_ms": 0.0829,
+            "p95_ms": 0.1404
+          }
+        },
+        "by_attack_category": {
+          "Base Encoding": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 143,
+              "BLOCK": 607
+            }
+          },
+          "Business Intelligence": {
+            "samples": 750,
+            "detection_rate": 0.924,
+            "decisions": {
+              "ALLOW": 57,
+              "REVIEW": 596,
+              "BLOCK": 97
+            }
+          },
+          "Conversational Agent": {
+            "samples": 750,
+            "detection_rate": 0.8773,
+            "decisions": {
+              "ALLOW": 92,
+              "REVIEW": 382,
+              "BLOCK": 276
+            }
+          },
+          "Emoji Substitution": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 143,
+              "BLOCK": 607
+            }
+          },
+          "Entertainment": {
+            "samples": 750,
+            "detection_rate": 0.952,
+            "decisions": {
+              "ALLOW": 36,
+              "REVIEW": 71,
+              "BLOCK": 643
+            }
+          },
+          "Information Dissemination": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Language Translation": {
+            "samples": 750,
+            "detection_rate": 0.8093,
+            "decisions": {
+              "ALLOW": 143,
+              "REVIEW": 3,
+              "BLOCK": 604
+            }
+          },
+          "Marketing & Advertising": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Misinformation & Propaganda": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Research Assistance": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 458,
+              "BLOCK": 292
+            }
+          },
+          "Reverse Text": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 122,
+              "BLOCK": 628
+            }
+          },
+          "Scams & Fraud": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 0,
+              "BLOCK": 750
+            }
+          },
+          "Sentiment Analysis": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 485,
+              "BLOCK": 265
+            }
+          },
+          "Substitution Ciphers": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 146,
+              "BLOCK": 604
+            }
+          },
+          "Task Automation": {
+            "samples": 750,
+            "detection_rate": 1.0,
+            "decisions": {
+              "ALLOW": 0,
+              "REVIEW": 386,
+              "BLOCK": 364
+            }
+          }
+        },
+        "by_position": {
+          "end": {
+            "samples": 3750,
+            "detection_rate": 0.9707,
+            "decisions": {
+              "ALLOW": 110,
+              "REVIEW": 986,
+              "BLOCK": 2654
+            }
+          },
+          "middle": {
+            "samples": 3750,
+            "detection_rate": 0.9712,
+            "decisions": {
+              "ALLOW": 108,
+              "REVIEW": 963,
+              "BLOCK": 2679
+            }
+          },
+          "start": {
+            "samples": 3750,
+            "detection_rate": 0.9707,
+            "decisions": {
+              "ALLOW": 110,
+              "REVIEW": 986,
+              "BLOCK": 2654
+            }
+          }
+        }
+      }
+    }
+  }
+}
