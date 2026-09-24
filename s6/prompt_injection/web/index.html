@@ -667,6 +667,10 @@
               <div class="chain-card">
                 <div class="chain-top"><span class="chain-name" data-i18n="p3Policy">P3 工具策略</span><span id="p3-badge" class="badge">—</span></div>
                 <span id="p3-value" class="chain-value">—</span>
+                <div id="approval-actions" class="actions" style="display:none;margin-top:10px">
+                  <button id="approve-once" class="button ghost" type="button">批准一次</button>
+                  <button id="approve-always" class="button ghost" type="button">以后都允许</button>
+                </div>
               </div>
             </div>
 
@@ -830,6 +834,7 @@
       sampleMeta: null,
       taskContext: "", intent: null, intentComparison:null, comparisonLoading:false, liveInferred:null, inferenceLoading:false, inferenceError:"", inferenceRequest:0, inferenceTimer:null,
       scenarioMeta: null,
+      toolParameters: {},
       elapsedTimer: null,
       startedAt: 0
     };
@@ -1117,6 +1122,7 @@
         }
         toolSelect.value = data.tool_name || "";
         targetInput.value = data.target || "";
+        state.toolParameters = data.parameters || {};
         updateContextNote(); updateCounter(); resetResult();
       } catch (error) {
         showError(error);
@@ -1159,6 +1165,7 @@
       else if (questionInput.value.trim()) payload.question = questionInput.value.trim();
       if (toolSelect.value) payload.tool_name = toolSelect.value;
       if (targetInput.value.trim()) payload.target = targetInput.value.trim();
+      if (toolSelect.value) payload.parameters = state.toolParameters || {};
       try {
         const data = await requestJson("/api/detect", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
         state.sourceText = contentInput.value;
@@ -1232,8 +1239,12 @@
       byId("p2-value").textContent = semantic ? t("score", { value: number(semantic.score, 3) }) : t("noTaskValue");
       setBadge(byId("hybrid-badge"), hybrid?.decision, "hybrid");
       byId("hybrid-value").textContent = hybrid ? t("findings", { count: (hybrid.reasons || []).length }) : t("hybridUnavailable");
-      setBadge(byId("p3-badge"), policy?.decision);
+      setBadge(byId("p3-badge"), policy?.approval?.final_decision || policy?.decision);
       byId("p3-value").textContent = policy ? t("permission", { value: policy.permission ?? "—" }) : t("noToolValue");
+      const approvalActions = byId("approval-actions");
+      approvalActions.style.display = policy?.approval?.can_approve ? "flex" : "none";
+      byId("approve-once").textContent = state.language === "zh" ? "批准一次" : "Allow once";
+      byId("approve-always").textContent = state.language === "zh" ? "以后都允许" : "Always allow";
 
       const blockThreshold = Number(state.snapshot?.thresholds?.block) || 4;
       const riskWidth = Math.max(2, Math.min(100, (Number(data.score) / blockThreshold) * 100));
@@ -1243,7 +1254,7 @@
       addReasonGroup(groups, t("p1Rules"), data.reasons, true);
       if (semantic) addReasonGroup(groups, t("p2Semantic"), semantic.reasons);
       if (hybrid) addReasonGroup(groups, t("hybridGate"), hybrid.reasons);
-      if (policy) addReasonGroup(groups, t("p3Policy"), policy.reasons);
+      if (policy) addReasonGroup(groups, t("p3Policy"), policy.approval?.reasons || policy.reasons);
 
       byId("result-empty").style.display = "none";
       byId("result-content").classList.add("visible");
@@ -1324,9 +1335,26 @@
       else state.intent=questionInput.value.trim()?{status:'RESOLVED',source:'user_input',category:'user_request'}:null;
       renderIntent();resetResult();
     });
+    async function grantApproval(mode) {
+      if (!toolSelect.value || !state.currentResult?.tool_policy?.approval?.can_approve) return;
+      hideError();
+      try {
+        await requestJson("/api/approvals", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "grant", mode, tool_name: toolSelect.value,
+            target: targetInput.value.trim(), parameters: state.toolParameters || {} })
+        });
+        await runDetection();
+      } catch (error) { showError(error); }
+    }
+    byId("approve-once").addEventListener("click", () => grantApproval("once"));
+    byId("approve-always").addEventListener("click", () => grantApproval("always"));
+    toolSelect.addEventListener("change", () => { state.toolParameters = {}; resetResult(); });
+    targetInput.addEventListener("input", resetResult);
+
     function clearForm() {
       contentInput.value = ""; questionInput.value = ""; toolSelect.value = ""; targetInput.value = "";
-      state.sampleMeta = null; state.scenarioMeta = null;state.taskContext="";state.intent=null;renderIntent();scheduleInference();
+      state.sampleMeta = null; state.scenarioMeta = null; state.toolParameters = {};state.taskContext="";state.intent=null;renderIntent();scheduleInference();
       updateContextNote(); updateCounter(); hideError(); resetResult(); contentInput.focus();
     }
 

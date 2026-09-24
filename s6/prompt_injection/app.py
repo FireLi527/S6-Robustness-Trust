@@ -30,6 +30,7 @@ from confused_deputy_scenarios import SCENARIOS
 from task_intent import PRESETS, register as register_task, resolve as resolve_task
 from tool_policy import TOOL_REGISTRY, ToolCall, append_audit_record, evaluate_tool_call
 from tool_policy import policy_metadata as tool_policy_metadata
+from approval_policy import ApprovalStore
 
 
 HOST = "127.0.0.1"
@@ -44,6 +45,8 @@ RESULTS_DIR = PROJECT_ROOT / "results" / "bipia"
 SEMANTIC_EMBEDDING_CACHE = PROJECT_ROOT / "data" / "bipia" / "semantic_embedding_cache.npz"
 MINILM_CACHE_DIR = PROJECT_ROOT / "external" / "minilm_cache"
 TOOL_POLICY_AUDIT_LOG = RESULTS_DIR / "tool_policy_audit.jsonl"
+TOOL_APPROVALS_FILE = RESULTS_DIR / "local_frontend" / "tool_approvals.json"
+APPROVAL_STORE = ApprovalStore(TOOL_APPROVALS_FILE)
 
 SPLIT_SOURCES = {
     "development": "train",
@@ -265,11 +268,15 @@ class S6RequestHandler(BaseHTTPRequestHandler):
             )
             return
 
+        if path == "/api/approvals":
+            self._send_json({"approvals": APPROVAL_STORE.list()})
+            return
+
         self._send_json({"error": "Not found"}, HTTPStatus.NOT_FOUND)
 
     def do_POST(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler API
         endpoint = urlparse(self.path).path
-        if endpoint not in ("/api/detect", "/api/intent", "/api/intent-comparison", "/api/infer-intent"):
+        if endpoint not in ("/api/detect", "/api/intent", "/api/intent-comparison", "/api/infer-intent", "/api/approvals"):
             self._send_json({"error": "Not found"}, HTTPStatus.NOT_FOUND)
             return
 
@@ -288,6 +295,32 @@ class S6RequestHandler(BaseHTTPRequestHandler):
 
         try:
             payload = json.loads(self.rfile.read(content_length).decode("utf-8"))
+            if endpoint == "/api/approvals":
+                if not isinstance(payload, dict):
+                    raise ValueError("Expected a JSON object")
+                action = payload.get("action")
+                if action == "revoke":
+                    key = payload.get("scope_id")
+                    if not isinstance(key, str) or not key:
+                        raise ValueError("scope_id must be a non-empty string")
+                    self._send_json({"revoked": APPROVAL_STORE.revoke(key), "approvals": APPROVAL_STORE.list()})
+                    return
+                if action != "grant":
+                    raise ValueError("action must be 'grant' or 'revoke'")
+                tool_name = payload.get("tool_name")
+                target = payload.get("target", "")
+                parameters = payload.get("parameters", {})
+                mode = payload.get("mode")
+                if not isinstance(tool_name, str) or not tool_name.strip():
+                    raise ValueError("tool_name must be a non-empty string")
+                if not isinstance(target, str) or not isinstance(parameters, dict):
+                    raise ValueError("target must be a string and parameters must be an object")
+                if not all(isinstance(k, str) and isinstance(v, str) for k, v in parameters.items()):
+                    raise ValueError("approval parameters must contain string keys and values")
+                call = ToolCall(tool_name.strip(), target.strip(), parameters)
+                key = APPROVAL_STORE.grant(call, mode)
+                self._send_json({"scope_id": key, "mode": mode, "approvals": APPROVAL_STORE.list()})
+                return
             if endpoint == "/api/intent-comparison":
                 if not isinstance(payload, dict):
                     raise ValueError("Expected a JSON object")
@@ -323,6 +356,11 @@ class S6RequestHandler(BaseHTTPRequestHandler):
             target = payload.get("target", "")
             if not isinstance(target, str):
                 raise ValueError("target must be a string")
+            parameters = payload.get("parameters", {})
+            if not isinstance(parameters, dict) or not all(
+                isinstance(k, str) and isinstance(v, str) for k, v in parameters.items()
+            ):
+                raise ValueError("parameters must contain string keys and values")
         except (UnicodeDecodeError, json.JSONDecodeError, KeyError, ValueError, TypeError) as error:
             self._send_json({"error": str(error)}, HTTPStatus.BAD_REQUEST)
             return
@@ -376,16 +414,28 @@ class S6RequestHandler(BaseHTTPRequestHandler):
             }
 
         if tool_name.strip():
-            tool_call = ToolCall(tool_name=tool_name.strip(), target=target.strip(), parameters={})
+            tool_call = ToolCall(tool_name=tool_name.strip(), target=target.strip(), parameters=parameters)
             policy_result = evaluate_tool_call(tool_call, result.decision)
+            approval_result = APPROVAL_STORE.apply(tool_call, result.decision, policy_result)
             entry = TOOL_REGISTRY.get(tool_name.strip())
             response["tool_policy"] = {
                 "detector": tool_policy_metadata(),
                 "decision": policy_result.decision,
                 "reasons": list(policy_result.reasons),
                 "permission": entry.permission if entry else None,
+                "approval": {
+                    "final_decision": approval_result.decision,
+                    "reasons": list(approval_result.reasons),
+                    "scope_id": approval_result.scope_id,
+                    "matched": approval_result.matched,
+                    "can_approve": approval_result.can_approve,
+                },
             }
-            append_audit_record(TOOL_POLICY_AUDIT_LOG, tool_call, result.decision, policy_result)
+            final_policy_result = type(policy_result)(approval_result.decision, approval_result.reasons)
+            append_audit_record(
+                TOOL_POLICY_AUDIT_LOG, tool_call, result.decision, final_policy_result,
+                extra={"p3_base_decision": policy_result.decision, "approval_match": approval_result.matched},
+            )
 
         self._send_json(response)
 
