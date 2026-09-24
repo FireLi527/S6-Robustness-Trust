@@ -1,0 +1,13 @@
+{
+  "confirmed_on": "2026-09-21",
+  "source": "User reports confirmation from classmate in this conversation",
+  "confirmed_rule": "The first 9 filename digits identify the same specimen.",
+  "applies_to_protocol_sha256": "e13511848715991cdd28839ff79405938eb1134e51d6c7a9e7e52f99da893519",
+  "split_changed": false,
+  "meaning": "Existing train/validation/test partition is specimen-disjoint under the confirmed identifier.",
+  "remaining_limitations": [
+    "Species labels still taken from archive names.",
+    "Collection-session or acquisition-batch independence not established.",
+    "Detector internal OOF folds remain image-level, not specimen-grouped."
+  ]
+}

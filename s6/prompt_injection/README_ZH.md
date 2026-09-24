@@ -287,3 +287,8 @@ P3 已经接入 `app.py`/`web/index.html`：在内容旁边选择工具和目标
 英文说明见 [README.md](README.md)。
 
 后续里程碑见 [../BASELINE_ROADMAP_ZH.md](../BASELINE_ROADMAP_ZH.md)。
+
+
+## 2026-09-21：监督分类扩展
+
+Email、Table、Code 已完成按原始正文分组的监督训练与独立测试，新增实验对照开关。该轻量分类器并非普遍优于已有规则，因此保留为独立研究对照，不替换工具门控。数据使用范围、排重、运行命令和结果限制见 [监督实验协议](SUPERVISED_PROTOCOL_ZH.md)。

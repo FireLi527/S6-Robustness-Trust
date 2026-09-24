@@ -1,0 +1,479 @@
+{
+  "dataset": "label_flip_10",
+  "status": "COMPLETE",
+  "protocol": {
+    "dataset": "label_flip_10",
+    "seed": 2028,
+    "epochs": 20,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "pretrained": true,
+    "amp": true,
+    "max_train_samples": null,
+    "max_eval_samples": null,
+    "architecture": "resnet18",
+    "selected_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "train_transform": "Compose(\n    RandomResizedCrop(size=(224, 224), scale=(0.75, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=True)\n    RandomHorizontalFlip(p=0.5)\n    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)\n    ColorJitter(brightness=(0.85, 1.15), contrast=(0.85, 1.15), saturation=(0.9, 1.1), hue=None)\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)",
+    "evaluation_transform": "Compose(\n    Resize(size=256, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)"
+  },
+  "protocol_hash": "8fd78739dc98626846a18ba2a3301c97b22d14851e90ba46afa4c74b1e9eb559",
+  "data_protocol": "D1-file-split-v1",
+  "trainer_sha256": "9086ac91e582ab69ee44bfff9082e1fa8affcba1b0e29e47b9348cb7a36f29ee",
+  "manifest": "/mnt/e/研究生/高级计算机项目/data/stl10_poisoning/manifests/label_flip_10.csv",
+  "manifest_sha256": "7533a758940a2742521bc1ebf93c02cfb58998ce1436dfdd0afdf81444243ab6",
+  "validation_split_sha256": "575bbdcb7fdc8b9e6fd37cc531aa24136f3f3117d4b48e9a90ac5a0c0fe100d8",
+  "test_split_sha256": "4bdc70f1875dd778d649a3c7ff2332f65990558e5d1e19fe18be9bb2a604d7de",
+  "pretrained_weights": "IMAGENET1K_V1",
+  "candidate_fields_only": true,
+  "training_samples": 4000,
+  "validation_samples": 1000,
+  "test_samples": 8000,
+  "assigned_label_counts": {
+    "0": 409,
+    "1": 396,
+    "2": 389,
+    "3": 408,
+    "4": 389,
+    "5": 391,
+    "6": 414,
+    "7": 404,
+    "8": 401,
+    "9": 399
+  },
+  "best_epoch": 19,
+  "validation": {
+    "accuracy": 0.908,
+    "balanced_accuracy": 0.908,
+    "macro_f1": 0.90795,
+    "targeted_0_to_1_rate": 0.0,
+    "confusion_matrix": [
+      [
+        94,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        94,
+        1,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        95,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        1,
+        0,
+        93,
+        0,
+        5,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        3,
+        90,
+        0,
+        3,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        7,
+        1,
+        82,
+        5,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        3,
+        3,
+        5,
+        86,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        2,
+        1,
+        1,
+        1,
+        90,
+        1,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        91,
+        1
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        93
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "class_name": "airplane",
+        "precision": 0.903846,
+        "recall": 0.94,
+        "f1": 0.921569,
+        "support": 100
+      },
+      "1": {
+        "class_name": "bird",
+        "precision": 0.930693,
+        "recall": 0.94,
+        "f1": 0.935323,
+        "support": 100
+      },
+      "2": {
+        "class_name": "car",
+        "precision": 0.969388,
+        "recall": 0.95,
+        "f1": 0.959596,
+        "support": 100
+      },
+      "3": {
+        "class_name": "cat",
+        "precision": 0.845455,
+        "recall": 0.93,
+        "f1": 0.885714,
+        "support": 100
+      },
+      "4": {
+        "class_name": "deer",
+        "precision": 0.947368,
+        "recall": 0.9,
+        "f1": 0.923077,
+        "support": 100
+      },
+      "5": {
+        "class_name": "dog",
+        "precision": 0.87234,
+        "recall": 0.82,
+        "f1": 0.845361,
+        "support": 100
+      },
+      "6": {
+        "class_name": "horse",
+        "precision": 0.886598,
+        "recall": 0.86,
+        "f1": 0.873096,
+        "support": 100
+      },
+      "7": {
+        "class_name": "monkey",
+        "precision": 0.882353,
+        "recall": 0.9,
+        "f1": 0.891089,
+        "support": 100
+      },
+      "8": {
+        "class_name": "ship",
+        "precision": 0.91,
+        "recall": 0.91,
+        "f1": 0.91,
+        "support": 100
+      },
+      "9": {
+        "class_name": "truck",
+        "precision": 0.939394,
+        "recall": 0.93,
+        "f1": 0.934673,
+        "support": 100
+      }
+    },
+    "loss": 0.310184,
+    "samples": 1000
+  },
+  "test": {
+    "accuracy": 0.903625,
+    "balanced_accuracy": 0.903625,
+    "macro_f1": 0.90351,
+    "targeted_0_to_1_rate": 0.00375,
+    "confusion_matrix": [
+      [
+        752,
+        3,
+        8,
+        3,
+        2,
+        2,
+        6,
+        0,
+        14,
+        10
+      ],
+      [
+        6,
+        738,
+        6,
+        17,
+        6,
+        8,
+        8,
+        9,
+        2,
+        0
+      ],
+      [
+        3,
+        3,
+        757,
+        3,
+        1,
+        2,
+        4,
+        1,
+        4,
+        22
+      ],
+      [
+        6,
+        11,
+        0,
+        703,
+        13,
+        40,
+        6,
+        18,
+        3,
+        0
+      ],
+      [
+        1,
+        11,
+        0,
+        29,
+        713,
+        9,
+        22,
+        10,
+        3,
+        2
+      ],
+      [
+        7,
+        8,
+        2,
+        39,
+        9,
+        668,
+        26,
+        32,
+        6,
+        3
+      ],
+      [
+        2,
+        5,
+        5,
+        19,
+        7,
+        34,
+        707,
+        12,
+        6,
+        3
+      ],
+      [
+        3,
+        9,
+        3,
+        23,
+        8,
+        15,
+        3,
+        732,
+        4,
+        0
+      ],
+      [
+        10,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        3,
+        771,
+        13
+      ],
+      [
+        23,
+        0,
+        36,
+        3,
+        2,
+        3,
+        5,
+        5,
+        35,
+        688
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "class_name": "airplane",
+        "precision": 0.924969,
+        "recall": 0.94,
+        "f1": 0.932424,
+        "support": 800
+      },
+      "1": {
+        "class_name": "bird",
+        "precision": 0.936548,
+        "recall": 0.9225,
+        "f1": 0.929471,
+        "support": 800
+      },
+      "2": {
+        "class_name": "car",
+        "precision": 0.925428,
+        "recall": 0.94625,
+        "f1": 0.935723,
+        "support": 800
+      },
+      "3": {
+        "class_name": "cat",
+        "precision": 0.837902,
+        "recall": 0.87875,
+        "f1": 0.85784,
+        "support": 800
+      },
+      "4": {
+        "class_name": "deer",
+        "precision": 0.936925,
+        "recall": 0.89125,
+        "f1": 0.913517,
+        "support": 800
+      },
+      "5": {
+        "class_name": "dog",
+        "precision": 0.85422,
+        "recall": 0.835,
+        "f1": 0.844501,
+        "support": 800
+      },
+      "6": {
+        "class_name": "horse",
+        "precision": 0.897208,
+        "recall": 0.88375,
+        "f1": 0.890428,
+        "support": 800
+      },
+      "7": {
+        "class_name": "monkey",
+        "precision": 0.890511,
+        "recall": 0.915,
+        "f1": 0.902589,
+        "support": 800
+      },
+      "8": {
+        "class_name": "ship",
+        "precision": 0.909198,
+        "recall": 0.96375,
+        "f1": 0.93568,
+        "support": 800
+      },
+      "9": {
+        "class_name": "truck",
+        "precision": 0.928475,
+        "recall": 0.86,
+        "f1": 0.892927,
+        "support": 800
+      }
+    },
+    "loss": 0.329753,
+    "samples": 8000
+  },
+  "checkpoint": "/home/anima/s6-training-artifacts/stl10/multiseed/seed2028/checkpoints/label_flip_10/resnet18_seed2028_8fd78739dc/best.pt",
+  "tensorboard": "/home/anima/s6-training-artifacts/stl10/multiseed/seed2028/tensorboard/label_flip_10/resnet18_seed2028_8fd78739dc",
+  "result_dir": "/mnt/e/研究生/高级计算机项目/results/stl10_poisoning/multiseed_training/seed2028/label_flip_10/resnet18_seed2028_8fd78739dc",
+  "elapsed_seconds": 263.29,
+  "environment": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.13.0+cu130",
+    "torchvision": "0.28.0+cu130",
+    "device": "cuda",
+    "cuda_runtime": "13.0",
+    "cudnn": 92000,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "compute_capability": "12.0",
+    "gpu_memory_gib": 7.96
+  }
+}

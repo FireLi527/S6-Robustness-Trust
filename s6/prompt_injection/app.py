@@ -27,6 +27,7 @@ from semantic_detector import (
 )
 from semantic_detector import detector_metadata as semantic_detector_metadata
 from confused_deputy_scenarios import SCENARIOS
+from task_intent import PRESETS, register as register_task, resolve as resolve_task
 from tool_policy import TOOL_REGISTRY, ToolCall, append_audit_record, evaluate_tool_call
 from tool_policy import policy_metadata as tool_policy_metadata
 
@@ -205,6 +206,14 @@ class S6RequestHandler(BaseHTTPRequestHandler):
             self.wfile.write(body)
             return
 
+        if path == "/api/intent-comparison":
+            from intent_comparison import load_report
+            try:
+                self._send_json(load_report())
+            except (OSError, ValueError, KeyError) as error:
+                self._send_json({"error": str(error)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+            return
+
         if path == "/api/status":
             try:
                 self._send_json(load_status())
@@ -226,7 +235,9 @@ class S6RequestHandler(BaseHTTPRequestHandler):
                         HTTPStatus.BAD_REQUEST,
                     )
                     return
-                self._send_json(random.choice(load_examples(split, encoding)))
+                example = dict(random.choice(load_examples(split, encoding)))
+                example.update(register_task(example["question"], example["text"], "bipia_question"))
+                self._send_json(example)
             except (OSError, json.JSONDecodeError, KeyError, ValueError) as error:
                 self._send_json(
                     {"error": f"Unable to load the BIPIA example: {error}"},
@@ -238,6 +249,8 @@ class S6RequestHandler(BaseHTTPRequestHandler):
             scenario = random.choice(SCENARIOS)
             self._send_json(
                 {
+                    **register_task(PRESETS[scenario.tool_call.tool_name], scenario.content, "demo_preset"),
+                    "question": PRESETS[scenario.tool_call.tool_name],
                     "scenario_id": scenario.scenario_id,
                     "description": scenario.description,
                     "content": scenario.content,
@@ -255,7 +268,8 @@ class S6RequestHandler(BaseHTTPRequestHandler):
         self._send_json({"error": "Not found"}, HTTPStatus.NOT_FOUND)
 
     def do_POST(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler API
-        if urlparse(self.path).path != "/api/detect":
+        endpoint = urlparse(self.path).path
+        if endpoint not in ("/api/detect", "/api/intent", "/api/intent-comparison", "/api/infer-intent"):
             self._send_json({"error": "Not found"}, HTTPStatus.NOT_FOUND)
             return
 
@@ -274,25 +288,53 @@ class S6RequestHandler(BaseHTTPRequestHandler):
 
         try:
             payload = json.loads(self.rfile.read(content_length).decode("utf-8"))
+            if endpoint == "/api/intent-comparison":
+                if not isinstance(payload, dict):
+                    raise ValueError("Expected a JSON object")
+                from intent_comparison import run_comparison
+                try:
+                    self._send_json(run_comparison())
+                except Exception as error:
+                    self._send_json({"error": f"Intent comparison unavailable: {error}"}, HTTPStatus.INTERNAL_SERVER_ERROR)
+                return
             text = payload["text"]
             if not isinstance(text, str) or not text.strip():
                 raise ValueError("text must be a non-empty string")
+            if endpoint == "/api/infer-intent":
+                from live_intent import infer_content
+                try:
+                    self._send_json({"inferred_intent": infer_content(text)})
+                except Exception as error:
+                    self._send_json({"error": f"Intent inference unavailable: {error}"}, HTTPStatus.INTERNAL_SERVER_ERROR)
+                return
             question = payload.get("question", "")
             if not isinstance(question, str):
                 raise ValueError("question must be a string")
+            use_supervised = payload.get("use_supervised", False)
+            if not isinstance(use_supervised, bool):
+                raise ValueError("use_supervised must be a boolean")
+            intent = resolve_task(question, text, payload.get("task_context", ""))
+            question = intent["question"]
+            if endpoint == "/api/detect" and use_supervised and not question.strip():
+                raise ValueError("Supervised evaluation requires the user's real task")
             tool_name = payload.get("tool_name", "")
             if not isinstance(tool_name, str):
                 raise ValueError("tool_name must be a string")
             target = payload.get("target", "")
             if not isinstance(target, str):
                 raise ValueError("target must be a string")
-        except (UnicodeDecodeError, json.JSONDecodeError, KeyError, ValueError) as error:
+        except (UnicodeDecodeError, json.JSONDecodeError, KeyError, ValueError, TypeError) as error:
             self._send_json({"error": str(error)}, HTTPStatus.BAD_REQUEST)
+            return
+
+        if endpoint == "/api/intent":
+            self._send_json({"intent": intent})
             return
 
         result = detect_prompt_injection(text)
         metadata = detector_metadata()
         response: dict = {
+            "intent": intent,
             "decision": result.decision,
             "score": result.score,
             "reasons": list(result.reasons),
@@ -302,6 +344,14 @@ class S6RequestHandler(BaseHTTPRequestHandler):
                 for highlight in result.highlights
             ],
         }
+
+        if use_supervised:
+            from supervised_detector import assess_supervised
+            try:
+                response["supervised"] = assess_supervised(question, text)
+            except (OSError, ValueError) as error:
+                response["supervised"] = {"status": "UNAVAILABLE", "error": str(error),
+                                          "affects_tool_policy": False}
 
         if question.strip():
             texts = texts_requiring_embeddings(question, text)

@@ -1,4 +1,4 @@
-"""Semantic label-anomaly detector for IP102 candidate training data.
+"""Semantic label-anomaly detector for image candidate training data.
 
 Unlike ``integrity_detector.py``, which only works by diffing a candidate manifest
 against an independently trusted baseline manifest, this detector inspects whether
@@ -21,14 +21,12 @@ import numpy as np
 
 
 DETECTOR_NAME = "s6-semantic-label-anomaly"
-DETECTOR_VERSION = "0.4.0"
+DETECTOR_VERSION = "0.5.0"
 CLIP_MODEL_NAME = "ViT-B-32-quickgelu"
 CLIP_PRETRAINED_TAG = "openai"
 EMBEDDING_MODEL = "open_clip-ViT-B-32-quickgelu-openai"
 EMBEDDING_DIM = 512
-EMBEDDING_PROJECTION = "nca-clean-subset-oof"
-PROJECTION_COMPONENTS = 32
-PROJECTION_MAX_ITER = 50
+EMBEDDING_PROJECTION = "none-raw-clip"
 
 KNN_NEIGHBORS = 15
 CV_FOLDS = 5
@@ -104,6 +102,7 @@ def detector_metadata() -> dict[str, str]:
     policy = {
         "name": DETECTOR_NAME,
         "version": DETECTOR_VERSION,
+        "implementation_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "embedding_model": EMBEDDING_MODEL,
         "embedding_dim": EMBEDDING_DIM,
         "embedding_projection": EMBEDDING_PROJECTION,
@@ -125,18 +124,27 @@ def detector_metadata() -> dict[str, str]:
 def load_embedding_cache(cache_path: Path) -> dict[str, np.ndarray]:
     if not cache_path.is_file():
         return {}
-    with np.load(cache_path) as data:
+    metadata_path = cache_path.with_suffix(".metadata.json")
+    if not metadata_path.is_file() or json.loads(metadata_path.read_text()) != embedding_metadata():
+        return {}
+    with np.load(cache_path, allow_pickle=False) as data:
         return {key: data[key] for key in data.files}
+
+
+def embedding_metadata() -> dict:
+    return {"model": EMBEDDING_MODEL, "dimension": EMBEDDING_DIM,
+            "preprocessing": "open_clip-default-rgb-v1"}
 
 
 def save_embedding_cache(cache_path: Path, embeddings: Mapping[str, np.ndarray]) -> None:
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(cache_path, **embeddings)
+    cache_path.with_suffix(".metadata.json").write_text(json.dumps(embedding_metadata()), encoding="utf-8")
 
 
 def extract_embeddings(
     records: Sequence[SemanticInputRecord],
-    ip102_root: Path,
+    image_root: Path,
     cache_path: Path,
     model_cache_dir: Path,
     batch_size: int = 32,
@@ -147,6 +155,14 @@ def extract_embeddings(
     (an ``external/`` subdirectory owned by the caller), kept separate from
     ``cache_path``, which stores this project's per-image embedding cache.
     """
+    # Verify bytes even on cache hits: a stale declared hash must not hide a changed image.
+    for record in {record.sha256: record for record in records}.values():
+        image_path = (image_root / record.source_relpath).resolve()
+        if not image_path.is_relative_to(image_root.resolve()):
+            raise ValueError("Image path escapes dataset root")
+        with image_path.open("rb") as source:
+            if hashlib.file_digest(source, "sha256").hexdigest() != record.sha256:
+                raise ValueError(f"Image hash mismatch: {record.source_relpath}")
     cache = load_embedding_cache(cache_path)
     unique_paths = {record.sha256: record.source_relpath for record in records}
     missing = {sha: relpath for sha, relpath in unique_paths.items() if sha not in cache}
@@ -161,19 +177,26 @@ def extract_embeddings(
             pretrained=CLIP_PRETRAINED_TAG,
             cache_dir=str(model_cache_dir),
         )
-        model.eval()
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        model = model.to(device).eval()
+        print(f"CLIP: {len(missing)} images on {device}", flush=True)
 
         items = sorted(missing.items())
         with torch.no_grad():
             for start in range(0, len(items), batch_size):
                 batch = items[start : start + batch_size]
-                tensors = [
-                    preprocess(Image.open(ip102_root / relpath).convert("RGB"))
-                    for _, relpath in batch
-                ]
-                batch_embeddings = model.encode_image(torch.stack(tensors)).numpy()
+                tensors = []
+                for sha, relpath in batch:
+                    image_path = (image_root / relpath).resolve()
+                    if not image_path.is_relative_to(image_root.resolve()):
+                        raise ValueError("Image path escapes dataset root")
+                    with Image.open(image_path) as source:
+                        tensors.append(preprocess(source.convert("RGB")))
+                batch_embeddings = model.encode_image(torch.stack(tensors).to(device)).cpu().numpy()
                 for (sha, _), vector in zip(batch, batch_embeddings):
                     cache[sha] = vector.astype(np.float32)
+                if start % (batch_size * 10) == 0:
+                    print(f"CLIP: {min(start + batch_size, len(items))}/{len(items)}", flush=True)
         save_embedding_cache(cache_path, cache)
 
     return {record.sha256: cache[record.sha256] for record in records}
@@ -183,47 +206,6 @@ def _unit_normalize(matrix: np.ndarray) -> np.ndarray:
     norms = np.linalg.norm(matrix, axis=1, keepdims=True)
     norms[norms == 0] = 1.0
     return matrix / norms
-
-
-def fit_trusted_projection(
-    trusted_records: Sequence[SemanticInputRecord],
-    raw_embeddings: Mapping[str, np.ndarray],
-) -> dict[str, np.ndarray]:
-    """Project raw embeddings into a class-discriminative space using only trusted labels.
-
-    ``trusted_records`` must come from a manifest whose ``assigned_label`` is known to
-    be correct (this project's convention: ``clean_subset.csv``, the same file
-    ``integrity_detector.py`` treats as the trusted baseline). No candidate manifest's
-    own labels, ``original_label``, or ``poisoned`` are ever read here.
-
-    Fits ``NeighborhoodComponentsAnalysis`` (NCA) via stratified K-fold cross-validation so
-    every trusted image's projected embedding comes from a model that never saw that image
-    during fitting, avoiding overfitting to this fixed, small (1,000-image) benchmark. NCA
-    directly optimizes a soft k-NN classification objective — matching what the detector's
-    neighbour-agreement signal actually needs — and its output dimension is a free choice
-    (``PROJECTION_COMPONENTS``), unlike LDA's ``n_classes - 1`` cap.
-    """
-    from sklearn.model_selection import StratifiedKFold
-    from sklearn.neighbors import NeighborhoodComponentsAnalysis
-
-    sha256_list = [record.sha256 for record in trusted_records]
-    labels = np.array([record.assigned_label for record in trusted_records])
-    features = _unit_normalize(np.stack([raw_embeddings[sha] for sha in sha256_list]))
-
-    n_components = min(PROJECTION_COMPONENTS, features.shape[1])
-    projected = np.zeros((len(sha256_list), n_components), dtype=np.float32)
-
-    label_counts = Counter(labels.tolist())
-    cv_folds = min(CV_FOLDS, min(label_counts.values()))
-    splitter = StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=SEED)
-    for train_idx, test_idx in splitter.split(features, labels):
-        model = NeighborhoodComponentsAnalysis(
-            n_components=n_components, max_iter=PROJECTION_MAX_ITER, random_state=SEED
-        )
-        model.fit(features[train_idx], labels[train_idx])
-        projected[test_idx] = model.transform(features[test_idx]).astype(np.float32)
-
-    return dict(zip(sha256_list, projected))
 
 
 def assess_semantic(
@@ -236,11 +218,18 @@ def assess_semantic(
     from sklearn.neighbors import NearestNeighbors
 
     n = len(records)
+    if n < 2:
+        raise ValueError("Semantic assessment needs at least two distinct images")
     ids = [record.sample_id for record in records]
+    if len(set(ids)) != n or len({record.sha256 for record in records}) != n:
+        raise ValueError("Duplicate sample IDs or image hashes must be resolved before semantic scoring")
     labels = np.array([record.assigned_label for record in records])
     features = _unit_normalize(
         np.stack([embeddings[record.sha256] for record in records])
     )
+
+    if not np.isfinite(features).all() or np.any(np.linalg.norm(features, axis=1) == 0):
+        raise ValueError("Embeddings must be finite, nonzero vectors")
 
     k = max(min(KNN_NEIGHBORS, n - 1), 1)
     neighbor_model = NearestNeighbors(n_neighbors=k + 1, metric="cosine").fit(features)
@@ -251,7 +240,7 @@ def assess_semantic(
     cv_folds = min(CV_FOLDS, min_class_count)
     classes_sorted = np.unique(labels)
     class_confidence = np.zeros(n)
-    if cv_folds >= 2:
+    if cv_folds >= 2 and len(classes_sorted) >= 2:
         classifier = LogisticRegression(max_iter=1000, random_state=SEED)
         splitter = StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=SEED)
         probabilities = cross_val_predict(

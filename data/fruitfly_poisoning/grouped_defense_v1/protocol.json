@@ -1,0 +1,83 @@
+{
+  "dataset_protocol_sha256": "e13511848715991cdd28839ff79405938eb1134e51d6c7a9e7e52f99da893519",
+  "confirmation_sha256": "0394ed23c1448217a799921e5902c6c2e14ee8e2142ad45fbd73b6f7e8945230",
+  "algorithm_sha256": "2917654f692b9ec57c13610f9b5742e242d2f3c1fd48a500985d32efc60479b2",
+  "preparation_sha256": "505ec1850257ef9b6d09bb9163c414e5372775fab5e3d1781852893609f20b63",
+  "embedding_configuration": {
+    "detector": "s6-semantic-label-anomaly",
+    "version": "0.5.0",
+    "config_hash": "cb0cee0005815713d69a404d27eacbc3005d19e884a4a0c28885c5830eafe869"
+  },
+  "development_split": "existing classifier validation only; no test images",
+  "development_poison_seeds": [
+    52026,
+    52027
+  ],
+  "classifier_C": [
+    1.0,
+    10.0
+  ],
+  "weights": [
+    [
+      0.4,
+      0.4,
+      0.2
+    ],
+    [
+      0.25,
+      0.75,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ]
+  ],
+  "thresholds": [
+    0.3,
+    0.325,
+    0.35000000000000003,
+    0.37500000000000006,
+    0.4000000000000001,
+    0.4250000000000001,
+    0.4500000000000001,
+    0.47500000000000014,
+    0.5000000000000002,
+    0.5250000000000001,
+    0.5500000000000003,
+    0.5750000000000002,
+    0.6000000000000003,
+    0.6250000000000002,
+    0.6500000000000004,
+    0.6750000000000003,
+    0.7000000000000004,
+    0.7250000000000003,
+    0.7500000000000004,
+    0.7750000000000004,
+    0.8000000000000005,
+    0.8250000000000004,
+    0.8500000000000005,
+    0.8750000000000004,
+    0.9000000000000006,
+    0.9250000000000005,
+    0.9500000000000006,
+    0.9750000000000005,
+    1.000001
+  ],
+  "criterion": "Max mean development F1 across six attack cases, subject to <=5% clean development FPR; tie lower FPR then higher threshold",
+  "policy": "Retain ALLOW only; REVIEW withheld, no relabelling",
+  "random_removal_seed": 32026,
+  "classifier_epochs": 20,
+  "classifier_seed": 2026,
+  "limitations": [
+    "Validation set reused for detector development and downstream checkpoint selection; final test never used to tune.",
+    "Prior fruit-fly attack results were observed; this is development, not a pristine blind evaluation.",
+    "One training seed and one random-removal seed; fixed epochs imply different update counts."
+  ]
+}

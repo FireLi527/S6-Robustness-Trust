@@ -169,7 +169,7 @@
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <div class="brand"><div class="brand-mark" aria-hidden="true">S6</div><div><p class="eyebrow">Data Integrity Lab</p><h1 data-i18n="appTitle">训练数据风险控制台</h1></div></div>
+      <div class="brand"><div class="brand-mark" aria-hidden="true">S6</div><div><p class="eyebrow">Data Integrity Lab</p><h1 data-i18n="appTitle">图像数据安全</h1></div></div>
       <div class="topbar-actions">
         <div class="language-toggle" role="group" aria-label="Language / 语言">
           <button class="language-button" type="button" data-language="zh" aria-pressed="true">中文</button>
@@ -180,9 +180,14 @@
       </div>
     </header>
 
+    <section class="method-card" style="margin-bottom:18px">
+      <label for="corpus-select" id="corpus-label">实验数据源</label>
+      <select id="corpus-select" style="margin-left:16px;padding:10px;background:var(--raised);color:var(--text);border:1px solid var(--line);border-radius:8px"><option value="fruitfly">实蝇数据集</option><option value="stl10">STL-10</option></select>
+      <p id="corpus-note" style="margin:10px 0 0"></p>
+    </section>
     <section class="status-strip" aria-label="实验总览">
-      <div class="status-metric"><span class="status-label" data-i18n="candidateDatasets">候选数据集</span><span class="status-value" id="dataset-count">—</span></div>
-      <div class="status-metric"><span class="status-label" data-i18n="scannedSamples">扫描样本</span><span class="status-value" id="sample-count">—</span></div>
+      <div class="status-metric"><span class="status-label" data-i18n="candidateDatasets">实验组</span><span class="status-value" id="dataset-count">—</span></div>
+      <div class="status-metric"><span class="status-label" data-i18n="scannedSamples">清单记录数</span><span class="status-value" id="sample-count">—</span></div>
       <div class="status-metric"><span class="status-label" data-i18n="integrityBlocks">完整性阻断</span><span class="status-value" id="blocked-count">—</span></div>
       <div class="status-metric"><span class="status-label" data-i18n="semanticReview">语义待复核</span><span class="status-value" id="flagged-count">—</span></div>
     </section>
@@ -190,7 +195,7 @@
     <main>
       <section class="panel" id="sample-panel" aria-labelledby="inspector-title" aria-busy="true">
         <div class="workspace-head">
-          <div class="workspace-title"><span class="badge neutral" id="dataset-decision">载入中</span><div class="workspace-title-copy"><h2 id="inspector-title" data-i18n="sampleInspector">样本检查器</h2><p id="selected-dataset-meta">正在读取检测结果…</p></div></div>
+          <div class="workspace-title"><span class="badge neutral" id="dataset-decision">载入中</span><div class="workspace-title-copy"><h2 id="inspector-title" data-i18n="sampleInspector">样本查看</h2><p id="selected-dataset-meta">正在读取检测结果…</p></div></div>
           <div class="workspace-actions">
             <label class="sr-only" for="dataset-select" data-i18n="selectDataset">选择数据集</label>
             <select class="mobile-select" id="dataset-select"><option value="clean_subset">干净子集</option><option value="label_flip_05">5% 随机翻转</option><option value="label_flip_10">10% 随机翻转</option><option value="targeted_0_to_1">定向 0 → 1</option></select>
@@ -200,17 +205,17 @@
         <nav class="dataset-switcher" id="dataset-switcher" aria-label="候选数据集"></nav>
         <div class="sample-layout">
           <div class="image-column">
-            <div class="image-stage"><img id="pest-image" alt="随机抽取的 IP102 害虫图像" hidden><div class="image-status" id="image-status"><span class="loader" aria-hidden="true"></span><span>正在抽取样本并读取图像…</span></div></div>
-            <div class="image-caption"><span>IP102 / classification</span><code id="sample-id">等待样本</code></div>
+            <div class="image-stage"><img id="pest-image" alt="随机抽取的 STL-10 分类图像" hidden><div class="image-status" id="image-status"><span class="loader" aria-hidden="true"></span><span>正在抽取样本并读取图像…</span></div></div>
+            <div class="image-caption"><span id="image-corpus">实蝇 / classification</span><code id="sample-id">等待样本</code></div>
           </div>
           <aside class="assessment" aria-label="当前样本检测结论">
             <div class="assessment-block">
               <span class="section-label" data-i18n="sampleIntegrity">样本级完整性</span><span class="badge neutral" id="sample-integrity-badge">等待检测</span>
               <p class="decision-copy" id="sample-explanation">载入样本后，将比较可信标签、候选标签与文件哈希。</p>
-              <div class="label-flow"><div class="label-card"><span class="label-caption" data-i18n="trustedLabel">可信标签</span><strong class="label-value" id="original-label">—</strong></div><span class="label-arrow" aria-hidden="true">→</span><div class="label-card" id="assigned-card"><span class="label-caption" data-i18n="candidateLabel">候选训练标签</span><strong class="label-value" id="assigned-label">—</strong></div></div>
+              <div class="label-flow"><div class="label-card"><span class="label-caption" data-i18n="trustedLabel">可信标签</span><strong class="label-value" id="original-label">—</strong></div><span class="label-arrow" aria-hidden="true">→</span><div class="label-card" id="assigned-card"><span class="label-caption" data-i18n="candidateLabel">候选标签</span><strong class="label-value" id="assigned-label">—</strong></div></div>
             </div>
             <div class="assessment-block">
-              <span class="section-label" data-i18n="semanticCheck">内容语义检测</span><div class="risk-line"><span class="badge neutral" id="semantic-decision">等待检测</span><strong class="risk-value" id="semantic-risk-value">—</strong></div>
+              <span class="section-label" data-i18n="semanticCheck">语义检测</span><div class="risk-line"><span class="badge neutral" id="semantic-decision">等待检测</span><strong class="risk-value" id="semantic-risk-value">—</strong></div>
               <div class="risk-track" aria-hidden="true"><div class="risk-fill" id="semantic-risk-fill"></div></div>
               <div class="signal-grid"><div class="signal"><span data-i18n="neighborAgreement">近邻标签一致率</span><strong id="neighbor-agreement">—</strong></div><div class="signal"><span data-i18n="classifierConfidence">分类器置信度</span><strong id="classifier-confidence">—</strong></div><div class="signal"><span data-i18n="centroidDistance">质心距离 Z 值</span><strong id="centroid-distance">—</strong></div><div class="signal"><span data-i18n="fileHash">文件哈希</span><strong id="hash-state">—</strong></div></div>
               <ul class="reason-list" id="semantic-reasons"></ul>
@@ -222,30 +227,34 @@
 
       <section class="panel analytics" aria-label="检测详情">
         <div class="tabs" role="tablist" aria-label="检测视图">
-          <button class="tab-button" id="tab-overview" role="tab" aria-controls="panel-overview" aria-selected="true" data-tab="overview" data-i18n="overviewTab">数据集总览</button>
+          <button class="tab-button" id="tab-overview" role="tab" aria-controls="panel-overview" aria-selected="true" data-tab="overview" data-i18n="overviewTab">数据概览</button>
           <button class="tab-button" id="tab-integrity" role="tab" aria-controls="panel-integrity" aria-selected="false" data-tab="integrity" data-i18n="integrityTab">完整性明细</button>
           <button class="tab-button" id="tab-semantic" role="tab" aria-controls="panel-semantic" aria-selected="false" data-tab="semantic" data-i18n="semanticTab">语义评估</button>
-          <button class="tab-button" id="tab-method" role="tab" aria-controls="panel-method" aria-selected="false" data-tab="method" data-i18n="methodTab">检测方法</button>
+          <button class="tab-button" id="tab-method" role="tab" aria-controls="panel-method" aria-selected="false" data-tab="method" data-i18n="methodTab">方法说明</button>
         </div>
         <div class="tab-panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
-          <div class="panel-heading"><div><h2 data-i18n="overviewTitle">四组候选清单</h2><p data-i18n="overviewDescription">完整性结果与语义异常分布合并展示，点击任意一组继续检查。</p></div></div><div class="dataset-list" id="overview-list"></div>
+          <div class="panel-heading"><div><h2 data-i18n="overviewTitle">实验组概览</h2><p data-i18n="overviewDescription">各组完整性检查与语义检测结果。</p></div></div><div class="dataset-list" id="overview-list"></div>
         </div>
         <div class="tab-panel" id="panel-integrity" role="tabpanel" aria-labelledby="tab-integrity" hidden>
-          <div class="panel-heading"><div><h2 data-i18n="integrityTitle">完整性清单对比</h2><p data-i18n="integrityDescription">逐项比较可信基线与候选 manifest 的成员、标签、哈希和类别分布。</p></div></div>
-          <div class="table-wrap"><table><thead><tr><th data-i18n="dataset">数据集</th><th data-i18n="decision">决策</th><th data-i18n="labelChanges">标签变化</th><th data-i18n="hashChanges">哈希变化</th><th data-i18n="missing">缺失</th><th data-i18n="unknown">未知</th><th data-i18n="distributionDrift">分布漂移</th></tr></thead><tbody id="integrity-table"></tbody></table></div>
+          <div class="panel-heading"><div><h2 data-i18n="integrityTitle">完整性检查</h2><p data-i18n="integrityDescription">对比样本、标签、文件哈希和类别分布。</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th data-i18n="dataset">数据集</th><th data-i18n="decision">结果</th><th data-i18n="labelChanges">标签变化</th><th data-i18n="hashChanges">哈希变化</th><th data-i18n="missing">缺失</th><th data-i18n="unknown">未知</th><th data-i18n="distributionDrift">分布漂移</th></tr></thead><tbody id="integrity-table"></tbody></table></div>
         </div>
         <div class="tab-panel" id="panel-semantic" role="tabpanel" aria-labelledby="tab-semantic" hidden>
-          <div class="panel-heading"><div><h2 data-i18n="semanticTitle">语义异常评估</h2><p data-i18n="semanticDescription">候选标签与图像内容的一致性，以及离线评估指标。</p></div></div>
-          <div class="table-wrap"><table><thead><tr><th data-i18n="dataset">数据集</th><th data-i18n="decisionDistribution">决策分布</th><th data-i18n="meanRisk">平均风险</th><th data-i18n="precision">精确率</th><th data-i18n="recall">召回率</th><th>F1</th><th>ROC-AUC</th><th data-i18n="cleanFpr">干净集 FPR</th></tr></thead><tbody id="semantic-table"></tbody></table></div>
+          <div class="panel-heading"><div><h2 data-i18n="semanticTitle">语义检测评估</h2><p data-i18n="semanticDescription">标签一致性检测结果与评估指标。</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th data-i18n="dataset">数据集</th><th data-i18n="decisionDistribution">结果分布</th><th data-i18n="meanRisk">平均风险</th><th data-i18n="precision">精确率</th><th data-i18n="recall">召回率</th><th>F1</th><th>ROC-AUC</th><th data-i18n="cleanFpr">正常样本误报率</th></tr></thead><tbody id="semantic-table"></tbody></table></div>
         </div>
         <div class="tab-panel" id="panel-method" role="tabpanel" aria-labelledby="tab-method" hidden>
-          <div class="panel-heading"><div><h2 data-i18n="methodTitle">两条相互独立的检测路径</h2><p data-i18n="methodDescription">一条验证“数据是否被改过”，另一条判断“图像内容是否支持候选标签”。</p></div></div>
+          <div class="panel-heading"><div><h2 data-i18n="methodTitle">检测方法</h2><p data-i18n="methodDescription">完整性检查与标签一致性分析。</p></div></div>
           <div class="method-grid">
-            <article class="method-card"><span class="badge block">Integrity</span><h3 data-i18n="integrityMethodTitle">可信清单完整性检查</h3><p data-i18n-html="integrityMethodCopy"><code>integrity_detector.py</code> 将候选 manifest 与可信基线逐行对比；没有可信基线时，这条路径无法工作。</p><ul data-i18n-html="integrityMethodList"><li>核对样本成员、SHA-256 文件哈希与标签</li><li>检测重复 ID、未知样本、缺失样本和类别漂移</li><li>超过阈值时直接阻断训练清单</li></ul></article>
-            <article class="method-card"><span class="badge review">Semantic</span><h3 data-i18n="semanticMethodTitle">图像内容语义检查</h3><p data-i18n-html="semanticMethodCopy"><code>semantic_detector.py</code> 不读取隐藏真值；它组合 CLIP 图像特征、近邻一致率、交叉验证分类器置信度和类别质心距离。</p><ul data-i18n-html="semanticMethodList"><li>CLIP ViT-B/32 使用现成权重，不在当前数据上训练</li><li>NCA 投影只使用可信干净子集标签，并通过 5 折交叉验证隔离样本</li><li>仅下游分类器在候选标签上实时拟合</li></ul></article>
+            <article class="method-card"><span class="badge block">Integrity</span><h3 data-i18n="integrityMethodTitle">可信清单完整性检查</h3><p data-i18n-html="integrityMethodCopy">将候选清单与可信清单进行逐项对比。</p><ul data-i18n-html="integrityMethodList"><li>核对样本成员、SHA-256 文件哈希与标签</li><li>检测重复 ID、未知样本、缺失样本和类别漂移</li><li>超过阈值时直接阻断训练清单</li></ul></article>
+            <article class="method-card"><span class="badge review">Semantic</span><h3 data-i18n="semanticMethodTitle">图像内容语义检查</h3><p data-i18n-html="semanticMethodCopy">基于 CLIP 特征计算近邻一致率、分类器置信度和类别质心距离。</p><ul data-i18n-html="semanticMethodList"><li>冻结 CLIP ViT-B/32 特征</li><li>候选标签交叉验证</li><li>ResNet18 分类训练</li></ul></article>
           </div>
-          <p class="method-note" data-i18n="methodNote">实验限制：当前测量中，NCA 与早期 LDA 投影均未表现出优于原始 CLIP 特征的检测精度。它们保留用于方法研究，不代表性能提升。</p>
+          <p class="method-note" data-i18n="methodNote">STL-10 使用原有检测阈值。风险分数表示标签不一致程度。</p>
         </div>
+      </section>
+      <section class="panel" style="margin-top:20px;padding:20px">
+        <h2 id="training-title">防御训练结果</h2><p id="training-note" class="decision-copy"></p>
+        <div style="overflow-x:auto"><table><thead id="training-head"></thead><tbody id="training-body"></tbody></table></div>
       </section>
     </main>
   </div>
@@ -254,58 +263,58 @@
   <script>
     const translations = {
       zh:{
-        appTitle:'训练数据风险控制台',candidateDatasets:'候选数据集',scannedSamples:'扫描样本',integrityBlocks:'完整性阻断',semanticReview:'语义待复核',
-        sampleInspector:'样本检查器',selectDataset:'选择数据集',sampleIntegrity:'样本级完整性',trustedLabel:'可信标签',candidateLabel:'候选训练标签',
-        semanticCheck:'内容语义检测',neighborAgreement:'近邻标签一致率',classifierConfidence:'分类器置信度',centroidDistance:'质心距离 Z 值',
-        fileHash:'文件哈希',neighborEvidence:'查看最近邻证据',overviewTab:'数据集总览',integrityTab:'完整性明细',semanticTab:'语义评估',methodTab:'检测方法',
-        overviewTitle:'四组候选清单',overviewDescription:'完整性结果与语义异常分布合并展示，点击任意一组继续检查。',
-        integrityTitle:'完整性清单对比',integrityDescription:'逐项比较可信基线与候选 manifest 的成员、标签、哈希和类别分布。',
-        semanticTitle:'语义异常评估',semanticDescription:'候选标签与图像内容的一致性，以及离线评估指标。',
-        methodTitle:'两条相互独立的检测路径',methodDescription:'一条验证“数据是否被改过”，另一条判断“图像内容是否支持候选标签”。',
-        dataset:'数据集',decision:'决策',labelChanges:'标签变化',hashChanges:'哈希变化',missing:'缺失',unknown:'未知',distributionDrift:'分布漂移',
-        decisionDistribution:'决策分布',meanRisk:'平均风险',precision:'精确率',recall:'召回率',cleanFpr:'干净集 FPR',
+        appTitle:"图像数据安全",candidateDatasets:"实验组",scannedSamples:"清单记录数",integrityBlocks:'完整性阻断',semanticReview:'语义待复核',
+        sampleInspector:"样本查看",selectDataset:'选择数据集',sampleIntegrity:'样本级完整性',trustedLabel:'可信标签',candidateLabel:"候选标签",
+        semanticCheck:"语义检测",neighborAgreement:'近邻标签一致率',classifierConfidence:'分类器置信度',centroidDistance:'质心距离 Z 值',
+        fileHash:'文件哈希',neighborEvidence:'查看最近邻证据',overviewTab:"数据概览",integrityTab:'完整性明细',semanticTab:'语义评估',methodTab:"方法说明",
+        overviewTitle:"实验组概览",overviewDescription:"各组完整性检查与语义检测结果。",
+        integrityTitle:"完整性检查",integrityDescription:"对比样本、标签、文件哈希和类别分布。",
+        semanticTitle:"语义检测评估",semanticDescription:"标签一致性检测结果与评估指标。",
+        methodTitle:"检测方法",methodDescription:"完整性检查与标签一致性分析。",
+        dataset:'数据集',decision:"结果",labelChanges:'标签变化',hashChanges:'哈希变化',missing:'缺失',unknown:'未知',distributionDrift:'分布漂移',
+        decisionDistribution:"结果分布",meanRisk:'平均风险',precision:'精确率',recall:'召回率',cleanFpr:"正常样本误报率",
         integrityMethodTitle:'可信清单完整性检查',semanticMethodTitle:'图像内容语义检查',
-        integrityMethodCopy:'<code>integrity_detector.py</code> 将候选 manifest 与可信基线逐行对比；没有可信基线时，这条路径无法工作。',
+        integrityMethodCopy:"将候选清单与可信清单进行逐项对比。",
         integrityMethodList:'<li>核对样本成员、SHA-256 文件哈希与标签</li><li>检测重复 ID、未知样本、缺失样本和类别漂移</li><li>超过阈值时直接阻断训练清单</li>',
-        semanticMethodCopy:'<code>semantic_detector.py</code> 不读取隐藏真值；它组合 CLIP 图像特征、近邻一致率、交叉验证分类器置信度和类别质心距离。',
-        semanticMethodList:'<li>CLIP ViT-B/32 使用现成权重，不在当前数据上训练</li><li>NCA 投影只使用可信干净子集标签，并通过 5 折交叉验证隔离样本</li><li>仅下游分类器在候选标签上实时拟合</li>',
-        methodNote:'实验限制：当前测量中，NCA 与早期 LDA 投影均未表现出优于原始 CLIP 特征的检测精度。它们保留用于方法研究，不代表性能提升。',
-        online:'本地服务在线',offline:'本地服务离线',connecting:'正在连接',loading:'载入中',awaitingCheck:'等待检测',sampleButton:'换一个样本',
-        sampling:'正在抽样…',loadingImage:'正在抽取样本并读取图像…',waitingSample:'等待样本',loadingSample:'正在载入',loadFailed:'载入失败',
+        semanticMethodCopy:"基于 CLIP 特征计算近邻一致率、分类器置信度和类别质心距离。",
+        semanticMethodList:"<li>冻结 CLIP ViT-B/32 特征</li><li>候选标签交叉验证</li><li>ResNet18 分类训练</li>",
+        methodNote:"STL-10 使用原有检测阈值。风险分数表示标签不一致程度。",
+        online:"已连接",offline:"未连接",connecting:"连接中",loading:"加载中",awaitingCheck:'等待检测',sampleButton:"加载样本",
+        sampling:"加载中…",loadingImage:"图像加载中…",waitingSample:'等待样本',loadingSample:'正在载入',loadFailed:'载入失败',
         records:'条记录',samples:'个样本',semanticPending:'个语义待复核',semanticLoading:'语义结果加载中',labelsChanged:'个标签变化',passed:'个通过',meanSemanticRisk:'平均语义风险',
-        inspectSample:'检查样本 →',hashMatch:'匹配',hashMismatch:'不匹配',noSemantic:'无语义结果',
+        inspectSample:"查看样本",hashMatch:'匹配',hashMismatch:'不匹配',noSemantic:'无语义结果',
         intactExplanation:'该样本的候选标签与文件哈希均匹配可信基线。',
-        labelPoisonExplanation:'文件内容未变，但候选训练标签与可信标签不一致：这是标签投毒样本。',
-        hashTamperExplanation:'文件哈希与可信基线不一致，图像内容可能已被篡改。',
-        unavailable:'本地服务不可用，暂时无法读取样本。',imageFailed:'图像请求失败。本地后端可能已经停止，请重新启动 start.cmd。',
-        directFile:'请通过本地服务打开这个界面，而不是直接打开 HTML 文件。'
+        labelPoisonExplanation:"标签与可信清单不一致，文件哈希一致。",
+        hashTamperExplanation:"文件哈希与可信清单不一致。",
+        unavailable:"样本加载失败",imageFailed:"图像加载失败，请重试。",
+        directFile:"请通过 start.cmd 启动本地服务。"
       },
       en:{
-        appTitle:'Training Data Risk Console',candidateDatasets:'Candidate datasets',scannedSamples:'Samples scanned',integrityBlocks:'Integrity blocks',semanticReview:'Semantic review queue',
-        sampleInspector:'Sample Inspector',selectDataset:'Select dataset',sampleIntegrity:'Sample integrity',trustedLabel:'Trusted label',candidateLabel:'Candidate training label',
-        semanticCheck:'Content semantic check',neighborAgreement:'Neighbor label agreement',classifierConfidence:'Classifier confidence',centroidDistance:'Centroid distance Z',
-        fileHash:'File hash',neighborEvidence:'View nearest-neighbor evidence',overviewTab:'Dataset overview',integrityTab:'Integrity details',semanticTab:'Semantic evaluation',methodTab:'Detection methods',
-        overviewTitle:'Four candidate manifests',overviewDescription:'Integrity outcomes and semantic anomaly distributions in one view. Select a dataset to inspect it.',
-        integrityTitle:'Integrity manifest comparison',integrityDescription:'Compare membership, labels, hashes, and class distribution against the trusted baseline.',
-        semanticTitle:'Semantic anomaly evaluation',semanticDescription:'Candidate-label consistency with image content, plus offline evaluation metrics.',
-        methodTitle:'Two independent detection paths',methodDescription:'One verifies whether data changed; the other asks whether image content supports its candidate label.',
-        dataset:'Dataset',decision:'Decision',labelChanges:'Label changes',hashChanges:'Hash changes',missing:'Missing',unknown:'Unknown',distributionDrift:'Distribution drift',
-        decisionDistribution:'Decision distribution',meanRisk:'Mean risk',precision:'Precision',recall:'Recall',cleanFpr:'Clean FPR',
+        appTitle:"Image data security",candidateDatasets:"Experiment groups",scannedSamples:"Manifest records",integrityBlocks:'Integrity blocks',semanticReview:'Semantic review queue',
+        sampleInspector:"Sample viewer",selectDataset:'Select dataset',sampleIntegrity:'Sample integrity',trustedLabel:'Trusted label',candidateLabel:"Candidate label",
+        semanticCheck:"Semantic detection",neighborAgreement:'Neighbor label agreement',classifierConfidence:'Classifier confidence',centroidDistance:'Centroid distance Z',
+        fileHash:'File hash',neighborEvidence:'View nearest-neighbor evidence',overviewTab:"Data overview",integrityTab:'Integrity details',semanticTab:'Semantic evaluation',methodTab:"Methods",
+        overviewTitle:"Experiment groups",overviewDescription:"Integrity and semantic detection results by group.",
+        integrityTitle:"Integrity checks",integrityDescription:"Compare samples, labels, file hashes, and class distributions.",
+        semanticTitle:"Semantic detection evaluation",semanticDescription:"Label consistency results and evaluation metrics.",
+        methodTitle:"Detection methods",methodDescription:"Integrity checks and label consistency analysis.",
+        dataset:'Dataset',decision:"Result",labelChanges:'Label changes',hashChanges:'Hash changes',missing:'Missing',unknown:'Unknown',distributionDrift:'Distribution drift',
+        decisionDistribution:"Result distribution",meanRisk:'Mean risk',precision:'Precision',recall:'Recall',cleanFpr:"Clean false-positive rate",
         integrityMethodTitle:'Trusted-manifest integrity check',semanticMethodTitle:'Image-content semantic check',
-        integrityMethodCopy:'<code>integrity_detector.py</code> compares the candidate manifest row by row with a trusted baseline. This path cannot operate without that baseline.',
+        integrityMethodCopy:"Compare each candidate manifest with the trusted manifest.",
         integrityMethodList:'<li>Verify membership, SHA-256 file hashes, and labels</li><li>Detect duplicate IDs, unknown samples, missing samples, and class drift</li><li>Block a training manifest when thresholds are exceeded</li>',
-        semanticMethodCopy:'<code>semantic_detector.py</code> never reads hidden ground truth. It combines CLIP image features, neighbor agreement, cross-validated classifier confidence, and class-centroid distance.',
-        semanticMethodList:'<li>CLIP ViT-B/32 uses off-the-shelf weights and is not trained on this dataset</li><li>NCA is fit only on trusted clean labels with five-fold cross-validation</li><li>Only the downstream classifier is fit live on candidate labels</li>',
-        methodNote:'Experimental limitation: neither NCA nor the earlier LDA projection improved detection accuracy over raw CLIP features in current measurements. They remain for methodology research, not as demonstrated performance gains.',
-        online:'Local service online',offline:'Local service offline',connecting:'Connecting',loading:'Loading',awaitingCheck:'Awaiting check',sampleButton:'New sample',
-        sampling:'Sampling…',loadingImage:'Sampling and loading image…',waitingSample:'Waiting for sample',loadingSample:'Loading',loadFailed:'Load failed',
+        semanticMethodCopy:"Use CLIP features to calculate neighbor agreement, classifier confidence, and class-centroid distance.",
+        semanticMethodList:"<li>Frozen CLIP ViT-B/32 features</li><li>Cross-validation on candidate labels</li><li>ResNet18 classification training</li>",
+        methodNote:"STL-10 uses the existing detection thresholds. Risk scores measure label inconsistency.",
+        online:"Connected",offline:"Disconnected",connecting:"Connecting",loading:"Loading",awaitingCheck:'Awaiting check',sampleButton:"Load sample",
+        sampling:"Loading…",loadingImage:"Loading image…",waitingSample:'Waiting for sample',loadingSample:'Loading',loadFailed:'Load failed',
         records:'records',samples:'samples',semanticPending:'semantic items to review',semanticLoading:'Semantic results loading',labelsChanged:'label changes',passed:'allowed',meanSemanticRisk:'Mean semantic risk',
-        inspectSample:'Inspect sample →',hashMatch:'Match',hashMismatch:'Mismatch',noSemantic:'No semantic result',
+        inspectSample:"View sample",hashMatch:'Match',hashMismatch:'Mismatch',noSemantic:'No semantic result',
         intactExplanation:'The candidate label and file hash both match the trusted baseline.',
-        labelPoisonExplanation:'The file is unchanged, but the candidate training label differs from the trusted label: this is label poisoning.',
-        hashTamperExplanation:'The file hash differs from the trusted baseline; the image content may have been tampered with.',
-        unavailable:'The local service is unavailable, so this sample cannot be loaded.',imageFailed:'The image request failed. Restart start.cmd if the local backend stopped.',
-        directFile:'Open this interface through the local service, not directly as an HTML file.'
+        labelPoisonExplanation:"Label mismatch; file hash matches the trusted manifest.",
+        hashTamperExplanation:"File hash differs from the trusted manifest.",
+        unavailable:"Unable to load sample",imageFailed:"Unable to load image. Try again.",
+        directFile:"Start the local service with start.cmd."
       }
     };
     const datasetInfo = {
@@ -316,7 +325,7 @@
     const datasetOrder = Object.keys(datasetInfo);
     let savedLanguage='zh';
     try{savedLanguage=localStorage.getItem('s6-language')||'zh';}catch(error){}
-    const state = {selectedDataset:'clean_subset',assessments:new Map(),semanticSummaries:new Map(),sampleRequest:0,currentSample:null,summaryLoading:false,language:savedLanguage==='en'?'en':'zh'};
+    const state = {corpus:'fruitfly',training:null,selectedDataset:'clean_subset',assessments:new Map(),semanticSummaries:new Map(),sampleRequest:0,currentSample:null,summaryLoading:false,language:savedLanguage==='en'?'en':'zh'};
     const byId = id => document.getElementById(id);
     const el = {
       connection:byId('connection-status'), connectionText:byId('connection-text'), datasetCount:byId('dataset-count'),
@@ -344,7 +353,37 @@
       const refresh=byId('refresh-all');
       const refreshLabel=state.language==='zh'?'刷新全部检测数据':'Refresh all detection data';
       refresh.setAttribute('aria-label',refreshLabel);refresh.title=refreshLabel;
-      el.pestImage.alt=state.language==='zh'?'随机抽取的 IP102 害虫图像':'Randomly sampled IP102 pest image';
+      applyCorpusCopy();
+    }
+    function applyCorpusCopy(){
+      const zh=state.language==='zh',fly=state.corpus==='fruitfly';
+      byId('corpus-label').textContent=zh?'实验数据源':'Experiment source';
+      byId('corpus-select').options[0].textContent=zh?'实蝇数据集':'Fruit-fly dataset';
+      byId('corpus-select').options[1].textContent=zh?'STL-10':'STL-10';
+      byId('image-corpus').textContent=fly?'Fruit flies / classification':'STL-10 / classification';
+      el.pestImage.alt=fly?(zh?'实蝇图像':'Fruit-fly image'):'STL-10 image';
+      byId('corpus-note').textContent=fly
+        ?(zh?'5 类 · 9,244 张图像 · 训练 6,531 / 验证 1,392 / 测试 1,321 · 按个体划分':'5 classes · 9,244 images · Train 6,531 / validation 1,392 / test 1,321 · Split by specimen')
+        :(zh?'STL-10 · 10 类 · 4 组实验清单':'STL-10 · 10 classes · 4 experiment manifests');
+      for(const id of ['neighbor-agreement','centroid-distance'])byId(id).parentElement.hidden=fly;
+      if(fly){
+        document.querySelector('[data-i18n-html="semanticMethodCopy"]').textContent=zh?'冻结 CLIP 特征，按实蝇个体进行五折交叉验证，训练逻辑回归分类器。':'Frozen CLIP features with five-fold specimen-grouped cross-validation and logistic regression.';
+        document.querySelector('[data-i18n-html="semanticMethodList"]').textContent=zh?'C = 10 · 风险 = 1 − 候选标签置信度 · 复核阈值 0.90':'C = 10 · Risk = 1 − candidate-label confidence · Review threshold 0.90';
+        document.querySelector('[data-i18n="methodNote"]').textContent=zh?'实蝇实验：单种子 2026，等量随机删除对照。样本查看优先展示改标记录。':'Fruit-fly experiment: seed 2026 with equal-count random removal. The sample viewer prioritizes altered labels.';
+      }
+      renderTraining();
+    }
+    function renderTraining(){
+      const zh=state.language==='zh',body=byId('training-body');body.replaceChildren();
+      byId('training-title').textContent=zh?'防御训练结果':'Defense training results';
+      const headers=zh?['候选清单','训练策略','测试准确率','Macro F1','0 → 1 错误率']:['Manifest','Strategy','Test accuracy','Macro F1','0 → 1 error'];
+      const tr=document.createElement('tr');for(const title of headers){const th=document.createElement('th');th.textContent=title;tr.append(th);}byId('training-head').replaceChildren(tr);
+      byId('training-note').textContent=state.training?(state.corpus==='fruitfly'
+        ?(zh?'12 组实验 · 单种子 2026 · 定向错误率：测试类别 0 预测为类别 1 的比例':'12 conditions · Single seed 2026 · Targeted error: test class 0 predicted as class 1')
+        :(zh?'12 组条件 × 3 种子（2026、2027、2028），显示均值 ± 样本标准差。':'12 conditions × 3 seeds (2026, 2027, 2028); mean ± sample SD.')):(zh?'正在载入训练结果…':'Loading training results…');
+      if(!state.training)return;
+      const metric=v=>typeof v==='object'&&v!==null?fmtPercent(v.mean,2)+' ± '+fmtPercent(v.sample_sd,2):fmtPercent(v,2);
+      for(const r of state.training.rows){const row=document.createElement('tr');for(const v of [datasetName(r.dataset),({untreated:zh?'未防御':'Untreated',random:zh?'等量随机删除':'Equal-count random',semantic:zh?'语义筛选':'Semantic filter'})[r.strategy]||r.strategy,metric(r.test_accuracy??r.accuracy),metric(r.macro_f1),metric(r.targeted_error??r.targeted_0_to_1_rate)]){const td=document.createElement('td');td.textContent=v;row.append(td);}body.append(row);}
     }
     function updateSummaryMetrics(){
       const data=[...state.assessments.values()],semanticData=[...state.semanticSummaries.values()];
@@ -379,6 +418,7 @@
     }
     function showError(message){el.errorBanner.textContent=message;el.errorBanner.hidden=!message;}
     async function requestJson(url){
+      url+=(url.includes('?')?'&':'?')+'corpus='+encodeURIComponent(state.corpus);
       let response;
       try{response=await fetch(url,{cache:'no-store'});}catch(error){setConnection('offline');throw new Error(state.language==='zh'?'无法连接 S6 本地服务。请启动 data_poisoning/start.cmd，然后刷新 http://127.0.0.1:8766/。':'Cannot reach the S6 local service. Start data_poisoning/start.cmd, then refresh http://127.0.0.1:8766/.');}
       let payload;
@@ -398,6 +438,8 @@
     const semanticFlagged=summary=>{const counts=summary?.decision_counts||{};return(counts.REVIEW||0)+(counts.QUARANTINE||0);};
     function localizeReason(reason){
       if(state.language==='en')return reason;
+      if(reason.startsWith('Specimen-grouped'))return '按实蝇个体分组的折外分类器：风险 = 1 − 候选标签置信度。';
+      if(reason.startsWith('REVIEW threshold:'))return '复核阈值 0.90；最终风险评分不使用近邻和质心信号。';
       let m=reason.match(/(\d+) of (\d+) nearest neighbours have a different candidate label/i);
       if(m)return`${m[2]} 个最近邻中有 ${m[1]} 个使用不同的候选标签。`;
       m=reason.match(/cross-validated classifier assigns only ([\d.]+)% confidence to the candidate label/i);
@@ -477,9 +519,10 @@
     function selectDataset(dataset,shouldLoad=true){if(!datasetInfo[dataset])return;state.selectedDataset=dataset;updateDatasetHeader(dataset);if(shouldLoad)loadSample();}
     async function loadSummary(){
       if(state.summaryLoading)return;
-      state.summaryLoading=true;showError('');setConnection('loading');byId('refresh-all').disabled=true;el.sampleButton.disabled=true;el.sampleButton.querySelector('span').textContent=t('loading');
+      state.summaryLoading=true;byId('corpus-select').disabled=true;state.training=null;renderTraining();showError('');setConnection('loading');byId('refresh-all').disabled=true;el.sampleButton.disabled=true;el.sampleButton.querySelector('span').textContent=t('loading');
       try{
         const data=await requestJson('/api/summary');
+        try{state.training=await requestJson('/api/training');renderTraining();}catch(error){byId('training-note').textContent=error.message;}
         state.assessments=new Map(data.map(item=>[item.dataset,item]));state.semanticSummaries=new Map();
         updateSummaryMetrics();renderDatasetSwitcher(data);renderIntegrityTable(data);updateDatasetHeader(state.selectedDataset);
         const waiting=document.createElement('p');waiting.className='decision-copy';waiting.textContent=t('semanticLoading')+'…';el.overviewList.replaceChildren(waiting);el.semanticTable.replaceChildren();
@@ -492,9 +535,17 @@
           showError(state.language==='zh'?`完整性结果已载入，但语义摘要暂时不可用：${error.message}`:`Integrity results loaded, but semantic summaries are unavailable: ${error.message}`);
         }
       }finally{
-        state.summaryLoading=false;byId('refresh-all').disabled=false;
+        state.summaryLoading=false;byId('corpus-select').disabled=false;byId('refresh-all').disabled=false;
       }
     }
+    byId('corpus-select').addEventListener('change',async event=>{
+      if(state.summaryLoading)return;
+      state.corpus=event.target.value;state.sampleRequest++;state.currentSample=null;state.assessments.clear();state.semanticSummaries.clear();state.training=null;
+      for(const target of [el.overviewList,el.integrityTable,el.semanticTable,el.datasetSwitcher])target.replaceChildren();
+      for(const target of [el.datasetCount,el.sampleCount,el.blockedCount,el.flaggedCount,el.originalLabel,el.assignedLabel])target.textContent='—';
+      setSampleLoading();applyLanguage(state.language,false);
+      try{await loadSummary();}catch(error){showError(error.message);finishSampleLoading();}
+    });
     byId('refresh-all').addEventListener('click',()=>loadSummary().catch(error=>showError(error.message)));
     el.sampleButton.addEventListener('click',loadSample);
     el.datasetSelect.addEventListener('change',event=>selectDataset(event.target.value));
@@ -505,6 +556,14 @@
     applyLanguage(state.language,false);
     if(window.location.protocol==='file:'){setConnection('offline');el.imageStatus.innerHTML='<span>'+t('directFile')+'</span>';showError(state.language==='zh'?'请启动 data_poisoning/start.cmd，并访问 http://127.0.0.1:8766/。':'Start data_poisoning/start.cmd and open http://127.0.0.1:8766/.');finishSampleLoading();}
     else loadSummary().catch(error=>{el.imageStatus.innerHTML='<span>'+t('unavailable')+'</span>';finishSampleLoading();showError(error.message);});
+
+    // Only the local portal parent may synchronize the embedded console language.
+    window.addEventListener('message',event=>{
+      if(window.parent===window || event.source!==window.parent || event.origin!=='http://127.0.0.1:8764')return;
+      if(event.data?.type!=='s6-portal-language' || !['zh','en'].includes(event.data.language))return;
+      applyLanguage(event.data.language);
+      document.querySelector('.language-toggle').style.display='none';
+    });
   </script>
 </body>
 </html>

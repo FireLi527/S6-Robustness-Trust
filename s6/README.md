@@ -1,3 +1,5 @@
+> Active image baseline: **STL-10** (2026-09-11). IP102 results are historical. See [current protocol](data_poisoning/README_ZH.md).
+
 # S6 Security Bases
 
 The S6 prototype is organised as two independent, reusable bases:

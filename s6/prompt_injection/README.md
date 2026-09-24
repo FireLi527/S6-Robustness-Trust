@@ -317,3 +317,17 @@ For the Chinese guide, see [README_ZH.md](README_ZH.md).
 
 The shared development plan is available in
 [../BASELINE_ROADMAP.md](../BASELINE_ROADMAP.md).
+
+
+## 2026-09-21：监督分类扩展
+
+Email、Table、Code 已完成按原始正文分组的监督训练与独立测试，新增实验对照开关。该轻量分类器并非普遍优于已有规则，因此保留为独立研究对照，不替换工具门控。数据使用范围、排重、运行命令和结果限制见 [监督实验协议](SUPERVISED_PROTOCOL_ZH.md)。
+
+
+## Automatic intent comparison (exploratory)
+
+The console now has a separate comparison panel below the live check. It uses frozen MiniLM cosine similarity against six fixed task descriptions to infer a task type from content alone. The 18 existing authored tool scenarios supply proxy reference categories only after prediction. The panel shows agreement, macro class recall, a majority-class baseline, per-scenario results, and P2/Hybrid detection metrics under preset versus inferred tasks. These are not new BIPIA benchmark results or independently annotated user-intent accuracy.
+
+GET `/api/intent-comparison` loads a signature-checked report; POST with `{}` runs the experiment if a current report is unavailable. Results live in `results/bipia/intent_comparison/`. The experiment never changes the live authorization policy.
+
+The live form separately supports trusted task resolution: `/api/example` returns the original BIPIA question and an opaque content-bound context; `/api/tool-scenario` returns an explicitly labeled demo task preset. POST `/api/intent` previews the resolved source/category. `/api/detect` accepts `task_context` instead of a manual question. Manual `question` overrides the context. Editing sample content invalidates automatic context, and missing tasks do not become an automatic P2 ALLOW. These task categories are descriptive labels; P2 receives the complete question.

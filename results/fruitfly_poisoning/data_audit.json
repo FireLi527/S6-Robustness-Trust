@@ -1,0 +1,82 @@
+{
+  "dataset": "Classmate fruit-fly crops",
+  "seed": 2026,
+  "classes": [
+    "1001Bactrocera_correcta",
+    "1002Bactrocera_zonata",
+    "1003Bactrocera_dorsalis",
+    "1006Bactrocera_tryoni",
+    "1018Ceratitis_capitata"
+  ],
+  "archives": {
+    "1001Bactrocera_correcta_Crop.zip": "bd11c9b963f925ce9801179cde08940fa3e9d837442cbc190392e7ed29f8e287",
+    "1002Bactrocera_zonata_Crop.zip": "b50dab306dcb85811c7c975fca7e166a78981e9cc28fc35159c77c2de40a395a",
+    "1003Bactrocera_dorsalis_Crop.zip": "0a735dc45892b5047c121864e11fa7f38084aacaa062c4f2f48e5ba7f22fffe0",
+    "1006Bactrocera_tryoni_Crop.zip": "3bdea400c76ec2de7f67833059dabd230c4286d50458295ca5d933855d0ba8df",
+    "1018Ceratitis_capitata_Crop.zip": "a8f2822a8d2a6682c48052856acde3190a687816d65119299d4ad5d1de25838f"
+  },
+  "total_archive_images": 9244,
+  "status_counts": {
+    "valid": 9244
+  },
+  "split_counts": {
+    "train": {
+      "0": 938,
+      "1": 1469,
+      "2": 1714,
+      "3": 693,
+      "4": 1717
+    },
+    "val": {
+      "0": 203,
+      "1": 337,
+      "2": 336,
+      "3": 157,
+      "4": 359
+    },
+    "test": {
+      "0": 172,
+      "1": 306,
+      "2": 330,
+      "3": 146,
+      "4": 367
+    }
+  },
+  "group_counts": {
+    "train": 276,
+    "val": 60,
+    "test": 60
+  },
+  "split_policy": "70/15/15 by per-class inferred first-9-digit filename groups; duplicate-pixel groups merged before split",
+  "grouping_limitation": "Filename prefix is inferred, NOT confirmed specimen identity. No official or classmate split supplied; near duplicates may remain.",
+  "label_source": "Archive names supplied by user, not independently verified species annotations",
+  "manifests": {
+    "clean_subset": {
+      "sha256": "4d6f9cf7250b75a59e3203aaa51a77d865a8846cd6894129892e7b96349f037b",
+      "samples": 6531,
+      "poisoned": 0
+    },
+    "label_flip_05": {
+      "sha256": "b95873a0c78a0b8db7f9b5ec8d61ee6a3d691f026947d95444f59918c815dc53",
+      "samples": 6531,
+      "poisoned": 327
+    },
+    "label_flip_10": {
+      "sha256": "062fdd302567a1e83f3c4b5fb7fe5822fbbb6ba04dbb90904894c61c1b824122",
+      "samples": 6531,
+      "poisoned": 653
+    },
+    "targeted_0_to_1": {
+      "sha256": "1f18dd10d417ba29a2f929aac2f6d7ad5c47eef189dcd7125d5802fac89a2373",
+      "samples": 6531,
+      "poisoned": 188
+    }
+  },
+  "split_hashes": {
+    "train": "495aef5043a4a8ab6390200688f70f6935891ca25e6258fea7846ba491cddd2a",
+    "val": "308e1c6fba953fea3a0771a8ce192c1fa70b2f7d470d631adbc817d997e9edf2",
+    "test": "b6c052b3e4f2a4979ded348251537cea95d11148960e1046c3176fee9410d124"
+  },
+  "audit_sha256": "66281136181416f098c54cd1deae63585b2e2a6a5eb379378051e961f768f66d",
+  "preparation_sha256": "65e2e096fc21517645645eab1447697ec5f197a459c86b5a6ec0cb3acc41c33d"
+}

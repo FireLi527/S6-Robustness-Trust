@@ -38,3 +38,6 @@ results/bipia/tool_policy_audit.jsonl
 # OS files
 .DS_Store
 Thumbs.db
+
+# Generated STL-10 PNGs
+data/stl10_poisoning/images/

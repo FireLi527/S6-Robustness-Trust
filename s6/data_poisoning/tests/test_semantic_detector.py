@@ -1,6 +1,10 @@
 from __future__ import annotations
 
 import unittest
+import tempfile
+from pathlib import Path
+from dataclasses import replace
+from unittest.mock import patch
 from dataclasses import fields
 
 import numpy as np
@@ -11,7 +15,9 @@ from semantic_detector import (
     SemanticInputRecord,
     assess_semantic,
     detector_metadata,
-    fit_trusted_projection,
+    load_embedding_cache,
+    save_embedding_cache,
+    extract_embeddings,
 )
 
 
@@ -77,37 +83,47 @@ class AssessSemanticTests(unittest.TestCase):
         self.assertEqual(sum(assessment.decision_counts.values()), len(records))
 
 
-class FitTrustedProjectionTests(unittest.TestCase):
-    def test_covers_every_trusted_sample_with_expected_dimensionality(self) -> None:
-        rng = np.random.default_rng(4)
-        records, embeddings, _ = _clustered_records(rng, ("0", "1", "2"), per_class=20)
-        projected = fit_trusted_projection(records, embeddings)
-        self.assertEqual(set(projected.keys()), {r.sha256 for r in records})
-        for vector in projected.values():
-            self.assertEqual(vector.shape, (32,))  # min(PROJECTION_COMPONENTS, embedding_dim)
+class SemanticRegressionTests(unittest.TestCase):
+    def test_rejects_duplicate_images_instead_of_leaking_across_folds(self):
+        records, embeddings, _ = _clustered_records(np.random.default_rng(8), ("0", "1"), 10)
+        records[1] = replace(records[1], sha256=records[0].sha256)
+        with self.assertRaisesRegex(ValueError, "Duplicate"):
+            assess_semantic(records, embeddings)
 
-    def test_deterministic_given_fixed_seed(self) -> None:
-        rng = np.random.default_rng(5)
-        records, embeddings, _ = _clustered_records(rng, ("0", "1", "2"), per_class=20)
-        first = fit_trusted_projection(records, embeddings)
-        second = fit_trusted_projection(records, embeddings)
-        for sha in first:
-            np.testing.assert_array_equal(first[sha], second[sha])
+    def test_single_class_and_singleton_do_not_crash_classifier(self):
+        records, embeddings, _ = _clustered_records(np.random.default_rng(9), ("0",), 10)
+        result = assess_semantic(records, embeddings)
+        self.assertTrue(all(r.classifier_confidence is None for r in result.results))
+        with self.assertRaisesRegex(ValueError, "at least two"):
+            assess_semantic(records[:1], embeddings)
 
-    def test_mislabelled_sample_still_disagrees_with_neighbors_after_projection(self) -> None:
-        rng = np.random.default_rng(6)
-        records, embeddings, centers = _clustered_records(rng, ("0", "1", "2"), per_class=20)
-        poisoned_sample = records[0]
-        embeddings[poisoned_sample.sha256] = (
-            centers["1"] + rng.normal(size=32) * 0.3
-        ).astype("float32")
+    def test_cache_rejects_changed_embedding_model(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "embeddings.npz"
+            save_embedding_cache(path, {"image": np.ones(512)})
+            self.assertIn("image", load_embedding_cache(path))
+            with patch("semantic_detector.EMBEDDING_MODEL", "another-model"):
+                self.assertEqual(load_embedding_cache(path), {})
 
-        projected = fit_trusted_projection(records, embeddings)
-        assessment = assess_semantic(records, projected)
-        target = next(r for r in assessment.results if r.sample_id == poisoned_sample.sample_id)
+    def test_cached_embedding_does_not_hide_changed_image(self):
+        import hashlib
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            path = root / "sample.png"
+            path.write_bytes(b"original")
+            sha = hashlib.sha256(path.read_bytes()).hexdigest()
+            record = SemanticInputRecord("sample", "sample.png", sha, "0")
+            cache = root / "cache.npz"
+            save_embedding_cache(cache, {sha: np.ones(512)})
+            path.write_bytes(b"modified")
+            with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                extract_embeddings([record], root, cache, root)
 
-        self.assertLess(target.neighbor_label_agreement, 0.5)
-        self.assertGreaterEqual(target.risk_score, REVIEW_THRESHOLD)
+    def test_nonfinite_embedding_rejected(self):
+        records, embeddings, _ = _clustered_records(np.random.default_rng(10), ("0", "1"), 10)
+        embeddings[records[0].sha256][0] = np.nan
+        with self.assertRaisesRegex(ValueError, "finite"):
+            assess_semantic(records, embeddings)
 
 
 class DetectorMetadataTests(unittest.TestCase):

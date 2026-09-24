@@ -1,0 +1,87 @@
+{
+  "dataset": "Fruit-fly crops",
+  "protocol_sha256": "e13511848715991cdd28839ff79405938eb1134e51d6c7a9e7e52f99da893519",
+  "detector": {
+    "detector": "s6-semantic-label-anomaly",
+    "version": "0.5.0",
+    "config_hash": "cb0cee0005815713d69a404d27eacbc3005d19e884a4a0c28885c5830eafe869"
+  },
+  "manifest_hashes": {
+    "clean_subset": "4d6f9cf7250b75a59e3203aaa51a77d865a8846cd6894129892e7b96349f037b",
+    "label_flip_05": "b95873a0c78a0b8db7f9b5ec8d61ee6a3d691f026947d95444f59918c815dc53",
+    "label_flip_10": "062fdd302567a1e83f3c4b5fb7fe5822fbbb6ba04dbb90904894c61c1b824122",
+    "targeted_0_to_1": "1f18dd10d417ba29a2f929aac2f6d7ad5c47eef189dcd7125d5802fac89a2373"
+  },
+  "datasets": [
+    {
+      "dataset": "clean_subset",
+      "samples": 6531,
+      "poisoned_samples": 0,
+      "decision_counts": {
+        "REVIEW": 243,
+        "ALLOW": 6245,
+        "QUARANTINE": 43
+      },
+      "mean_risk_score": 0.2733,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "clean_false_positive_rate": 0.0438,
+      "roc_auc": null
+    },
+    {
+      "dataset": "label_flip_05",
+      "samples": 6531,
+      "poisoned_samples": 327,
+      "decision_counts": {
+        "REVIEW": 311,
+        "ALLOW": 5953,
+        "QUARANTINE": 267
+      },
+      "mean_risk_score": 0.3211,
+      "precision": 0.5277,
+      "recall": 0.9327,
+      "f1": 0.674,
+      "clean_false_positive_rate": 0.044,
+      "roc_auc": 0.9872
+    },
+    {
+      "dataset": "label_flip_10",
+      "samples": 6531,
+      "poisoned_samples": 653,
+      "decision_counts": {
+        "REVIEW": 427,
+        "QUARANTINE": 468,
+        "ALLOW": 5636
+      },
+      "mean_risk_score": 0.368,
+      "precision": 0.6827,
+      "recall": 0.9357,
+      "f1": 0.7894,
+      "clean_false_positive_rate": 0.0483,
+      "roc_auc": 0.9856
+    },
+    {
+      "dataset": "targeted_0_to_1",
+      "samples": 6531,
+      "poisoned_samples": 188,
+      "decision_counts": {
+        "QUARANTINE": 86,
+        "ALLOW": 6069,
+        "REVIEW": 376
+      },
+      "mean_risk_score": 0.2799,
+      "precision": 0.1991,
+      "recall": 0.4894,
+      "f1": 0.2831,
+      "clean_false_positive_rate": 0.0583,
+      "roc_auc": 0.892
+    }
+  ],
+  "limitations": [
+    "Thresholds unchanged from prior experiments; no tuning on fruit-fly results.",
+    "Candidate train images only; held-out classification val/test images not used by detector.",
+    "Detector OOF folds use individual images, not specimen groups; related views may share folds.",
+    "Filename grouping is an unverified identity proxy; exact duplicates excluded but near duplicates may remain."
+  ]
+}

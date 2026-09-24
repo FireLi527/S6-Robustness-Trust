@@ -1,0 +1,81 @@
+{
+  "detector": {
+    "detector": "s6-semantic-label-anomaly",
+    "version": "0.5.0",
+    "config_hash": "cb0cee0005815713d69a404d27eacbc3005d19e884a4a0c28885c5830eafe869"
+  },
+  "manifest_hashes": {
+    "clean_subset": "393e05041fd5ecbf6d23fe2087a22eb7cdad0201bebec7ab106ebe43e23a6122",
+    "label_flip_05": "fd233d1ec4c5923ff28f245db6919addbc7325f90506fe021212df1a40b20f90",
+    "label_flip_10": "7533a758940a2742521bc1ebf93c02cfb58998ce1436dfdd0afdf81444243ab6",
+    "targeted_0_to_1": "806186913d2a5cff39d758b4c92187443a08cc401491f507e01c198dbb82dd90"
+  },
+  "datasets": [
+    {
+      "dataset": "clean_subset",
+      "samples": 4000,
+      "poisoned_samples": 0,
+      "decision_counts": {
+        "ALLOW": 3940,
+        "REVIEW": 32,
+        "QUARANTINE": 28
+      },
+      "mean_risk_score": 0.099,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "clean_false_positive_rate": 0.015,
+      "roc_auc": null
+    },
+    {
+      "dataset": "label_flip_05",
+      "samples": 4000,
+      "poisoned_samples": 200,
+      "decision_counts": {
+        "ALLOW": 3747,
+        "QUARANTINE": 219,
+        "REVIEW": 34
+      },
+      "mean_risk_score": 0.1678,
+      "precision": 0.7905,
+      "recall": 1.0,
+      "f1": 0.883,
+      "clean_false_positive_rate": 0.0139,
+      "roc_auc": 0.9997
+    },
+    {
+      "dataset": "label_flip_10",
+      "samples": 4000,
+      "poisoned_samples": 400,
+      "decision_counts": {
+        "ALLOW": 3554,
+        "QUARANTINE": 415,
+        "REVIEW": 31
+      },
+      "mean_risk_score": 0.2357,
+      "precision": 0.8969,
+      "recall": 1.0,
+      "f1": 0.9456,
+      "clean_false_positive_rate": 0.0128,
+      "roc_auc": 0.9997
+    },
+    {
+      "dataset": "targeted_0_to_1",
+      "samples": 4000,
+      "poisoned_samples": 80,
+      "decision_counts": {
+        "ALLOW": 3863,
+        "QUARANTINE": 77,
+        "REVIEW": 60
+      },
+      "mean_risk_score": 0.123,
+      "precision": 0.5766,
+      "recall": 0.9875,
+      "f1": 0.7281,
+      "clean_false_positive_rate": 0.0148,
+      "roc_auc": 0.9942
+    }
+  ],
+  "flagged_sample_findings": 896,
+  "important_limitation": "Raw frozen CLIP embeddings only; no trusted-label projection. Candidate labels fit the classifier and centroid statistics and can contaminate them. Scores are anomaly scores, not calibrated poisoning probabilities. Thresholds 0.62/0.75 are inherited, not tuned on STL-10 attack results. This custom protocol is not the official STL-10 fold benchmark. Pretrained representations may overlap STL-10/ImageNet source imagery."
+}

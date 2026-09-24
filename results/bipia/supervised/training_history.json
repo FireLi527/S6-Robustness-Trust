@@ -1,0 +1,104 @@
+[
+  {
+    "epoch": 1,
+    "validation_macro_recall": 0.21671287004672957,
+    "threshold": 0.715,
+    "by_task": {
+      "email": {
+        "tp": 1002,
+        "fn": 1938,
+        "fp": 0,
+        "tn": 7,
+        "attack_detection_rate": 0.3408163265306122,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6704081632653061
+      },
+      "table": {
+        "tp": 9527,
+        "fn": 66493,
+        "fp": 0,
+        "tn": 181,
+        "attack_detection_rate": 0.12532228360957642,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.5626611418047882
+      },
+      "code": {
+        "tp": 552,
+        "fn": 2448,
+        "fp": 0,
+        "tn": 10,
+        "attack_detection_rate": 0.184,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.592
+      }
+    }
+  },
+  {
+    "epoch": 2,
+    "validation_macro_recall": 0.2639845779932599,
+    "threshold": 0.76,
+    "by_task": {
+      "email": {
+        "tp": 1084,
+        "fn": 1856,
+        "fp": 0,
+        "tn": 7,
+        "attack_detection_rate": 0.3687074829931973,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6843537414965987
+      },
+      "table": {
+        "tp": 12486,
+        "fn": 63534,
+        "fp": 0,
+        "tn": 181,
+        "attack_detection_rate": 0.16424625098658246,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.5821231254932913
+      },
+      "code": {
+        "tp": 777,
+        "fn": 2223,
+        "fp": 0,
+        "tn": 10,
+        "attack_detection_rate": 0.259,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.6295
+      }
+    }
+  },
+  {
+    "epoch": 3,
+    "validation_macro_recall": 0.28148762856892295,
+    "threshold": 0.79,
+    "by_task": {
+      "email": {
+        "tp": 1124,
+        "fn": 1816,
+        "fp": 0,
+        "tn": 7,
+        "attack_detection_rate": 0.38231292517006804,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.691156462585034
+      },
+      "table": {
+        "tp": 13695,
+        "fn": 62325,
+        "fp": 0,
+        "tn": 181,
+        "attack_detection_rate": 0.18014996053670088,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.5900749802683505
+      },
+      "code": {
+        "tp": 846,
+        "fn": 2154,
+        "fp": 0,
+        "tn": 10,
+        "attack_detection_rate": 0.282,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.641
+      }
+    }
+  }
+]

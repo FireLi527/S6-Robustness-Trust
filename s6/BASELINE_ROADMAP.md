@@ -1,3 +1,11 @@
+> 2026-09-21：提示词注入新增 Email/Table/Code 监督分类基线。按正文分组划分，排除11条与测试重复的训练邮件；791条训练、198条验证、200条测试，全部82,700条测试预测已回放核验。新模型在Code明文优于规则，但Email/Table及编码攻击不足以替换现有检测器。网页以可选实验对照展示，不参与工具授权。详见[监督实验协议](prompt_injection/SUPERVISED_PROTOCOL_ZH.md)。
+
+> 2026-09-19: STL-10 固定策略防御重训练及等量随机删除对照已完成，8个新模型与原4个模型均核验通过。定向错误率从10%降至0.125%，但存在误隔离代价；下一步为多种子重复。详见[防御报告](../results/stl10_poisoning/defense_training/defense_report_ZH.md)。
+
+> 2026-09-18: STL-10 四组 ResNet18 首轮训练已完成（seed=2026，20 epochs）。干净/5%/10%/定向组测试准确率为94.44%/92.49%/89.89%/93.03%；定向飞机→鸟错误率从0.375%升至10%。下一实验阶段是固定策略下的防御后重训练与多种子验证。详见 [训练报告](../results/stl10_poisoning/model_training/training_report_ZH.md)。
+
+> 2026-09-11: 图像 baseline 已切换为 STL-10、原始 CLIP 特征。以下 IP102 指标和 NCA 里程碑属于历史记录，不代表当前配置。旧跨折投影距离比较有方法问题，不能据此断言数据集或特征是唯一瓶颈。新协议见 [STL-10 说明](data_poisoning/README_ZH.md)。
+
 # S6 Baseline Development Roadmap
 
 This roadmap covers the two current S6 prototypes:

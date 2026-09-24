@@ -513,7 +513,7 @@
         <div class="brand-mark">S6</div>
         <div>
           <p class="eyebrow">PROMPT SECURITY LAB</p>
-          <h1 data-i18n="appTitle">提示词注入安全控制台</h1>
+          <h1 data-i18n="appTitle">提示词注入检测</h1>
         </div>
       </div>
       <div class="header-actions">
@@ -523,7 +523,7 @@
         </div>
         <div id="connection-status" class="connection-pill">
           <span class="connection-dot"></span>
-          <span id="connection-text" data-i18n="connecting">正在连接本地服务</span>
+          <span id="connection-text" data-i18n="connecting">连接中</span>
         </div>
         <button id="refresh-status" class="icon-button" type="button" data-i18n-aria="refreshStatus" aria-label="刷新状态">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 6v5h-5"/><path d="M4 18v-5h5"/><path d="M6.1 9a7 7 0 0 1 11.5-2.6L20 11M4 13l2.4 4.6A7 7 0 0 0 17.9 15"/></svg>
@@ -543,18 +543,18 @@
         <div class="heading-copy">
           <span class="stage-pill">LIVE</span>
           <div>
-            <h2 id="workbench-title" data-i18n="liveCheck">实时内容检查</h2>
-            <p class="panel-subtitle" data-i18n="liveSubtitle">沿 P1 规则、P2 语义和 P3 工具策略追踪完整判定链。</p>
+            <h2 id="workbench-title" data-i18n="liveCheck">内容检测</h2>
+            <p class="panel-subtitle" data-i18n="liveSubtitle">规则检测、语义分析与工具权限检查。</p>
           </div>
         </div>
-        <span class="keyboard-hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> <span data-i18n="runShortcut">运行检查</span></span>
+        <span class="keyboard-hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> <span data-i18n="runShortcut">开始检测</span></span>
       </div>
 
       <div class="workbench">
         <div class="composer">
           <div class="quick-load">
             <div>
-              <label for="sample-split" data-i18n="sampleSplit">示例分组</label>
+              <label for="sample-split" data-i18n="sampleSplit">数据划分</label>
               <select id="sample-split">
                 <option value="unseen_test">未见测试集</option>
                 <option value="development">开发集</option>
@@ -569,29 +569,39 @@
             </div>
             <button id="load-example" class="button" type="button">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66L20 8.68"/><path d="M20 4v4.68h-4.68"/></svg>
-              <span data-i18n="loadSample">随机样本</span>
+              <span data-i18n="loadSample">加载样本</span>
             </button>
           </div>
 
           <div id="context-note" class="context-note"></div>
 
           <div class="field">
-            <label for="question"><span data-i18n="realTask">用户真实任务</span> <span class="optional" data-i18n="optionalSemantic">（可选，用于 P2 语义检查）</span></label>
-            <input id="question" type="text" data-i18n-placeholder="realTaskPlaceholder" placeholder="例如：总结这封邮件，并指出需要跟进的事项">
+            <label for="question"><span data-i18n="realTask">任务描述</span> <span class="optional" data-i18n="optionalSemantic">P2 输入</span></label>
+            <label style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><input id="auto-intent" type="checkbox" checked style="width:auto"><span data-i18n="autoIntent">使用预设任务</span></label>
+            <input id="question" readonly type="text" data-i18n-placeholder="realTaskPlaceholder" placeholder="输入任务描述">
+            <div id="live-inferred-card" style="margin-top:10px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--soft)">
+              <div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><strong data-i18n="liveInferredTitle">识别结果</strong><button id="infer-current-intent" type="button" data-i18n="liveInferredRefresh">重新识别</button></div>
+              <p id="live-inferred-output" role="status" style="margin:8px 0"></p><small id="live-inferred-detail"></small>
+            </div>
+            <p id="intent-note" role="status" style="font-size:12px;color:var(--muted);margin-top:8px"></p>
           </div>
 
           <div class="field">
             <div class="content-heading">
-              <label for="content" data-i18n="untrustedContent">不可信内容</label>
+              <label for="content" data-i18n="untrustedContent">待检测内容</label>
               <span id="content-count" class="counter">0 / 100,000 bytes</span>
             </div>
-            <textarea id="content" data-i18n-placeholder="contentPlaceholder" placeholder="粘贴邮件、网页、文档或模型即将读取的外部内容……"></textarea>
+            <textarea id="content" data-i18n-placeholder="contentPlaceholder" placeholder="输入或粘贴正文"></textarea>
           </div>
 
+          <label style="display:flex;gap:8px;align-items:center;margin:12px 0">
+            <input id="use-supervised" type="checkbox" style="width:auto">
+            <span data-i18n="supervisedOption">启用监督分类对照</span>
+          </label>
           <div class="tool-row">
             <div class="tool-row-title">
-              <strong data-i18n="optionalToolCall">可选工具调用 · P3</strong>
-              <button id="load-scenario" class="scenario-button" type="button" data-i18n="loadScenario">载入混淆代理场景</button>
+              <strong data-i18n="optionalToolCall">工具调用</strong>
+              <button id="load-scenario" class="scenario-button" type="button" data-i18n="loadScenario">加载场景</button>
             </div>
             <div class="field-row">
               <div>
@@ -600,7 +610,7 @@
               </div>
               <div>
                 <label for="tool-target" data-i18n="toolTarget">调用目标</label>
-                <input id="tool-target" type="text" data-i18n-placeholder="targetPlaceholder" placeholder="例如：external@example.com">
+                <input id="tool-target" type="text" data-i18n-placeholder="targetPlaceholder" placeholder="输入调用目标">
               </div>
             </div>
           </div>
@@ -608,7 +618,7 @@
           <div class="actions">
             <button id="run-detection" class="button primary full" type="button">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8.1-8 9-4.6-.9-8-4-8-9V7l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-              <span id="run-label" data-i18n="runCheck">运行安全检查</span>
+              <span id="run-label" data-i18n="runCheck">开始检测</span>
             </button>
             <button id="clear-form" class="button ghost" type="button" data-i18n="clear">清空</button>
           </div>
@@ -620,21 +630,21 @@
             <div class="empty-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8.1-8 9-4.6-.9-8-4-8-9V7l8-4Z"/><path d="M9 12h6M12 9v6"/></svg>
             </div>
-            <h3 data-i18n="awaitingTitle">等待检查内容</h3>
-            <p data-i18n="awaitingBody">输入内容后，控制台会分别显示规则风险、任务一致性、混合内容门控与工具权限结果。</p>
+            <h3 data-i18n="awaitingTitle">暂无结果</h3>
+            <p data-i18n="awaitingBody">加载样本或输入内容后开始检测。</p>
           </div>
 
           <div id="result-loading" class="result-loading">
             <div class="loader"></div>
-            <strong data-i18n="checkingTitle">正在执行判定链</strong>
-            <p data-i18n="checkingBody">首次启用 P2 时可能需要载入本地 MiniLM 模型；规则检查本身会更快完成。</p>
+            <strong data-i18n="checkingTitle">检测中</strong>
+            <p data-i18n="checkingBody">正在处理当前内容。</p>
             <span id="elapsed" class="elapsed">0.0 s</span>
           </div>
 
           <div id="result-content" class="result-content">
             <div class="result-head">
               <div>
-                <span class="result-kicker" data-i18n="contentGate">内容门控结果</span>
+                <span class="result-kicker" data-i18n="contentGate">综合结果</span>
                 <h3><span id="headline-badge" class="badge">—</span></h3>
               </div>
               <div class="result-score"><strong id="headline-score">—</strong><span data-i18n="ruleRiskScore">P1 规则风险分</span></div>
@@ -651,7 +661,7 @@
                 <span id="p2-value" class="chain-value">—</span>
               </div>
               <div class="chain-card">
-                <div class="chain-top"><span class="chain-name" data-i18n="hybridGate">混合门控</span><span id="hybrid-badge" class="badge hybrid">—</span></div>
+                <div class="chain-top"><span class="chain-name" data-i18n="hybridGate">综合检测</span><span id="hybrid-badge" class="badge hybrid">—</span></div>
                 <span id="hybrid-value" class="chain-value">—</span>
               </div>
               <div class="chain-card">
@@ -660,6 +670,10 @@
               </div>
             </div>
 
+            <div class="chain-card" style="margin-top:12px">
+              <div class="chain-top"><span class="chain-name" data-i18n="supervisedTitle">监督分类结果</span><span id="supervised-badge" class="badge">—</span></div>
+              <span id="supervised-value" class="chain-value">—</span>
+            </div>
             <div id="reason-groups" class="reason-groups"></div>
           </div>
         </aside>
@@ -667,7 +681,7 @@
 
       <section id="highlight-section" class="highlight-section">
         <div class="highlight-heading">
-          <h3 data-i18n="evidenceTitle">命中证据</h3>
+          <h3 data-i18n="evidenceTitle">检测依据</h3>
           <div class="legend">
             <span><i class="p1"></i><span data-i18n="p1Rules">P1 规则</span></span>
             <span><i class="p2"></i><span data-i18n="p2Semantic">P2 语义</span></span>
@@ -681,35 +695,36 @@
     <section class="panel analytics">
       <nav class="tabs" aria-label="Evaluation views">
         <button class="tab active" type="button" data-tab="overview" data-i18n="tabOverview">评估概览</button>
-        <button class="tab" type="button" data-tab="p1" data-i18n="tabP1">P1 规则基线</button>
-        <button class="tab" type="button" data-tab="p2" data-i18n="tabP2">P2 语义混合</button>
+        <button class="tab" type="button" data-tab="p1" data-i18n="tabP1">P1 规则检测</button>
+        <button class="tab" type="button" data-tab="p2" data-i18n="tabP2">P2 语义检测</button>
         <button class="tab" type="button" data-tab="p3" data-i18n="tabP3">P3 工具策略</button>
-        <button class="tab" type="button" data-tab="method" data-i18n="tabMethod">方法与边界</button>
+        <button class="tab" type="button" data-tab="intent" data-i18n="intentTab">意图识别</button>
+        <button class="tab" type="button" data-tab="method" data-i18n="tabMethod">方法说明</button>
       </nav>
 
       <div id="tab-overview" class="tab-content active">
         <div class="section-intro">
-          <div><h3 data-i18n="overviewTitle">三层防护概览</h3><p data-i18n="overviewBody">下方统一使用固定未见测试集，便于区分内容检测能力和工具层危害抑制能力。</p></div>
-          <p id="status-warning" class="status-warning"></p>
+          <div><h3 data-i18n="overviewTitle">检测概览</h3><p data-i18n="overviewBody">P1 / P2：邮件测试集；P3：工具场景评估。</p></div>
+
         </div>
         <div class="overview-grid">
           <article class="overview-card">
-            <div class="overview-card-top"><h4 data-i18n="p1RuleEngine">P1 · 规则引擎</h4><span id="overview-p1-badge" class="badge">—</span></div>
+            <div class="overview-card-top"><h4 data-i18n="p1RuleEngine">P1 · 规则检测</h4><span id="overview-p1-badge" class="badge">—</span></div>
             <div class="metric-pair"><div><span data-i18n="attackDetection">攻击检出率</span><strong id="overview-p1-detection">—</strong></div><div><span data-i18n="falsePositive">误报率</span><strong id="overview-p1-fpr">—</strong></div></div>
           </article>
           <article class="overview-card">
-            <div class="overview-card-top"><h4 data-i18n="p2HybridEngine">P2 · 混合语义</h4><span class="badge hybrid">HYBRID</span></div>
+            <div class="overview-card-top"><h4 data-i18n="p2HybridEngine">P2 · 综合检测</h4><span class="badge hybrid">HYBRID</span></div>
             <div class="metric-pair"><div><span data-i18n="attackDetection">攻击检出率</span><strong id="overview-p2-detection">—</strong></div><div><span data-i18n="falsePositive">误报率</span><strong id="overview-p2-fpr">—</strong></div></div>
           </article>
           <article class="overview-card">
             <div class="overview-card-top"><h4 data-i18n="p3Containment">P3 · 危害抑制</h4><span class="badge allow">POLICY</span></div>
-            <div class="metric-pair"><div><span data-i18n="containedHarm">危害抑制率</span><strong id="overview-p3-harm">—</strong></div><div><span data-i18n="frictionCost">摩擦成本</span><strong id="overview-p3-friction">—</strong></div></div>
+            <div class="metric-pair"><div><span data-i18n="containedHarm">危害抑制率</span><strong id="overview-p3-harm">—</strong></div><div><span data-i18n="frictionCost">正常操作干预率</span><strong id="overview-p3-friction">—</strong></div></div>
           </article>
         </div>
       </div>
 
       <div id="tab-p1" class="tab-content">
-        <div class="section-intro"><div><h3 data-i18n="p1DetailTitle">规则基线评估</h3><p data-i18n="p1DetailBody">比较明文与隐蔽攻击在开发集、未见测试集上的检出、误报、F1 和延迟。</p></div></div>
+        <div class="section-intro"><div><h3 data-i18n="p1DetailTitle">规则检测评估</h3><p data-i18n="p1DetailBody">明文与编码攻击的检出率、误报率、F1 和耗时。</p></div></div>
         <div class="table-wrap"><table>
           <thead><tr><th data-i18n="encoding">编码</th><th data-i18n="split">分组</th><th data-i18n="attackSamples">攻击样本</th><th data-i18n="cleanSamples">干净样本</th><th data-i18n="detectionRate">检出率</th><th data-i18n="fpr">误报率</th><th>F1</th><th data-i18n="medianLatency">中位延迟</th><th data-i18n="p95Latency">P95 延迟</th></tr></thead>
           <tbody id="p1-metrics-body"><tr><td colspan="9">—</td></tr></tbody>
@@ -717,7 +732,7 @@
       </div>
 
       <div id="tab-p2" class="tab-content">
-        <div class="section-intro"><div><h3 data-i18n="p2DetailTitle">语义与混合评估</h3><p data-i18n="p2DetailBody">同一固定分组分别运行规则、语义和混合检测器，避免把开发集调参结果当成泛化能力。</p></div></div>
+        <div class="section-intro"><div><h3 data-i18n="p2DetailTitle">语义检测评估</h3><p data-i18n="p2DetailBody">同一数据划分下的规则、语义与综合检测结果。</p></div></div>
         <div class="table-wrap"><table>
           <thead><tr><th data-i18n="encoding">编码</th><th data-i18n="split">分组</th><th data-i18n="detectorType">检测器</th><th data-i18n="attackSamples">攻击样本</th><th data-i18n="detectionRate">检出率</th><th data-i18n="fpr">误报率</th><th>F1</th></tr></thead>
           <tbody id="p2-metrics-body"><tr><td colspan="7">—</td></tr></tbody>
@@ -725,21 +740,39 @@
       </div>
 
       <div id="tab-p3" class="tab-content">
-        <div class="section-intro"><div><h3 data-i18n="p3DetailTitle">工具策略与混淆代理防护</h3><p data-i18n="p3DetailBody">工具、权限和目标共同决定是否放行；内容判定只提供风险信号，不代替权限边界。</p></div></div>
+        <div class="section-intro"><div><h3 data-i18n="p3DetailTitle">工具权限评估</h3><p data-i18n="p3DetailBody">按工具权限、调用目标和内容风险评估操作。</p></div></div>
         <div class="policy-grid">
           <article class="policy-summary"><h4 data-i18n="evaluationSummary">评估摘要</h4><div id="policy-stats"></div></article>
           <article class="registry"><h4 data-i18n="toolRegistry">工具注册表</h4><div id="registry-list" class="registry-list"></div></article>
         </div>
       </div>
 
+      <div id="tab-intent" class="tab-content">
+      <div class="section-intro"><div><h3 data-i18n="intentExperimentTitle">意图识别评估</h3><p data-i18n="intentExperimentDescription">对比场景预设与自动识别结果。</p></div><button id="run-intent-comparison" type="button" data-i18n="intentExperimentRun">运行评估</button></div>
+      <p class="limitation-note" data-i18n="intentExperimentLimit">评估范围：18 个预设工具场景，6 类任务。参考标签采用场景工具类别。</p>
+      <p id="intent-experiment-status" role="status"></p>
+      <div class="overview-grid" style="margin:16px 0">
+        <article class="overview-card"><h4 data-i18n="intentAgreement">类型匹配率</h4><strong id="intent-agreement">—</strong></article>
+        <article class="overview-card"><h4 data-i18n="intentMacro">宏平均召回率</h4><strong id="intent-macro">—</strong></article>
+        <article class="overview-card"><h4 data-i18n="intentMajority">多数类基线</h4><strong id="intent-majority">—</strong></article>
+      </div>
+      <details><summary data-i18n="intentSecurityTitle">检测结果对比</summary><h4 hidden data-i18n="intentSecurityTitle">检测结果对比</h4><p id="intent-security-note"></p>
+      <div class="table-wrap"><table><thead id="intent-detection-head"></thead><tbody id="intent-detection-body"></tbody></table></div>
+      </details>
+      <details style="margin-top:16px"><summary data-i18n="intentClassDetails">分类结果</summary><div class="table-wrap"><table><thead id="intent-class-head"></thead><tbody id="intent-class-body"></tbody></table></div></details>
+      <details style="margin-top:16px"><summary data-i18n="intentRows">场景明细</summary>
+      <div class="table-wrap"><table><thead id="intent-rows-head"></thead><tbody id="intent-rows-body"></tbody></table></div></details>
+          </div>
+
       <div id="tab-method" class="tab-content">
-        <div class="section-intro"><div><h3 data-i18n="methodTitle">判定方法与适用边界</h3><p data-i18n="methodBody">三层结果应分别解读：内容风险、任务一致性和执行权限不是同一个问题。</p></div></div>
+        <div class="section-intro"><div><h3 data-i18n="methodTitle">检测方法</h3><p data-i18n="methodBody">规则检测、任务一致性分析与工具权限控制。</p></div></div>
         <div class="method-grid">
-          <article class="method-card"><span class="method-number">P1 · RULES</span><h4 data-i18n="methodP1Title">快速规则筛查</h4><p data-i18n="methodP1Body">对显式指令覆盖、角色劫持和数据外传模式进行加权匹配，速度快且证据可定位，适合作为稳定基线。</p></article>
-          <article class="method-card"><span class="method-number">P2 · SEMANTICS</span><h4 data-i18n="methodP2Title">任务一致性补充</h4><p data-i18n="methodP2Body">在提供用户真实任务时，用本地 MiniLM 比较内容与任务的语义关系，再与 P1 合成混合门控结果。</p></article>
-          <article class="method-card"><span class="method-number">P3 · POLICY</span><h4 data-i18n="methodP3Title">工具权限兜底</h4><p data-i18n="methodP3Body">对高影响工具、外部目标和不可信内容触发的调用实施阻断或人工复核，减少检测漏报转化为真实危害。</p></article>
+          <article class="method-card"><span class="method-number">P1 · RULES</span><h4 data-i18n="methodP1Title">规则检测</h4><p data-i18n="methodP1Body">匹配指令覆盖、角色劫持和数据外传特征，生成风险分数。</p></article>
+          <article class="method-card"><span class="method-number">P2 · SEMANTICS</span><h4 data-i18n="methodP2Title">语义检测</h4><p data-i18n="methodP2Body">MiniLM 计算正文与任务的语义一致性，并与规则结果合并。</p></article>
+          <article class="method-card"><span class="method-number">P3 · POLICY</span><h4 data-i18n="methodP3Title">工具权限</h4><p data-i18n="methodP3Body">根据工具权限、目标白名单和内容风险，返回通过、复核或拒绝。</p></article>
         </div>
-        <div class="limitation-note" data-i18n="limitation">边界：本控制台是研究基线，不应将 ALLOW 解读为内容绝对安全。生产系统还需要隔离执行、最小权限、审计与针对业务数据的持续评估。</div>
+        <p id="status-warning" class="context-note"></p>
+        <div class="limitation-note" data-i18n="limitation">评估设置：意图识别采用六类任务描述；监督分类用于结果对照。工具权限由 P3 单独评估。</div>
       </div>
     </section>
   </main>
@@ -747,40 +780,44 @@
   <script>
     const translations = {
       zh: {
-        appTitle: "提示词注入安全控制台", connecting: "正在连接本地服务", online: "本地服务在线", offline: "本地服务离线", refreshStatus: "刷新状态",
+        intentTab:"意图识别",liveInferredTitle:"识别结果",liveInferredRefresh:"重新识别",intentExperimentTitle:"意图识别评估",intentExperimentDescription:"对比场景预设与自动识别结果。",intentExperimentRun:"运行评估",intentExperimentLimit:"评估范围：18 个预设工具场景，6 类任务。参考标签采用场景工具类别。",intentAgreement:"类型匹配率",intentMacro:"宏平均召回率",intentMajority:"多数类基线",intentSecurityTitle:"检测结果对比",intentClassDetails:"分类结果",intentRows:"场景明细",
+
+        appTitle:"提示词注入检测", connecting:"连接中", online:"已连接", offline:"未连接", refreshStatus: "刷新状态",
         detectorVersion: "规则检测器版本", categorySplit: "开发 / 测试类别", testDetection: "P1 测试集检出率", cleanFpr: "P1 干净样本误报率",
-        liveCheck: "实时内容检查", liveSubtitle: "沿 P1 规则、P2 语义和 P3 工具策略追踪完整判定链。", runShortcut: "运行检查",
-        sampleSplit: "示例分组", sampleEncoding: "攻击编码", unseenTest: "未见测试集", development: "开发集", plain: "明文", stealth: "隐蔽", loadSample: "随机样本", loadingSample: "正在载入…",
-        realTask: "用户真实任务", optionalSemantic: "（可选，用于 P2 语义检查）", realTaskPlaceholder: "例如：总结这封邮件，并指出需要跟进的事项",
-        untrustedContent: "不可信内容", contentPlaceholder: "粘贴邮件、网页、文档或模型即将读取的外部内容……", optionalToolCall: "可选工具调用 · P3", loadScenario: "载入混淆代理场景", loadingScenario: "正在载入…", toolName: "工具", noTool: "不检查工具调用", toolTarget: "调用目标", targetPlaceholder: "例如：external@example.com", runCheck: "运行安全检查", checking: "正在检查…", clear: "清空",
-        awaitingTitle: "等待检查内容", awaitingBody: "输入内容后，控制台会分别显示规则风险、任务一致性、混合内容门控与工具权限结果。", checkingTitle: "正在执行判定链", checkingBody: "首次启用 P2 时可能需要载入本地 MiniLM 模型；规则检查本身会更快完成。",
-        contentGate: "内容门控结果", ruleRiskScore: "P1 规则风险分", p1Rules: "P1 规则", p2Semantic: "P2 语义", hybridGate: "混合门控", p3Policy: "P3 工具策略", evidenceTitle: "命中证据", overlap: "重叠命中",
-        tabOverview: "评估概览", tabP1: "P1 规则基线", tabP2: "P2 语义混合", tabP3: "P3 工具策略", tabMethod: "方法与边界",
-        overviewTitle: "三层防护概览", overviewBody: "下方统一使用固定未见测试集，便于区分内容检测能力和工具层危害抑制能力。", p1RuleEngine: "P1 · 规则引擎", p2HybridEngine: "P2 · 混合语义", p3Containment: "P3 · 危害抑制", attackDetection: "攻击检出率", falsePositive: "误报率", containedHarm: "危害抑制率", frictionCost: "摩擦成本",
-        p1DetailTitle: "规则基线评估", p1DetailBody: "比较明文与隐蔽攻击在开发集、未见测试集上的检出、误报、F1 和延迟。", p2DetailTitle: "语义与混合评估", p2DetailBody: "同一固定分组分别运行规则、语义和混合检测器，避免把开发集调参结果当成泛化能力。", p3DetailTitle: "工具策略与混淆代理防护", p3DetailBody: "工具、权限和目标共同决定是否放行；内容判定只提供风险信号，不代替权限边界。",
+        liveCheck:"内容检测", liveSubtitle:"规则检测、语义分析与工具权限检查。", runShortcut:"开始检测",
+        sampleSplit:"数据划分", sampleEncoding: "攻击编码", unseenTest:"测试集", development: "开发集", plain: "明文", stealth: "隐蔽", loadSample:"加载样本", loadingSample:"加载中…",
+        supervisedOption:"启用监督分类对照", supervisedTitle:"监督分类结果", supervisedThreshold: "复核阈值 {value}", autoIntent:"使用预设任务", realTask:"任务描述", optionalSemantic:"P2 输入", realTaskPlaceholder:"输入任务描述",
+        untrustedContent:"待检测内容", contentPlaceholder:"输入或粘贴正文", optionalToolCall:"工具调用", loadScenario:"加载场景", loadingScenario:"加载中…", toolName: "工具", noTool:"未选择", toolTarget: "调用目标", targetPlaceholder:"输入调用目标", runCheck:"开始检测", checking:"检测中…", clear: "清空",
+        awaitingTitle:"暂无结果", awaitingBody:"加载样本或输入内容后开始检测。", checkingTitle:"检测中", checkingBody:"正在处理当前内容。",
+        contentGate:"综合结果", ruleRiskScore: "P1 规则风险分", p1Rules: "P1 规则", p2Semantic: "P2 语义", hybridGate:"综合检测", p3Policy: "P3 工具策略", evidenceTitle:"检测依据", overlap: "重叠命中",
+        tabOverview: "评估概览", tabP1:"P1 规则检测", tabP2:"P2 语义检测", tabP3: "P3 工具策略", tabMethod:"方法说明",
+        overviewTitle:"检测概览", overviewBody:"P1 / P2：邮件测试集；P3：工具场景评估。", p1RuleEngine:"P1 · 规则检测", p2HybridEngine:"P2 · 综合检测", p3Containment: "P3 · 危害抑制", attackDetection: "攻击检出率", falsePositive: "误报率", containedHarm: "危害抑制率", frictionCost:"正常操作干预率",
+        p1DetailTitle:"规则检测评估", p1DetailBody:"明文与编码攻击的检出率、误报率、F1 和耗时。", p2DetailTitle:"语义检测评估", p2DetailBody:"同一数据划分下的规则、语义与综合检测结果。", p3DetailTitle:"工具权限评估", p3DetailBody:"按工具权限、调用目标和内容风险评估操作。",
         encoding: "编码", split: "分组", attackSamples: "攻击样本", cleanSamples: "干净样本", detectionRate: "检出率", fpr: "误报率", medianLatency: "中位延迟", p95Latency: "P95 延迟", detectorType: "检测器",
         evaluationSummary: "评估摘要", toolRegistry: "工具注册表", scenarios: "评估场景", decisions: "决策分布", harmBefore: "策略前危害", harmAfter: "策略后危害", registryPermission: "权限", registryTargets: "可信目标", anyTarget: "任意目标", noTrustedTarget: "无可信目标",
-        methodTitle: "判定方法与适用边界", methodBody: "三层结果应分别解读：内容风险、任务一致性和执行权限不是同一个问题。", methodP1Title: "快速规则筛查", methodP1Body: "对显式指令覆盖、角色劫持和数据外传模式进行加权匹配，速度快且证据可定位，适合作为稳定基线。", methodP2Title: "任务一致性补充", methodP2Body: "在提供用户真实任务时，用本地 MiniLM 比较内容与任务的语义关系，再与 P1 合成混合门控结果。", methodP3Title: "工具权限兜底", methodP3Body: "对高影响工具、外部目标和不可信内容触发的调用实施阻断或人工复核，减少检测漏报转化为真实危害。", limitation: "边界：本控制台是研究基线，不应将 ALLOW 解读为内容绝对安全。生产系统还需要隔离执行、最小权限、审计与针对业务数据的持续评估。",
-        sampleLoaded: "已载入 {split} · {encoding} · {attack} · 位置 {position}", scenarioLoaded: "已载入场景 {id}：{description}", contentRequired: "请先输入需要检查的内容。", requestFailed: "请求失败：{message}", unknownError: "未知错误", statusMismatch: "注意：部分评估结果与当前检测器配置不一致。", statusCurrent: "当前配置", noReasons: "未返回额外理由。", findings: "{count} 条检测依据", skipped: "未运行", score: "分数 {value}", threshold: "阻断阈值 {value}", permission: "权限 {value}", noToolValue: "未提供工具调用", noTaskValue: "未提供真实任务", hybridUnavailable: "需提供真实任务", detectorOutput: "检测器原始输出", bytes: "bytes",
-        decisionAllow: "放行", decisionReview: "复核", decisionBlock: "阻断", decisionDeny: "拒绝", decisionHumanReview: "人工复核", posPrefix: "前部", posMiddle: "中部", posSuffix: "尾部", plainLabel: "明文", stealthLabel: "隐蔽", developmentLabel: "开发集", unseen_testLabel: "未见测试集"
+        methodTitle:"检测方法", methodBody:"规则检测、任务一致性分析与工具权限控制。", methodP1Title:"规则检测", methodP1Body:"匹配指令覆盖、角色劫持和数据外传特征，生成风险分数。", methodP2Title:"语义检测", methodP2Body:"MiniLM 计算正文与任务的语义一致性，并与规则结果合并。", methodP3Title:"工具权限", methodP3Body:"根据工具权限、目标白名单和内容风险，返回通过、复核或拒绝。", limitation:"评估设置：意图识别采用六类任务描述；监督分类用于结果对照。工具权限由 P3 单独评估。",
+        sampleLoaded: "已载入 {split} · {encoding} · {attack} · 位置 {position}", scenarioLoaded:"场景：{id}", contentRequired:"请输入待检测内容。", requestFailed: "请求失败：{message}", unknownError: "未知错误", statusMismatch:"评估结果与当前配置不一致。", statusCurrent: "当前配置", noReasons:"无补充依据", findings: "{count} 条检测依据", skipped: "未运行", score: "分数 {value}", threshold: "阻断阈值 {value}", permission: "权限 {value}", noToolValue: "未提供工具调用", noTaskValue:"未设置任务", hybridUnavailable:"未设置任务", detectorOutput: "检测器原始输出", bytes: "bytes",
+        decisionAllow:"通过", decisionReview: "复核", decisionBlock: "阻断", decisionDeny: "拒绝", decisionHumanReview: "人工复核", posPrefix: "前部", posMiddle: "中部", posSuffix: "尾部", plainLabel: "明文", stealthLabel: "隐蔽", developmentLabel: "开发集", unseen_testLabel:"测试集"
       },
       en: {
-        appTitle: "Prompt-Injection Security Console", connecting: "Connecting to local service", online: "Local service online", offline: "Local service offline", refreshStatus: "Refresh status",
+        intentTab:"Intent recognition",liveInferredTitle:"Predicted intent",liveInferredRefresh:"Recognize again",intentExperimentTitle:"Intent recognition evaluation",intentExperimentDescription:"Compare preset and predicted task types.",intentExperimentRun:"Run evaluation",intentExperimentLimit:"Scope: 18 preset tool scenarios across six task types. Reference labels use the configured tool category.",intentAgreement:"Type agreement",intentMacro:"Macro recall",intentMajority:"Majority-class baseline",intentSecurityTitle:"Detection comparison",intentClassDetails:"Results by class",intentRows:"Scenario details",
+
+        appTitle:"Prompt injection detection", connecting:"Connecting", online:"Connected", offline:"Disconnected", refreshStatus: "Refresh status",
         detectorVersion: "Rule detector version", categorySplit: "Dev / test categories", testDetection: "P1 test detection", cleanFpr: "P1 clean false positives",
-        liveCheck: "Live content check", liveSubtitle: "Trace the full decision chain across P1 rules, P2 semantics, and P3 tool policy.", runShortcut: "Run check",
-        sampleSplit: "Example split", sampleEncoding: "Attack encoding", unseenTest: "Unseen test", development: "Development", plain: "Plain", stealth: "Stealth", loadSample: "Random sample", loadingSample: "Loading…",
-        realTask: "User's real task", optionalSemantic: "(optional, enables P2 semantic check)", realTaskPlaceholder: "e.g. Summarize this email and list the required follow-ups",
-        untrustedContent: "Untrusted content", contentPlaceholder: "Paste an email, webpage, document, or other external content the model will read…", optionalToolCall: "Optional tool call · P3", loadScenario: "Load confused-deputy scenario", loadingScenario: "Loading…", toolName: "Tool", noTool: "Do not check a tool call", toolTarget: "Call target", targetPlaceholder: "e.g. external@example.com", runCheck: "Run security check", checking: "Checking…", clear: "Clear",
-        awaitingTitle: "Waiting for content", awaitingBody: "After you enter content, the console shows rule risk, task consistency, hybrid content gating, and tool authorization separately.", checkingTitle: "Running the decision chain", checkingBody: "The first P2 check may need to load the local MiniLM model; the rule check itself is faster.",
-        contentGate: "Content-gate result", ruleRiskScore: "P1 rule risk score", p1Rules: "P1 rules", p2Semantic: "P2 semantics", hybridGate: "Hybrid gate", p3Policy: "P3 tool policy", evidenceTitle: "Matched evidence", overlap: "Overlapping match",
-        tabOverview: "Evaluation overview", tabP1: "P1 rule engine baseline", tabP2: "P2 semantic hybrid", tabP3: "P3 tool policy", tabMethod: "Method & limits",
-        overviewTitle: "Three-layer defense overview", overviewBody: "These summaries use the fixed unseen-test split, separating content-detection performance from tool-layer harm containment.", p1RuleEngine: "P1 · Rule engine", p2HybridEngine: "P2 · Semantic hybrid", p3Containment: "P3 · Harm containment", attackDetection: "Attack detection", falsePositive: "False-positive rate", containedHarm: "Harm containment", frictionCost: "Friction cost",
-        p1DetailTitle: "Rule-baseline evaluation", p1DetailBody: "Compare detection, false positives, F1, and latency for plain and stealth attacks on development and unseen-test splits.", p2DetailTitle: "Semantic and hybrid evaluation", p2DetailBody: "Run rule, semantic, and hybrid detectors on the same fixed splits so tuned development results are not mistaken for generalization.", p3DetailTitle: "Tool policy and confused-deputy defense", p3DetailBody: "Tool, permission, and target jointly determine authorization; the content decision is a risk signal, not a permission boundary.",
+        liveCheck:"Content detection", liveSubtitle:"Rule detection, semantic analysis, and tool permissions.", runShortcut:"Run detection",
+        sampleSplit:"Data split", sampleEncoding: "Attack encoding", unseenTest:"Test set", development: "Development", plain: "Plain", stealth: "Stealth", loadSample:"Load sample", loadingSample:"Loading…",
+        supervisedOption:"Include supervised classifier", supervisedTitle:"Supervised classification", supervisedThreshold: "Review threshold {value}", autoIntent:"Use preset task", realTask:"Task description", optionalSemantic:"P2 input", realTaskPlaceholder:"Enter a task description",
+        untrustedContent:"Content to analyze", contentPlaceholder:"Enter or paste content", optionalToolCall:"Tool call", loadScenario:"Load scenario", loadingScenario:"Loading…", toolName: "Tool", noTool:"None", toolTarget: "Call target", targetPlaceholder:"Enter a target", runCheck:"Run detection", checking:"Analyzing…", clear: "Clear",
+        awaitingTitle:"No results", awaitingBody:"Load a sample or enter content to run detection.", checkingTitle:"Analyzing", checkingBody:"Processing the current content.",
+        contentGate:"Combined result", ruleRiskScore: "P1 rule risk score", p1Rules: "P1 rules", p2Semantic: "P2 semantics", hybridGate:"Combined detection", p3Policy: "P3 tool policy", evidenceTitle:"Detection evidence", overlap: "Overlapping match",
+        tabOverview: "Evaluation overview", tabP1:"P1 rule detection", tabP2:"P2 semantic detection", tabP3: "P3 tool policy", tabMethod:"Methods",
+        overviewTitle:"Detection overview", overviewBody:"P1 / P2: email test set. P3: tool scenario evaluation.", p1RuleEngine:"P1 · Rule detection", p2HybridEngine:"P2 · Combined detection", p3Containment: "P3 · Harm containment", attackDetection: "Attack detection", falsePositive: "False-positive rate", containedHarm: "Harm containment", frictionCost:"Benign intervention rate",
+        p1DetailTitle:"Rule detection evaluation", p1DetailBody:"Detection rate, false-positive rate, F1, and latency for plain and encoded attacks.", p2DetailTitle:"Semantic detection evaluation", p2DetailBody:"Rule, semantic, and combined results on the same data splits.", p3DetailTitle:"Tool permission evaluation", p3DetailBody:"Evaluate operations by tool permission, target, and content risk.",
         encoding: "Encoding", split: "Split", attackSamples: "Attack samples", cleanSamples: "Clean samples", detectionRate: "Detection", fpr: "FPR", medianLatency: "Median latency", p95Latency: "P95 latency", detectorType: "Detector",
         evaluationSummary: "Evaluation summary", toolRegistry: "Tool registry", scenarios: "Evaluation scenarios", decisions: "Decision distribution", harmBefore: "Harm before policy", harmAfter: "Harm after policy", registryPermission: "Permission", registryTargets: "Trusted targets", anyTarget: "Any target", noTrustedTarget: "No trusted target",
-        methodTitle: "Decision method and operating limits", methodBody: "Read the three layers separately: content risk, task consistency, and execution authority are different questions.", methodP1Title: "Fast rule screening", methodP1Body: "Weighted matches identify explicit instruction override, role hijacking, and exfiltration patterns. It is fast, locatable, and serves as the stable baseline.", methodP2Title: "Task-consistency supplement", methodP2Body: "When a real user task is supplied, local MiniLM compares content with task semantics and combines that signal with P1 into a hybrid gate.", methodP3Title: "Tool-permission backstop", methodP3Body: "High-impact tools, external targets, and calls triggered by untrusted content are blocked or sent for review, limiting the impact of detector misses.", limitation: "Limit: this console is a research baseline. ALLOW does not mean absolutely safe. Production systems still need execution isolation, least privilege, audit, and continuous evaluation on domain data.",
-        sampleLoaded: "Loaded {split} · {encoding} · {attack} · {position} position", scenarioLoaded: "Loaded scenario {id}: {description}", contentRequired: "Enter content to check first.", requestFailed: "Request failed: {message}", unknownError: "Unknown error", statusMismatch: "Note: some evaluation results do not match the current detector configuration.", statusCurrent: "Current config", noReasons: "No additional reason was returned.", findings: "{count} detector finding(s)", skipped: "Skipped", score: "Score {value}", threshold: "Block threshold {value}", permission: "Permission {value}", noToolValue: "No tool call supplied", noTaskValue: "No real task supplied", hybridUnavailable: "Requires a real task", detectorOutput: "Detector output", bytes: "bytes",
-        decisionAllow: "Allow", decisionReview: "Review", decisionBlock: "Block", decisionDeny: "Deny", decisionHumanReview: "Human review", posPrefix: "prefix", posMiddle: "middle", posSuffix: "suffix", plainLabel: "Plain", stealthLabel: "Stealth", developmentLabel: "Development", unseen_testLabel: "Unseen test"
+        methodTitle:"Detection methods", methodBody:"Rule detection, task consistency, and tool permissions.", methodP1Title:"Rule detection", methodP1Body:"Match instruction overrides, role hijacking, and data exfiltration patterns to calculate a risk score.", methodP2Title:"Semantic detection", methodP2Body:"MiniLM evaluates task consistency and combines its result with rule detection.", methodP3Title:"Tool permissions", methodP3Body:"Return allow, review, or deny based on tool permissions, trusted targets, and content risk.", limitation:"Evaluation setup: intent recognition uses six task descriptions; supervised classification provides comparison results. P3 evaluates tool permissions separately.",
+        sampleLoaded: "Loaded {split} · {encoding} · {attack} · {position} position", scenarioLoaded:"Scenario: {id}", contentRequired:"Enter content to analyze.", requestFailed: "Request failed: {message}", unknownError: "Unknown error", statusMismatch:"Evaluation results differ from the current configuration.", statusCurrent: "Current config", noReasons:"No additional evidence", findings: "{count} detector finding(s)", skipped: "Skipped", score: "Score {value}", threshold: "Block threshold {value}", permission: "Permission {value}", noToolValue: "No tool call supplied", noTaskValue:"Task not set", hybridUnavailable:"Task not set", detectorOutput: "Detector output", bytes: "bytes",
+        decisionAllow:"Allow", decisionReview: "Review", decisionBlock: "Block", decisionDeny: "Deny", decisionHumanReview: "Human review", posPrefix: "prefix", posMiddle: "middle", posSuffix: "suffix", plainLabel: "Plain", stealthLabel: "Stealth", developmentLabel: "Development", unseen_testLabel:"Test set"
       }
     };
 
@@ -791,6 +828,7 @@
       currentResult: null,
       sourceText: "",
       sampleMeta: null,
+      taskContext: "", intent: null, intentComparison:null, comparisonLoading:false, liveInferred:null, inferenceLoading:false, inferenceError:"", inferenceRequest:0, inferenceTimer:null,
       scenarioMeta: null,
       elapsedTimer: null,
       startedAt: 0
@@ -858,6 +896,7 @@
       setConnection(state.connection);
       updateContextNote();
       updateCounter();
+      renderIntent();renderLiveInference();renderIntentComparison();
       if (state.snapshot) renderStatus(state.snapshot);
       if (state.currentResult) renderResult(state.currentResult, false);
     }
@@ -1020,7 +1059,7 @@
       const allCurrent = Object.values(data.evaluations || {}).every(item => item.matches_current_detector !== false);
       setBadge(byId("overview-p1-badge"), allCurrent ? "ALLOW" : "REVIEW");
       byId("overview-p1-badge").textContent = allCurrent ? t("statusCurrent") : t("decisionReview");
-      byId("status-warning").textContent = allCurrent ? (data.historical_exposure_warning || "") : t("statusMismatch");
+      byId("status-warning").textContent = allCurrent ? (data.historical_exposure_warning ? (state.language === "zh" ? "评估记录：当前规则版本开发时已查看测试集汇总结果。" : "Evaluation record: aggregate test results were available during development of the current rule version.") : "") : t("statusMismatch");
       renderEvaluationTable(data);
       renderSemanticTable(data);
       renderPolicy(data);
@@ -1053,7 +1092,8 @@
         const data = await requestJson(`/api/example?split=${encodeURIComponent(split)}&encoding=${encodeURIComponent(encoding)}`);
         state.sampleMeta = data; state.scenarioMeta = null;
         contentInput.value = data.text || "";
-        questionInput.value = data.question || "";
+        state.taskContext=data.task_context||"";state.intent=data.intent;byId("auto-intent").checked=true;questionInput.readOnly=true;
+        questionInput.value = data.question || "";renderIntent();scheduleInference();
         toolSelect.value = ""; targetInput.value = "";
         updateContextNote(); updateCounter(); resetResult();
       } catch (error) {
@@ -1070,7 +1110,8 @@
         const data = await requestJson("/api/tool-scenario");
         state.scenarioMeta = data; state.sampleMeta = null;
         contentInput.value = data.content || "";
-        questionInput.value = "";
+        state.taskContext=data.task_context||"";state.intent=data.intent;byId("auto-intent").checked=true;questionInput.readOnly=true;
+        questionInput.value = data.question || "";renderIntent();scheduleInference();
         if (![...toolSelect.options].some(option => option.value === data.tool_name)) {
           const option = document.createElement("option"); option.value = data.tool_name; option.textContent = data.tool_name; toolSelect.appendChild(option);
         }
@@ -1113,14 +1154,16 @@
         const banner = byId("request-error"); banner.textContent = t("contentRequired"); banner.classList.add("visible"); contentInput.focus(); return;
       }
       hideError(); setDetectionLoading(true);
-      const payload = { text: contentInput.value };
-      if (questionInput.value.trim()) payload.question = questionInput.value.trim();
+      const payload = { text: contentInput.value, use_supervised: byId("use-supervised").checked };
+      if (byId("auto-intent").checked) payload.task_context=state.taskContext;
+      else if (questionInput.value.trim()) payload.question = questionInput.value.trim();
       if (toolSelect.value) payload.tool_name = toolSelect.value;
       if (targetInput.value.trim()) payload.target = targetInput.value.trim();
       try {
         const data = await requestJson("/api/detect", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
         state.sourceText = contentInput.value;
         state.currentResult = data;
+        state.intent=data.intent;renderIntent();
         renderResult(data, true);
       } catch (error) {
         resetResult(); showError(error);
@@ -1173,6 +1216,10 @@
     }
 
     function renderResult(data, updateEvidence = true) {
+      const learned = data.supervised;
+      setBadge(byId("supervised-badge"), learned?.decision);
+      byId("supervised-value").textContent = learned?.error || (learned?.decision
+        ? `${t("score", { value: number(learned.score, 3) })} · ${t("supervisedThreshold", { value: number(learned.threshold, 3) })}` : t("skipped"));
       const semantic = data.semantic;
       const hybrid = data.hybrid;
       const policy = data.tool_policy;
@@ -1215,9 +1262,71 @@
       byId("highlighted-content").replaceChildren();
     }
 
+    function renderLiveInference(){
+      const zh=state.language==='zh',r=state.liveInferred;
+      byId('infer-current-intent').disabled=state.inferenceLoading||!contentInput.value.trim();
+      byId('live-inferred-output').textContent=state.inferenceLoading?(zh?'识别中…':'Recognizing intent…'):state.inferenceError||(r?r.name[state.language]+' · '+r.task[state.language]:(zh?'暂无识别结果':'No prediction yet'));
+      byId('live-inferred-detail').textContent=r&&!state.inferenceLoading?(zh?'余弦相似度 ':'Cosine similarity ')+r.similarity.toFixed(3)+(zh?' · 场景类型识别':' · Task type prediction'):(zh?'根据正文识别场景类型':'Task type inferred from content');
+    }
+    function scheduleInference(delay=0){
+      clearTimeout(state.inferenceTimer);state.inferenceRequest++;state.liveInferred=null;state.inferenceError='';state.inferenceLoading=false;renderLiveInference();
+      if(contentInput.value.trim())state.inferenceTimer=setTimeout(inferCurrentIntent,delay);
+    }
+    async function inferCurrentIntent(){
+      clearTimeout(state.inferenceTimer);const text=contentInput.value,request=++state.inferenceRequest;
+      if(!text.trim()){state.liveInferred=null;state.inferenceLoading=false;renderLiveInference();return;}
+      state.inferenceLoading=true;state.inferenceError='';renderLiveInference();
+      try{const data=await requestJson('/api/infer-intent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text})});if(request!==state.inferenceRequest||text!==contentInput.value)return;state.liveInferred=data.inferred_intent;}
+      catch(error){if(request!==state.inferenceRequest)return;state.inferenceError=error.message;}
+      finally{if(request===state.inferenceRequest){state.inferenceLoading=false;renderLiveInference();}}
+    }
+    byId('infer-current-intent').addEventListener('click',inferCurrentIntent);
+
+    function renderIntentComparison(){
+      const zh=state.language==='zh',report=state.intentComparison;
+      const button=byId('run-intent-comparison');button.disabled=state.comparisonLoading;button.textContent=state.comparisonLoading?(zh?'评估中…':'Evaluating…'):t('intentExperimentRun');
+      const status=byId('intent-experiment-status');
+      status.textContent=state.comparisonLoading?(zh?'评估中…':'Evaluating…'):report?.status==='COMPLETE'?(zh?`已评估 ${report.count} 个场景 · MiniLM`:`${report.count} scenarios evaluated · MiniLM`):(zh?'暂无评估结果':'No evaluation results');
+      if(!report||report.status!=='COMPLETE')return;
+      const pct=v=>v==null?'—':(v*100).toFixed(2)+'%';
+      byId('intent-agreement').textContent=pct(report.agreement)+` (${report.correct}/${report.count})`;
+      byId('intent-macro').textContent=pct(report.macro_recall);byId('intent-majority').textContent=pct(report.majority_baseline);
+      byId('intent-security-note').textContent=zh?`攻击 ${report.attack_count} 条 · 正常 ${report.clean_count} 条 · 复核与阻断计为检出`:`${report.attack_count} attacks · ${report.clean_count} benign cases · REVIEW and BLOCK count as detected`;
+      function head(id,values){const row=document.createElement('tr');for(const value of values){const cell=document.createElement('th');cell.textContent=value;row.append(cell);}byId(id).replaceChildren(row);}
+      function row(body,values){const tr=document.createElement('tr');for(const value of values){const td=document.createElement('td');if(value instanceof Node)td.append(value);else td.textContent=value;tr.append(td);}body.append(tr);}
+      const name=key=>report.labels[key]?.[state.language]||key;
+      head('intent-detection-head',zh?['方案','攻击检出率','正常误报率','F1','TP / FN','FP / TN']:['System','Attack recall','Clean FPR','F1','TP / FN','FP / TN']);
+      const systems=zh?{rule:'P1 规则',preset_p2:'P2 · 预设意图',auto_p2:'P2 · 自动意图',preset_hybrid:'Hybrid · 预设意图',auto_hybrid:'Hybrid · 自动意图'}:{rule:'P1 rules',preset_p2:'P2 · preset intent',auto_p2:'P2 · inferred intent',preset_hybrid:'Hybrid · preset intent',auto_hybrid:'Hybrid · inferred intent'};
+      const detection=byId('intent-detection-body');detection.replaceChildren();for(const [key,m] of Object.entries(report.detection))row(detection,[systems[key],pct(m.recall),pct(m.false_positive_rate),m.f1.toFixed(3),`${m.tp} / ${m.fn}`,`${m.fp} / ${m.tn}`]);
+      head('intent-class-head',zh?['任务类型','匹配 / 总数','召回率']:['Task type','Matched / total','Recall']);const classes=byId('intent-class-body');classes.replaceChildren();for(const [key,v] of Object.entries(report.per_class))row(classes,[name(key),`${v.correct} / ${v.count}`,pct(v.count?v.correct/v.count:null)]);
+      head('intent-rows-head',zh?['场景内容','预设类型','自动判断','匹配','余弦相似度','P2 预设 / 自动']:['Scenario content','Preset type','Inferred type','Match','Cosine similarity','P2 preset / inferred']);
+      const rows=byId('intent-rows-body');rows.replaceChildren();report.rows.forEach((r,i)=>{const details=document.createElement('details'),summary=document.createElement('summary'),text=document.createElement('p'),tasks=document.createElement('p');summary.textContent=(zh?'场景 ':'Scenario ')+(i+1)+' · '+(r.is_injection?(zh?'注入':'Injection'):(zh?'正常':'Benign'));text.textContent=r.content;tasks.textContent=(zh?'预设任务：':'Preset task: ')+r.reference_task+' / '+(zh?'自动任务：':'Inferred task: ')+r.inferred_task;details.append(summary,text,tasks);row(rows,[details,name(r.reference),name(r.predicted),r.match?(zh?'匹配':'Match'):(zh?'不匹配':'Mismatch'),r.similarity.toFixed(3),r.preset_p2+' / '+r.auto_p2]);});
+    }
+    async function loadIntentComparison(run=false){
+      if(state.comparisonLoading)return;state.comparisonLoading=true;renderIntentComparison();
+      try{state.intentComparison=await requestJson('/api/intent-comparison',run?{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'}:{});}
+      catch(error){state.comparisonLoading=false;renderIntentComparison();byId('intent-experiment-status').textContent=error.message;return;}
+      state.comparisonLoading=false;renderIntentComparison();
+    }
+    byId('run-intent-comparison').addEventListener('click',()=>loadIntentComparison(true));
+
+    function renderIntent(){
+      const zh=state.language==='zh',intent=state.intent;
+      const labels=zh?{bipia_question:'样本问题',demo_preset:'场景预设',user_input:'用户输入'}:{bipia_question:'Sample question',demo_preset:'Scenario preset',user_input:'User input'};
+      const kinds=zh?{summarize:'总结',translate:'翻译',retrieve:'检索',review:'审阅',question_answering:'问答',user_request:'用户请求'}:{summarize:'Summarization',translate:'Translation',retrieve:'Retrieval',review:'Review',question_answering:'Question answering',user_request:'User request'};
+      byId('intent-note').textContent=intent?.status==='RESOLVED'
+        ?(zh?'任务来源：':'Task source: ')+(labels[intent.source]||intent.source)+' · '+(kinds[intent.category]||intent.category)+(intent.demo_assumption?(zh?' · 演示任务':' · Demo task'):'')
+        :(zh?'加载场景以使用预设任务，或取消勾选后输入任务。':'Load a scenario to use its preset task, or uncheck the option to enter a task.');
+    }
+    byId('auto-intent').addEventListener('change',()=>{
+      questionInput.readOnly=byId('auto-intent').checked;
+      if(byId('auto-intent').checked){const context=state.sampleMeta||state.scenarioMeta;questionInput.value=context?.question||'';state.intent=context?.intent||null;}
+      else state.intent=questionInput.value.trim()?{status:'RESOLVED',source:'user_input',category:'user_request'}:null;
+      renderIntent();resetResult();
+    });
     function clearForm() {
       contentInput.value = ""; questionInput.value = ""; toolSelect.value = ""; targetInput.value = "";
-      state.sampleMeta = null; state.scenarioMeta = null;
+      state.sampleMeta = null; state.scenarioMeta = null;state.taskContext="";state.intent=null;renderIntent();scheduleInference();
       updateContextNote(); updateCounter(); hideError(); resetResult(); contentInput.focus();
     }
 
@@ -1234,14 +1343,23 @@
     byId("load-scenario").addEventListener("click", loadScenario);
     byId("run-detection").addEventListener("click", runDetection);
     byId("clear-form").addEventListener("click", clearForm);
-    contentInput.addEventListener("input", () => { updateCounter(); if (state.currentResult) resetResult(); });
-    questionInput.addEventListener("input", () => { if (state.currentResult) resetResult(); });
+    contentInput.addEventListener("input", () => { scheduleInference(700);updateCounter();state.taskContext="";state.sampleMeta=null;state.scenarioMeta=null;updateContextNote();if(byId("auto-intent").checked){questionInput.value="";state.intent=null;renderIntent();} if (state.currentResult) resetResult(); });
+    questionInput.addEventListener("input", () => {state.intent=questionInput.value.trim()?{status:"RESOLVED",source:"user_input",category:"user_request"}:null;renderIntent(); if (state.currentResult) resetResult(); });
     document.addEventListener("keydown", event => {
       if ((event.ctrlKey || event.metaKey) && event.key === "Enter") { event.preventDefault(); runDetection(); }
     });
 
     applyLanguage(state.language);
+    loadIntentComparison();
     loadStatus();
+
+    // Only the local portal parent may synchronize the embedded console language.
+    window.addEventListener('message',event=>{
+      if(window.parent===window || event.source!==window.parent || event.origin!=='http://127.0.0.1:8764')return;
+      if(event.data?.type!=='s6-portal-language' || !['zh','en'].includes(event.data.language))return;
+      applyLanguage(event.data.language);
+      document.querySelector('.language-switch').style.display='none';
+    });
   </script>
 </body>
 </html>

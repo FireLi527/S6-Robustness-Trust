@@ -1,4 +1,13 @@
+> 图像控制台默认使用 **同学实蝇数据集**；STL-10 保留为历史对照。
+
 # S6 Robustness & Trust
+
+## 统一前端入口
+
+双击根目录 **`start.cmd`**：自动启动所需的两个本地服务，并打开 **http://127.0.0.1:8764/**。默认进入同学实蝇图像实验，顶部切换提示词注入；两侧页面保留各自操作状态。已运行的模块会复用。
+
+保持启动窗口运行；按 Ctrl+C 停止统一入口及由它启动的模块，原先已运行的模块不受影响。启动失败时查看 `results/local_frontend/` 日志。页面源码为 `index.html`，启动服务为 `frontend.py`。
+
 
 This repository contains two research baselines for studying security risks around
 LLM applications and model training.
@@ -6,7 +15,7 @@ LLM applications and model training.
 | Baseline | Dataset | Main checks | Local app |
 | --- | --- | --- | --- |
 | Prompt injection defense | BIPIA EmailQA | P1 rule detection, P2 semantic task consistency, and P3 tool policy | `http://127.0.0.1:8765` |
-| Training-data poisoning detection | IP102 | Manifest integrity, semantic label consistency, and controlled poisoned-model training | `http://127.0.0.1:8766` |
+| Training-data poisoning detection | Classmate fruit flies (default); STL-10 control | Manifest integrity, semantic label consistency, and controlled poisoned-model training | `http://127.0.0.1:8766` |
 
 ## Project structure
 

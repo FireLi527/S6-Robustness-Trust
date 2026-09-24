@@ -1,0 +1,40 @@
+{
+  "status": "VERIFIED",
+  "protocol_sha256": "e13511848715991cdd28839ff79405938eb1134e51d6c7a9e7e52f99da893519",
+  "checkpoint_sha256": "bf56cf3f4c83cbfcdbccacc4dcbfdebc01f3ce2c01b628217e417262e711baad",
+  "prediction_count": {
+    "val": 1392,
+    "test": 1321
+  },
+  "specimen_group_confirmed": true,
+  "detector_counts": [
+    {
+      "dataset": "clean_subset",
+      "detected_poison": 0,
+      "missed_poison": 0,
+      "flagged_clean": 286,
+      "allowed_clean": 6245
+    },
+    {
+      "dataset": "label_flip_05",
+      "detected_poison": 305,
+      "missed_poison": 22,
+      "flagged_clean": 273,
+      "allowed_clean": 5931
+    },
+    {
+      "dataset": "label_flip_10",
+      "detected_poison": 611,
+      "missed_poison": 42,
+      "flagged_clean": 284,
+      "allowed_clean": 5594
+    },
+    {
+      "dataset": "targeted_0_to_1",
+      "detected_poison": 92,
+      "missed_poison": 96,
+      "flagged_clean": 370,
+      "allowed_clean": 5973
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+﻿decision,risk_score,reasons,trusted_samples,candidate_samples,label_changes,hash_changes,missing_samples,unknown_samples,duplicate_ids,distribution_drift,dataset
+ALLOW,0,candidate matches the trusted manifest,4000,4000,0,0,0,0,0,0.0,clean_subset
+BLOCK,6,"200 labels changed (5.00%), above the 2% block threshold",4000,4000,200,0,0,0,0,0.006499999999999999,label_flip_05
+BLOCK,6,"400 labels changed (10.00%), above the 2% block threshold",4000,4000,400,0,0,0,0,0.008999999999999987,label_flip_10
+REVIEW,3,80 labels changed (2.00%),4000,4000,80,0,0,0,0,0.019999999999999997,targeted_0_to_1

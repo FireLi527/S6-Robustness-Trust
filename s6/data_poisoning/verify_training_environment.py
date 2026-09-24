@@ -15,7 +15,10 @@ from torchvision.models import resnet18
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-SAMPLE_IMAGE = PROJECT_ROOT / "external" / "IP102" / "classification" / "train" / "0" / "00002.jpg"
+from dataset_config import IMAGE_ROOT
+
+def sample_image_path():
+    return next((IMAGE_ROOT / "classification" / "train").rglob("*.png"))
 
 
 def main() -> None:
@@ -26,6 +29,7 @@ def main() -> None:
     properties = torch.cuda.get_device_properties(device)
     free_bytes, total_bytes = torch.cuda.mem_get_info(device)
 
+    SAMPLE_IMAGE = sample_image_path()
     with Image.open(SAMPLE_IMAGE) as image:
         sample_image = {
             "path": str(SAMPLE_IMAGE),
@@ -34,7 +38,7 @@ def main() -> None:
         }
 
     torch.manual_seed(2026)
-    model = resnet18(weights=None, num_classes=5).to(device).eval()
+    model = resnet18(weights=None, num_classes=10).to(device).eval()
     inputs = torch.randn(8, 3, 224, 224, device=device)
 
     torch.cuda.synchronize()

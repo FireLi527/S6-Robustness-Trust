@@ -1,14 +1,15 @@
-"""Run the IP102 manifest-integrity detector as a local browser application."""
+"""Run the STL-10 manifest-integrity detector as a local browser application."""
 
 from __future__ import annotations
 
 import argparse
 import csv
 import json
+import mimetypes
+import dashboard_fruitfly as fruitfly
 import random
 import threading
 import webbrowser
-from functools import lru_cache
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -22,7 +23,6 @@ from semantic_detector import (
     blind_record_from_row,
     detector_metadata,
     extract_embeddings,
-    fit_trusted_projection,
 )
 
 
@@ -31,18 +31,18 @@ PORT = 8766
 APP_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = APP_DIR.parents[1]
 INDEX_FILE = APP_DIR / "web" / "index.html"
-IP102_ROOT = PROJECT_ROOT / "external" / "IP102"
-MANIFEST_ROOT = PROJECT_ROOT / "data" / "ip102_poisoning" / "manifests"
+from dataset_config import IMAGE_ROOT, manifest_hashes, evaluation_matches
+MANIFEST_ROOT = PROJECT_ROOT / "data" / "stl10_poisoning" / "manifests"
 EMBEDDING_CACHE = (
-    PROJECT_ROOT / "data" / "ip102_poisoning" / "embeddings" / "clip_vit_b32_embeddings.npz"
+    PROJECT_ROOT / "data" / "stl10_poisoning" / "embeddings" / "clip_vit_b32_embeddings.npz"
 )
 CLIP_MODEL_CACHE = PROJECT_ROOT / "external" / "clip_cache"
 TRUSTED_MANIFEST = MANIFEST_ROOT / "clean_subset.csv"
 SEMANTIC_SUMMARY_FILE = (
-    PROJECT_ROOT / "results" / "ip102_poisoning" / "semantic_evaluation_summary.json"
+    PROJECT_ROOT / "results" / "stl10_poisoning" / "semantic_evaluation_summary.json"
 )
 SEMANTIC_SAMPLE_RESULTS_FILE = (
-    PROJECT_ROOT / "results" / "ip102_poisoning" / "semantic_sample_results.json"
+    PROJECT_ROOT / "results" / "stl10_poisoning" / "semantic_sample_results.json"
 )
 DATASETS = (
     "clean_subset",
@@ -50,23 +50,19 @@ DATASETS = (
     "label_flip_10",
     "targeted_0_to_1",
 )
-_TRUSTED_PROJECTION_LOCK = threading.Lock()
-_TRUSTED_PROJECTION_CACHE = None
 _SEMANTIC_ASSESSMENT_LOCK = threading.Lock()
-_SEMANTIC_ASSESSMENT_CACHE: dict[str, object] = {}
+_SEMANTIC_ASSESSMENT_CACHE: dict[tuple[str, str | None], object] = {}
 
 
-@lru_cache(maxsize=8)
 def load_manifest(name: str) -> tuple[dict[str, str], ...]:
     if name not in DATASETS:
         raise ValueError(f"Unknown dataset: {name}")
     return tuple(load_candidate_manifest(MANIFEST_ROOT / f"{name}.csv"))
 
 
-@lru_cache(maxsize=1)
 def class_names() -> dict[str, str]:
     names: dict[str, str] = {}
-    classes_file = IP102_ROOT / "classes.txt"
+    classes_file = IMAGE_ROOT / "classes.txt"
     for folder_label, line in enumerate(classes_file.read_text(encoding="utf-8").splitlines()):
         parts = line.strip().split(maxsplit=1)
         names[str(folder_label)] = parts[1].strip() if len(parts) == 2 else parts[0]
@@ -90,34 +86,21 @@ def assessment_payload(name: str) -> dict:
     }
 
 
-def trusted_projection():
-    global _TRUSTED_PROJECTION_CACHE
-    if _TRUSTED_PROJECTION_CACHE is not None:
-        return _TRUSTED_PROJECTION_CACHE
-    with _TRUSTED_PROJECTION_LOCK:
-        if _TRUSTED_PROJECTION_CACHE is not None:
-            return _TRUSTED_PROJECTION_CACHE
-        rows = load_manifest("clean_subset")
-        records = [blind_record_from_row(row) for row in rows]
-        raw_embeddings = extract_embeddings(records, IP102_ROOT, EMBEDDING_CACHE, CLIP_MODEL_CACHE)
-        _TRUSTED_PROJECTION_CACHE = fit_trusted_projection(records, raw_embeddings)
-        return _TRUSTED_PROJECTION_CACHE
-
-
 def semantic_assessment(name: str):
-    cached = _SEMANTIC_ASSESSMENT_CACHE.get(name)
+    cache_key = (name, manifest_hashes().get(name))
+    cached = _SEMANTIC_ASSESSMENT_CACHE.get(cache_key)
     if cached is not None:
         return cached
     with _SEMANTIC_ASSESSMENT_LOCK:
-        cached = _SEMANTIC_ASSESSMENT_CACHE.get(name)
+        cached = _SEMANTIC_ASSESSMENT_CACHE.get(cache_key)
         if cached is not None:
             return cached
         rows = load_manifest(name)
         records = [blind_record_from_row(row) for row in rows]
-        embeddings = extract_embeddings(records, IP102_ROOT, EMBEDDING_CACHE, CLIP_MODEL_CACHE)
-        embeddings = {**embeddings, **trusted_projection()}
+        embeddings = extract_embeddings(records, IMAGE_ROOT, EMBEDDING_CACHE, CLIP_MODEL_CACHE)
         cached = assess_semantic(records, embeddings)
-        _SEMANTIC_ASSESSMENT_CACHE[name] = cached
+        _SEMANTIC_ASSESSMENT_CACHE.clear()
+        _SEMANTIC_ASSESSMENT_CACHE[cache_key] = cached
         return cached
 
 
@@ -131,14 +114,13 @@ def semantic_result_by_sample_id(name: str, sample_id: str) -> SemanticSampleRes
     return None
 
 
-@lru_cache(maxsize=1)
 def semantic_summary_document() -> dict:
     if not SEMANTIC_SUMMARY_FILE.is_file():
         return {}
-    return json.loads(SEMANTIC_SUMMARY_FILE.read_text(encoding="utf-8"))
+    payload = json.loads(SEMANTIC_SUMMARY_FILE.read_text(encoding="utf-8"))
+    return payload if evaluation_matches(payload) else {}
 
 
-@lru_cache(maxsize=1)
 def semantic_offline_metrics() -> dict[str, dict]:
     return {
         entry["dataset"]: entry
@@ -146,12 +128,11 @@ def semantic_offline_metrics() -> dict[str, dict]:
     }
 
 
-@lru_cache(maxsize=1)
 def semantic_sample_results() -> dict[str, dict[str, dict]]:
     if not SEMANTIC_SAMPLE_RESULTS_FILE.is_file():
         return {}
     payload = json.loads(SEMANTIC_SAMPLE_RESULTS_FILE.read_text(encoding="utf-8"))
-    if payload.get("detector", {}).get("config_hash") != detector_metadata()["config_hash"]:
+    if not evaluation_matches(payload):
         return {}
     return payload.get("datasets", {})
 
@@ -250,9 +231,34 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
             self.wfile.write(body)
             return
 
+        query = parse_qs(parsed.query)
+        corpus = query.get("corpus", ["fruitfly"])[0]
+        if corpus not in ("fruitfly", "stl10"):
+            self._send_json({"error": "Unknown corpus"}, HTTPStatus.BAD_REQUEST)
+            return
+        is_fruitfly = corpus == "fruitfly"
+        get_manifest = fruitfly.load_manifest if is_fruitfly else load_manifest
+        get_assessment = fruitfly.assessment_payload if is_fruitfly else assessment_payload
+        get_semantic = fruitfly.semantic_payload if is_fruitfly else semantic_payload
+        get_sample = fruitfly.semantic_result_by_sample_id if is_fruitfly else semantic_result_by_sample_id
+        get_classes = fruitfly.class_names if is_fruitfly else class_names
+        image_root = fruitfly.IMAGE_ROOT if is_fruitfly else IMAGE_ROOT
+        if parsed.path == "/api/training":
+            try:
+                if is_fruitfly:
+                    result = fruitfly.training_payload()
+                else:
+                    root = PROJECT_ROOT / "results/stl10_poisoning/multiseed_training"
+                    result, _ = fruitfly.document(root / "comparison.json")
+                    fruitfly.require(result["protocol_sha256"], fruitfly.digest(root / "protocol.json"))
+                self._send_json(result)
+            except (OSError, ValueError, KeyError) as error:
+                self._send_json({"error": str(error)}, HTTPStatus.CONFLICT)
+            return
+
         if parsed.path == "/api/summary":
             try:
-                self._send_json([assessment_payload(name) for name in DATASETS])
+                self._send_json([get_assessment(name) for name in DATASETS])
             except (OSError, ValueError) as error:
                 self._send_json({"error": str(error)}, HTTPStatus.INTERNAL_SERVER_ERROR)
             return
@@ -260,7 +266,7 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
         if parsed.path == "/api/semantic":
             try:
                 name = parse_qs(parsed.query).get("dataset", ["clean_subset"])[0]
-                self._send_json(semantic_payload(name))
+                self._send_json(get_semantic(name))
             except (OSError, ValueError, KeyError) as error:
                 self._send_json({"error": str(error)}, HTTPStatus.BAD_REQUEST)
             return
@@ -268,8 +274,8 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
         if parsed.path == "/api/sample":
             try:
                 name = parse_qs(parsed.query).get("dataset", ["clean_subset"])[0]
-                rows = load_manifest(name)
-                trusted = {row["sample_id"]: row for row in load_manifest("clean_subset")}
+                rows = get_manifest(name)
+                trusted = {row["sample_id"]: row for row in get_manifest("clean_subset")}
                 changed = [
                     row
                     for row in rows
@@ -281,12 +287,12 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
                 ]
                 row = random.choice(changed or rows)
                 trusted_row = trusted[row["sample_id"]]
-                names = class_names()
+                names = get_classes()
                 self._send_json(
                     {
                         "dataset": name,
                         "sample_id": row["sample_id"],
-                        "image_url": f"/api/image?sample_id={quote(row['sample_id'], safe='')}",
+                        "image_url": f"/api/image?corpus={corpus}&sample_id={quote(row['sample_id'], safe='')}",
                         "original_label": trusted_row["assigned_label"],
                         "original_name": names.get(trusted_row["assigned_label"], "unknown"),
                         "assigned_label": row["assigned_label"],
@@ -295,7 +301,7 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
                         "hash_changed": row["sha256"] != trusted_row["sha256"],
                         "sha256": row["sha256"],
                         "semantic": semantic_sample_payload(
-                            semantic_result_by_sample_id(name, row["sample_id"])
+                            get_sample(name, row["sample_id"])
                         ),
                     }
                 )
@@ -306,15 +312,15 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
         if parsed.path == "/api/image":
             try:
                 sample_id = parse_qs(parsed.query).get("sample_id", [""])[0]
-                allowed_ids = {row["sample_id"] for row in load_manifest("clean_subset")}
+                allowed_ids = {row["sample_id"]: row["source_relpath"] for row in get_manifest("clean_subset")}
                 if sample_id not in allowed_ids:
                     raise ValueError("Image is not part of the trusted experiment subset")
-                image_path = (IP102_ROOT / Path(sample_id)).resolve()
-                if not image_path.is_relative_to(IP102_ROOT.resolve()) or not image_path.is_file():
+                image_path = (image_root / allowed_ids[sample_id]).resolve()
+                if not image_path.is_relative_to(image_root.resolve()) or not image_path.is_file():
                     raise ValueError("Invalid image path")
                 body = image_path.read_bytes()
                 self.send_response(HTTPStatus.OK)
-                self.send_header("Content-Type", "image/jpeg")
+                self.send_header("Content-Type", mimetypes.guess_type(image_path.name)[0] or "application/octet-stream")
                 self.send_header("Content-Length", str(len(body)))
                 self.send_header("Cache-Control", "private, max-age=3600")
                 self.end_headers()
@@ -330,33 +336,25 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run the local IP102 integrity application.")
+    parser = argparse.ArgumentParser(description="Run the local fruit-fly and STL-10 dashboard.")
     parser.add_argument("--port", type=int, default=PORT)
     parser.add_argument("--no-browser", action="store_true")
     args = parser.parse_args()
 
     if not INDEX_FILE.is_file():
         raise FileNotFoundError(f"Frontend not found: {INDEX_FILE}")
-    if not TRUSTED_MANIFEST.is_file():
-        raise FileNotFoundError(
-            "Generate the experiment manifests with prepare_ip102_poisoning.py first"
-        )
-    if not EMBEDDING_CACHE.is_file():
-        print(
-            "Semantic embedding cache not found; the first /api/semantic or /api/sample "
-            "request will compute it with CLIP ViT-B/32 on CPU (slow, one-time)."
-        )
+    fruitfly.validated()  # Fail clearly instead of displaying stale default results.
 
     server = ThreadingHTTPServer((HOST, args.port), PoisoningRequestHandler)
     url = f"http://{HOST}:{args.port}"
-    print(f"S6 IP102 integrity + semantic detector running at {url}")
+    print(f"S6 fruit-fly dashboard (STL-10 available) running at {url}")
     print("Press Ctrl+C to stop.")
     if not args.no_browser:
         threading.Timer(0.8, webbrowser.open, args=(url,)).start()
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("\nStopping S6 IP102 integrity detector.")
+        print("\nStopping S6 STL-10 integrity detector.")
     finally:
         server.server_close()
 

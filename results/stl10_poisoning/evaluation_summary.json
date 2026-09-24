@@ -1,0 +1,63 @@
+{
+  "trusted_manifest": "E:\\研究生\\高级计算机项目\\data\\stl10_poisoning\\manifests\\clean_subset.csv",
+  "assessments": [
+    {
+      "decision": "ALLOW",
+      "risk_score": 0,
+      "reasons": "candidate matches the trusted manifest",
+      "trusted_samples": 4000,
+      "candidate_samples": 4000,
+      "label_changes": 0,
+      "hash_changes": 0,
+      "missing_samples": 0,
+      "unknown_samples": 0,
+      "duplicate_ids": 0,
+      "distribution_drift": 0.0,
+      "dataset": "clean_subset"
+    },
+    {
+      "decision": "BLOCK",
+      "risk_score": 6,
+      "reasons": "200 labels changed (5.00%), above the 2% block threshold",
+      "trusted_samples": 4000,
+      "candidate_samples": 4000,
+      "label_changes": 200,
+      "hash_changes": 0,
+      "missing_samples": 0,
+      "unknown_samples": 0,
+      "duplicate_ids": 0,
+      "distribution_drift": 0.006499999999999999,
+      "dataset": "label_flip_05"
+    },
+    {
+      "decision": "BLOCK",
+      "risk_score": 6,
+      "reasons": "400 labels changed (10.00%), above the 2% block threshold",
+      "trusted_samples": 4000,
+      "candidate_samples": 4000,
+      "label_changes": 400,
+      "hash_changes": 0,
+      "missing_samples": 0,
+      "unknown_samples": 0,
+      "duplicate_ids": 0,
+      "distribution_drift": 0.008999999999999987,
+      "dataset": "label_flip_10"
+    },
+    {
+      "decision": "REVIEW",
+      "risk_score": 3,
+      "reasons": "80 labels changed (2.00%)",
+      "trusted_samples": 4000,
+      "candidate_samples": 4000,
+      "label_changes": 80,
+      "hash_changes": 0,
+      "missing_samples": 0,
+      "unknown_samples": 0,
+      "duplicate_ids": 0,
+      "distribution_drift": 0.019999999999999997,
+      "dataset": "targeted_0_to_1"
+    }
+  ],
+  "flagged_sample_findings": 680,
+  "important_limitation": "Exact label-change detection requires an independently trusted baseline. Distribution checks alone cannot prove that an individual label is correct."
+}

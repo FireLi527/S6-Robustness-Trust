@@ -1,0 +1,14 @@
+{
+  "image_hashes_verified": 4000,
+  "label_changes": {
+    "clean_subset": 0,
+    "label_flip_05": 200,
+    "label_flip_10": 400,
+    "targeted_0_to_1": 80
+  },
+  "hidden_ground_truth_read": false,
+  "seed": 2026,
+  "epochs": 20,
+  "selection": "best validation macro-F1",
+  "test_used_for_selection": false
+}

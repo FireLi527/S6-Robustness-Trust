@@ -9,3 +9,8 @@ thefuzz
 emoji
 pyyaml
 openai==0.28.1
+
+# Supervised classification baseline
+scikit-learn
+scipy
+joblib

@@ -1,253 +1,125 @@
-# IP102 图片数据投毒 Base
+# STL-10 图片标签投毒 Baseline
 
-这个 base 演示 S6 安全层如何在模型训练或数据摄取之前验证候选训练数据。它会生成受控的 IP102 标签投毒清单，与独立可信清单进行比较，并通过本地 Python 后端和浏览器前端展示结果。
+2026-09-11 起，默认图像 baseline 切换到 STL-10。IP102 原始数据、清单、结果和旧训练脚本保留，旧说明见 [IP102 历史记录](README_IP102_HISTORY_ZH.md)。提示词注入 baseline 不变。
 
-## 目录结构
+## 数据与实验协议
 
-```text
-data_poisoning/
-├─ app.py                       本地 HTTP 后端
-├─ integrity_detector.py        清单完整性判定策略（D0）
-├─ manifest_protocol.py         D1 候选清单／隐藏真值文件级隔离协议
-├─ semantic_detector.py         语义标签异常判定策略（D2），对隐藏答案盲评
-├─ prepare_ip102_poisoning.py   生成干净和投毒清单
-├─ evaluate_manifests.py        integrity_detector.py 的批量评估
-├─ evaluate_semantic.py         semantic_detector.py 的批量评估
-├─ train_ip102_models.py        五分类 ResNet18 模型行为实验
-├─ verify_training_environment.py  WSL/CUDA 训练环境自检
-├─ requirements-windows.txt     torch/torchvision（CPU 版）+ scikit-learn + pillow + open_clip_torch
-├─ requirements-training-linux.txt  WSL/Linux GPU 训练依赖
-├─ tests/                       协议、完整性与语义检测单元测试
-├─ start.cmd                    当前 base 的双击启动入口
-└─ web/
-   └─ index.html                浏览器前端
-```
+- 使用全部 10 个类别的带标签数据，图片为 96×96 RGB。
+- 官方训练集 5,000 张：按 seed=2026 分层划分为候选训练 4,000 张（每类 400）和验证 1,000 张（每类 100）。
+- 官方测试集 8,000 张保持独立。10 万张无标签数据不下载、不参与本次实验。
+- 四份候选清单使用相同图片：干净、5% 随机标签翻转（200 张）、10% 翻转（400 张）、类别 0 airplane → 类别 1 bird（源类 20%，80 张，总体 2%）。
+- 这是自定义 S6 受控标签投毒协议，不是 STL-10 官方十折分类榜单协议。
+- 候选清单只含 sample_id、source_relpath、sha256、assigned_label。隐藏投毒真值单独保存，只在冻结检测输出后评分。
 
-大型数据和生成结果放在代码目录之外：
+## 下载与运行
 
-```text
-external/IP102/                        不可修改的约 3 GB 原始数据
-external/clip_cache/                   缓存的 CLIP ViT-B/32 预训练权重（约 580 MB）
-data/ip102_poisoning/manifests/        只含可摄取字段的候选 CSV 清单
-data/ip102_poisoning/hidden_ground_truth/  只供冻结预测后评分的隐藏真值
-data/ip102_poisoning/embeddings/       缓存的 CLIP ViT-B/32 图片特征（按 sha256 索引）
-results/ip102_poisoning/               数据集及样本级检测结果
-results/ip102_poisoning/model_training/  小型训练摘要、曲线和逐样本预测
-~/s6-training-artifacts/               WSL/D 盘上的 checkpoint 与 TensorBoard 日志
-```
-
-程序不会覆盖 IP102 原始图片。标签投毒只修改生成清单中的 `assigned_label`。
-
-## 快速启动前端和后端
-
-双击本目录下的 `start.cmd`，或在终端中直接运行它。
-
-第一次运行时，如果清单不存在，启动器会自动生成。后端随后运行在：
-
-```text
-http://127.0.0.1:8766
-```
-
-浏览器会自动打开前端。使用时保持终端开启；需要停止时在终端按 `Ctrl+C`。
-前端会先显示快速的清单完整性结果，再加载语义摘要。正式评估生成的
-`semantic_sample_results.json` 会被后端直接读取，因此启动页面不会重新拟合 NCA。
-
-### 前端如何使用
-
-1. 查看页面顶部四个数据集的整体判定——每张卡片同时展示完整性检测徽章和语义检测徽章。
-2. 选择干净清单、5% 翻转、10% 翻转或定向投毒清单。
-3. 点击“随机查看样本”。
-4. 对比可信原始标签和候选训练标签。
-5. 查看真实 IP102 图片、SHA-256、完整性判定和说明；下方还有语义检测判定、风险分数、原因和最近邻样本。
-6. 可以连续随机抽样，不必重启后端。
-
-在投毒清单中，随机抽样会优先选择标签发生变化的记录，方便观察。图片本身可能完全正常，因为标签投毒修改的是训练元数据，而不是图像像素。
-
-## 手动启动后端
+在项目根目录 PowerShell 中：
 
 ```powershell
-& 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe' `
-  'E:\研究生\高级计算机项目\s6\data_poisoning\app.py'
+& .venv-bipia/Scripts/python.exe -m pip install -r s6/data_poisoning/requirements-data.txt
+& .venv-bipia/Scripts/python.exe s6/data_poisoning/download_stl10.py
+& .venv-bipia/Scripts/python.exe s6/data_poisoning/prepare_stl10_poisoning.py
+& .venv-bipia/Scripts/python.exe s6/data_poisoning/evaluate_manifests.py
+& .venv-bipia/Scripts/python.exe s6/data_poisoning/evaluate_semantic.py
+& .venv-bipia/Scripts/python.exe s6/data_poisoning/app.py
 ```
 
-可选参数：
+或双击 `start.cmd` 启动前后端（需先下载数据）。地址为 http://127.0.0.1:8766。
 
-```text
---port 8766       修改本地端口
---no-browser      只启动后端，不自动打开浏览器
-```
+官方下载缓慢时，下载脚本使用固定版本的公开 Parquet 镜像，校验 SHA-256，并将像素与标签还原成官方二进制格式，核对 torchvision 记录的四项官方 MD5。任何不一致均报错，不进入实验。
 
-### 后端接口
+## 当前语义检测器 v0.5.0
 
-#### `GET /api/summary`
+使用冻结 CLIP ViT-B/32 的原始 512 维特征，组合 15 近邻标签一致率、五折逻辑回归候选标签置信度和类别中心距离。三项权重仍为 0.4/0.4/0.2，REVIEW/QUARANTINE 阈值沿用 0.62/0.75，不依据新投毒结果调参。
 
-重新评估所有候选清单，返回数据集判定、风险分数、标签变化、哈希变化、缺失/未知样本、重复标识和类别分布漂移。
+移除了旧版跨折 NCA 特征拼接：独立投影空间的向量不能直接混合计算距离。新流程不读取可信原标签来拟合投影。逻辑回归是检测器的轻量统计模型，与下游 ResNet18 是两回事。
 
-#### `GET /api/sample?dataset=label_flip_05`
+风险分数不是已校准的投毒概率。候选标签会影响参考统计；单类数据没有分类器置信度；重复图片必须先处理，避免同图跨折泄漏。冻结特征来自预训练模型，不能声称其预训练数据与 STL-10/ImageNet 来源无重叠。
 
-从指定数据集中随机返回一个样本，包括可信标签、候选标签、哈希状态、类别名称和安全的本地图像地址。
+离线检测结果同时绑定检测器配置/代码和四份清单哈希，防止修改清单后继续显示旧结果。展示抽样优先选择被改标签的样本，仅用于演示，不代表总体分布。
 
-#### `GET /api/image?sample_id=...`
+## 文件与训练
 
-只有样本属于可信实验子集时才返回图片。路径验证可防止接口读取任意本地文件。
+- `external/STL10/`：下载与校验后的上游数据。
+- `data/stl10_poisoning/images/`：从官方像素无损导出的 PNG 及训练/验证/测试索引。
+- `data/stl10_poisoning/manifests/`：候选清单。
+- `data/stl10_poisoning/hidden_ground_truth/`：评分真值。
+- `results/stl10_poisoning/`：当前评估结果。
+- `train_stl10_models.py`：十分类 ResNet18 训练，默认候选训练集 4,000 张，验证 1,000 张，测试 8,000 张。
 
-#### `GET /api/semantic?dataset=label_flip_05`
-
-优先读取与当前检测器配置哈希匹配的预计算结果，返回指定数据集的
-`ALLOW`/`REVIEW`/`QUARANTINE` 判定分布、平均风险分数和检测器元数据。
-预计算文件不存在或版本不匹配时，才回退到现场运行 `semantic_detector.py`。
-
-`GET /api/sample` 的返回体也会附带该样本的 `semantic` 字段：判定、风险分数、可读原因、最近邻样本的候选标签与距离，以及原始信号值（`neighbor_label_agreement`、`classifier_confidence`、`centroid_distance_z`）。
-
-前端不负责决定数据是否安全。所有结果均由后端调用 `integrity_detector.py` 和 `semantic_detector.py` 产生，前端只负责展示。
-
-## 生成实验数据
-
-```powershell
-& 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe' `
-  'E:\研究生\高级计算机项目\s6\data_poisoning\prepare_ip102_poisoning.py'
-```
-
-实验使用固定随机种子、五个类别和每类 200 张训练图片：
-
-- `clean_subset`：1,000 条可信记录
-- `label_flip_05`：50 条随机标签变化
-- `label_flip_10`：100 条随机标签变化
-- `targeted_0_to_1`：40 条类别 0 被修改为类别 1
-
-生成器执行 D1 文件级盲评协议：
-
-- `manifests/*.csv` 每行严格只有 `sample_id`、`source_relpath`、`sha256`、
-  `assigned_label`，检测器和训练程序只能读取这一侧。
-- `hidden_ground_truth/*.csv` 单独保存 `original_label`、`poisoned` 和
-  `poison_type`，仅评估程序在预测已经冻结之后读取。
-- `manifest_protocol.py` 会拒绝候选清单中的任何额外字段；隐藏答案即使被误加回候选 CSV，
-  单元测试和运行时加载都会立即失败。
-
-## 批量评估
-
-```powershell
-& 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe' `
-  'E:\研究生\高级计算机项目\s6\data_poisoning\evaluate_manifests.py'
-```
-
-检测器无法读取 `poisoned` 答案字段，因为候选清单物理上没有该列；它独立比较样本成员、
-SHA-256、标签、重复记录和类别分布。
-
-## 五分类模型行为实验
-
-WSL 训练环境位于 `~/.venvs/s6-training`。完整四组实验命令：
+现有 WSL GPU 环境：
 
 ```bash
-source ~/.venvs/s6-training/bin/activate
 cd /mnt/e/研究生/高级计算机项目
-python s6/data_poisoning/train_ip102_models.py --all \
-  --epochs 20 --batch-size 32 --workers 4 --seed 2026 --pretrained --amp
+/home/anima/.venvs/s6-training/bin/python s6/data_poisoning/evaluate_semantic.py
+/home/anima/.venvs/s6-training/bin/python s6/data_poisoning/train_stl10_models.py --all --epochs 20 --batch-size 32 --workers 4 --seed 2026 --pretrained --amp
 ```
 
-训练程序通过 `manifest_protocol.load_candidate_manifest()` 读取候选清单；只要 CSV 含有
-`original_label` 或 `poisoned` 等额外字段就拒绝启动。模型使用相同的 ImageNet 预训练
-ResNet18、初始化种子、增强、AdamW 和余弦学习率计划，验证与测试来自 IP102 官方、与训练
-分离的 `val.txt`/`test.txt`。checkpoint 和 TensorBoard 日志默认写到 WSL 虚拟磁盘所在的
-`~/s6-training-artifacts/`，避免继续占用仅剩约 40 GB 的 E 盘；E 盘只保存约 0.5 MB 的
-历史、预测与 JSON 摘要。
+训练产物位于 `~/s6-training-artifacts/stl10/`，不会覆盖 IP102 权重。运行完整训练不属于数据集切换的必要步骤；旧 IP102 准确率不能作为 STL-10 的结果。
 
-### 首轮真实测量结果（seed=2026）
+测试：在 `s6/data_poisoning/` 下运行 `../../.venv-bipia/Scripts/python.exe -B -m unittest discover -s tests -v`。
 
-| 训练候选清单 | 测试准确率 | Balanced accuracy | Macro-F1 | 真类 0→预测类 1 | 准确率相对干净组 |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| `clean_subset` | 0.6924 | 0.6859 | 0.6835 | 0.1134 | — |
-| `label_flip_05` | 0.6452 | 0.6490 | 0.6399 | 0.1313 | -0.0472 |
-| `label_flip_10` | 0.6642 | 0.6654 | 0.6520 | 0.1254 | -0.0281 |
-| `targeted_0_to_1` | 0.6407 | 0.6742 | 0.6502 | 0.3104 | -0.0517 |
+数据来源：https://cs.stanford.edu/~acoates/stl10/
 
-定向组最重要的结果不是总体准确率，而是类别 0 被预测成目标类别 1 的比例从干净模型的
-11.34% 升到 31.04%，增加 19.70 个百分点。两个随机翻转结果在单一 seed 下没有呈现严格的
-剂量单调性（10% 组反而略好于 5% 组），所以这是一轮可复现的初始测量，不是统计显著性结论；
-后续应至少增加多个训练 seed，报告均值、标准差和置信区间。
+## 首轮实测（2026-09-11）
 
-完整汇总位于 `results/ip102_poisoning/model_training/comparison_summary.json`，每组目录还包含
-训练历史、验证/测试逐样本预测和完整混淆矩阵。
+以下为候选训练清单上的标签投毒检测，不是下游分类准确率，也不是未见攻击泛化结论。参数未按本轮结果调优。
 
-## 语义标签异常检测器（D2）
+| 条件 | 精确率 | 检出率 | 干净样本误报率 |
+|---|---:|---:|---:|
+| clean_subset | — | — | 1.50% |
+| label_flip_05 | 79.05% | 100.00% | 1.39% |
+| label_flip_10 | 89.69% | 100.00% | 1.28% |
+| targeted_0_to_1 | 57.66% | 98.75% | 1.48% |
 
-`integrity_detector.py` 只在存在可信基准清单时才有效——它本质是一个 diff 工具，不检查图片内容本身。`semantic_detector.py` 则相反：不依赖任何可信清单，直接判断图片像素内容是否符合它声称的候选标签。
+17 项回归测试通过；四组真实 HTTP 接口、冻结结果读取、图片返回和越界路径拦截通过。STL-10 四组 ResNet18 已完成 seed=2026、20 epochs 首轮训练；模型、清单哈希和逐样本测试指标均已核验。数据集和投影方法同时变化，因此不能把相对历史 IP102 的改善全部归因于数据集。
 
-它在接口和文件两层都对隐藏答案“盲”：其输入类型 `SemanticInputRecord` 只有
-`sample_id`、`source_relpath`、`sha256`、`assigned_label` 四个字段；检测器读取的候选 CSV
-也严格只有这四列。`evaluate_semantic.py` 先只加载候选文件并冻结全部判定，之后才打开
-`hidden_ground_truth/*.csv`，按 `sample_id` 校验一一对应后用于打分。模块断言、严格 CSV
-schema 和单元测试共同守护这一约定，D1 文件级拆分现已完成。
+## 下游分类模型首轮训练已完成（2026-09-18）
 
-### 安装额外依赖
+| 候选训练集 | 测试准确率 | Macro-F1 | 飞机→鸟误分类率 |
+|---|---:|---:|---:|
+| 干净 | 94.44% | 0.9444 | 0.375% |
+| 5% 标签翻转 | 92.49% | 0.9248 | 0.500% |
+| 10% 标签翻转 | 89.89% | 0.8986 | 1.125% |
+| 定向标签翻转 | 93.03% | 0.9303 | 10.000% |
 
-基础依赖（`bipia` 自身的依赖）不包含视觉模型栈。在共享 venv 中安装 CPU 版 PyTorch/TorchVision、scikit-learn、Pillow 以及 open_clip：
+四组采用相同训练协议，以验证集 Macro-F1 选模，再评估独立测试集。定向组只改动80张训练标签，目标误分类率增加9.625个百分点。该初始攻击对照为单种子结果；后续防御实验见下节，多种子重复仍待完成。
+
+完整报告与学习曲线见 [训练报告](../../results/stl10_poisoning/model_training/training_report_ZH.md)。可在WSL使用现有训练环境运行 `s6/data_poisoning/report_stl10_training.py`，重新核验和生成报告。
+
+## 防御后重训练已完成（2026-09-19）
+
+固定策略为仅保留 ALLOW，REVIEW/QUARANTINE 暂缓进入训练，不改标签。完成8个防御/等量随机删除模型，加上原4组共12个模型；模型文件、清单哈希和逐样本测试指标均核验通过。
+
+| 条件 | 未处理准确率 | 等量随机删除 | 语义筛选后 |
+|---|---:|---:|---:|
+| clean_subset | 94.44% | 93.84% | 93.95% |
+| label_flip_05 | 92.49% | 91.91% | 92.81% |
+| label_flip_10 | 89.89% | 89.83% | 93.79% |
+| targeted_0_to_1 | 93.03% | 92.95% | 94.08% |
+
+定向飞机→鸟误分类率：未处理10%，随机删除8.875%，语义筛选0.125%。5%/10%随机投毒清单分别移除全部200/400个投毒样本，但同时误隔离53/46个正常样本；定向组移除79个投毒样本、误隔离58个正常样本，剩余1个投毒样本。干净组误隔离60张，准确率从94.44%降至93.95%。
+
+这说明固定防御策略在本轮受控实验中减轻了损害，效果与代价均存在。5%组仅提升0.325个百分点，不能把检测检出率当成性能恢复幅度。本轮是单训练种子和单随机删除种子；随机对照匹配总删除数，未匹配类别分布，尚未进行多种子统计验证。
+
+[完整报告与对照图](../../results/stl10_poisoning/defense_training/defense_report_ZH.md) · [实验协议](DEFENSE_PROTOCOL_ZH.md)
+
+## 多训练种子重复
+
+在已有 seed=2026 的 12 组实验基础上，新增 seed=2027、2028，共 36 个模型。固定数据划分、投毒和防御选择，只改变训练随机性。详细协议见 [防御实验协议](DEFENSE_PROTOCOL_ZH.md)。
+
+从项目根目录启动或恢复：
 
 ```powershell
-& 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe' -m pip install torch torchvision `
-  --index-url https://download.pytorch.org/whl/cpu
-& 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe' -m pip install `
-  -r 'E:\研究生\高级计算机项目\s6\data_poisoning\requirements-windows.txt'
+wsl.exe -d Ubuntu-24.04 -- /home/anima/.venvs/s6-training/bin/python -u s6/data_poisoning/train_stl10_multiseed.py
 ```
 
-这里有两次一次性下载：CPU 版 PyTorch 轮子约 300–400 MB；`extract_embeddings()` 第一次运行时还会再下载约 580 MB 的 CLIP ViT-B/32（OpenAI 权重）预训练模型。两者都会被缓存——PyTorch 轮子留在 venv 里，CLIP 权重则通过 `cache_dir=` 参数重定向缓存到 `external/clip_cache/`，不会落到用户级默认目录 `%USERPROFILE%\.cache\huggingface\`，以符合本仓库“所有不可变的第三方下载都放在 `external/` 下”的约定。
+完成进度保存在 `results/stl10_poisoning/multiseed_training/progress.json`。全部完成后自动校验并生成该目录下的 `multiseed_report_ZH.md`，包含三种子的均值、样本标准差和同一种子内的配对防御增益。尚未完成全部模型时不生成汇总结论。
 
-### 工作原理
+## 小组实蝇数据
 
-1. `extract_embeddings()` 用一个冻结的预训练 CLIP ViT-B/32 图像编码器（`open_clip`，OpenAI 权重，quick-GELU 变体以匹配原始权重）对每张唯一图片提取 512 维特征，按 SHA-256 缓存到磁盘——四份清单共用同一批 1,000 张图片，因此只需付出一次 CPU 推理成本。此版本替换了早期的 ResNet18/ImageNet1K 版本（检测器 `0.1.0`）：通用 ImageNet 监督特征在这五个细粒度害虫类别上区分度不够，因此 `0.2.0` 换用 CLIP 的对比学习特征，测试其是否能把这五类分得更开（结果没有，见下文）。
-2. `fit_trusted_projection()`（检测器 `0.3.0`，`0.4.0` 中修订）只在 `clean_subset.csv` 的可信 `assigned_label` 上——也就是 `integrity_detector.py` 已经当作可信基准的那份清单——拟合一个投影，采用 5 折分层交叉验证，保证每张可信图片的投影特征都来自一个从未见过该图片的模型。`0.3.0` 用的是 `LinearDiscriminantAnalysis`，被限制在 `n_classes - 1 = 4` 维；`0.4.0` 换成了 `NeighborhoodComponentsAnalysis`（NCA），它直接优化 soft k-NN 分类目标（正好对应下面最近邻一致性信号实际需要的东西），且不受类别数限制，因此投影到 `PROJECTION_COMPONENTS = 32` 维。这就是"在可信干净子集上做微调/度量学习"这一步,每次运行都重新计算(不额外缓存——在 1,000 个 512 维向量上拟合速度很快)。由于每份候选清单共用同一批 1,000 张图片(只有 `assigned_label` 不同),这一次可信拟合就能覆盖所有样本的投影特征。
-3. `assess_semantic()` 组合三个独立信号,现在都基于投影后的特征而非原始 CLIP 特征计算:
-   - **最近邻标签一致性**——对特征做余弦距离 k-NN（`k=15`），统计每个样本的最近邻中有多少比例与其候选标签一致。
-   - **交叉验证分类器分歧**——用 `LogisticRegression` 做 5 折分层 out-of-fold 预测（`cross_val_predict`），保证没有样本被自己训练出来的模型评分；记录模型对候选标签的置信度。
-   - **类别中心距离**——样本到其候选类别（留一）中心的距离，相对该类别典型距离分布做 z-score。
-4. 三个信号加权（`neighbor_disagreement` 0.4、`classifier_disagreement` 0.4、`centroid_distance` 0.2）得到 `risk_score`，按阈值判定为 `ALLOW`（`< 0.62`）/ `REVIEW`（`< 0.75`）/ `QUARANTINE`（`>= 0.75`）。
+已新增独立的5类实蝇图像实验入口，保留STL-10对照。数据审计、推断编号分组、完整训练范围和运行命令见 [实蝇实验协议](FRUITFLY_PROTOCOL_ZH.md)。
 
-### 运行评估
+## 标本分组防御扩展
 
-```powershell
-& 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe' `
-  'E:\研究生\高级计算机项目\s6\data_poisoning\evaluate_semantic.py'
-```
-
-会写出 `results/ip102_poisoning/semantic_assessments.csv`（数据集级指标）、
-`semantic_flagged_samples.csv`（每个被标记为 `REVIEW`/`QUARANTINE` 的样本，包含误报，供人工检查）、
-`semantic_evaluation_summary.json`，以及供本地控制台快速查询全部 4,000 条检测结果的
-`semantic_sample_results.json`。
-
-### 真实测量结果
-
-在真实的 1,000 张图片、5 类 IP102 子集上测得（`REVIEW_THRESHOLD=0.62`、`QUARANTINE_THRESHOLD=0.75`，阈值是根据 clean_subset 的风险分数百分位数选取的，没有用单个样本的投毒标签去调参），使用可信标签 NCA 投影 + CLIP ViT-B/32 特征（检测器 `0.4.0`）：
-
-| 数据集 | ALLOW | REVIEW | QUARANTINE | 精确率 | 召回率 | F1 | 干净误报率 | ROC-AUC |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `clean_subset`（0% 投毒） | 662 | 234 | 104 | — | — | — | 0.338 | — |
-| `label_flip_05`（5%） | 646 | 246 | 108 | 0.102 | 0.72 | 0.178 | 0.335 | 0.740 |
-| `label_flip_10`（10%） | 620 | 262 | 118 | 0.179 | 0.68 | 0.283 | 0.347 | 0.780 |
-| `targeted_0_to_1`（约 4%） | 646 | 238 | 116 | 0.040 | 0.35 | 0.071 | 0.354 | 0.538 |
-
-**这是第三个持平/混合结果——把 LDA 换成 `NeighborhoodComponentsAnalysis` 并没有追回原始 CLIP 特征的基线水平（检测器 `0.2.0`：精确率 0.057–0.216，召回率 0.425–0.79，ROC-AUC 0.647–0.805），相比 LDA 投影（检测器 `0.3.0`：精确率 0.029–0.208，召回率 0.225–0.75，ROC-AUC 0.570–0.802）也只是部分改善。** NCA 确实找回了一些 LDA 丢失的召回率（`targeted_0_to_1` 从 22.5% 提到 35%，`label_flip_05` 从 64% 提到 72%），这两个数据集上的精确率/F1 也略有提升。但 `label_flip_10` 在每一项指标上都比 LDA 更差（精确率 0.208 → 0.179，召回率 0.75 → 0.68，ROC-AUC 0.802 → 0.780），四个数据集的干净误报率普遍略微上升（均值约 0.34，高于 LDA 的约 0.33），而 `targeted_0_to_1` 的 ROC-AUC 仍接近随机猜测（0.538，比 LDA 本就不理想的 0.570 还略低，远低于原始 CLIP 的 0.647）。在三个投毒数据集上取平均，NCA 的平均 ROC-AUC（0.686）低于 LDA（0.708），两者都低于原始 CLIP（取其区间中点约 0.706）。这说明此前对 LDA 结果的诊断只对了一半：NCA 确实修正了”优化目标不对”这一半（它直接优化 k-NN 式的近邻一致性），也因此带来了真实的召回率提升，但去掉 `n_classes - 1` 的维度上限并没有换来更好的整体区分度。结合此前 CLIP 与 ResNet18 的对比结果以及 LDA 的结果，这已经是连续三次尝试改造嵌入空间（换主干网络，再换两种不同的可信标签投影），却都未能让 ROC-AUC 和精确率明显超过最初原始 CLIP 的测量结果——有力地说明瓶颈根本不在嵌入/投影方式的选择上，而在于这三个信号本身依赖的通用距离/近邻结构，在这五个视觉上相近的害虫类别上，无论用什么冻结的、非端到端训练的特征都撑不起来。要进一步突破，大概率需要一个针对这个具体分类任务端到端训练的模型，这已经超出了本 baseline 的范围。
-
-上段所说“超出 baseline 范围”特指用端到端模型替换 D2 异常检测器；本轮新增的 ResNet18
-训练则把端到端模型作为**下游受害模型**，用于测量标签投毒造成的行为影响，两者角色不同。
-
-“被标记”指判定为 `REVIEW` 或 `QUARANTINE`（即非 `ALLOW`）。精确率/召回率/F1 是对照独立
-隐藏真值中的 `poisoned` 字段计算的，但该文件只在检测器判定被冻结**之后**才被读取——见
-`evaluate_semantic.py`。
-
-**请仔细看这些数字——这个检测器是一个真实但有噪声的信号，在这个规模下还不是可靠的分类器。** 即使是标注完全正确的 IP102 图片，在这套流程下看起来也很模糊：在全干净的 `clean_subset` 上，`REVIEW` 档的干净误报率约为 34%。两个随机翻转数据集的召回率还算可以（68–72%），但定向翻转数据集的召回率明显下降（35%，仍低于加入投影之前测得的 42.5%），ROC-AUC 范围是 0.54–0.78——随机翻转场景仍有实质区分度，但定向翻转场景已经接近随机猜测。精确率整体偏低（4.0–17.9%），意味着大多数单条 `REVIEW`/`QUARANTINE` 标记其实是需要人工排查的误报。这个检测器更适合当作”优先复核”信号，而不是可以自主执行隔离的判定。
-
-## 安全与研究限制
-
-- 精确识别标签变化需要一份独立、可信且受访问控制保护的基准清单；如果攻击者能同时修改两份清单，直接比较将失效。
-- 仅靠类别分布漂移无法证明单个标签是否正确。
-- 语义检测器的交叉验证分类器和类别中心都是在候选清单*自身*的标签上拟合的。投毒比例非常高时，这份参照统计本身就会被污染——目前只在 10% 随机翻转和约 4% 定向翻转的比例下做过测量，没有测过多数样本被投毒的情况。
-- 语义检测的精确率偏低（实测 4.0–17.9%，见上文）——实际部署应该把它当作人工复核队列的优先级排序信号，而不是可以独立执行隔离的判定。三次连续尝试改造嵌入空间——把特征提取器从 ResNet18/ImageNet1K 换成 CLIP ViT-B/32、在可信干净子集上做 LDA 投影（检测器 `0.3.0`）、再换成 NCA 投影（检测器 `0.4.0`）——都没有明显改善这一点；定向翻转场景尤其明显，三次嵌入方式的改动下 ROC-AUC 始终徘徊在接近随机猜测的 0.54–0.65 区间。这种模糊性看起来是这五个类别在任何冻结的、非端到端训练特征下的固有属性，而不是这个 baseline 的信号能修正的嵌入空间问题。
-- D1 已实现文件级隔离，但 `hidden_ground_truth/` 目前只是实验目录分离，并不是操作系统级访问控制；生产环境仍需为评分账户与训练账户配置不同权限。
-- 当前版本已测量标签投毒对模型行为的影响；像素后门仍需要额外的图像变换、触发器检测和攻击成功率实验。
-- 模型行为表目前只有一个训练 seed；它能证明本次可复现实验中的影响，不能估计跨 seed 方差或统计显著性。
-- 生产环境还应使用签名清单、基于角色的访问控制、不可修改审计日志、隔离、审批和回滚。
-- 服务只绑定 `127.0.0.1`，且只允许读取可信子集中的图片。
-
-英文说明见 [README.md](README.md)。
-
-后续里程碑见 [../BASELINE_ROADMAP_ZH.md](../BASELINE_ROADMAP_ZH.md)。
+新增按标本隔离的检测器开发与12组分类对照，保留首轮结果。详见[标本分组防御协议](FRUITFLY_GROUPED_DEFENSE_ZH.md)。

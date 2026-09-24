@@ -20,19 +20,18 @@ from semantic_detector import (
     blind_record_from_row,
     detector_metadata,
     extract_embeddings,
-    fit_trusted_projection,
 )
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-IP102_ROOT = PROJECT_ROOT / "external" / "IP102"
-MANIFEST_ROOT = PROJECT_ROOT / "data" / "ip102_poisoning" / "manifests"
-GROUND_TRUTH_ROOT = PROJECT_ROOT / "data" / "ip102_poisoning" / "hidden_ground_truth"
+from dataset_config import IMAGE_ROOT, manifest_hashes
+MANIFEST_ROOT = PROJECT_ROOT / "data" / "stl10_poisoning" / "manifests"
+GROUND_TRUTH_ROOT = PROJECT_ROOT / "data" / "stl10_poisoning" / "hidden_ground_truth"
 EMBEDDING_CACHE = (
-    PROJECT_ROOT / "data" / "ip102_poisoning" / "embeddings" / "clip_vit_b32_embeddings.npz"
+    PROJECT_ROOT / "data" / "stl10_poisoning" / "embeddings" / "clip_vit_b32_embeddings.npz"
 )
 CLIP_MODEL_CACHE = PROJECT_ROOT / "external" / "clip_cache"
-RESULTS_ROOT = PROJECT_ROOT / "results" / "ip102_poisoning"
+RESULTS_ROOT = PROJECT_ROOT / "results" / "stl10_poisoning"
 CANDIDATES = ("clean_subset", "label_flip_05", "label_flip_10", "targeted_0_to_1")
 
 
@@ -139,11 +138,7 @@ def main() -> None:
     all_records = [
         blind_record_from_row(row) for rows in all_rows.values() for row in rows
     ]
-    embeddings = extract_embeddings(all_records, IP102_ROOT, EMBEDDING_CACHE, CLIP_MODEL_CACHE)
-
-    trusted_records = [blind_record_from_row(row) for row in all_rows["clean_subset"]]
-    projected = fit_trusted_projection(trusted_records, embeddings)
-    embeddings = {**embeddings, **projected}
+    embeddings = extract_embeddings(all_records, IMAGE_ROOT, EMBEDDING_CACHE, CLIP_MODEL_CACHE)
 
     summaries = []
     flagged_all: list[dict] = []
@@ -176,20 +171,16 @@ def main() -> None:
 
     summary_payload = {
         "detector": detector_metadata(),
+        "manifest_hashes": manifest_hashes(),
         "datasets": summaries,
         "flagged_sample_findings": len(flagged_all),
         "important_limitation": (
-            "The classifier and centroid signals are fit on each manifest's own "
-            "candidate labels, so at very high poison rates the reference statistics "
-            "themselves become contaminated. This detector does not require a trusted "
-            "baseline manifest for its per-sample decisions, unlike integrity_detector.py, "
-            "but its accuracy has only been measured up to a 10% random-flip and a "
-            "20%-of-source-class targeted flip rate. Embeddings are now projected with an "
-            "NCA (NeighborhoodComponentsAnalysis) fit on clean_subset.csv's trusted labels "
-            "(out-of-fold across 5 folds), so the projection itself does rely on that "
-            "trusted manifest; it has only "
-            "been fit and evaluated on this fixed 1,000-image/5-class benchmark, so its "
-            "generalization to genuinely new, unseen images of these classes is untested."
+            "Raw frozen CLIP embeddings only; no trusted-label projection. Candidate labels "
+            "fit the classifier and centroid statistics and can contaminate them. "
+            "Scores are anomaly scores, not calibrated poisoning probabilities. "
+            "Thresholds 0.62/0.75 are inherited, not tuned on STL-10 attack results. "
+            "This custom protocol is not the official STL-10 fold benchmark. "
+            "Pretrained representations may overlap STL-10/ImageNet source imagery."
         ),
     }
     summary_file.write_text(
@@ -199,6 +190,7 @@ def main() -> None:
         json.dumps(
             {
                 "detector": detector_metadata(),
+                "manifest_hashes": manifest_hashes(),
                 "datasets": sample_results_by_dataset,
             },
             ensure_ascii=False,

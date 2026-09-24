@@ -11,8 +11,8 @@ from integrity_detector import assess_manifest
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-MANIFEST_ROOT = PROJECT_ROOT / "data" / "ip102_poisoning" / "manifests"
-RESULTS_ROOT = PROJECT_ROOT / "results" / "ip102_poisoning"
+MANIFEST_ROOT = PROJECT_ROOT / "data" / "stl10_poisoning" / "manifests"
+RESULTS_ROOT = PROJECT_ROOT / "results" / "stl10_poisoning"
 TRUSTED_MANIFEST = MANIFEST_ROOT / "clean_subset.csv"
 CANDIDATES = (
     "clean_subset",

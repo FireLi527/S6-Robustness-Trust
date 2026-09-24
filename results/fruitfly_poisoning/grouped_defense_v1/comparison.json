@@ -1,0 +1,151 @@
+{
+  "status": "VERIFIED",
+  "seed": 2026,
+  "selection_plan_sha256": "732fb579192c6c701f770c26e7842b49d3954e7feb05c2b02fd01b4cd382188c",
+  "rows": [
+    {
+      "dataset": "clean_subset",
+      "strategy": "untreated",
+      "training_samples": 6531,
+      "test_accuracy": 0.99243,
+      "macro_f1": 0.99139,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": 0.0,
+      "poisoned_removed": 0,
+      "clean_removed": 0,
+      "remaining_poison": 0
+    },
+    {
+      "dataset": "clean_subset",
+      "strategy": "random",
+      "training_samples": 6466,
+      "test_accuracy": 0.987888,
+      "macro_f1": 0.985993,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": -0.4542000000000046,
+      "poisoned_removed": 0,
+      "clean_removed": 65,
+      "remaining_poison": 0
+    },
+    {
+      "dataset": "clean_subset",
+      "strategy": "semantic",
+      "training_samples": 6466,
+      "test_accuracy": 0.994701,
+      "macro_f1": 0.994107,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": 0.2270999999999912,
+      "poisoned_removed": 0,
+      "clean_removed": 65,
+      "remaining_poison": 0
+    },
+    {
+      "dataset": "label_flip_05",
+      "strategy": "untreated",
+      "training_samples": 6531,
+      "test_accuracy": 0.983346,
+      "macro_f1": 0.980739,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": 0.0,
+      "poisoned_removed": 0,
+      "clean_removed": 0,
+      "remaining_poison": 327
+    },
+    {
+      "dataset": "label_flip_05",
+      "strategy": "random",
+      "training_samples": 6218,
+      "test_accuracy": 0.981075,
+      "macro_f1": 0.977704,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": -0.2271000000000023,
+      "poisoned_removed": 19,
+      "clean_removed": 294,
+      "remaining_poison": 308
+    },
+    {
+      "dataset": "label_flip_05",
+      "strategy": "semantic",
+      "training_samples": 6218,
+      "test_accuracy": 0.990159,
+      "macro_f1": 0.989391,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": 0.6812999999999958,
+      "poisoned_removed": 267,
+      "clean_removed": 46,
+      "remaining_poison": 60
+    },
+    {
+      "dataset": "label_flip_10",
+      "strategy": "untreated",
+      "training_samples": 6531,
+      "test_accuracy": 0.965178,
+      "macro_f1": 0.962475,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": 0.0,
+      "poisoned_removed": 0,
+      "clean_removed": 0,
+      "remaining_poison": 653
+    },
+    {
+      "dataset": "label_flip_10",
+      "strategy": "random",
+      "training_samples": 6015,
+      "test_accuracy": 0.982589,
+      "macro_f1": 0.979823,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": 1.7411000000000065,
+      "poisoned_removed": 58,
+      "clean_removed": 458,
+      "remaining_poison": 595
+    },
+    {
+      "dataset": "label_flip_10",
+      "strategy": "semantic",
+      "training_samples": 6015,
+      "test_accuracy": 0.987131,
+      "macro_f1": 0.98578,
+      "targeted_error": 0.0,
+      "accuracy_gain_pp": 2.1953,
+      "poisoned_removed": 483,
+      "clean_removed": 33,
+      "remaining_poison": 170
+    },
+    {
+      "dataset": "targeted_0_to_1",
+      "strategy": "untreated",
+      "training_samples": 6531,
+      "test_accuracy": 0.989402,
+      "macro_f1": 0.987432,
+      "targeted_error": 0.034884,
+      "accuracy_gain_pp": 0.0,
+      "poisoned_removed": 0,
+      "clean_removed": 0,
+      "remaining_poison": 188
+    },
+    {
+      "dataset": "targeted_0_to_1",
+      "strategy": "random",
+      "training_samples": 6385,
+      "test_accuracy": 0.984103,
+      "macro_f1": 0.981022,
+      "targeted_error": 0.034884,
+      "accuracy_gain_pp": -0.5299000000000054,
+      "poisoned_removed": 5,
+      "clean_removed": 141,
+      "remaining_poison": 183
+    },
+    {
+      "dataset": "targeted_0_to_1",
+      "strategy": "semantic",
+      "training_samples": 6385,
+      "test_accuracy": 0.981075,
+      "macro_f1": 0.976876,
+      "targeted_error": 0.011628,
+      "accuracy_gain_pp": -0.8326999999999973,
+      "poisoned_removed": 86,
+      "clean_removed": 60,
+      "remaining_poison": 102
+    }
+  ]
+}

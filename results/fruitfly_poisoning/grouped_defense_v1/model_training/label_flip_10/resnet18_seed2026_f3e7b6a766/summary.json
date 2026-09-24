@@ -1,0 +1,234 @@
+{
+  "dataset": "label_flip_10",
+  "status": "COMPLETE",
+  "protocol": {
+    "dataset": "label_flip_10",
+    "seed": 2026,
+    "epochs": 20,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "pretrained": true,
+    "amp": true,
+    "max_train_samples": null,
+    "max_eval_samples": null,
+    "architecture": "resnet18",
+    "selected_labels": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "train_transform": "Compose(\n    RandomResizedCrop(size=(224, 224), scale=(0.75, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=True)\n    RandomHorizontalFlip(p=0.5)\n    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)\n    ColorJitter(brightness=(0.85, 1.15), contrast=(0.85, 1.15), saturation=(0.9, 1.1), hue=None)\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)",
+    "evaluation_transform": "Compose(\n    Resize(size=256, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)"
+  },
+  "protocol_hash": "f3e7b6a766f95ed440d5c6a6d9e33ae0eeebd62228bdc021d211a8414fe35bda",
+  "data_protocol": "Fruitfly-confirmed-specimen-group-defense-v1",
+  "trainer_sha256": "9086ac91e582ab69ee44bfff9082e1fa8affcba1b0e29e47b9348cb7a36f29ee",
+  "manifest": "/mnt/e/研究生/高级计算机项目/data/fruitfly_poisoning/manifests/label_flip_10.csv",
+  "manifest_sha256": "062fdd302567a1e83f3c4b5fb7fe5822fbbb6ba04dbb90904894c61c1b824122",
+  "validation_split_sha256": "308e1c6fba953fea3a0771a8ce192c1fa70b2f7d470d631adbc817d997e9edf2",
+  "test_split_sha256": "b6c052b3e4f2a4979ded348251537cea95d11148960e1046c3176fee9410d124",
+  "pretrained_weights": "IMAGENET1K_V1",
+  "candidate_fields_only": true,
+  "training_samples": 6531,
+  "validation_samples": 1392,
+  "test_samples": 1321,
+  "assigned_label_counts": {
+    "0": 991,
+    "1": 1440,
+    "2": 1675,
+    "3": 757,
+    "4": 1668
+  },
+  "best_epoch": 19,
+  "validation": {
+    "accuracy": 0.954741,
+    "balanced_accuracy": 0.949495,
+    "macro_f1": 0.948325,
+    "targeted_0_to_1_rate": 0.024631,
+    "confusion_matrix": [
+      [
+        173,
+        5,
+        12,
+        6,
+        7
+      ],
+      [
+        0,
+        329,
+        2,
+        4,
+        2
+      ],
+      [
+        14,
+        1,
+        314,
+        3,
+        4
+      ],
+      [
+        1,
+        1,
+        0,
+        155,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        358
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "class_name": "1001Bactrocera_correcta",
+        "precision": 0.920213,
+        "recall": 0.852217,
+        "f1": 0.88491,
+        "support": 203
+      },
+      "1": {
+        "class_name": "1002Bactrocera_zonata",
+        "precision": 0.976261,
+        "recall": 0.976261,
+        "f1": 0.976261,
+        "support": 337
+      },
+      "2": {
+        "class_name": "1003Bactrocera_dorsalis",
+        "precision": 0.957317,
+        "recall": 0.934524,
+        "f1": 0.945783,
+        "support": 336
+      },
+      "3": {
+        "class_name": "1006Bactrocera_tryoni",
+        "precision": 0.922619,
+        "recall": 0.987261,
+        "f1": 0.953846,
+        "support": 157
+      },
+      "4": {
+        "class_name": "1018Ceratitis_capitata",
+        "precision": 0.96496,
+        "recall": 0.997214,
+        "f1": 0.980822,
+        "support": 359
+      }
+    },
+    "loss": 0.155957,
+    "samples": 1392
+  },
+  "test": {
+    "accuracy": 0.965178,
+    "balanced_accuracy": 0.9665,
+    "macro_f1": 0.962475,
+    "targeted_0_to_1_rate": 0.0,
+    "confusion_matrix": [
+      [
+        165,
+        0,
+        2,
+        2,
+        3
+      ],
+      [
+        0,
+        298,
+        2,
+        1,
+        5
+      ],
+      [
+        18,
+        2,
+        304,
+        1,
+        5
+      ],
+      [
+        1,
+        1,
+        0,
+        144,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        364
+      ]
+    ],
+    "per_class": {
+      "0": {
+        "class_name": "1001Bactrocera_correcta",
+        "precision": 0.891892,
+        "recall": 0.959302,
+        "f1": 0.92437,
+        "support": 172
+      },
+      "1": {
+        "class_name": "1002Bactrocera_zonata",
+        "precision": 0.986755,
+        "recall": 0.973856,
+        "f1": 0.980263,
+        "support": 306
+      },
+      "2": {
+        "class_name": "1003Bactrocera_dorsalis",
+        "precision": 0.987013,
+        "recall": 0.921212,
+        "f1": 0.952978,
+        "support": 330
+      },
+      "3": {
+        "class_name": "1006Bactrocera_tryoni",
+        "precision": 0.966443,
+        "recall": 0.986301,
+        "f1": 0.976271,
+        "support": 146
+      },
+      "4": {
+        "class_name": "1018Ceratitis_capitata",
+        "precision": 0.965517,
+        "recall": 0.991826,
+        "f1": 0.978495,
+        "support": 367
+      }
+    },
+    "loss": 0.126404,
+    "samples": 1321
+  },
+  "checkpoint": "/home/anima/s6-training-artifacts/fruitfly/grouped_defense_v1/checkpoints/label_flip_10/resnet18_seed2026_f3e7b6a766/best.pt",
+  "tensorboard": "/home/anima/s6-training-artifacts/fruitfly/grouped_defense_v1/tensorboard/label_flip_10/resnet18_seed2026_f3e7b6a766",
+  "result_dir": "/mnt/e/研究生/高级计算机项目/results/fruitfly_poisoning/grouped_defense_v1/model_training/label_flip_10/resnet18_seed2026_f3e7b6a766",
+  "elapsed_seconds": 1465.82,
+  "environment": {
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.13.0+cu130",
+    "torchvision": "0.28.0+cu130",
+    "device": "cuda",
+    "cuda_runtime": "13.0",
+    "cudnn": 92000,
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "compute_capability": "12.0",
+    "gpu_memory_gib": 7.96
+  },
+  "defense_selection_sha256": "732fb579192c6c701f770c26e7842b49d3954e7feb05c2b02fd01b4cd382188c",
+  "fruitfly_protocol_sha256": "e13511848715991cdd28839ff79405938eb1134e51d6c7a9e7e52f99da893519",
+  "checkpoint_sha256": "f556e0a0af09e22a8b79160a170482c5a64fbff04ac78746868e4359ebd1f3a1",
+  "runner_sha256": "12a06abdb1ce597c0a2b1bbe5dc09c6efb6798ce572f6b9d8eae5ae341648905",
+  "targeted_metric_meaning": "Bactrocera correcta classified as Bactrocera zonata"
+}

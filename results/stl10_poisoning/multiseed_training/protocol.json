@@ -1,0 +1,70 @@
+{
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "conditions": [
+    "clean_subset",
+    "clean_subset__random",
+    "clean_subset__semantic",
+    "label_flip_05",
+    "label_flip_05__random",
+    "label_flip_05__semantic",
+    "label_flip_10",
+    "label_flip_10__random",
+    "label_flip_10__semantic",
+    "targeted_0_to_1",
+    "targeted_0_to_1__random",
+    "targeted_0_to_1__semantic"
+  ],
+  "epochs": 20,
+  "selection_plan_sha256": "0f0ad5e957d5f782cd427b77aaa1c806b109ad93287ad0f94c3f3648e0314294",
+  "trainer_sha256": "9086ac91e582ab69ee44bfff9082e1fa8affcba1b0e29e47b9348cb7a36f29ee",
+  "validation_split_sha256": "575bbdcb7fdc8b9e6fd37cc531aa24136f3f3117d4b48e9a90ac5a0c0fe100d8",
+  "test_split_sha256": "4bdc70f1875dd778d649a3c7ff2332f65990558e5d1e19fe18be9bb2a604d7de",
+  "manifest_sha256": {
+    "clean_subset": "393e05041fd5ecbf6d23fe2087a22eb7cdad0201bebec7ab106ebe43e23a6122",
+    "label_flip_05": "fd233d1ec4c5923ff28f245db6919addbc7325f90506fe021212df1a40b20f90",
+    "label_flip_10": "7533a758940a2742521bc1ebf93c02cfb58998ce1436dfdd0afdf81444243ab6",
+    "targeted_0_to_1": "806186913d2a5cff39d758b4c92187443a08cc401491f507e01c198dbb82dd90",
+    "label_flip_05__random": "991be444a6642cdf519936a5d70175f80f8cfe1aea5327cbb70bb5a55d02c04c",
+    "label_flip_05__semantic": "f75014e89ca45f25f1dbf64f1f8d90c65a44846accd23793f01b42d6b5ccefbd",
+    "label_flip_10__random": "7bd5f6be4ccc52879bb4395471f29e212f2b91e2e76324598c416e68d31adc2e",
+    "label_flip_10__semantic": "6c2f7a6dfbdf29099ec5d5ee6a8cca5973287074857816c89d3739e915412bec",
+    "targeted_0_to_1__random": "8d20bb3c20fe99ff9d2f71ff25eec6091c06d6110fc6653c2b1104ff5aa103b4",
+    "targeted_0_to_1__semantic": "1ee3ba0d74ac0a70ffa386729625e8c9073b2374666cd34326f46d5a20be49bd",
+    "clean_subset__random": "55845b161a6efb14b9181cec3ce9041191c9d1e407c652beb5c079786bb1c3d5",
+    "clean_subset__semantic": "32e073ed6200c6d7afcb2cb503ce4244a94f56524d0c0fd9fea6b17e2e9f1864"
+  },
+  "common_protocol": {
+    "epochs": 20,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "pretrained": true,
+    "amp": true,
+    "max_train_samples": null,
+    "max_eval_samples": null,
+    "architecture": "resnet18",
+    "selected_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "train_transform": "Compose(\n    RandomResizedCrop(size=(224, 224), scale=(0.75, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=True)\n    RandomHorizontalFlip(p=0.5)\n    RandomRotation(degrees=[-10.0, 10.0], interpolation=nearest, expand=False, fill=0)\n    ColorJitter(brightness=(0.85, 1.15), contrast=(0.85, 1.15), saturation=(0.9, 1.1), hue=None)\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)",
+    "evaluation_transform": "Compose(\n    Resize(size=256, interpolation=bilinear, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    ToTensor()\n    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))\n)"
+  },
+  "scope": "Training randomness only; fixed data split, poison instances, detector and removal selections.",
+  "hidden_truth_used_for_training": false
+}

@@ -24,6 +24,31 @@ class AppIntegrationTests(unittest.TestCase):
         cls.server.server_close()
         cls.thread.join(timeout=2)
 
+    def test_supervised_requires_boolean_and_real_task(self) -> None:
+        for payload in ({"text": "body", "use_supervised": "true"},
+                        {"text": "body", "use_supervised": True}):
+            request = Request(f"{self.base_url}/api/detect", data=json.dumps(payload).encode(),
+                              headers={"Content-Type": "application/json"}, method="POST")
+            with self.assertRaises(HTTPError) as error:
+                urlopen(request, timeout=3)
+            self.assertEqual(error.exception.code, 400)
+
+    def test_supervised_result_is_observation_only(self) -> None:
+        from unittest.mock import patch
+        from semantic_detector import SemanticAssessment
+        learned = {"decision": "REVIEW", "score": .8, "affects_tool_policy": False}
+        with patch("supervised_detector.assess_supervised", return_value=learned), \
+             patch("app.extract_embeddings", return_value={}), \
+             patch("app.assess_task_consistency", return_value=SemanticAssessment("ALLOW", 0., (), ())):
+            request = Request(f"{self.base_url}/api/detect",
+                data=json.dumps({"text": "Meeting at noon.", "question": "When is the meeting?", "use_supervised": True}).encode(),
+                headers={"Content-Type": "application/json"}, method="POST")
+            with urlopen(request, timeout=3) as response:
+                result=json.load(response)
+            self.assertEqual(result["supervised"], learned)
+            self.assertEqual(result["decision"], "ALLOW")
+            self.assertEqual(result["hybrid"]["decision"], "ALLOW")
+
     def test_detect_endpoint_returns_decision_and_version(self) -> None:
         request = Request(
             f"{self.base_url}/api/detect",
@@ -68,7 +93,7 @@ class AppIntegrationTests(unittest.TestCase):
     def test_frontend_contains_p1_dashboard(self) -> None:
         with urlopen(f"{self.base_url}/", timeout=2) as response:
             page = response.read().decode("utf-8")
-        self.assertIn("P1 rule engine baseline", page)
+        self.assertIn('id="p1-metrics-body"', page)
         self.assertIn("sample-encoding", page)
 
 

@@ -1,3 +1,5 @@
+> Active image baseline: **STL-10** (2026-09-11). IP102 results are historical. See [current protocol](data_poisoning/README_ZH.md).
+
 # S6 两个独立安全 Base
 
 S6 原型已经整理为两个可独立运行、持续扩展和复用的 base：
@@ -10,7 +12,7 @@ S6 原型已经整理为两个可独立运行、持续扩展和复用的 base：
 两个应用使用不同的本地端口，可以同时运行：
 
 - 邮件提示注入：`http://127.0.0.1:8765`
-- IP102 数据投毒：`http://127.0.0.1:8766`
+- STL-10 数据投毒：`http://127.0.0.1:8766`
 
 具体操作请进入对应目录阅读 `README_ZH.md`。
 

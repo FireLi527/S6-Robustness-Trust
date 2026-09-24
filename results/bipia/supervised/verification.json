@@ -1,0 +1,58 @@
+{
+  "status": "VERIFIED",
+  "test_prediction_rows": 82700,
+  "counts": {
+    "train": {
+      "email": {
+        "sources": 32,
+        "attack_variants": 13440
+      },
+      "table": {
+        "sources": 719,
+        "attack_variants": 301980
+      },
+      "code": {
+        "sources": 40,
+        "attack_variants": 12000
+      }
+    },
+    "validation": {
+      "email": {
+        "sources": 7,
+        "attack_variants": 2940
+      },
+      "table": {
+        "sources": 181,
+        "attack_variants": 76020
+      },
+      "code": {
+        "sources": 10,
+        "attack_variants": 3000
+      }
+    },
+    "test": {
+      "email": {
+        "sources": 50,
+        "attack_variants": 22500
+      },
+      "table": {
+        "sources": 100,
+        "attack_variants": 45000
+      },
+      "code": {
+        "sources": 50,
+        "attack_variants": 15000
+      }
+    }
+  },
+  "checks": [
+    "source hashes",
+    "training code hashes",
+    "source-content separation",
+    "checkpoint hash",
+    "all held-out model scores replayed",
+    "summary metrics recomputed"
+  ],
+  "model_sha256": "ed03a8512a8c9296243a7691cdf8a81a58e42b23fabec4c3361df2b0153ea15e",
+  "predictions_sha256": "77bc67dae6deb2f88b9f639b4bcae6806056a36b14e89a66c3a6d5a5a7fbfed5"
+}

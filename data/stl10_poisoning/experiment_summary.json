@@ -1,0 +1,100 @@
+{
+  "dataset": "STL-10",
+  "seed": 2026,
+  "official_binary_md5": {
+    "train_X.bin": "918c2871b30a85fa023e0c44e0bee87f",
+    "train_y.bin": "5a34089d4802c674881badbb80307741",
+    "test_X.bin": "7f263ba9f9e0b06b93213547f721ac82",
+    "test_y.bin": "36f9794fa4beb8a2c72628de14fa638e"
+  },
+  "source_url": "https://ai.stanford.edu/~acoates/stl10/stl10_binary.tar.gz",
+  "classes": {
+    "0": "airplane",
+    "1": "bird",
+    "2": "car",
+    "3": "cat",
+    "4": "deer",
+    "5": "dog",
+    "6": "horse",
+    "7": "monkey",
+    "8": "ship",
+    "9": "truck"
+  },
+  "split_sizes": {
+    "train": 4000,
+    "val": 1000,
+    "test": 8000
+  },
+  "protocol": "Custom S6 label-poisoning protocol, not the official STL-10 fold benchmark. 400/class candidate training, 100/class validation from official train; official test untouched. Unlabeled images are not used or extracted.",
+  "targeted_attack": "20% of airplane (0) labels flipped to bird (1); 2% of all candidates",
+  "datasets": {
+    "clean_subset": {
+      "samples": 4000,
+      "poisoned_samples": 0,
+      "poison_rate": 0.0,
+      "assigned_label_counts": {
+        "0": 400,
+        "1": 400,
+        "2": 400,
+        "3": 400,
+        "4": 400,
+        "5": 400,
+        "6": 400,
+        "7": 400,
+        "8": 400,
+        "9": 400
+      }
+    },
+    "label_flip_05": {
+      "samples": 4000,
+      "poisoned_samples": 200,
+      "poison_rate": 0.05,
+      "assigned_label_counts": {
+        "0": 387,
+        "1": 405,
+        "2": 399,
+        "3": 404,
+        "4": 405,
+        "5": 399,
+        "6": 390,
+        "7": 399,
+        "8": 409,
+        "9": 403
+      }
+    },
+    "label_flip_10": {
+      "samples": 4000,
+      "poisoned_samples": 400,
+      "poison_rate": 0.1,
+      "assigned_label_counts": {
+        "0": 409,
+        "1": 396,
+        "2": 389,
+        "3": 408,
+        "4": 389,
+        "5": 391,
+        "6": 414,
+        "7": 404,
+        "8": 401,
+        "9": 399
+      }
+    },
+    "targeted_0_to_1": {
+      "samples": 4000,
+      "poisoned_samples": 80,
+      "poison_rate": 0.02,
+      "assigned_label_counts": {
+        "0": 320,
+        "1": 480,
+        "2": 400,
+        "3": 400,
+        "4": 400,
+        "5": 400,
+        "6": 400,
+        "7": 400,
+        "8": 400,
+        "9": 400
+      }
+    }
+  }
+}
