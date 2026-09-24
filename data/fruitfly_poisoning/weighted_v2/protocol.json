@@ -1,0 +1,62 @@
+{
+  "status": "FROZEN",
+  "method": "retain all samples; weight=max(floor,1-risk)",
+  "risk_source": "grouped_defense_v1 specimen-disjoint OOF candidate-label risk",
+  "floors": [
+    0.25,
+    0.5
+  ],
+  "candidate_predictions_sha256": "6cb7ca7e76a340da0cc7f8a98605664b3bdd83a83c9e24c925728e76d58e9074",
+  "hidden_truth_used": false,
+  "test_metrics_used": false,
+  "variants": {
+    "clean_subset__weighted_25": {
+      "source_manifest_sha256": "4d6f9cf7250b75a59e3203aaa51a77d865a8846cd6894129892e7b96349f037b",
+      "manifest_sha256": "762e07c1e1d124dbdcd55baf22f88b922e94c95251c6cf2f053d71dece75d234",
+      "samples": 6531,
+      "mean_weight": 0.7984971276370122
+    },
+    "clean_subset__weighted_50": {
+      "source_manifest_sha256": "4d6f9cf7250b75a59e3203aaa51a77d865a8846cd6894129892e7b96349f037b",
+      "manifest_sha256": "83030fe670138ca68875a7aa1df1cd82a6a340622d6527ed085840d928fe33df",
+      "samples": 6531,
+      "mean_weight": 0.8177090480841892
+    },
+    "label_flip_05__weighted_25": {
+      "source_manifest_sha256": "b95873a0c78a0b8db7f9b5ec8d61ee6a3d691f026947d95444f59918c815dc53",
+      "manifest_sha256": "7b42d8f2e1eb8db0e9c397984a14254ab20669cc305d16afb7f0c62dd9dded14",
+      "samples": 6531,
+      "mean_weight": 0.7190663971541017
+    },
+    "label_flip_05__weighted_50": {
+      "source_manifest_sha256": "b95873a0c78a0b8db7f9b5ec8d61ee6a3d691f026947d95444f59918c815dc53",
+      "manifest_sha256": "1fc23d81ae420aa098d9ab0253d27117181cbdf35d5e048d16f50fdabff11dd4",
+      "samples": 6531,
+      "mean_weight": 0.752622345952521
+    },
+    "label_flip_10__weighted_25": {
+      "source_manifest_sha256": "062fdd302567a1e83f3c4b5fb7fe5822fbbb6ba04dbb90904894c61c1b824122",
+      "manifest_sha256": "b4b2cb933ee08333d751f11270da80e1c9bcd350515cbb9bc7ab4c235393b844",
+      "samples": 6531,
+      "mean_weight": 0.6488578238656282
+    },
+    "label_flip_10__weighted_50": {
+      "source_manifest_sha256": "062fdd302567a1e83f3c4b5fb7fe5822fbbb6ba04dbb90904894c61c1b824122",
+      "manifest_sha256": "e511eb5d85f3a9e837ee6797888a9a89c7f3aabe46907216f636ad64df4943ee",
+      "samples": 6531,
+      "mean_weight": 0.6960403292308115
+    },
+    "targeted_0_to_1__weighted_25": {
+      "source_manifest_sha256": "1f18dd10d417ba29a2f929aac2f6d7ad5c47eef189dcd7125d5802fac89a2373",
+      "manifest_sha256": "78534c4d23af8449d04b98803b442b48cb525c0b890210ef81b3ce100a1abb99",
+      "samples": 6531,
+      "mean_weight": 0.7765492187511306
+    },
+    "targeted_0_to_1__weighted_50": {
+      "source_manifest_sha256": "1f18dd10d417ba29a2f929aac2f6d7ad5c47eef189dcd7125d5802fac89a2373",
+      "manifest_sha256": "22381658c2ae341061144b4c21aad0536abc80eee0b7c69e293c6dbadbb62081",
+      "samples": 6531,
+      "mean_weight": 0.8024254534622358
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "status": "COMPLETE",
+  "winner": "word_char",
+  "selection": {
+    "epoch": 3,
+    "task_macro_recall": 0.6614076245599528,
+    "task_thresholds": {
+      "email": 0.71,
+      "table": 0.6900000000000001,
+      "code": 0.995
+    },
+    "global_threshold": 0.995,
+    "global_results": {
+      "email": {
+        "tp": 427,
+        "fn": 2513,
+        "fp": 0,
+        "tn": 7,
+        "attack_detection_rate": 0.14523809523809525,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.5726190476190476
+      },
+      "table": {
+        "tp": 687,
+        "fn": 75333,
+        "fp": 0,
+        "tn": 181,
+        "attack_detection_rate": 0.009037095501183898,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.5045185477505919
+      },
+      "code": {
+        "tp": 1722,
+        "fn": 1278,
+        "fp": 0,
+        "tn": 10,
+        "attack_detection_rate": 0.574,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.7869999999999999
+      }
+    },
+    "task_results": {
+      "email": {
+        "tp": 2421,
+        "fn": 519,
+        "fp": 0,
+        "tn": 7,
+        "attack_detection_rate": 0.823469387755102,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.911734693877551
+      },
+      "table": {
+        "tp": 44605,
+        "fn": 31415,
+        "fp": 9,
+        "tn": 172,
+        "attack_detection_rate": 0.5867534859247566,
+        "false_positive_rate": 0.049723756906077346,
+        "balanced_accuracy": 0.7685148645093396
+      },
+      "code": {
+        "tp": 1722,
+        "fn": 1278,
+        "fp": 0,
+        "tn": 10,
+        "attack_detection_rate": 0.574,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.7869999999999999
+      }
+    }
+  },
+  "test": {
+    "email": {
+      "task_threshold": {
+        "tp": 16403,
+        "fn": 6097,
+        "fp": 8,
+        "tn": 42,
+        "attack_detection_rate": 0.7290222222222222,
+        "false_positive_rate": 0.16,
+        "balanced_accuracy": 0.7845111111111112,
+        "roc_auc": 0.8867973333333334
+      },
+      "global_threshold": {
+        "tp": 4104,
+        "fn": 18396,
+        "fp": 1,
+        "tn": 49,
+        "attack_detection_rate": 0.1824,
+        "false_positive_rate": 0.02,
+        "balanced_accuracy": 0.5811999999999999,
+        "roc_auc": 0.8867973333333334
+      }
+    },
+    "table": {
+      "task_threshold": {
+        "tp": 17344,
+        "fn": 27656,
+        "fp": 4,
+        "tn": 96,
+        "attack_detection_rate": 0.3854222222222222,
+        "false_positive_rate": 0.04,
+        "balanced_accuracy": 0.672711111111111,
+        "roc_auc": 0.8676753333333335
+      },
+      "global_threshold": {
+        "tp": 225,
+        "fn": 44775,
+        "fp": 0,
+        "tn": 100,
+        "attack_detection_rate": 0.005,
+        "false_positive_rate": 0.0,
+        "balanced_accuracy": 0.5025,
+        "roc_auc": 0.8676753333333335
+      }
+    },
+    "code": {
+      "task_threshold": {
+        "tp": 5955,
+        "fn": 9045,
+        "fp": 1,
+        "tn": 49,
+        "attack_detection_rate": 0.397,
+        "false_positive_rate": 0.02,
+        "balanced_accuracy": 0.6885,
+        "roc_auc": 0.9343573333333334
+      },
+      "global_threshold": {
+        "tp": 5955,
+        "fn": 9045,
+        "fp": 1,
+        "tn": 49,
+        "attack_detection_rate": 0.397,
+        "false_positive_rate": 0.02,
+        "balanced_accuracy": 0.6885,
+        "roc_auc": 0.9343573333333334
+      }
+    }
+  },
+  "elapsed_seconds": 1061.7588357925415,
+  "limitations": [
+    "Previously inspected BIPIA test; not a pristine blind test.",
+    "Generated variants are correlated and are not independent documents."
+  ]
+}

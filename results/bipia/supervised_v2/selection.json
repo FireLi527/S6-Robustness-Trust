@@ -1,0 +1,417 @@
+{
+  "winner": "word_char",
+  "variants": {
+    "word": [
+      {
+        "epoch": 1,
+        "task_macro_recall": 0.36141529171521275,
+        "task_thresholds": {
+          "email": 0.8200000000000001,
+          "table": 0.65,
+          "code": 0.88
+        },
+        "global_threshold": 0.88,
+        "global_results": {
+          "email": {
+            "tp": 562,
+            "fn": 2378,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.19115646258503402,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.595578231292517
+          },
+          "table": {
+            "tp": 5317,
+            "fn": 70703,
+            "fp": 0,
+            "tn": 181,
+            "attack_detection_rate": 0.06994212049460669,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5349710602473033
+          },
+          "code": {
+            "tp": 1170,
+            "fn": 1830,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.39,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6950000000000001
+          }
+        },
+        "task_results": {
+          "email": {
+            "tp": 955,
+            "fn": 1985,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.32482993197278914,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6624149659863946
+          },
+          "table": {
+            "tp": 28083,
+            "fn": 47937,
+            "fp": 9,
+            "tn": 172,
+            "attack_detection_rate": 0.36941594317284926,
+            "false_positive_rate": 0.049723756906077346,
+            "balanced_accuracy": 0.6598460931333859
+          },
+          "code": {
+            "tp": 1170,
+            "fn": 1830,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.39,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6950000000000001
+          }
+        }
+      },
+      {
+        "epoch": 2,
+        "task_macro_recall": 0.38816169930218863,
+        "task_thresholds": {
+          "email": 0.85,
+          "table": 0.645,
+          "code": 0.9400000000000001
+        },
+        "global_threshold": 0.9400000000000001,
+        "global_results": {
+          "email": {
+            "tp": 473,
+            "fn": 2467,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.1608843537414966,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5804421768707483
+          },
+          "table": {
+            "tp": 4264,
+            "fn": 71756,
+            "fp": 0,
+            "tn": 181,
+            "attack_detection_rate": 0.056090502499342276,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5280452512496712
+          },
+          "code": {
+            "tp": 1095,
+            "fn": 1905,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.365,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6825
+          }
+        },
+        "task_results": {
+          "email": {
+            "tp": 1107,
+            "fn": 1833,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.376530612244898,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.688265306122449
+          },
+          "table": {
+            "tp": 32153,
+            "fn": 43867,
+            "fp": 9,
+            "tn": 172,
+            "attack_detection_rate": 0.422954485661668,
+            "false_positive_rate": 0.049723756906077346,
+            "balanced_accuracy": 0.6866153643777954
+          },
+          "code": {
+            "tp": 1095,
+            "fn": 1905,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.365,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6825
+          }
+        }
+      },
+      {
+        "epoch": 3,
+        "task_macro_recall": 0.38930859047117927,
+        "task_thresholds": {
+          "email": 0.875,
+          "table": 0.655,
+          "code": 0.96
+        },
+        "global_threshold": 0.96,
+        "global_results": {
+          "email": {
+            "tp": 510,
+            "fn": 2430,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.17346938775510204,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5867346938775511
+          },
+          "table": {
+            "tp": 4085,
+            "fn": 71935,
+            "fp": 0,
+            "tn": 181,
+            "attack_detection_rate": 0.05373585898447777,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5268679294922389
+          },
+          "code": {
+            "tp": 1079,
+            "fn": 1921,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.3596666666666667,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6798333333333333
+          }
+        },
+        "task_results": {
+          "email": {
+            "tp": 1093,
+            "fn": 1847,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.3717687074829932,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6858843537414966
+          },
+          "table": {
+            "tp": 33182,
+            "fn": 42838,
+            "fp": 9,
+            "tn": 172,
+            "attack_detection_rate": 0.43649039726387795,
+            "false_positive_rate": 0.049723756906077346,
+            "balanced_accuracy": 0.6933833201789004
+          },
+          "code": {
+            "tp": 1079,
+            "fn": 1921,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.3596666666666667,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.6798333333333333
+          }
+        }
+      }
+    ],
+    "word_char": [
+      {
+        "epoch": 1,
+        "task_macro_recall": 0.5729433357136594,
+        "task_thresholds": {
+          "email": 0.8,
+          "table": 0.74,
+          "code": 0.9500000000000001
+        },
+        "global_threshold": 0.9500000000000001,
+        "global_results": {
+          "email": {
+            "tp": 597,
+            "fn": 2343,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.2030612244897959,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.601530612244898
+          },
+          "table": {
+            "tp": 3366,
+            "fn": 72654,
+            "fp": 0,
+            "tn": 181,
+            "attack_detection_rate": 0.04427782162588793,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.522138910812944
+          },
+          "code": {
+            "tp": 2490,
+            "fn": 510,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.83,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.915
+          }
+        },
+        "task_results": {
+          "email": {
+            "tp": 1583,
+            "fn": 1357,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.5384353741496599,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.76921768707483
+          },
+          "table": {
+            "tp": 26637,
+            "fn": 49383,
+            "fp": 9,
+            "tn": 172,
+            "attack_detection_rate": 0.35039463299131807,
+            "false_positive_rate": 0.049723756906077346,
+            "balanced_accuracy": 0.6503354380426204
+          },
+          "code": {
+            "tp": 2490,
+            "fn": 510,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.83,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.915
+          }
+        }
+      },
+      {
+        "epoch": 2,
+        "task_macro_recall": 0.625918342290876,
+        "task_thresholds": {
+          "email": 0.735,
+          "table": 0.71,
+          "code": 0.99
+        },
+        "global_threshold": 0.99,
+        "global_results": {
+          "email": {
+            "tp": 435,
+            "fn": 2505,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.14795918367346939,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5739795918367347
+          },
+          "table": {
+            "tp": 657,
+            "fn": 75363,
+            "fp": 0,
+            "tn": 181,
+            "attack_detection_rate": 0.008642462509865825,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5043212312549329
+          },
+          "code": {
+            "tp": 1812,
+            "fn": 1188,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.604,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.802
+          }
+        },
+        "task_results": {
+          "email": {
+            "tp": 2269,
+            "fn": 671,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.7717687074829932,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.8858843537414967
+          },
+          "table": {
+            "tp": 38161,
+            "fn": 37859,
+            "fp": 9,
+            "tn": 172,
+            "attack_detection_rate": 0.5019863193896343,
+            "false_positive_rate": 0.049723756906077346,
+            "balanced_accuracy": 0.7261312812417785
+          },
+          "code": {
+            "tp": 1812,
+            "fn": 1188,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.604,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.802
+          }
+        }
+      },
+      {
+        "epoch": 3,
+        "task_macro_recall": 0.6614076245599528,
+        "task_thresholds": {
+          "email": 0.71,
+          "table": 0.6900000000000001,
+          "code": 0.995
+        },
+        "global_threshold": 0.995,
+        "global_results": {
+          "email": {
+            "tp": 427,
+            "fn": 2513,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.14523809523809525,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5726190476190476
+          },
+          "table": {
+            "tp": 687,
+            "fn": 75333,
+            "fp": 0,
+            "tn": 181,
+            "attack_detection_rate": 0.009037095501183898,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.5045185477505919
+          },
+          "code": {
+            "tp": 1722,
+            "fn": 1278,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.574,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.7869999999999999
+          }
+        },
+        "task_results": {
+          "email": {
+            "tp": 2421,
+            "fn": 519,
+            "fp": 0,
+            "tn": 7,
+            "attack_detection_rate": 0.823469387755102,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.911734693877551
+          },
+          "table": {
+            "tp": 44605,
+            "fn": 31415,
+            "fp": 9,
+            "tn": 172,
+            "attack_detection_rate": 0.5867534859247566,
+            "false_positive_rate": 0.049723756906077346,
+            "balanced_accuracy": 0.7685148645093396
+          },
+          "code": {
+            "tp": 1722,
+            "fn": 1278,
+            "fp": 0,
+            "tn": 10,
+            "attack_detection_rate": 0.574,
+            "false_positive_rate": 0.0,
+            "balanced_accuracy": 0.7869999999999999
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "seed": 2026,
+  "epochs": 3,
+  "variants": [
+    "word",
+    "word_char"
+  ],
+  "task_balancing": "inverse source-count loss weights; equal total source weight per task",
+  "features": {
+    "word": "word 1-2 hashing 2**18",
+    "word_char": "plus char_wb 3-5 hashing 2**18"
+  },
+  "selection": "validation macro-task recall; each task clean FPR <=5%; compare task/global thresholds",
+  "source_split_protocol": "same grouped protocol as supervised v1",
+  "input_hashes": {
+    "external\\BIPIA\\benchmark\\email\\train.jsonl": "0130a694116e295d821fcc186eb225cdef2b222c3dc96a1cd13d0766f964e3d9",
+    "external\\BIPIA\\benchmark\\email\\test.jsonl": "2d71aae20a84373089eadd20d7317e6040b4ef75a324588cbdc2e06e9c1a88c9",
+    "external\\BIPIA\\benchmark\\table\\train.jsonl": "495491f72a499bf72b062754b5553b37ea02f8b68f9a9dc7bb8d2f79f96cdc7d",
+    "external\\BIPIA\\benchmark\\table\\test.jsonl": "b84d81e80f5ab9e3a245387309ee38222d11bef1ae65be6daafdaba95dc5deed",
+    "external\\BIPIA\\benchmark\\code\\train.jsonl": "d7644a1e496883842918f96ed29e16e13b7ddf3da9911000f569bf60f08746f7",
+    "external\\BIPIA\\benchmark\\code\\test.jsonl": "70fb021fd4977c620ddf3049e834fc533bf762db6a26157a0b1b761cbc34364c",
+    "external\\BIPIA\\benchmark\\text_attack_train.json": "ff08e5deda616db5f54acc2367683c4bfde20d0ce5c4c5857e6764dde505c747",
+    "external\\BIPIA\\benchmark\\text_attack_test.json": "e828d3e9e273ddf43c4b0c91e5803998f4314555d865e32bd4e0903ab746a3b9",
+    "external\\BIPIA\\benchmark\\code_attack_train.json": "ab13b6cf99afd82ac2d34ccfca835ce3636dd27e1591945b222893e83d5a0184",
+    "external\\BIPIA\\benchmark\\code_attack_test.json": "ab9f0563c7674074fb1cf82cb624196e9b5e3d62ac57b324b0745d23b7e55f87"
+  },
+  "excluded_attack_categories": {
+    "text": [
+      "Language Translation"
+    ],
+    "code": []
+  },
+  "sklearn_version": "1.9.0",
+  "code_sha256": "d97af67f7e193a5f2abe34ca440bb898c89acc01ddf36ea16ca9f58ba20cd741"
+}
