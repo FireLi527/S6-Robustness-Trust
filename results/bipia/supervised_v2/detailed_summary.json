@@ -1,0 +1,153 @@
+{
+  "status": "COMPLETE",
+  "model_selection_unchanged": true,
+  "winner": "word_char",
+  "best_epoch": 3,
+  "task_thresholds": {
+    "email": 0.71,
+    "table": 0.6900000000000001,
+    "code": 0.995
+  },
+  "global_threshold": 0.995,
+  "test_by_task_and_encoding": {
+    "email": {
+      "plain": {
+        "task_threshold": {
+          "tp": 7184,
+          "fn": 4066,
+          "fp": 8,
+          "tn": 42,
+          "attack_detection_rate": 0.6385777777777778,
+          "false_positive_rate": 0.16,
+          "balanced_accuracy": 0.7392888888888889,
+          "roc_auc": 0.8579466666666666
+        },
+        "global_threshold": {
+          "tp": 1435,
+          "fn": 9815,
+          "fp": 1,
+          "tn": 49,
+          "attack_detection_rate": 0.12755555555555556,
+          "false_positive_rate": 0.02,
+          "balanced_accuracy": 0.5537777777777778,
+          "roc_auc": 0.8579466666666666
+        }
+      },
+      "stealth": {
+        "task_threshold": {
+          "tp": 9219,
+          "fn": 2031,
+          "fp": 8,
+          "tn": 42,
+          "attack_detection_rate": 0.8194666666666667,
+          "false_positive_rate": 0.16,
+          "balanced_accuracy": 0.8297333333333333,
+          "roc_auc": 0.9156479999999999
+        },
+        "global_threshold": {
+          "tp": 2669,
+          "fn": 8581,
+          "fp": 1,
+          "tn": 49,
+          "attack_detection_rate": 0.23724444444444445,
+          "false_positive_rate": 0.02,
+          "balanced_accuracy": 0.6086222222222222,
+          "roc_auc": 0.9156479999999999
+        }
+      }
+    },
+    "table": {
+      "plain": {
+        "task_threshold": {
+          "tp": 9370,
+          "fn": 13130,
+          "fp": 4,
+          "tn": 96,
+          "attack_detection_rate": 0.41644444444444445,
+          "false_positive_rate": 0.04,
+          "balanced_accuracy": 0.6882222222222222,
+          "roc_auc": 0.85814
+        },
+        "global_threshold": {
+          "tp": 207,
+          "fn": 22293,
+          "fp": 0,
+          "tn": 100,
+          "attack_detection_rate": 0.0092,
+          "false_positive_rate": 0.0,
+          "balanced_accuracy": 0.5046,
+          "roc_auc": 0.85814
+        }
+      },
+      "stealth": {
+        "task_threshold": {
+          "tp": 7974,
+          "fn": 14526,
+          "fp": 4,
+          "tn": 96,
+          "attack_detection_rate": 0.3544,
+          "false_positive_rate": 0.04,
+          "balanced_accuracy": 0.6572,
+          "roc_auc": 0.8772106666666668
+        },
+        "global_threshold": {
+          "tp": 18,
+          "fn": 22482,
+          "fp": 0,
+          "tn": 100,
+          "attack_detection_rate": 0.0008,
+          "false_positive_rate": 0.0,
+          "balanced_accuracy": 0.5004,
+          "roc_auc": 0.8772106666666668
+        }
+      }
+    },
+    "code": {
+      "plain": {
+        "task_threshold": {
+          "tp": 2502,
+          "fn": 4998,
+          "fp": 1,
+          "tn": 49,
+          "attack_detection_rate": 0.3336,
+          "false_positive_rate": 0.02,
+          "balanced_accuracy": 0.6568,
+          "roc_auc": 0.9229386666666667
+        },
+        "global_threshold": {
+          "tp": 2502,
+          "fn": 4998,
+          "fp": 1,
+          "tn": 49,
+          "attack_detection_rate": 0.3336,
+          "false_positive_rate": 0.02,
+          "balanced_accuracy": 0.6568,
+          "roc_auc": 0.9229386666666667
+        }
+      },
+      "stealth": {
+        "task_threshold": {
+          "tp": 3453,
+          "fn": 4047,
+          "fp": 1,
+          "tn": 49,
+          "attack_detection_rate": 0.4604,
+          "false_positive_rate": 0.02,
+          "balanced_accuracy": 0.7202,
+          "roc_auc": 0.945776
+        },
+        "global_threshold": {
+          "tp": 3453,
+          "fn": 4047,
+          "fp": 1,
+          "tn": 49,
+          "attack_detection_rate": 0.4604,
+          "false_positive_rate": 0.02,
+          "balanced_accuracy": 0.7202,
+          "roc_auc": 0.945776
+        }
+      }
+    }
+  },
+  "interpretation": "Post-hoc reporting of frozen decisions; no test-driven tuning."
+}
