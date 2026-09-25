@@ -1,6 +1,8 @@
-# STL-10 Image Label-Poisoning Baseline
+# Image Label-Poisoning Baseline
 
-The active dataset is STL-10 as of 2026-09-11. See [current setup and protocol](README_ZH.md). Historical IP102 results remain under `results/ip102_poisoning/`; [old documentation](README_IP102_HISTORY.md) describes that retired configuration, not the active detector.
+> **Current status (2026-09-25):** the local console and unspecified-`corpus` API calls default to the classmate fruit-fly dataset (`grouped_defense_v1`; see `FRUITFLY_PROTOCOL_ZH.md` and `FRUITFLY_GROUPED_DEFENSE_ZH.md`). Fruit-fly risk-weighted training (weighted_v2) has 2 of 8 runs complete. STL-10, described below, is now a toggleable historical comparison with completed 3-seed replication; `dataset_config.py` used by the offline scripts is still fixed to STL-10. Milestones: [BASELINE_ROADMAP.md](../BASELINE_ROADMAP.md).
+
+STL-10 became the active dataset on 2026-09-11 (superseded as the console default by fruit fly on 2026-09-21). See [current setup and protocol](README_ZH.md). Historical IP102 results remain under `results/ip102_poisoning/`; [old documentation](README_IP102_HISTORY.md) describes that retired configuration, not the active detector.
 
 Run from the project root using the existing Python environment:
 
@@ -37,3 +39,7 @@ Eight additional models compare fixed ALLOW-only screening with equal-count rand
 启动 `start.cmd` 后访问 http://127.0.0.1:8766/。页面和未指定 corpus 的 API 默认使用同学实蝇数据，读取 `grouped_defense_v1` 已冻结的检测与 12 组训练对照；页面顶部可切换 STL-10 历史对照。实蝇为 seed 2026 单种子，STL-10 为三种子均值及样本标准差。离线训练脚本的 `dataset_config.py` 保持原有 STL-10 配置。
 
 实蝇结果展示前核验协议、检测器、预测和清单哈希关联；不匹配时报告错误，不自动使用旧检测器重算。样本检查器优先展示改标样本，仅用于演示。训练表的 0 → 1 错误率与总体准确率需同时解读。
+
+## Multi-seed replication completed
+
+36 verified models (seeds 2026/2027/2028 × 4 conditions × 3 strategies). Targeted airplane-to-bird error: 10.46 ± 3.83% untreated vs. 0.21 ± 0.07% with semantic screening; 10% flip paired accuracy gain +3.23 ± 0.62 pp; clean-data false-quarantine cost −0.48 ± 0.26 pp. Three seeds measure training randomness only. See `results/stl10_poisoning/multiseed_training/multiseed_report_ZH.md`.

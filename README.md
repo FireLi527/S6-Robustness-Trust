@@ -40,7 +40,7 @@ evaluation.
 - [提示词注入中文说明](s6/prompt_injection/README_ZH.md)
 - [Data poisoning baseline](s6/data_poisoning/README.md)
 - [数据投毒中文说明](s6/data_poisoning/README_ZH.md)
-- [Milestone roadmap](s6/BASELINE_ROADMAP.md)
+- [Milestone roadmap](s6/BASELINE_ROADMAP.md) · [里程碑规划](s6/BASELINE_ROADMAP_ZH.md)
 
 ## Dataset references
 

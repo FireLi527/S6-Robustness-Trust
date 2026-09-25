@@ -1,0 +1,65 @@
+{
+  "status": "FROZEN_BEFORE_SELECTION",
+  "script_sha256": "1513b9a7a2962cf82f2c0fa16593848ba96856654741cb9ea5f09d426ecffa96",
+  "evaluation_sha256": "fb5342e09e58d3a5370090aecd485cfe828ccd871e2e9bbe84ca4c6780f4280d",
+  "algorithm_sha256": "2917654f692b9ec57c13610f9b5742e242d2f3c1fd48a500985d32efc60479b2",
+  "split_sha256": "32f5d0c8d2fd07bc44884ca29071e515bef71a0b40ceac766e5979934cfce9df",
+  "validation_rows_sha256": "c5e0c475977cbfb8fc522be65c9fa52003868029d650393523bdf803eefac7e7",
+  "development_seeds": [
+    52026,
+    52027
+  ],
+  "development_cases": [
+    "clean",
+    "pest_evasion_seed52026",
+    "false_alarm_seed52026",
+    "label_flip_05_seed52026",
+    "label_flip_10_seed52026",
+    "pest_evasion_seed52027",
+    "false_alarm_seed52027",
+    "label_flip_05_seed52027",
+    "label_flip_10_seed52027"
+  ],
+  "classifier_C": [
+    1.0,
+    10.0
+  ],
+  "weights": [
+    0.0,
+    1.0,
+    0.0
+  ],
+  "thresholds": [
+    0.3,
+    0.325,
+    0.35,
+    0.375,
+    0.4,
+    0.425,
+    0.45,
+    0.475,
+    0.5,
+    0.525,
+    0.55,
+    0.575,
+    0.6,
+    0.625,
+    0.65,
+    0.675,
+    0.7,
+    0.725,
+    0.75,
+    0.775,
+    0.8,
+    0.825,
+    0.85,
+    0.875,
+    0.9,
+    0.925,
+    0.95,
+    0.975,
+    1.000001
+  ],
+  "criterion": "max mean development F1 over 8 attack cases s.t. clean development FPR <= 0.05; ties: lower FPR, then higher threshold",
+  "uses": "validation split only; training candidates and test split not used for selection"
+}

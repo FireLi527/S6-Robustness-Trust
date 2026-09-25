@@ -331,3 +331,13 @@ The console now has a separate comparison panel below the live check. It uses fr
 GET `/api/intent-comparison` loads a signature-checked report; POST with `{}` runs the experiment if a current report is unavailable. Results live in `results/bipia/intent_comparison/`. The experiment never changes the live authorization policy.
 
 The live form separately supports trusted task resolution: `/api/example` returns the original BIPIA question and an opaque content-bound context; `/api/tool-scenario` returns an explicitly labeled demo task preset. POST `/api/intent` previews the resolved source/category. `/api/detect` accepts `task_context` instead of a manual question. Manual `question` overrides the context. Editing sample content invalidates automatic context, and missing tasks do not become an automatic P2 ALLOW. These task categories are descriptive labels; P2 receives the complete question.
+
+## 2026-09-24: supervised classifier v2 (frozen control)
+
+`train_supervised_v2.py` adds char 3–5-grams and per-task loss balancing, frozen before test (`data/bipia/supervised_v2/protocol.json`). Unseen test with task thresholds: Email recall 72.90% / FPR 16%; Table 38.54% / 4%; Code 39.70% / 2%; ROC-AUC 0.87–0.93. Thresholds chosen on very small clean validation sets do not transfer, so it still does not replace the rule/semantic/tool-policy gates. Per-task, per-encoding breakdown: `results/bipia/supervised_v2/detailed_summary.json` (`report_supervised_v2.py`).
+
+## 2026-09-25: P3.1 explicit user approval
+
+`approval_policy.py` layers scope-hashed (tool, target, parameters) one-time or persistent approvals on top of the frozen P3 policy. One-time approvals are in-memory and consumed on use; persistent ones are stored in `results/local_frontend/tool_approvals.json` and managed via `GET/POST /api/approvals`. `access_secret` and `delete_records` are in `HARD_DENY_TOOLS` and can never be approved; approvals never override a content `BLOCK`, and — deliberately stricter than P3 — a `BLOCK` denies even read-only calls. The P3 decision table is unchanged and the "trusted target + missed injection" gap remains.
+
+Evaluation: `python s6/prompt_injection/evaluate_approval_policy.py` writes `results/bipia/approval_policy_{decisions.csv,summary.json}`. Persistent approval cuts exact-repeat friction from 71.43% to 42.86% but not for changed parameters; a simulated rubber-stamp reviewer raises harmful success from 11.11% to 33.33%. See the roadmap P3.1 section.

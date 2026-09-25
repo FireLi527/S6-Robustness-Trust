@@ -1,6 +1,8 @@
-# STL-10 图片标签投毒 Baseline
+# 图片标签投毒 Baseline（STL-10 协议说明）
 
-2026-09-11 起，默认图像 baseline 切换到 STL-10。IP102 原始数据、清单、结果和旧训练脚本保留，旧说明见 [IP102 历史记录](README_IP102_HISTORY_ZH.md)。提示词注入 baseline 不变。
+> **当前状态（2026-09-25）**：本地控制台及未指定 `corpus` 的 API 默认使用同学实蝇数据（`grouped_defense_v1`），见 [实蝇实验协议](FRUITFLY_PROTOCOL_ZH.md) 与 [标本分组防御协议](FRUITFLY_GROUPED_DEFENSE_ZH.md)；实蝇风险加权训练（weighted_v2）已完成 2/8 组。本文件描述 STL-10 协议，STL-10 现为可切换的历史对照，三种子多种子重复已完成。离线脚本使用的 `dataset_config.py` 仍固定为 STL-10。里程碑总览见 [BASELINE_ROADMAP_ZH.md](../BASELINE_ROADMAP_ZH.md)。
+
+2026-09-11 起，默认图像 baseline 切换到 STL-10（2026-09-21 起控制台默认改为实蝇，见上方说明）。IP102 原始数据、清单、结果和旧训练脚本保留，旧说明见 [IP102 历史记录](README_IP102_HISTORY_ZH.md)。提示词注入 baseline 不变。
 
 ## 数据与实验协议
 
@@ -106,6 +108,8 @@ cd /mnt/e/研究生/高级计算机项目
 
 ## 多训练种子重复
 
+> 已完成：36 个模型全部核验。定向飞机→鸟错误率 10.46±3.83% → 语义隔离 0.21±0.07%；10% 翻转组准确率同种子配对增益 +3.23±0.62 pp；干净组误隔离代价 −0.48±0.26 pp。见 [多种子报告](../../results/stl10_poisoning/multiseed_training/multiseed_report_ZH.md)。
+
 在已有 seed=2026 的 12 组实验基础上，新增 seed=2027、2028，共 36 个模型。固定数据划分、投毒和防御选择，只改变训练随机性。详细协议见 [防御实验协议](DEFENSE_PROTOCOL_ZH.md)。
 
 从项目根目录启动或恢复：
@@ -115,6 +119,14 @@ wsl.exe -d Ubuntu-24.04 -- /home/anima/.venvs/s6-training/bin/python -u s6/data_
 ```
 
 完成进度保存在 `results/stl10_poisoning/multiseed_training/progress.json`。全部完成后自动校验并生成该目录下的 `multiseed_report_ZH.md`，包含三种子的均值、样本标准差和同一种子内的配对防御增益。尚未完成全部模型时不生成汇总结论。
+
+## 配对显著性检验（2026-09-25）
+
+`python s6/data_poisoning/report_significance.py` 只读取已冻结的逐样本测试预测（STL-10 36 个、实蝇 14 个模型），输出精确 McNemar 检验、配对 bootstrap 置信区间和 Holm 校正，写入 `results/poisoning_significance/`。STL-10 各投毒条件的防御效果显著；实蝇只有 10% 翻转的语义−未处理差异在校正后显著。
+
+## 双翅目 / 实蝇科数据（D4）
+
+老师提供的 `external/diptera` 二分类野外照片，已完成只读审计。见 [DIPTERA_PROTOCOL_ZH.md](DIPTERA_PROTOCOL_ZH.md)。
 
 ## 小组实蝇数据
 

@@ -1,0 +1,75 @@
+{
+  "status": "FROZEN",
+  "seed": 2026,
+  "split_sha256": "32f5d0c8d2fd07bc44884ca29071e515bef71a0b40ceac766e5979934cfce9df",
+  "preparation_sha256": "0dcd7c56c80fd5eb7e8b837a706b9da9e1f09785d685807fbee5eec83d47208c",
+  "candidate_split": "train only; val/test untouched",
+  "labels": {
+    "0": "Diptera (non-Tephritidae)",
+    "1": "Tephritidae"
+  },
+  "targeted_rate_of_source_class": 0.2,
+  "manifests": {
+    "clean_subset": {
+      "sha256": "81e70cb3b2d405ebab92267b8474ce35c55feb8cce4b9d76c250a737a02754b6",
+      "samples": 35136,
+      "poisoned": 0,
+      "poisoned_by_direction": {},
+      "assigned_label_counts": {
+        "0": 31443,
+        "1": 3693
+      }
+    },
+    "pest_evasion": {
+      "sha256": "5420e9ee094d54748a5c8778979ac2d5c2c87324dbc0a31290b8881ac790ec44",
+      "samples": 35136,
+      "poisoned": 739,
+      "poisoned_by_direction": {
+        "1->0": 739
+      },
+      "assigned_label_counts": {
+        "0": 32182,
+        "1": 2954
+      }
+    },
+    "false_alarm": {
+      "sha256": "ce9f82dea519752dc6cd8892f2f5f6d4e5e45d6de18aa32b9230a3e30d037258",
+      "samples": 35136,
+      "poisoned": 739,
+      "poisoned_by_direction": {
+        "0->1": 739
+      },
+      "assigned_label_counts": {
+        "0": 30704,
+        "1": 4432
+      }
+    },
+    "label_flip_05": {
+      "sha256": "a8014b62f183edcea7a411da1e283b4a6aca069d74517943d40c32caf93a3d21",
+      "samples": 35136,
+      "poisoned": 1757,
+      "poisoned_by_direction": {
+        "0->1": 1570,
+        "1->0": 187
+      },
+      "assigned_label_counts": {
+        "0": 30060,
+        "1": 5076
+      }
+    },
+    "label_flip_10": {
+      "sha256": "032932a4bbd35a4fa0d5f7b8183bb4f13a8aa85d1081bb6afc6d3638833b9d55",
+      "samples": 35136,
+      "poisoned": 3514,
+      "poisoned_by_direction": {
+        "0->1": 3135,
+        "1->0": 379
+      },
+      "assigned_label_counts": {
+        "0": 28687,
+        "1": 6449
+      }
+    }
+  },
+  "blindness_note": "sample_id is opaque; source_relpath names the source folder, so manifests are detector-blind, not human-blind."
+}

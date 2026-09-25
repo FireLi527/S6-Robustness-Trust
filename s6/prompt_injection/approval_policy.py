@@ -1,4 +1,8 @@
-"""P3.1 explicit user approvals layered on top of the frozen P3 policy."""
+"""P3.1 explicit user approvals layered on top of the frozen P3 policy.
+
+Deliberately stricter than P3 in one place: a content `BLOCK` denies every tool call,
+including read-only ones that P3 exempts, so blocked content cannot drive any action.
+"""
 
 from __future__ import annotations
 

@@ -1,0 +1,146 @@
+{
+  "dataset": "Classmate Diptera vs Tephritidae field photos",
+  "status": "AUDIT_ONLY_NO_SPLIT",
+  "source": "external/diptera/Input_dataset",
+  "info_txt_sha256": "8b2574be984f494c222d650436886e7a0301ffcf78491f5a477077ffec49a725",
+  "inventory_sha256": "72dd33eef5eea19b6d9ea5a7ccf54b64179bdaf50de1255ca1f36d21b01a18f1",
+  "classes": {
+    "0": "Diptera",
+    "1": "Tephritidae"
+  },
+  "images_per_class": {
+    "Diptera": 45103,
+    "Tephritidae": 5287
+  },
+  "status_counts": {
+    "valid": 50390
+  },
+  "invalid_files": [],
+  "modes": {
+    "RGB": 50250,
+    "P": 5,
+    "RGBA": 135
+  },
+  "max_side_counts": {
+    "500": 49150,
+    "400": 26,
+    "480": 21,
+    "496": 14,
+    "466": 14
+  },
+  "copy_suffix_files": [
+    {
+      "file": "Diptera/40557557 - Copy.jpg",
+      "original_exists": false,
+      "identical_to_original": false
+    },
+    {
+      "file": "Diptera/40558009 - Copy.jpg",
+      "original_exists": true,
+      "identical_to_original": true
+    },
+    {
+      "file": "Diptera/40558933 - Copy.jpg",
+      "original_exists": false,
+      "identical_to_original": false
+    },
+    {
+      "file": "Diptera/40562463 - Copy.jpg",
+      "original_exists": true,
+      "identical_to_original": true
+    },
+    {
+      "file": "Diptera/40562943 - Copy.jpg",
+      "original_exists": true,
+      "identical_to_original": true
+    },
+    {
+      "file": "Diptera/40583732 - Copy.jpg",
+      "original_exists": false,
+      "identical_to_original": false
+    }
+  ],
+  "exact_pixel_duplicate_groups": 119,
+  "exact_pixel_duplicate_images": 242,
+  "exact_pixel_cross_class_groups": 1,
+  "near_duplicates": {
+    "method": "64-bit dHash, Hamming distance <= 6, exhaustive via 8-band pigeonhole",
+    "pairs_by_distance": {
+      "0": 194,
+      "1": 113,
+      "2": 303,
+      "3": 663,
+      "4": 1269,
+      "5": 2192,
+      "6": 3841
+    },
+    "cross_class_pairs_by_distance": {
+      "0": 5,
+      "1": 20,
+      "2": 87,
+      "3": 199,
+      "4": 343,
+      "5": 587,
+      "6": 1043
+    },
+    "images_in_any_pair": 1464
+  },
+  "numeric_id_adjacency": {
+    "Diptera": {
+      "unique_ids": 45100,
+      "min_id": 480,
+      "max_id": 71988722,
+      "runs_by_max_gap": {
+        "gap<=1": {
+          "runs": 43061,
+          "multi_image_runs": 1433,
+          "images_in_multi_image_runs": 3472,
+          "largest_run": 19
+        },
+        "gap<=3": {
+          "runs": 41020,
+          "multi_image_runs": 2428,
+          "images_in_multi_image_runs": 6508,
+          "largest_run": 58
+        },
+        "gap<=10": {
+          "runs": 38282,
+          "multi_image_runs": 3372,
+          "images_in_multi_image_runs": 10190,
+          "largest_run": 93
+        }
+      }
+    },
+    "Tephritidae": {
+      "unique_ids": 5287,
+      "min_id": 33646,
+      "max_id": 72047979,
+      "runs_by_max_gap": {
+        "gap<=1": {
+          "runs": 5234,
+          "multi_image_runs": 40,
+          "images_in_multi_image_runs": 93,
+          "largest_run": 5
+        },
+        "gap<=3": {
+          "runs": 5207,
+          "multi_image_runs": 57,
+          "images_in_multi_image_runs": 137,
+          "largest_run": 11
+        },
+        "gap<=10": {
+          "runs": 5170,
+          "multi_image_runs": 86,
+          "images_in_multi_image_runs": 203,
+          "largest_run": 13
+        }
+      }
+    }
+  },
+  "metadata_confirmation": "Classmate confirmed (2026-09-25) that the instructor supplied only these two folders: folder names are the labels; no observation IDs, species, or licence metadata exist. Future classification is expected at taxonomic ranks (order/family/genus).",
+  "limitations": [
+    "Audit only: no split, grouping, or poisoning manifest is frozen here.",
+    "dHash near-duplicate pairs are candidates only. Visual review showed that small insects on plain backgrounds collapse to near-identical dHashes, so low-distance pairs (including cross-class ones) are mostly unrelated photos; only exact-pixel groups are confirmed duplicates. Use embedding-based near-duplicate detection before freezing a split.",
+    "ID adjacency is a heuristic signal, not evidence of shared observations."
+  ]
+}

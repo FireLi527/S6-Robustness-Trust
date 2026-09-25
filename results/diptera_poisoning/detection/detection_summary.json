@@ -1,0 +1,179 @@
+{
+  "protocol_sha256": "c2b5c6433047361930c299e2a5a4196fde7d85e7414f7d79829c26560f23037e",
+  "predictions_sha256": "0cae68cbd4d601c79c6691c8298deca81b788854fa3a1a5413a6dbf9af15467a",
+  "detector": {
+    "C": 10.0,
+    "weights": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "threshold": 0.9000000000000006,
+    "development_mean_f1": 0.6020182517460123,
+    "clean_fpr": 0.020114942528735632
+  },
+  "algorithm_sha256": "2917654f692b9ec57c13610f9b5742e242d2f3c1fd48a500985d32efc60479b2",
+  "note": "Frozen fruit-fly grouped_defense_v1 parameters transferred without tuning. by_original_class splits recall by poisoning direction (original 1 = Tephritidae) and clean FPR by true class.",
+  "results": {
+    "clean_subset": {
+      "overall": {
+        "tp": 0,
+        "fp": 660,
+        "fn": 0,
+        "tn": 34476,
+        "precision": 0.0,
+        "recall": null,
+        "clean_fpr": 0.0188
+      },
+      "roc_auc": null,
+      "by_original_class": {
+        "0": {
+          "tp": 0,
+          "fp": 615,
+          "fn": 0,
+          "tn": 30828,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0196
+        },
+        "1": {
+          "tp": 0,
+          "fp": 45,
+          "fn": 0,
+          "tn": 3648,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0122
+        }
+      }
+    },
+    "pest_evasion": {
+      "overall": {
+        "tp": 371,
+        "fp": 483,
+        "fn": 368,
+        "tn": 33914,
+        "precision": 0.4344,
+        "recall": 0.502,
+        "clean_fpr": 0.014
+      },
+      "roc_auc": 0.9549,
+      "by_original_class": {
+        "0": {
+          "tp": 0,
+          "fp": 446,
+          "fn": 0,
+          "tn": 30997,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0142
+        },
+        "1": {
+          "tp": 371,
+          "fp": 37,
+          "fn": 368,
+          "tn": 2917,
+          "precision": 0.9093,
+          "recall": 0.502,
+          "clean_fpr": 0.0125
+        }
+      }
+    },
+    "false_alarm": {
+      "overall": {
+        "tp": 208,
+        "fp": 288,
+        "fn": 531,
+        "tn": 34109,
+        "precision": 0.4194,
+        "recall": 0.2815,
+        "clean_fpr": 0.0084
+      },
+      "roc_auc": 0.9214,
+      "by_original_class": {
+        "0": {
+          "tp": 208,
+          "fp": 280,
+          "fn": 531,
+          "tn": 30424,
+          "precision": 0.4262,
+          "recall": 0.2815,
+          "clean_fpr": 0.0091
+        },
+        "1": {
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "tn": 3685,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0022
+        }
+      }
+    },
+    "label_flip_05": {
+      "overall": {
+        "tp": 210,
+        "fp": 124,
+        "fn": 1547,
+        "tn": 33255,
+        "precision": 0.6287,
+        "recall": 0.1195,
+        "clean_fpr": 0.0037
+      },
+      "roc_auc": 0.8995,
+      "by_original_class": {
+        "0": {
+          "tp": 137,
+          "fp": 122,
+          "fn": 1433,
+          "tn": 29751,
+          "precision": 0.529,
+          "recall": 0.0873,
+          "clean_fpr": 0.0041
+        },
+        "1": {
+          "tp": 73,
+          "fp": 2,
+          "fn": 114,
+          "tn": 3504,
+          "precision": 0.9733,
+          "recall": 0.3904,
+          "clean_fpr": 0.0006
+        }
+      }
+    },
+    "label_flip_10": {
+      "overall": {
+        "tp": 87,
+        "fp": 40,
+        "fn": 3427,
+        "tn": 31582,
+        "precision": 0.685,
+        "recall": 0.0248,
+        "clean_fpr": 0.0013
+      },
+      "roc_auc": 0.8539,
+      "by_original_class": {
+        "0": {
+          "tp": 13,
+          "fp": 39,
+          "fn": 3122,
+          "tn": 28269,
+          "precision": 0.25,
+          "recall": 0.0041,
+          "clean_fpr": 0.0014
+        },
+        "1": {
+          "tp": 74,
+          "fp": 1,
+          "fn": 305,
+          "tn": 3313,
+          "precision": 0.9867,
+          "recall": 0.1953,
+          "clean_fpr": 0.0003
+        }
+      }
+    }
+  }
+}

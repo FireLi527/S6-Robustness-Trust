@@ -32,7 +32,7 @@
 - `data/fruitfly_poisoning/`：原图导入、像素审计、冻结分组、候选清单及单独评分真值。
 - `results/fruitfly_poisoning/`：数据审计、输入验证、语义结果、训练记录和完成后的 report_ZH.md。
 - WSL `~/s6-training-artifacts/fruitfly/`：模型和训练日志。
-- 原STL-10仍为默认图像基线，数据和结果保持独立。
+- 原STL-10仍为默认图像基线，数据和结果保持独立。（准备阶段记录；2026-09-21 后控制台默认已改为实蝇 `grouped_defense_v1`，STL-10 为历史对照。）
 
 从项目根目录运行：
 

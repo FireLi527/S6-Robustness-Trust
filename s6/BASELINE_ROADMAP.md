@@ -1,3 +1,28 @@
+> **Current status snapshot (2026-09-25)** — takes precedence over the historical notes below.
+>
+> | Milestone | Status | Key evidence |
+> |---|---|---|
+> | P1 unseen-attack split | Done | Rules v0.2.0: plain unseen test recall 93.47% / FPR 2% |
+> | P2 semantic task consistency | Done | Hybrid unseen test 97.08% / FPR 4% |
+> | P3 tool permission containment | Done | Harmful-action success 100% → 11.11%; benign friction 71.43% |
+> | P3.1 explicit user approval | **Done and measured (2026-09-25)** | Exact-repeat friction 71.43% → 42.86%, back to 71.43% when parameters change; rubber-stamp reviewer raises harm 11.11% → 33.33% |
+> | P4 supervised classifier control | v1, v2 frozen; **does not replace rules** | v2 Email test FPR 16% |
+> | D1 blind protocol | Done | Candidate manifests physically separated from hidden truth |
+> | D2 semantic label anomaly | Done (STL-10, v0.5.0) | 10% flip: precision 89.69%, recall 100%, FPR 1.28% |
+> | D2.5 downstream behaviour + defense | **Done (STL-10, 3 seeds, 36 models)** | Targeted error 10.46% → 0.21%; 10% flip paired gain +3.23 pp |
+> | D2.6 fruit-fly migration | Done (single seed) | Clean ResNet18 test accuracy 99.24% |
+> | D2.7 fruit-fly specimen-grouped detection + defense | Done (single seed, 12 models) | FPR 4.4–5.8% → 0.6–1.0%, with lower recall |
+> | D2.8 fruit-fly risk-weighted training | **In progress: 2 of 8 runs** | Down-weights instead of removing; 6 runs not started |
+| D4 Diptera / Tephritidae data | **In progress: transfer + validation recalibration done** | Recalibrated threshold 0.775: pest-evasion recall 50%→67%, FPR 1.4%→3.8%; 10% flip recall still 18% |
+| Downstream significance tests | **Done (2026-09-25)** | STL-10 defense effects significant; on fruit fly only 10% flip semantic−untreated survives Holm |
+> | Unified response contract + audit log | Not started | — |
+> | D3 pixel/backdoor poisoning | Not started | — |
+>
+> The local console defaults to the classmate fruit-fly dataset (`grouped_defense_v1`). **STL-10 was abandoned on 2026-09-25** (generic dataset, technical validation only; results kept, no further work); CLIP features remain fine to use. IP102 is frozen. Per the instructor, the image side moves to domain-relevant data (fruit flies, Diptera), with future classification at taxonomic ranks (order/family/genus). See "Recommended implementation order" at the end for next steps.
+
+<details>
+<summary>Historical update notes (2026-09-11 to 09-21, Chinese)</summary>
+
 > 2026-09-21：提示词注入新增 Email/Table/Code 监督分类基线。按正文分组划分，排除11条与测试重复的训练邮件；791条训练、198条验证、200条测试，全部82,700条测试预测已回放核验。新模型在Code明文优于规则，但Email/Table及编码攻击不足以替换现有检测器。网页以可选实验对照展示，不参与工具授权。详见[监督实验协议](prompt_injection/SUPERVISED_PROTOCOL_ZH.md)。
 
 > 2026-09-19: STL-10 固定策略防御重训练及等量随机删除对照已完成，8个新模型与原4个模型均核验通过。定向错误率从10%降至0.125%，但存在误隔离代价；下一步为多种子重复。详见[防御报告](../results/stl10_poisoning/defense_training/defense_report_ZH.md)。
@@ -6,12 +31,14 @@
 
 > 2026-09-11: 图像 baseline 已切换为 STL-10、原始 CLIP 特征。以下 IP102 指标和 NCA 里程碑属于历史记录，不代表当前配置。旧跨折投影距离比较有方法问题，不能据此断言数据集或特征是唯一瓶颈。新协议见 [STL-10 说明](data_poisoning/README_ZH.md)。
 
+</details>
+
 # S6 Baseline Development Roadmap
 
 This roadmap covers the two current S6 prototypes:
 
 1. **Email Prompt-Injection Baseline** using BIPIA.
-2. **IP102 Data-Poisoning Baseline** using controlled label poisoning.
+2. **Image Data-Poisoning Baseline** using controlled label poisoning (originally IP102; STL-10 from 2026-09-11; the console defaults to the classmate fruit-fly set from 2026-09-21).
 
 The immediate objective is to turn both working demonstrations into reproducible,
 evidence-based security baselines. New large security modules should be postponed until
@@ -277,6 +304,51 @@ If an injection is missed, can least privilege prevent it from causing real harm
   demonstrated in the fixture and stated plainly here and in the module docstring, not
   hidden behind a perfect-looking metric.
 
+## Milestone P3.1 — explicit user approval (implemented 2026-09-25)
+
+`approval_policy.py` layers exact-scope approvals on top of the frozen `tool_policy.py`
+without changing its decision table. The scope is a SHA-256 of `tool_name`, `target`, and
+sorted `parameters`; any change requires a new approval. One-time approvals live in memory
+and are consumed on use; persistent approvals are stored in
+`results/local_frontend/tool_approvals.json` and can be listed/revoked via
+`GET/POST /api/approvals`. `HARD_DENY_TOOLS = {access_secret, delete_records}` can never be
+approved, and approvals never override a content `BLOCK`. Covered by
+`tests/test_approval_policy.py`.
+
+Measured with `evaluate_approval_policy.py` (simulated reviewers: none / informed =
+approves only benign-by-construction requests / rubber-stamp; ground truth is read only by
+the simulated reviewer after the store returns; temporary approval store):
+
+| Reviewer / mode | Harmful success | Benign friction: first / exact repeat / changed parameters | Benign eventually executed |
+|---|---:|---|---:|
+| None | 1/9 (11.11%) | 71.43% / 71.43% / 71.43% | 2/7 |
+| Informed · persistent | 1/9 (11.11%) | 71.43% / **42.86%** / 71.43% | 4/7 |
+| Rubber-stamp · persistent | **3/9 (33.33%)** | 71.43% / 42.86% / 71.43% | 4/7 |
+
+First requests keep their friction (the approval is the review); persistent approvals only
+help byte-identical scopes, so tools whose parameters vary per call gain almost nothing.
+Rubber-stamping admits the two P1-missed untrusted-target attacks. Hard-deny turns four
+reviews into DENY (two attacks, two benign requests). Deliberate tightening (confirmed
+2026-09-25): unlike P3, a content BLOCK denies every call including read-only ones, so
+blocked content cannot drive any action (locked in by `tests/test_approval_policy.py`). The P3 "trusted target + missed injection" gap remains.
+
+## Milestone P4 — supervised classifier control (v1/v2 frozen as a research control)
+
+v1 (2026-09-21): word 1–2-gram hashing + SGD logistic regression over BIPIA
+Email/Table/Code with body-grouped splits (see `prompt_injection/SUPERVISED_PROTOCOL_ZH.md`).
+v2 (2026-09-24): adds char 3–5-grams and per-task loss balancing, frozen before test;
+winner `word_char`. Unseen test with task thresholds:
+
+| Task | Attack recall | Clean FPR | ROC-AUC |
+|---|---:|---:|---:|
+| Email | 72.90% | 16% (8/50) | 0.887 |
+| Table | 38.54% | 4% | 0.868 |
+| Code | 39.70% | 2% | 0.934 |
+
+AUC shows real ranking signal, but thresholds chosen on tiny clean validation sets (7 Email,
+10 Code) do not transfer. The classifier stays an optional UI comparison and never affects
+tool authorization. The test set had been inspected before; not a pristine blind test.
+
 ## Prompt-injection metrics
 
 - Attack recall/detection rate.
@@ -297,7 +369,9 @@ If an injection is missed, can least privilege prevent it from causing real harm
 
 ---
 
-# Baseline 2: IP102 Data Poisoning
+# Baseline 2: Image Data Poisoning (IP102 → STL-10 → fruit fly)
+
+> The D0–D2 descriptions below were written for IP102 and are historical; current datasets and metrics are in the snapshot above and in the sections from D2.5 onward.
 
 ## Threat model
 
@@ -453,7 +527,7 @@ One idea remains after the LDA→NCA swap above (completed, see results table):
   for manual review, and the high clean-false-positive-rate is documented above, but no
   qualitative write-up of individual false-positive images has been produced yet.
 
-## Milestone D2.5 — downstream model behaviour (initial run implemented)
+## Milestone D2.5 — downstream model behaviour (IP102 initial run + STL-10 three seeds done)
 
 ### Research question
 
@@ -477,6 +551,82 @@ The targeted candidate set increased the held-out class-0-to-class-1 error by 19
 percentage points. This is a reproducible seed-2026 baseline, not a significance estimate;
 multiple training seeds are still required because the 5%/10% random-flip results are not
 strictly monotonic in this single run.
+
+### Multi-seed replication (STL-10, completed)
+
+Seeds 2026/2027/2028 × 4 conditions × 3 strategies = 36 verified models. Mean ± sample SD:
+
+| Condition | Untreated acc. | Semantic screening acc. | Paired gain (pp) | Airplane→bird error untreated → semantic |
+|---|---:|---:|---:|---:|
+| Clean | 94.27 ± 0.16 | 93.79 ± 0.34 | −0.48 ± 0.26 | 0.29 → 0.29 |
+| 5% flip | 92.12 ± 0.64 | 92.70 ± 0.69 | +0.57 ± 0.25 | 0.67 → 0.58 |
+| 10% flip | 90.32 ± 0.41 | 93.55 ± 0.45 | +3.23 ± 0.62 | 0.67 → 0.38 |
+| Targeted 0→1 | 92.84 ± 0.23 | 94.17 ± 0.10 | +1.33 ± 0.33 | 10.46 → 0.21 |
+
+Paired differences have a consistent sign across seeds; clean data pays ~0.5 pp for false
+quarantine. Three seeds measure training randomness only. Report:
+`results/stl10_poisoning/multiseed_training/multiseed_report_ZH.md`. **D2.5 is complete on STL-10.**
+
+## Milestone D2.6 — classmate fruit-fly migration (done, single seed)
+
+9,244 images, 5 classes, split by confirmed 9-digit specimen IDs into 6,531/1,392/1,321.
+Clean ResNet18 test accuracy 99.24%. The frozen v0.5.0 detector transferred without tuning:
+~93% recall on random flips but 4.4–5.8% FPR, and 48.9% recall on targeted
+correcta→zonata. See `data_poisoning/FRUITFLY_PROTOCOL_ZH.md`.
+
+## Milestone D2.7 — fruit-fly specimen-grouped detection and defense (done, single seed)
+
+`fruitfly_group_detector.py` uses specimen-grouped folds and one neighbour vote per
+reference specimen; C=10, classifier-only signal, threshold 0.90 were selected on the
+validation set with two development poisoning seeds. Twelve downstream models:
+
+| Condition | Detection P / R / FPR | Accuracy untreated → random → semantic | 0→1 error untreated → semantic |
+|---|---|---|---|
+| Clean | — / — / 1.00% | 99.24 → 98.79 → 99.47 | 0 → 0 |
+| 5% flip | 85.3% / 81.7% / 0.74% | 98.33 → 98.11 → 99.02 | 0 → 0 |
+| 10% flip | 93.6% / 74.0% / 0.56% | 96.52 → 98.26 → 98.71 | 0 → 0 |
+| Targeted 0→1 | 58.9% / 45.7% / 0.95% | 98.94 → 98.41 → 98.11 | 3.49 → 1.16 |
+
+One test image is 0.08 pp (0.58 pp within the 172-image source class), so most single-seed
+differences are within noise. See `data_poisoning/FRUITFLY_GROUPED_DEFENSE_ZH.md`.
+
+## Milestone D2.8 — fruit-fly risk-weighted training (in progress)
+
+Keeps every sample with `weight = max(floor, 1 − risk)` from the frozen D2.7 specimen-grouped
+OOF risk; floor ∈ {0.25, 0.50}; 8 models; protocol frozen in
+`data/fruitfly_poisoning/weighted_v2/protocol.json` (no hidden truth or test metrics used).
+As of 2026-09-25, 2/8 done (floor 0.25): 10% flip 98.56% test accuracy; targeted 99.02% with
+1.16% 0→1 error. No conclusions until all 8 exist.
+
+## Downstream significance tests (done 2026-09-25)
+
+`report_significance.py` reads only the frozen per-sample test predictions of 50 models:
+exact McNemar, 10,000-resample paired bootstrap 95% CIs, Holm correction per dataset.
+Report: `results/poisoning_significance/report_ZH.md`.
+
+- **STL-10**: seed-averaged semantic−untreated CIs exclude 0 for every poisoned condition
+  (10% flip +3.23 [2.82, 3.65], targeted +1.33 [1.00, 1.67], 5% flip +0.57 [0.20, 0.94]);
+  targeted 0→1 error −10.25 pp [−11.92, −8.67]. The clean-data cost −0.47 [−0.75, −0.19] is also real.
+- **Fruit fly**: only 10% flip semantic−untreated (+2.19 pp) survives Holm. Semantic vs
+  random on 10% flip is not significant (p=0.42); targeted 0→1 error 3.49%→1.16% is 6→2
+  images (p=0.22) and cannot be claimed as an improvement.
+- CIs reflect test-set sampling only; fruit fly is single-seed.
+
+## Milestone D4 — Diptera / Tephritidae domain data (in progress)
+
+`external/diptera` (supplied by the instructor via a classmate): 45,103 non-tephritid Diptera
+and 5,287 Tephritidae field photos; folder names are the only labels. Together with the
+fruit-fly set it forms an order → family → genus/species hierarchy, and poisoning maps onto a
+biosecurity need (relabelling Tephritidae as other Diptera = pest evasion). Done: read-only audit; dedup (124 exact +
+65 CLIP cosine >=0.98 near duplicates, excluded via manifests only; 50,201 retained); approximate
+grouped split (same-class ID gap <=3 and CLIP 0.97-0.98 merged; per-class 70/15/15, seed 2026).
+See `data_poisoning/DIPTERA_PROTOCOL_ZH.md`. Poisoning scenarios (pest evasion, false alarm,
+random 5%/10%) and frozen-detector transfer done: strong ranking (AUC 0.85–0.96) but low,
+contamination-sensitive recall at the inherited threshold; high-risk clean images look like
+possible natural mislabels pending expert review. A pre-registered recalibration on the validation split
+(calibration_v2: C=10, threshold 0.775) raised recall on all attacks (pest evasion 67.1%, false
+alarm 55.8%) at roughly double the FPR; threshold tuning alone caps out and high-contamination
+recall stays low. Next: iterative cleaning (quarantine, refit, rescore) and taxonomic review.
 
 ## Milestone D3 — pixel and backdoor poisoning
 
@@ -544,21 +694,25 @@ Shared work should then add:
 
 ## Recommended implementation order
 
-1. Data-poisoning D1: remove ground truth from detector and trainer input (interface and
-   file levels implemented).
-2. Data-poisoning D2: implement semantic label-anomaly signals (implemented).
-3. Data-poisoning D2.5: measure downstream label-poisoning behaviour (initial single-seed
-   run implemented).
-4. Prompt-injection P1: freeze unseen attacks and expand clean evaluation (implemented).
-5. Prompt-injection P2: add semantic task consistency (implemented).
-6. Prompt-injection P3: add permission containment (implemented).
-7. Add multiple D2.5 training seeds and report variance/confidence intervals.
-8. Unify the response contract and audit log.
-9. Add the optional backdoor experiment (D3) if time remains.
+Done: D1, D2, D2.5 (STL-10, 3 seeds), D2.6, D2.7, P1, P2, P3, P3.1; P4 is a frozen research control.
 
-D1, D2, D2.5, P1, P2, and P3 now have working implementations. The next experimental
-priority is multiple D2.5 training seeds so optimisation variance is not mistaken for a
-poison-dose effect. The next engineering priority is the shared response/audit contract;
-D3 follows once those are in place.
+Next-phase candidates (2026-09-25 discussion draft, ordered by cost vs. value):
+
+1. **Finish D2.8** — six remaining weighted runs (~30 min each), then a report in D2.7
+   format, folded into the significance report.
+2. ~~Statistical tests on existing results~~ — done 2026-09-25.
+3. **Expand the clean prompt-injection corpus** — P1/P2 FPR rests on 50 clean emails per
+   split. (P3.1 friction/mistaken-approval evaluation done 2026-09-25.)
+4. **D4 Diptera / Tephritidae (main vertical line)** — the instructor wants domain-relevant
+   image data, not generic tooling; the classmate set `external/diptera` is audited; next are
+   embedding dedup, a frozen split, and domain poisoning detection. Prompt-injection datasets are
+   unrestricted but must be sourced by the team.
+5. **Unified response contract and audit log** across both baselines. Fruit fly is a
+   classmate's dataset used as a transfer check; no further multi-seed investment.
+6. **D3 pixel/backdoor poisoning (optional)** — hash checks already catch pixel edits when a
+   trusted manifest exists; the interesting case is no-baseline or clean-label, which needs its own threat model.
+
+All future work keeps the rules: test sets and hidden truth only after predictions are frozen,
+no retuning on already-seen attack metrics, and new versioned directories instead of overwriting frozen results.
 
 For the Chinese roadmap, see [BASELINE_ROADMAP_ZH.md](BASELINE_ROADMAP_ZH.md).

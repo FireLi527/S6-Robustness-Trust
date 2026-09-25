@@ -1,0 +1,46 @@
+{
+  "status": "FROZEN_SPLIT",
+  "seed": 2026,
+  "dedup_summary_sha256": "28dd0bedd9cfe476139addc0bb13c7f23b36a6d205a0bef3024eee7e730e812c",
+  "retained_images_sha256": "9124c0872de54c28117e3802c7306100298e41c1cdd9a6e4b47681755e8f221d",
+  "grouping": {
+    "max_id_gap_same_class": 3,
+    "clip_same_specimen_cosine": [
+      0.97,
+      0.98
+    ],
+    "merge_edges": {
+      "id_gap": 4120,
+      "clip_same_specimen": 298
+    },
+    "groups": 45859,
+    "multi_image_groups": 2468,
+    "largest_group": 153
+  },
+  "split_policy": "per class, shuffled groups fill test then val to 15% of images each; rest train",
+  "images": {
+    "train": {
+      "Diptera": 31443,
+      "Tephritidae": 3693
+    },
+    "val": {
+      "Diptera": 6739,
+      "Tephritidae": 795
+    },
+    "test": {
+      "Diptera": 6739,
+      "Tephritidae": 792
+    }
+  },
+  "groups_per_split": {
+    "train": 32062,
+    "test": 6898,
+    "val": 6899
+  },
+  "split_sha256": "32f5d0c8d2fd07bc44884ca29071e515bef71a0b40ceac766e5979934cfce9df",
+  "limitations": [
+    "No observation or specimen IDs exist; grouping is approximate (ID adjacency + CLIP similarity).",
+    "Distant-ID photos of the same individual below the CLIP merge band may still cross splits.",
+    "Folder labels are unverified citizen-science identifications."
+  ]
+}

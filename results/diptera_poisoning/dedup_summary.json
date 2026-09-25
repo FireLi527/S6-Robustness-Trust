@@ -1,0 +1,47 @@
+{
+  "status": "FROZEN_DEDUP_NO_SPLIT",
+  "audit_sha256": "3dbe11a8c1aed557dffe86fb956154acca1fde552e702b1fd5ccfc16a5042ad5",
+  "embedding_model": {
+    "model": "open_clip-ViT-B-32-quickgelu-openai",
+    "dimension": 512,
+    "preprocessing": "open_clip-default-rgb-v1"
+  },
+  "near_threshold_cosine": 0.98,
+  "rules": [
+    "Exact-pixel or near-duplicate component within one class: keep lowest numeric ID.",
+    "Component spanning both classes: label conflict, exclude all members.",
+    "Source files are never modified or deleted."
+  ],
+  "candidate_bands": {
+    "0.99-1.00": {
+      "pairs": 42,
+      "cross_class": 0
+    },
+    "0.98-0.99": {
+      "pairs": 24,
+      "cross_class": 0
+    },
+    "0.97-0.98": {
+      "pairs": 308,
+      "cross_class": 0
+    },
+    "0.96-0.97": {
+      "pairs": 3411,
+      "cross_class": 5
+    },
+    "0.95-0.96": {
+      "pairs": 23166,
+      "cross_class": 123
+    }
+  },
+  "exclusions_by_reason": {
+    "exact_duplicate": 122,
+    "exact_duplicate_label_conflict": 2,
+    "near_duplicate": 65
+  },
+  "retained_per_class": {
+    "Diptera": 44921,
+    "Tephritidae": 5280
+  },
+  "retained_sha256": "9124c0872de54c28117e3802c7306100298e41c1cdd9a6e4b47681755e8f221d"
+}

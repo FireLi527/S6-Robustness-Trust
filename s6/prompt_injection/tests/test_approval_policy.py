@@ -62,6 +62,12 @@ class ApprovalPolicyTests(unittest.TestCase):
         self.assertEqual(reviewed.decision, "HUMAN_REVIEW")
         self.assertIsNone(reviewed.matched)
 
+    def test_block_denies_read_only_calls_that_p3_exempts(self) -> None:
+        call = ToolCall("read_email", "inbox", {})
+        self.assertEqual(evaluate_tool_call(call, "BLOCK").decision, "ALLOW")
+        self.assertEqual(self.apply(call, "BLOCK").decision, "DENY")
+        self.assertEqual(self.apply(call, "ALLOW").decision, "ALLOW")
+
     def test_unknown_and_read_only_tools_are_not_approvable(self) -> None:
         for call in (ToolCall("unknown", "x", {}), ToolCall("read_email", "inbox", {})):
             with self.assertRaises(ValueError):

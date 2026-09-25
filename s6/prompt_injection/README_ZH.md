@@ -292,3 +292,13 @@ P3 已经接入 `app.py`/`web/index.html`：在内容旁边选择工具和目标
 ## 2026-09-21：监督分类扩展
 
 Email、Table、Code 已完成按原始正文分组的监督训练与独立测试，新增实验对照开关。该轻量分类器并非普遍优于已有规则，因此保留为独立研究对照，不替换工具门控。数据使用范围、排重、运行命令和结果限制见 [监督实验协议](SUPERVISED_PROTOCOL_ZH.md)。
+
+## 2026-09-24：监督分类 v2（冻结对照）
+
+`train_supervised_v2.py` 增加字符 3–5 元特征和按任务损失加权，测试前冻结协议（`data/bipia/supervised_v2/protocol.json`）。未见测试（任务阈值）：Email 检出率 72.90%、误报 16%；Table 38.54%、4%；Code 39.70%、2%；ROC-AUC 0.87–0.93。验证集干净样本过少，阈值无法迁移，因此仍不替换规则/语义/权限门控。按任务和编码拆分的指标见 `results/bipia/supervised_v2/detailed_summary.json`（`report_supervised_v2.py`）。
+
+## 2026-09-25：P3.1 显式用户授权
+
+`approval_policy.py` 在冻结的 P3 策略之上增加按范围哈希（工具名、目标、参数）的一次性或持久授权。一次性授权仅在内存中、使用一次即失效；持久授权保存在 `results/local_frontend/tool_approvals.json`，可通过 `GET /api/approvals` 列出、`POST /api/approvals` 新增或撤销。`access_secret`、`delete_records` 属于 `HARD_DENY_TOOLS`，任何授权都不能放行；内容判定为 `BLOCK` 时授权无效，并且有意比 P3 更严格：此时连只读工具调用也拒绝。授权不改变 P3 判定表，也不能弥补“可信目标 + 漏检注入”的遏制缺口。
+
+量化评估：`python s6/prompt_injection/evaluate_approval_policy.py`，结果写入 `results/bipia/approval_policy_{decisions.csv,summary.json}`。持久授权只让完全相同的重复请求摩擦从 71.43% 降到 42.86%，参数变化后回到 71.43%；模拟“一律批准”的审核员会让危害成功率从 11.11% 升到 33.33%。详见里程碑规划 P3.1 一节。
