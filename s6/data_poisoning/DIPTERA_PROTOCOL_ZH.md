@@ -88,7 +88,15 @@
 - 标签来自文件夹，未独立核验；公民科学鉴定本身可能含天然错标，这既是局限，也是检测器发现真实错标的机会。
 - 本阶段不训练下游模型。
 
-下一步候选（无需 GPU 训练）：① 迭代清洗（隔离高风险样本后重新拟合、再打分），针对污染比例升高时召回下降，同样须在验证集上预先登记；② 请具备分类学知识的人复核干净数据中高风险样本，评估天然错标。
+**已选定的下一步（2026-09-25 决定，尚未实施）：迭代清洗 cleaning_v3。** 针对污染比例升高时召回下降：
+
+1. 第 0 轮按现有方法做标本分组交叉验证打分；
+2. 第 1…R 轮将上一轮风险 ≥q 的样本隔离，各折分类器只用未隔离的参考样本重新拟合，再为全部样本重新打分；
+3. 按终判阈值决定 REVIEW。
+
+预先登记方案：只用验证集（开发种子 52026/52027 的 8 个攻击案例 + 干净案例）；q∈{0.5,0.6,0.7,0.8}、R∈{1,2,3}、终判阈值网格同 calibration_v2，C 固定为 10（calibration_v2 在同一验证集选出）；准则不变（开发干净误报率 ≤5% 下最大化平均 F1）。协议写入 `data/diptera_poisoning/cleaning_v3/protocol.json` 后再选参，结果写入 `results/diptera_poisoning/detection_v3_iterative/`，训练真值在判定冻结后才读取。仅 CPU 逻辑回归，预计选参约 10 分钟、套用训练候选约 15 分钟。
+
+备选（未选）：请具备分类学知识的人复核干净数据中的高风险样本，评估天然错标。
 
 产物：`data/diptera_poisoning/` 下 `image_audit.csv`、`near_duplicate_pairs.csv`（dHash，仅供参考）、`embeddings/`、`near_duplicate_candidates_clip.csv`、`dedup_exclusions.csv`、`retained_images.csv`、`split.csv`、`manifests/`、`hidden_ground_truth/`、`protocol.json`；`results/diptera_poisoning/` 下 `data_audit.json`、`dedup_summary.json`、`split_summary.json`、`detection/`。
 

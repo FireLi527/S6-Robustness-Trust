@@ -626,7 +626,9 @@ contamination-sensitive recall at the inherited threshold; high-risk clean image
 possible natural mislabels pending expert review. A pre-registered recalibration on the validation split
 (calibration_v2: C=10, threshold 0.775) raised recall on all attacks (pest evasion 67.1%, false
 alarm 55.8%) at roughly double the FPR; threshold tuning alone caps out and high-contamination
-recall stays low. Next: iterative cleaning (quarantine, refit, rescore) and taxonomic review.
+recall stays low. **Chosen next step (not yet run): iterative cleaning `cleaning_v3`** (quarantine risk >= q, refit
+on the rest, rescore; q, rounds, and final threshold pre-registered on the validation split — see
+`data_poisoning/DIPTERA_PROTOCOL_ZH.md`). Alternative not chosen: taxonomic review of flagged images.
 
 ## Milestone D3 — pixel and backdoor poisoning
 
