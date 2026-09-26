@@ -29,17 +29,16 @@ OUTPUT = RESULTS / 'detection'
 EMBEDDINGS = DATA / 'embeddings' / 'clip_vit_b32_embeddings.npz'
 
 
-def classifier_signal(records, embeddings, c):
-    """Column 1 of fruitfly_group_detector.signals: 1 - OOF probability of the candidate label."""
-    features = np.stack([embeddings[r.sha256] for r in records]).astype(np.float64)
-    features /= np.linalg.norm(features, axis=1, keepdims=True)
-    labels = np.array([r.assigned_label for r in records])
-    groups = np.array([r.group_id for r in records])
-    output = np.zeros(len(records))
-    folds = np.full(len(records), -1)
+def _fit_score(features, labels, groups, c, isolated):
+    """One cross-validation pass: fit each fold on its reference set minus any isolated
+    samples, score the held set. `isolated` is None (round 0) or a bool mask over all
+    records."""
+    output = np.zeros(len(labels))
+    folds = np.full(len(labels), -1)
     for fold, (reference, held) in enumerate(fold_indices(groups)):
+        ref = reference if isolated is None else reference[~isolated[reference]]
         model = LogisticRegression(C=c, class_weight='balanced', max_iter=2000, random_state=2026)
-        model.fit(features[reference], labels[reference], sample_weight=group_weights(groups[reference]))
+        model.fit(features[ref], labels[ref], sample_weight=group_weights(groups[ref]))
         probs = model.predict_proba(features[held])
         class_index = {v: i for i, v in enumerate(model.classes_)}
         output[held] = [1 - probs[k, class_index[labels[i]]] if labels[i] in class_index else 1.0
@@ -48,6 +47,36 @@ def classifier_signal(records, embeddings, c):
     if np.any(folds < 0):
         raise ValueError('Missing held-out predictions')
     return output, folds
+
+
+def _prepare(records, embeddings):
+    features = np.stack([embeddings[r.sha256] for r in records]).astype(np.float64)
+    features /= np.linalg.norm(features, axis=1, keepdims=True)
+    labels = np.array([r.assigned_label for r in records])
+    groups = np.array([r.group_id for r in records])
+    return features, labels, groups
+
+
+def classifier_signal(records, embeddings, c):
+    """Column 1 of fruitfly_group_detector.signals: 1 - OOF probability of the candidate label."""
+    features, labels, groups = _prepare(records, embeddings)
+    return _fit_score(features, labels, groups, c, None)
+
+
+def iterative_classifier_signal(records, embeddings, c, q, rounds):
+    """cleaning_v3: round 0 is `classifier_signal`; each following round isolates the
+    samples whose *previous* round's risk was >= q from every fold's reference set
+    (never the held set) before refitting and rescoring everyone. Isolation is not
+    cumulative across rounds - it is always taken fresh from the immediately preceding
+    round's scores, per the pre-registered protocol."""
+    features, labels, groups = _prepare(records, embeddings)
+    isolated = None
+    signal = folds = None
+    for round_index in range(rounds + 1):
+        signal, folds = _fit_score(features, labels, groups, c, isolated)
+        if round_index < rounds:
+            isolated = signal >= q
+    return signal, folds
 
 
 def frozen_detector():
@@ -77,8 +106,12 @@ def group_ids():
         return {r['sha256']: r['group_id'] for r in csv.DictReader(f)}
 
 
-def detect_and_score(chosen, output, provenance, note):
-    """Freeze decisions for every frozen training manifest, then (only then) score them."""
+def detect_and_score(chosen, output, provenance, note, signal_fn=classifier_signal):
+    """Freeze decisions for every frozen training manifest, then (only then) score them.
+
+    `signal_fn(records, embeddings, chosen['C'])` computes the risk signal; the default
+    is the plain (round-0) classifier signal. Pass a `functools.partial` of
+    `iterative_classifier_signal` bound to `q`/`rounds` to run cleaning_v3 instead."""
     protocol = json.loads(PROTOCOL.read_text(encoding='utf-8'))
     group_of = group_ids()
     manifests = {}
@@ -93,7 +126,7 @@ def detect_and_score(chosen, output, provenance, note):
     predictions = {}
     for name, rows in manifests.items():
         records = [GroupedInput(r['sample_id'], r['sha256'], r['assigned_label'], group_of[r['sha256']]) for r in rows]
-        signal, folds = classifier_signal(records, embeddings, chosen['C'])
+        signal, folds = signal_fn(records, embeddings, chosen['C'])
         matrix = np.column_stack([np.zeros_like(signal), signal, np.zeros_like(signal)])
         predictions[name] = decisions(records, matrix, chosen['weights'], chosen['threshold'])
         for r, fold in zip(records, folds):

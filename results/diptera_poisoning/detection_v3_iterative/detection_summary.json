@@ -1,0 +1,181 @@
+{
+  "protocol_sha256": "c2b5c6433047361930c299e2a5a4196fde7d85e7414f7d79829c26560f23037e",
+  "predictions_sha256": "e10a6742f1943227c22b3e19753ec226d5cbfa30dd7990ff2efcdb8020ebaad1",
+  "detector": {
+    "C": 10.0,
+    "weights": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "threshold": 0.975
+  },
+  "algorithm_sha256": "2917654f692b9ec57c13610f9b5742e242d2f3c1fd48a500985d32efc60479b2",
+  "cleaning_protocol_sha256": "49f74c90723da50a5f6c0882dd28edeb243f73360f5037b279d292bbc0c7a485",
+  "cleaning_selection_sha256": "f90adf7664fa8b69da0b8b8de427ee93adb932002a461c03f832148f860f4b6e",
+  "q": 0.6,
+  "rounds": 3,
+  "note": "Pre-registered iterative-cleaning (cleaning_v3) parameters re-selected on the Diptera validation split; C fixed from calibration_v2, q/rounds/threshold re-selected here. Training candidates and test split unused for selection. by_original_class splits recall by poisoning direction (original 1 = Tephritidae) and clean FPR by true class.",
+  "results": {
+    "clean_subset": {
+      "overall": {
+        "tp": 0,
+        "fp": 1056,
+        "fn": 0,
+        "tn": 34080,
+        "precision": 0.0,
+        "recall": null,
+        "clean_fpr": 0.0301
+      },
+      "roc_auc": null,
+      "by_original_class": {
+        "0": {
+          "tp": 0,
+          "fp": 965,
+          "fn": 0,
+          "tn": 30478,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0307
+        },
+        "1": {
+          "tp": 0,
+          "fp": 91,
+          "fn": 0,
+          "tn": 3602,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0246
+        }
+      }
+    },
+    "pest_evasion": {
+      "overall": {
+        "tp": 451,
+        "fp": 985,
+        "fn": 288,
+        "tn": 33412,
+        "precision": 0.3141,
+        "recall": 0.6103,
+        "clean_fpr": 0.0286
+      },
+      "roc_auc": 0.9505,
+      "by_original_class": {
+        "0": {
+          "tp": 0,
+          "fp": 906,
+          "fn": 0,
+          "tn": 30537,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0288
+        },
+        "1": {
+          "tp": 451,
+          "fp": 79,
+          "fn": 288,
+          "tn": 2875,
+          "precision": 0.8509,
+          "recall": 0.6103,
+          "clean_fpr": 0.0267
+        }
+      }
+    },
+    "false_alarm": {
+      "overall": {
+        "tp": 483,
+        "fp": 1205,
+        "fn": 256,
+        "tn": 33192,
+        "precision": 0.2861,
+        "recall": 0.6536,
+        "clean_fpr": 0.035
+      },
+      "roc_auc": 0.9337,
+      "by_original_class": {
+        "0": {
+          "tp": 483,
+          "fp": 1130,
+          "fn": 256,
+          "tn": 29574,
+          "precision": 0.2994,
+          "recall": 0.6536,
+          "clean_fpr": 0.0368
+        },
+        "1": {
+          "tp": 0,
+          "fp": 75,
+          "fn": 0,
+          "tn": 3618,
+          "precision": 0.0,
+          "recall": null,
+          "clean_fpr": 0.0203
+        }
+      }
+    },
+    "label_flip_05": {
+      "overall": {
+        "tp": 1131,
+        "fp": 1305,
+        "fn": 626,
+        "tn": 32074,
+        "precision": 0.4643,
+        "recall": 0.6437,
+        "clean_fpr": 0.0391
+      },
+      "roc_auc": 0.9333,
+      "by_original_class": {
+        "0": {
+          "tp": 993,
+          "fp": 1253,
+          "fn": 577,
+          "tn": 28620,
+          "precision": 0.4421,
+          "recall": 0.6325,
+          "clean_fpr": 0.0419
+        },
+        "1": {
+          "tp": 138,
+          "fp": 52,
+          "fn": 49,
+          "tn": 3454,
+          "precision": 0.7263,
+          "recall": 0.738,
+          "clean_fpr": 0.0148
+        }
+      }
+    },
+    "label_flip_10": {
+      "overall": {
+        "tp": 2024,
+        "fp": 1436,
+        "fn": 1490,
+        "tn": 30186,
+        "precision": 0.585,
+        "recall": 0.576,
+        "clean_fpr": 0.0454
+      },
+      "roc_auc": 0.9106,
+      "by_original_class": {
+        "0": {
+          "tp": 1744,
+          "fp": 1407,
+          "fn": 1391,
+          "tn": 26901,
+          "precision": 0.5535,
+          "recall": 0.5563,
+          "clean_fpr": 0.0497
+        },
+        "1": {
+          "tp": 280,
+          "fp": 29,
+          "fn": 99,
+          "tn": 3285,
+          "precision": 0.9061,
+          "recall": 0.7388,
+          "clean_fpr": 0.0088
+        }
+      }
+    }
+  }
+}

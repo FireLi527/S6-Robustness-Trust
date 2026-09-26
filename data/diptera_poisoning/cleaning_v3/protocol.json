@@ -1,0 +1,60 @@
+{
+  "status": "FROZEN_BEFORE_SELECTION",
+  "script_sha256": "7ee46ff61b7001da4a608b6e83a2e3caf491908aedc80656370a0628d609faef",
+  "evaluation_sha256": "f8501e3cf8730c965de499c378bbf89664643c7fa943a1bfe875786c788921bd",
+  "algorithm_sha256": "2917654f692b9ec57c13610f9b5742e242d2f3c1fd48a500985d32efc60479b2",
+  "split_sha256": "32f5d0c8d2fd07bc44884ca29071e515bef71a0b40ceac766e5979934cfce9df",
+  "validation_rows_sha256": "c5e0c475977cbfb8fc522be65c9fa52003868029d650393523bdf803eefac7e7",
+  "calibration_v2_selection_sha256": "6da5ecfee6a43562d869d2e457230c40c0db8fd2da0c9b6f5f8e5f750fb96ff2",
+  "classifier_C": 10.0,
+  "weights": [
+    0.0,
+    1.0,
+    0.0
+  ],
+  "q": [
+    0.5,
+    0.6,
+    0.7,
+    0.8
+  ],
+  "rounds": [
+    1,
+    2,
+    3
+  ],
+  "thresholds": [
+    0.3,
+    0.325,
+    0.35,
+    0.375,
+    0.4,
+    0.425,
+    0.45,
+    0.475,
+    0.5,
+    0.525,
+    0.55,
+    0.575,
+    0.6,
+    0.625,
+    0.65,
+    0.675,
+    0.7,
+    0.725,
+    0.75,
+    0.775,
+    0.8,
+    0.825,
+    0.85,
+    0.875,
+    0.9,
+    0.925,
+    0.95,
+    0.975,
+    1.000001
+  ],
+  "criterion": "max mean development F1 over 8 attack cases s.t. clean development FPR <= 0.05; ties: lower FPR, then higher threshold",
+  "uses": "validation split only; training candidates and test split not used for selection; C fixed from calibration_v2 (same validation split), not re-tuned here",
+  "isolation": "per round, isolate samples with the immediately preceding round's risk >= q from every fold's reference set only; not cumulative across rounds"
+}

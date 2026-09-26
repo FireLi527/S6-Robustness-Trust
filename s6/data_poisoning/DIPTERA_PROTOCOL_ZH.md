@@ -88,13 +88,25 @@
 - 标签来自文件夹，未独立核验；公民科学鉴定本身可能含天然错标，这既是局限，也是检测器发现真实错标的机会。
 - 本阶段不训练下游模型。
 
-**已选定的下一步（2026-09-25 决定，尚未实施）：迭代清洗 cleaning_v3。** 针对污染比例升高时召回下降：
+**迭代清洗 cleaning_v3（2026-09-25 决定，2026-09-26 已完成）。** 针对污染比例升高时召回下降：
 
 1. 第 0 轮按现有方法做标本分组交叉验证打分；
-2. 第 1…R 轮将上一轮风险 ≥q 的样本隔离，各折分类器只用未隔离的参考样本重新拟合，再为全部样本重新打分；
+2. 第 1…R 轮将上一轮风险 ≥q 的样本隔离，各折分类器只用未隔离的参考样本重新拟合，再为全部样本重新打分（隔离不跨轮累积，每轮都只看上一轮的分数）；
 3. 按终判阈值决定 REVIEW。
 
-预先登记方案：只用验证集（开发种子 52026/52027 的 8 个攻击案例 + 干净案例）；q∈{0.5,0.6,0.7,0.8}、R∈{1,2,3}、终判阈值网格同 calibration_v2，C 固定为 10（calibration_v2 在同一验证集选出）；准则不变（开发干净误报率 ≤5% 下最大化平均 F1）。协议写入 `data/diptera_poisoning/cleaning_v3/protocol.json` 后再选参，结果写入 `results/diptera_poisoning/detection_v3_iterative/`，训练真值在判定冻结后才读取。仅 CPU 逻辑回归，预计选参约 10 分钟、套用训练候选约 15 分钟。
+预先登记方案：只用验证集（开发种子 52026/52027 的 8 个攻击案例 + 干净案例）；q∈{0.5,0.6,0.7,0.8}、R∈{1,2,3}、终判阈值网格同 calibration_v2，C 固定为 10（calibration_v2 在同一验证集选出）；准则不变（开发干净误报率 ≤5% 下最大化平均 F1）。协议写入 `data/diptera_poisoning/cleaning_v3/protocol.json` 后再选参，结果写入 `results/diptera_poisoning/detection_v3_iterative/`，训练真值在判定冻结后才读取。实现：`evaluate_diptera_detection.py` 新增 `iterative_classifier_signal` 和可插拔的 `detect_and_score(..., signal_fn=...)`，新脚本 `calibrate_diptera_cleaning_v3.py`；新增两条单元测试（`tests/test_diptera.py`）验证隔离逻辑（round 0 与 `classifier_signal` 完全一致；隔离只作用于每折的参考集、不影响留出集）。
+
+**选中参数：q=0.6, rounds=3, threshold=0.975**（开发集平均 F1 0.528，开发干净误报 1.35%，均优于 calibration_v2 的 0.402 / 3.94%）。套用到训练候选集后 vs. calibration_v2（未清洗）：
+
+| 场景 | v2 召回率 | v3 召回率 | v2 干净误报 | v3 干净误报 |
+|---|---|---|---|---|
+| clean_subset | — | — | 4.29% | 3.01% |
+| pest_evasion | 67.12% | 61.03% | 3.76% | 2.86% |
+| false_alarm | 55.75% | 65.36% | 3.30% | 3.50% |
+| label_flip_05 | 40.75% | 64.37% | 2.54% | 3.91% |
+| label_flip_10 | 18.36% | 57.60% | 1.51% | 4.54% |
+
+结论：迭代清洗基本解决了"污染比例越高、召回越低"的问题（10% 翻转召回 18%→58%），代价是干净误报率整体上移到 3–4.5%（仍是个位数）、害虫逃逸召回小幅下降 6 个百分点。数值来源：`results/diptera_poisoning/detection_v3_iterative/detection_summary.json`。
 
 备选（未选）：请具备分类学知识的人复核干净数据中的高风险样本，评估天然错标。
 

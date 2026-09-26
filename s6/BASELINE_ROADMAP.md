@@ -13,7 +13,7 @@
 > | D2.6 fruit-fly migration | Done (single seed) | Clean ResNet18 test accuracy 99.24% |
 > | D2.7 fruit-fly specimen-grouped detection + defense | Done (single seed, 12 models) | FPR 4.4–5.8% → 0.6–1.0%, with lower recall |
 > | D2.8 fruit-fly risk-weighted training | **In progress: 2 of 8 runs** | Down-weights instead of removing; 6 runs not started |
-| D4 Diptera / Tephritidae data | **In progress: transfer + validation recalibration done** | Recalibrated threshold 0.775: pest-evasion recall 50%→67%, FPR 1.4%→3.8%; 10% flip recall still 18% |
+| D4 Diptera / Tephritidae data | **In progress: iterative cleaning (cleaning_v3) done (2026-09-26)** | q=0.6, rounds=3, threshold=0.975: 10% flip recall 18%→58%, pest-evasion recall 67%→61%, clean FPR ~3-4.5% |
 | Downstream significance tests | **Done (2026-09-25)** | STL-10 defense effects significant; on fruit fly only 10% flip semantic−untreated survives Holm |
 > | Unified response contract + audit log | Not started | — |
 > | D3 pixel/backdoor poisoning | Not started | — |
