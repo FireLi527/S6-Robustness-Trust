@@ -766,6 +766,8 @@ Next-phase candidates (2026-09-25 discussion draft, ordered by cost vs. value):
 
 1. ~~Finish D2.8~~ — done (2026-09-28): 8/8 training runs, D2.7-format summary report, and
    significance testing all complete; see the D2.8 milestone section above.
+   An exploratory `multiseed_v1` repeat is now running for 10% random flips and targeted 0→1,
+   with untreated, semantic-filtered, and weighted strategies at additional seeds 2027/2028.
 2. ~~Statistical tests on existing results~~ — done 2026-09-25.
 3. ~~Expand the clean prompt-injection corpus~~ — done (2026-09-28): an independent,
    custodian-disjoint 200-email-per-split Enron sample was added (`download_enron_clean.py`
