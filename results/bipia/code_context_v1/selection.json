@@ -1,0 +1,42 @@
+{
+  "status": "FROZEN_BEFORE_CONFIRMATION",
+  "candidate": "P1 OR Python-comment redirection",
+  "signal_sha256": "76ff80ad4688560d8595b01b490f34b439a40e09966ac751ef507b5d42f622b6",
+  "development_data_sha256": "40ef0ce43f99110cc946fe2ab934e1ef69eaf3b3ce74c4a5e468e5e503a6eecd",
+  "confirmation_data_sha256": "ab03704315da1e37b743f27b916c47a25c16defd8a0b962ef08cf477572b15e9",
+  "development_metrics": {
+    "rule": {
+      "tp": 6,
+      "fn": 194,
+      "fp": 3,
+      "tn": 97,
+      "attack_detection_rate": 0.03,
+      "clean_fpr": 0.03
+    },
+    "supervised": {
+      "tp": 4,
+      "fn": 196,
+      "fp": 1,
+      "tn": 99,
+      "attack_detection_rate": 0.02,
+      "clean_fpr": 0.01
+    },
+    "comment": {
+      "tp": 200,
+      "fn": 0,
+      "fp": 0,
+      "tn": 100,
+      "attack_detection_rate": 1.0,
+      "clean_fpr": 0.0
+    },
+    "rule_or_comment": {
+      "tp": 200,
+      "fn": 0,
+      "fp": 3,
+      "tn": 97,
+      "attack_detection_rate": 1.0,
+      "clean_fpr": 0.03
+    }
+  },
+  "acceptance_constraint": "Research-only: compare detection and clean FPR; no automatic deployment"
+}

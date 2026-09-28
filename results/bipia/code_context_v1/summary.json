@@ -1,0 +1,80 @@
+{
+  "status": "COMPLETE",
+  "dataset_sha256": "ab03704315da1e37b743f27b916c47a25c16defd8a0b962ef08cf477572b15e9",
+  "signal_sha256": "76ff80ad4688560d8595b01b490f34b439a40e09966ac751ef507b5d42f622b6",
+  "model_sha256": "ed03a8512a8c9296243a7691cdf8a81a58e42b23fabec4c3361df2b0153ea15e",
+  "development_metrics": {
+    "rule": {
+      "tp": 6,
+      "fn": 194,
+      "fp": 3,
+      "tn": 97,
+      "attack_detection_rate": 0.03,
+      "clean_fpr": 0.03
+    },
+    "supervised": {
+      "tp": 4,
+      "fn": 196,
+      "fp": 1,
+      "tn": 99,
+      "attack_detection_rate": 0.02,
+      "clean_fpr": 0.01
+    },
+    "comment": {
+      "tp": 200,
+      "fn": 0,
+      "fp": 0,
+      "tn": 100,
+      "attack_detection_rate": 1.0,
+      "clean_fpr": 0.0
+    },
+    "rule_or_comment": {
+      "tp": 200,
+      "fn": 0,
+      "fp": 3,
+      "tn": 97,
+      "attack_detection_rate": 1.0,
+      "clean_fpr": 0.03
+    }
+  },
+  "confirmation_metrics": {
+    "rule": {
+      "tp": 8,
+      "fn": 192,
+      "fp": 4,
+      "tn": 96,
+      "attack_detection_rate": 0.04,
+      "clean_fpr": 0.04
+    },
+    "supervised": {
+      "tp": 2,
+      "fn": 198,
+      "fp": 1,
+      "tn": 99,
+      "attack_detection_rate": 0.01,
+      "clean_fpr": 0.01
+    },
+    "comment": {
+      "tp": 124,
+      "fn": 76,
+      "fp": 0,
+      "tn": 100,
+      "attack_detection_rate": 0.62,
+      "clean_fpr": 0.0
+    },
+    "rule_or_comment": {
+      "tp": 124,
+      "fn": 76,
+      "fp": 4,
+      "tn": 96,
+      "attack_detection_rate": 0.62,
+      "clean_fpr": 0.04
+    }
+  },
+  "limitations": [
+    "Synthetic comments on one new codebase; not real agent attack success.",
+    "Templates are hand-written and variants share source files.",
+    "The researcher authored and knew confirmation templates before implementing the signal; not a blind test.",
+    "The candidate is research-only and has no tool-policy effect."
+  ]
+}
