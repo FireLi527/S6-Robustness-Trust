@@ -1,0 +1,61 @@
+{
+  "status": "COMPLETE",
+  "dataset_sha256": "40ef0ce43f99110cc946fe2ab934e1ef69eaf3b3ce74c4a5e468e5e503a6eecd",
+  "model_sha256": "ed03a8512a8c9296243a7691cdf8a81a58e42b23fabec4c3361df2b0153ea15e",
+  "model_threshold": 0.79,
+  "splits": {
+    "development": {
+      "rule": {
+        "tp": 6,
+        "fn": 194,
+        "fp": 3,
+        "tn": 97,
+        "attack_detection_rate": 0.03,
+        "clean_fpr": 0.03
+      },
+      "supervised": {
+        "tp": 4,
+        "fn": 196,
+        "fp": 1,
+        "tn": 99,
+        "attack_detection_rate": 0.02,
+        "clean_fpr": 0.01
+      },
+      "union": {
+        "tp": 10,
+        "fn": 190,
+        "fp": 4,
+        "tn": 96,
+        "attack_detection_rate": 0.05,
+        "clean_fpr": 0.04
+      }
+    },
+    "test": {
+      "rule": {
+        "tp": 8,
+        "fn": 192,
+        "fp": 4,
+        "tn": 96,
+        "attack_detection_rate": 0.04,
+        "clean_fpr": 0.04
+      },
+      "supervised": {
+        "tp": 16,
+        "fn": 184,
+        "fp": 0,
+        "tn": 100,
+        "attack_detection_rate": 0.08,
+        "clean_fpr": 0.0
+      },
+      "union": {
+        "tp": 24,
+        "fn": 176,
+        "fp": 4,
+        "tn": 96,
+        "attack_detection_rate": 0.12,
+        "clean_fpr": 0.04
+      }
+    }
+  },
+  "test_both_missed": 176
+}

@@ -22,6 +22,8 @@ S6_Robustness_and_Trust_讨论总结.md
 # Upstream datasets and generated samples
 external/
 data/bipia/generated/
+# Rebuild locally from the recorded Python standard-library version and frozen hash.
+data/bipia/code_independent_v2/samples.jsonl
 
 # Embedding and model caches
 *.npz
