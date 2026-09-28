@@ -1,0 +1,293 @@
+{
+  "status": "COMPLETE",
+  "protocol_sha256": "6d3d101fcaadb699140ceb1c3dbff565e79dd6d9e3c9ee63152d4b1282908ca0",
+  "rows": [
+    {
+      "scenario": "label_flip_10",
+      "strategy": "untreated",
+      "job": "label_flip_10__untreated",
+      "seed": 2026,
+      "test_accuracy": 0.965178,
+      "macro_f1": 0.962475,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "untreated",
+      "job": "label_flip_10__untreated",
+      "seed": 2027,
+      "test_accuracy": 0.987888,
+      "macro_f1": 0.985212,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "untreated",
+      "job": "label_flip_10__untreated",
+      "seed": 2028,
+      "test_accuracy": 0.970477,
+      "macro_f1": 0.966626,
+      "targeted_error": 0.005814
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "semantic",
+      "job": "label_flip_10__semantic",
+      "seed": 2026,
+      "test_accuracy": 0.987131,
+      "macro_f1": 0.98578,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "semantic",
+      "job": "label_flip_10__semantic",
+      "seed": 2027,
+      "test_accuracy": 0.978804,
+      "macro_f1": 0.977665,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "semantic",
+      "job": "label_flip_10__semantic",
+      "seed": 2028,
+      "test_accuracy": 0.982589,
+      "macro_f1": 0.979247,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "weighted",
+      "job": "label_flip_10__weighted_50",
+      "seed": 2026,
+      "test_accuracy": 0.989402,
+      "macro_f1": 0.987053,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "weighted",
+      "job": "label_flip_10__weighted_50",
+      "seed": 2027,
+      "test_accuracy": 0.984103,
+      "macro_f1": 0.982176,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "weighted",
+      "job": "label_flip_10__weighted_50",
+      "seed": 2028,
+      "test_accuracy": 0.96972,
+      "macro_f1": 0.964729,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "untreated",
+      "job": "targeted_0_to_1__untreated",
+      "seed": 2026,
+      "test_accuracy": 0.989402,
+      "macro_f1": 0.987432,
+      "targeted_error": 0.034884
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "untreated",
+      "job": "targeted_0_to_1__untreated",
+      "seed": 2027,
+      "test_accuracy": 0.983346,
+      "macro_f1": 0.981224,
+      "targeted_error": 0.005814
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "untreated",
+      "job": "targeted_0_to_1__untreated",
+      "seed": 2028,
+      "test_accuracy": 0.983346,
+      "macro_f1": 0.979956,
+      "targeted_error": 0.05814
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "semantic",
+      "job": "targeted_0_to_1__semantic",
+      "seed": 2026,
+      "test_accuracy": 0.981075,
+      "macro_f1": 0.976876,
+      "targeted_error": 0.011628
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "semantic",
+      "job": "targeted_0_to_1__semantic",
+      "seed": 2027,
+      "test_accuracy": 0.990159,
+      "macro_f1": 0.988064,
+      "targeted_error": 0.02907
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "semantic",
+      "job": "targeted_0_to_1__semantic",
+      "seed": 2028,
+      "test_accuracy": 0.989402,
+      "macro_f1": 0.988033,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "weighted",
+      "job": "targeted_0_to_1__weighted_25",
+      "seed": 2026,
+      "test_accuracy": 0.990159,
+      "macro_f1": 0.98884,
+      "targeted_error": 0.011628
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "weighted",
+      "job": "targeted_0_to_1__weighted_25",
+      "seed": 2027,
+      "test_accuracy": 0.996972,
+      "macro_f1": 0.996344,
+      "targeted_error": 0.0
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "weighted",
+      "job": "targeted_0_to_1__weighted_25",
+      "seed": 2028,
+      "test_accuracy": 0.989402,
+      "macro_f1": 0.988314,
+      "targeted_error": 0.0
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "scenario": "label_flip_10",
+      "seed": 2026,
+      "comparison": "weighted_minus_semantic",
+      "accuracy_gain_pp": 0.2271000000000023,
+      "targeted_error_change_pp": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "seed": 2026,
+      "comparison": "weighted_minus_untreated",
+      "accuracy_gain_pp": 2.4224000000000023,
+      "targeted_error_change_pp": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "seed": 2027,
+      "comparison": "weighted_minus_semantic",
+      "accuracy_gain_pp": 0.5298999999999943,
+      "targeted_error_change_pp": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "seed": 2027,
+      "comparison": "weighted_minus_untreated",
+      "accuracy_gain_pp": -0.37850000000000383,
+      "targeted_error_change_pp": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "seed": 2028,
+      "comparison": "weighted_minus_semantic",
+      "accuracy_gain_pp": -1.286900000000002,
+      "targeted_error_change_pp": 0.0
+    },
+    {
+      "scenario": "label_flip_10",
+      "seed": 2028,
+      "comparison": "weighted_minus_untreated",
+      "accuracy_gain_pp": -0.07570000000000077,
+      "targeted_error_change_pp": -0.5813999999999999
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "seed": 2026,
+      "comparison": "weighted_minus_semantic",
+      "accuracy_gain_pp": 0.9083999999999981,
+      "targeted_error_change_pp": 0.0
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "seed": 2026,
+      "comparison": "weighted_minus_untreated",
+      "accuracy_gain_pp": 0.07570000000000077,
+      "targeted_error_change_pp": -2.3255999999999997
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "seed": 2027,
+      "comparison": "weighted_minus_semantic",
+      "accuracy_gain_pp": 0.6812999999999958,
+      "targeted_error_change_pp": -2.907
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "seed": 2027,
+      "comparison": "weighted_minus_untreated",
+      "accuracy_gain_pp": 1.3625999999999916,
+      "targeted_error_change_pp": -0.5813999999999999
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "seed": 2028,
+      "comparison": "weighted_minus_semantic",
+      "accuracy_gain_pp": 0.0,
+      "targeted_error_change_pp": 0.0
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "seed": 2028,
+      "comparison": "weighted_minus_untreated",
+      "accuracy_gain_pp": 0.605599999999995,
+      "targeted_error_change_pp": -5.814
+    }
+  ],
+  "three_seed_summary": [
+    {
+      "scenario": "label_flip_10",
+      "strategy": "untreated",
+      "accuracy_mean": 0.9745143333333334,
+      "accuracy_sample_sd": 0.011881122435752156
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "semantic",
+      "accuracy_mean": 0.9828413333333333,
+      "accuracy_sample_sd": 0.004169230904295564
+    },
+    {
+      "scenario": "label_flip_10",
+      "strategy": "weighted",
+      "accuracy_mean": 0.981075,
+      "accuracy_sample_sd": 0.010184393403634778
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "untreated",
+      "accuracy_mean": 0.9853646666666667,
+      "accuracy_sample_sd": 0.003496433230212345
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "semantic",
+      "accuracy_mean": 0.9868786666666667,
+      "accuracy_sample_sd": 0.0050403543856888874
+    },
+    {
+      "scenario": "targeted_0_to_1",
+      "strategy": "weighted",
+      "accuracy_mean": 0.9921776666666666,
+      "accuracy_sample_sd": 0.004169230904295558
+    }
+  ],
+  "interpretation": "Exploratory: conditions and floors were selected after inspecting seed-2026 test results; same poisoned instances and test images in all three runs."
+}

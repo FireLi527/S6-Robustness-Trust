@@ -232,8 +232,19 @@ def research_payload() -> dict:
     split, _ = fruitfly.document(diptera_root / "split_summary.json")
     fruitfly.require(split["split_sha256"], fruitfly.digest(PROJECT_ROOT / "data/diptera_poisoning/split.csv"))
     split_sizes = {name: sum(counts.values()) for name, counts in split["images"].items()}
+    repeat, _ = fruitfly.document(PROJECT_ROOT / "results/fruitfly_poisoning/multiseed_v1/comparison.json")
+    fruitfly.require(repeat["status"], "COMPLETE")
+    fruitfly.require(
+        repeat["protocol_sha256"],
+        fruitfly.digest(PROJECT_ROOT / "data/fruitfly_poisoning/multiseed_v1/protocol.json"),
+    )
     return {
         "fruitfly_weighted": {"seed": weighted["seed"], "rows": weighted["rows"]},
+        "fruitfly_multiseed": {
+            "three_seed_summary": repeat["three_seed_summary"],
+            "paired_comparisons": repeat["paired_comparisons"],
+            "rows": repeat["rows"],
+        },
         "diptera": {
             "classes": {"0": "Other Diptera", "1": "Tephritidae"},
             "retained_images": sum(split_sizes.values()),

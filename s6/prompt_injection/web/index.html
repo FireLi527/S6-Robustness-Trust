@@ -464,6 +464,17 @@
     .method-card h4 { margin: 0 0 8px; font-size: 14px; }
     .method-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
     .limitation-note { margin-top: 15px; padding: 14px 16px; border-left: 2px solid var(--review); border-radius: 0 9px 9px 0; background: rgba(241, 180, 85, .055); color: #afc0c7; font-size: 12px; line-height: 1.6; }
+    .presentation { margin-bottom:20px; padding:26px; border:1px solid var(--line-strong); border-radius:var(--radius-lg); background:linear-gradient(135deg,#102531,var(--surface) 72%); }
+    .presentation-label { margin:0 0 5px; color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.08em; }
+    .presentation h2 { margin:0; font-size:clamp(22px,2.5vw,30px); }
+    .presentation-lead { max-width:790px; margin:9px 0 22px; color:#b3c4cc; }
+    .presentation-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .presentation-card { padding:18px; border:1px solid var(--line); border-radius:12px; background:rgba(7,16,23,.64); }
+    .presentation-card span { display:block; color:var(--muted); font-size:13px; }
+    .presentation-card strong { display:block; margin:8px 0; color:var(--accent-strong); font-size:clamp(20px,2.4vw,27px); line-height:1.2; }
+    .presentation-card p { margin:0; color:#b3c4cc; font-size:12px; }
+    .presentation-foot { margin:16px 0 0; color:var(--muted); font-size:12px; }
+    .details-drawer > summary { margin-bottom:20px; padding:15px 18px; border:1px solid var(--line-strong); border-radius:10px; color:var(--accent-strong); background:var(--surface); cursor:pointer; font-size:14px; font-weight:700; }
 
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
@@ -476,6 +487,7 @@
     }
 
     @media (max-width: 760px) {
+      .presentation-grid { grid-template-columns:1fr; }
       .shell { width: min(100% - 24px, 1480px); padding-top: 20px; }
       .topbar { align-items: flex-start; }
       .brand-mark { width: 46px; height: 46px; }
@@ -531,6 +543,18 @@
       </div>
     </header>
 
+    <section class="presentation" aria-labelledby="presentation-title">
+      <p class="presentation-label" data-i18n="presentationLabel">研究结果 · 邮件明文测试</p>
+      <h2 id="presentation-title" data-i18n="presentationTitle">检测收益与授权取舍</h2>
+      <p class="presentation-lead" data-i18n="presentationLead">规则与综合检测比较攻击检出率，同时观察正常邮件误报；工具调用由独立策略控制。</p>
+      <div class="presentation-grid">
+        <article class="presentation-card"><span data-i18n="presentationDetection">攻击检出率</span><strong id="presentation-detection">—</strong><p data-i18n="presentationDetectionNote">P1 规则 → 综合检测</p></article>
+        <article class="presentation-card"><span data-i18n="presentationFpr">正常邮件误报率</span><strong id="presentation-fpr">—</strong><p data-i18n="presentationFprNote">P1 规则 → 综合检测；越低越好</p></article>
+        <article class="presentation-card"><span data-i18n="presentationApproval">重复正常请求的复核摩擦</span><strong id="presentation-approval">—</strong><p data-i18n="presentationApprovalNote">18 个手工场景；逐次审批 → 同请求永久批准</p></article>
+      </div>
+      <p class="presentation-foot" data-i18n="presentationFoot">检测指标不是实际代理攻击成功率；永久批准可减少摩擦，但机械批准会增加风险。</p>
+    </section>
+    <details class="details-drawer" id="prompt-details"><summary data-i18n="openDetails">打开交互演示与详细评估</summary>
     <section class="status-strip" aria-label="Detector status">
       <div class="status-item"><span class="status-label" data-i18n="detectorVersion">规则检测器版本</span><strong id="status-version" class="status-value">—</strong></div>
       <div class="status-item"><span class="status-label" data-i18n="categorySplit">开发 / 测试类别</span><strong id="status-splits" class="status-value">—</strong></div>
@@ -780,11 +804,15 @@
         <div class="limitation-note" data-i18n="limitation">评估设置：意图识别采用六类任务描述；监督分类用于结果对照。工具权限由 P3 单独评估。</div>
       </div>
     </section>
+    </details>
   </main>
 
   <script>
     const translations = {
       zh: {
+        presentationLabel:'研究结果 · 邮件明文测试',presentationTitle:'检测收益与授权取舍',presentationLead:'规则与综合检测比较攻击检出率，同时观察正常邮件误报；工具调用由独立策略控制。',
+        presentationDetection:'攻击检出率',presentationDetectionNote:'P1 规则 → 综合检测',presentationFpr:'正常邮件误报率',presentationFprNote:'P1 规则 → 综合检测；越低越好',
+        presentationApproval:'重复正常请求的复核摩擦',presentationApprovalNote:'18 个手工场景；逐次审批 → 同请求永久批准',presentationFoot:'检测指标不是实际代理攻击成功率；永久批准可减少摩擦，但机械批准会增加风险。',openDetails:'打开交互演示与详细评估',
         intentTab:"意图识别",liveInferredTitle:"识别结果",liveInferredRefresh:"重新识别",intentExperimentTitle:"意图识别评估",intentExperimentDescription:"对比场景预设与自动识别结果。",intentExperimentRun:"运行评估",intentExperimentLimit:"评估范围：18 个预设工具场景，6 类任务。参考标签采用场景工具类别。",intentAgreement:"类型匹配率",intentMacro:"宏平均召回率",intentMajority:"多数类基线",intentSecurityTitle:"检测结果对比",intentClassDetails:"分类结果",intentRows:"场景明细",
 
         appTitle:"提示词注入检测", connecting:"连接中", online:"已连接", offline:"未连接", refreshStatus: "刷新状态",
@@ -805,6 +833,9 @@
         decisionAllow:"通过", decisionReview: "复核", decisionBlock: "阻断", decisionDeny: "拒绝", decisionHumanReview: "人工复核", posPrefix: "前部", posMiddle: "中部", posSuffix: "尾部", plainLabel: "明文", stealthLabel: "隐蔽", developmentLabel: "开发集", unseen_testLabel:"测试集"
       },
       en: {
+        presentationLabel:'Results · Plain-email test',presentationTitle:'Detection gains and approval trade-off',presentationLead:'Compare attack detection and clean-email false positives; a separate policy controls tool calls.',
+        presentationDetection:'Attack detection rate',presentationDetectionNote:'P1 rules → combined detection',presentationFpr:'Clean-email false-positive rate',presentationFprNote:'P1 rules → combined detection; lower is better',
+        presentationApproval:'Review friction for repeated benign requests',presentationApprovalNote:'18 hand-authored cases; approval each time → persistent approval',presentationFoot:'Detection metrics are not real agent attack success. Persistent approval reduces friction, while rubber-stamp approval raises risk.',openDetails:'Open interactive demo and detailed evaluation',
         intentTab:"Intent recognition",liveInferredTitle:"Predicted intent",liveInferredRefresh:"Recognize again",intentExperimentTitle:"Intent recognition evaluation",intentExperimentDescription:"Compare preset and predicted task types.",intentExperimentRun:"Run evaluation",intentExperimentLimit:"Scope: 18 preset tool scenarios across six task types. Reference labels use the configured tool category.",intentAgreement:"Type agreement",intentMacro:"Macro recall",intentMajority:"Majority-class baseline",intentSecurityTitle:"Detection comparison",intentClassDetails:"Results by class",intentRows:"Scenario details",
 
         appTitle:"Prompt injection detection", connecting:"Connecting", online:"Connected", offline:"Disconnected", refreshStatus: "Refresh status",
@@ -1068,6 +1099,11 @@
       byId("overview-p1-fpr").textContent = percent(p1Test.false_positive_rate);
       byId("overview-p2-detection").textContent = percent(p2Test.attack_detection_rate);
       byId("overview-p2-fpr").textContent = percent(p2Test.false_positive_rate);
+      byId("presentation-detection").textContent = `${percent(p1Test.attack_detection_rate,2)} → ${percent(p2Test.attack_detection_rate,2)}`;
+      byId("presentation-fpr").textContent = `${percent(p1Test.false_positive_rate,2)} → ${percent(p2Test.false_positive_rate,2)}`;
+      const approvalSummary = data.tool_policy?.approval_evaluation;
+      byId("presentation-approval").textContent = approvalSummary?.scenario_count
+        ? `${percent(approvalSummary.baseline_benign_friction,2)} → ${percent(approvalSummary.repeat_benign_friction,2)}` : "—";
       const allCurrent = Object.values(data.evaluations || {}).every(item => item.matches_current_detector !== false);
       setBadge(byId("overview-p1-badge"), allCurrent ? "ALLOW" : "REVIEW");
       byId("overview-p1-badge").textContent = allCurrent ? t("statusCurrent") : t("decisionReview");

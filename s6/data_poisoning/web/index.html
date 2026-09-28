@@ -144,6 +144,17 @@
     .method-card ul { margin:0; padding-left:18px; color:var(--muted); font-size:.77rem; }
     .method-card li + li { margin-top:5px; }
     .method-note { margin:14px 0 0; padding:13px 15px; border-left:2px solid var(--review); color:var(--muted); background:var(--review-soft); font-size:.76rem; }
+    .presentation { margin-bottom:18px; padding:26px; border:1px solid var(--line-strong); border-radius:var(--radius-lg); background:linear-gradient(135deg,#102531,var(--surface) 72%); }
+    .presentation-label { margin:0 0 5px; color:var(--accent); font-size:.72rem; font-weight:750; letter-spacing:.08em; }
+    .presentation h2 { font-size:clamp(1.3rem,2.5vw,1.8rem); }
+    .presentation-lead { max-width:780px; margin:8px 0 22px; color:var(--text-soft); }
+    .presentation-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .presentation-card { padding:17px; border:1px solid var(--line); border-radius:12px; background:rgba(7,16,23,.64); }
+    .presentation-card span { display:block; color:var(--muted); font-size:.77rem; }
+    .presentation-card strong { display:block; margin:7px 0; color:var(--accent-strong); font-size:clamp(1.25rem,2.4vw,1.7rem); line-height:1.2; }
+    .presentation-card p { margin:0; color:var(--text-soft); font-size:.75rem; }
+    .presentation-foot { margin:16px 0 0; color:var(--muted); font-size:.75rem; }
+    .details-drawer > summary { margin-bottom:18px; padding:14px 18px; border:1px solid var(--line-strong); border-radius:10px; color:var(--accent-strong); background:var(--surface); cursor:pointer; font-size:.85rem; font-weight:700; }
     .error-banner { position:fixed; right:20px; bottom:20px; z-index:10; max-width:min(480px,calc(100% - 40px)); padding:12px 14px; border:1px solid #773d45; border-radius:10px; color:#ffd3d3; background:#2b171b; box-shadow:var(--shadow); font-size:.8rem; }
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     @media(max-width:980px){
@@ -157,7 +168,7 @@
       .workspace-head{align-items:flex-start;padding:17px}.workspace-title{align-items:flex-start}.workspace-actions{align-items:stretch;flex-direction:column}
       .mobile-select{width:100%;max-width:190px}.primary-button{min-height:38px}.image-stage{min-height:330px;padding:20px}
       .image-column{grid-template-rows:minmax(330px,1fr) auto}.assessment,.tab-panel{padding:17px}
-      .dataset-row{grid-template-columns:1fr auto;gap:10px}.dataset-row .dataset-semantic,.dataset-row .dataset-risk{display:none}.method-grid{grid-template-columns:1fr}
+      .dataset-row{grid-template-columns:1fr auto;gap:10px}.dataset-row .dataset-semantic,.dataset-row .dataset-risk{display:none}.method-grid,.presentation-grid{grid-template-columns:1fr}
     }
     @media(max-width:480px){
       .topbar{flex-wrap:wrap}.brand-mark{width:39px;height:39px}.topbar-actions{gap:6px;margin-left:auto}.connection{width:36px;min-height:36px;padding:0;justify-content:center}.icon-button{width:36px;height:36px}
@@ -180,6 +191,18 @@
       </div>
     </header>
 
+    <section class="presentation" aria-labelledby="presentation-title">
+      <p class="presentation-label" id="presentation-label" data-i18n="presentationLabel">研究结果 · 主实验</p>
+      <h2 id="presentation-title" data-i18n="presentationTitle">五类实蝇：投毒防御复核</h2>
+      <p class="presentation-lead" id="presentation-lead" data-i18n="presentationLead">三种子复核后，区分平均收益与是否每次都有效。</p>
+      <div class="presentation-grid">
+        <article class="presentation-card"><span data-i18n="presentationAccuracy">10% 随机改标 · 测试准确率均值</span><strong id="presentation-accuracy">—</strong><p data-i18n="presentationAccuracyNote">未防御 → 语义筛选；3 个种子中 2 个提高</p></article>
+        <article class="presentation-card"><span data-i18n="presentationTarget">定向 0 → 1 · 错误率均值</span><strong id="presentation-target">—</strong><p data-i18n="presentationTargetNote">未防御 → 风险加权；3 个种子均下降</p></article>
+        <article class="presentation-card"><span data-i18n="presentationDiptera">附加研究 · 10% 改标检测召回率</span><strong id="presentation-diptera">—</strong><p data-i18n="presentationDipteraNote">迭代清洗提高召回，干净误报率也从 1.51% 升至 4.54%</p></article>
+      </div>
+      <p class="presentation-foot" id="presentation-foot" data-i18n="presentationFoot">主实验为 3 种子探索性重复；风险加权的 10% 准确率收益未稳定复现。附加研究单独计算。</p>
+    </section>
+    <details class="details-drawer" id="image-details"><summary data-i18n="openDetails">打开样本演示与详细数据</summary>
     <section class="method-card" style="margin-bottom:18px">
       <label for="corpus-select" id="corpus-label">实验数据源</label>
       <select id="corpus-select" style="margin-left:16px;padding:10px;background:var(--raised);color:var(--text);border:1px solid var(--line);border-radius:8px"><option value="fruitfly">实蝇数据集</option><option value="stl10">STL-10</option></select>
@@ -267,12 +290,16 @@
         <div class="table-wrap"><table><thead id="diptera-head"></thead><tbody id="diptera-body"></tbody></table></div>
       </section>
     </main>
+    </details>
   </div>
   <p class="error-banner" id="error-banner" role="alert" hidden></p>
 
   <script>
     const translations = {
       zh:{
+        presentationLabel:'研究结果 · 主实验',presentationTitle:'五类实蝇：投毒防御复核',presentationLead:'三种子复核后，区分平均收益与是否每次都有效。',
+        presentationAccuracy:'10% 随机改标 · 测试准确率均值',presentationAccuracyNote:'未防御 → 语义筛选；3 个种子中 2 个提高',presentationTarget:'定向 0 → 1 · 错误率均值',presentationTargetNote:'未防御 → 风险加权；3 个种子均下降',
+        presentationDiptera:'附加研究 · 10% 改标检测召回率',presentationDipteraNote:'迭代清洗提高召回，干净误报率也从 1.51% 升至 4.54%',presentationFoot:'主实验为 3 种子探索性重复；风险加权的 10% 准确率收益未稳定复现。附加研究单独计算。',openDetails:'打开样本演示与详细数据',
         appTitle:"图像数据安全",candidateDatasets:"实验组",scannedSamples:"清单记录数",integrityBlocks:'完整性阻断',semanticReview:'语义待复核',
         sampleInspector:"样本查看",selectDataset:'选择数据集',sampleIntegrity:'样本级完整性',trustedLabel:'可信标签',candidateLabel:"候选标签",
         semanticCheck:"语义检测",neighborAgreement:'近邻标签一致率',classifierConfidence:'分类器置信度',centroidDistance:'质心距离 Z 值',
@@ -300,6 +327,9 @@
         directFile:"请通过 start.cmd 启动本地服务。"
       },
       en:{
+        presentationLabel:'Results · Main study',presentationTitle:'Five fruit-fly classes: checking defense robustness',presentationLead:'Three training seeds separate average gains from consistent gains.',
+        presentationAccuracy:'10% random flip · Mean test accuracy',presentationAccuracyNote:'Untreated → semantic filter; improved in 2 of 3 seeds',presentationTarget:'Targeted 0 → 1 · Mean error rate',presentationTargetNote:'Untreated → risk-weighted; lower in all 3 seeds',
+        presentationDiptera:'Additional study · 10% flip detection recall',presentationDipteraNote:'Iterative cleaning raises recall; clean FPR also rises from 1.51% to 4.54%',presentationFoot:'The three-seed main study is exploratory; the 10% accuracy gain from risk weighting was not consistent. The additional study is separate.',openDetails:'Open sample demo and detailed data',
         appTitle:"Image data security",candidateDatasets:"Experiment groups",scannedSamples:"Manifest records",integrityBlocks:'Integrity blocks',semanticReview:'Semantic review queue',
         sampleInspector:"Sample viewer",selectDataset:'Select dataset',sampleIntegrity:'Sample integrity',trustedLabel:'Trusted label',candidateLabel:"Candidate label",
         semanticCheck:"Semantic detection",neighborAgreement:'Neighbor label agreement',classifierConfidence:'Classifier confidence',centroidDistance:'Centroid distance Z',
@@ -365,6 +395,7 @@
       refresh.setAttribute('aria-label',refreshLabel);refresh.title=refreshLabel;
       applyCorpusCopy();
       renderResearch();
+      renderPresentation();
     }
     function applyCorpusCopy(){
       const zh=state.language==='zh',fly=state.corpus==='fruitfly';
@@ -383,6 +414,33 @@
         document.querySelector('[data-i18n="methodNote"]').textContent=zh?'实蝇实验：单种子 2026，等量随机删除对照。样本查看优先展示改标记录。':'Fruit-fly experiment: seed 2026 with equal-count random removal. The sample viewer prioritizes altered labels.';
       }
       renderTraining();
+      renderPresentation();
+    }
+    function renderPresentation(){
+      const repeat=state.research?.fruitfly_multiseed;
+      const mean=(scenario,strategy,key)=>{
+        const values=repeat?.rows?.filter(row=>row.scenario===scenario&&row.strategy===strategy).map(row=>row[key]);
+        return values?.length===3?values.reduce((sum,value)=>sum+value,0)/3:null;
+      };
+      const accuracy=repeat?.three_seed_summary?.find(row=>row.scenario==='label_flip_10'&&row.strategy==='untreated')?.accuracy_mean;
+      const semanticAccuracy=repeat?.three_seed_summary?.find(row=>row.scenario==='label_flip_10'&&row.strategy==='semantic')?.accuracy_mean;
+      const targeted=mean('targeted_0_to_1','untreated','targeted_error');
+      const weightedTargeted=mean('targeted_0_to_1','weighted','targeted_error');
+      const diptera=state.research?.diptera;
+      const recallV2=diptera?.v2?.results?.label_flip_10?.overall?.recall;
+      const recallV3=diptera?.v3?.results?.label_flip_10?.overall?.recall;
+      const pair=(a,b)=>a==null||b==null?'—':`${fmtPercent(a,2)} → ${fmtPercent(b,2)}`;
+      byId('presentation-accuracy').textContent=pair(accuracy,semanticAccuracy);
+      byId('presentation-target').textContent=pair(targeted,weightedTargeted);
+      byId('presentation-diptera').textContent=pair(recallV2,recallV3);
+      const historical=state.corpus==='stl10';
+      byId('presentation-title').textContent=historical?(state.language==='zh'?'STL-10：历史对照':'STL-10: historical comparison'):t('presentationTitle');
+      byId('presentation-accuracy').parentElement.hidden=historical;
+      byId('presentation-target').parentElement.hidden=historical;
+      byId('presentation-diptera').parentElement.hidden=historical;
+      byId('presentation-label').textContent=historical?(state.language==='zh'?'历史对照':'Historical comparison'):t('presentationLabel');
+      byId('presentation-lead').textContent=historical?(state.language==='zh'?'STL-10 的重复实验保留在详细数据中；当前讲解以五类实蝇为主。':'STL-10 repeated runs remain in detailed data; the main presentation focuses on five fruit-fly classes.'):t('presentationLead');
+      byId('presentation-foot').textContent=historical?'':t('presentationFoot');
     }
     function renderTraining(){
       const zh=state.language==='zh',body=byId('training-body');body.replaceChildren();
@@ -392,9 +450,10 @@
       byId('training-note').textContent=state.training?(state.corpus==='fruitfly'
         ?(zh?'12 组实验 · 单种子 2026 · 定向错误率：测试类别 0 预测为类别 1 的比例':'12 conditions · Single seed 2026 · Targeted error: test class 0 predicted as class 1')
         :(zh?'12 组条件 × 3 种子（2026、2027、2028），显示均值 ± 样本标准差。':'12 conditions × 3 seeds (2026, 2027, 2028); mean ± sample SD.')):(zh?'正在载入训练结果…':'Loading training results…');
-      if(!state.training)return;
+      if(!state.training){renderPresentation();return;}
       const metric=v=>typeof v==='object'&&v!==null?fmtPercent(v.mean,2)+' ± '+fmtPercent(v.sample_sd,2):fmtPercent(v,2);
       for(const r of state.training.rows){const row=document.createElement('tr');for(const v of [datasetName(r.dataset),({untreated:zh?'未防御':'Untreated',random:zh?'等量随机删除':'Equal-count random',semantic:zh?'语义筛选':'Semantic filter'})[r.strategy]||r.strategy,metric(r.test_accuracy??r.accuracy),metric(r.macro_f1),metric(r.targeted_error??r.targeted_0_to_1_rate)]){const td=document.createElement('td');td.textContent=v;row.append(td);}body.append(row);}
+      renderPresentation();
     }
     function renderResearch(){
       const zh=state.language==='zh',research=state.research;
@@ -418,6 +477,7 @@
         const item=research.diptera[version].results[key];if(!item)continue;
         row('diptera-body',[label,method, key==='clean_subset'?'—':fmtPercent(item.overall.precision,1),key==='clean_subset'?'—':fmtPercent(item.overall.recall,1),fmtPercent(item.overall.clean_fpr,2),key==='clean_subset'?'—':fmtPercent(item.roc_auc,1)]);
       }
+      renderPresentation();
     }
     async function loadResearch(){
       try{state.research=await requestJson('/api/research');renderResearch();}
