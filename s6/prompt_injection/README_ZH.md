@@ -11,6 +11,8 @@ prompt_injection/
 ├─ semantic_detector.py      P2 语义任务一致性检测器
 ├─ prepare_bipia.py          构造 BIPIA 攻击样本
 ├─ prepare_splits.py         固定开发组和类别不重叠的测试组
+├─ download_enron_clean.py   下载固定、经校验和验证的 Enron 语料分片
+├─ prepare_clean_corpus.py   按人物分离，生成扩充版干净邮件样本
 ├─ tool_policy.py            P3 工具调用策略：ALLOW / HUMAN_REVIEW / DENY 门控
 ├─ confused_deputy_scenarios.py  人工编写的 P3 演示/评估用例集
 ├─ eval_common.py            评估脚本共用的数据加载和指标工具函数
@@ -29,7 +31,8 @@ prompt_injection/
 ```text
 external/BIPIA/                    微软原始仓库
 external/minilm_cache/             缓存的 MiniLM 句向量模型权重（P2）
-data/bipia/generated/              生成的 JSONL 样本
+external/enron_clean/               固定的 Enron parquet 分片 + 下载溯源记录
+data/bipia/generated/              生成的 JSONL 样本（含 enron_clean_*.jsonl）
 data/bipia/splits/                 固定攻击划分清单
 data/bipia/semantic_embedding_cache.npz  缓存的逐条文本 MiniLM 向量（P2）
 results/bipia/                     评估 CSV 和 JSON
@@ -220,6 +223,33 @@ Intentionally、Learning and Tutoring、Clickbait）。在 stealth 攻击上，�
 P2 已经接入 `app.py`/`web/index.html`：在内容旁边填写 `question`（真实任务）即可
 实时触发语义检测和混合判定，此外仍可用上面的独立评估脚本。
 
+## 扩充干净邮件语料（收窄误报率置信区间）
+
+上面 P1/P2 的干净误报率数字都只基于每个划分 50 封干净邮件——即 BIPIA 自带的
+`email/{train,test}.jsonl` 全部内容。`download_enron_clean.py` 下载一个固定、经
+校验和验证的 Enron 语料分片（保留原始格式，而不是会扭曲规则引擎正则信号的
+`SetFit/enron_spam` 分词版本）；`prepare_clean_corpus.py` 再从每位邮件主人自己的
+`_sent_mail` 文件夹中，确定性地、按人物（custodian）分离地抽取每个划分200封邮件，
+格式与 BIPIA 自身的干净邮件结构完全一致：
+
+```powershell
+$python = 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe'
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\download_enron_clean.py'
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\prepare_clean_corpus.py'
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\evaluate_baseline.py' --clean-corpus expanded
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\evaluate_semantic.py' --clean-corpus expanded
+```
+
+`--clean-corpus expanded` 是可选的附加模式：不加该参数（默认 `--clean-corpus bipia`）
+仍会逐字节复现冻结的 `email_p1_plain_summary.json`/`email_p2_plain_summary.json`；
+`expanded` 模式则写入单独的 `email_p1_plain_expanded_summary.json`/
+`email_p2_plain_expanded_summary.json`，把每个划分的干净样本量从50提升到250。攻击
+检出率完全不变（只新增了干净样本），但更大的干净样本给出了不同的点估计：规则误报率
+从0%/2%变为5.2%/5.2%，纯语义误报率从4%/4%变为0.8%/0.8%，混合系统误报率从4%/4%变为
+6.0%/5.6%（development/unseen_test）。这是50封邮件的估计恰好落在了置信区间偏乐观
+一侧的结果，不是检测器退化——按照实验完整性规则，没有因为这些数字调整任何阈值或
+权重。完整说明见 `s6/BASELINE_ROADMAP_ZH.md` 的 P1/P2 里程碑。
+
 ## P3：动作与权限遏制
 
 P1 和 P2 回答的是同一个问题——*这段内容是不是注入攻击？*——两者都可能漏检。路线图的
@@ -277,7 +307,9 @@ P3 已经接入 `app.py`/`web/index.html`：在内容旁边选择工具和目标
 - 当前检测器是可解释的硬编码 baseline。
 - 同义改写、混淆和新攻击可能绕过关键词规则。
 - v0.2.0 开发前已经看过旧 BIPIA test 汇总结果，因此新清单只对未来版本构成固定的前瞻测试协议，不能把 v0.2.0 描述为完全未见的盲测。
-- 当前干净邮件只有 train/test 各50封，仍需引入独立且规模更大的干净语料。
+- 冻结默认值仍是 BIPIA 自带的 train/test 各50封；可通过 `--clean-corpus expanded`
+  （见上文"扩充干净邮件语料"）启用独立、按人物分离的每划分200封 Enron 样本，扩大后的
+  误报率是变宽而非收窄（0-2% → 5.2%），反映的是小样本的乐观偏差，而不是检测器变化。
 - 数据集上的结果不能直接等同于真实系统安全水平。
 - P3 的最小权限门控能缩小漏检注入的影响半径，但不能完全消除：既绕过 P1/P2、又指向
   已被信任目标的注入不会被这一层拦下（见上文"已知的遏制缺口"）。实际部署仍可受益于

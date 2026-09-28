@@ -27,14 +27,15 @@ import pandas as pd
 from detector import detect_prompt_injection
 from detector import detector_metadata as rule_detector_metadata
 from eval_common import (
-    BIPIA_BENCHMARK,
+    CLEAN_CORPUS_MODES,
     GENERATED_DIR,
     PROJECT_ROOT,
     SPLITS_DIR,
     attack_category,
     failure_rows,
-    load_jsonl,
+    load_multi_jsonl,
     load_selected_attacks,
+    resolve_clean_files,
     sha256_file,
     summarize_split,
 )
@@ -63,6 +64,16 @@ def parse_args() -> argparse.Namespace:
         help="Generated BIPIA attack encoding to evaluate (default: plain).",
     )
     parser.add_argument("--results-dir", type=Path, default=DEFAULT_RESULTS_DIR)
+    parser.add_argument(
+        "--clean-corpus",
+        choices=CLEAN_CORPUS_MODES,
+        default="bipia",
+        help=(
+            "Clean-email source: 'bipia' (default, today's 50-email BIPIA "
+            "train/test files) or 'expanded' (adds the independent Enron "
+            "clean-email subset from prepare_clean_corpus.py)."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -139,17 +150,23 @@ def main() -> None:
         "development": GENERATED_DIR / f"email_train_{args.encoding}.jsonl",
         "unseen_test": GENERATED_DIR / f"email_test_{args.encoding}.jsonl",
     }
-    clean_files = {
-        "development": BIPIA_BENCHMARK / "email" / "train.jsonl",
-        "unseen_test": BIPIA_BENCHMARK / "email" / "test.jsonl",
-    }
-    required_files = [*split_files.values(), *attacked_files.values(), *clean_files.values()]
+    clean_files = resolve_clean_files(args.clean_corpus)
+    required_files = [
+        *split_files.values(),
+        *attacked_files.values(),
+        *(path for paths in clean_files.values() for path in paths),
+    ]
     missing_files = [path for path in required_files if not path.is_file()]
     if missing_files:
         missing_list = "\n".join(f"- {path}" for path in missing_files)
+        prep_hint = (
+            " and prepare_clean_corpus.py (after download_enron_clean.py)"
+            if args.clean_corpus == "expanded"
+            else ""
+        )
         raise FileNotFoundError(
             "Required P1/P2 data is missing. Run prepare_splits.py and prepare_bipia.py "
-            f"for train/test first:\n{missing_list}"
+            f"for train/test{prep_hint} first:\n{missing_list}"
         )
 
     all_records: dict[str, list[dict]] = {}
@@ -157,7 +174,7 @@ def main() -> None:
         all_records[f"{split}_attack"] = load_selected_attacks(
             attacked_files[split], split_files[split]
         )
-        all_records[f"{split}_clean"] = load_jsonl(clean_files[split])
+        all_records[f"{split}_clean"] = load_multi_jsonl(clean_files[split])
 
     texts: set[str] = set()
     for records in all_records.values():
@@ -177,6 +194,7 @@ def main() -> None:
         "rule_detector": rule_detector_metadata(),
         "semantic_detector": semantic_detector_metadata(),
         "attack_encoding": args.encoding,
+        "clean_corpus": args.clean_corpus,
         "evaluation_policy": "REVIEW and BLOCK count as detected; ALLOW counts as missed",
         "note": (
             "'rule' reproduces the P1 baseline (detector.py) on the exact same records "
@@ -202,7 +220,8 @@ def main() -> None:
     }
 
     args.results_dir.mkdir(parents=True, exist_ok=True)
-    prefix = f"email_p2_{args.encoding}"
+    corpus_suffix = "" if args.clean_corpus == "bipia" else f"_{args.clean_corpus}"
+    prefix = f"email_p2_{args.encoding}{corpus_suffix}"
     decisions_file = args.results_dir / f"{prefix}_decisions.csv"
     failures_file = args.results_dir / f"{prefix}_failures.csv"
     summary_file = args.results_dir / f"{prefix}_summary.json"

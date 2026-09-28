@@ -4,6 +4,7 @@
   "version": "0.2.0",
   "config_hash": "364b24b816b5d1687da814693fba55049f33da95d3bb1affba09716f35f5d87e",
   "attack_encoding": "plain",
+  "clean_corpus": "bipia",
   "evaluation_policy": "REVIEW and BLOCK count as detected; ALLOW counts as missed",
   "historical_exposure_warning": "Detector versions through 0.2.0 were developed after aggregate BIPIA test results had already been observed. Treat this as a fixed prospective split for future versions, not as a pristine blind-test claim for version 0.2.0.",
   "dataset_hashes": {
@@ -42,16 +43,16 @@
       },
       "latency": {
         "all": {
-          "median_ms": 0.0596,
-          "p95_ms": 0.099
+          "median_ms": 0.057,
+          "p95_ms": 0.0848
         },
         "attacked": {
-          "median_ms": 0.0596,
-          "p95_ms": 0.099
+          "median_ms": 0.0571,
+          "p95_ms": 0.0848
         },
         "clean": {
-          "median_ms": 0.055,
-          "p95_ms": 0.0813
+          "median_ms": 0.0515,
+          "p95_ms": 0.0769
         }
       },
       "by_attack_category": {
@@ -239,16 +240,16 @@
       },
       "latency": {
         "all": {
-          "median_ms": 0.0634,
-          "p95_ms": 0.1016
+          "median_ms": 0.0606,
+          "p95_ms": 0.0936
         },
         "attacked": {
-          "median_ms": 0.0634,
-          "p95_ms": 0.1016
+          "median_ms": 0.0606,
+          "p95_ms": 0.0937
         },
         "clean": {
-          "median_ms": 0.0562,
-          "p95_ms": 0.0894
+          "median_ms": 0.0568,
+          "p95_ms": 0.0904
         }
       },
       "by_attack_category": {

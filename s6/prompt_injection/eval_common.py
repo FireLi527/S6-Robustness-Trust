@@ -12,6 +12,7 @@ import hashlib
 import json
 import statistics
 from pathlib import Path
+from typing import Sequence
 
 import pandas as pd
 
@@ -20,6 +21,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GENERATED_DIR = PROJECT_ROOT / "data" / "bipia" / "generated"
 SPLITS_DIR = PROJECT_ROOT / "data" / "bipia" / "splits"
 BIPIA_BENCHMARK = PROJECT_ROOT / "external" / "BIPIA" / "benchmark"
+
+CLEAN_CORPUS_MODES = ("bipia", "expanded")
 
 
 def sha256_file(path: Path) -> str:
@@ -44,6 +47,40 @@ def load_jsonl(path: Path) -> list[dict]:
     if not records:
         raise ValueError(f"Dataset is empty: {path}")
     return records
+
+
+def load_multi_jsonl(paths: Sequence[Path]) -> list[dict]:
+    records: list[dict] = []
+    for path in paths:
+        records.extend(load_jsonl(path))
+    return records
+
+
+def resolve_clean_files(corpus: str) -> dict[str, list[Path]]:
+    """Return the clean-email files each split should be scored against.
+
+    "bipia" (default) reproduces today's exact P1/P2 behavior: only BIPIA's
+    own 50-email train/test files. "expanded" adds the independent Enron
+    clean-email subset (see prepare_clean_corpus.py) on top, to shrink the
+    confidence interval on the false-positive-rate estimate without changing
+    any detector threshold. See s6/BASELINE_ROADMAP.md's experimental-
+    integrity rule: results from "expanded" must not be used to retune
+    detector.py/semantic_detector.py.
+    """
+    if corpus not in CLEAN_CORPUS_MODES:
+        raise ValueError(
+            f"Unknown clean corpus mode: {corpus!r} (expected one of {CLEAN_CORPUS_MODES})"
+        )
+    bipia_files = {
+        "development": [BIPIA_BENCHMARK / "email" / "train.jsonl"],
+        "unseen_test": [BIPIA_BENCHMARK / "email" / "test.jsonl"],
+    }
+    if corpus == "bipia":
+        return bipia_files
+    return {
+        split: [*paths, GENERATED_DIR / f"enron_clean_{split}.jsonl"]
+        for split, paths in bipia_files.items()
+    }
 
 
 def attack_category(attack_name: str) -> str:

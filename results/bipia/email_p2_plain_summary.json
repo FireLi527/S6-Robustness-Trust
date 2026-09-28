@@ -11,6 +11,7 @@
     "config_hash": "3da3b5a5840994d8c9b5dc6c7182d7b1f83d58b803397fbfbeef73c39b7404af"
   },
   "attack_encoding": "plain",
+  "clean_corpus": "bipia",
   "evaluation_policy": "REVIEW and BLOCK count as detected; ALLOW counts as missed",
   "note": "'rule' reproduces the P1 baseline (detector.py) on the exact same records evaluate_baseline.py scores; 'semantic' is the new P2 task-consistency signal alone; 'hybrid' takes the more severe of the two per record. The semantic detector's REVIEW_SIMILARITY/BLOCK_SIMILARITY thresholds were calibrated on the development split only; unseen_test numbers below were not used to retune them.",
   "dataset_hashes": {
@@ -50,16 +51,16 @@
         },
         "latency": {
           "all": {
-            "median_ms": 0.0631,
-            "p95_ms": 0.1322
+            "median_ms": 0.0576,
+            "p95_ms": 0.0835
           },
           "attacked": {
-            "median_ms": 0.0631,
-            "p95_ms": 0.1322
+            "median_ms": 0.0576,
+            "p95_ms": 0.0834
           },
           "clean": {
-            "median_ms": 0.0538,
-            "p95_ms": 0.0717
+            "median_ms": 0.0549,
+            "p95_ms": 0.0972
           }
         },
         "by_attack_category": {
@@ -247,16 +248,16 @@
         },
         "latency": {
           "all": {
-            "median_ms": 0.0284,
-            "p95_ms": 0.1036
+            "median_ms": 0.0215,
+            "p95_ms": 0.042
           },
           "attacked": {
-            "median_ms": 0.0285,
-            "p95_ms": 0.1037
+            "median_ms": 0.0215,
+            "p95_ms": 0.0419
           },
           "clean": {
-            "median_ms": 0.0149,
-            "p95_ms": 0.0355
+            "median_ms": 0.0232,
+            "p95_ms": 0.0466
           }
         },
         "by_attack_category": {
@@ -444,16 +445,16 @@
         },
         "latency": {
           "all": {
-            "median_ms": 0.0907,
-            "p95_ms": 0.2316
+            "median_ms": 0.0765,
+            "p95_ms": 0.1242
           },
           "attacked": {
-            "median_ms": 0.0908,
-            "p95_ms": 0.2316
+            "median_ms": 0.0765,
+            "p95_ms": 0.1241
           },
           "clean": {
-            "median_ms": 0.0703,
-            "p95_ms": 0.106
+            "median_ms": 0.0738,
+            "p95_ms": 0.1481
           }
         },
         "by_attack_category": {
@@ -643,16 +644,16 @@
         },
         "latency": {
           "all": {
-            "median_ms": 0.0632,
-            "p95_ms": 0.1001
+            "median_ms": 0.0615,
+            "p95_ms": 0.0951
           },
           "attacked": {
-            "median_ms": 0.0632,
-            "p95_ms": 0.1001
+            "median_ms": 0.0615,
+            "p95_ms": 0.0952
           },
           "clean": {
-            "median_ms": 0.0584,
-            "p95_ms": 0.0897
+            "median_ms": 0.0552,
+            "p95_ms": 0.0783
           }
         },
         "by_attack_category": {
@@ -849,16 +850,16 @@
         },
         "latency": {
           "all": {
-            "median_ms": 0.0268,
-            "p95_ms": 0.0506
+            "median_ms": 0.0262,
+            "p95_ms": 0.0469
           },
           "attacked": {
-            "median_ms": 0.0268,
-            "p95_ms": 0.0506
+            "median_ms": 0.0262,
+            "p95_ms": 0.0468
           },
           "clean": {
-            "median_ms": 0.0262,
-            "p95_ms": 0.0505
+            "median_ms": 0.0228,
+            "p95_ms": 0.0498
           }
         },
         "by_attack_category": {
@@ -1055,16 +1056,16 @@
         },
         "latency": {
           "all": {
-            "median_ms": 0.0868,
-            "p95_ms": 0.1523
+            "median_ms": 0.0858,
+            "p95_ms": 0.1418
           },
           "attacked": {
-            "median_ms": 0.0869,
-            "p95_ms": 0.1523
+            "median_ms": 0.0859,
+            "p95_ms": 0.1418
           },
           "clean": {
-            "median_ms": 0.0829,
-            "p95_ms": 0.1404
+            "median_ms": 0.0729,
+            "p95_ms": 0.1249
           }
         },
         "by_attack_category": {

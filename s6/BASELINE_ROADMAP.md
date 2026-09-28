@@ -7,6 +7,7 @@
 > | P3 tool permission containment | Done | Harmful-action success 100% → 11.11%; benign friction 71.43% |
 > | P3.1 explicit user approval | **Done and measured (2026-09-25)** | Exact-repeat friction 71.43% → 42.86%, back to 71.43% when parameters change; rubber-stamp reviewer raises harm 11.11% → 33.33% |
 > | P4 supervised classifier control | v1, v2 frozen; **does not replace rules** | v2 Email test FPR 16% |
+> | Clean prompt-injection corpus expansion | **Done (2026-09-28)** | Independent 200-email/split Enron sample added (`--clean-corpus expanded`); rule FPR estimate widens 0%/2% (n=50) → 5.2%/5.2% (n=250), attack detection unchanged |
 > | D1 blind protocol | Done | Candidate manifests physically separated from hidden truth |
 > | D2 semantic label anomaly | Done (STL-10, v0.5.0) | 10% flip: precision 89.69%, recall 100%, FPR 1.28% |
 > | D2.5 downstream behaviour + defense | **Done (STL-10, 3 seeds, 36 models)** | Targeted error 10.46% → 0.21%; 10% flip paired gain +3.23 pp |
@@ -120,8 +121,12 @@ Does the detector recognise attacks that were not used to design its rules?
 - From v0.2.1 onward, test attacks and grouped test results are not read during rule development.
 - Clean and attacked records are evaluated with the same interface.
 - Results are reproducible with a fixed seed and command.
-- A larger independent clean-email corpus is still needed to reduce uncertainty in the
-  current false-positive estimate.
+- Resolved 2026-09-28: an independent, custodian-disjoint 200-clean-email-per-split Enron
+  sample (`download_enron_clean.py` → `prepare_clean_corpus.py`) is available via
+  `--clean-corpus expanded` on both `evaluate_baseline.py` and `evaluate_semantic.py`,
+  without changing any detector weight or threshold. The 50-email BIPIA-only numbers above
+  remain the frozen default (`--clean-corpus bipia`); see the P2 section below for the
+  expanded-corpus results.
 
 ## Milestone P2 — semantic task-consistency detector (implemented)
 
@@ -183,6 +188,18 @@ user's actual task?
   per split; with such a small clean sample, that rate has wide uncertainty and a larger
   independent clean corpus (already flagged as needed under P1) is the natural next step
   to pin it down.
+- **Update (2026-09-28), expanded clean corpus**: adding an independent, custodian-disjoint
+  200-email-per-split Enron sample (`--clean-corpus expanded`; see
+  `download_enron_clean.py`/`prepare_clean_corpus.py`) raises each split's clean sample size
+  from 50 to 250. Attacked-record detection is exactly unchanged (development 65.71%,
+  unseen_test 93.47% rule recall — only clean records were added), but the wider clean
+  sample gives a materially different point estimate: rule FPR moves from 0%/2% to
+  5.2%/5.2%, semantic-only FPR moves from 4%/4% to 0.8%/0.8%, and hybrid FPR moves from
+  4%/4% to 6.0%/5.6% (development/unseen_test). This is not a detector regression — the
+  50-email estimate was on the optimistic side of a wide confidence interval; no threshold
+  or weight was changed in response to these numbers, per the experimental-integrity rule.
+  Full results: `results/bipia/email_p1_plain_expanded_summary.json` /
+  `email_p2_plain_expanded_summary.json`.
 
 ### Deliverables
 
@@ -748,8 +765,12 @@ Next-phase candidates (2026-09-25 discussion draft, ordered by cost vs. value):
 1. ~~Finish D2.8~~ — done (2026-09-28): 8/8 training runs, D2.7-format summary report, and
    significance testing all complete; see the D2.8 milestone section above.
 2. ~~Statistical tests on existing results~~ — done 2026-09-25.
-3. **Expand the clean prompt-injection corpus** — P1/P2 FPR rests on 50 clean emails per
-   split. (P3.1 friction/mistaken-approval evaluation done 2026-09-25.)
+3. ~~Expand the clean prompt-injection corpus~~ — done (2026-09-28): an independent,
+   custodian-disjoint 200-email-per-split Enron sample was added (`download_enron_clean.py`
+   → `prepare_clean_corpus.py`, `--clean-corpus expanded`). Rule FPR estimate widens from
+   0%/2% (n=50) to 5.2%/5.2% (n=250); attack detection rates are unchanged. See the P2
+   milestone section for full detail; the original BIPIA-only 50-email numbers remain the
+   frozen default. (P3.1 friction/mistaken-approval evaluation done 2026-09-25.)
 4. **D4 Diptera / Tephritidae (main vertical line)** — the instructor wants domain-relevant
    image data, not generic tooling; the classmate set `external/diptera` is audited; next are
    embedding dedup, a frozen split, and domain poisoning detection. Prompt-injection datasets are

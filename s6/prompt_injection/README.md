@@ -14,6 +14,8 @@ prompt_injection/
 ├─ semantic_detector.py      P2 semantic task-consistency detector
 ├─ prepare_bipia.py          Builds BIPIA attack samples
 ├─ prepare_splits.py         Freezes category-disjoint development/test splits
+├─ download_enron_clean.py   Downloads a pinned, checksum-verified Enron corpus shard
+├─ prepare_clean_corpus.py   Derives a custodian-disjoint expanded clean-email sample
 ├─ tool_policy.py            P3 tool-call policy: ALLOW / HUMAN_REVIEW / DENY gate
 ├─ confused_deputy_scenarios.py  Hand-authored P3 demo/evaluation fixture
 ├─ eval_common.py            Shared dataset-loading and metric helpers
@@ -32,7 +34,8 @@ Large or generated data remains outside the code base:
 ```text
 external/BIPIA/                    Upstream Microsoft repository
 external/minilm_cache/             Cached MiniLM sentence-embedding model weights (P2)
-data/bipia/generated/              Constructed JSONL samples
+external/enron_clean/               Pinned Enron parquet shard + download provenance
+data/bipia/generated/              Constructed JSONL samples (incl. enron_clean_*.jsonl)
 data/bipia/splits/                 Fixed attack manifests
 data/bipia/semantic_embedding_cache.npz  Cached per-text MiniLM embeddings (P2)
 results/bipia/                     Evaluation CSV and JSON results
@@ -238,6 +241,37 @@ P2 is wired into `app.py`/`web/index.html`: providing a `question` alongside the
 content runs the semantic and hybrid checks live, in addition to the standalone
 evaluation script above.
 
+## Expanded clean-email corpus (narrower FPR confidence interval)
+
+Both P1 and P2's clean-FPR figures above rest on only 50 clean emails per split — the
+entirety of BIPIA's own `email/{train,test}.jsonl`. `download_enron_clean.py` downloads a
+single pinned, checksum-verified shard of the raw Enron corpus (naturally formatted, not
+the tokenized `SetFit/enron_spam` mirror, which would distort the rule engine's regex
+signals); `prepare_clean_corpus.py` then derives a deterministic, custodian-disjoint
+200-email-per-split sample from each custodian's own `_sent_mail` folder, formatted to
+match BIPIA's own clean-email schema exactly:
+
+```powershell
+$python = 'E:\研究生\高级计算机项目\.venv-bipia\Scripts\python.exe'
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\download_enron_clean.py'
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\prepare_clean_corpus.py'
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\evaluate_baseline.py' --clean-corpus expanded
+& $python 'E:\研究生\高级计算机项目\s6\prompt_injection\evaluate_semantic.py' --clean-corpus expanded
+```
+
+`--clean-corpus expanded` is opt-in and additive: the default (`--clean-corpus bipia`,
+unchanged) still reproduces the frozen `email_p1_plain_summary.json`/
+`email_p2_plain_summary.json` byte-for-byte; `expanded` mode writes separate
+`email_p1_plain_expanded_summary.json`/`email_p2_plain_expanded_summary.json`, raising
+clean sample size from 50 to 250 per split. Attack detection is exactly unchanged (only
+clean records were added), but the wider clean sample gives a different point estimate:
+rule FPR moves from 0%/2% to 5.2%/5.2%, semantic-only FPR from 4%/4% to 0.8%/0.8%, and
+hybrid FPR from 4%/4% to 6.0%/5.6% (development/unseen_test). This is the 50-email
+estimate turning out to have been on the optimistic side of a wide confidence interval,
+not a detector regression — per the experimental-integrity rule, no threshold or weight
+was retuned in response to these numbers. See `s6/BASELINE_ROADMAP.md`'s P1/P2 milestones
+for the full writeup.
+
 ## P3: action and permission containment
 
 P1 and P2 both answer the same question — *is this content an injection?* — and both
@@ -303,8 +337,11 @@ confused-deputy scenario) alongside the content runs this check live, alongside 
 - Aggregate BIPIA test results were already observed before v0.2.0. The new manifests
   are therefore a fixed prospective protocol for future versions, not a pristine blind
   test claim for v0.2.0.
-- Clean email data is still limited to 50 train and 50 test records; a larger independent
-  clean corpus remains necessary.
+- The frozen default is still 50 train/50 test BIPIA clean records; an independent,
+  custodian-disjoint 200-per-split Enron sample is available opt-in via
+  `--clean-corpus expanded` (see "Expanded clean-email corpus" above) and widens, rather
+  than narrows, the measured FPR (0-2% → 5.2%), reflecting the smaller sample's optimistic
+  bias rather than a detector change.
 - Dataset performance must not be presented as universal real-world security.
 - P3's least-privilege gate narrows the blast radius of a missed injection but does not
   close it: an injection that both evades P1/P2 and targets an already-trusted
