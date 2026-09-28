@@ -76,10 +76,13 @@ def fruitfly_runs() -> dict[tuple[int, str, str], dict]:
         for strategy in ("random", "semantic"):
             runs[(2026, condition, strategy)] = base / "grouped_defense_v1" / "model_training" / f"{condition}__{strategy}"
     for condition in CONDITIONS:
-        # D2.8 is partial; completed weighted runs are reported as exploratory only.
-        directory = base / "weighted_v2" / f"{condition}__weighted_25"
-        if directory.is_dir():
-            runs[(2026, condition, "weighted_25")] = directory
+        # D2.8 (risk-weighted training) is complete (8/8), but was analysed with only
+        # weighted_25 available; both floors stay exploratory rather than being promoted
+        # to the Holm-corrected primary family after the fact.
+        for floor in ("25", "50"):
+            directory = base / "weighted_v2" / f"{condition}__weighted_{floor}"
+            if directory.is_dir():
+                runs[(2026, condition, f"weighted_{floor}")] = directory
     return {key: load_run(path) for key, path in runs.items()}
 
 
@@ -244,7 +247,11 @@ def markdown(results: dict) -> str:
         if data["exploratory"]:
             lines += [
                 "",
-                "### 探索性比较（D2.8 未完成，不计入 Holm 族）",
+                "### 探索性比较（D2.8 风险加权训练，不计入 Holm 族）",
+                "",
+                "D2.8 的 8 组训练已于 2026-09-28 全部完成，但 floor=0.25 先于 floor=0.50 出结果，"
+                "这两个比较族在看到部分结果之后才确定要不要继续训练；为避免在看到结果后再决定入选 Holm 主族，"
+                "两个 floor 都维持为探索性、不做多重比较校正。",
                 "",
                 "| 条件 | 比较 | 准确率差值 | 95% CI | p | 0→1 错误率差值 | 95% CI | p |",
                 "|---|---|---:|---|---:|---:|---|---:|",
@@ -268,7 +275,15 @@ def main() -> None:
     results = {
         "STL-10": analyse(stl10_runs(), (2026, 2027, 2028), pairs, []),
         "实蝇 grouped_defense_v1": analyse(
-            fruitfly_runs(), (2026,), pairs, [("weighted_25", "untreated"), ("weighted_25", "semantic")]
+            fruitfly_runs(),
+            (2026,),
+            pairs,
+            [
+                ("weighted_25", "untreated"),
+                ("weighted_25", "semantic"),
+                ("weighted_50", "untreated"),
+                ("weighted_50", "semantic"),
+            ],
         ),
     }
     OUTPUT.mkdir(parents=True, exist_ok=True)

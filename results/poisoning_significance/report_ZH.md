@@ -83,11 +83,25 @@
 | 2026 | semantic_minus_untreated | 172 | 1.16 | 3.49 | -2.33 | [-5.233, 0.0] | 0.219 | 0.250 |
 | 2026 | semantic_minus_random | 172 | 1.16 | 3.49 | -2.33 | [-4.651, -0.581] | 0.125 | 0.250 |
 
-### 探索性比较（D2.8 未完成，不计入 Holm 族）
+### 探索性比较（D2.8 风险加权训练，不计入 Holm 族）
+
+D2.8 的 8 组训练已于 2026-09-28 全部完成，但 floor=0.25 先于 floor=0.50 出结果，这两个比较族在看到部分结果之后才确定要不要继续训练；为避免在看到结果后再决定入选 Holm 主族，两个 floor 都维持为探索性、不做多重比较校正。
 
 | 条件 | 比较 | 准确率差值 | 95% CI | p | 0→1 错误率差值 | 95% CI | p |
 |---|---|---:|---|---:|---:|---|---:|
+| clean_subset | weighted_25_minus_untreated | +0.15 | [-0.227, 0.606] | 0.727 | — | — | — |
+| clean_subset | weighted_25_minus_semantic | -0.08 | [-0.379, 0.227] | 1.000 | — | — | — |
+| clean_subset | weighted_50_minus_untreated | +0.38 | [-0.076, 0.833] | 0.180 | — | — | — |
+| clean_subset | weighted_50_minus_semantic | +0.15 | [-0.227, 0.606] | 0.727 | — | — | — |
+| label_flip_05 | weighted_25_minus_untreated | +0.45 | [-0.227, 1.136] | 0.286 | — | — | — |
+| label_flip_05 | weighted_25_minus_semantic | -0.23 | [-0.908, 0.379] | 0.648 | — | — | — |
+| label_flip_05 | weighted_50_minus_untreated | -0.53 | [-1.287, 0.227] | 0.230 | — | — | — |
+| label_flip_05 | weighted_50_minus_semantic | -1.21 | [-1.97, -0.454] | 0.004 | — | — | — |
 | label_flip_10 | weighted_25_minus_untreated | +2.04 | [1.136, 2.952] | <0.001 | — | — | — |
 | label_flip_10 | weighted_25_minus_semantic | -0.15 | [-0.757, 0.454] | 0.815 | — | — | — |
+| label_flip_10 | weighted_50_minus_untreated | +2.42 | [1.287, 3.558] | <0.001 | — | — | — |
+| label_flip_10 | weighted_50_minus_semantic | +0.23 | [-0.53, 1.06] | 0.711 | — | — | — |
 | targeted_0_to_1 | weighted_25_minus_untreated | +0.08 | [-0.53, 0.681] | 1.000 | -2.33 | [-5.233, 0.0] | 0.219 |
 | targeted_0_to_1 | weighted_25_minus_semantic | +0.91 | [0.227, 1.665] | 0.023 | +0.00 | [-1.744, 1.744] | 1.000 |
+| targeted_0_to_1 | weighted_50_minus_untreated | +0.00 | [-0.606, 0.606] | 1.000 | -1.74 | [-4.651, 1.163] | 0.453 |
+| targeted_0_to_1 | weighted_50_minus_semantic | +0.83 | [0.076, 1.59] | 0.043 | +0.58 | [-1.163, 2.907] | 1.000 |

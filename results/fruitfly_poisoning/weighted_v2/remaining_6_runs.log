@@ -1,0 +1,145 @@
+=== START clean_subset__weighted_25 Mon Sep 28 08:23:22 AEST 2026 ===
+[clean_subset__weighted_25] epoch 01/20 train_loss=0.1493 val_acc=0.9109 val_f1=0.9075
+[clean_subset__weighted_25] epoch 02/20 train_loss=0.0480 val_acc=0.9059 val_f1=0.9014
+[clean_subset__weighted_25] epoch 03/20 train_loss=0.0311 val_acc=0.9382 val_f1=0.9290
+[clean_subset__weighted_25] epoch 04/20 train_loss=0.0312 val_acc=0.9892 val_f1=0.9878
+[clean_subset__weighted_25] epoch 05/20 train_loss=0.0371 val_acc=0.9526 val_f1=0.9476
+[clean_subset__weighted_25] epoch 06/20 train_loss=0.0155 val_acc=0.8154 val_f1=0.8131
+[clean_subset__weighted_25] epoch 07/20 train_loss=0.0471 val_acc=0.9770 val_f1=0.9734
+[clean_subset__weighted_25] epoch 08/20 train_loss=0.0134 val_acc=0.9727 val_f1=0.9675
+[clean_subset__weighted_25] epoch 09/20 train_loss=0.0117 val_acc=0.9626 val_f1=0.9571
+[clean_subset__weighted_25] epoch 10/20 train_loss=0.0046 val_acc=0.9741 val_f1=0.9686
+[clean_subset__weighted_25] epoch 11/20 train_loss=0.0032 val_acc=0.9885 val_f1=0.9866
+[clean_subset__weighted_25] epoch 12/20 train_loss=0.0013 val_acc=0.9856 val_f1=0.9830
+[clean_subset__weighted_25] epoch 13/20 train_loss=0.0018 val_acc=0.9763 val_f1=0.9723
+[clean_subset__weighted_25] epoch 14/20 train_loss=0.0029 val_acc=0.9899 val_f1=0.9883
+[clean_subset__weighted_25] epoch 15/20 train_loss=0.0020 val_acc=0.9907 val_f1=0.9896
+[clean_subset__weighted_25] epoch 16/20 train_loss=0.0019 val_acc=0.9842 val_f1=0.9809
+[clean_subset__weighted_25] epoch 17/20 train_loss=0.0012 val_acc=0.9878 val_f1=0.9852
+[clean_subset__weighted_25] epoch 18/20 train_loss=0.0025 val_acc=0.9914 val_f1=0.9899
+[clean_subset__weighted_25] epoch 19/20 train_loss=0.0008 val_acc=0.9899 val_f1=0.9885
+[clean_subset__weighted_25] epoch 20/20 train_loss=0.0014 val_acc=0.9907 val_f1=0.9892
+[clean_subset__weighted_25] complete: test_acc=0.9939 test_f1=0.9930 target_0_to_1=0.0000
+COMPLETE clean_subset__weighted_25 seed=2026 test_accuracy=0.993944
+=== END clean_subset__weighted_25 exit=0 Mon Sep 28 08:47:18 AEST 2026 ===
+=== START clean_subset__weighted_50 Mon Sep 28 08:47:18 AEST 2026 ===
+[clean_subset__weighted_50] epoch 01/20 train_loss=0.1574 val_acc=0.9397 val_f1=0.9348
+[clean_subset__weighted_50] epoch 02/20 train_loss=0.0527 val_acc=0.9411 val_f1=0.9408
+[clean_subset__weighted_50] epoch 03/20 train_loss=0.0260 val_acc=0.9547 val_f1=0.9569
+[clean_subset__weighted_50] epoch 04/20 train_loss=0.0646 val_acc=0.8843 val_f1=0.8775
+[clean_subset__weighted_50] epoch 05/20 train_loss=0.0524 val_acc=0.9361 val_f1=0.9240
+[clean_subset__weighted_50] epoch 06/20 train_loss=0.0152 val_acc=0.9698 val_f1=0.9693
+[clean_subset__weighted_50] epoch 07/20 train_loss=0.0251 val_acc=0.9749 val_f1=0.9695
+[clean_subset__weighted_50] epoch 08/20 train_loss=0.0120 val_acc=0.9677 val_f1=0.9573
+[clean_subset__weighted_50] epoch 09/20 train_loss=0.0081 val_acc=0.9734 val_f1=0.9686
+[clean_subset__weighted_50] epoch 10/20 train_loss=0.0117 val_acc=0.9634 val_f1=0.9565
+[clean_subset__weighted_50] epoch 11/20 train_loss=0.0082 val_acc=0.9784 val_f1=0.9751
+[clean_subset__weighted_50] epoch 12/20 train_loss=0.0044 val_acc=0.9770 val_f1=0.9719
+[clean_subset__weighted_50] epoch 13/20 train_loss=0.0040 val_acc=0.9842 val_f1=0.9822
+[clean_subset__weighted_50] epoch 14/20 train_loss=0.0030 val_acc=0.9763 val_f1=0.9726
+[clean_subset__weighted_50] epoch 15/20 train_loss=0.0088 val_acc=0.9820 val_f1=0.9795
+[clean_subset__weighted_50] epoch 16/20 train_loss=0.0027 val_acc=0.9871 val_f1=0.9844
+[clean_subset__weighted_50] epoch 17/20 train_loss=0.0019 val_acc=0.9907 val_f1=0.9890
+[clean_subset__weighted_50] epoch 18/20 train_loss=0.0024 val_acc=0.9878 val_f1=0.9856
+[clean_subset__weighted_50] epoch 19/20 train_loss=0.0015 val_acc=0.9899 val_f1=0.9882
+[clean_subset__weighted_50] epoch 20/20 train_loss=0.0020 val_acc=0.9892 val_f1=0.9869
+[clean_subset__weighted_50] complete: test_acc=0.9962 test_f1=0.9954 target_0_to_1=0.0000
+COMPLETE clean_subset__weighted_50 seed=2026 test_accuracy=0.996215
+=== END clean_subset__weighted_50 exit=0 Mon Sep 28 09:10:58 AEST 2026 ===
+=== START label_flip_05__weighted_25 Mon Sep 28 09:10:58 AEST 2026 ===
+[label_flip_05__weighted_25] epoch 01/20 train_loss=0.2764 val_acc=0.9138 val_f1=0.9081
+[label_flip_05__weighted_25] epoch 02/20 train_loss=0.1666 val_acc=0.9203 val_f1=0.9145
+[label_flip_05__weighted_25] epoch 03/20 train_loss=0.1444 val_acc=0.9382 val_f1=0.9351
+[label_flip_05__weighted_25] epoch 04/20 train_loss=0.1560 val_acc=0.9720 val_f1=0.9700
+[label_flip_05__weighted_25] epoch 05/20 train_loss=0.1312 val_acc=0.9684 val_f1=0.9656
+[label_flip_05__weighted_25] epoch 06/20 train_loss=0.1212 val_acc=0.9159 val_f1=0.8999
+[label_flip_05__weighted_25] epoch 07/20 train_loss=0.1465 val_acc=0.9670 val_f1=0.9628
+[label_flip_05__weighted_25] epoch 08/20 train_loss=0.1241 val_acc=0.9540 val_f1=0.9501
+[label_flip_05__weighted_25] epoch 09/20 train_loss=0.1056 val_acc=0.9447 val_f1=0.9309
+[label_flip_05__weighted_25] epoch 10/20 train_loss=0.0965 val_acc=0.9490 val_f1=0.9419
+[label_flip_05__weighted_25] epoch 11/20 train_loss=0.0855 val_acc=0.9763 val_f1=0.9722
+[label_flip_05__weighted_25] epoch 12/20 train_loss=0.0822 val_acc=0.9770 val_f1=0.9736
+[label_flip_05__weighted_25] epoch 13/20 train_loss=0.0686 val_acc=0.9820 val_f1=0.9797
+[label_flip_05__weighted_25] epoch 14/20 train_loss=0.0559 val_acc=0.9655 val_f1=0.9588
+[label_flip_05__weighted_25] epoch 15/20 train_loss=0.0569 val_acc=0.9713 val_f1=0.9666
+[label_flip_05__weighted_25] epoch 16/20 train_loss=0.0440 val_acc=0.9648 val_f1=0.9563
+[label_flip_05__weighted_25] epoch 17/20 train_loss=0.0360 val_acc=0.9698 val_f1=0.9634
+[label_flip_05__weighted_25] epoch 18/20 train_loss=0.0351 val_acc=0.9698 val_f1=0.9637
+[label_flip_05__weighted_25] epoch 19/20 train_loss=0.0321 val_acc=0.9691 val_f1=0.9628
+[label_flip_05__weighted_25] epoch 20/20 train_loss=0.0300 val_acc=0.9713 val_f1=0.9651
+[label_flip_05__weighted_25] complete: test_acc=0.9879 test_f1=0.9868 target_0_to_1=0.0000
+COMPLETE label_flip_05__weighted_25 seed=2026 test_accuracy=0.987888
+=== END label_flip_05__weighted_25 exit=0 Mon Sep 28 09:34:47 AEST 2026 ===
+=== START label_flip_05__weighted_50 Mon Sep 28 09:34:47 AEST 2026 ===
+[label_flip_05__weighted_50] epoch 01/20 train_loss=0.3744 val_acc=0.9483 val_f1=0.9432
+[label_flip_05__weighted_50] epoch 02/20 train_loss=0.2537 val_acc=0.9389 val_f1=0.9348
+[label_flip_05__weighted_50] epoch 03/20 train_loss=0.2302 val_acc=0.9440 val_f1=0.9390
+[label_flip_05__weighted_50] epoch 04/20 train_loss=0.2310 val_acc=0.9727 val_f1=0.9688
+[label_flip_05__weighted_50] epoch 05/20 train_loss=0.2135 val_acc=0.9116 val_f1=0.9063
+[label_flip_05__weighted_50] epoch 06/20 train_loss=0.1988 val_acc=0.8958 val_f1=0.8762
+[label_flip_05__weighted_50] epoch 07/20 train_loss=0.1939 val_acc=0.9361 val_f1=0.9298
+[label_flip_05__weighted_50] epoch 08/20 train_loss=0.1709 val_acc=0.8714 val_f1=0.8560
+[label_flip_05__weighted_50] epoch 09/20 train_loss=0.1662 val_acc=0.9361 val_f1=0.9276
+[label_flip_05__weighted_50] epoch 10/20 train_loss=0.1392 val_acc=0.9353 val_f1=0.9274
+[label_flip_05__weighted_50] epoch 11/20 train_loss=0.1113 val_acc=0.9605 val_f1=0.9517
+[label_flip_05__weighted_50] epoch 12/20 train_loss=0.0990 val_acc=0.9605 val_f1=0.9543
+[label_flip_05__weighted_50] epoch 13/20 train_loss=0.0856 val_acc=0.9648 val_f1=0.9618
+[label_flip_05__weighted_50] epoch 14/20 train_loss=0.0662 val_acc=0.9612 val_f1=0.9550
+[label_flip_05__weighted_50] epoch 15/20 train_loss=0.0606 val_acc=0.9727 val_f1=0.9701
+[label_flip_05__weighted_50] epoch 16/20 train_loss=0.0457 val_acc=0.9741 val_f1=0.9700
+[label_flip_05__weighted_50] epoch 17/20 train_loss=0.0373 val_acc=0.9727 val_f1=0.9679
+[label_flip_05__weighted_50] epoch 18/20 train_loss=0.0313 val_acc=0.9720 val_f1=0.9679
+[label_flip_05__weighted_50] epoch 19/20 train_loss=0.0295 val_acc=0.9741 val_f1=0.9698
+[label_flip_05__weighted_50] epoch 20/20 train_loss=0.0284 val_acc=0.9734 val_f1=0.9697
+[label_flip_05__weighted_50] complete: test_acc=0.9780 test_f1=0.9762 target_0_to_1=0.0000
+COMPLETE label_flip_05__weighted_50 seed=2026 test_accuracy=0.978047
+=== END label_flip_05__weighted_50 exit=0 Mon Sep 28 09:58:55 AEST 2026 ===
+=== START label_flip_10__weighted_50 Mon Sep 28 09:58:55 AEST 2026 ===
+[label_flip_10__weighted_50] epoch 01/20 train_loss=0.5672 val_acc=0.9296 val_f1=0.9185
+[label_flip_10__weighted_50] epoch 02/20 train_loss=0.4351 val_acc=0.9583 val_f1=0.9504
+[label_flip_10__weighted_50] epoch 03/20 train_loss=0.4087 val_acc=0.9756 val_f1=0.9714
+[label_flip_10__weighted_50] epoch 04/20 train_loss=0.3982 val_acc=0.9030 val_f1=0.8902
+[label_flip_10__weighted_50] epoch 05/20 train_loss=0.3770 val_acc=0.9432 val_f1=0.9438
+[label_flip_10__weighted_50] epoch 06/20 train_loss=0.3685 val_acc=0.9231 val_f1=0.9163
+[label_flip_10__weighted_50] epoch 07/20 train_loss=0.3434 val_acc=0.9447 val_f1=0.9358
+[label_flip_10__weighted_50] epoch 08/20 train_loss=0.3177 val_acc=0.8908 val_f1=0.8795
+[label_flip_10__weighted_50] epoch 09/20 train_loss=0.2973 val_acc=0.9145 val_f1=0.8969
+[label_flip_10__weighted_50] epoch 10/20 train_loss=0.2728 val_acc=0.9052 val_f1=0.8955
+[label_flip_10__weighted_50] epoch 11/20 train_loss=0.2432 val_acc=0.9310 val_f1=0.9198
+[label_flip_10__weighted_50] epoch 12/20 train_loss=0.2134 val_acc=0.9476 val_f1=0.9437
+[label_flip_10__weighted_50] epoch 13/20 train_loss=0.1723 val_acc=0.9274 val_f1=0.9170
+[label_flip_10__weighted_50] epoch 14/20 train_loss=0.1392 val_acc=0.9440 val_f1=0.9411
+[label_flip_10__weighted_50] epoch 15/20 train_loss=0.1256 val_acc=0.9562 val_f1=0.9500
+[label_flip_10__weighted_50] epoch 16/20 train_loss=0.1006 val_acc=0.9569 val_f1=0.9511
+[label_flip_10__weighted_50] epoch 17/20 train_loss=0.0798 val_acc=0.9598 val_f1=0.9543
+[label_flip_10__weighted_50] epoch 18/20 train_loss=0.0777 val_acc=0.9533 val_f1=0.9469
+[label_flip_10__weighted_50] epoch 19/20 train_loss=0.0646 val_acc=0.9684 val_f1=0.9643
+[label_flip_10__weighted_50] epoch 20/20 train_loss=0.0657 val_acc=0.9626 val_f1=0.9576
+[label_flip_10__weighted_50] complete: test_acc=0.9894 test_f1=0.9871 target_0_to_1=0.0000
+COMPLETE label_flip_10__weighted_50 seed=2026 test_accuracy=0.989402
+=== END label_flip_10__weighted_50 exit=0 Mon Sep 28 10:22:52 AEST 2026 ===
+=== START targeted_0_to_1__weighted_50 Mon Sep 28 10:22:52 AEST 2026 ===
+[targeted_0_to_1__weighted_50] epoch 01/20 train_loss=0.2059 val_acc=0.8728 val_f1=0.8542
+[targeted_0_to_1__weighted_50] epoch 02/20 train_loss=0.1050 val_acc=0.9088 val_f1=0.9040
+[targeted_0_to_1__weighted_50] epoch 03/20 train_loss=0.0749 val_acc=0.9533 val_f1=0.9503
+[targeted_0_to_1__weighted_50] epoch 04/20 train_loss=0.1014 val_acc=0.9598 val_f1=0.9553
+[targeted_0_to_1__weighted_50] epoch 05/20 train_loss=0.0883 val_acc=0.9619 val_f1=0.9603
+[targeted_0_to_1__weighted_50] epoch 06/20 train_loss=0.0661 val_acc=0.9569 val_f1=0.9524
+[targeted_0_to_1__weighted_50] epoch 07/20 train_loss=0.0866 val_acc=0.9476 val_f1=0.9413
+[targeted_0_to_1__weighted_50] epoch 08/20 train_loss=0.0695 val_acc=0.9655 val_f1=0.9636
+[targeted_0_to_1__weighted_50] epoch 09/20 train_loss=0.0563 val_acc=0.9677 val_f1=0.9638
+[targeted_0_to_1__weighted_50] epoch 10/20 train_loss=0.0523 val_acc=0.9763 val_f1=0.9736
+[targeted_0_to_1__weighted_50] epoch 11/20 train_loss=0.0466 val_acc=0.9864 val_f1=0.9849
+[targeted_0_to_1__weighted_50] epoch 12/20 train_loss=0.0430 val_acc=0.9741 val_f1=0.9717
+[targeted_0_to_1__weighted_50] epoch 13/20 train_loss=0.0408 val_acc=0.9777 val_f1=0.9746
+[targeted_0_to_1__weighted_50] epoch 14/20 train_loss=0.0376 val_acc=0.9734 val_f1=0.9700
+[targeted_0_to_1__weighted_50] epoch 15/20 train_loss=0.0349 val_acc=0.9763 val_f1=0.9736
+[targeted_0_to_1__weighted_50] epoch 16/20 train_loss=0.0328 val_acc=0.9713 val_f1=0.9672
+[targeted_0_to_1__weighted_50] epoch 17/20 train_loss=0.0265 val_acc=0.9741 val_f1=0.9711
+[targeted_0_to_1__weighted_50] epoch 18/20 train_loss=0.0269 val_acc=0.9749 val_f1=0.9709
+[targeted_0_to_1__weighted_50] epoch 19/20 train_loss=0.0224 val_acc=0.9677 val_f1=0.9632
+[targeted_0_to_1__weighted_50] epoch 20/20 train_loss=0.0213 val_acc=0.9677 val_f1=0.9629
+[targeted_0_to_1__weighted_50] complete: test_acc=0.9894 test_f1=0.9875 target_0_to_1=0.0174
+COMPLETE targeted_0_to_1__weighted_50 seed=2026 test_accuracy=0.989402
+=== END targeted_0_to_1__weighted_50 exit=0 Mon Sep 28 10:47:16 AEST 2026 ===
+=== ALL 6 REMAINING WEIGHTED_V2 RUNS COMPLETE ===

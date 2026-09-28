@@ -1,6 +1,6 @@
 # 图片标签投毒 Baseline（STL-10 协议说明）
 
-> **当前状态（2026-09-25）**：本地控制台及未指定 `corpus` 的 API 默认使用同学实蝇数据（`grouped_defense_v1`），见 [实蝇实验协议](FRUITFLY_PROTOCOL_ZH.md) 与 [标本分组防御协议](FRUITFLY_GROUPED_DEFENSE_ZH.md)；实蝇风险加权训练（weighted_v2）已完成 2/8 组。本文件描述 STL-10 协议，STL-10 现为可切换的历史对照，三种子多种子重复已完成。离线脚本使用的 `dataset_config.py` 仍固定为 STL-10。里程碑总览见 [BASELINE_ROADMAP_ZH.md](../BASELINE_ROADMAP_ZH.md)。
+> **当前状态（2026-09-25）**：本地控制台及未指定 `corpus` 的 API 默认使用同学实蝇数据（`grouped_defense_v1`），见 [实蝇实验协议](FRUITFLY_PROTOCOL_ZH.md) 与 [标本分组防御协议](FRUITFLY_GROUPED_DEFENSE_ZH.md)；实蝇风险加权训练（weighted_v2）8/8 组已于 2026-09-28 训练完成，汇总报告（[weighted_report_ZH.md](../../results/fruitfly_poisoning/weighted_v2/weighted_report_ZH.md)）和显著性检验（并入 [poisoning_significance/report_ZH.md](../../results/poisoning_significance/report_ZH.md) 的探索性比较）均已完成。本文件描述 STL-10 协议，STL-10 现为可切换的历史对照，三种子多种子重复已完成。离线脚本使用的 `dataset_config.py` 仍固定为 STL-10。里程碑总览见 [BASELINE_ROADMAP_ZH.md](../BASELINE_ROADMAP_ZH.md)。
 
 2026-09-11 起，默认图像 baseline 切换到 STL-10（2026-09-21 起控制台默认改为实蝇，见上方说明）。IP102 原始数据、清单、结果和旧训练脚本保留，旧说明见 [IP102 历史记录](README_IP102_HISTORY_ZH.md)。提示词注入 baseline 不变。
 
@@ -122,7 +122,7 @@ wsl.exe -d Ubuntu-24.04 -- /home/anima/.venvs/s6-training/bin/python -u s6/data_
 
 ## 配对显著性检验（2026-09-25）
 
-`python s6/data_poisoning/report_significance.py` 只读取已冻结的逐样本测试预测（STL-10 36 个、实蝇 14 个模型），输出精确 McNemar 检验、配对 bootstrap 置信区间和 Holm 校正，写入 `results/poisoning_significance/`。STL-10 各投毒条件的防御效果显著；实蝇只有 10% 翻转的语义−未处理差异在校正后显著。
+`python s6/data_poisoning/report_significance.py` 只读取已冻结的逐样本测试预测（STL-10 36 个、实蝇 22 个模型，含 D2.8 的 8 个风险加权模型），输出精确 McNemar 检验、配对 bootstrap 置信区间和 Holm 校正，写入 `results/poisoning_significance/`。STL-10 各投毒条件的防御效果显著；实蝇主比较族只有 10% 翻转的语义−未处理差异在校正后显著；D2.8 的 8 个风险加权比较全部标记为探索性、不计入校正（见下节）。
 
 ## 双翅目 / 实蝇科数据（D4）
 
@@ -135,3 +135,7 @@ wsl.exe -d Ubuntu-24.04 -- /home/anima/.venvs/s6-training/bin/python -u s6/data_
 ## 标本分组防御扩展
 
 新增按标本隔离的检测器开发与12组分类对照，保留首轮结果。详见[标本分组防御协议](FRUITFLY_GROUPED_DEFENSE_ZH.md)。
+
+## 风险加权训练扩展（D2.8，已完成 2026-09-28）
+
+同一份 D2.7 冻结标本分组风险分数，改用降权（`weight = max(floor, 1 − risk)`，floor ∈ {0.25, 0.50}）而非隔离，4 条件 × 2 floor 共 8 组模型全部完成并核验。汇总报告见 [weighted_report_ZH.md](../../results/fruitfly_poisoning/weighted_v2/weighted_report_ZH.md)；显著性检验并入上一节的 `report_significance.py`，作为探索性比较（不计入 Holm 主族）。方法与思路见 [BASELINE_ROADMAP_ZH.md](../BASELINE_ROADMAP_ZH.md) 的 D2.8 里程碑一节。

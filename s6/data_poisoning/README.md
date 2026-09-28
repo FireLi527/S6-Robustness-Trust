@@ -1,6 +1,6 @@
 # Image Label-Poisoning Baseline
 
-> **Current status (2026-09-25):** the local console and unspecified-`corpus` API calls default to the classmate fruit-fly dataset (`grouped_defense_v1`; see `FRUITFLY_PROTOCOL_ZH.md` and `FRUITFLY_GROUPED_DEFENSE_ZH.md`). Fruit-fly risk-weighted training (weighted_v2) has 2 of 8 runs complete. STL-10, described below, is now a toggleable historical comparison with completed 3-seed replication; `dataset_config.py` used by the offline scripts is still fixed to STL-10. Milestones: [BASELINE_ROADMAP.md](../BASELINE_ROADMAP.md).
+> **Current status (2026-09-25):** the local console and unspecified-`corpus` API calls default to the classmate fruit-fly dataset (`grouped_defense_v1`; see `FRUITFLY_PROTOCOL_ZH.md` and `FRUITFLY_GROUPED_DEFENSE_ZH.md`). Fruit-fly risk-weighted training (weighted_v2) finished all 8 of 8 runs on 2026-09-28; the summary report (`results/fruitfly_poisoning/weighted_v2/weighted_report_ZH.md`) and significance testing (folded into `results/poisoning_significance/report_ZH.md`'s exploratory comparisons) are complete. STL-10, described below, is now a toggleable historical comparison with completed 3-seed replication; `dataset_config.py` used by the offline scripts is still fixed to STL-10. Milestones: [BASELINE_ROADMAP.md](../BASELINE_ROADMAP.md).
 
 STL-10 became the active dataset on 2026-09-11 (superseded as the console default by fruit fly on 2026-09-21). See [current setup and protocol](README_ZH.md). Historical IP102 results remain under `results/ip102_poisoning/`; [old documentation](README_IP102_HISTORY.md) describes that retired configuration, not the active detector.
 
@@ -22,6 +22,10 @@ Custom S6 protocol: 4,000 candidate training images, 1,000 validation images str
 Detector v0.5.0 uses raw frozen CLIP features without NCA. Independent fold projections cannot safely be concatenated for global distance calculations. We retain the original weights and thresholds without tuning on STL-10 attacks. Scores are not calibrated poisoning probabilities. Candidate-label contamination and pretrained-data overlap remain limitations.
 
 The detector never reads hidden scoring truth. Cached evaluation results bind both detector and manifest hashes. Use `train_stl10_models.py` for ten-class ResNet18 experiments; `train_ip102_models.py` remains the historical IP102 trainer. No old IP102 accuracy should be reported as an STL-10 measurement.
+
+## Risk-weighted training extension (D2.8, done 2026-09-28)
+
+Reuses the frozen D2.7 specimen-grouped risk scores, but down-weights (`weight = max(floor, 1 − risk)`, floor ∈ {0.25, 0.50}) instead of isolating: 4 conditions × 2 floors = 8 models, all complete and verified. Summary report: `results/fruitfly_poisoning/weighted_v2/weighted_report_ZH.md`; significance testing is folded into `report_significance.py` as exploratory comparisons (excluded from the Holm-corrected primary family). Method and rationale: the D2.8 milestone section of `BASELINE_ROADMAP.md`.
 
 Local UI: http://127.0.0.1:8766, or use `start.cmd` after downloading the data.
 

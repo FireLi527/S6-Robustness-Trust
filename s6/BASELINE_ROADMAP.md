@@ -12,7 +12,7 @@
 > | D2.5 downstream behaviour + defense | **Done (STL-10, 3 seeds, 36 models)** | Targeted error 10.46% → 0.21%; 10% flip paired gain +3.23 pp |
 > | D2.6 fruit-fly migration | Done (single seed) | Clean ResNet18 test accuracy 99.24% |
 > | D2.7 fruit-fly specimen-grouped detection + defense | Done (single seed, 12 models) | FPR 4.4–5.8% → 0.6–1.0%, with lower recall |
-> | D2.8 fruit-fly risk-weighted training | **In progress: 2 of 8 runs** | Down-weights instead of removing; 6 runs not started |
+> | D2.8 fruit-fly risk-weighted training | **Done (2026-09-28): 8/8 training runs, summary report, and significance testing all complete** | Down-weights instead of removing; all 8 exploratory comparisons stay out of the Holm family; 10% flip/targeted show 2–2.4 pp gains vs untreated, mostly no significant difference vs semantic isolation |
 | D4 Diptera / Tephritidae data | **In progress: iterative cleaning (cleaning_v3) done (2026-09-26)** | q=0.6, rounds=3, threshold=0.975: 10% flip recall 18%→58%, pest-evasion recall 67%→61%, clean FPR ~3-4.5% |
 | Downstream significance tests | **Done (2026-09-25)** | STL-10 defense effects significant; on fruit fly only 10% flip semantic−untreated survives Holm |
 > | Unified response contract + audit log | Not started | — |
@@ -590,13 +590,49 @@ validation set with two development poisoning seeds. Twelve downstream models:
 One test image is 0.08 pp (0.58 pp within the 172-image source class), so most single-seed
 differences are within noise. See `data_poisoning/FRUITFLY_GROUPED_DEFENSE_ZH.md`.
 
-## Milestone D2.8 — fruit-fly risk-weighted training (in progress)
+## Milestone D2.8 — fruit-fly risk-weighted training (done, 2026-09-28)
 
 Keeps every sample with `weight = max(floor, 1 − risk)` from the frozen D2.7 specimen-grouped
 OOF risk; floor ∈ {0.25, 0.50}; 8 models; protocol frozen in
 `data/fruitfly_poisoning/weighted_v2/protocol.json` (no hidden truth or test metrics used).
-As of 2026-09-25, 2/8 done (floor 0.25): 10% flip 98.56% test accuracy; targeted 99.02% with
-1.16% 0→1 error. No conclusions until all 8 exist.
+
+**Rationale**: D2.7's specimen-grouped defense *isolates* — samples judged high-risk are
+dropped from the reference set entirely, trading recall for a lower false-positive rate,
+and any misjudged clean sample loses all supervision. D2.8 instead *down-weights*: the
+same frozen D2.7 specimen-grouped OOF candidate-label risk scores set each sample's
+supervised-loss weight to `max(floor, 1 − risk)` (the floor keeps near-risk-1 samples from
+losing supervision entirely) rather than a binary keep/drop decision. This tests whether a
+softer reweighting recovers most of the isolation defense's benefit without its
+misisolation cost — the same risk scores used two different ways downstream, a comparison
+rather than a replacement for D2.7. Protocol is frozen
+(`data/fruitfly_poisoning/weighted_v2/protocol.json`); floor and method were not chosen
+using hidden truth or test metrics.
+
+**2026-09-28**: the remaining 6 runs (`clean_subset__weighted_{25,50}`,
+`label_flip_05__weighted_{25,50}`, `label_flip_10__weighted_50`,
+`targeted_0_to_1__weighted_50`) started and all finished, using the identical frozen
+method/protocol as the first 2 (no retuning, hidden truth not read). All 6 queued
+sequentially in one WSL tmux session (`weighted_v2_run`) since there is a single GPU; log
+at `results/fruitfly_poisoning/weighted_v2/remaining_6_runs.log`; measured 23–30 min/run.
+All 8 verified (hashes/protocol/checkpoints match) and summarized in
+[weighted_report_ZH.md](../results/fruitfly_poisoning/weighted_v2/weighted_report_ZH.md).
+
+| dataset__floor | test accuracy | test macro F1 | targeted 0→1 error |
+|---|---:|---:|---:|
+| clean_subset__weighted_25 | 99.39% | 99.30% | 0.00% |
+| clean_subset__weighted_50 | 99.62% | 99.54% | 0.00% |
+| label_flip_05__weighted_25 | 98.79% | 98.68% | 0.00% |
+| label_flip_05__weighted_50 | 97.80% | 97.62% | 0.00% |
+| label_flip_10__weighted_25 | 98.56% | 98.35% | 0.00% |
+| label_flip_10__weighted_50 | 98.94% | 98.71% | 0.00% |
+| targeted_0_to_1__weighted_25 | 99.02% | 98.88% | 1.16% |
+| targeted_0_to_1__weighted_50 | 98.94% | 98.75% | 1.74% |
+
+Significance testing (8 exploratory comparisons, see below): weighted training beats untreated
+clearly on 10% flip (+2.04/+2.42 pp, both floors p<0.001); other conditions are mostly within
+noise. Versus D2.7's semantic isolation, only the targeted condition is significantly better at
+both floors (+0.91/+0.83 pp, p=0.023/0.043); other conditions show no significant difference.
+All of these stay exploratory, outside D2.7's Holm-corrected primary family (see below for why).
 
 ## Downstream significance tests (done 2026-09-25)
 
@@ -610,6 +646,15 @@ Report: `results/poisoning_significance/report_ZH.md`.
 - **Fruit fly**: only 10% flip semantic−untreated (+2.19 pp) survives Holm. Semantic vs
   random on 10% flip is not significant (p=0.42); targeted 0→1 error 3.49%→1.16% is 6→2
   images (p=0.22) and cannot be claimed as an improvement.
+- **D2.8 exploratory comparisons** (all 8 runs complete, still excluded from Holm): weighted
+  vs untreated is significantly better on 10% flip at both floors (+2.04 pp floor0.25, +2.42 pp
+  floor0.50, both p<0.001); other conditions' CIs include 0. Weighted vs D2.7's semantic
+  isolation is significantly better only for the targeted condition at both floors (+0.91 pp
+  p=0.023, +0.83 pp p=0.043; 0→1 error difference not significant); 10% flip, clean, and 5%
+  flip mostly show no significant difference (5% flip floor0.50 is significantly worse,
+  −1.21 pp, p=0.004). floor=0.25 finished before floor=0.50, so to avoid promoting a family
+  after seeing partial results, both floors stay exploratory with no multiple-comparison
+  correction.
 - CIs reflect test-set sampling only; fruit fly is single-seed.
 
 ## Milestone D4 — Diptera / Tephritidae domain data (in progress)
@@ -700,8 +745,8 @@ Done: D1, D2, D2.5 (STL-10, 3 seeds), D2.6, D2.7, P1, P2, P3, P3.1; P4 is a froz
 
 Next-phase candidates (2026-09-25 discussion draft, ordered by cost vs. value):
 
-1. **Finish D2.8** — six remaining weighted runs (~30 min each), then a report in D2.7
-   format, folded into the significance report.
+1. ~~Finish D2.8~~ — done (2026-09-28): 8/8 training runs, D2.7-format summary report, and
+   significance testing all complete; see the D2.8 milestone section above.
 2. ~~Statistical tests on existing results~~ — done 2026-09-25.
 3. **Expand the clean prompt-injection corpus** — P1/P2 FPR rests on 50 clean emails per
    split. (P3.1 friction/mistaken-approval evaluation done 2026-09-25.)
