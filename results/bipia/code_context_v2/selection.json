@@ -1,0 +1,76 @@
+{
+  "status": "FROZEN_BEFORE_CONFIRMATION",
+  "candidate": "P1 OR multi-line workflow signal",
+  "signal_sha256": "7e275fbffd66d4ca30b09cb7f7c5a768f40226faf01ea4bbe90cf1fb7c1dd2bf",
+  "development_sample_sha256": "b874ad8568fd4fe23135e55db2a8845daf5c976d8fd88ad71336beac36f5a64a",
+  "confirmation_sample_sha256": "ae36ef50a54b0a362102f83f5d67aeee07428dcb65ffae279a55655a210c689a",
+  "development_metrics": {
+    "benchmark_attack": {
+      "rule": {
+        "flagged": 0,
+        "total": 470,
+        "rate": 0.0
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 470,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 470,
+        "total": 470,
+        "rate": 1.0
+      },
+      "rule_or_workflow": {
+        "flagged": 470,
+        "total": 470,
+        "rate": 1.0
+      }
+    },
+    "benchmark_clean": {
+      "rule": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      }
+    },
+    "natural_clean": {
+      "rule": {
+        "flagged": 7,
+        "total": 100,
+        "rate": 0.07
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 100,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 100,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 7,
+        "total": 100,
+        "rate": 0.07
+      }
+    }
+  },
+  "decision": "Research-only candidate; report all confirmation results even if weak; do not deploy or tune on confirmation"
+}

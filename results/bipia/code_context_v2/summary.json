@@ -1,0 +1,169 @@
+{
+  "status": "COMPLETE",
+  "signal_sha256": "7e275fbffd66d4ca30b09cb7f7c5a768f40226faf01ea4bbe90cf1fb7c1dd2bf",
+  "confirmation_sample_sha256": "ae36ef50a54b0a362102f83f5d67aeee07428dcb65ffae279a55655a210c689a",
+  "development_metrics": {
+    "benchmark_attack": {
+      "rule": {
+        "flagged": 0,
+        "total": 470,
+        "rate": 0.0
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 470,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 470,
+        "total": 470,
+        "rate": 1.0
+      },
+      "rule_or_workflow": {
+        "flagged": 470,
+        "total": 470,
+        "rate": 1.0
+      }
+    },
+    "benchmark_clean": {
+      "rule": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 0,
+        "total": 94,
+        "rate": 0.0
+      }
+    },
+    "natural_clean": {
+      "rule": {
+        "flagged": 7,
+        "total": 100,
+        "rate": 0.07
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 100,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 100,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 7,
+        "total": 100,
+        "rate": 0.07
+      }
+    }
+  },
+  "confirmation_metrics": {
+    "external_file_content": {
+      "rule": {
+        "flagged": 1,
+        "total": 10,
+        "rate": 0.1
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 10,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 10,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 1,
+        "total": 10,
+        "rate": 0.1
+      }
+    },
+    "natural_clean": {
+      "rule": {
+        "flagged": 5,
+        "total": 100,
+        "rate": 0.05
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 100,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 100,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 5,
+        "total": 100,
+        "rate": 0.05
+      }
+    },
+    "external_unsafe": {
+      "rule": {
+        "flagged": 1,
+        "total": 8,
+        "rate": 0.125
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 8,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 8,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 1,
+        "total": 8,
+        "rate": 0.125
+      }
+    },
+    "external_safe": {
+      "rule": {
+        "flagged": 0,
+        "total": 2,
+        "rate": 0.0
+      },
+      "old_comment": {
+        "flagged": 0,
+        "total": 2,
+        "rate": 0.0
+      },
+      "workflow": {
+        "flagged": 0,
+        "total": 2,
+        "rate": 0.0
+      },
+      "rule_or_workflow": {
+        "flagged": 0,
+        "total": 2,
+        "rate": 0.0
+      }
+    }
+  },
+  "limitations": [
+    "The file-content subset is only 10 cases and includes non-Python and non-comment surfaces.",
+    "The researcher inspected some source metadata before candidate implementation; not strictly blind.",
+    "Unmodified natural code is provenance-based presumptive benign, not independently annotated.",
+    "Static detector labels are not agent attack-success outcomes."
+  ]
+}

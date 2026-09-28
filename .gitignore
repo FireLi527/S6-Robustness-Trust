@@ -26,6 +26,7 @@ data/bipia/generated/
 data/bipia/code_independent_v2/samples.jsonl
 data/bipia/code_context_v1/samples.jsonl
 data/bipia/code_external_v1/samples.jsonl
+data/bipia/code_context_v2/samples.jsonl
 
 # Embedding and model caches
 *.npz

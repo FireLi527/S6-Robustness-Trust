@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN_BEFORE_CANDIDATE_IMPLEMENTATION",
+  "seed": 2027,
+  "natural_source": {
+    "pandas": "3.0.5",
+    "scipy": "1.18.1"
+  },
+  "natural_files_per_package": 50,
+  "external_url": "https://github.com/ppradyoth/AgentInjectionBench",
+  "external_commit": "5adb09800170683793b4e4d015e42e2002fa5adf",
+  "external_license": "Apache-2.0",
+  "external_subset": "all 10 published file_content cases; eight unsafe, two safe",
+  "sample_sha256": "ae36ef50a54b0a362102f83f5d67aeee07428dcb65ffae279a55655a210c689a",
+  "limitations": [
+    "The file-content subset is only 10 cases and includes non-Python and non-comment surfaces.",
+    "The researcher inspected some source metadata before candidate implementation; not strictly blind.",
+    "Unmodified natural code is provenance-based presumptive benign, not independently annotated.",
+    "Static detector labels are not agent attack-success outcomes."
+  ]
+}
