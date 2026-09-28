@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN_BEFORE_ANNOTATION",
+  "selection": "top keyword-diverse paragraphs, max four per file; not detector-selected",
+  "count": 30,
+  "repos": {
+    "requests": {
+      "url": "https://github.com/psf/requests",
+      "commit": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "license": "Apache-2.0"
+    },
+    "flask": {
+      "url": "https://github.com/pallets/flask",
+      "commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+      "license": "BSD-3-Clause"
+    },
+    "pytest": {
+      "url": "https://github.com/pytest-dev/pytest",
+      "commit": "b1de564f337c63db919a65253b931dd099909618",
+      "license": "MIT"
+    }
+  },
+  "source_file_sha256": {
+    "requests/README.md": "15b3a5801783809a84a13d65ca0903f8445530451ee7a64499c52e595c150242",
+    "requests/docs/dev/contributing.rst": "324b365329f20ff7d457dbfedcec846f68e57b5b6c4900273cfc1742d1edc158",
+    "requests/docs/community/release-process.rst": "e53cab96eeee55601a35ae062f27342a22ac8b0cbe9e3c7be59249a5f65622af",
+    "flask/docs/testing.rst": "bc2e8362afcaad4367614b365094312e7abd05c0efb06722860f6d9c4cf4ffb1",
+    "flask/docs/web-security.rst": "be342b52f12bfba2c28b070da60e770d63b95dee32f20acd6e3a76a5ffd4eb06",
+    "flask/docs/quickstart.rst": "5e32775ed826e8ff9492097642a9fa969cbb0434997bfc9e18cb21211975119f",
+    "pytest/CONTRIBUTING.rst": "724f5a7aa169a02201ceb95ecdc747cef4834f3864b78923cc7789e4c1d2ce04",
+    "pytest/doc/en/how-to/usage.rst": "9bc54a76e6b68c64f5fe39e770403ed426030c5d5ece7ae827e4c30e9a0ca785",
+    "pytest/doc/en/explanation/ci.rst": "d705989905fcd8525a450eadf79de8e682e17dd539be33ca4830f535b49e982a"
+  },
+  "samples_sha256": "aef3b0deec21d63a8b6129857294544281515d18ed9c32f088aa0df8d38a267b",
+  "limitations": [
+    "Unmodified maintainer-document excerpts are candidates, not independently adjudicated benign labels.",
+    "Keyword-based sampling enriches instruction-like text; it is not a random prevalence sample.",
+    "Selection is based on text and source only, never detector output."
+  ]
+}

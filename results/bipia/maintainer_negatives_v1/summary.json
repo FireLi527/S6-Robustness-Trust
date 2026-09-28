@@ -1,0 +1,13 @@
+{
+  "status": "AWAITING_INDEPENDENT_REVIEW",
+  "samples_sha256": "aef3b0deec21d63a8b6129857294544281515d18ed9c32f088aa0df8d38a267b",
+  "candidate_count": 30,
+  "repos": {
+    "requests": 10,
+    "flask": 10,
+    "pytest": 10
+  },
+  "p1_flagged_candidates": 3,
+  "workflow_flagged_candidates": 0,
+  "warning": "Flagged counts are review-priority counts, NOT false-positive rates; no independent benign labels yet."
+}
