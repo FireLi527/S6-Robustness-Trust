@@ -1,0 +1,79 @@
+{
+  "status": "AUDITED_NO_TRAINING",
+  "source_sha256": {
+    "external/prompt-injection-benchmark/dataset/v1.0.0/full.jsonl": "30073108972395612f39d4869927ed0e0843e5e74be3dbe1fe065d65ad2c6ba1",
+    "external/AgentInjectionBench/data/agent_injection_bench.jsonl": "bb27e5f94093b861a84c24f6f89bbf59203f41037f78fbd0d8c48666819a4b45",
+    "data/bipia/code_external_v1/samples.jsonl": "b874ad8568fd4fe23135e55db2a8845daf5c976d8fd88ad71336beac36f5a64a",
+    "data/bipia/code_context_v2/samples.jsonl": "ae36ef50a54b0a362102f83f5d67aeee07428dcb65ffae279a55655a210c689a",
+    "external/RepoGuardBench/data/repoguardbench_core.jsonl": "761d6e0f30b693ece46a10bf910e643d9f265dd2fabaac99779584cf433e462d",
+    "external/RepoGuardBench/data/repoguardbench_real.jsonl": "dcc47416f94e54f71a9e2fe7536f7a69fa6300db263fd3d89cd229444600897c"
+  },
+  "source_repositories": {
+    "RepoGuardBench": {
+      "url": "https://github.com/DaoyuanLi2816/RepoGuardBench",
+      "commit": "f1c1d28d2e308e353b63458c27f4df091f5503c7",
+      "license": "CC BY 4.0"
+    },
+    "AgentInjectionBench": {
+      "url": "https://github.com/ppradyoth/AgentInjectionBench",
+      "commit": "5adb09800170683793b4e4d015e42e2002fa5adf",
+      "license": "Apache-2.0"
+    },
+    "prompt-injection-benchmark": {
+      "url": "https://github.com/AshwinNHacker/prompt-injection-benchmark",
+      "commit": "3e001b3dc898fdfc2f725ddc8b77258c9936e07c",
+      "license": "MIT"
+    }
+  },
+  "source_inventory": {
+    "repoguard_code_comment": {
+      "attack_rows": 470,
+      "attack_goal_templates": 5,
+      "repository_tasks": 94,
+      "clean_rows": 94,
+      "origin": "author-written synthetic micro-repositories",
+      "status": "development_exposed; not an independent test"
+    },
+    "aib_file_content": {
+      "unsafe_rows": 8,
+      "safe_rows": 2,
+      "carriers": "mixed Python, README, JSON, JavaScript, notebook",
+      "status": "confirmation_exposed; no longer a fresh holdout"
+    },
+    "ashwin_indirect": {
+      "injection_rows": 13,
+      "benign_rows": 4,
+      "channels": {
+        "web_content": 3,
+        "file_upload": 1,
+        "tool_output": 12,
+        "retrieved_document": 1
+      },
+      "status": "new adjacent-domain candidate; not repository-specific"
+    },
+    "ashwin_direct_excluded": {
+      "rows": 65,
+      "reason": "direct user input is a different trust boundary"
+    },
+    "natural_python_code": {
+      "prior_files": 100,
+      "confirmation_files": 100,
+      "file_overlap": 0,
+      "status": "unmodified-source presumed benign, not independently adjudicated"
+    }
+  },
+  "training_readiness": {
+    "decision": "NOT_READY",
+    "reasons": [
+      "Only five repeated RepoGuardBench attack templates in the core repository-specific development source.",
+      "The eight external file-content attacks were already used for confirmation and cannot be presented as a new blind test.",
+      "The new third-party indirect samples are adjacent-domain, not a repository-file corpus.",
+      "Natural-source benign labels and legitimate maintainer hard negatives lack independent adjudication."
+    ],
+    "next_data_requirements": [
+      "Acquire additional repository-artifact attacks from distinct sources and record the exact controlled text span and requested deviation.",
+      "Collect normal maintainer instructions with similar action/authority vocabulary, then adjudicate them separately from provenance-based code snippets.",
+      "Freeze a source- and attack-family-disjoint external test set before fitting or choosing a threshold."
+    ]
+  }
+}
