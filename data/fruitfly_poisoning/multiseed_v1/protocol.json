@@ -1,0 +1,58 @@
+{
+  "status": "FROZEN_BEFORE_REPEATS",
+  "purpose": "Exploratory training-seed repeat for the two conditions where D2.8 changed the interpretation most",
+  "selection_timing": "Chosen after inspecting all seed-2026 D2.7 and D2.8 test results; not a prospective model-selection claim",
+  "existing_seed": 2026,
+  "additional_seeds": [2027, 2028],
+  "comparison_family": [
+    "label_flip_10: weighted_50 versus semantic versus untreated",
+    "targeted_0_to_1: weighted_25 versus semantic versus untreated"
+  ],
+  "training": {
+    "architecture": "pretrained ResNet18",
+    "epochs": 20,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "amp": true,
+    "selection": "best validation macro-F1",
+    "training_transform": "unchanged from seed 2026"
+  },
+  "trainer_sha256": "9086ac91e582ab69ee44bfff9082e1fa8affcba1b0e29e47b9348cb7a36f29ee",
+  "fruitfly_protocol_sha256": "e13511848715991cdd28839ff79405938eb1134e51d6c7a9e7e52f99da893519",
+  "val_split_sha256": "308e1c6fba953fea3a0771a8ce192c1fa70b2f7d470d631adbc817d997e9edf2",
+  "test_split_sha256": "b6c052b3e4f2a4979ded348251537cea95d11148960e1046c3176fee9410d124",
+  "jobs": {
+    "label_flip_10__untreated": {
+      "scenario": "label_flip_10", "strategy": "untreated",
+      "manifest": "data/fruitfly_poisoning/manifests/label_flip_10.csv",
+      "sha256": "062fdd302567a1e83f3c4b5fb7fe5822fbbb6ba04dbb90904894c61c1b824122"
+    },
+    "label_flip_10__semantic": {
+      "scenario": "label_flip_10", "strategy": "semantic",
+      "manifest": "data/fruitfly_poisoning/grouped_defense_v1/manifests/label_flip_10__semantic.csv",
+      "sha256": "07ca18152a34a39900cb34f08b5c1a0520658e5deba3ff396a35eb68bea84db2"
+    },
+    "label_flip_10__weighted_50": {
+      "scenario": "label_flip_10", "strategy": "weighted",
+      "manifest": "data/fruitfly_poisoning/weighted_v2/label_flip_10__weighted_50.csv",
+      "sha256": "e511eb5d85f3a9e837ee6797888a9a89c7f3aabe46907216f636ad64df4943ee"
+    },
+    "targeted_0_to_1__untreated": {
+      "scenario": "targeted_0_to_1", "strategy": "untreated",
+      "manifest": "data/fruitfly_poisoning/manifests/targeted_0_to_1.csv",
+      "sha256": "1f18dd10d417ba29a2f929aac2f6d7ad5c47eef189dcd7125d5802fac89a2373"
+    },
+    "targeted_0_to_1__semantic": {
+      "scenario": "targeted_0_to_1", "strategy": "semantic",
+      "manifest": "data/fruitfly_poisoning/grouped_defense_v1/manifests/targeted_0_to_1__semantic.csv",
+      "sha256": "7e485e3b1982d08e26df58129dc5df088dfb2e2d06e9bc1b4b6a62993600f4f7"
+    },
+    "targeted_0_to_1__weighted_25": {
+      "scenario": "targeted_0_to_1", "strategy": "weighted",
+      "manifest": "data/fruitfly_poisoning/weighted_v2/targeted_0_to_1__weighted_25.csv",
+      "sha256": "78534c4d23af8449d04b98803b442b48cb525c0b890210ef81b3ce100a1abb99"
+    }
+  }
+}

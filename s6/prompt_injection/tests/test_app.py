@@ -75,6 +75,10 @@ class AppIntegrationTests(unittest.TestCase):
         self.assertIn("plain", payload["evaluations"])
         self.assertIn("stealth", payload["evaluations"])
         self.assertTrue(payload["evaluations"]["plain"]["matches_current_detector"])
+        self.assertEqual(payload["evaluations"]["plain"]["clean_corpus"], "expanded")
+        self.assertEqual(payload["evaluations"]["plain"]["splits"]["unseen_test"]["clean_samples"], 250)
+        self.assertEqual(payload["p2_evaluations"]["plain"]["splits"]["unseen_test"]["hybrid"]["clean_samples"], 250)
+        self.assertEqual(payload["evaluations"]["stealth"]["splits"]["unseen_test"]["clean_samples"], 50)
 
     def test_example_endpoint_selects_split_and_encoding(self) -> None:
         url = f"{self.base_url}/api/example?split=development&encoding=stealth"

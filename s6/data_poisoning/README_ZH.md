@@ -126,7 +126,7 @@ wsl.exe -d Ubuntu-24.04 -- /home/anima/.venvs/s6-training/bin/python -u s6/data_
 
 ## 双翅目 / 实蝇科数据（D4）
 
-老师提供的 `external/diptera` 二分类野外照片，已完成只读审计。见 [DIPTERA_PROTOCOL_ZH.md](DIPTERA_PROTOCOL_ZH.md)。
+老师提供的 `external/diptera` 二分类野外照片属于附加研究；五类实蝇仍是图像主实验。已完成只读审计、去重、近似分组划分、领域投毒检测、验证集校准和迭代清洗。图像控制台的“附加研究”区展示 v2/v3 汇总指标，不公开原图。见 [DIPTERA_PROTOCOL_ZH.md](DIPTERA_PROTOCOL_ZH.md)。
 
 ## 小组实蝇数据
 

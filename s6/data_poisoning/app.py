@@ -207,6 +207,46 @@ def semantic_sample_payload(result: SemanticSampleResult | dict | None) -> dict 
     }
 
 
+def research_payload() -> dict:
+    """Expose verified aggregate results without serving the restricted D4 images."""
+    weighted_root = PROJECT_ROOT / "results/fruitfly_poisoning/weighted_v2"
+    weighted, _ = fruitfly.document(weighted_root / "weighted_comparison.json")
+    fruitfly.require(weighted["status"], "VERIFIED")
+    fruitfly.require(
+        weighted["protocol_sha256"],
+        fruitfly.digest(PROJECT_ROOT / "data/fruitfly_poisoning/weighted_v2/protocol.json"),
+    )
+    diptera_root = PROJECT_ROOT / "results/diptera_poisoning"
+    v2, _ = fruitfly.document(diptera_root / "detection_v2_calibrated/detection_summary.json")
+    v3, _ = fruitfly.document(diptera_root / "detection_v3_iterative/detection_summary.json")
+    fruitfly.require(v2["protocol_sha256"], fruitfly.digest(PROJECT_ROOT / "data/diptera_poisoning/protocol.json"))
+    fruitfly.require(v3["protocol_sha256"], v2["protocol_sha256"])
+    fruitfly.require(
+        v3["cleaning_protocol_sha256"],
+        fruitfly.digest(PROJECT_ROOT / "data/diptera_poisoning/cleaning_v3/protocol.json"),
+    )
+    fruitfly.require(
+        v3["cleaning_selection_sha256"],
+        fruitfly.digest(PROJECT_ROOT / "data/diptera_poisoning/cleaning_v3/detector_selection.json"),
+    )
+    split, _ = fruitfly.document(diptera_root / "split_summary.json")
+    fruitfly.require(split["split_sha256"], fruitfly.digest(PROJECT_ROOT / "data/diptera_poisoning/split.csv"))
+    split_sizes = {name: sum(counts.values()) for name, counts in split["images"].items()}
+    return {
+        "fruitfly_weighted": {"seed": weighted["seed"], "rows": weighted["rows"]},
+        "diptera": {
+            "classes": {"0": "Other Diptera", "1": "Tephritidae"},
+            "retained_images": sum(split_sizes.values()),
+            "training_candidates": split_sizes["train"],
+            "v2": {"threshold": v2["detector"]["threshold"], "results": v2["results"]},
+            "v3": {
+                "threshold": v3["detector"]["threshold"],
+                "q": v3["q"], "rounds": v3["rounds"], "results": v3["results"],
+            },
+        },
+    }
+
+
 class PoisoningRequestHandler(BaseHTTPRequestHandler):
     server_version = "S6PoisoningLocal/1.0"
 
@@ -229,6 +269,13 @@ class PoisoningRequestHandler(BaseHTTPRequestHandler):
             self.send_header("Cache-Control", "no-store")
             self.end_headers()
             self.wfile.write(body)
+            return
+
+        if parsed.path == "/api/research":
+            try:
+                self._send_json(research_payload())
+            except (OSError, ValueError, KeyError) as error:
+                self._send_json({"error": str(error)}, HTTPStatus.CONFLICT)
             return
 
         query = parse_qs(parsed.query)

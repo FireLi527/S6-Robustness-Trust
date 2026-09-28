@@ -102,12 +102,14 @@ def load_status() -> dict:
     evaluations: dict[str, dict] = {}
     historical_warning = ""
     for encoding in SUPPORTED_ENCODINGS:
-        summary_file = RESULTS_DIR / f"email_p1_{encoding}_summary.json"
+        expanded_file = RESULTS_DIR / f"email_p1_{encoding}_expanded_summary.json"
+        summary_file = expanded_file if expanded_file.is_file() else RESULTS_DIR / f"email_p1_{encoding}_summary.json"
         if not summary_file.is_file():
             continue
         summary = json.loads(summary_file.read_text(encoding="utf-8"))
         historical_warning = str(summary.get("historical_exposure_warning", ""))
         evaluations[encoding] = {
+            "clean_corpus": summary.get("clean_corpus", "original"),
             "matches_current_detector": all(
                 summary.get(key) == metadata[key]
                 for key in ("detector", "version", "config_hash")
@@ -129,15 +131,18 @@ def load_status() -> dict:
 
     p2_evaluations: dict[str, dict] = {}
     for encoding in SUPPORTED_ENCODINGS:
-        summary_file = RESULTS_DIR / f"email_p2_{encoding}_summary.json"
+        expanded_file = RESULTS_DIR / f"email_p2_{encoding}_expanded_summary.json"
+        summary_file = expanded_file if expanded_file.is_file() else RESULTS_DIR / f"email_p2_{encoding}_summary.json"
         if not summary_file.is_file():
             continue
         summary = json.loads(summary_file.read_text(encoding="utf-8"))
         p2_evaluations[encoding] = {
+            "clean_corpus": summary.get("clean_corpus", "original"),
             "splits": {
                 split: {
                     system: {
                         "attacked_samples": systems[system]["attacked_samples"],
+                        "clean_samples": systems[system]["clean_samples"],
                         "attack_detection_rate": systems[system]["attack_detection_rate"],
                         "false_positive_rate": systems[system]["false_positive_rate"],
                         "f1": systems[system]["f1"],

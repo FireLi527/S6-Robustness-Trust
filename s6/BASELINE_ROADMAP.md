@@ -688,9 +688,11 @@ contamination-sensitive recall at the inherited threshold; high-risk clean image
 possible natural mislabels pending expert review. A pre-registered recalibration on the validation split
 (calibration_v2: C=10, threshold 0.775) raised recall on all attacks (pest evasion 67.1%, false
 alarm 55.8%) at roughly double the FPR; threshold tuning alone caps out and high-contamination
-recall stays low. **Chosen next step (not yet run): iterative cleaning `cleaning_v3`** (quarantine risk >= q, refit
-on the rest, rescore; q, rounds, and final threshold pre-registered on the validation split — see
-`data_poisoning/DIPTERA_PROTOCOL_ZH.md`). Alternative not chosen: taxonomic review of flagged images.
+recall stays low. **Iterative cleaning `cleaning_v3` is complete:** validation selection chose
+q=0.6, three rounds, and a final threshold of 0.975. On the training candidates, 10% flip
+recall rose from 18.36% to 57.60% while clean FPR rose from 1.51% to 4.54%; pest-evasion
+recall fell from 67.12% to 61.03%. See `data_poisoning/DIPTERA_PROTOCOL_ZH.md`.
+Taxonomic review of flagged images remains an alternative.
 
 ## Milestone D3 — pixel and backdoor poisoning
 
@@ -771,12 +773,11 @@ Next-phase candidates (2026-09-25 discussion draft, ordered by cost vs. value):
    0%/2% (n=50) to 5.2%/5.2% (n=250); attack detection rates are unchanged. See the P2
    milestone section for full detail; the original BIPIA-only 50-email numbers remain the
    frozen default. (P3.1 friction/mistaken-approval evaluation done 2026-09-25.)
-4. **D4 Diptera / Tephritidae (main vertical line)** — the instructor wants domain-relevant
-   image data, not generic tooling; the classmate set `external/diptera` is audited; next are
-   embedding dedup, a frozen split, and domain poisoning detection. Prompt-injection datasets are
-   unrestricted but must be sourced by the team.
-5. **Unified response contract and audit log** across both baselines. Fruit fly is a
-   classmate's dataset used as a transfer check; no further multi-seed investment.
+4. **D4 Diptera / Tephritidae (additional study)** — audit, embedding deduplication,
+   grouped split, domain poisoning detection, validation calibration, and iterative cleaning
+   are complete. The five-class fruit-fly experiment remains the main image result.
+5. **Unified response contract and audit log** across both baselines. Further fruit-fly
+   seeds can quantify training variability.
 6. **D3 pixel/backdoor poisoning (optional)** — hash checks already catch pixel edits when a
    trusted manifest exists; the interesting case is no-baseline or clean-label, which needs its own threat model.
 

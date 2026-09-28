@@ -1,4 +1,4 @@
-> 图像控制台默认使用 **同学实蝇数据集**；STL-10 保留为历史对照。
+> 图像控制台默认使用 **同学五类实蝇数据集**；双翅目/实蝇科二分类为附加研究，STL-10 保留为历史对照。
 
 # S6 Robustness & Trust
 
@@ -14,8 +14,8 @@ LLM applications and model training.
 
 | Baseline | Dataset | Main checks | Local app |
 | --- | --- | --- | --- |
-| Prompt injection defense | BIPIA EmailQA | P1 rule detection, P2 semantic task consistency, and P3 tool policy | `http://127.0.0.1:8765` |
-| Training-data poisoning detection | Classmate fruit flies (default); STL-10 control | Manifest integrity, semantic label consistency, and controlled poisoned-model training | `http://127.0.0.1:8766` |
+| Prompt injection defense | BIPIA EmailQA; independent Enron clean-email extension | P1 rules, P2 task consistency, P3 tool policy, P3.1 explicit approval | `http://127.0.0.1:8765` |
+| Training-data poisoning detection | Five-class fruit flies (main); Diptera/Tephritidae additional study; STL-10 historical control | Manifest integrity, label consistency, and controlled poisoned-model training | `http://127.0.0.1:8766` |
 
 ## Project structure
 
@@ -41,6 +41,7 @@ evaluation.
 - [Data poisoning baseline](s6/data_poisoning/README.md)
 - [数据投毒中文说明](s6/data_poisoning/README_ZH.md)
 - [Milestone roadmap](s6/BASELINE_ROADMAP.md) · [里程碑规划](s6/BASELINE_ROADMAP_ZH.md)
+- [S6 当前阶段中文汇总](results/s6_stage_update_20260928_ZH.md)
 
 ## Dataset references
 

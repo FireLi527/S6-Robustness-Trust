@@ -738,8 +738,8 @@
       <div id="tab-p2" class="tab-content">
         <div class="section-intro"><div><h3 data-i18n="p2DetailTitle">语义检测评估</h3><p data-i18n="p2DetailBody">同一数据划分下的规则、语义与综合检测结果。</p></div></div>
         <div class="table-wrap"><table>
-          <thead><tr><th data-i18n="encoding">编码</th><th data-i18n="split">分组</th><th data-i18n="detectorType">检测器</th><th data-i18n="attackSamples">攻击样本</th><th data-i18n="detectionRate">检出率</th><th data-i18n="fpr">误报率</th><th>F1</th></tr></thead>
-          <tbody id="p2-metrics-body"><tr><td colspan="7">—</td></tr></tbody>
+          <thead><tr><th data-i18n="encoding">编码</th><th data-i18n="split">分组</th><th data-i18n="detectorType">检测器</th><th data-i18n="attackSamples">攻击样本</th><th data-i18n="cleanSamples">干净样本</th><th data-i18n="detectionRate">检出率</th><th data-i18n="fpr">误报率</th><th>F1</th></tr></thead>
+          <tbody id="p2-metrics-body"><tr><td colspan="8">—</td></tr></tbody>
         </table></div>
       </div>
 
@@ -795,8 +795,8 @@
         awaitingTitle:"暂无结果", awaitingBody:"加载样本或输入内容后开始检测。", checkingTitle:"检测中", checkingBody:"正在处理当前内容。",
         contentGate:"综合结果", ruleRiskScore: "P1 规则风险分", p1Rules: "P1 规则", p2Semantic: "P2 语义", hybridGate:"综合检测", p3Policy: "P3 工具策略", evidenceTitle:"检测依据", overlap: "重叠命中",
         tabOverview: "评估概览", tabP1:"P1 规则检测", tabP2:"P2 语义检测", tabP3: "P3 工具策略", tabMethod:"方法说明",
-        overviewTitle:"检测概览", overviewBody:"P1 / P2：邮件测试集；P3：工具场景评估。", p1RuleEngine:"P1 · 规则检测", p2HybridEngine:"P2 · 综合检测", p3Containment: "P3 · 危害抑制", attackDetection: "攻击检出率", falsePositive: "误报率", containedHarm: "危害抑制率", frictionCost:"正常操作干预率",
-        p1DetailTitle:"规则检测评估", p1DetailBody:"明文与编码攻击的检出率、误报率、F1 和耗时。", p2DetailTitle:"语义检测评估", p2DetailBody:"同一数据划分下的规则、语义与综合检测结果。", p3DetailTitle:"工具权限评估", p3DetailBody:"按工具权限、调用目标和内容风险评估操作。",
+        overviewTitle:"检测概览", overviewBody:"P1 / P2：明文使用扩充邮件语料，隐蔽编码使用原语料；P3：工具场景评估。", p1RuleEngine:"P1 · 规则检测", p2HybridEngine:"P2 · 综合检测", p3Containment: "P3 · 危害抑制", attackDetection: "攻击检出率", falsePositive: "误报率", containedHarm: "危害抑制率", frictionCost:"正常操作干预率",
+        p1DetailTitle:"规则检测评估", p1DetailBody:"明文含独立 Enron 干净邮件（每组 250 封）；隐蔽编码沿用原语料（每组 50 封）。", p2DetailTitle:"语义检测评估", p2DetailBody:"同一编码与数据划分下的规则、语义和综合检测结果；注意干净样本数。", p3DetailTitle:"工具权限评估", p3DetailBody:"按工具权限、调用目标和内容风险评估操作。",
         encoding: "编码", split: "分组", attackSamples: "攻击样本", cleanSamples: "干净样本", detectionRate: "检出率", fpr: "误报率", medianLatency: "中位延迟", p95Latency: "P95 延迟", detectorType: "检测器",
         evaluationSummary: "评估摘要", toolRegistry: "工具注册表", scenarios: "评估场景", decisions: "决策分布", harmBefore: "策略前危害", harmAfter: "策略后危害", registryPermission: "权限", registryTargets: "可信目标", anyTarget: "任意目标", noTrustedTarget: "无可信目标",
         methodTitle:"检测方法", methodBody:"规则检测、任务一致性分析与工具权限控制。", methodP1Title:"规则检测", methodP1Body:"匹配指令覆盖、角色劫持和数据外传特征，生成风险分数。", methodP2Title:"语义检测", methodP2Body:"MiniLM 计算正文与任务的语义一致性，并与规则结果合并。", methodP3Title:"工具权限", methodP3Body:"根据工具权限、目标白名单和内容风险，返回通过、复核或拒绝。", limitation:"评估设置：意图识别采用六类任务描述；监督分类用于结果对照。工具权限由 P3 单独评估。",
@@ -815,8 +815,8 @@
         awaitingTitle:"No results", awaitingBody:"Load a sample or enter content to run detection.", checkingTitle:"Analyzing", checkingBody:"Processing the current content.",
         contentGate:"Combined result", ruleRiskScore: "P1 rule risk score", p1Rules: "P1 rules", p2Semantic: "P2 semantics", hybridGate:"Combined detection", p3Policy: "P3 tool policy", evidenceTitle:"Detection evidence", overlap: "Overlapping match",
         tabOverview: "Evaluation overview", tabP1:"P1 rule detection", tabP2:"P2 semantic detection", tabP3: "P3 tool policy", tabMethod:"Methods",
-        overviewTitle:"Detection overview", overviewBody:"P1 / P2: email test set. P3: tool scenario evaluation.", p1RuleEngine:"P1 · Rule detection", p2HybridEngine:"P2 · Combined detection", p3Containment: "P3 · Harm containment", attackDetection: "Attack detection", falsePositive: "False-positive rate", containedHarm: "Harm containment", frictionCost:"Benign intervention rate",
-        p1DetailTitle:"Rule detection evaluation", p1DetailBody:"Detection rate, false-positive rate, F1, and latency for plain and encoded attacks.", p2DetailTitle:"Semantic detection evaluation", p2DetailBody:"Rule, semantic, and combined results on the same data splits.", p3DetailTitle:"Tool permission evaluation", p3DetailBody:"Evaluate operations by tool permission, target, and content risk.",
+        overviewTitle:"Detection overview", overviewBody:"P1 / P2: plain attacks use the expanded clean corpus; encoded attacks use the original corpus. P3: tool scenarios.", p1RuleEngine:"P1 · Rule detection", p2HybridEngine:"P2 · Combined detection", p3Containment: "P3 · Harm containment", attackDetection: "Attack detection", falsePositive: "False-positive rate", containedHarm: "Harm containment", frictionCost:"Benign intervention rate",
+        p1DetailTitle:"Rule detection evaluation", p1DetailBody:"Plain attacks include independent Enron clean email (250 per split); encoded attacks retain the original corpus (50 per split).", p2DetailTitle:"Semantic detection evaluation", p2DetailBody:"Rule, semantic, and combined results within each encoding and split; check the clean sample count.", p3DetailTitle:"Tool permission evaluation", p3DetailBody:"Evaluate operations by tool permission, target, and content risk.",
         encoding: "Encoding", split: "Split", attackSamples: "Attack samples", cleanSamples: "Clean samples", detectionRate: "Detection", fpr: "FPR", medianLatency: "Median latency", p95Latency: "P95 latency", detectorType: "Detector",
         evaluationSummary: "Evaluation summary", toolRegistry: "Tool registry", scenarios: "Evaluation scenarios", decisions: "Decision distribution", harmBefore: "Harm before policy", harmAfter: "Harm after policy", registryPermission: "Permission", registryTargets: "Trusted targets", anyTarget: "Any target", noTrustedTarget: "No trusted target",
         methodTitle:"Detection methods", methodBody:"Rule detection, task consistency, and tool permissions.", methodP1Title:"Rule detection", methodP1Body:"Match instruction overrides, role hijacking, and data exfiltration patterns to calculate a risk score.", methodP2Title:"Semantic detection", methodP2Body:"MiniLM evaluates task consistency and combines its result with rule detection.", methodP3Title:"Tool permissions", methodP3Body:"Return allow, review, or deny based on tool permissions, trusted targets, and content risk.", limitation:"Evaluation setup: intent recognition uses six task descriptions; supervised classification provides comparison results. P3 evaluates tool permissions separately.",
@@ -982,14 +982,14 @@
             const metric = splitData?.[detector];
             if (!metric) return;
             const row = document.createElement("tr");
-            [encodingLabel(encoding), splitLabel(split), detector.toUpperCase(), metric.attacked_samples, percent(metric.attack_detection_rate), percent(metric.false_positive_rate), number(metric.f1, 3)].forEach(value => {
+            [encodingLabel(encoding), splitLabel(split), detector.toUpperCase(), metric.attacked_samples, metric.clean_samples, percent(metric.attack_detection_rate), percent(metric.false_positive_rate), number(metric.f1, 3)].forEach(value => {
               const cell = document.createElement("td"); cell.textContent = value ?? "—"; row.appendChild(cell);
             });
             body.appendChild(row);
           });
         });
       });
-      if (!body.children.length) body.innerHTML = '<tr><td colspan="7">—</td></tr>';
+      if (!body.children.length) body.innerHTML = '<tr><td colspan="8">—</td></tr>';
     }
 
     function extractHarmValue(harm, keys) {

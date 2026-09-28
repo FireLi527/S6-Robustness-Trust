@@ -334,3 +334,5 @@ Email、Table、Code 已完成按原始正文分组的监督训练与独立测�
 `approval_policy.py` 在冻结的 P3 策略之上增加按范围哈希（工具名、目标、参数）的一次性或持久授权。一次性授权仅在内存中、使用一次即失效；持久授权保存在 `results/local_frontend/tool_approvals.json`，可通过 `GET /api/approvals` 列出、`POST /api/approvals` 新增或撤销。`access_secret`、`delete_records` 属于 `HARD_DENY_TOOLS`，任何授权都不能放行；内容判定为 `BLOCK` 时授权无效，并且有意比 P3 更严格：此时连只读工具调用也拒绝。授权不改变 P3 判定表，也不能弥补“可信目标 + 漏检注入”的遏制缺口。
 
 量化评估：`python s6/prompt_injection/evaluate_approval_policy.py`，结果写入 `results/bipia/approval_policy_{decisions.csv,summary.json}`。持久授权只让完全相同的重复请求摩擦从 71.43% 降到 42.86%，参数变化后回到 71.43%；模拟“一律批准”的审核员会让危害成功率从 11.11% 升到 33.33%。详见里程碑规划 P3.1 一节。
+
+本地控制台优先显示明文攻击与扩充干净语料的评估：每划分 11,250 条攻击、250 封干净邮件；未见测试集 P1 检出率 93.47%、干净误报率 5.2%，Hybrid 检出率 97.08%、干净误报率 5.6%。隐蔽编码仍显示原有每划分 50 封干净邮件的结果，表格列出样本数，不能将两种误报率视为同一语料的对比。两套明文结果分别保存在 `email_p{1,2}_plain_expanded_summary.json` 和历史 `email_p{1,2}_plain_summary.json`。
