@@ -164,6 +164,22 @@ def load_status() -> dict:
             "friction_cost": tool_policy_summary.get("friction_cost", {}),
         }
 
+    approval_evaluation: dict = {}
+    approval_file = RESULTS_DIR / "approval_policy_summary.json"
+    if approval_file.is_file():
+        approval_summary = json.loads(approval_file.read_text(encoding="utf-8"))
+        cohorts = {(item["reviewer"], item["approval_mode"]): item for item in approval_summary["reviewers"]}
+        no_review = cohorts[("none", "-")]["by_phase"]["first"]
+        informed_repeat = cohorts[("informed", "always")]["by_phase"]["exact_repeat"]
+        rubber_stamp = cohorts[("rubber_stamp", "always")]["by_phase"]["first"]
+        approval_evaluation = {
+            "scenario_count": tool_policy_evaluation.get("scenario_count"),
+            "baseline_benign_friction": no_review["benign_friction_rate"],
+            "repeat_benign_friction": informed_repeat["benign_friction_rate"],
+            "baseline_harmful_success": no_review["harmful_action_success_rate"],
+            "rubber_stamp_harmful_success": rubber_stamp["harmful_action_success_rate"],
+        }
+
     return {
         **metadata,
         "thresholds": {
@@ -185,6 +201,7 @@ def load_status() -> dict:
                 for name, entry in TOOL_REGISTRY.items()
             },
             "evaluation": tool_policy_evaluation,
+            "approval_evaluation": approval_evaluation,
         },
     }
 

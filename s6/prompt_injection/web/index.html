@@ -749,6 +749,7 @@
           <article class="policy-summary"><h4 data-i18n="evaluationSummary">评估摘要</h4><div id="policy-stats"></div></article>
           <article class="registry"><h4 data-i18n="toolRegistry">工具注册表</h4><div id="registry-list" class="registry-list"></div></article>
         </div>
+        <p id="approval-evaluation" class="limitation-note"></p>
       </div>
 
       <div id="tab-intent" class="tab-content">
@@ -1013,6 +1014,12 @@
       byId("overview-p3-harm").textContent = formatHarm(containment ?? (before && after !== null ? (before - after) / before : null));
       const frictionRate = typeof friction === "object" ? extractHarmValue(friction, ["benign_high_impact_friction_rate", "friction_rate", "rate"]) : Number(friction);
       byId("overview-p3-friction").textContent = formatHarm(frictionRate);
+      const approval = policy.approval_evaluation;
+      byId("approval-evaluation").textContent = approval?.scenario_count
+        ? (state.language === "zh"
+          ? `P3.1 模拟评估（${approval.scenario_count} 个手工场景）：相同正常请求的复核摩擦 ${percent(approval.baseline_benign_friction, 2)} → ${percent(approval.repeat_benign_friction, 2)}；机械批准时有害操作成功率 ${percent(approval.baseline_harmful_success, 2)} → ${percent(approval.rubber_stamp_harmful_success, 2)}。`
+          : `P3.1 simulation (${approval.scenario_count} hand-authored scenarios): review friction for identical benign requests ${percent(approval.baseline_benign_friction, 2)} → ${percent(approval.repeat_benign_friction, 2)}; harmful action success under rubber-stamp approval ${percent(approval.baseline_harmful_success, 2)} → ${percent(approval.rubber_stamp_harmful_success, 2)}.`)
+        : "";
 
       const stats = byId("policy-stats");
       stats.replaceChildren();
