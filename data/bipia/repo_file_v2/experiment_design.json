@@ -1,0 +1,59 @@
+{
+  "status": "EXPLORATORY_DEVELOPMENT_COMPLETE_FINAL_CONFIRMATION_PENDING",
+  "created": "2026-09-29",
+  "research_question": "Can generic comment/paragraph scoring and repository-specific training augmentation improve external recall while preserving benign document-level FPR?",
+  "decision_basis": "results/bipia/repo_file_review_v1/summary.json",
+  "base_model": "results/bipia/repo_file_v1/model.joblib",
+  "base_model_sha256": "989cd87b5a511f22e9b183400a2bc8ab1671c433fc19d941e1edc409df8cce55",
+  "candidates": [
+    {"id":"A_full_frozen","weights":"v1 frozen","input":"full document"},
+    {"id":"B_blocks_frozen","weights":"v1 frozen","input":"max(full document, generic comment/paragraph blocks)"},
+    {"id":"C_full_augmented","weights":"same v1 architecture refit using original training split plus new training-only examples","input":"full document"},
+    {"id":"D_blocks_augmented","weights":"same fitted weights as C","input":"max(full document, generic comment/paragraph blocks)"}
+  ],
+  "segmentation_policy": {
+    "generic_only": true,
+    "candidate_units": ["contiguous line comments", "Markdown/RST paragraphs", "Markdown hidden comments"],
+    "no_benchmark_prefix_or_attack_goal_access": true,
+    "implementation_and_unit_tests_required_before_validation": true,
+    "implementation": "s6/prompt_injection/repo_file_blocks.py",
+    "targeted_tests_passed": 8,
+    "development_diagnostic": "results/bipia/repo_blocks_v2/summary.json",
+    "document_level_aggregation": "maximum score",
+    "warning": "Multiple blocks change score distribution and FPR; calibrate each candidate at document level."
+  },
+  "augmentation": {
+    "attack_priorities": ["forged maintainer approval", "unsafe prerequisite for legitimate task", "test removal or bypass", "unrequested command or file modification"],
+    "benign_priorities": ["test and CI workflow", "installation commands", "security guidance", "contribution policy", "maintenance and compatibility workarounds"],
+    "required_fields": ["sample_id", "content_sha256", "source_url_or_path", "source_revision", "license", "repository_id", "template_family", "derivation_parent", "label", "annotation_method", "split", "split_group"],
+    "split_rule": "Connected groups sharing repository/source family, attack template family, derivation parent, or near duplicate text must stay in one split.",
+    "synthetic_examples": "Explicitly tag authoring/generation method; never describe generated cases as independently observed real attacks.",
+    "maintainer_30_policy": "Development diagnostics only; all 30 confirmed benign by single user using Chinese translations, with extra context for sample 12; not an independent confirmation set.",
+    "candidate_batch1": "data/bipia/repo_file_v2/candidate_batch1.json",
+    "candidate_batch1_status": "24 AI-authored synthetic examples reviewed by project user; used only as training augmentation in exploratory development.",
+    "candidate_batch2": "data/bipia/repo_file_v2/candidate_batch2.json",
+    "candidate_batch2_status": "12 AI-authored examples reviewed by project user; sample 8 disagreement resolved as benign. Shared families grouped with batch1.",
+    "human_review_record": "data/bipia/repo_file_v2/human_review_completion.json"
+  },
+  "validation": {
+    "threshold_policy": "For each candidate maximize recall subject to document-level confirmed-benign FPR <= 0.05; ties prefer lower FPR then higher threshold.",
+    "must_include_repository_style_benign": true,
+    "no_test_threshold_selection": true,
+    "candidate_selection": "Prefer higher recall at the constraint; also report per-source FPR and per-family recall, retaining all four candidates in the comparison.",
+    "minimum_counts": "To be fixed from source availability before fitting; always report exact counts and uncertainty, no significance claim from small samples."
+  },
+  "confirmation": {
+    "requires_new_unseen_source": true,
+    "source_manifest": null,
+    "forbidden_as_fresh_confirmation": ["v1 internal test", "RepoGuardBench previously scored subset", "AgentInjectionBench previously scored file_content subset", "prompt-injection-benchmark previously scored subset", "30 maintainer excerpts reviewed on 2026-09-29"],
+    "evaluate_once_after_freezing_model_threshold_and_manifest": true,
+    "metrics": ["TP", "FN", "FP", "TN", "accuracy", "precision", "recall", "FPR", "per-source metrics", "per-family metrics"]
+  },
+  "training_ready": false,
+  "training_ready_scope": "False applies to the full independent-confirmation protocol, not the completed separate development experiment.",
+  "development_fit_completed": true,
+  "development_protocol": "data/bipia/repo_file_v2/development_protocol.json",
+  "development_result": "results/bipia/repo_file_v2_development/findings_ZH.md",
+  "remaining_dependencies": ["Acquire independent source confirmation data", "Broaden repository-specific attack and benign family coverage before a new experiment", "Add and evaluate explicit task scope separately from tool whitelist if authorization work is continued"],
+  "deployment": "offline_research_only"
+}

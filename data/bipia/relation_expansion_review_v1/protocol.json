@@ -1,0 +1,31 @@
+{
+  "protected_sha256": {
+    "data/bipia/repository_scope_human_review_v1/review.json": "bfbd20bd10dc15ae2e78b584b6f02afc942bcdb811474e9d0f3d8bc90742a7e4",
+    "data/bipia/repository_scope_review_v1/inputs.json": "796e0ea5694450584fdce5cb241805cb316bec5330e02f0a1861b96b2ab41d95",
+    "data/bipia/repository_scope_review_v1/assistant_proposals.json": "e1f95e6d9da433d0af3bfa598c9348e2d060c6b9f7e590837ff1395d8b35279e",
+    "data\\bipia\\repository_scope_human_review_v1\\field_confirmation.json": "61f2450c43d99c0f3862f3e1077a081b36db6419d5b5a5a2586af807ea43e5b3",
+    "s6\\prompt_injection\\finalize_repository_scope_review.py": "49b510dfdbcb8e839b2e51ca304846239b088234dcac7b136206dda823a41c03",
+    "s6/prompt_injection/relation_contract_v1.py": "95ca2c0ae4168650b9c4167dac7bf6a61a5d8c9da23bfd59acb7501546247205",
+    "s6/prompt_injection/relation_seed_conversion_v1.py": "e1644a93b865125b2e86bf19e36c1c65cdd5fd8d8d445af94f52195a2fef0773",
+    "data\\bipia\\repository_scope_approved_v1\\annotations.json": "0ed732c0847e7261c570ebed39648809f1a27f34e15a29661e2963b4f01e83a7",
+    "s6\\prompt_injection\\probe_relation_contract_v1.py": "3d7ca526ff12f38ff0c9d6e52787cedd9ff93e20177b0581c33c7ed82cf3c24d",
+    "data\\bipia\\relation_seed_conversion_v1\\train_seed_targets.json": "632f3dddebe7116c07d8cdb15838e6748fcd0bd61b8e5d7a4aae52be0f3917d9",
+    "s6\\prompt_injection\\relation_expansion_review_v1.py": "ac075aa53c0cc10c15361880fa70ff8cd757d34f930b75eec83220e91b054f32"
+  },
+  "prior_prompt_protocol_sha256": "0636a4937e7304143f483a6fd2c16f4537a908128c84018df160a6eb1ce53b0d",
+  "plan": "6 fresh groups x3 cases; 2/2/2 groups train/validation/test; frozen hash-based allocation, pending human labels. No scoring before approval.",
+  "training_candidate": "Small exploratory 4B LoRA after conversion QA and GPU smoke; no claims of large-scale generalization from this seed-size set",
+  "source_limits": "Same assistant author and synthetic construction; new groups, not natural-source independence",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

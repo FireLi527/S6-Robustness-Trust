@@ -1,0 +1,26 @@
+{
+  "inputs_sha256": {
+    "data/bipia/relation_scale_training_v1/samples.json": "a9d647f03e9cc9086b5a3a02936263ed68ede654f62061a1aea27cecc4e3a012",
+    "results/bipia/relation_scale_evaluation_v1/predictions.json": "cc8a6b45a5ecf0fe983c8598426ae365e913b38f228b5e8420235102f9775b16"
+  },
+  "code_sha256": {
+    "relation_annotation_audit_v1.py": "99d9e7c759e9ec7d1825ff9c25d97ab7f3708ad9bdb69713af488ff6ba47640f",
+    "audit_relation_annotation_v1.py": "121dc5e342de1a599d24ab58f846fa59655be55beef6c441db2c15a0254dae3e"
+  },
+  "inference": false,
+  "training": false,
+  "denominator": "per arm and variant, deduplicated side inputs: 6 tasks + 18 contents",
+  "heuristics": "literal containment ladder; evidence field excluded from coverage",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

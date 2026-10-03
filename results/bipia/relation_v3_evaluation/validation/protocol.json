@@ -1,0 +1,51 @@
+{
+  "phase": "validation",
+  "arms": [
+    "base_zero_v3",
+    "base_fewshot_v3",
+    "small_8_v3",
+    "medium_16_v3",
+    "large_28_v3"
+  ],
+  "code_sha256": {
+    "evaluate_relation_v3.py": "6be01b8a902979a23952e113b7b18cabba1db1d33ff0f70d8b8820c4a761c8e5",
+    "relation_sft_v3_io.py": "1f96bfd9e810c4e5c0c6f3785ae4b7f750663a5b8d4840894324b1c46213d334",
+    "relation_contract_v3.py": "35ce9aae3cf573eec0f99a549058a8bf5cd14b894340b0ce0b85a112ae32cd27",
+    "relation_sft_v2_io.py": "7d7555f648bb8cddfcec8abc4d2342d8160e91a0f92e71274df5aecdd3bfa60a",
+    "relation_contract_v2.py": "ece072613d0f913af47dda32f4cdc55fa9909f09c802d8a8b6a70b60640b1cc2"
+  },
+  "rows": 36,
+  "training_protocol_sha256": "ee11a4ab95dd5eb924b0403a81b795c03988519098198c388bb0b926d5c7e806",
+  "plan": {
+    "development_validation": {
+      "status": "Exposed in v1; diagnostic only, never an independent claim",
+      "arms": "base_zero_v3, base_fewshot_v3 (training example scale-seed-dev2-01, v3 reference), every trained v3 adapter",
+      "decoding": "v3 prompt, greedy, max 1600 new tokens, 4096 total, BF16 autocast, no grammar/repair/retry/truncation",
+      "scoring": "relation_contract_v3 strict units; per arm deduplicated 6 tasks + 18 contents; core and layout separate"
+    },
+    "sealed_holdout": {
+      "opening_gate": "Only after development evaluation and its verification are COMPLETE; opened once; never rerun",
+      "arms": "same v3 arms plus v1 large_28 adapter under its frozen v2 prompt (cross-version reference)",
+      "primary": "core content exact /18, task exact /6, both sides exact /18, strict unit precision/recall",
+      "secondary": "claims-excluded unit precision/recall for v1-vs-v3, contract validity, attribution categories",
+      "v1_adaptation": "v2-valid output gets claims=[]; v1 cannot earn claims units, so claims-excluded metrics are reported",
+      "near_domain_groups": [
+        "object_lifecycle",
+        "remote_branch_publish"
+      ],
+      "after_opening": "No retraining, prompt change or selection on holdout results; any new method needs a new version and new holdout"
+    }
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

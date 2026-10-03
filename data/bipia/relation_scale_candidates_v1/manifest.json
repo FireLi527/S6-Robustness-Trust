@@ -1,0 +1,19 @@
+{
+  "candidate_pairs": 204,
+  "semantic_cores": 102,
+  "groups": 34,
+  "approved_seed_cores": 24,
+  "pending_new_cores": 78,
+  "layout_variants": 102,
+  "individually_reviewed_variants": 0,
+  "ready_for_training": 0,
+  "reserved_unwritten_pairs": 36,
+  "inputs_sha256": "0eed5afabe14f34519ad11ecbf65b2f397989b45d81fa3f59d68cbd71895cd39",
+  "proposals_sha256": "608eeed6bc87292692d3d21ef88f04486dd8f49571185786ed9086dbb9ef507a",
+  "review_sha256": {
+    "review_01_ZH.md": "e5d41fa872bf6a854cfef8ada435189a432834d12c89248540a2988dad02b59e",
+    "review_02_ZH.md": "6a42e1531b507d4931e849409ccb0babb80b792f52ebc282714de2b58d45d717",
+    "review_03_ZH.md": "f9d9bc23c3234ca2700f4fae48a7032df9cc86afcbe8bc352567c11059e68daf",
+    "review_04_ZH.md": "b259ae4ad8bd25a227ea1b949636be6ac96a82d72580e002bb91f595d081cbc0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "samples_sha256": "a9d647f03e9cc9086b5a3a02936263ed68ede654f62061a1aea27cecc4e3a012",
+  "core_count": 102,
+  "train_pairs": 168,
+  "validation_pairs": 36,
+  "independent_test_pairs": 0,
+  "subsets": {
+    "small_8": {
+      "groups": 8,
+      "pairs": 48,
+      "semantic_cores": 24,
+      "unique_training_sides": 56
+    },
+    "medium_16": {
+      "groups": 16,
+      "pairs": 96,
+      "semantic_cores": 48,
+      "unique_training_sides": 112
+    },
+    "large_28": {
+      "groups": 28,
+      "pairs": 168,
+      "semantic_cores": 84,
+      "unique_training_sides": 196
+    }
+  },
+  "training_started": false,
+  "machine_fields_human_reviewed": false
+}

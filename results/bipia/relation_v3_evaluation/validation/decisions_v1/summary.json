@@ -1,0 +1,371 @@
+{
+  "gold_extraction": {
+    "core": {
+      "n": 18,
+      "correct": 15,
+      "invalid": 0,
+      "risk_recall": {
+        "hit": 5,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 2,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 2,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 6,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->NORMAL": 4,
+        "NORMAL->RISK": 2,
+        "RISK->NORMAL": 1,
+        "RISK->RISK": 5,
+        "UNKNOWN->UNKNOWN": 6
+      }
+    },
+    "layout": {
+      "n": 18,
+      "correct": 15,
+      "invalid": 0,
+      "risk_recall": {
+        "hit": 5,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 2,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 2,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 6,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->NORMAL": 4,
+        "NORMAL->RISK": 2,
+        "RISK->NORMAL": 1,
+        "RISK->RISK": 5,
+        "UNKNOWN->UNKNOWN": 6
+      }
+    }
+  },
+  "base_zero_v3": {
+    "core": {
+      "n": 18,
+      "correct": 9,
+      "invalid": 4,
+      "risk_recall": {
+        "hit": 3,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 1,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 2,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 2,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->INVALID": 1,
+        "NORMAL->NORMAL": 4,
+        "NORMAL->RISK": 1,
+        "RISK->INVALID": 1,
+        "RISK->NORMAL": 2,
+        "RISK->RISK": 3,
+        "UNKNOWN->INVALID": 2,
+        "UNKNOWN->NORMAL": 1,
+        "UNKNOWN->RISK": 1,
+        "UNKNOWN->UNKNOWN": 2
+      }
+    },
+    "layout": {
+      "n": 18,
+      "correct": 6,
+      "invalid": 7,
+      "risk_recall": {
+        "hit": 2,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 1,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 4,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 2,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->INVALID": 3,
+        "NORMAL->NORMAL": 2,
+        "NORMAL->RISK": 1,
+        "RISK->INVALID": 2,
+        "RISK->NORMAL": 2,
+        "RISK->RISK": 2,
+        "UNKNOWN->INVALID": 2,
+        "UNKNOWN->NORMAL": 2,
+        "UNKNOWN->UNKNOWN": 2
+      }
+    }
+  },
+  "base_fewshot_v3": {
+    "core": {
+      "n": 18,
+      "correct": 5,
+      "invalid": 11,
+      "risk_recall": {
+        "hit": 1,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 1,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 3,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 1,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->INVALID": 2,
+        "NORMAL->NORMAL": 3,
+        "NORMAL->RISK": 1,
+        "RISK->INVALID": 5,
+        "RISK->RISK": 1,
+        "UNKNOWN->INVALID": 4,
+        "UNKNOWN->NORMAL": 1,
+        "UNKNOWN->UNKNOWN": 1
+      }
+    },
+    "layout": {
+      "n": 18,
+      "correct": 5,
+      "invalid": 10,
+      "risk_recall": {
+        "hit": 1,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 0,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 3,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 1,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->INVALID": 3,
+        "NORMAL->NORMAL": 3,
+        "RISK->INVALID": 4,
+        "RISK->NORMAL": 1,
+        "RISK->RISK": 1,
+        "UNKNOWN->INVALID": 3,
+        "UNKNOWN->NORMAL": 2,
+        "UNKNOWN->UNKNOWN": 1
+      }
+    }
+  },
+  "small_8_v3": {
+    "core": {
+      "n": 18,
+      "correct": 14,
+      "invalid": 1,
+      "risk_recall": {
+        "hit": 4,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 1,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 1,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 5,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->NORMAL": 5,
+        "NORMAL->RISK": 1,
+        "RISK->NORMAL": 2,
+        "RISK->RISK": 4,
+        "UNKNOWN->INVALID": 1,
+        "UNKNOWN->UNKNOWN": 5
+      }
+    },
+    "layout": {
+      "n": 18,
+      "correct": 12,
+      "invalid": 3,
+      "risk_recall": {
+        "hit": 3,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 1,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 2,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 5,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->INVALID": 1,
+        "NORMAL->NORMAL": 4,
+        "NORMAL->RISK": 1,
+        "RISK->INVALID": 1,
+        "RISK->NORMAL": 2,
+        "RISK->RISK": 3,
+        "UNKNOWN->INVALID": 1,
+        "UNKNOWN->UNKNOWN": 5
+      }
+    }
+  },
+  "medium_16_v3": {
+    "core": {
+      "n": 18,
+      "correct": 12,
+      "invalid": 1,
+      "risk_recall": {
+        "hit": 2,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 2,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 2,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 6,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->NORMAL": 4,
+        "NORMAL->RISK": 2,
+        "RISK->INVALID": 1,
+        "RISK->NORMAL": 3,
+        "RISK->RISK": 2,
+        "UNKNOWN->UNKNOWN": 6
+      }
+    },
+    "layout": {
+      "n": 18,
+      "correct": 12,
+      "invalid": 1,
+      "risk_recall": {
+        "hit": 2,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 2,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 2,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 6,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->NORMAL": 4,
+        "NORMAL->RISK": 2,
+        "RISK->INVALID": 1,
+        "RISK->NORMAL": 3,
+        "RISK->RISK": 2,
+        "UNKNOWN->UNKNOWN": 6
+      }
+    }
+  },
+  "large_28_v3": {
+    "core": {
+      "n": 18,
+      "correct": 13,
+      "invalid": 0,
+      "risk_recall": {
+        "hit": 4,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 3,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 3,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 6,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->NORMAL": 3,
+        "NORMAL->RISK": 3,
+        "RISK->NORMAL": 2,
+        "RISK->RISK": 4,
+        "UNKNOWN->UNKNOWN": 6
+      }
+    },
+    "layout": {
+      "n": 18,
+      "correct": 14,
+      "invalid": 0,
+      "risk_recall": {
+        "hit": 5,
+        "n": 6
+      },
+      "normal_flagged_risk": {
+        "hit": 3,
+        "n": 6
+      },
+      "normal_not_allowed": {
+        "hit": 3,
+        "n": 6
+      },
+      "unknown_recall": {
+        "hit": 6,
+        "n": 6
+      },
+      "confusion": {
+        "NORMAL->NORMAL": 3,
+        "NORMAL->RISK": 3,
+        "RISK->NORMAL": 1,
+        "RISK->RISK": 5,
+        "UNKNOWN->UNKNOWN": 6
+      }
+    }
+  }
+}

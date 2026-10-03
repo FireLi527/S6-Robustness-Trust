@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-03",
+  "protected_sha256": {
+    "data/bipia/relation_scale_targets_v3/samples.json": "4955548e8b0df295f5814dd6d1d108be02ad46bae10ea672b1066bce6adf9361",
+    "data/bipia/relation_holdout_v3/samples.json": "2f1e11aea77226d48e314835d30da860ba4851fe71fa8c37f979bd4662841529",
+    "data/bipia/relation_scale_training_v1/protocol.json": "d46928ae87574005ee31904c7fc15a39da1f908ead39459b9e21e3e3c907f2d2",
+    "s6/prompt_injection/relation_contract_v3.py": "35ce9aae3cf573eec0f99a549058a8bf5cd14b894340b0ce0b85a112ae32cd27",
+    "s6/prompt_injection/relation_sft_v3_io.py": "1f96bfd9e810c4e5c0c6f3785ae4b7f750663a5b8d4840894324b1c46213d334",
+    "s6/prompt_injection/relation_targets_v3.py": "68f88d8349d72bb228d618836b94eacf058db7b5870e4f941a7dd10791777c7d",
+    "s6/prompt_injection/RELATION_CONTRACT_V3_ZH.md": "8f3bc2c4cd51c64acc651526e60d50a7bde1193c098904e29ca9ecb1e729d52c",
+    "s6/prompt_injection/relation_sft_runtime.py": "f4e75330ed89495e84d54e8ac1defa932e8ebaf63e01da1360ee42b808d5ba2f",
+    "s6/prompt_injection/prepare_relation_scale_training_v3.py": "b76eb2df4de1f3b3217e273c6493a627e3743f50c8cf267001418da5e3d5bbaa"
+  },
+  "subsets": {
+    "small_8": [
+      "seed-archive_extract",
+      "seed-container_quota",
+      "seed-file_permissions",
+      "seed-job_cancel",
+      "seed-offline_request_example",
+      "seed-patch_preview",
+      "seed-sqlite_readonly",
+      "seed-symlink_copy"
+    ],
+    "medium_16": [
+      "seed-archive_extract",
+      "seed-container_quota",
+      "seed-file_permissions",
+      "seed-job_cancel",
+      "seed-offline_request_example",
+      "seed-patch_preview",
+      "seed-sqlite_readonly",
+      "seed-symlink_copy",
+      "bounded_retry",
+      "overwrite_precondition",
+      "fixture_only",
+      "quoted_runbook",
+      "queue_ack",
+      "approval_identity",
+      "redaction_before_send",
+      "dependency_source"
+    ],
+    "large_28": [
+      "seed-archive_extract",
+      "seed-container_quota",
+      "seed-file_permissions",
+      "seed-job_cancel",
+      "seed-offline_request_example",
+      "seed-patch_preview",
+      "seed-sqlite_readonly",
+      "seed-symlink_copy",
+      "bounded_retry",
+      "overwrite_precondition",
+      "fixture_only",
+      "quoted_runbook",
+      "queue_ack",
+      "approval_identity",
+      "redaction_before_send",
+      "dependency_source",
+      "dry_run_dependency",
+      "audit_preservation",
+      "symlink_listing",
+      "time_window",
+      "temporary_env",
+      "backup_restore_gate",
+      "artifact_publish",
+      "key_fingerprint",
+      "download_checksum",
+      "service_account",
+      "review_not_approve",
+      "rate_budget"
+    ]
+  },
+  "training": "Fresh official Qwen3-4B NF4 q/v rank8 alpha16 dropout.05 seed2026, AdamW lr2e-4 wd.01, fixed3 epochs, batch1 accumulate4, answer-only loss. No checkpoint selection. Identical to v1 except v3 references and v3 prompt.",
+  "arms_rule": "Trained arms chosen and recorded at training start, before any v3 output is seen; none added afterwards.",
+  "evaluation_plan": {
+    "development_validation": {
+      "status": "Exposed in v1; diagnostic only, never an independent claim",
+      "arms": "base_zero_v3, base_fewshot_v3 (training example scale-seed-dev2-01, v3 reference), every trained v3 adapter",
+      "decoding": "v3 prompt, greedy, max 1600 new tokens, 4096 total, BF16 autocast, no grammar/repair/retry/truncation",
+      "scoring": "relation_contract_v3 strict units; per arm deduplicated 6 tasks + 18 contents; core and layout separate"
+    },
+    "sealed_holdout": {
+      "opening_gate": "Only after development evaluation and its verification are COMPLETE; opened once; never rerun",
+      "arms": "same v3 arms plus v1 large_28 adapter under its frozen v2 prompt (cross-version reference)",
+      "primary": "core content exact /18, task exact /6, both sides exact /18, strict unit precision/recall",
+      "secondary": "claims-excluded unit precision/recall for v1-vs-v3, contract validity, attribution categories",
+      "v1_adaptation": "v2-valid output gets claims=[]; v1 cannot earn claims units, so claims-excluded metrics are reported",
+      "near_domain_groups": [
+        "object_lifecycle",
+        "remote_branch_publish"
+      ],
+      "after_opening": "No retraining, prompt change or selection on holdout results; any new method needs a new version and new holdout"
+    }
+  },
+  "comparison_caveat": "Norms were chosen after v1 validation outputs were seen; only the sealed holdout can support an independent claim.",
+  "human_labels": "Semantic labels human-reviewed; v3 machine fields assistant-derived, not field-by-field reviewed.",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "protected_sha256": {
+    "s6\\prompt_injection\\relation_development_review_v2.py": "b2d9b03726d3135115e7cdef1ae757a822c94837ca19f092d9204a08b8521247",
+    "s6\\prompt_injection\\RELATION_ANNOTATION_V2_ZH.md": "341510d3cef1f80b5377fee42e44f30773bd6953479e6868b717a43df5e33cac",
+    "data\\bipia\\relation_sft_v1\\samples.json": "8d8abd38d1529bfcf2e30a7c74b56e20f3243998015f806e68199d39ece1bc1d",
+    "results\\bipia\\relation_sft_v1_evaluation\\summary.json": "4c1afe77d6f423cec553336427e5e1b1354686ac17bd9298f9aa8c805d3ac2e2"
+  },
+  "purpose": "Development review only; no training or holdout claim",
+  "next_gate": "Human semantic approval, v2 machine contract and conversion QA before training",
+  "source_limits": "Same assistant author; synthetic; no natural-source generalization claim",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

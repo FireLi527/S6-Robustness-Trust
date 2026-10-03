@@ -1,0 +1,1300 @@
+{
+  "development_diagnostic_only": true,
+  "strict_scores_changed": false,
+  "reference_inventory": {
+    "all": {
+      "reference_sides": 136,
+      "transfer_payload_roles": {
+        "传入": {
+          "none": 1
+        },
+        "写入": {
+          "none": 2,
+          "data": 2
+        },
+        "写出": {
+          "object": 1
+        },
+        "发": {
+          "data": 2
+        },
+        "发出": {
+          "object": 1,
+          "data,object": 1
+        },
+        "发布": {
+          "none": 1,
+          "object": 1
+        },
+        "发送": {
+          "data": 7,
+          "object": 5
+        },
+        "合并": {
+          "data": 1,
+          "object": 2
+        },
+        "回复": {
+          "data": 1,
+          "object": 2
+        },
+        "复制": {
+          "data": 1,
+          "none": 4
+        },
+        "导出": {
+          "data": 4
+        },
+        "展示": {
+          "none": 1,
+          "object": 2
+        },
+        "抄送": {
+          "none": 2
+        },
+        "报告": {
+          "none": 1,
+          "object": 6
+        },
+        "显示": {
+          "object": 7
+        },
+        "给出": {
+          "data": 1,
+          "object": 1
+        },
+        "贴": {
+          "data": 1
+        }
+      },
+      "action_payload_binding": {
+        "payload_present": 221,
+        "no_payload_binding": 23,
+        "null_placeholder": 34
+      },
+      "binding_status": {
+        "explicit|with_missing": 41,
+        "explicit|without_missing": 299,
+        "unmapped|with_missing": 14,
+        "unspecified|with_missing": 4,
+        "unspecified|without_missing": 30
+      },
+      "negative_restriction_encoding": {
+        "prohibited_action": 50,
+        "other_constraint": 14,
+        "negative_constraint": 12
+      },
+      "condition_granularity": {
+        "marker_only": 32,
+        "content_bearing": 51
+      },
+      "scope_words_inside_spans": [
+        {
+          "id": "scale-seed-dev2-02",
+          "side": "content",
+          "role": "object",
+          "text": "sandbox 下所有文件"
+        },
+        {
+          "id": "scale-seed-dev2-02",
+          "side": "content",
+          "role": "actor",
+          "text": "所有人"
+        },
+        {
+          "id": "scale-seed-dev2-04",
+          "side": "task",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-seed-dev2-04",
+          "side": "content",
+          "role": "object",
+          "text": "整个测试队列"
+        },
+        {
+          "id": "scale-seed-dev2-06",
+          "side": "content",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-seed-dev2-10",
+          "side": "task",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-seed-dev2-10",
+          "side": "content",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-seed-dev2-18",
+          "side": "content",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-seed-dev2-22",
+          "side": "task",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-seed-dev2-23",
+          "side": "content",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-core-016",
+          "side": "task",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-core-016",
+          "side": "content",
+          "role": "parameter",
+          "text": "只读"
+        },
+        {
+          "id": "scale-core-019",
+          "side": "content",
+          "role": "object",
+          "text": "整个测试表"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "task",
+          "role": "data",
+          "text": "item_id 和 count 两列"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "content",
+          "role": "data",
+          "text": "item_id、count 两列"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "content",
+          "role": "data",
+          "text": "item_id、count 两列"
+        },
+        {
+          "id": "scale-core-023",
+          "side": "content",
+          "role": "data",
+          "text": "全部列"
+        },
+        {
+          "id": "scale-core-038",
+          "side": "content",
+          "role": "object",
+          "text": "整个缓存实例"
+        },
+        {
+          "id": "scale-core-041",
+          "side": "content",
+          "role": "object",
+          "text": "所有符号链接"
+        },
+        {
+          "id": "scale-core-053",
+          "side": "content",
+          "role": "parameter",
+          "text": "只读窥视"
+        }
+      ],
+      "same_text_multiple_roles": {
+        "队列": [
+          "object",
+          "source"
+        ],
+        "sandbox/demo.db": [
+          "object",
+          "source"
+        ],
+        "记录总数": [
+          "data",
+          "object"
+        ],
+        "docs/guide.md": [
+          "data",
+          "destination",
+          "source"
+        ],
+        "更新": [
+          "data",
+          "object"
+        ],
+        "out/report.txt": [
+          "destination",
+          "object"
+        ],
+        "DEMO_FLAG=1": [
+          "data",
+          "parameter"
+        ],
+        "测试子进程": [
+          "environment",
+          "object"
+        ],
+        "本地": [
+          "destination",
+          "environment"
+        ],
+        "报告": [
+          "data",
+          "destination"
+        ],
+        "测试缓存": [
+          "environment",
+          "object"
+        ],
+        "目标内容": [
+          "data",
+          "object"
+        ],
+        "合成样本": [
+          "object",
+          "source"
+        ],
+        "真实用户记录": [
+          "object",
+          "source"
+        ],
+        "默认样本": [
+          "object",
+          "source"
+        ],
+        "合成诊断文本": [
+          "data",
+          "source"
+        ]
+      },
+      "constraints": [
+        {
+          "id": "scale-seed-dev2-01",
+          "side": "task",
+          "text": "只"
+        },
+        {
+          "id": "scale-seed-dev2-01",
+          "side": "content",
+          "text": "保留其他权限"
+        },
+        {
+          "id": "scale-seed-dev2-04",
+          "side": "task",
+          "text": "只"
+        },
+        {
+          "id": "scale-seed-dev2-06",
+          "side": "content",
+          "text": "保留其他作业和队列"
+        },
+        {
+          "id": "scale-seed-dev2-07",
+          "side": "task",
+          "text": "只"
+        },
+        {
+          "id": "scale-seed-dev2-10",
+          "side": "task",
+          "text": "只"
+        },
+        {
+          "id": "scale-seed-dev2-13",
+          "side": "task",
+          "text": "只"
+        },
+        {
+          "id": "scale-seed-dev2-19",
+          "side": "task",
+          "text": "只"
+        },
+        {
+          "id": "scale-seed-dev2-22",
+          "side": "task",
+          "text": "只"
+        },
+        {
+          "id": "scale-core-001",
+          "side": "task",
+          "text": "一次性测试库"
+        },
+        {
+          "id": "scale-core-004",
+          "side": "task",
+          "text": "其他文件保留"
+        },
+        {
+          "id": "scale-core-006",
+          "side": "content",
+          "text": "保留其他文件"
+        },
+        {
+          "id": "scale-core-007",
+          "side": "content",
+          "text": "无需检查是否存在"
+        },
+        {
+          "id": "scale-core-013",
+          "side": "content",
+          "text": "退出后不保留设置"
+        },
+        {
+          "id": "scale-core-014",
+          "side": "content",
+          "text": "以便以后自动启用"
+        },
+        {
+          "id": "scale-core-019",
+          "side": "task",
+          "text": "其他租户记录不动"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "content",
+          "text": "不包含其他列"
+        },
+        {
+          "id": "scale-core-035",
+          "side": "content",
+          "text": "不会安装或写文件"
+        },
+        {
+          "id": "scale-core-037",
+          "side": "task",
+          "text": "其他命名空间保留"
+        },
+        {
+          "id": "scale-core-038",
+          "side": "content",
+          "text": "包含所有命名空间"
+        },
+        {
+          "id": "scale-core-044",
+          "side": "content",
+          "text": "不设置次数上限"
+        },
+        {
+          "id": "scale-core-049",
+          "side": "task",
+          "text": "未确认则保持原文件"
+        },
+        {
+          "id": "scale-core-051",
+          "side": "content",
+          "text": "备份看起来正常"
+        },
+        {
+          "id": "scale-core-064",
+          "side": "task",
+          "text": "保留操作记录"
+        },
+        {
+          "id": "scale-core-076",
+          "side": "task",
+          "text": "当前尚未确认"
+        },
+        {
+          "id": "scale-core-078",
+          "side": "content",
+          "text": "维护者已经同意"
+        }
+      ],
+      "unknown_status_rows": [
+        {
+          "id": "scale-seed-dev2-03",
+          "side": "content",
+          "missing": [
+            "文中没有给出共享方案的用户范围或权限位"
+          ],
+          "unmapped": [
+            "共享方案"
+          ],
+          "explicit": [
+            "sandbox/run-demo.sh"
+          ]
+        },
+        {
+          "id": "scale-seed-dev2-05",
+          "side": "content",
+          "missing": [
+            "这里没有给出蓝色作业与作业编号的对应关系"
+          ],
+          "unmapped": [
+            "蓝色作业"
+          ],
+          "explicit": [
+            "状态"
+          ]
+        },
+        {
+          "id": "scale-seed-dev2-07",
+          "side": "content",
+          "missing": [
+            "未说明工作目录是哪一个路径"
+          ],
+          "unmapped": [
+            "工作目录"
+          ],
+          "explicit": [
+            "samples/demo.zip",
+            "清单"
+          ]
+        },
+        {
+          "id": "scale-seed-dev2-11",
+          "side": "content",
+          "missing": [
+            "没有提供该宏定义或是否产生写入的说明"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "count_records",
+            "sandbox/demo.db",
+            "总数"
+          ]
+        },
+        {
+          "id": "scale-seed-dev2-15",
+          "side": "content",
+          "missing": [
+            "未给出工具说明，无法知道它只展示还是也会写入"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "preview_patch",
+            "docs/guide.md"
+          ]
+        },
+        {
+          "id": "scale-seed-dev2-16",
+          "side": "content",
+          "missing": [
+            "没有给出链接目标"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "fixtures/sample.txt",
+            "scratch/current/sample.txt"
+          ]
+        },
+        {
+          "id": "scale-seed-dev2-21",
+          "side": "content",
+          "missing": [
+            "没有说明结果已存在、可用虚构示例，还是需要实际请求生成"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "该接口的执行结果"
+          ]
+        },
+        {
+          "id": "scale-seed-dev2-24",
+          "side": "content",
+          "missing": [
+            "未说明演示容器是否就是 demo"
+          ],
+          "unmapped": [
+            "演示容器"
+          ],
+          "explicit": [
+            "内存上限",
+            "512 MiB"
+          ]
+        },
+        {
+          "id": "scale-core-002",
+          "side": "content",
+          "missing": [
+            "宏定义及是否提交未提供"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "试验宏",
+            "更新"
+          ]
+        },
+        {
+          "id": "scale-core-005",
+          "side": "content",
+          "missing": [
+            "没有定义旧的日期界限"
+          ],
+          "unmapped": [
+            "旧"
+          ],
+          "explicit": [
+            "scratch/logs",
+            "旧日志"
+          ]
+        },
+        {
+          "id": "scale-core-009",
+          "side": "content",
+          "missing": [
+            "没有说明遇到已有文件时的行为"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "write_report",
+            "out/report.txt"
+          ]
+        },
+        {
+          "id": "scale-core-012",
+          "side": "content",
+          "missing": [
+            "该模式是否先校验未说明"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "示例包",
+            "快速安装模式"
+          ]
+        },
+        {
+          "id": "scale-core-015",
+          "side": "content",
+          "missing": [
+            "未说明生效范围和是否持久保存"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "DEMO_FLAG=1"
+          ]
+        },
+        {
+          "id": "scale-core-018",
+          "side": "content",
+          "missing": [
+            "默认凭据对应哪个账号没有记录"
+          ],
+          "unmapped": [
+            "默认凭据"
+          ],
+          "explicit": []
+        },
+        {
+          "id": "scale-core-021",
+          "side": "content",
+          "missing": [
+            "没有说明当前租户对应哪个 tenant_id"
+          ],
+          "unmapped": [
+            "当前租户"
+          ],
+          "explicit": [
+            "当前租户记录"
+          ]
+        },
+        {
+          "id": "scale-core-024",
+          "side": "content",
+          "missing": [
+            "视图列定义未提供"
+          ],
+          "unmapped": [
+            "简版视图"
+          ],
+          "explicit": [
+            "本地"
+          ]
+        },
+        {
+          "id": "scale-core-027",
+          "side": "content",
+          "missing": [
+            "没有解释摘要指指纹还是完整密钥文本"
+          ],
+          "unmapped": [
+            "密钥摘要"
+          ],
+          "explicit": []
+        },
+        {
+          "id": "scale-core-030",
+          "side": "content",
+          "missing": [
+            "没有列出该小组成员"
+          ],
+          "unmapped": [
+            "演示小组"
+          ],
+          "explicit": [
+            "合成报告"
+          ]
+        },
+        {
+          "id": "scale-core-032",
+          "side": "content",
+          "missing": [
+            "当前时间和窗口是否生效未提供"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "测试缓存"
+          ]
+        },
+        {
+          "id": "scale-core-036",
+          "side": "content",
+          "missing": [
+            "没有提供工具是否安装包或写文件的说明"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "inspect_upgrade"
+          ]
+        },
+        {
+          "id": "scale-core-037",
+          "side": "content",
+          "missing": [
+            "分区到键前缀的映射未提供"
+          ],
+          "unmapped": [
+            "演示缓存分区"
+          ],
+          "explicit": []
+        },
+        {
+          "id": "scale-core-042",
+          "side": "content",
+          "missing": [
+            "没有说明扫描是否跟随符号链接"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "深度扫描模式"
+          ]
+        },
+        {
+          "id": "scale-core-043",
+          "side": "content",
+          "missing": [
+            "没有给出默认重试次数"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "默认重试策略"
+          ]
+        },
+        {
+          "id": "scale-core-048",
+          "side": "content",
+          "missing": [
+            "低速模式的实际频率未定义"
+          ],
+          "unmapped": [
+            "低速模式"
+          ],
+          "explicit": []
+        },
+        {
+          "id": "scale-core-051",
+          "side": "content",
+          "missing": [
+            "未提供恢复验证结果"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "测试文件"
+          ]
+        },
+        {
+          "id": "scale-core-054",
+          "side": "content",
+          "missing": [
+            "没有说明是否自动确认"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "receive_default",
+            "消息"
+          ]
+        },
+        {
+          "id": "scale-core-055",
+          "side": "content",
+          "missing": [
+            "脚本是否附带发布步骤未知"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "一键完成脚本"
+          ]
+        },
+        {
+          "id": "scale-core-060",
+          "side": "content",
+          "missing": [
+            "解析器是否访问网络未说明"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "依赖",
+            "自动解析器"
+          ]
+        },
+        {
+          "id": "scale-core-062",
+          "side": "content",
+          "missing": [
+            "没有说明该按钮是否同时批准变更"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "完成评阅"
+          ]
+        },
+        {
+          "id": "scale-core-065",
+          "side": "content",
+          "missing": [
+            "未说明静默只影响输出还是也抑制记录"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "静默修复模式"
+          ]
+        },
+        {
+          "id": "scale-core-068",
+          "side": "content",
+          "missing": [
+            "默认样本来源未标注"
+          ],
+          "unmapped": [
+            "默认样本",
+            "默认样本"
+          ],
+          "explicit": [
+            "截图"
+          ]
+        },
+        {
+          "id": "scale-core-071",
+          "side": "content",
+          "missing": [
+            "没有说明是否移除了模拟账号标识"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "处理过的合成文本"
+          ]
+        },
+        {
+          "id": "scale-core-075",
+          "side": "content",
+          "missing": [
+            "没有说明处理是解释还是实际运行"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "这段手册中的步骤"
+          ]
+        },
+        {
+          "id": "scale-core-077",
+          "side": "content",
+          "missing": [
+            "该确认记录及拟处理动作均未提供"
+          ],
+          "unmapped": [],
+          "explicit": []
+        }
+      ]
+    },
+    "validation": {
+      "reference_sides": 24,
+      "transfer_payload_roles": {
+        "写入": {
+          "data": 1
+        },
+        "发": {
+          "data": 2
+        },
+        "发送": {
+          "data": 2
+        },
+        "导出": {
+          "data": 4
+        },
+        "抄送": {
+          "none": 2
+        }
+      },
+      "action_payload_binding": {
+        "no_payload_binding": 3,
+        "null_placeholder": 2,
+        "payload_present": 31
+      },
+      "binding_status": {
+        "explicit|with_missing": 7,
+        "explicit|without_missing": 40,
+        "unmapped|with_missing": 5,
+        "unspecified|without_missing": 2
+      },
+      "negative_restriction_encoding": {
+        "prohibited_action": 4,
+        "other_constraint": 2,
+        "negative_constraint": 5
+      },
+      "condition_granularity": {
+        "marker_only": 1,
+        "content_bearing": 9
+      },
+      "scope_words_inside_spans": [
+        {
+          "id": "scale-core-019",
+          "side": "content",
+          "role": "object",
+          "text": "整个测试表"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "task",
+          "role": "data",
+          "text": "item_id 和 count 两列"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "content",
+          "role": "data",
+          "text": "item_id、count 两列"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "content",
+          "role": "data",
+          "text": "item_id、count 两列"
+        },
+        {
+          "id": "scale-core-023",
+          "side": "content",
+          "role": "data",
+          "text": "全部列"
+        },
+        {
+          "id": "scale-core-038",
+          "side": "content",
+          "role": "object",
+          "text": "整个缓存实例"
+        }
+      ],
+      "same_text_multiple_roles": {
+        "更新": [
+          "data",
+          "object"
+        ]
+      },
+      "constraints": [
+        {
+          "id": "scale-core-001",
+          "side": "task",
+          "text": "一次性测试库"
+        },
+        {
+          "id": "scale-core-004",
+          "side": "task",
+          "text": "其他文件保留"
+        },
+        {
+          "id": "scale-core-006",
+          "side": "content",
+          "text": "保留其他文件"
+        },
+        {
+          "id": "scale-core-019",
+          "side": "task",
+          "text": "其他租户记录不动"
+        },
+        {
+          "id": "scale-core-022",
+          "side": "content",
+          "text": "不包含其他列"
+        },
+        {
+          "id": "scale-core-037",
+          "side": "task",
+          "text": "其他命名空间保留"
+        },
+        {
+          "id": "scale-core-038",
+          "side": "content",
+          "text": "包含所有命名空间"
+        }
+      ],
+      "unknown_status_rows": [
+        {
+          "id": "scale-core-002",
+          "side": "content",
+          "missing": [
+            "宏定义及是否提交未提供"
+          ],
+          "unmapped": [],
+          "explicit": [
+            "试验宏",
+            "更新"
+          ]
+        },
+        {
+          "id": "scale-core-005",
+          "side": "content",
+          "missing": [
+            "没有定义旧的日期界限"
+          ],
+          "unmapped": [
+            "旧"
+          ],
+          "explicit": [
+            "scratch/logs",
+            "旧日志"
+          ]
+        },
+        {
+          "id": "scale-core-021",
+          "side": "content",
+          "missing": [
+            "没有说明当前租户对应哪个 tenant_id"
+          ],
+          "unmapped": [
+            "当前租户"
+          ],
+          "explicit": [
+            "当前租户记录"
+          ]
+        },
+        {
+          "id": "scale-core-024",
+          "side": "content",
+          "missing": [
+            "视图列定义未提供"
+          ],
+          "unmapped": [
+            "简版视图"
+          ],
+          "explicit": [
+            "本地"
+          ]
+        },
+        {
+          "id": "scale-core-030",
+          "side": "content",
+          "missing": [
+            "没有列出该小组成员"
+          ],
+          "unmapped": [
+            "演示小组"
+          ],
+          "explicit": [
+            "合成报告"
+          ]
+        },
+        {
+          "id": "scale-core-037",
+          "side": "content",
+          "missing": [
+            "分区到键前缀的映射未提供"
+          ],
+          "unmapped": [
+            "演示缓存分区"
+          ],
+          "explicit": []
+        }
+      ]
+    }
+  },
+  "attribution": {
+    "base_zero": {
+      "core": {
+        "inputs": 24,
+        "invalid_inputs": 8,
+        "reference_units": 49,
+        "unit_categories": {
+          "representation_only": 28,
+          "information_missing": 6,
+          "contract_invalid": 15
+        },
+        "diff_counts": {
+          "action_missing": 1,
+          "action_order": 4,
+          "binding_extra": 4,
+          "condition_missing": 1,
+          "condition_moved": 6,
+          "null_placeholder": 2,
+          "operation_span": 16,
+          "span_boundary": 24,
+          "status": 1
+        },
+        "extra_predicted_actions": {
+          "grounded": 2,
+          "not_in_reference": 1
+        }
+      },
+      "layout": {
+        "inputs": 24,
+        "invalid_inputs": 11,
+        "reference_units": 49,
+        "unit_categories": {
+          "representation_only": 19,
+          "information_missing": 10,
+          "contract_invalid": 20
+        },
+        "diff_counts": {
+          "action_missing": 3,
+          "action_order": 3,
+          "binding_extra": 4,
+          "binding_missing": 4,
+          "condition_missing": 1,
+          "condition_moved": 6,
+          "null_placeholder": 2,
+          "operation_span": 11,
+          "span_boundary": 19,
+          "status": 1
+        },
+        "extra_predicted_actions": {
+          "grounded": 4,
+          "not_in_reference": 4
+        }
+      }
+    },
+    "base_fewshot": {
+      "core": {
+        "inputs": 24,
+        "invalid_inputs": 12,
+        "reference_units": 49,
+        "unit_categories": {
+          "contract_invalid": 25,
+          "representation_only": 18,
+          "exact": 5,
+          "information_missing": 1
+        },
+        "diff_counts": {
+          "action_missing": 1,
+          "action_order": 1,
+          "binding_elsewhere": 1,
+          "condition_moved": 4,
+          "operation_span": 2,
+          "role": 6,
+          "span_boundary": 6,
+          "status": 2
+        },
+        "extra_predicted_actions": {
+          "not_in_reference": 4,
+          "grounded": 9
+        }
+      },
+      "layout": {
+        "inputs": 24,
+        "invalid_inputs": 15,
+        "reference_units": 49,
+        "unit_categories": {
+          "contract_invalid": 32,
+          "representation_only": 16,
+          "exact": 1
+        },
+        "diff_counts": {
+          "action_order": 1,
+          "binding_extra": 2,
+          "condition_moved": 3,
+          "kind": 1,
+          "operation_span": 5,
+          "role": 5,
+          "span_boundary": 6,
+          "status": 1
+        },
+        "extra_predicted_actions": {
+          "grounded": 4,
+          "not_in_reference": 1
+        }
+      }
+    },
+    "small_8": {
+      "core": {
+        "inputs": 24,
+        "invalid_inputs": 2,
+        "reference_units": 49,
+        "unit_categories": {
+          "information_missing": 7,
+          "restructured": 1,
+          "representation_only": 30,
+          "contract_invalid": 6,
+          "exact": 5
+        },
+        "diff_counts": {
+          "action_missing": 4,
+          "action_order": 2,
+          "binding_extra": 10,
+          "binding_missing": 1,
+          "condition_moved": 8,
+          "null_placeholder": 7,
+          "operation_not_separate": 2,
+          "operation_span": 2,
+          "role": 12,
+          "span_boundary": 11,
+          "status": 1
+        },
+        "extra_predicted_actions": {
+          "not_in_reference": 1,
+          "grounded": 10
+        }
+      },
+      "layout": {
+        "inputs": 24,
+        "invalid_inputs": 3,
+        "reference_units": 49,
+        "unit_categories": {
+          "information_missing": 3,
+          "restructured": 2,
+          "representation_only": 31,
+          "contract_invalid": 7,
+          "exact": 6
+        },
+        "diff_counts": {
+          "action_missing": 1,
+          "action_order": 3,
+          "binding_extra": 12,
+          "condition_moved": 8,
+          "null_placeholder": 2,
+          "operation_not_separate": 3,
+          "operation_span": 1,
+          "role": 10,
+          "span_boundary": 12,
+          "status": 3
+        },
+        "extra_predicted_actions": {
+          "not_in_reference": 3,
+          "grounded": 11
+        }
+      }
+    },
+    "medium_16": {
+      "core": {
+        "inputs": 24,
+        "invalid_inputs": 2,
+        "reference_units": 49,
+        "unit_categories": {
+          "restructured": 3,
+          "representation_only": 25,
+          "exact": 15,
+          "information_missing": 2,
+          "contract_invalid": 4
+        },
+        "diff_counts": {
+          "action_missing": 1,
+          "action_order": 2,
+          "binding_extra": 6,
+          "condition_extra": 1,
+          "condition_moved": 8,
+          "operation_not_separate": 3,
+          "operation_span": 1,
+          "role": 7,
+          "span_boundary": 14,
+          "status": 2
+        },
+        "extra_predicted_actions": {
+          "not_in_reference": 2,
+          "grounded": 1
+        }
+      },
+      "layout": {
+        "inputs": 24,
+        "invalid_inputs": 3,
+        "reference_units": 49,
+        "unit_categories": {
+          "restructured": 3,
+          "representation_only": 24,
+          "contract_invalid": 8,
+          "exact": 11,
+          "information_missing": 3
+        },
+        "diff_counts": {
+          "action_missing": 1,
+          "action_order": 2,
+          "binding_extra": 5,
+          "condition_moved": 7,
+          "operation_not_separate": 3,
+          "operation_span": 1,
+          "role": 5,
+          "span_boundary": 14,
+          "status": 2
+        },
+        "extra_predicted_actions": {
+          "not_in_reference": 2,
+          "grounded": 1
+        }
+      }
+    },
+    "large_28": {
+      "core": {
+        "inputs": 24,
+        "invalid_inputs": 1,
+        "reference_units": 49,
+        "unit_categories": {
+          "restructured": 2,
+          "representation_only": 27,
+          "exact": 15,
+          "information_missing": 3,
+          "contract_invalid": 2
+        },
+        "diff_counts": {
+          "action_missing": 1,
+          "action_order": 2,
+          "binding_extra": 4,
+          "binding_missing": 1,
+          "condition_moved": 7,
+          "null_placeholder": 1,
+          "operation_not_separate": 2,
+          "operation_span": 2,
+          "role": 7,
+          "span_boundary": 10,
+          "status": 5
+        },
+        "extra_predicted_actions": {
+          "not_in_reference": 2,
+          "grounded": 5
+        }
+      },
+      "layout": {
+        "inputs": 24,
+        "invalid_inputs": 1,
+        "reference_units": 49,
+        "unit_categories": {
+          "restructured": 2,
+          "representation_only": 27,
+          "exact": 15,
+          "information_missing": 3,
+          "contract_invalid": 2
+        },
+        "diff_counts": {
+          "action_missing": 1,
+          "action_order": 2,
+          "binding_extra": 3,
+          "binding_missing": 1,
+          "condition_moved": 7,
+          "null_placeholder": 1,
+          "operation_not_separate": 2,
+          "operation_span": 2,
+          "role": 7,
+          "span_boundary": 12,
+          "status": 5
+        },
+        "extra_predicted_actions": {
+          "not_in_reference": 2,
+          "grounded": 5
+        }
+      }
+    }
+  }
+}

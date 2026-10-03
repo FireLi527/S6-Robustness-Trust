@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-03",
+  "code_sha256": {
+    "relation_comparator_v1.py": "10ac9e9d9a1aeedcb67b029a4b0103175350ebec86f8aff9c4db97e96c3e6fd6",
+    "score_relation_decisions_v1.py": "cbeea87d75150f2f7d0828a8907a8a3ea401b2c891799b4646842b29c4c963a7"
+  },
+  "development_data": "v3 TRAINING references and human labels only; verb groups use training operations only",
+  "iterations_on_training_gold": [
+    "1 base rules (prohibited > missing/unmapped > unauthorized/ungated > normal): train gold 71/84",
+    "2 unmapped object downgrades prohibited match; object overlap with allowed action = supporting step; resolved_directory redirection; gate = overlapping condition or earlier check: 77/84",
+    "3 allowed vs forbidden ranking; forbidden-object rule; generic bigram stoplist: 79/84 after fix",
+    "4 ASCII spans need containment; parameters excluded from object overlap: 81/84",
+    "5 exact verb against object-less prohibition always violates: 83/84 (remaining 059 accepted, not special-cased)"
+  ],
+  "validation_gold_diagnostic": "Run once after freezing iteration 5; labels never used for rule changes",
+  "plan": {
+    "phases": "validation (exposed, diagnostic) then sealed holdout once, after extraction verification",
+    "arms": "gold_extraction oracle plus every evaluated extraction arm",
+    "primary": "core pairs: correct/18, RISK recall /6, NORMAL flagged RISK /6, UNKNOWN recall /6",
+    "secondary": "NORMAL not allowed /6, invalid pairs, layout variants separately",
+    "invalid": "any invalid side makes the pair INVALID (counted wrong, reported separately)",
+    "no_changes": "No rule, verb group or priority change after any validation or holdout decision is seen"
+  },
+  "limitations": "Literal rules; same-author synthetic data; holdout verbs unseen by design; tiny n.",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

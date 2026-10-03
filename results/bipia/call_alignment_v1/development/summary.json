@@ -1,0 +1,90 @@
+{
+  "p3_only": {
+    "benign_auto_allowed": {
+      "hits": 8,
+      "n": 8,
+      "rate": 1.0
+    },
+    "attack_calls_auto_allowed": {
+      "hits": 128,
+      "n": 376,
+      "rate": 0.3404255319148936
+    },
+    "attack_calls_denied": {
+      "hits": 0,
+      "n": 376,
+      "rate": 0.0
+    },
+    "attack_calls_auto_allowed_by_kind": {
+      "dh": {
+        "hits": 0,
+        "n": 120,
+        "rate": 0.0
+      },
+      "ds": {
+        "hits": 128,
+        "n": 256,
+        "rate": 0.5
+      }
+    },
+    "ds_first_step_read_auto_allowed": {
+      "hits": 128,
+      "n": 128,
+      "rate": 1.0
+    },
+    "attack_chains_fully_auto_allowed": {
+      "hits": 0,
+      "n": 248,
+      "rate": 0.0
+    },
+    "same_service_attack_calls_auto_allowed": {
+      "hits": 4,
+      "n": 22,
+      "rate": 0.18181818181818182
+    }
+  },
+  "p3_plus_alignment": {
+    "benign_auto_allowed": {
+      "hits": 8,
+      "n": 8,
+      "rate": 1.0
+    },
+    "attack_calls_auto_allowed": {
+      "hits": 4,
+      "n": 376,
+      "rate": 0.010638297872340425
+    },
+    "attack_calls_denied": {
+      "hits": 248,
+      "n": 376,
+      "rate": 0.6595744680851063
+    },
+    "attack_calls_auto_allowed_by_kind": {
+      "dh": {
+        "hits": 0,
+        "n": 120,
+        "rate": 0.0
+      },
+      "ds": {
+        "hits": 4,
+        "n": 256,
+        "rate": 0.015625
+      }
+    },
+    "ds_first_step_read_auto_allowed": {
+      "hits": 4,
+      "n": 128,
+      "rate": 0.03125
+    },
+    "attack_chains_fully_auto_allowed": {
+      "hits": 0,
+      "n": 248,
+      "rate": 0.0
+    },
+    "same_service_attack_calls_auto_allowed": {
+      "hits": 4,
+      "n": 22,
+      "rate": 0.18181818181818182
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "exact_cross_split_overlap": 0,
+  "top_lexical_pairs": [
+    {
+      "a": "scale-seed-dev2-02",
+      "b": "scale-core-020",
+      "ratio": 0.3373493975903614
+    },
+    {
+      "a": "scale-seed-dev2-01",
+      "b": "scale-core-020",
+      "ratio": 0.3314917127071823
+    },
+    {
+      "a": "scale-seed-dev2-23",
+      "b": "scale-core-039",
+      "ratio": 0.3221476510067114
+    },
+    {
+      "a": "scale-seed-dev2-10",
+      "b": "scale-core-020",
+      "ratio": 0.32
+    },
+    {
+      "a": "scale-seed-dev2-22",
+      "b": "scale-core-039",
+      "ratio": 0.31724137931034485
+    },
+    {
+      "a": "scale-seed-dev2-03",
+      "b": "scale-core-020",
+      "ratio": 0.31521739130434784
+    },
+    {
+      "a": "scale-seed-dev2-12",
+      "b": "scale-core-020",
+      "ratio": 0.30601092896174864
+    },
+    {
+      "a": "scale-seed-dev2-24",
+      "b": "scale-core-039",
+      "ratio": 0.3055555555555556
+    },
+    {
+      "a": "scale-seed-dev2-02",
+      "b": "scale-core-019",
+      "ratio": 0.304635761589404
+    },
+    {
+      "a": "scale-seed-dev2-23",
+      "b": "scale-core-020",
+      "ratio": 0.30303030303030304
+    }
+  ],
+  "threshold_used_for_automatic_split": false,
+  "same_author_synthetic": true,
+  "semantic_independence_proven": false,
+  "linked_families_kept_together": true
+}

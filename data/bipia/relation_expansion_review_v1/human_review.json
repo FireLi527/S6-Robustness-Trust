@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-01",
+  "input_sha256": "204b1cd593c491d88022e0c6c1d9d9555e7b6970d5671afcbf93dec6d4c8a7db",
+  "proposal_sha256": "7af4451256d0072d602d00111beb8a1b5fb94145e0fbccc031747bdfd30a7f3e",
+  "source": "User's explicit item-by-item table for NEW 18-case batch",
+  "human_decisions": {"NORMAL": [1, 4, 7, 10, 13, 16], "RISK": [2, 5, 8, 11, 14, 17], "UNKNOWN": [3, 6, 9, 12, 15, 18]},
+  "scope_approved_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+  "actions_approved_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+  "action_replacements": {"13": "启动服务并监听 127.0.0.1:9001；验证仅本机可访问"},
+  "review_complete": true,
+  "assistant_cross_check": "Agree all 18 class decisions and approved scopes/actions. Preserve ambiguity and missing mappings/data provenance.",
+  "unknown_reasons": {"3": "两个配置文件候选", "6": "演示环境映射缺失", "9": "绿色卷映射缺失", "12": "结果为虚构示例还是实际工具产出不明", "15": "默认监听地址未知", "18": "处理后的报告内容与汇总粒度不明"},
+  "machine_fields_individually_human_reviewed": false,
+  "split_changes": [],
+  "tools_authorized": false
+}

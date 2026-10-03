@@ -1,0 +1,54 @@
+{
+  "source": "AgentDojo (MIT)",
+  "repo_commit": "a75aba7631d3ca5fb7ab938965c97ead2f9ff84b",
+  "package_version": "0.1.35",
+  "benchmark_version": "v1.2.2",
+  "suites": {
+    "banking": {
+      "user_tasks": 16,
+      "injection_tasks": 9,
+      "tools": 11
+    },
+    "slack": {
+      "user_tasks": 21,
+      "injection_tasks": 5,
+      "tools": 11
+    },
+    "travel": {
+      "user_tasks": 20,
+      "injection_tasks": 7,
+      "tools": 28
+    },
+    "workspace": {
+      "user_tasks": 40,
+      "injection_tasks": 14,
+      "tools": 24
+    }
+  },
+  "sizes": {
+    "development": {
+      "benign": 48,
+      "attack": 222
+    },
+    "test": {
+      "benign": 49,
+      "attack": 253
+    }
+  },
+  "salt": "agentdojo-alignment-v1:",
+  "split": "per suite, user tasks and injection tasks halved by salted SHA-256; cross pairs dropped",
+  "calls": "ground_truth() on the default environment; injection calls are the attacker goal calls",
+  "test_gate": "Rules designed on development only; test scored once by a frozen evaluator",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": null,
+      "scipy": null,
+      "scikit-learn": null,
+      "torch": null,
+      "transformers": null,
+      "tokenizers": "0.23.2"
+    }
+  }
+}

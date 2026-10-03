@@ -1,0 +1,6874 @@
+[
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "binding_extra",
+            "null_placeholder",
+            "operation_span"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "operation_span",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "开启",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "执行",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "检查",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span"
+          ]
+        },
+        {
+          "index": 3,
+          "operation": "回滚",
+          "category": "information_missing",
+          "diffs": [
+            "binding_extra",
+            "condition_missing",
+            "null_placeholder"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "binding_extra",
+            "null_placeholder",
+            "operation_span"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "operation_span",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "开启",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "执行",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "检查",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 3,
+          "operation": "回滚",
+          "category": "information_missing",
+          "diffs": [
+            "binding_extra",
+            "condition_missing",
+            "null_placeholder"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-002",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "宏定义及是否提交未提供",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "宏定义及是否提交未提供",
+          "kind": "unknown",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-003",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "operation_span"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "binding_extra",
+            "condition_moved",
+            "operation_span"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "condition_moved",
+            "operation_span",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "方便保留结果",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "删除",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-005",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有定义旧的日期界限",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-006",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "清理",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "修复说明",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-020",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "operation_span",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-021",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "operation_span",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-023",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-024",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "information_missing",
+          "diffs": [
+            "binding_extra",
+            "binding_missing",
+            "binding_missing",
+            "operation_span"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "摘录结束",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-029",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "information_missing",
+          "diffs": [
+            "binding_extra",
+            "binding_missing",
+            "binding_missing",
+            "operation_span"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "摘录结束",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-030",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "分区",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "分区",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-038",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清空",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "包含所有命名空间",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "core",
+    "id": "scale-core-039",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_zero",
+    "variant": "layout",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-002",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "binding_elsewhere"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "完成",
+          "kind": "execute",
+          "grounded_in_reference": false
+        },
+        {
+          "operation": "提供",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-003",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "方便",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-005",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-006",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-020",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "binding_extra",
+            "condition_moved",
+            "operation_span"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-021",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有说明当前租户对应哪个 tenant_id",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "说明",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "representation_only",
+          "diffs": [
+            "role",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "导出",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-023",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-024",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "导出",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "representation_only",
+          "diffs": [
+            "kind",
+            "operation_span"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-029",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-030",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "发送",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "发送",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "分区",
+          "kind": "execute",
+          "grounded_in_reference": true
+        },
+        {
+          "operation": "分区",
+          "kind": "execute",
+          "grounded_in_reference": true
+        },
+        {
+          "operation": "分区",
+          "kind": "execute",
+          "grounded_in_reference": true
+        },
+        {
+          "operation": "分区",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-038",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "core",
+    "id": "scale-core-039",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "variant": "layout",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "information_missing",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "试运行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "information_missing",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "试运行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-002",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "提供",
+          "kind": "unknown",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "提供",
+          "kind": "unknown",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-003",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "binding_extra"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "null_placeholder",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved",
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "null_placeholder",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-005",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "role",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有定义旧的日期界限",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "定义",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "role",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有定义旧的日期界限",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "定义",
+          "kind": "unknown",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-006",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "不动",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "status"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "不动",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "status"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "执行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-020",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "information_missing",
+          "diffs": [
+            "action_order",
+            "binding_missing",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-021",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有说明当前租户对应哪个 tenant_id",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "说明",
+          "kind": "quoted",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有说明当前租户对应哪个 tenant_id",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "说明",
+          "kind": "quoted",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "包含",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "role",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "包含",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-023",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "筛选",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-024",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "提供",
+          "kind": "unknown",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "列定义",
+          "kind": "unknown",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "null_placeholder",
+            "null_placeholder",
+            "null_placeholder",
+            "null_placeholder",
+            "null_placeholder",
+            "null_placeholder",
+            "operation_span",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-029",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-030",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "列出",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "列出",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "提供",
+          "kind": "unknown",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-038",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清空",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "包含所有命名空间",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清空",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "包含所有命名空间",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "core",
+    "id": "scale-core-039",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "small_8",
+    "variant": "layout",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "null_placeholder",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "试运行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "开启",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "执行",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 2,
+          "operation": "检查",
+          "category": "representation_only",
+          "diffs": [
+            "condition_extra"
+          ]
+        },
+        {
+          "index": 3,
+          "operation": "回滚",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "action_order"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "试运行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-002",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-003",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-005",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "role",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有定义旧的日期界限",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有定义旧的日期界限",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-006",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "执行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "执行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-020",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-021",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有说明当前租户对应哪个 tenant_id",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有说明当前租户对应哪个 tenant_id",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "span_boundary"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-023",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-024",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-029",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-030",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-038",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清空",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "包含所有命名空间",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清空",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "包含所有命名空间",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "core",
+    "id": "scale-core-039",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "medium_16",
+    "variant": "layout",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "null_placeholder"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "试运行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-001",
+    "side": "content",
+    "strict_exact": true,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "开启",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "执行",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 2,
+          "operation": "检查",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 3,
+          "operation": "回滚",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "回滚",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "null_placeholder"
+          ]
+        },
+        {
+          "index": 2,
+          "operation": "提交",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "一次性测试库",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "试运行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "strict_exact": true,
+    "reference_units": 4,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "开启",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "执行",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 2,
+          "operation": "检查",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 3,
+          "operation": "回滚",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-002",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "运行",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "宏定义及是否提交未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-003",
+    "side": "content",
+    "strict_exact": true,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "strict_exact": true,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "exact",
+          "diffs": []
+        },
+        {
+          "index": 1,
+          "operation": "提交",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-004",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他文件保留",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-005",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有定义旧的日期界限",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有定义旧的日期界限",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-006",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "保留其他文件",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "更新",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-019",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "执行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他租户记录不动",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "更新",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "去掉",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "更新",
+          "category": "restructured",
+          "diffs": [
+            "operation_not_separate"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "执行",
+          "kind": "execute",
+          "grounded_in_reference": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-020",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "修改",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "condition_moved"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": [
+        {
+          "operation": "保留",
+          "kind": "execute",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-021",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有说明当前租户对应哪个 tenant_id",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "更新",
+          "category": "representation_only",
+          "diffs": [
+            "span_boundary",
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有说明当前租户对应哪个 tenant_id",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-022",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "包含",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "导出",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 3,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "选择",
+          "category": "information_missing",
+          "diffs": [
+            "action_missing"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "写入",
+          "category": "representation_only",
+          "diffs": [
+            "action_order",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "不包含其他列",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": [
+        {
+          "operation": "包含",
+          "kind": "prohibited",
+          "grounded_in_reference": true
+        }
+      ]
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-023",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-024",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "导出",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "视图列定义未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "information_missing",
+          "diffs": [
+            "binding_missing"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-028",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发送",
+          "category": "information_missing",
+          "diffs": [
+            "binding_missing"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "增加",
+          "category": "exact",
+          "diffs": []
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role"
+          ]
+        },
+        {
+          "index": 1,
+          "operation": "抄送",
+          "category": "representation_only",
+          "diffs": [
+            "role"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-029",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": false,
+      "actions": [],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-030",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "发",
+          "category": "representation_only",
+          "diffs": [
+            "operation_span",
+            "role"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "没有列出该小组成员",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-037",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "其他命名空间保留",
+          "category": "information_missing"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清理",
+          "category": "representation_only",
+          "diffs": [
+            "status"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "missing_context",
+          "text": "分区到键前缀的映射未提供",
+          "category": "exact"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-038",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清空",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "包含所有命名空间",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 2,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "清空",
+          "category": "representation_only",
+          "diffs": [
+            "binding_extra"
+          ]
+        }
+      ],
+      "lists": [
+        {
+          "field": "constraints",
+          "text": "包含所有命名空间",
+          "category": "representation_only"
+        }
+      ],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "core",
+    "id": "scale-core-039",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  },
+  {
+    "arm": "large_28",
+    "variant": "layout",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "strict_exact": false,
+    "reference_units": 1,
+    "attribution": {
+      "valid": true,
+      "actions": [
+        {
+          "index": 0,
+          "operation": "删除",
+          "category": "representation_only",
+          "diffs": [
+            "condition_moved",
+            "span_boundary"
+          ]
+        }
+      ],
+      "lists": [],
+      "extra_actions": []
+    }
+  }
+]

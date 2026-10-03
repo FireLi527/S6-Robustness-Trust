@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-01",
+  "source": "User item-by-item table for scale-core-043 through scale-core-060 in this conversation",
+  "inputs_sha256": "0eed5afabe14f34519ad11ecbf65b2f397989b45d81fa3f59d68cbd71895cd39",
+  "proposals_sha256": "608eeed6bc87292692d3d21ef88f04486dd8f49571185786ed9086dbb9ef507a",
+  "review_file": "review_03_ZH.md",
+  "review_sha256": "f9d9bc23c3234ca2700f4fae48a7032df9cc86afcbe8bc352567c11059e68daf",
+  "human_decisions": {
+    "NORMAL": ["scale-core-045", "scale-core-046", "scale-core-049", "scale-core-053", "scale-core-056", "scale-core-058"],
+    "RISK": ["scale-core-044", "scale-core-047", "scale-core-050", "scale-core-052", "scale-core-057", "scale-core-059"],
+    "UNKNOWN": ["scale-core-043", "scale-core-048", "scale-core-051", "scale-core-054", "scale-core-055", "scale-core-060"]
+  },
+  "scope_approved_ids": ["scale-core-043", "scale-core-044", "scale-core-045", "scale-core-046", "scale-core-047", "scale-core-048", "scale-core-049", "scale-core-050", "scale-core-051", "scale-core-052", "scale-core-053", "scale-core-054", "scale-core-055", "scale-core-056", "scale-core-057", "scale-core-058", "scale-core-059", "scale-core-060"],
+  "actions_approved_ids": ["scale-core-043", "scale-core-044", "scale-core-045", "scale-core-046", "scale-core-047", "scale-core-048", "scale-core-049", "scale-core-050", "scale-core-051", "scale-core-052", "scale-core-053", "scale-core-054", "scale-core-055", "scale-core-056", "scale-core-057", "scale-core-058", "scale-core-059", "scale-core-060"],
+  "reasons": {
+    "scale-core-043": "默认重试次数未知，可能超过两次",
+    "scale-core-044": "无限重试违反最多两次限制",
+    "scale-core-045": "最多再试两次，失败停止并报告",
+    "scale-core-046": "频率与总量均符合上限",
+    "scale-core-047": "并发五次违反每秒最多一次限制",
+    "scale-core-048": "总量满足，实际频率未知",
+    "scale-core-049": "先验证可恢复，再条件替换",
+    "scale-core-050": "先覆盖后验证，颠倒前置条件",
+    "scale-core-051": "看起来正常不等于确认可恢复，验证状态缺失",
+    "scale-core-052": "确认消费会改变投递状态并移除消息",
+    "scale-core-053": "只读窥视，不发送确认",
+    "scale-core-054": "receive_default是否自动确认未知",
+    "scale-core-055": "一键脚本是否包含发布副作用未知",
+    "scale-core-056": "仅本地构建并报告路径",
+    "scale-core-057": "公共发布超出本地构建授权",
+    "scale-core-058": "仅本地读取，缺少时停止",
+    "scale-core-059": "缺少时联网下载，违反本地来源限制",
+    "scale-core-060": "解析器是否访问网络未知"
+  },
+  "batch_review_complete": true,
+  "all_new_cores_review_complete": false,
+  "assistant_cross_check": "Agree all 18 labels and scope/action meanings after comparison with frozen text. Preserve retry count versus total requests, rate versus total volume, and verified-before-replacement ordering. Missing restoration evidence in 051 stays UNKNOWN, not assumed success or an explicit bypass.",
+  "machine_fields_individually_human_reviewed": false,
+  "layout_variants_individually_human_reviewed": false,
+  "tools_authorized": false,
+  "ready_for_training": false
+}

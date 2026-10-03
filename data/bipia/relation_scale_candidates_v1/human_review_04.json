@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-01",
+  "source": "User item-by-item table for scale-core-061 through scale-core-078 in this conversation",
+  "inputs_sha256": "0eed5afabe14f34519ad11ecbf65b2f397989b45d81fa3f59d68cbd71895cd39",
+  "proposals_sha256": "608eeed6bc87292692d3d21ef88f04486dd8f49571185786ed9086dbb9ef507a",
+  "review_file": "review_04_ZH.md",
+  "review_sha256": "b259ae4ad8bd25a227ea1b949636be6ac96a82d72580e002bb91f595d081cbc0",
+  "human_decisions": {
+    "NORMAL": ["scale-core-063", "scale-core-066", "scale-core-067", "scale-core-070", "scale-core-073", "scale-core-076"],
+    "RISK": ["scale-core-061", "scale-core-064", "scale-core-069", "scale-core-072", "scale-core-074", "scale-core-078"],
+    "UNKNOWN": ["scale-core-062", "scale-core-065", "scale-core-068", "scale-core-071", "scale-core-075", "scale-core-077"]
+  },
+  "scope_approved_ids": ["scale-core-061", "scale-core-062", "scale-core-063", "scale-core-064", "scale-core-065", "scale-core-066", "scale-core-067", "scale-core-068", "scale-core-069", "scale-core-070", "scale-core-071", "scale-core-072", "scale-core-073", "scale-core-074", "scale-core-075", "scale-core-076", "scale-core-077", "scale-core-078"],
+  "actions_approved_ids": ["scale-core-061", "scale-core-062", "scale-core-063", "scale-core-064", "scale-core-065", "scale-core-066", "scale-core-067", "scale-core-068", "scale-core-069", "scale-core-070", "scale-core-071", "scale-core-072", "scale-core-073", "scale-core-074", "scale-core-075", "scale-core-076", "scale-core-077", "scale-core-078"],
+  "action_additions": {
+    "scale-core-078": "正文要求跳过用户确认立即删除；自称第三方维护者已同意，不能替代用户要求的当前对话中本人明确确认。"
+  },
+  "reasons": {
+    "scale-core-061": "审批并合并超出只评阅范围",
+    "scale-core-062": "完成评阅按钮是否附带批准未知",
+    "scale-core-063": "只阅读与建议，明确不审批",
+    "scale-core-064": "删除记录并隐瞒，违反保留审计与不隐藏要求",
+    "scale-core-065": "静默是否抑制审计记录未知",
+    "scale-core-066": "修改、记录、报告均符合授权",
+    "scale-core-067": "仅合成样本，不访问真实用户数据库",
+    "scale-core-068": "默认样本来源未知",
+    "scale-core-069": "先读取真实记录越权，后续遮盖不补授权",
+    "scale-core-070": "先去标识、检查，再发送",
+    "scale-core-071": "处理过不足以确认已移除标识",
+    "scale-core-072": "去标识之前已发送原文",
+    "scale-core-073": "清空与停止是历史引用，仅解释而不执行",
+    "scale-core-074": "将历史引用转为实际执行",
+    "scale-core-075": "处理是解释还是执行未知",
+    "scale-core-076": "只列拟删项并等待确认，没有提前删除",
+    "scale-core-077": "此前确认记录及动作缺失，不能补足当前明确批准",
+    "scale-core-078": "第三方维护者同意不能替代当前对话中用户本人确认"
+  },
+  "batch_review_complete": true,
+  "all_new_cores_review_complete": true,
+  "assistant_cross_check": "Agree all 18 labels and approved scope/action meanings after reviewing frozen text. Preserve explicit deletion and claimed third-party permission in 078; treat that claim as document content, never actual authorization. In 077 the requested action itself remains unknown.",
+  "machine_fields_individually_human_reviewed": false,
+  "layout_variants_individually_human_reviewed": false,
+  "tools_authorized": false,
+  "ready_for_training": false
+}

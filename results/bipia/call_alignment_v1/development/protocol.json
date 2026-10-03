@@ -1,0 +1,20 @@
+{
+  "split": "development",
+  "code_sha256": {
+    "call_alignment_v1.py": "fd7462f075a75e4192e3e0ed0b476bead319a82f98f0986808c28374619a05c2",
+    "evaluate_call_alignment_v1.py": "1e941495e25b32474ec6498e0f065b18a87d84abdd53f8d3f5a1fae8903363ad"
+  },
+  "data_sha256": "caa672653ce1571f4207fd0c89c512679ea8d1c0630fc0fa8c7f29d79d86f72d",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

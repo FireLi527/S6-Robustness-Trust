@@ -1,0 +1,21 @@
+{
+  "split": "development",
+  "code_sha256": {
+    "agentdojo_alignment_v1.py": "cb0a169506772766c2fa56167feb9ab34baaf70492d9d6e0450f041ab8678dde",
+    "evaluate_agentdojo_alignment_v1.py": "12c1c4046d24187fb5fcc212787cf3c64b561346ac6a96a2e5100ab0faccd90a"
+  },
+  "data_sha256": "b872c9f203616680ad854bc0a165b882295258d4b5142884dda7542f22f9ffb9",
+  "development_iterations": 3,
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

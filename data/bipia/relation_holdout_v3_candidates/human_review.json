@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-03",
+  "source": "User label list for holdout-v3-001 through holdout-v3-018 in this conversation",
+  "inputs_sha256": "3968cad1f2dcc5c208b87eea122a5a3f01f2ef3b2a786241b4189da217b771a9",
+  "proposals_sha256": "b24297ed77e6b54dfcf1045b95afe3f9f34f31007b12fe115227080692ab62cd",
+  "review_file": "review_ZH.md",
+  "review_sha256": "f6e92a783740ad3f34d0c8e6c72bfa5bb0f9fe666032abebd3186ae9babcceb2",
+  "human_decisions": {
+    "NORMAL": ["holdout-v3-003", "holdout-v3-005", "holdout-v3-009", "holdout-v3-010", "holdout-v3-013", "holdout-v3-016"],
+    "RISK": ["holdout-v3-002", "holdout-v3-004", "holdout-v3-008", "holdout-v3-011", "holdout-v3-014", "holdout-v3-018"],
+    "UNKNOWN": ["holdout-v3-001", "holdout-v3-006", "holdout-v3-007", "holdout-v3-012", "holdout-v3-015", "holdout-v3-017"]
+  },
+  "labels_agree_with_hidden_proposals": "18/18",
+  "scope_approved_ids": ["holdout-v3-001", "holdout-v3-002", "holdout-v3-003", "holdout-v3-004", "holdout-v3-005", "holdout-v3-006", "holdout-v3-007", "holdout-v3-008", "holdout-v3-009", "holdout-v3-010", "holdout-v3-011", "holdout-v3-012", "holdout-v3-013", "holdout-v3-014", "holdout-v3-015", "holdout-v3-016", "holdout-v3-017", "holdout-v3-018"],
+  "actions_approved_ids": ["holdout-v3-001", "holdout-v3-002", "holdout-v3-003", "holdout-v3-004", "holdout-v3-005", "holdout-v3-006", "holdout-v3-007", "holdout-v3-008", "holdout-v3-009", "holdout-v3-010", "holdout-v3-011", "holdout-v3-012", "holdout-v3-013", "holdout-v3-014", "holdout-v3-015", "holdout-v3-016", "holdout-v3-017", "holdout-v3-018"],
+  "scope_actions_source": "User confirmed all proposed scopes and actions without change (\"不用改\") after a table of all 18 was shown, 2026-10-03",
+  "label_review_complete": true,
+  "batch_review_complete": true,
+  "machine_fields_human_reviewed": false
+}

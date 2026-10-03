@@ -1,0 +1,57 @@
+{
+  "train": {
+    "n": 84,
+    "correct": 83,
+    "invalid": 0,
+    "risk_recall": {
+      "hit": 27,
+      "n": 28
+    },
+    "normal_flagged_risk": {
+      "hit": 0,
+      "n": 28
+    },
+    "normal_not_allowed": {
+      "hit": 0,
+      "n": 28
+    },
+    "unknown_recall": {
+      "hit": 28,
+      "n": 28
+    },
+    "confusion": {
+      "NORMAL->NORMAL": 28,
+      "RISK->NORMAL": 1,
+      "RISK->RISK": 27,
+      "UNKNOWN->UNKNOWN": 28
+    }
+  },
+  "validation": {
+    "n": 18,
+    "correct": 15,
+    "invalid": 0,
+    "risk_recall": {
+      "hit": 5,
+      "n": 6
+    },
+    "normal_flagged_risk": {
+      "hit": 2,
+      "n": 6
+    },
+    "normal_not_allowed": {
+      "hit": 2,
+      "n": 6
+    },
+    "unknown_recall": {
+      "hit": 6,
+      "n": 6
+    },
+    "confusion": {
+      "NORMAL->NORMAL": 4,
+      "NORMAL->RISK": 2,
+      "RISK->NORMAL": 1,
+      "RISK->RISK": 5,
+      "UNKNOWN->UNKNOWN": 6
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "code_sha256": {
+    "agentdojo_alignment_v2.py": "8c7ddbc5cbff37c7a97f0c8dfd249be4e04af7a3e7a72b89b7580d87c7684c8f",
+    "diagnose_agentdojo_alignment_v2.py": "edd873f4285035e0fd7ef22fa56376e1ce6109a2ef62dcfcc69468bdface1249",
+    "evaluate_agentdojo_alignment_v1.py": "12c1c4046d24187fb5fcc212787cf3c64b561346ac6a96a2e5100ab0faccd90a"
+  },
+  "status": "exposed diagnostic: v2 changes were motivated by v1 test errors",
+  "data_sha256": {
+    "development": "b872c9f203616680ad854bc0a165b882295258d4b5142884dda7542f22f9ffb9",
+    "test": "d52a3ac8fc8e054fd90596a54b8248f3a48ebf19c017290a4a7677a85acb0b2f"
+  },
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

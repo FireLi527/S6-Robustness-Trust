@@ -1,0 +1,301 @@
+{
+  "injecagent-dh": {
+    "rule": {
+      "detection_rate": {
+        "hits": 36,
+        "n": 510,
+        "rate": 0.07058823529411765
+      },
+      "block": {
+        "hits": 36,
+        "n": 510,
+        "rate": 0.07058823529411765
+      },
+      "decisions": {
+        "ALLOW": 474,
+        "BLOCK": 36
+      }
+    },
+    "semantic": {
+      "detection_rate": {
+        "hits": 2,
+        "n": 510,
+        "rate": 0.00392156862745098
+      },
+      "block": {
+        "hits": 0,
+        "n": 510,
+        "rate": 0.0
+      },
+      "decisions": {
+        "ALLOW": 508,
+        "REVIEW": 2
+      }
+    },
+    "hybrid": {
+      "detection_rate": {
+        "hits": 38,
+        "n": 510,
+        "rate": 0.07450980392156863
+      },
+      "block": {
+        "hits": 36,
+        "n": 510,
+        "rate": 0.07058823529411765
+      },
+      "decisions": {
+        "ALLOW": 472,
+        "REVIEW": 2,
+        "BLOCK": 36
+      }
+    }
+  },
+  "injecagent-ds": {
+    "rule": {
+      "detection_rate": {
+        "hits": 3,
+        "n": 544,
+        "rate": 0.0055147058823529415
+      },
+      "block": {
+        "hits": 3,
+        "n": 544,
+        "rate": 0.0055147058823529415
+      },
+      "decisions": {
+        "ALLOW": 541,
+        "BLOCK": 3
+      }
+    },
+    "semantic": {
+      "detection_rate": {
+        "hits": 0,
+        "n": 544,
+        "rate": 0.0
+      },
+      "block": {
+        "hits": 0,
+        "n": 544,
+        "rate": 0.0
+      },
+      "decisions": {
+        "ALLOW": 544
+      }
+    },
+    "hybrid": {
+      "detection_rate": {
+        "hits": 3,
+        "n": 544,
+        "rate": 0.0055147058823529415
+      },
+      "block": {
+        "hits": 3,
+        "n": 544,
+        "rate": 0.0055147058823529415
+      },
+      "decisions": {
+        "ALLOW": 541,
+        "BLOCK": 3
+      }
+    }
+  },
+  "notinject-one": {
+    "rule": {
+      "false_alarm_rate": {
+        "hits": 22,
+        "n": 113,
+        "rate": 0.19469026548672566
+      },
+      "block": {
+        "hits": 2,
+        "n": 113,
+        "rate": 0.017699115044247787
+      },
+      "decisions": {
+        "ALLOW": 91,
+        "REVIEW": 20,
+        "BLOCK": 2
+      }
+    },
+    "semantic": "not_applicable_no_user_task",
+    "hybrid": {
+      "false_alarm_rate": {
+        "hits": 22,
+        "n": 113,
+        "rate": 0.19469026548672566
+      },
+      "block": {
+        "hits": 2,
+        "n": 113,
+        "rate": 0.017699115044247787
+      },
+      "decisions": {
+        "ALLOW": 91,
+        "REVIEW": 20,
+        "BLOCK": 2
+      }
+    }
+  },
+  "notinject-three": {
+    "rule": {
+      "false_alarm_rate": {
+        "hits": 15,
+        "n": 113,
+        "rate": 0.13274336283185842
+      },
+      "block": {
+        "hits": 1,
+        "n": 113,
+        "rate": 0.008849557522123894
+      },
+      "decisions": {
+        "ALLOW": 98,
+        "REVIEW": 14,
+        "BLOCK": 1
+      }
+    },
+    "semantic": "not_applicable_no_user_task",
+    "hybrid": {
+      "false_alarm_rate": {
+        "hits": 15,
+        "n": 113,
+        "rate": 0.13274336283185842
+      },
+      "block": {
+        "hits": 1,
+        "n": 113,
+        "rate": 0.008849557522123894
+      },
+      "decisions": {
+        "ALLOW": 98,
+        "REVIEW": 14,
+        "BLOCK": 1
+      }
+    }
+  },
+  "notinject-two": {
+    "rule": {
+      "false_alarm_rate": {
+        "hits": 20,
+        "n": 113,
+        "rate": 0.17699115044247787
+      },
+      "block": {
+        "hits": 2,
+        "n": 113,
+        "rate": 0.017699115044247787
+      },
+      "decisions": {
+        "BLOCK": 2,
+        "ALLOW": 93,
+        "REVIEW": 18
+      }
+    },
+    "semantic": "not_applicable_no_user_task",
+    "hybrid": {
+      "false_alarm_rate": {
+        "hits": 20,
+        "n": 113,
+        "rate": 0.17699115044247787
+      },
+      "block": {
+        "hits": 2,
+        "n": 113,
+        "rate": 0.017699115044247787
+      },
+      "decisions": {
+        "BLOCK": 2,
+        "ALLOW": 93,
+        "REVIEW": 18
+      }
+    }
+  },
+  "injecagent": {
+    "rule": {
+      "detection_rate": {
+        "hits": 39,
+        "n": 1054,
+        "rate": 0.03700189753320683
+      },
+      "block": {
+        "hits": 39,
+        "n": 1054,
+        "rate": 0.03700189753320683
+      },
+      "decisions": {
+        "ALLOW": 1015,
+        "BLOCK": 39
+      }
+    },
+    "semantic": {
+      "detection_rate": {
+        "hits": 2,
+        "n": 1054,
+        "rate": 0.0018975332068311196
+      },
+      "block": {
+        "hits": 0,
+        "n": 1054,
+        "rate": 0.0
+      },
+      "decisions": {
+        "ALLOW": 1052,
+        "REVIEW": 2
+      }
+    },
+    "hybrid": {
+      "detection_rate": {
+        "hits": 41,
+        "n": 1054,
+        "rate": 0.03889943074003795
+      },
+      "block": {
+        "hits": 39,
+        "n": 1054,
+        "rate": 0.03700189753320683
+      },
+      "decisions": {
+        "ALLOW": 1013,
+        "REVIEW": 2,
+        "BLOCK": 39
+      }
+    }
+  },
+  "notinject": {
+    "rule": {
+      "false_alarm_rate": {
+        "hits": 57,
+        "n": 339,
+        "rate": 0.168141592920354
+      },
+      "block": {
+        "hits": 5,
+        "n": 339,
+        "rate": 0.014749262536873156
+      },
+      "decisions": {
+        "ALLOW": 282,
+        "REVIEW": 52,
+        "BLOCK": 5
+      }
+    },
+    "semantic": "not_applicable_no_user_task",
+    "hybrid": {
+      "false_alarm_rate": {
+        "hits": 57,
+        "n": 339,
+        "rate": 0.168141592920354
+      },
+      "block": {
+        "hits": 5,
+        "n": 339,
+        "rate": 0.014749262536873156
+      },
+      "decisions": {
+        "ALLOW": 282,
+        "REVIEW": 52,
+        "BLOCK": 5
+      }
+    }
+  }
+}

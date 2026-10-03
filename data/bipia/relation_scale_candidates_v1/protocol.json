@@ -1,0 +1,35 @@
+{
+  "protected_sha256": {
+    "data\\bipia\\relation_development_review_v2\\inputs.json": "2660c3d73f9a90aae1b7853fd6c184ecbb88aaa27014ba095b89b9faafa71d49",
+    "data\\bipia\\relation_development_review_v2\\assistant_proposals.json": "ae79e0ee8546bd1b6ddd2107e5d983539a2d06da7a8cf55b182acdf7709fb46a",
+    "data\\bipia\\relation_development_review_v2\\human_review.json": "3342c4cf7b8d02cc198f7f05ef67b76ad43a0c2cee5744621cdfb63b12e56bb4",
+    "s6\\prompt_injection\\prepare_relation_scale_v1.py": "316de38254b1f28a6e4ed54b6278fd78c568b8cf70897fb6224d851fe4af6b62",
+    "s6\\prompt_injection\\relation_scale_catalog_v1.py": "2525659a2f70942c6a7f800cddb878f44951916beb5b03c4d4b06ff103dfe5f0",
+    "s6\\prompt_injection\\RELATION_EXPANSION_PLAN_ZH.md": "2a5b72eadf083b100225c11ec5089d37b12ceb2a58ae8fad3ed7f0a71cc489bb"
+  },
+  "role": "Pending development candidates, NOT train-ready or independent tests",
+  "reserved_group_names": [
+    "dns_record_change",
+    "database_trigger",
+    "object_lifecycle",
+    "ci_secret_scope",
+    "remote_branch_publish",
+    "encryption_key_rotation"
+  ],
+  "reserved_materials_authored": false,
+  "split_gate": "Family/near-duplicate audit and human review before split; no random row split",
+  "variant": "Exact core text wrapped in Markdown; not a new semantic example or natural paraphrase",
+  "next": "Review 78 new cores, convert machine fields, freeze methods, then author 6 held-out groups",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

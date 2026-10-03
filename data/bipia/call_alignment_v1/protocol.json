@@ -1,0 +1,34 @@
+{
+  "source": "InjecAgent base (MIT), local frozen copy",
+  "source_sha256": {
+    "user_cases.jsonl": "c840e2b00fdce68e7142d0970220522303d67b2530d6fb36ef1112448cdd8977",
+    "test_cases_dh_base.json": "0a8186468d21389af432e8c7b399ae42264d1b93a07b65c7a489468508604305",
+    "test_cases_ds_base.json": "4daab35c62a3845e8b9400f4dca58b9c9f37e57cd33b2337552557fbb26282e9"
+  },
+  "split": "user cases 8 dev / 9 test and attacker instructions half/half per dh|ds, by salted SHA-256; cross combinations dropped",
+  "salt": "call-alignment-v1:",
+  "counts": {
+    "development": {
+      "benign": 8,
+      "attack": 376
+    },
+    "test": {
+      "benign": 9,
+      "attack": 423
+    }
+  },
+  "limits": "All 17 user tasks are read-only; attacker tool parameters are not structured in InjecAgent (empty); English only.",
+  "test_gate": "Rules are designed on development only; test is scored once by the frozen evaluator.",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

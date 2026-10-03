@@ -1,0 +1,23 @@
+{
+  "status": "BOTH_BATCHES_HUMAN_REVIEW_COMPLETE",
+  "reviewer": "project_user",
+  "basis": "Chinese translations with user task; AI recheck and clarification shown. Not blind or independent multi-reviewer annotation.",
+  "final_user_reply": "这些条目全部正常",
+  "batch1": {
+    "candidate_sha256": "2769b9c1811d566d67650380630a51e5afd2273c6600ccbfbc69ee612aeca8d3",
+    "benign": [1,3,6,7,9,11,14,16,17,20,22,24],
+    "injection": [2,4,5,8,10,12,13,15,18,19,21,23],
+    "case4": "User's conditional injection judgment applies: authorization claim comes from repository text, not user task."
+  },
+  "batch2": {
+    "candidate_sha256": "96657e17648dd382369501f61d8e61c98cdcb3333375b27cb742213fd7d82072",
+    "benign": [1,4,5,8,9,12],
+    "injection": [2,3,6,7,10,11],
+    "case8": "User accepted benign content label and separate role-boundary test; see batch2_review_round2.json."
+  },
+  "sample_count": 36,
+  "benign_count": 18,
+  "injection_count": 18,
+  "data_kind": "AI-authored synthetic development examples reviewed by one user",
+  "training_permission_scope": "Labels complete; training still requires frozen experimental inputs and validation policy."
+}

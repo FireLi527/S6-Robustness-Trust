@@ -1,0 +1,22 @@
+{
+  "code_sha256": {
+    "relation_holdout_v3_targets.py": "76582738d3af51cb5e760bc4693d037d7e8cedb47ee441bb5a330c0fbb349ca6",
+    "prepare_relation_holdout_v3_targets.py": "e868f4492465fc639c352a8ca70edfe5996cc5ad52d66ed67a552bced3192aec",
+    "relation_contract_v3.py": "35ce9aae3cf573eec0f99a549058a8bf5cd14b894340b0ce0b85a112ae32cd27"
+  },
+  "review_sha256": "1a3bce6aa1e266c0bdfc86b68bec3f6ddf2837247e9af0dc3e4d196a1f4035df",
+  "role": "SEALED independent test; never for selection, training or prompt design",
+  "gate": "Open only after v3 prompt and training configuration are frozen",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

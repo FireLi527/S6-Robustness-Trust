@@ -1,0 +1,2551 @@
+[
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-001",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-001",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:开启"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-001",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:开启"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-001",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启",
+      "prohibited:回滚"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-001",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-001",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-001-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-001-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:检查影响行数"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-001-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-001-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启",
+      "prohibited:回滚"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-001-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-001-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:开启"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-002",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:试验宏"
+    ],
+    "soft": [
+      "unauthorized:运行"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-002",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-002",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-002",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:宏定义",
+      "unmapped:是否提交"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-002",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:试验宏"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-002",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:试验宏"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-002-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:试验宏"
+    ],
+    "soft": [
+      "unauthorized:运行"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-002-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-002-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-002-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:宏定义",
+      "unmapped:是否提交"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-002-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:试验宏"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-002-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "宏定义及是否提交未提供",
+      "unmapped:试验宏"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-003",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-003",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-003",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:保留"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-003",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:保留"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-003",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-003",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-003-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-003-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-003-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-003-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:保留"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-003-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-003-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:提交"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-004",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-004",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-004",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-004",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-004",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-004",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-004-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-004-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-004-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-004-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-004-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-004-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-005",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:旧日志"
+    ],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-005",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-005",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-005",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:旧的日期界限"
+    ],
+    "soft": [
+      "unauthorized:定义"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-005",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:scratch/logs 中的旧日志"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-005",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:旧日志"
+    ],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-005-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:旧日志"
+    ],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-005-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-005-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-005-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:旧的日期界限"
+    ],
+    "soft": [
+      "unauthorized:定义"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-005-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:scratch/logs 中的旧日志"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-005-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有定义旧的日期界限",
+      "unmapped:旧日志"
+    ],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-006",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-006",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-006",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-006",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-006",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:保留"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-006",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-006-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-006-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-006-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-006-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-006-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:保留"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-006-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "ungated:删除"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-019",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:更新:整个"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:去掉"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-019",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:更新:整个"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-019",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-019",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:执行"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-019",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-019",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:去掉"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-019-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:更新:整个"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:去掉"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-019-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:更新:整个"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-019-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-019-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:执行"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-019-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-019-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "prohibited:去掉"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-020",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:修改"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-020",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-020",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-020",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-020",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-020",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:修改"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-020-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:修改"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-020-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-020-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-020-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-020-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-020-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:修改"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-021",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有说明当前租户对应哪个 tenant_id",
+      "unmapped:当前租户记录"
+    ],
+    "soft": [
+      "ungated:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-021",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-021",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-021",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-021",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有说明当前租户对应哪个 tenant_id",
+      "unmapped:当前租户记录"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-021",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有说明当前租户对应哪个 tenant_id",
+      "unmapped:当前租户记录"
+    ],
+    "soft": [
+      "prohibited:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-021-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有说明当前租户对应哪个 tenant_id",
+      "unmapped:当前租户记录"
+    ],
+    "soft": [
+      "ungated:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-021-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "unmapped:当前租户对应哪个 tenant_id"
+    ],
+    "soft": [
+      "unauthorized:说明"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-021-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-021-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-021-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有说明当前租户对应哪个 tenant_id",
+      "unmapped:当前租户记录"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-021-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有说明当前租户对应哪个 tenant_id",
+      "unmapped:当前租户记录"
+    ],
+    "soft": [
+      "prohibited:更新"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-022",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-022",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-022",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-022",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-022",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-022",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-022-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-022-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-022-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-022-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-022-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-022-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-023",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-023",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-023",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-023",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-023",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-023",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-023-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-023-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-023-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-023-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [
+      "unauthorized:筛选"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-023-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-023-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [
+      "broadened:导出:全部"
+    ],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-024",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:简版视图"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-024",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "unmapped:视图列定义"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-024",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "unmapped:视图列定义"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-024",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:视图列定义",
+      "unmapped:视图列定义",
+      "unknown-kind:定义"
+    ],
+    "soft": [
+      "unauthorized:定义"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-024",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:简版视图"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-024",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:简版视图"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-024-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:简版视图"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-024-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-024-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "unmapped:视图列定义"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-024-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:视图列定义",
+      "unmapped:视图列定义",
+      "unknown-kind:定义"
+    ],
+    "soft": [
+      "unauthorized:定义"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-024-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:简版视图"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-024-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "视图列定义未提供",
+      "unmapped:简版视图"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-028",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-028",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-028",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-028",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-028",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-028",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-028-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-028-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-028-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-028-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-028-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-028-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-029",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:抄送"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-029",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-029",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-029",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:抄送"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-029",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-029",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-029-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:抄送"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-029-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-029-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-029-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-029-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-029-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "RISK",
+    "hard": [],
+    "unknown": [],
+    "soft": [
+      "unauthorized:抄送"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-030",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员",
+      "unmapped:演示小组"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-030",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-030",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-030",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员",
+      "unmapped:该小组成员"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-030",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员",
+      "unmapped:演示小组"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-030",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员",
+      "unmapped:演示小组"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-030-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员",
+      "unmapped:演示小组"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-030-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-030-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-030-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-030-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员",
+      "unmapped:演示小组"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-030-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "没有列出该小组成员",
+      "unmapped:演示小组"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-037",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供",
+      "unmapped:演示缓存分区"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-037",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "unmapped:键前缀的映射"
+    ],
+    "soft": [
+      "unauthorized:分区"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-037",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-037",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供",
+      "unmapped:分区到键前缀的映射",
+      "unknown-kind:映射"
+    ],
+    "soft": [
+      "unauthorized:映射"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-037",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-037",
+    "variant": "core",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供",
+      "unmapped:演示缓存分区"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-037-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供",
+      "unmapped:演示缓存分区"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-037-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "unmapped:键前缀的映射"
+    ],
+    "soft": [
+      "unauthorized:分区"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-037-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-037-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供",
+      "unmapped:分区到键前缀",
+      "unknown-kind:映射"
+    ],
+    "soft": [
+      "unauthorized:映射"
+    ],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-037-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-037-layout",
+    "variant": "layout",
+    "label": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "hard": [],
+    "unknown": [
+      "分区到键前缀的映射未提供",
+      "unmapped:演示缓存分区"
+    ],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-038",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-038",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-038",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-038",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-038",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-038",
+    "variant": "core",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-038-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-038-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-038-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-038-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-038-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-038-layout",
+    "variant": "layout",
+    "label": "RISK",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-039",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-039",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-039",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-039",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-039",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-039",
+    "variant": "core",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "gold_extraction",
+    "id": "scale-core-039-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "base_zero_v3",
+    "id": "scale-core-039-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "base_fewshot_v3",
+    "id": "scale-core-039-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "INVALID"
+  },
+  {
+    "arm": "small_8_v3",
+    "id": "scale-core-039-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "medium_16_v3",
+    "id": "scale-core-039-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  },
+  {
+    "arm": "large_28_v3",
+    "id": "scale-core-039-layout",
+    "variant": "layout",
+    "label": "NORMAL",
+    "decision": "NORMAL",
+    "hard": [],
+    "unknown": [],
+    "soft": [],
+    "tool_authorization": "not_granted"
+  }
+]

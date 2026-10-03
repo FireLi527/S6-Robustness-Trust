@@ -1,0 +1,34 @@
+{
+  "inputs_sha256": {
+    "data/bipia/cross_source_v1/evaluation.json": "8e01a1209184ec3dda010d6bb271bbdbf7bd117a9e93e6f6dee86838d23eb9f5"
+  },
+  "code_sha256": {
+    "evaluate_baseline_cross_source_v1.py": "e569d51131e986bcd849eb6bfbf62ab0a3e6f47dc25d152426295fcb814041c5",
+    "detector.py": "05b6563f5d7d5b8d33a84f51e6b44954254336fd712d7b8ff114e40a1359556b",
+    "semantic_detector.py": "b6b8bd57907b1ae871fd18231bca3190e3ddd43075f77985d06998005d894e36"
+  },
+  "p1": {
+    "detector": "s6-rule-prompt-injection",
+    "version": "0.2.0",
+    "config_hash": "364b24b816b5d1687da814693fba55049f33da95d3bb1affba09716f35f5d87e"
+  },
+  "p2": {
+    "detector": "s6-semantic-task-consistency",
+    "version": "0.1.0",
+    "config_hash": "3da3b5a5840994d8c9b5dc6c7182d7b1f83d58b803397fbfbeef73c39b7404af"
+  },
+  "rule": "Frozen P1/P2 rules, weights and thresholds; no retuning on these sources",
+  "embedding_cache": "new cache inside this run; the BIPIA cache is not modified",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

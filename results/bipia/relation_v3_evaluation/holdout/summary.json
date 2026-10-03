@@ -1,0 +1,518 @@
+{
+  "base_zero_v3": {
+    "core": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 22,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 16,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 2,
+        "predicted": 30,
+        "reference": 67,
+        "precision": 0.06666666666666667,
+        "recall": 0.029850746268656716
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 2,
+        "predicted": 30,
+        "reference": 60
+      }
+    },
+    "layout": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 15,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 9,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 2,
+        "predicted": 20,
+        "reference": 67,
+        "precision": 0.1,
+        "recall": 0.029850746268656716
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 2,
+        "predicted": 20,
+        "reference": 60
+      }
+    }
+  },
+  "base_fewshot_v3": {
+    "core": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 19,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 11,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 5,
+        "predicted": 31,
+        "reference": 67,
+        "precision": 0.16129032258064516,
+        "recall": 0.07462686567164178
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 5,
+        "predicted": 31,
+        "reference": 60
+      }
+    },
+    "layout": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 23,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 15,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 4,
+        "predicted": 39,
+        "reference": 67,
+        "precision": 0.10256410256410256,
+        "recall": 0.05970149253731343
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 4,
+        "predicted": 39,
+        "reference": 60
+      }
+    }
+  },
+  "small_8_v3": {
+    "core": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 35,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 23,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 14,
+        "predicted": 69,
+        "reference": 67,
+        "precision": 0.2028985507246377,
+        "recall": 0.208955223880597
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 9,
+        "predicted": 63,
+        "reference": 60
+      }
+    },
+    "layout": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 34,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 22,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 9,
+        "predicted": 67,
+        "reference": 67,
+        "precision": 0.13432835820895522,
+        "recall": 0.13432835820895522
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 7,
+        "predicted": 64,
+        "reference": 60
+      }
+    }
+  },
+  "medium_16_v3": {
+    "core": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 35,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 23,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 19,
+        "predicted": 61,
+        "reference": 67,
+        "precision": 0.3114754098360656,
+        "recall": 0.2835820895522388
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 15,
+        "predicted": 57,
+        "reference": 60
+      }
+    },
+    "layout": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 35,
+      "exact": 0,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 23,
+      "unique_exact": 0,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 0
+        }
+      },
+      "strict_units": {
+        "matched": 19,
+        "predicted": 60,
+        "reference": 67,
+        "precision": 0.31666666666666665,
+        "recall": 0.2835820895522388
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.0,
+      "claims_excluded_units": {
+        "matched": 16,
+        "predicted": 57,
+        "reference": 60
+      }
+    }
+  },
+  "large_28_v3": {
+    "core": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 34,
+      "exact": 1,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 22,
+      "unique_exact": 1,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 1
+        }
+      },
+      "strict_units": {
+        "matched": 25,
+        "predicted": 63,
+        "reference": 67,
+        "precision": 0.3968253968253968,
+        "recall": 0.373134328358209
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.25
+      },
+      "macro_group_exact": 0.041666666666666664,
+      "claims_excluded_units": {
+        "matched": 21,
+        "predicted": 58,
+        "reference": 60
+      }
+    },
+    "layout": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 35,
+      "exact": 1,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 23,
+      "unique_exact": 1,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 1
+        }
+      },
+      "strict_units": {
+        "matched": 26,
+        "predicted": 66,
+        "reference": 67,
+        "precision": 0.3939393939393939,
+        "recall": 0.3880597014925373
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.25,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.0
+      },
+      "macro_group_exact": 0.041666666666666664,
+      "claims_excluded_units": {
+        "matched": 21,
+        "predicted": 61,
+        "reference": 60
+      }
+    }
+  },
+  "v1_large_28": {
+    "core": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 34,
+      "exact": 1,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 22,
+      "unique_exact": 1,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 1
+        }
+      },
+      "strict_units": {
+        "matched": 23,
+        "predicted": 57,
+        "reference": 67,
+        "precision": 0.40350877192982454,
+        "recall": 0.34328358208955223
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.25
+      },
+      "macro_group_exact": 0.041666666666666664,
+      "claims_excluded_units": {
+        "matched": 23,
+        "predicted": 57,
+        "reference": 60
+      }
+    },
+    "layout": {
+      "pairs": 18,
+      "side_samples": 36,
+      "valid": 36,
+      "exact": 1,
+      "both_exact": 0,
+      "unique_sides": 24,
+      "unique_valid": 24,
+      "unique_exact": 1,
+      "unique_unfinished": 0,
+      "by_side": {
+        "task": {
+          "n": 6,
+          "exact": 0
+        },
+        "content": {
+          "n": 18,
+          "exact": 1
+        }
+      },
+      "strict_units": {
+        "matched": 23,
+        "predicted": 62,
+        "reference": 67,
+        "precision": 0.3709677419354839,
+        "recall": 0.34328358208955223
+      },
+      "group_exact_rates": {
+        "ci_secret_scope": 0.0,
+        "database_trigger": 0.0,
+        "dns_record_change": 0.0,
+        "encryption_key_rotation": 0.0,
+        "object_lifecycle": 0.0,
+        "remote_branch_publish": 0.25
+      },
+      "macro_group_exact": 0.041666666666666664,
+      "claims_excluded_units": {
+        "matched": 23,
+        "predicted": 62,
+        "reference": 60
+      }
+    }
+  }
+}

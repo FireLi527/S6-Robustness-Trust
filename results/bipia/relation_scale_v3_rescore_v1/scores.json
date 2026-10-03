@@ -1,0 +1,4322 @@
+[
+  {
+    "arm": "base_zero",
+    "id": "scale-core-001",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-001",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 4,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 4,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-002",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-002",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-002-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-003",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-003",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-003-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-004",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-004",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-005",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-005",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-005-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-006",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-006",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-006-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-019",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-019",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-020",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-020",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-020-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-021",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-021",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-021-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-022",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-022",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-023",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-023",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-023-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-024",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-024",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-024-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-028",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-028",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-029",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-029",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-029-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-030",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-030",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-030-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-037",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-037",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-038",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-038",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-038-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-039",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-039",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-039-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_zero",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-001",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-001",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-002",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-002",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-002-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-003",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-003",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 4,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-003-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-004",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-004",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-005",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-005",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-005-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-006",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-006",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 4,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-006-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-019",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-019",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-020",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-020",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-020-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-021",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-021",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-021-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-022",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-022",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-023",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-023",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-023-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-024",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-024",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-024-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-028",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-028",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-029",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-029",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-029-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-030",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-030",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-030-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-037",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-037",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 6,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-038",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-038",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-038-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-039",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-039",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-039-layout",
+    "side": "task",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "base_fewshot",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-001",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-001",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-002",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-002",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-002-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-003",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-003",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-003-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-004",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-004",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-005",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-005",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-005-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-006",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-006",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-006-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-019",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-019",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-020",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-020",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-020-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-021",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-021",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-021-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-022",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-022",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-023",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-023",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-023-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-024",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-024",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-024-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-028",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-028",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-029",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-029",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-029-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-030",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-030",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-030-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-037",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-037",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-038",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-038",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-038-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-039",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-039",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-039-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "small_8",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-001",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-001",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 4,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-002",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-002",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-002-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-003",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-003",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-003-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-004",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-004",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-005",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-005",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-005-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-006",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-006",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-006-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-019",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-019",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-020",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-020",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-020-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 3,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-021",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-021",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-021-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-022",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-022",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-023",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-023",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-023-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-024",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-024",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-024-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-028",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-028",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-029",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-029",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-029-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-030",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-030",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-030-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-037",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-037",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-038",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-038",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-038-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-039",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-039",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-039-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "medium_16",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-001",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-001",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 2,
+      "predicted": 4,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-001-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-001-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 2,
+      "predicted": 4,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-002",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-002",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-002-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-002-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-003",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-003",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 2,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-003-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 3,
+      "reference": 4
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-003-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 2,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-004",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-004",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-004-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-004-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-005",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-005",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": true,
+      "matched": 2,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-005-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-005-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": true,
+      "matched": 2,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-006",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-006",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-006-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-006-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-019",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-019",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-019-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-019-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-020",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-020",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-020-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-020-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-021",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-021",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": true,
+      "matched": 2,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-021-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-021-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": true,
+      "matched": 2,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-022",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-022",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-022-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-022-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 3
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-023",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-023",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-023-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-023-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-024",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-024",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-024-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-024-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-028",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-028",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-028-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-028-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-029",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-029",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-029-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-029-layout",
+    "side": "content",
+    "score": {
+      "valid": false,
+      "exact": false,
+      "matched": 0,
+      "predicted": 0,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-030",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-030",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-030-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-030-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-037",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-037",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-037-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-037-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 1,
+      "predicted": 2,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-038",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-038",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-038-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-038-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-039",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-039",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-039-layout",
+    "side": "task",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 2
+    }
+  },
+  {
+    "arm": "large_28",
+    "id": "scale-core-039-layout",
+    "side": "content",
+    "score": {
+      "valid": true,
+      "exact": false,
+      "matched": 0,
+      "predicted": 1,
+      "reference": 1
+    }
+  }
+]

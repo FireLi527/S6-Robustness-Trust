@@ -1,0 +1,23 @@
+{
+  "code_and_norm_sha256": {
+    "s6\\prompt_injection\\prepare_relation_holdout_v3.py": "0bbdc05b4be7f82420da7eb2bb3f383ffde162c2c71c71ee098b9fac0725c9d3",
+    "s6\\prompt_injection\\relation_holdout_v3_catalog.py": "7b00adb6e4b9c06006d3e89b6a77324f081e08de4695c43be6f2ae3bf2492d59",
+    "s6\\prompt_injection\\relation_contract_v3.py": "35ce9aae3cf573eec0f99a549058a8bf5cd14b894340b0ce0b85a112ae32cd27",
+    "s6\\prompt_injection\\RELATION_CONTRACT_V3_ZH.md": "8f3bc2c4cd51c64acc651526e60d50a7bde1193c098904e29ca9ecb1e729d52c"
+  },
+  "role": "Sealed held-out candidates; NOT for selection or training",
+  "gate": "Human semantic review, then v3 machine conversion; evaluate only after prompt/training are frozen",
+  "variant": "Exact core text wrapped in Markdown; not a new semantic example",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "purpose": "Migration-point integrity guard; not retroactive provenance proof",
+  "files": {
+    "s6/prompt_injection/semantic_detector.py": "b6b8bd57907b1ae871fd18231bca3190e3ddd43075f77985d06998005d894e36",
+    "s6/data_poisoning/semantic_detector.py": "ff6dcbff5cfa37c987ee470c84fe7e0132b75b2d623a98b7c6ebcd8227300b76",
+    "s6/prompt_injection/tool_policy.py": "d33156e1d1495a1b3e1d4f1f136d8d299a0e14846e7466a1ae8437cccf2d55a3",
+    "s6/prompt_injection/approval_policy.py": "7500e32f60275f1bc6b5cdddc1b77c5dc33b93e7436db76b2901f1edb78236b9",
+    "s6/prompt_injection/train_repo_file_v1.py": "8209815cd6bed87a06d0210300cb28dc3b8ed8d9a85516c602c0488af7447e62",
+    "s6/prompt_injection/train_repo_file_v2_development.py": "4e75673d64b88bcb138617f44bac9ef2dcdbd97a2eaef0a735c01c39a9715bad",
+    "s6/prompt_injection/experiment_native_pairs_v1.py": "e0a54c535d47b5b5f041a3c72cde2364f46f6991bf1bb7fbfbc95029e096225f",
+    "s6/prompt_injection/experiment_joint_context_v1.py": "014c0527231b2dd1e200a1069634aa36100b96ea5f5ca08a3d0af6fe78d09be1",
+    "data/bipia/native_pairs_v1/protocol.json": "572d01123e8d401cd6e56f045d4ec738070da281ac19a57091b84f3e8603e33c",
+    "data/bipia/native_pairs_v1/samples.json": "9d3e95a409634436a2c7f5cfbe3cf741b97ce19ddf33b496931e02fb692a6dcb",
+    "results/bipia/native_pairs_v1/selection.json": "127b4a30f685a3a7863732d2cec5dd19c7eee78f26b943a8642f55ad02a93471",
+    "results/bipia/native_pairs_v1/summary.json": "713d61400cd2bfc456e888c698e0db4be2728664dd37412f3c1d5c4d8be18957",
+    "results/bipia/native_pairs_v1/models.joblib": "940324d774ad5e6eae7bae996b572773c6ee3f2fc06ff65f3ecc716832b09405",
+    "results/bipia/repo_file_v1/model.joblib": "989cd87b5a511f22e9b183400a2bc8ab1671c433fc19d941e1edc409df8cce55",
+    "results/bipia/repo_file_v2_development/model.joblib": "e527360127e943fb664eef48c8322605f4e5f4d5a610f9e0b8779c4889dd0e85",
+    "results/fruitfly_poisoning/grouped_defense_v1/comparison.json": "9ee616d0aeee512f90c737e5a9d84bb5a19396f819a55645a0d6f1827667defd",
+    "results/fruitfly_poisoning/grouped_defense_v1/detection_summary.json": "eed3e8cb95412c91aa5aff7743246da3f3f957bb67b7c3d61c96b45eba1d4768"
+  }
+}

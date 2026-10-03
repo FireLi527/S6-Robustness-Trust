@@ -1,0 +1,24 @@
+{
+  "inputs_sha256": {
+    "predictions.json": "cc8a6b45a5ecf0fe983c8598426ae365e913b38f228b5e8420235102f9775b16",
+    "v3 samples.json": "4955548e8b0df295f5814dd6d1d108be02ad46bae10ea672b1066bce6adf9361"
+  },
+  "code_sha256": {
+    "rescore_relation_scale_v3.py": "ac4f3f20ffa26432f77caa3d6a2b67ed40d90cfe138467a6dd668f944a099a1d",
+    "relation_contract_v3.py": "35ce9aae3cf573eec0f99a549058a8bf5cd14b894340b0ce0b85a112ae32cd27"
+  },
+  "inference": false,
+  "prediction_adaptation": "v2 validity kept; claims=[] added",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source": "Agent Security Bench (MIT)",
+  "repo_commit": "544540ff0788998072f7df463056fd17e62cc9f4",
+  "source_sha256": {
+    "agent_task.jsonl": "5280e069139b01d8e99449b86c697979b847be2f359a6f7841818794cc4371eb",
+    "all_normal_tools.jsonl": "2cb526e81be6bf7cbfa58a4d9c54a1c57fa1478ffecb7bb9c2e2fa92246fd538",
+    "all_attack_tools.jsonl": "113ce48e00e8ab8db961d74900f8f84927ec27b6084c8d70dc68172a3ec4a4c4"
+  },
+  "salt": "asb-alignment-v1:",
+  "sizes": {
+    "development": {
+      "agents": 5,
+      "tasks": 25,
+      "normal_tools": 10,
+      "attack_tools": 200
+    },
+    "test": {
+      "agents": 5,
+      "tasks": 26,
+      "normal_tools": 10,
+      "attack_tools": 200
+    }
+  },
+  "split": "agents 5/5 by salted SHA-256; test tasks and tools unseen during development",
+  "unit": "benign = (task, each normal tool of its agent); attack = (task, each attacker tool of its agent)",
+  "test_gate": "Rule family and parameter chosen on development by a pre-declared criterion; test once",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

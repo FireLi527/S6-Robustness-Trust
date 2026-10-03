@@ -1,0 +1,21 @@
+{
+  "split": "test",
+  "code_sha256": {
+    "asb_alignment_v1.py": "e3ffedfd22ace39a3f2b1ee8cfadfeb462981d4b2c2a0b4f19497ed22246bc61",
+    "evaluate_asb_alignment_v1.py": "31ab0e76686a71e38a28908a841dc13d48345f01404128f2b8d320d934c7b5e9"
+  },
+  "data_sha256": "8cf26bcffad15995c36c0ccf4d782735a34893179166cbcf56b2dec509c95654",
+  "p3_style": "every call REVIEW (no read/write class derivable from these tool names)",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}
