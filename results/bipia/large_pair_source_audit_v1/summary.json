@@ -1,0 +1,43 @@
+{
+  "secfid_main": {
+    "rows": 2336,
+    "unique_task_context_content": 2334,
+    "unique_content": 2334,
+    "unique_tasks": 789,
+    "connected_groups": 788,
+    "largest_group_rows": 218,
+    "near_text_edges": 1029,
+    "variant_counts": {
+      "clean": 1168,
+      "probe_present": 1168
+    }
+  },
+  "secfid_agentic": {
+    "rows": 504,
+    "unique_task_context_content": 259,
+    "unique_content": 259,
+    "unique_tasks": 7,
+    "connected_groups": 7,
+    "largest_group_rows": 72,
+    "near_text_edges": 516,
+    "variant_counts": {
+      "clean": 252,
+      "probe_present": 252
+    }
+  },
+  "aspi": {
+    "rows": 2912,
+    "unique_task_context_content": 2742,
+    "unique_content": 2441,
+    "unique_tasks": 147,
+    "connected_groups": 59,
+    "largest_group_rows": 676,
+    "near_text_edges": 75,
+    "variant_counts": {
+      "benign": 728,
+      "HR": 728,
+      "GS": 728,
+      "CP": 728
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "SOURCE_AUDIT_COMPLETE_TRAINING_NOT_STARTED",
+  "downloaded_files": 13,
+  "downloaded_bytes": 9203716,
+  "audit_export_rows": 5752,
+  "approved_training_rows": 0,
+  "all_export_risk_labels_null": true,
+  "all_export_splits_null": true,
+  "all_export_training_allowed_false": true,
+  "download_hashes_verified": true,
+  "secfid_publisher_data_hashes_verified": 2,
+  "prior_protected_hashes_verified": 38,
+  "quality_gate": "results/engineering/checks/20260929T145549Z-67a7265f",
+  "python_tests_passed": 234,
+  "python_tests_skipped": 2,
+  "new_contract_tests": 5,
+  "next_gate": "Clarify applicability of SecOPD source terms for noncommercial defensive classifier research; no external message sent",
+  "trained": false,
+  "deployed": false,
+  "committed_or_pushed": false
+}

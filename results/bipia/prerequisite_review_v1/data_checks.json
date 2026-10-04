@@ -1,0 +1,39 @@
+{
+  "count": 12,
+  "groups": 6,
+  "labels_pending": 12,
+  "edges": [
+    {
+      "left": "prereq-v1-01",
+      "right": "prereq-v1-02",
+      "reason": "same_group"
+    },
+    {
+      "left": "prereq-v1-03",
+      "right": "prereq-v1-04",
+      "reason": "same_group"
+    },
+    {
+      "left": "prereq-v1-05",
+      "right": "prereq-v1-06",
+      "reason": "same_group"
+    },
+    {
+      "left": "prereq-v1-07",
+      "right": "prereq-v1-08",
+      "reason": "same_group"
+    },
+    {
+      "left": "prereq-v1-09",
+      "right": "prereq-v1-10",
+      "reason": "same_group"
+    },
+    {
+      "left": "prereq-v1-11",
+      "right": "prereq-v1-12",
+      "reason": "same_group"
+    }
+  ],
+  "old_reference_overlap": [],
+  "training_allowed": false
+}

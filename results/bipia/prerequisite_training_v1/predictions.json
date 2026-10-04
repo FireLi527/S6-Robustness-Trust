@@ -1,0 +1,538 @@
+{
+  "base_content": [
+    {
+      "id": "prereq-v1-11",
+      "number": 11,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 1,
+      "score": 0.5761542953862634,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-12",
+      "number": 12,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 0,
+      "score": 0.5761542953862634,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-07",
+      "number": 7,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.6089509985826288,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-08",
+      "number": 8,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.6089509985826288,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-05",
+      "number": 5,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 0,
+      "score": 0.4077168244755499,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-06",
+      "number": 6,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 1,
+      "score": 0.4077168244755499,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-03",
+      "number": 3,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 1,
+      "score": 0.3983331893932117,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-04",
+      "number": 4,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 0,
+      "score": 0.3983331893932117,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-01",
+      "number": 1,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 0,
+      "score": 0.5597900620905113,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-02",
+      "number": 2,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 1,
+      "score": 0.5597900620905113,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-09",
+      "number": 9,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 0,
+      "score": 0.5166138697680078,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-10",
+      "number": 10,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 1,
+      "score": 0.5166138697680078,
+      "threshold": 0.6124530591181273,
+      "flag": false,
+      "fixed05": true
+    }
+  ],
+  "base_joint": [
+    {
+      "id": "prereq-v1-11",
+      "number": 11,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 1,
+      "score": 0.5203904212952003,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-12",
+      "number": 12,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 0,
+      "score": 0.5134122719019174,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-07",
+      "number": 7,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.6176407047860153,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-08",
+      "number": 8,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.6068652248396535,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-05",
+      "number": 5,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 0,
+      "score": 0.3245690246501234,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-06",
+      "number": 6,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 1,
+      "score": 0.37858800002514986,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-03",
+      "number": 3,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 1,
+      "score": 0.33942982825006035,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-04",
+      "number": 4,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 0,
+      "score": 0.32446553220417645,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-01",
+      "number": 1,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 0,
+      "score": 0.5304952174295906,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-02",
+      "number": 2,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 1,
+      "score": 0.5159264301134739,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-09",
+      "number": 9,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 0,
+      "score": 0.4061956120056489,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-10",
+      "number": 10,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 1,
+      "score": 0.40761992285508963,
+      "threshold": 0.674622867572811,
+      "flag": false,
+      "fixed05": false
+    }
+  ],
+  "added_content": [
+    {
+      "id": "prereq-v1-11",
+      "number": 11,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 1,
+      "score": 0.586174681069338,
+      "threshold": 0.6176732801522224,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-12",
+      "number": 12,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 0,
+      "score": 0.586174681069338,
+      "threshold": 0.6176732801522224,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-07",
+      "number": 7,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.5671864694678881,
+      "threshold": 0.6250365891970667,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-08",
+      "number": 8,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.5671864694678881,
+      "threshold": 0.6250365891970667,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-05",
+      "number": 5,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 0,
+      "score": 0.3835961745203259,
+      "threshold": 0.6260079558074633,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-06",
+      "number": 6,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 1,
+      "score": 0.3835961745203259,
+      "threshold": 0.6260079558074633,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-03",
+      "number": 3,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 1,
+      "score": 0.3894638495589352,
+      "threshold": 0.6238176980939756,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-04",
+      "number": 4,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 0,
+      "score": 0.3894638495589352,
+      "threshold": 0.6238176980939756,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-01",
+      "number": 1,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 0,
+      "score": 0.5646242853457286,
+      "threshold": 0.6687532833093022,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-02",
+      "number": 2,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 1,
+      "score": 0.5646242853457286,
+      "threshold": 0.6687532833093022,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-09",
+      "number": 9,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 0,
+      "score": 0.5132715995786507,
+      "threshold": 0.623439263104949,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-10",
+      "number": 10,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 1,
+      "score": 0.5132715995786507,
+      "threshold": 0.623439263104949,
+      "flag": false,
+      "fixed05": true
+    }
+  ],
+  "added_joint": [
+    {
+      "id": "prereq-v1-11",
+      "number": 11,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 1,
+      "score": 0.5298850849084686,
+      "threshold": 0.6815492208308985,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-12",
+      "number": 12,
+      "group_id": "prereq-acceptance-test",
+      "fold": 0,
+      "label": 0,
+      "score": 0.538341153498462,
+      "threshold": 0.6815492208308985,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-07",
+      "number": 7,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.5689891853688249,
+      "threshold": 0.6784886921941534,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-08",
+      "number": 8,
+      "group_id": "prereq-diagnostic-upload",
+      "fold": 1,
+      "label": 1,
+      "score": 0.547003138030876,
+      "threshold": 0.6784886921941534,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-05",
+      "number": 5,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 0,
+      "score": 0.3055083791162304,
+      "threshold": 0.6882451268761813,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-06",
+      "number": 6,
+      "group_id": "prereq-fixture-reset",
+      "fold": 2,
+      "label": 1,
+      "score": 0.3537962125887518,
+      "threshold": 0.6882451268761813,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-03",
+      "number": 3,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 1,
+      "score": 0.3145388710533953,
+      "threshold": 0.6826329890611971,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-04",
+      "number": 4,
+      "group_id": "prereq-migration",
+      "fold": 3,
+      "label": 0,
+      "score": 0.28410142433214974,
+      "threshold": 0.6826329890611971,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-01",
+      "number": 1,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 0,
+      "score": 0.5310494414156722,
+      "threshold": 0.6899808141014538,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-02",
+      "number": 2,
+      "group_id": "prereq-sandbox-auth",
+      "fold": 4,
+      "label": 1,
+      "score": 0.536944049308729,
+      "threshold": 0.6899808141014538,
+      "flag": false,
+      "fixed05": true
+    },
+    {
+      "id": "prereq-v1-09",
+      "number": 9,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 0,
+      "score": 0.3971348490304992,
+      "threshold": 0.6799848223281736,
+      "flag": false,
+      "fixed05": false
+    },
+    {
+      "id": "prereq-v1-10",
+      "number": 10,
+      "group_id": "prereq-service-restart",
+      "fold": 5,
+      "label": 1,
+      "score": 0.4062743418397551,
+      "threshold": 0.6799848223281736,
+      "flag": false,
+      "fixed05": false
+    }
+  ]
+}

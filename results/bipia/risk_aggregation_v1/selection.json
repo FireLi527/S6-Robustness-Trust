@@ -1,0 +1,320 @@
+{
+  "by_window": {
+    "256": {
+      "content": {
+        "full_mean": {
+          "threshold": 0.5320094403688506,
+          "validation": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 6,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 1.0,
+            "recall": 0.7391304347826086,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 17,
+            "fp": 3,
+            "fn": 6,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.6896551724137931,
+            "precision": 0.85,
+            "recall": 0.7391304347826086,
+            "fpr": 0.5
+          }
+        },
+        "max_window": {
+          "threshold": 0.5320094446115374,
+          "validation": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 6,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 1.0,
+            "recall": 0.7391304347826086,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 17,
+            "fp": 3,
+            "fn": 6,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.6896551724137931,
+            "precision": 0.85,
+            "recall": 0.7391304347826086,
+            "fpr": 0.5
+          }
+        },
+        "top2_mean": {
+          "threshold": 0.5320094446115374,
+          "validation": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 6,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 1.0,
+            "recall": 0.7391304347826086,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 17,
+            "fp": 3,
+            "fn": 6,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.6896551724137931,
+            "precision": 0.85,
+            "recall": 0.7391304347826086,
+            "fpr": 0.5
+          }
+        }
+      },
+      "joint": {
+        "full_mean": {
+          "threshold": 0.5940543722236589,
+          "validation": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 5,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.8275862068965517,
+            "precision": 1.0,
+            "recall": 0.782608695652174,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 20,
+            "fp": 3,
+            "fn": 3,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 0.8695652173913043,
+            "recall": 0.8695652173913043,
+            "fpr": 0.5
+          }
+        },
+        "max_window": {
+          "threshold": 0.5940543722236589,
+          "validation": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 5,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.8275862068965517,
+            "precision": 1.0,
+            "recall": 0.782608695652174,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 20,
+            "fp": 3,
+            "fn": 3,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 0.8695652173913043,
+            "recall": 0.8695652173913043,
+            "fpr": 0.5
+          }
+        },
+        "top2_mean": {
+          "threshold": 0.5940543722236589,
+          "validation": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 5,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.8275862068965517,
+            "precision": 1.0,
+            "recall": 0.782608695652174,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 20,
+            "fp": 3,
+            "fn": 3,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 0.8695652173913043,
+            "recall": 0.8695652173913043,
+            "fpr": 0.5
+          }
+        }
+      }
+    },
+    "128": {
+      "content": {
+        "full_mean": {
+          "threshold": 0.5614840051328722,
+          "validation": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 6,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 1.0,
+            "recall": 0.7391304347826086,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 17,
+            "fp": 3,
+            "fn": 6,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.6896551724137931,
+            "precision": 0.85,
+            "recall": 0.7391304347826086,
+            "fpr": 0.5
+          }
+        },
+        "max_window": {
+          "threshold": 0.5614840051328721,
+          "validation": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 5,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.8275862068965517,
+            "precision": 1.0,
+            "recall": 0.782608695652174,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 18,
+            "fp": 3,
+            "fn": 5,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.7241379310344828,
+            "precision": 0.8571428571428571,
+            "recall": 0.782608695652174,
+            "fpr": 0.5
+          }
+        },
+        "top2_mean": {
+          "threshold": 0.5614840051328721,
+          "validation": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 6,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.7931034482758621,
+            "precision": 1.0,
+            "recall": 0.7391304347826086,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 17,
+            "fp": 3,
+            "fn": 6,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.6896551724137931,
+            "precision": 0.85,
+            "recall": 0.7391304347826086,
+            "fpr": 0.5
+          }
+        }
+      },
+      "joint": {
+        "full_mean": {
+          "threshold": 0.5736167530042636,
+          "validation": {
+            "tp": 19,
+            "fp": 0,
+            "fn": 4,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.8620689655172413,
+            "precision": 1.0,
+            "recall": 0.8260869565217391,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 21,
+            "fp": 3,
+            "fn": 2,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.8275862068965517,
+            "precision": 0.875,
+            "recall": 0.9130434782608695,
+            "fpr": 0.5
+          }
+        },
+        "max_window": {
+          "threshold": 0.5736167427427487,
+          "validation": {
+            "tp": 21,
+            "fp": 0,
+            "fn": 2,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.9310344827586207,
+            "precision": 1.0,
+            "recall": 0.9130434782608695,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 21,
+            "fp": 3,
+            "fn": 2,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.8275862068965517,
+            "precision": 0.875,
+            "recall": 0.9130434782608695,
+            "fpr": 0.5
+          }
+        },
+        "top2_mean": {
+          "threshold": 0.5736167427427487,
+          "validation": {
+            "tp": 20,
+            "fp": 0,
+            "fn": 3,
+            "tn": 6,
+            "samples": 29,
+            "accuracy": 0.896551724137931,
+            "precision": 1.0,
+            "recall": 0.8695652173913043,
+            "fpr": 0.0
+          },
+          "fixed_05": {
+            "tp": 21,
+            "fp": 3,
+            "fn": 2,
+            "tn": 3,
+            "samples": 29,
+            "accuracy": 0.8275862068965517,
+            "precision": 0.875,
+            "recall": 0.9130434782608695,
+            "fpr": 0.5
+          }
+        }
+      }
+    }
+  },
+  "primary_choices": {
+    "content": "full_mean",
+    "joint": "full_mean"
+  }
+}

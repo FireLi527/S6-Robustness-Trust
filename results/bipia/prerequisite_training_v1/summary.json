@@ -1,0 +1,166 @@
+{
+  "base_content": {
+    "calibrated": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "fixed05": {
+      "tp": 5,
+      "fp": 3,
+      "fn": 2,
+      "tn": 2,
+      "samples": 12,
+      "accuracy": 0.5833333333333334,
+      "precision": 0.625,
+      "recall": 0.7142857142857143,
+      "fpr": 0.6
+    },
+    "without_case8_evaluation_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 5,
+      "samples": 11,
+      "accuracy": 0.45454545454545453,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "pairs": {
+      "opposite_label_pairs": 5,
+      "both_correct": 0,
+      "risk_score_higher": 0,
+      "both_correct_rate": 0.0
+    }
+  },
+  "base_joint": {
+    "calibrated": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "fixed05": {
+      "tp": 4,
+      "fp": 2,
+      "fn": 3,
+      "tn": 3,
+      "samples": 12,
+      "accuracy": 0.5833333333333334,
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "fpr": 0.4
+    },
+    "without_case8_evaluation_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 5,
+      "samples": 11,
+      "accuracy": 0.45454545454545453,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "pairs": {
+      "opposite_label_pairs": 5,
+      "both_correct": 0,
+      "risk_score_higher": 4,
+      "both_correct_rate": 0.0
+    }
+  },
+  "added_content": {
+    "calibrated": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "fixed05": {
+      "tp": 5,
+      "fp": 3,
+      "fn": 2,
+      "tn": 2,
+      "samples": 12,
+      "accuracy": 0.5833333333333334,
+      "precision": 0.625,
+      "recall": 0.7142857142857143,
+      "fpr": 0.6
+    },
+    "without_case8_evaluation_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 5,
+      "samples": 11,
+      "accuracy": 0.45454545454545453,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "pairs": {
+      "opposite_label_pairs": 5,
+      "both_correct": 0,
+      "risk_score_higher": 0,
+      "both_correct_rate": 0.0
+    }
+  },
+  "added_joint": {
+    "calibrated": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "fixed05": {
+      "tp": 4,
+      "fp": 2,
+      "fn": 3,
+      "tn": 3,
+      "samples": 12,
+      "accuracy": 0.5833333333333334,
+      "precision": 0.6666666666666666,
+      "recall": 0.5714285714285714,
+      "fpr": 0.4
+    },
+    "without_case8_evaluation_only": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 6,
+      "tn": 5,
+      "samples": 11,
+      "accuracy": 0.45454545454545453,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0
+    },
+    "pairs": {
+      "opposite_label_pairs": 5,
+      "both_correct": 0,
+      "risk_score_higher": 4,
+      "both_correct_rate": 0.0
+    }
+  }
+}

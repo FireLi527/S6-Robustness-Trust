@@ -1,0 +1,721 @@
+{
+  "aib_held_out_test": [
+    {
+      "id": "AIB-00005",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7796564427283553,
+        "minilm_task_only": 0.5867604602011691,
+        "minilm_content": 0.715975952338697,
+        "minilm_joint": 0.7072757503250913
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00011",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7828256698683923,
+        "minilm_task_only": 0.6514747463217538,
+        "minilm_content": 0.6441014940141458,
+        "minilm_joint": 0.7334770672725901
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00012",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.708419560950515,
+        "minilm_task_only": 0.52857847643809,
+        "minilm_content": 0.7026506059767549,
+        "minilm_joint": 0.6817350827964727
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00014",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.693293031740977,
+        "minilm_task_only": 0.5315477719993663,
+        "minilm_content": 0.6546754718960083,
+        "minilm_joint": 0.6890543141645044
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "AIB-00015",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7778385917514823,
+        "minilm_task_only": 0.5991372857606477,
+        "minilm_content": 0.7156095008242355,
+        "minilm_joint": 0.7492257751570539
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00022",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7177076886045854,
+        "minilm_task_only": 0.533565789751128,
+        "minilm_content": 0.46765981535781664,
+        "minilm_joint": 0.5123212111607177
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00028",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7120965979428414,
+        "minilm_task_only": 0.5273577485755004,
+        "minilm_content": 0.6180290595270257,
+        "minilm_joint": 0.6321666674907341
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00030",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6388328705089006,
+        "minilm_task_only": 0.662488105932961,
+        "minilm_content": 0.39473001060991214,
+        "minilm_joint": 0.5380610219878961
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00035",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7057920002061978,
+        "minilm_task_only": 0.6504132065295739,
+        "minilm_content": 0.6436711103396117,
+        "minilm_joint": 0.7491062368027962
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00049",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7414062539010392,
+        "minilm_task_only": 0.4557666355041994,
+        "minilm_content": 0.4930697205153754,
+        "minilm_joint": 0.5070351504966849
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "AIB-00051",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7348066657595946,
+        "minilm_task_only": 0.6682278110230084,
+        "minilm_content": 0.560892745434345,
+        "minilm_joint": 0.7214651523906456
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00056",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7764276790304013,
+        "minilm_task_only": 0.5313718366898765,
+        "minilm_content": 0.4465032094743163,
+        "minilm_joint": 0.565365392676723
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00059",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7082227928426368,
+        "minilm_task_only": 0.5903574224378862,
+        "minilm_content": 0.629085739392655,
+        "minilm_joint": 0.6440464651067027
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00083",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.698632290340374,
+        "minilm_task_only": 0.5567883095562393,
+        "minilm_content": 0.5490939047691221,
+        "minilm_joint": 0.6133978718679868
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00092",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6953359087747937,
+        "minilm_task_only": 0.6156248640322238,
+        "minilm_content": 0.667403842173292,
+        "minilm_joint": 0.7271865299607314
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00095",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7100323524908414,
+        "minilm_task_only": 0.608520296243928,
+        "minilm_content": 0.6730245017854309,
+        "minilm_joint": 0.7204976539552159
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "AIB-00096",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7408908989294479,
+        "minilm_task_only": 0.3240140056166358,
+        "minilm_content": 0.5132007777531212,
+        "minilm_joint": 0.4579080288090074
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "AIB-00103",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7120266307736358,
+        "minilm_task_only": 0.5853769822423588,
+        "minilm_content": 0.6644454434402138,
+        "minilm_joint": 0.6620640969505354
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00105",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7844222448967517,
+        "minilm_task_only": 0.6965988385390586,
+        "minilm_content": 0.7861540328452001,
+        "minilm_joint": 0.8749411778942503
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00111",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.694092890203416,
+        "minilm_task_only": 0.5614737137948385,
+        "minilm_content": 0.7265898462407058,
+        "minilm_joint": 0.7103144981026908
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "AIB-00114",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7229961230969699,
+        "minilm_task_only": 0.6684456952828126,
+        "minilm_content": 0.6235797008286574,
+        "minilm_joint": 0.7246266031005117
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "AIB-00122",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.561750256197444,
+        "minilm_task_only": 0.5315192017042526,
+        "minilm_content": 0.6750511991314919,
+        "minilm_joint": 0.6599726794699607
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00124",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5190860843696461,
+        "minilm_task_only": 0.4107488139296359,
+        "minilm_content": 0.40238540295797043,
+        "minilm_joint": 0.379676872456595
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00125",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.508804694066745,
+        "minilm_task_only": 0.49112299210578536,
+        "minilm_content": 0.534996606484282,
+        "minilm_joint": 0.5164333599423131
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "AIB-00143",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5458222061137603,
+        "minilm_task_only": 0.32995520089825253,
+        "minilm_content": 0.3918585568618152,
+        "minilm_joint": 0.26320302791616745
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00144",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.4176171823466372,
+        "minilm_task_only": 0.4964796111193137,
+        "minilm_content": 0.3418645161256971,
+        "minilm_joint": 0.3498318766665034
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00155",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5225807957947172,
+        "minilm_task_only": 0.4178549369397861,
+        "minilm_content": 0.5198702248270674,
+        "minilm_joint": 0.45048837084837645
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00166",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.586367978768075,
+        "minilm_task_only": 0.38408127587049057,
+        "minilm_content": 0.5657175384249956,
+        "minilm_joint": 0.5648461804558891
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "AIB-00179",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.6436785490320437,
+        "minilm_task_only": 0.4792685359500175,
+        "minilm_content": 0.517944636778126,
+        "minilm_joint": 0.5407076173757384
+      },
+      "p1_flag": false
+    }
+  ],
+  "reviewed36_seen_cross_source_diagnostic": [
+    {
+      "id": "author-v2-p01-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5657418349240125,
+        "minilm_task_only": 0.5275299439956705,
+        "minilm_content": 0.5758817778367624,
+        "minilm_joint": 0.5443623000711986
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p02-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6861730850455875,
+        "minilm_task_only": 0.613239067701462,
+        "minilm_content": 0.7904909174526107,
+        "minilm_joint": 0.7869131100910439
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p03-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.6358212505164945,
+        "minilm_task_only": 0.5212719223824879,
+        "minilm_content": 0.5268125943430476,
+        "minilm_joint": 0.5203358681218347
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p04-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6701161421543899,
+        "minilm_task_only": 0.6238040887763266,
+        "minilm_content": 0.6646301559980484,
+        "minilm_joint": 0.7291091481674821
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p05-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6169318898370889,
+        "minilm_task_only": 0.5822711246319937,
+        "minilm_content": 0.4815885933511166,
+        "minilm_joint": 0.618229783523555
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p06-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.6113007287902684,
+        "minilm_task_only": 0.564486571147236,
+        "minilm_content": 0.43757896550572356,
+        "minilm_joint": 0.5220880459093752
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p07-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5994368167549272,
+        "minilm_task_only": 0.6100106095762603,
+        "minilm_content": 0.5984974127280577,
+        "minilm_joint": 0.6499424590562216
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p08-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.525226276336359,
+        "minilm_task_only": 0.5525041776652949,
+        "minilm_content": 0.5750573466000706,
+        "minilm_joint": 0.5789154081155572
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p09-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.6564388616001503,
+        "minilm_task_only": 0.5711471877989653,
+        "minilm_content": 0.6039364733184683,
+        "minilm_joint": 0.6776194518276848
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "author-v2-p10-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.5218270184610567,
+        "minilm_task_only": 0.40240124674462985,
+        "minilm_content": 0.48690448733649627,
+        "minilm_joint": 0.46263247604414465
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p11-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.6026713056639169,
+        "minilm_task_only": 0.7008514742314731,
+        "minilm_content": 0.6974469234170102,
+        "minilm_joint": 0.7501902612825326
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p12-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.5395292387660823,
+        "minilm_task_only": 0.5690647892230509,
+        "minilm_content": 0.5960590981694398,
+        "minilm_joint": 0.6759232662000314
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p01-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.5637373203771685,
+        "minilm_task_only": 0.5275299439956705,
+        "minilm_content": 0.5724734378181742,
+        "minilm_joint": 0.5434653027148066
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p02-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.4806753918633583,
+        "minilm_task_only": 0.613239067701462,
+        "minilm_content": 0.6044547109042411,
+        "minilm_joint": 0.6816551159274543
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p03-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6314948962299275,
+        "minilm_task_only": 0.5212719223824879,
+        "minilm_content": 0.6400452200099669,
+        "minilm_joint": 0.6854053449570473
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p04-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5150594429896737,
+        "minilm_task_only": 0.6238040887763266,
+        "minilm_content": 0.5815707767106495,
+        "minilm_joint": 0.6504065549360893
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p05-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5371368651802002,
+        "minilm_task_only": 0.5822711246319937,
+        "minilm_content": 0.5290276118072105,
+        "minilm_joint": 0.6378859906947136
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p06-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6615712477001487,
+        "minilm_task_only": 0.564486571147236,
+        "minilm_content": 0.7410952610613691,
+        "minilm_joint": 0.7890965226654091
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p07-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6344300449583749,
+        "minilm_task_only": 0.6100106095762603,
+        "minilm_content": 0.5418642274438151,
+        "minilm_joint": 0.6380697861313216
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p08-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.569750960223134,
+        "minilm_task_only": 0.5525041776652949,
+        "minilm_content": 0.5261366126902711,
+        "minilm_joint": 0.5201738063333529
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p09-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6378493649092645,
+        "minilm_task_only": 0.5711471877989653,
+        "minilm_content": 0.7137178994908616,
+        "minilm_joint": 0.7092234549242529
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "author-v2-p10-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5578270059191294,
+        "minilm_task_only": 0.40240124674462985,
+        "minilm_content": 0.6334669553557674,
+        "minilm_joint": 0.5912580865320318
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-p11-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6916589351043959,
+        "minilm_task_only": 0.7008514742314731,
+        "minilm_content": 0.7045826174876336,
+        "minilm_joint": 0.7896505076279643
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "author-v2-p12-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5795070641261942,
+        "minilm_task_only": 0.5690647892230509,
+        "minilm_content": 0.4581433979480158,
+        "minilm_joint": 0.5312467529302323
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p01-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5943353192106577,
+        "minilm_task_only": 0.49487975483762536,
+        "minilm_content": 0.6019909453051477,
+        "minilm_joint": 0.5671842072055933
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p02-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.500204105768236,
+        "minilm_task_only": 0.6828326516065414,
+        "minilm_content": 0.4806308451684729,
+        "minilm_joint": 0.6444439910591054
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p03-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.7016742732212566,
+        "minilm_task_only": 0.5764924060721307,
+        "minilm_content": 0.4543916346615851,
+        "minilm_joint": 0.4832487200464253
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p04-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.561714416038887,
+        "minilm_task_only": 0.5665988258976404,
+        "minilm_content": 0.4764429129238492,
+        "minilm_joint": 0.5200766341228011
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p05-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5901328371924801,
+        "minilm_task_only": 0.5686722425841453,
+        "minilm_content": 0.5571300139879797,
+        "minilm_joint": 0.5741534854180312
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p06-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6590634668475339,
+        "minilm_task_only": 0.7611346512554578,
+        "minilm_content": 0.6750292849681347,
+        "minilm_joint": 0.785270981633153
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p01-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6688458218447992,
+        "minilm_task_only": 0.49487975483762536,
+        "minilm_content": 0.597570848969826,
+        "minilm_joint": 0.5591779354535347
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p02-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5465390858367857,
+        "minilm_task_only": 0.6828326516065414,
+        "minilm_content": 0.4175098821902743,
+        "minilm_joint": 0.6083552533116818
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p03-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.5879893619914003,
+        "minilm_task_only": 0.5764924060721307,
+        "minilm_content": 0.4189139209282066,
+        "minilm_joint": 0.5089195901928752
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p04-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.6074355037029981,
+        "minilm_task_only": 0.5665988258976404,
+        "minilm_content": 0.5618500563722395,
+        "minilm_joint": 0.5600987693051825
+      },
+      "p1_flag": true
+    },
+    {
+      "id": "author-v2-b2-p05-b",
+      "label": 1,
+      "scores": {
+        "tfidf_content": 0.645901932608836,
+        "minilm_task_only": 0.5686722425841453,
+        "minilm_content": 0.6881191255755331,
+        "minilm_joint": 0.7087768503430434
+      },
+      "p1_flag": false
+    },
+    {
+      "id": "author-v2-b2-p06-a",
+      "label": 0,
+      "scores": {
+        "tfidf_content": 0.6916828105539629,
+        "minilm_task_only": 0.7611346512554578,
+        "minilm_content": 0.6712110392905938,
+        "minilm_joint": 0.7869527145376918
+      },
+      "p1_flag": false
+    }
+  ]
+}

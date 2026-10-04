@@ -1,0 +1,832 @@
+[
+  {
+    "id": "requests/docs/dev/contributing.rst:88-92",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.433865861426998,
+      "max_window": 0.433865861426998,
+      "top2_mean": 0.433865861426998
+    },
+    "window_scores": [
+      0.433865861426998
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "b8ab2ad0365a7490b505e60a49e6069232c4e4c1306e7977919c9871086d041e",
+      "input_tokens": 73,
+      "covered_tokens": 73,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          73
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/docs/dev/contributing.rst:97-101",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.6000262221950846,
+      "max_window": 0.6000262221950846,
+      "top2_mean": 0.6000262221950846
+    },
+    "window_scores": [
+      0.6000262221950846
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "f9c7f66dbaa420c768116dbc7cab86cc12f453f6bf04e7283430cde2ea0e9e04",
+      "input_tokens": 68,
+      "covered_tokens": 68,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          68
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/README.md:60-62",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5344570212776185,
+      "max_window": 0.5344570212776186,
+      "top2_mean": 0.5344570212776186
+    },
+    "window_scores": [
+      0.5344570212776186
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "f5c42114335b8c3915e542cda830baf65130b205a2abc29ac793627cb238f502",
+      "input_tokens": 72,
+      "covered_tokens": 72,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          72
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/docs/dev/contributing.rst:70-81",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5582454820046641,
+      "max_window": 0.5738607711393914,
+      "top2_mean": 0.5419123527641578
+    },
+    "window_scores": [
+      0.5738607711393914,
+      0.5099639343889243
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "0dd856c3bafb3df7b742b2681b1fb65c62a5153f7d212104789f3cd9b8352ce1",
+      "input_tokens": 158,
+      "covered_tokens": 158,
+      "dropped_tokens": 0,
+      "chunks": 2,
+      "offsets": [
+        [
+          0,
+          126
+        ],
+        [
+          94,
+          158
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/README.md:64-66",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.48258554076419274,
+      "max_window": 0.48258554076419274,
+      "top2_mean": 0.48258554076419274
+    },
+    "window_scores": [
+      0.48258554076419274
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "96bd237978b6c9f19a32096f3a5686b46a3ab769b509355c7a891c92030d1774",
+      "input_tokens": 40,
+      "covered_tokens": 40,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          40
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/docs/community/release-process.rst:6-7",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.45389939167768023,
+      "max_window": 0.45389939167768023,
+      "top2_mean": 0.45389939167768023
+    },
+    "window_scores": [
+      0.45389939167768023
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "d2e13204879d6e724406265612b15a3c667e63b1a5c8b79f8c85b6d344748e17",
+      "input_tokens": 36,
+      "covered_tokens": 36,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          36
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/docs/community/release-process.rst:12-14",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.3642840925351488,
+      "max_window": 0.3642840925351489,
+      "top2_mean": 0.3642840925351489
+    },
+    "window_scores": [
+      0.3642840925351489
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "dd8d5fcabab02a4fe1072c4c725217a1f327bd54f1aea4b21d7370fc87a924e3",
+      "input_tokens": 65,
+      "covered_tokens": 65,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          65
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/docs/community/release-process.rst:16-18",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.43440541434751934,
+      "max_window": 0.43440541485279066,
+      "top2_mean": 0.43440541485279066
+    },
+    "window_scores": [
+      0.43440541485279066
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "0d7c64d9368d9783b476209fcaa43d7a8ca0e51c222e96566e88ac09788b2ef3",
+      "input_tokens": 46,
+      "covered_tokens": 46,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          46
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/docs/community/release-process.rst:29-31",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5241976473329983,
+      "max_window": 0.5241976473329983,
+      "top2_mean": 0.5241976473329983
+    },
+    "window_scores": [
+      0.5241976473329983
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "73f45d93b4a93cb32ee0dcd33dd52ae0b4987b7a380296b3872f000ff8646b75",
+      "input_tokens": 53,
+      "covered_tokens": 53,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          53
+        ]
+      ]
+    }
+  },
+  {
+    "id": "requests/docs/dev/contributing.rst:103-104",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.47000634476220177,
+      "max_window": 0.47000634476220177,
+      "top2_mean": 0.47000634476220177
+    },
+    "window_scores": [
+      0.47000634476220177
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "2e3a8715e6c333f7818e147e875e1634d59ee0af9f291cf52789ac4224110624",
+      "input_tokens": 35,
+      "covered_tokens": 35,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          35
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/quickstart.rst:102-105",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5553551787125227,
+      "max_window": 0.5553551787125227,
+      "top2_mean": 0.5553551787125227
+    },
+    "window_scores": [
+      0.5553551787125227
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "e3dde3770b783ece94ad188b311232cf6318a0107b2e21942beeb14b363c7e20",
+      "input_tokens": 43,
+      "covered_tokens": 43,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          43
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/quickstart.rst:765-768",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.4428149593868211,
+      "max_window": 0.44281495938682114,
+      "top2_mean": 0.44281495938682114
+    },
+    "window_scores": [
+      0.44281495938682114
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "d28f5bd910542fd59e2bb0ffd816767721204cfde9160e8d163e63e34f4a12dd",
+      "input_tokens": 63,
+      "covered_tokens": 63,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          63
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/testing.rst:97-102",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.41096788848679255,
+      "max_window": 0.4109678907462089,
+      "top2_mean": 0.4109678907462089
+    },
+    "window_scores": [
+      0.4109678907462089
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "94506a3bcdb79a020796163f7c465134923490c228113f56de639bc295fbd0c0",
+      "input_tokens": 123,
+      "covered_tokens": 123,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          123
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/testing.rst:308-311",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.44546373146949353,
+      "max_window": 0.445463732736493,
+      "top2_mean": 0.445463732736493
+    },
+    "window_scores": [
+      0.445463732736493
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "55462b9b6f2bc157d92608105722c279b6768cc8a25a26f36b755ccd6c79bcce",
+      "input_tokens": 61,
+      "covered_tokens": 61,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          61
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/web-security.rst:37-40",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.3958846204862311,
+      "max_window": 0.3958846204862311,
+      "top2_mean": 0.3958846204862311
+    },
+    "window_scores": [
+      0.3958846204862311
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "818d2548ddc9ef2fc68420ac6673cd7df3e8dbe826044d6f8290bdadb926a1dd",
+      "input_tokens": 62,
+      "covered_tokens": 62,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          62
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/quickstart.rst:4-5",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.4158237941344892,
+      "max_window": 0.41582379375,
+      "top2_mean": 0.41582379375
+    },
+    "window_scores": [
+      0.41582379375
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "a7b917b8c2b4a339ed7c95bc8f169dddade49444121bf5926f6ab0779dcf1a6a",
+      "input_tokens": 33,
+      "covered_tokens": 33,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          33
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/quickstart.rst:25-36",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.4432532462021245,
+      "max_window": 0.47056228570413217,
+      "top2_mean": 0.44978178989379036
+    },
+    "window_scores": [
+      0.42900129408344856,
+      0.47056228570413217
+    ],
+    "winning_window": 1,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "264c8207c32e55bb36e504cbc0723f603d20e5526afe040c289fed46940681ab",
+      "input_tokens": 173,
+      "covered_tokens": 173,
+      "dropped_tokens": 0,
+      "chunks": 2,
+      "offsets": [
+        [
+          0,
+          126
+        ],
+        [
+          94,
+          173
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/testing.rst:25-27",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.34699527577772754,
+      "max_window": 0.34699527577772754,
+      "top2_mean": 0.34699527577772754
+    },
+    "window_scores": [
+      0.34699527577772754
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "635763f93e64e507f4e968e3ccb56574e57a88190ac744323734864fda6a241d",
+      "input_tokens": 56,
+      "covered_tokens": 56,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          56
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/testing.rst:29-32",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5182977985969633,
+      "max_window": 0.5182978049752796,
+      "top2_mean": 0.5182978049752796
+    },
+    "window_scores": [
+      0.5182978049752796
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "eba1e8de9ac1e1c3efe1f3028fc79c4fb7f30a4a9a5a4a50a3c0dcdc269dedf7",
+      "input_tokens": 48,
+      "covered_tokens": 48,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          48
+        ]
+      ]
+    }
+  },
+  {
+    "id": "flask/docs/web-security.rst:4-10",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5100339526838683,
+      "max_window": 0.5100339517899197,
+      "top2_mean": 0.5100339517899197
+    },
+    "window_scores": [
+      0.5100339517899197
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "4704647d6eb33132534112d8e8d7a2ea36b2be79c974272aa8d13816a120dfaa",
+      "input_tokens": 104,
+      "covered_tokens": 104,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          104
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/CONTRIBUTING.rst:38-40",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.6662815709084107,
+      "max_window": 0.6662815709084108,
+      "top2_mean": 0.6662815709084108
+    },
+    "window_scores": [
+      0.6662815709084108
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "c720ca5afd5e600403a0d109e6686c1db3c26be845ad2acda7e979dc0d806666",
+      "input_tokens": 39,
+      "covered_tokens": 39,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          39
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/CONTRIBUTING.rst:289-293",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5086228885866106,
+      "max_window": 0.5073529125446617,
+      "top2_mean": 0.4993707621900366
+    },
+    "window_scores": [
+      0.5073529125446617,
+      0.4913886118354115
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "8f882a3a5f94b34d9bad5b37ec81c23870be9c440f68effa1a4309f0bb3041a4",
+      "input_tokens": 131,
+      "covered_tokens": 131,
+      "dropped_tokens": 0,
+      "chunks": 2,
+      "offsets": [
+        [
+          0,
+          126
+        ],
+        [
+          94,
+          131
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/CONTRIBUTING.rst:207-211",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5641692814402958,
+      "max_window": 0.5641692814402958,
+      "top2_mean": 0.5641692814402958
+    },
+    "window_scores": [
+      0.5641692814402958
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "92bd7c5b1eaf09d2ef881fe46627c279a51a3167d97db7beb5ec16606090e0a2",
+      "input_tokens": 69,
+      "covered_tokens": 69,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          69
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/CONTRIBUTING.rst:213-216",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.66174968340208,
+      "max_window": 0.661749665202573,
+      "top2_mean": 0.661749665202573
+    },
+    "window_scores": [
+      0.661749665202573
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "21120a1ca67212faa3daead4194b6d177293aff01424f6143ed6d9d8498981b2",
+      "input_tokens": 65,
+      "covered_tokens": 65,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          65
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/doc/en/explanation/ci.rst:9-12",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5808438665588322,
+      "max_window": 0.5808438665588322,
+      "top2_mean": 0.5808438665588322
+    },
+    "window_scores": [
+      0.5808438665588322
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "629e54dfe36418da6cd462847abd72041dec1ab2bd3afaf66d57d9c499737684",
+      "input_tokens": 54,
+      "covered_tokens": 54,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          54
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/doc/en/explanation/ci.rst:30-30",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.6641623225463452,
+      "max_window": 0.6641623225463452,
+      "top2_mean": 0.6641623225463452
+    },
+    "window_scores": [
+      0.6641623225463452
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "525821f74cf1fbe64599441e443b9f9c1bf45be13dfb4002975408199c85effe",
+      "input_tokens": 34,
+      "covered_tokens": 34,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          34
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/doc/en/explanation/ci.rst:62-69",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.594591824836016,
+      "max_window": 0.6384954765565949,
+      "top2_mean": 0.525649711976479
+    },
+    "window_scores": [
+      0.6384954765565949,
+      0.41280394739636317
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "e3295812e5cf98519fc9ceed30cc6c7bb81484a6111f78743707372d8c18ca1f",
+      "input_tokens": 160,
+      "covered_tokens": 160,
+      "dropped_tokens": 0,
+      "chunks": 2,
+      "offsets": [
+        [
+          0,
+          126
+        ],
+        [
+          94,
+          160
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/doc/en/how-to/usage.rst:41-45",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.41643046616383667,
+      "max_window": 0.41643046312055026,
+      "top2_mean": 0.41643046312055026
+    },
+    "window_scores": [
+      0.41643046312055026
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "ee15cc67fc2221295d108b1d2063fac682c21b10d3d535bf0997b993d1ee515d",
+      "input_tokens": 118,
+      "covered_tokens": 118,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          118
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/doc/en/how-to/usage.rst:236-238",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.5601723855478988,
+      "max_window": 0.5601723759969667,
+      "top2_mean": 0.5601723759969667
+    },
+    "window_scores": [
+      0.5601723759969667
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "2f0ba55246931a06db83ecc3756bcdcfd7e1092a4ee44b7eb425ccfa73259c5d",
+      "input_tokens": 30,
+      "covered_tokens": 30,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          30
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pytest/doc/en/explanation/ci.rst:14-15",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.6715263827654027,
+      "max_window": 0.6715263937579115,
+      "top2_mean": 0.6715263937579115
+    },
+    "window_scores": [
+      0.6715263937579115
+    ],
+    "winning_window": 0,
+    "coverage": {
+      "encoder": "1f6b50d2ed9f5c8f1334bec77d4228768fcc034aac1eb718f1cce3c294f0a305",
+      "text_sha256": "9c1fbc21d87c90b4ca3bb55a22bee79f62f4650360af99c7cd23b8e0263b75fe",
+      "input_tokens": 24,
+      "covered_tokens": 24,
+      "dropped_tokens": 0,
+      "chunks": 1,
+      "offsets": [
+        [
+          0,
+          24
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "kind": "development-only-long-text-ablation",
+  "seed": 2026,
+  "input_sha256": "9d3e95a409634436a2c7f5cfbe3cf741b97ce19ddf33b496931e02fb692a6dcb",
+  "partition_protocol_sha256": "572d01123e8d401cd6e56f045d4ec738070da281ac19a57091b84f3e8603e33c",
+  "code_sha256": {
+    "s6/prompt_injection/experiment_long_text_v1.py": "7fcc791af599ac624b0ac2dbddf82d001b89513006e7331d2eba720a0d2e0d07",
+    "s6/engineering/text_embeddings.py": "53d78659c6396435193b9c7711da07a94a3aabb6009f367d68cbc0cb7a420513",
+    "s6/engineering/artifacts.py": "8c578b648869b95166316f4d51a16d5edaea15abd1a91f45874462ff16ab7d56",
+    "s6/engineering/metrics.py": "31f654f3a5ea5add1d84209f2ffeb6647118a345f6ea2b052341ee8ff9ad16da"
+  },
+  "arms": [
+    "legacy_prefix_128",
+    "chunked_256_overlap32"
+  ],
+  "features": [
+    "content",
+    "joint"
+  ],
+  "classifier": "LogisticRegression C=1 balanced liblinear max_iter=2000 random_state=2026",
+  "threshold": "maximize validation recall at empirical FPR<=5%; tie lower FPR then higher threshold",
+  "test_policy": "No test embeddings or scores. Existing test previously exposed; no new independent claim.",
+  "deployment": "research only; frozen P2 and existing frontend remain unchanged",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

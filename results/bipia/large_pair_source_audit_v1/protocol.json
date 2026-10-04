@@ -1,0 +1,20 @@
+{
+  "source_manifest_sha256": "de796db5aca70885ca36934e04e0b4db031a9f48962e7340ea9641ecaf56491c",
+  "code_sha256": "b4a044f5301baed82fc470fe1cf0ed7f8d1a84da46c1e568b914abf99c70af73",
+  "group_rule": "shared pair, normalized task, source task ID, exact content; then char3-5 TFIDF max50k cosine>=.88 connected components",
+  "use": "source audit only; all labels null; no train/calibration/test partitions; no claim of independent test",
+  "exposure": "all downloaded rows inspected by schema/group audit; first example of each source also read by assistant; not a sealed test set",
+  "legacy_policy": "no old datasets modified or test files opened; no model fitting/scoring",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

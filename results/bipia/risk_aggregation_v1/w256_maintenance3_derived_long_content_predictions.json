@@ -1,0 +1,168 @@
+[
+  {
+    "id": "derived-long-flask",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.4954699171344634,
+      "max_window": 0.5461100302886956,
+      "top2_mean": 0.5430526006321323
+    },
+    "window_scores": [
+      0.539995170975569,
+      0.4713151986029088,
+      0.4634689673422984,
+      0.5461100302886956,
+      0.4388612205502061,
+      0.503848130688088,
+      0.4594696062579717
+    ],
+    "winning_window": 3,
+    "coverage": {
+      "encoder": "61071be4ac3fecec5f31ac67be9f8d6ecabf314bdbb0fe2b7865da5372be8d8d",
+      "text_sha256": "33fea40fba1d165c7ef835a3034975b48407a8e65ae4a9d100d3be3d72f1d147",
+      "input_tokens": 1532,
+      "covered_tokens": 1532,
+      "dropped_tokens": 0,
+      "chunks": 7,
+      "offsets": [
+        [
+          0,
+          254
+        ],
+        [
+          222,
+          476
+        ],
+        [
+          444,
+          698
+        ],
+        [
+          666,
+          920
+        ],
+        [
+          888,
+          1142
+        ],
+        [
+          1110,
+          1364
+        ],
+        [
+          1332,
+          1532
+        ]
+      ]
+    }
+  },
+  {
+    "id": "derived-long-pytest",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.737211171409035,
+      "max_window": 0.7553485945961754,
+      "top2_mean": 0.746560205785685
+    },
+    "window_scores": [
+      0.7363239891062746,
+      0.7553485945961754,
+      0.5557404351207336,
+      0.7279458976655054,
+      0.7377718169751946,
+      0.609653772439405,
+      0.6049092439136575
+    ],
+    "winning_window": 1,
+    "coverage": {
+      "encoder": "61071be4ac3fecec5f31ac67be9f8d6ecabf314bdbb0fe2b7865da5372be8d8d",
+      "text_sha256": "7215ff19c52d4d0eace42f4fe096edfb89c0a2fa0c78fed282ca9527c948d52b",
+      "input_tokens": 1448,
+      "covered_tokens": 1448,
+      "dropped_tokens": 0,
+      "chunks": 7,
+      "offsets": [
+        [
+          0,
+          254
+        ],
+        [
+          222,
+          476
+        ],
+        [
+          444,
+          698
+        ],
+        [
+          666,
+          920
+        ],
+        [
+          888,
+          1142
+        ],
+        [
+          1110,
+          1364
+        ],
+        [
+          1332,
+          1448
+        ]
+      ]
+    }
+  },
+  {
+    "id": "derived-long-requests",
+    "label": 0,
+    "scores": {
+      "full_mean": 0.6534320730789657,
+      "max_window": 0.7001250669555932,
+      "top2_mean": 0.6867589348886424
+    },
+    "window_scores": [
+      0.6733928028216916,
+      0.6175638635764862,
+      0.5230166180779096,
+      0.7001250669555932,
+      0.6563902256413655,
+      0.4652539942342232
+    ],
+    "winning_window": 3,
+    "coverage": {
+      "encoder": "61071be4ac3fecec5f31ac67be9f8d6ecabf314bdbb0fe2b7865da5372be8d8d",
+      "text_sha256": "8fc812a45e249799d3803ec8e95d7cbf84191026eb85be46aac9d2356fcf2744",
+      "input_tokens": 1292,
+      "covered_tokens": 1292,
+      "dropped_tokens": 0,
+      "chunks": 6,
+      "offsets": [
+        [
+          0,
+          254
+        ],
+        [
+          222,
+          476
+        ],
+        [
+          444,
+          698
+        ],
+        [
+          666,
+          920
+        ],
+        [
+          888,
+          1142
+        ],
+        [
+          1110,
+          1292
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "status": "FROZEN_BEFORE_FIT",
+  "source_url": "https://github.com/ppradyoth/AgentInjectionBench",
+  "source_revision": "5adb09800170683793b4e4d015e42e2002fa5adf",
+  "source_sha256": "bb27e5f94093b861a84c24f6f89bbf59203f41037f78fbd0d8c48666819a4b45",
+  "license": "Apache-2.0",
+  "data_kind": "upstream benchmark-native task/tool-result pairs, not real-user collected data",
+  "label_basis": "upstream safe/unsafe; assistant responses, attack taxonomy, severity, notes excluded from model inputs",
+  "source_count": 182,
+  "retained": 147,
+  "excluded": 35,
+  "counts": {
+    "train": {
+      "attack": 69,
+      "benign": 20
+    },
+    "validation": {
+      "attack": 23,
+      "benign": 6
+    },
+    "test": {
+      "attack": 22,
+      "benign": 7
+    }
+  },
+  "samples_sha256": "9d3e95a409634436a2c7f5cfbe3cf741b97ce19ddf33b496931e02fb692a6dcb",
+  "code_sha256": "e0a54c535d47b5b5f041a3c72cde2364f46f6991bf1bb7fbfbc95029e096225f",
+  "model_helpers_sha256": {
+    "train_repo_file_v1.py": "8209815cd6bed87a06d0210300cb28dc3b8ed8d9a85516c602c0488af7447e62",
+    "semantic_detector.py": "b6b8bd57907b1ae871fd18231bca3190e3ddd43075f77985d06998005d894e36",
+    "experiment_joint_context_v1.py": "014c0527231b2dd1e200a1069634aa36100b96ea5f5ca08a3d0af6fe78d09be1"
+  },
+  "reference_scope": "all original repo-file source, 36 reviewed examples, 10 previously evaluated AIB file-content cases",
+  "near_duplicate_cosine": 0.88,
+  "split": "5 stratified group folds; fold0 test, fold1 validation, others train; inspected AIB-00001 group forced train",
+  "seed": 2026,
+  "arms": [
+    "tfidf_content",
+    "minilm_task_only",
+    "minilm_content",
+    "minilm_joint"
+  ],
+  "classifier": "balanced logistic regression C=1 liblinear; no hyperparameter search",
+  "encoder": "frozen all-MiniLM-L6-v2; mean pool, normalized, max_length=128",
+  "joint_features": "task, content, abs(task-content), task*content, cosine",
+  "threshold": "maximize validation recall under empirical FPR<=5%; tie by lower FPR then higher threshold; reject-all permitted",
+  "report_fixed_threshold": 0.5,
+  "test_policy": "test read for grouping only; no embeddings or scores before model+threshold freeze; score once",
+  "cross_source_diagnostic": "36 earlier-reviewed, previously seen development cases; NOT a fresh independent test",
+  "limitations": [
+    "Same-source held-out test, not independent-source test.",
+    "Lexical grouping cannot rule out hidden template-family overlap.",
+    "Single seed and small benign validation/test counts; 5% constraint is not a population guarantee.",
+    "No permission policy or live frontend model changes."
+  ]
+}
