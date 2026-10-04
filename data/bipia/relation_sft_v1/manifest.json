@@ -1,0 +1,12 @@
+{
+  "samples_sha256": "8d8abd38d1529bfcf2e30a7c74b56e20f3243998015f806e68199d39ece1bc1d",
+  "split_counts": {
+    "train": 18,
+    "test": 6,
+    "validation": 6
+  },
+  "pair_samples": 30,
+  "human_meaning_approved": true,
+  "technical_fields_checked": true,
+  "training_started": false
+}

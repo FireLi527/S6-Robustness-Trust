@@ -1,0 +1,9 @@
+{
+  "steps": 147,
+  "peak_gpu_bytes": 4244227584,
+  "adapter_sha256": {
+    "adapter/adapter_config.json": "1d3aa12bea43fcb1893c663d39ac9adb5d5e4bf2ad794f3aa2c31facabd0d6bb",
+    "adapter/adapter_model.safetensors": "5d32ab6211f20ef9acca82ef45fe676e123d4309db607705eb47609e210294b6",
+    "adapter/README.md": "99f2e20aa6d948e4e89918065a29bb0ac615b3c60afeb34d1b4932ba468f40e3"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "state": "FAILED",
+  "started": "2026-10-01T07:42:37.942209+00:00",
+  "error_type": "RuntimeError",
+  "error": "expected scalar type Float but found BFloat16"
+}

@@ -1,0 +1,37 @@
+{
+  "protected_sha256": {
+    "data/bipia/repository_scope_human_review_v1/review.json": "bfbd20bd10dc15ae2e78b584b6f02afc942bcdb811474e9d0f3d8bc90742a7e4",
+    "data/bipia/repository_scope_review_v1/inputs.json": "796e0ea5694450584fdce5cb241805cb316bec5330e02f0a1861b96b2ab41d95",
+    "data/bipia/repository_scope_review_v1/assistant_proposals.json": "e1f95e6d9da433d0af3bfa598c9348e2d060c6b9f7e590837ff1395d8b35279e",
+    "data\\bipia\\repository_scope_human_review_v1\\field_confirmation.json": "61f2450c43d99c0f3862f3e1077a081b36db6419d5b5a5a2586af807ea43e5b3",
+    "s6\\prompt_injection\\finalize_repository_scope_review.py": "49b510dfdbcb8e839b2e51ca304846239b088234dcac7b136206dda823a41c03",
+    "s6/prompt_injection/relation_contract_v1.py": "95ca2c0ae4168650b9c4167dac7bf6a61a5d8c9da23bfd59acb7501546247205",
+    "s6/prompt_injection/relation_seed_conversion_v1.py": "e1644a93b865125b2e86bf19e36c1c65cdd5fd8d8d445af94f52195a2fef0773",
+    "data\\bipia\\repository_scope_approved_v1\\annotations.json": "0ed732c0847e7261c570ebed39648809f1a27f34e15a29661e2963b4f01e83a7",
+    "data\\bipia\\relation_expansion_review_v1\\inputs.json": "204b1cd593c491d88022e0c6c1d9d9555e7b6970d5671afcbf93dec6d4c8a7db",
+    "data\\bipia\\relation_expansion_review_v1\\human_review.json": "3ed0de4e2dcf1fce42ddef99a3b4081383d2df22019a8bd6cf79f19dc2ec9ba6",
+    "data\\bipia\\relation_expansion_review_v1\\assistant_proposals.json": "7af4451256d0072d602d00111beb8a1b5fb94145e0fbccc031747bdfd30a7f3e",
+    "data\\bipia\\relation_seed_conversion_v1\\train_seed_targets.json": "632f3dddebe7116c07d8cdb15838e6748fcd0bd61b8e5d7a4aae52be0f3917d9",
+    "data\\bipia\\repository_scope_human_review_v1\\field_amendment_01.json": "fe516dba558583ffd6ed853367052b8aa83d14a808130b5049784856ec28dcd8",
+    "s6\\prompt_injection\\prepare_relation_sft_v1.py": "f972c91911fc5cc3aa7bc60c70b1e3d8a157138cb232d2d831e3e0bed0d31c38",
+    "s6\\prompt_injection\\relation_expansion_conversion_v1.py": "af08c32194d203fe8720b58317c3c0ad486b9d70cf1f1a91b33fa30485d988ca"
+  },
+  "task": "Single-side multi-action extraction, not direct attack classification",
+  "labels": "Human-approved meaning; assistant technical machine conversion with strict source checks, NOT individually human-verified JSON",
+  "scope": "Exploratory few-example feasibility pilot. No augmented copies, no large-data generalization claim.",
+  "train": "18 paired cases in 8 groups, deduplicate identical side inputs/targets for training",
+  "evaluation": "6 validation cases/2 new groups; 6 test cases/2 new groups. Same author, synthetic. No test-driven selection.",
+  "plan": "Official HF Qwen3-4B fixed revision, NF4, rank8 q_proj/v_proj LoRA, seed2026, batch1 accumulate4, fixed3 epochs, AdamW lr0.0002 weight_decay0.01, no checkpoint selection. Reject sequences beyond2048 rather than truncate. Compare frozen base zero-shot and fixed train-only few-shot with adapter zero-shot on all val/test sides; score after training. No tool access.",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

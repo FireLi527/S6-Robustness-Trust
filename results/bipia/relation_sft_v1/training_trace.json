@@ -1,0 +1,128 @@
+[
+  {
+    "step": 1,
+    "epoch": 1,
+    "loss": 0.5891487151384354,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 2,
+    "epoch": 1,
+    "loss": 0.44826503098011017,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 3,
+    "epoch": 1,
+    "loss": 0.3603498861193657,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 4,
+    "epoch": 1,
+    "loss": 0.5187961831688881,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 5,
+    "epoch": 1,
+    "loss": 0.24531330540776253,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 6,
+    "epoch": 1,
+    "loss": 0.20948827685788274,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 7,
+    "epoch": 1,
+    "loss": 0.07949106395244598,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 8,
+    "epoch": 2,
+    "loss": 0.16962983924895525,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 9,
+    "epoch": 2,
+    "loss": 0.0990562909282744,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 10,
+    "epoch": 2,
+    "loss": 0.11725479457527399,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 11,
+    "epoch": 2,
+    "loss": 0.06634771835524589,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 12,
+    "epoch": 2,
+    "loss": 0.17498084530234337,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 13,
+    "epoch": 2,
+    "loss": 0.07557611830998212,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 14,
+    "epoch": 2,
+    "loss": 0.12590978294610977,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 15,
+    "epoch": 3,
+    "loss": 0.07118695531971753,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 16,
+    "epoch": 3,
+    "loss": 0.0519775131251663,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 17,
+    "epoch": 3,
+    "loss": 0.06081347679719329,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 18,
+    "epoch": 3,
+    "loss": 0.07418154529295862,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 19,
+    "epoch": 3,
+    "loss": 0.048170436173677444,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 20,
+    "epoch": 3,
+    "loss": 0.0973080974072218,
+    "peak_gpu_bytes": 4234948608
+  },
+  {
+    "step": 21,
+    "epoch": 3,
+    "loss": 0.07154526747763157,
+    "peak_gpu_bytes": 4234948608
+  }
+]

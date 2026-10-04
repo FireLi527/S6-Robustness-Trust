@@ -1,0 +1,62 @@
+{
+  "base_zero": {
+    "side_samples": 12,
+    "valid": 6,
+    "exact": 0,
+    "unique_sides": 8,
+    "unique_exact": 0,
+    "pairs": 6,
+    "both_exact": 0,
+    "strict_units": {
+      "matched": 0,
+      "predicted": 7,
+      "reference": 24
+    },
+    "group_exact_rates": {
+      "container_quota": 0.0,
+      "job_cancel": 0.0
+    },
+    "macro_group_exact": 0.0,
+    "unfinished": 0
+  },
+  "base_fewshot": {
+    "side_samples": 12,
+    "valid": 5,
+    "exact": 0,
+    "unique_sides": 8,
+    "unique_exact": 0,
+    "pairs": 6,
+    "both_exact": 0,
+    "strict_units": {
+      "matched": 2,
+      "predicted": 9,
+      "reference": 24
+    },
+    "group_exact_rates": {
+      "container_quota": 0.0,
+      "job_cancel": 0.0
+    },
+    "macro_group_exact": 0.0,
+    "unfinished": 0
+  },
+  "adapter_zero": {
+    "side_samples": 12,
+    "valid": 8,
+    "exact": 0,
+    "unique_sides": 8,
+    "unique_exact": 0,
+    "pairs": 6,
+    "both_exact": 0,
+    "strict_units": {
+      "matched": 5,
+      "predicted": 17,
+      "reference": 24
+    },
+    "group_exact_rates": {
+      "container_quota": 0.0,
+      "job_cancel": 0.0
+    },
+    "macro_group_exact": 0.0,
+    "unfinished": 0
+  }
+}

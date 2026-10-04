@@ -1,0 +1,86 @@
+{
+  "protected_sha256": {
+    "data\\bipia\\relation_development_review_v2\\inputs.json": "2660c3d73f9a90aae1b7853fd6c184ecbb88aaa27014ba095b89b9faafa71d49",
+    "data\\bipia\\relation_development_review_v2\\assistant_proposals.json": "ae79e0ee8546bd1b6ddd2107e5d983539a2d06da7a8cf55b182acdf7709fb46a",
+    "data\\bipia\\relation_development_review_v2\\human_review.json": "3342c4cf7b8d02cc198f7f05ef67b76ad43a0c2cee5744621cdfb63b12e56bb4",
+    "s6\\prompt_injection\\RELATION_ANNOTATION_V2_ZH.md": "341510d3cef1f80b5377fee42e44f30773bd6953479e6868b717a43df5e33cac",
+    "s6\\prompt_injection\\relation_contract_v2.py": "ece072613d0f913af47dda32f4cdc55fa9909f09c802d8a8b6a70b60640b1cc2",
+    "s6\\prompt_injection\\relation_conversion_v2.py": "888ebaaf48f919a0dd7d22273eaf95541cfd11ef240cbf13393f70541f0e68bf",
+    "s6\\prompt_injection\\prepare_relation_sft_v2.py": "720d269da69e5abd48090f3acb9630cdc8a2f69793ee8db217912bf6d306788d",
+    "data/bipia/relation_sft_v2/samples.json": "1f0ea22c8aebb96063a8e2f5b1a10c7e7f4df47b58b3cf22741b3a17f18b3be2",
+    "s6/prompt_injection/relation_sft_runtime.py": "f4e75330ed89495e84d54e8ac1defa932e8ebaf63e01da1360ee42b808d5ba2f",
+    "s6/prompt_injection/relation_sft_io.py": "358a3b816756df63c134c87a2fca846a76710d400a0a14c99e6d60fd0927551e",
+    "s6/prompt_injection/relation_contract_v1.py": "95ca2c0ae4168650b9c4167dac7bf6a61a5d8c9da23bfd59acb7501546247205",
+    "s6/prompt_injection/relation_sft_v2_io.py": "7d7555f648bb8cddfcec8abc4d2342d8160e91a0f92e71274df5aecdd3bfa60a",
+    "s6/prompt_injection/relation_sft_v2_evaluation.py": "0ebd402008fca7c0a092710a278e9c99c7c0997b6ef173c821f3d0a270f83f71",
+    "s6/prompt_injection/experiment_relation_sft_v2.py": "ca6919b18e1b3cb586a4e8549bc8bd11227590dbf9e443345fe4c30308b5b4b5"
+  },
+  "model_files_sha256": {
+    "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "README.md": "71add1cd091c309b1cb1a6b943f2476eb2b004124b3bd1d32dcd0b24cc1abc47",
+    "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+    "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+    "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+    "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+    "model.safetensors.index.json": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "bitsandbytes": "0.50.2"
+  },
+  "data_protocol": {
+    "protected_sha256": {
+      "data\\bipia\\relation_development_review_v2\\inputs.json": "2660c3d73f9a90aae1b7853fd6c184ecbb88aaa27014ba095b89b9faafa71d49",
+      "data\\bipia\\relation_development_review_v2\\assistant_proposals.json": "ae79e0ee8546bd1b6ddd2107e5d983539a2d06da7a8cf55b182acdf7709fb46a",
+      "data\\bipia\\relation_development_review_v2\\human_review.json": "3342c4cf7b8d02cc198f7f05ef67b76ad43a0c2cee5744621cdfb63b12e56bb4",
+      "s6\\prompt_injection\\RELATION_ANNOTATION_V2_ZH.md": "341510d3cef1f80b5377fee42e44f30773bd6953479e6868b717a43df5e33cac",
+      "s6\\prompt_injection\\relation_contract_v2.py": "ece072613d0f913af47dda32f4cdc55fa9909f09c802d8a8b6a70b60640b1cc2",
+      "s6\\prompt_injection\\relation_conversion_v2.py": "888ebaaf48f919a0dd7d22273eaf95541cfd11ef240cbf13393f70541f0e68bf",
+      "s6\\prompt_injection\\prepare_relation_sft_v2.py": "720d269da69e5abd48090f3acb9630cdc8a2f69793ee8db217912bf6d306788d"
+    },
+    "data_role": "Development only; no independent test in this run",
+    "split": "8 reviewed groups; SHA256 dev2-split ordering, first6 train, last2 validation",
+    "plan": "Same official NF4 Qwen3-4B, fresh rank8 q/v LoRA, seed2026, lr2e-4 wd.01, fixed3 epochs, batch1 accumulate4. No selection. Compare base zero, base train-only few-shot and adapter zero. No v1 evaluation inputs. No tools.",
+    "metrics": "Strict grounded reference units; no automated semantic equivalence claim, no attack detection metrics",
+    "limitations": "Synthetic same-author groups; related boundary concepts remain; no source independence or exact v1/v2 effect comparison",
+    "environment": {
+      "python": "3.13.14",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.0",
+        "torch": "2.13.0+cpu",
+        "transformers": "5.15.1",
+        "tokenizers": "0.22.2"
+      }
+    }
+  },
+  "fewshot_ids": [
+    "dev2-01"
+  ],
+  "train_unique_sides": 24,
+  "max_training_tokens": 660,
+  "max_fewshot_input_tokens": 615,
+  "generation": "greedy,1600 new,4096 total,no grammar,no output repair",
+  "evaluation": "Development validation only, fixed3 epochs; no checkpoint selection; no independent test or detection metrics",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

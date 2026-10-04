@@ -1,0 +1,28 @@
+{
+  "protected_sha256": {
+    "data\\bipia\\relation_development_review_v2\\inputs.json": "2660c3d73f9a90aae1b7853fd6c184ecbb88aaa27014ba095b89b9faafa71d49",
+    "data\\bipia\\relation_development_review_v2\\assistant_proposals.json": "ae79e0ee8546bd1b6ddd2107e5d983539a2d06da7a8cf55b182acdf7709fb46a",
+    "data\\bipia\\relation_development_review_v2\\human_review.json": "3342c4cf7b8d02cc198f7f05ef67b76ad43a0c2cee5744621cdfb63b12e56bb4",
+    "s6\\prompt_injection\\RELATION_ANNOTATION_V2_ZH.md": "341510d3cef1f80b5377fee42e44f30773bd6953479e6868b717a43df5e33cac",
+    "s6\\prompt_injection\\relation_contract_v2.py": "ece072613d0f913af47dda32f4cdc55fa9909f09c802d8a8b6a70b60640b1cc2",
+    "s6\\prompt_injection\\relation_conversion_v2.py": "888ebaaf48f919a0dd7d22273eaf95541cfd11ef240cbf13393f70541f0e68bf",
+    "s6\\prompt_injection\\prepare_relation_sft_v2.py": "720d269da69e5abd48090f3acb9630cdc8a2f69793ee8db217912bf6d306788d"
+  },
+  "data_role": "Development only; no independent test in this run",
+  "split": "8 reviewed groups; SHA256 dev2-split ordering, first6 train, last2 validation",
+  "plan": "Same official NF4 Qwen3-4B, fresh rank8 q/v LoRA, seed2026, lr2e-4 wd.01, fixed3 epochs, batch1 accumulate4. No selection. Compare base zero, base train-only few-shot and adapter zero. No v1 evaluation inputs. No tools.",
+  "metrics": "Strict grounded reference units; no automated semantic equivalence claim, no attack detection metrics",
+  "limitations": "Synthetic same-author groups; related boundary concepts remain; no source independence or exact v1/v2 effect comparison",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

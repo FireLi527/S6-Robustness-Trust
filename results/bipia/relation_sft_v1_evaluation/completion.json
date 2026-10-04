@@ -1,0 +1,10 @@
+{
+  "optimizer_steps": 21,
+  "adapter_sha256": {
+    "adapter/adapter_config.json": "faaf26b251984e2cfc898e4aa9ff780516db8bd54978e207afdc6e1e44a2ec85",
+    "adapter/adapter_model.safetensors": "2c64e2f379701f95e0502e9463e2aa918f7d02a8f34f5296b6ba9f1a6a3405b1",
+    "adapter/README.md": "99f2e20aa6d948e4e89918065a29bb0ac615b3c60afeb34d1b4932ba468f40e3"
+  },
+  "peak_evaluation_gpu_bytes": 4234948608,
+  "retrained": false
+}

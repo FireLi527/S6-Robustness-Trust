@@ -1,0 +1,33 @@
+{
+  "arms": {
+    "small_8": {
+      "steps": 42,
+      "peak_gpu_bytes": 4244565504,
+      "adapter_sha256": {
+        "adapter/adapter_config.json": "1d3aa12bea43fcb1893c663d39ac9adb5d5e4bf2ad794f3aa2c31facabd0d6bb",
+        "adapter/adapter_model.safetensors": "78e4890b4021d7cf3454f18ede511c53ccdf26a6ca8457beb18aa15de4e72886",
+        "adapter/README.md": "99f2e20aa6d948e4e89918065a29bb0ac615b3c60afeb34d1b4932ba468f40e3"
+      }
+    },
+    "medium_16": {
+      "steps": 84,
+      "peak_gpu_bytes": 4243531264,
+      "adapter_sha256": {
+        "adapter/adapter_config.json": "1d3aa12bea43fcb1893c663d39ac9adb5d5e4bf2ad794f3aa2c31facabd0d6bb",
+        "adapter/adapter_model.safetensors": "98ffddf27706a9d10a7aa1500b423185ad0ce73a071e8dcaa6e6eb1951ed8daa",
+        "adapter/README.md": "99f2e20aa6d948e4e89918065a29bb0ac615b3c60afeb34d1b4932ba468f40e3"
+      }
+    },
+    "large_28": {
+      "steps": 147,
+      "peak_gpu_bytes": 4244227584,
+      "adapter_sha256": {
+        "adapter/adapter_config.json": "1d3aa12bea43fcb1893c663d39ac9adb5d5e4bf2ad794f3aa2c31facabd0d6bb",
+        "adapter/adapter_model.safetensors": "5d32ab6211f20ef9acca82ef45fe676e123d4309db607705eb47609e210294b6",
+        "adapter/README.md": "99f2e20aa6d948e4e89918065a29bb0ac615b3c60afeb34d1b4932ba468f40e3"
+      }
+    }
+  },
+  "evaluation_started": false,
+  "independent_test_claim": false
+}

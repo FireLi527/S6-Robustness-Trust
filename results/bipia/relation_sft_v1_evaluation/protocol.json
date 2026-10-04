@@ -1,0 +1,192 @@
+{
+  "protected_sha256": {
+    "data/bipia/repository_scope_human_review_v1/review.json": "bfbd20bd10dc15ae2e78b584b6f02afc942bcdb811474e9d0f3d8bc90742a7e4",
+    "data/bipia/repository_scope_review_v1/inputs.json": "796e0ea5694450584fdce5cb241805cb316bec5330e02f0a1861b96b2ab41d95",
+    "data/bipia/repository_scope_review_v1/assistant_proposals.json": "e1f95e6d9da433d0af3bfa598c9348e2d060c6b9f7e590837ff1395d8b35279e",
+    "data\\bipia\\repository_scope_human_review_v1\\field_confirmation.json": "61f2450c43d99c0f3862f3e1077a081b36db6419d5b5a5a2586af807ea43e5b3",
+    "s6\\prompt_injection\\finalize_repository_scope_review.py": "49b510dfdbcb8e839b2e51ca304846239b088234dcac7b136206dda823a41c03",
+    "s6/prompt_injection/relation_contract_v1.py": "95ca2c0ae4168650b9c4167dac7bf6a61a5d8c9da23bfd59acb7501546247205",
+    "s6/prompt_injection/relation_seed_conversion_v1.py": "e1644a93b865125b2e86bf19e36c1c65cdd5fd8d8d445af94f52195a2fef0773",
+    "data\\bipia\\repository_scope_approved_v1\\annotations.json": "0ed732c0847e7261c570ebed39648809f1a27f34e15a29661e2963b4f01e83a7",
+    "data\\bipia\\relation_expansion_review_v1\\inputs.json": "204b1cd593c491d88022e0c6c1d9d9555e7b6970d5671afcbf93dec6d4c8a7db",
+    "data\\bipia\\relation_expansion_review_v1\\human_review.json": "3ed0de4e2dcf1fce42ddef99a3b4081383d2df22019a8bd6cf79f19dc2ec9ba6",
+    "data\\bipia\\relation_expansion_review_v1\\assistant_proposals.json": "7af4451256d0072d602d00111beb8a1b5fb94145e0fbccc031747bdfd30a7f3e",
+    "data\\bipia\\relation_seed_conversion_v1\\train_seed_targets.json": "632f3dddebe7116c07d8cdb15838e6748fcd0bd61b8e5d7a4aae52be0f3917d9",
+    "data\\bipia\\repository_scope_human_review_v1\\field_amendment_01.json": "fe516dba558583ffd6ed853367052b8aa83d14a808130b5049784856ec28dcd8",
+    "s6\\prompt_injection\\prepare_relation_sft_v1.py": "f972c91911fc5cc3aa7bc60c70b1e3d8a157138cb232d2d831e3e0bed0d31c38",
+    "s6\\prompt_injection\\relation_expansion_conversion_v1.py": "af08c32194d203fe8720b58317c3c0ad486b9d70cf1f1a91b33fa30485d988ca",
+    "data/bipia/relation_sft_v1/samples.json": "8d8abd38d1529bfcf2e30a7c74b56e20f3243998015f806e68199d39ece1bc1d",
+    "s6/prompt_injection/relation_sft_io.py": "358a3b816756df63c134c87a2fca846a76710d400a0a14c99e6d60fd0927551e",
+    "s6/prompt_injection/relation_sft_runtime.py": "f4e75330ed89495e84d54e8ac1defa932e8ebaf63e01da1360ee42b808d5ba2f",
+    "s6/prompt_injection/experiment_relation_sft_v1.py": "d3d3e7e23a23b99f7cebdc5263b0a7e852d18e18a0ebc7ffe40c0b0330d2ae9e",
+    "results/bipia/relation_sft_v1/parameters.json": "7b38b5ae5151917cc806bd80c8a58a94ad329b70a8a00e68aba153f77ee06980",
+    "results/bipia/relation_sft_v1/protocol.json": "838bd885d70d59ac1e5c579bc71ca714083c12319b7dabc86cb367b3691aa927",
+    "results/bipia/relation_sft_v1/status.json": "45108ee9c9494b88d6f4293a3ca0217fae95fa0cd12934ddd26ace3839e9aec4",
+    "results/bipia/relation_sft_v1/training_trace.json": "ab6dbed38a909047928f52578bc18f4b01b73a68be1bfd0a08fc7095f0489e7d",
+    "results/bipia/relation_sft_v1/adapter/adapter_config.json": "faaf26b251984e2cfc898e4aa9ff780516db8bd54978e207afdc6e1e44a2ec85",
+    "results/bipia/relation_sft_v1/adapter/adapter_model.safetensors": "2c64e2f379701f95e0502e9463e2aa918f7d02a8f34f5296b6ba9f1a6a3405b1",
+    "results/bipia/relation_sft_v1/adapter/README.md": "99f2e20aa6d948e4e89918065a29bb0ac615b3c60afeb34d1b4932ba468f40e3",
+    "s6/prompt_injection/evaluate_relation_sft_checkpoint_v1.py": "328faa78ff6992367768322e4589deb55b3daee6a9b99ad0105810c338f4880e"
+  },
+  "source_training": "results/bipia/relation_sft_v1",
+  "original_status": {
+    "state": "FAILED",
+    "started": "2026-10-01T07:42:37.942209+00:00",
+    "error_type": "RuntimeError",
+    "error": "expected scalar type Float but found BFloat16"
+  },
+  "change": "Add BF16 autocast during generation; no retraining or parameter/data changes",
+  "adapter_sha256": {
+    "adapter/adapter_config.json": "faaf26b251984e2cfc898e4aa9ff780516db8bd54978e207afdc6e1e44a2ec85",
+    "adapter/adapter_model.safetensors": "2c64e2f379701f95e0502e9463e2aa918f7d02a8f34f5296b6ba9f1a6a3405b1",
+    "adapter/README.md": "99f2e20aa6d948e4e89918065a29bb0ac615b3c60afeb34d1b4932ba468f40e3"
+  },
+  "original_protocol": {
+    "protected_sha256": {
+      "data/bipia/repository_scope_human_review_v1/review.json": "bfbd20bd10dc15ae2e78b584b6f02afc942bcdb811474e9d0f3d8bc90742a7e4",
+      "data/bipia/repository_scope_review_v1/inputs.json": "796e0ea5694450584fdce5cb241805cb316bec5330e02f0a1861b96b2ab41d95",
+      "data/bipia/repository_scope_review_v1/assistant_proposals.json": "e1f95e6d9da433d0af3bfa598c9348e2d060c6b9f7e590837ff1395d8b35279e",
+      "data\\bipia\\repository_scope_human_review_v1\\field_confirmation.json": "61f2450c43d99c0f3862f3e1077a081b36db6419d5b5a5a2586af807ea43e5b3",
+      "s6\\prompt_injection\\finalize_repository_scope_review.py": "49b510dfdbcb8e839b2e51ca304846239b088234dcac7b136206dda823a41c03",
+      "s6/prompt_injection/relation_contract_v1.py": "95ca2c0ae4168650b9c4167dac7bf6a61a5d8c9da23bfd59acb7501546247205",
+      "s6/prompt_injection/relation_seed_conversion_v1.py": "e1644a93b865125b2e86bf19e36c1c65cdd5fd8d8d445af94f52195a2fef0773",
+      "data\\bipia\\repository_scope_approved_v1\\annotations.json": "0ed732c0847e7261c570ebed39648809f1a27f34e15a29661e2963b4f01e83a7",
+      "data\\bipia\\relation_expansion_review_v1\\inputs.json": "204b1cd593c491d88022e0c6c1d9d9555e7b6970d5671afcbf93dec6d4c8a7db",
+      "data\\bipia\\relation_expansion_review_v1\\human_review.json": "3ed0de4e2dcf1fce42ddef99a3b4081383d2df22019a8bd6cf79f19dc2ec9ba6",
+      "data\\bipia\\relation_expansion_review_v1\\assistant_proposals.json": "7af4451256d0072d602d00111beb8a1b5fb94145e0fbccc031747bdfd30a7f3e",
+      "data\\bipia\\relation_seed_conversion_v1\\train_seed_targets.json": "632f3dddebe7116c07d8cdb15838e6748fcd0bd61b8e5d7a4aae52be0f3917d9",
+      "data\\bipia\\repository_scope_human_review_v1\\field_amendment_01.json": "fe516dba558583ffd6ed853367052b8aa83d14a808130b5049784856ec28dcd8",
+      "s6\\prompt_injection\\prepare_relation_sft_v1.py": "f972c91911fc5cc3aa7bc60c70b1e3d8a157138cb232d2d831e3e0bed0d31c38",
+      "s6\\prompt_injection\\relation_expansion_conversion_v1.py": "af08c32194d203fe8720b58317c3c0ad486b9d70cf1f1a91b33fa30485d988ca",
+      "data/bipia/relation_sft_v1/samples.json": "8d8abd38d1529bfcf2e30a7c74b56e20f3243998015f806e68199d39ece1bc1d",
+      "s6/prompt_injection/relation_sft_io.py": "358a3b816756df63c134c87a2fca846a76710d400a0a14c99e6d60fd0927551e",
+      "s6/prompt_injection/relation_sft_runtime.py": "f4e75330ed89495e84d54e8ac1defa932e8ebaf63e01da1360ee42b808d5ba2f",
+      "s6/prompt_injection/experiment_relation_sft_v1.py": "d3d3e7e23a23b99f7cebdc5263b0a7e852d18e18a0ebc7ffe40c0b0330d2ae9e"
+    },
+    "model_files_sha256": {
+      "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "README.md": "71add1cd091c309b1cb1a6b943f2476eb2b004124b3bd1d32dcd0b24cc1abc47",
+      "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+      "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+      "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+      "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+      "model.safetensors.index.json": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+      "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "model": {
+      "model": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "license": "apache-2.0",
+      "expected_sizes": {
+        "LICENSE": 11343,
+        "README.md": 16857,
+        "config.json": 726,
+        "generation_config.json": 239,
+        "merges.txt": 1671853,
+        "model-00001-of-00003.safetensors": 3957900840,
+        "model-00002-of-00003.safetensors": 3987450520,
+        "model-00003-of-00003.safetensors": 99630640,
+        "model.safetensors.index.json": 32819,
+        "tokenizer.json": 11422654,
+        "tokenizer_config.json": 9732,
+        "vocab.json": 2776833
+      },
+      "code_sha256": "cf4679313214eead1856565ad4c7778a6d6a17274dd3de31cf77dcb69bf4b28a",
+      "purpose": "Official HF safetensors for local adapter pilot; not Ollama GGUF training",
+      "environment": {
+        "python": "3.13.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "packages": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.0",
+          "torch": "2.13.0+cpu",
+          "transformers": "5.15.1",
+          "tokenizers": "0.22.2"
+        }
+      }
+    },
+    "data_protocol": {
+      "protected_sha256": {
+        "data/bipia/repository_scope_human_review_v1/review.json": "bfbd20bd10dc15ae2e78b584b6f02afc942bcdb811474e9d0f3d8bc90742a7e4",
+        "data/bipia/repository_scope_review_v1/inputs.json": "796e0ea5694450584fdce5cb241805cb316bec5330e02f0a1861b96b2ab41d95",
+        "data/bipia/repository_scope_review_v1/assistant_proposals.json": "e1f95e6d9da433d0af3bfa598c9348e2d060c6b9f7e590837ff1395d8b35279e",
+        "data\\bipia\\repository_scope_human_review_v1\\field_confirmation.json": "61f2450c43d99c0f3862f3e1077a081b36db6419d5b5a5a2586af807ea43e5b3",
+        "s6\\prompt_injection\\finalize_repository_scope_review.py": "49b510dfdbcb8e839b2e51ca304846239b088234dcac7b136206dda823a41c03",
+        "s6/prompt_injection/relation_contract_v1.py": "95ca2c0ae4168650b9c4167dac7bf6a61a5d8c9da23bfd59acb7501546247205",
+        "s6/prompt_injection/relation_seed_conversion_v1.py": "e1644a93b865125b2e86bf19e36c1c65cdd5fd8d8d445af94f52195a2fef0773",
+        "data\\bipia\\repository_scope_approved_v1\\annotations.json": "0ed732c0847e7261c570ebed39648809f1a27f34e15a29661e2963b4f01e83a7",
+        "data\\bipia\\relation_expansion_review_v1\\inputs.json": "204b1cd593c491d88022e0c6c1d9d9555e7b6970d5671afcbf93dec6d4c8a7db",
+        "data\\bipia\\relation_expansion_review_v1\\human_review.json": "3ed0de4e2dcf1fce42ddef99a3b4081383d2df22019a8bd6cf79f19dc2ec9ba6",
+        "data\\bipia\\relation_expansion_review_v1\\assistant_proposals.json": "7af4451256d0072d602d00111beb8a1b5fb94145e0fbccc031747bdfd30a7f3e",
+        "data\\bipia\\relation_seed_conversion_v1\\train_seed_targets.json": "632f3dddebe7116c07d8cdb15838e6748fcd0bd61b8e5d7a4aae52be0f3917d9",
+        "data\\bipia\\repository_scope_human_review_v1\\field_amendment_01.json": "fe516dba558583ffd6ed853367052b8aa83d14a808130b5049784856ec28dcd8",
+        "s6\\prompt_injection\\prepare_relation_sft_v1.py": "f972c91911fc5cc3aa7bc60c70b1e3d8a157138cb232d2d831e3e0bed0d31c38",
+        "s6\\prompt_injection\\relation_expansion_conversion_v1.py": "af08c32194d203fe8720b58317c3c0ad486b9d70cf1f1a91b33fa30485d988ca"
+      },
+      "task": "Single-side multi-action extraction, not direct attack classification",
+      "labels": "Human-approved meaning; assistant technical machine conversion with strict source checks, NOT individually human-verified JSON",
+      "scope": "Exploratory few-example feasibility pilot. No augmented copies, no large-data generalization claim.",
+      "train": "18 paired cases in 8 groups, deduplicate identical side inputs/targets for training",
+      "evaluation": "6 validation cases/2 new groups; 6 test cases/2 new groups. Same author, synthetic. No test-driven selection.",
+      "plan": "Official HF Qwen3-4B fixed revision, NF4, rank8 q_proj/v_proj LoRA, seed2026, batch1 accumulate4, fixed3 epochs, AdamW lr0.0002 weight_decay0.01, no checkpoint selection. Reject sequences beyond2048 rather than truncate. Compare frozen base zero-shot and fixed train-only few-shot with adapter zero-shot on all val/test sides; score after training. No tool access.",
+      "environment": {
+        "python": "3.13.14",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "packages": {
+          "numpy": "2.5.2",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.0",
+          "torch": "2.13.0+cpu",
+          "transformers": "5.15.1",
+          "tokenizers": "0.22.2"
+        }
+      }
+    },
+    "packages": {
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "peft": "0.21.1",
+      "accelerate": "1.15.0",
+      "bitsandbytes": "0.50.2"
+    },
+    "train_unique_sides": 26,
+    "max_training_tokens": 555,
+    "fewshot_train_ids": [
+      "old-9",
+      "old-16",
+      "new-4"
+    ],
+    "generation": "greedy,1200 new tokens,4096 total budget,no JSON grammar forcing",
+    "memory": "NF4 with double quantization, BF16 compute and frozen embeddings, nonreentrant gradient checkpointing",
+    "evaluation": "No early stopping/checkpoint selection. Strict technical extraction fields, not attack recall/FPR or independent natural-source benchmark.",
+    "environment": {
+      "python": "3.12.3",
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.5.2",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.0",
+        "torch": "2.13.0+cu130",
+        "transformers": "5.18.0",
+        "tokenizers": "0.23.2"
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

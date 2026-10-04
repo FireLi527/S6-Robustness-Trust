@@ -1,0 +1,87 @@
+{
+  "protected_sha256": {
+    "data\\bipia\\relation_scale_candidates_v1\\inputs.json": "0eed5afabe14f34519ad11ecbf65b2f397989b45d81fa3f59d68cbd71895cd39",
+    "data\\bipia\\relation_scale_candidates_v1\\proposals.json": "608eeed6bc87292692d3d21ef88f04486dd8f49571185786ed9086dbb9ef507a",
+    "data\\bipia\\relation_scale_candidates_v1\\human_review_01.json": "5f9ea96f8fe5754b62ed1f0b7487933cd2d996d96021ffb5ca79f08a3943ad6b",
+    "data\\bipia\\relation_scale_candidates_v1\\human_review_02.json": "0dd6a58ab37d52cd8ebb04855da4831e49d5aaaf73ac7acdadbd14d69a936d8e",
+    "data\\bipia\\relation_scale_candidates_v1\\human_review_03.json": "a1d2bf08344cb5f416830fad5d8aad45ede5bcb187d137aa15dd152d303d2074",
+    "data\\bipia\\relation_scale_candidates_v1\\human_review_04.json": "931418a35a101d5303b56306d31bab7704e50441da5cd7d10dfc4b9031227e19",
+    "data\\bipia\\relation_development_review_v2\\inputs.json": "2660c3d73f9a90aae1b7853fd6c184ecbb88aaa27014ba095b89b9faafa71d49",
+    "data\\bipia\\relation_development_review_v2\\human_review.json": "3342c4cf7b8d02cc198f7f05ef67b76ad43a0c2cee5744621cdfb63b12e56bb4",
+    "s6\\prompt_injection\\relation_scale_data_v1.py": "865cd5051cb4526989676321845b32874f699bf9287ef205f2a68fd6bef50046",
+    "s6\\prompt_injection\\relation_scale_targets_v1.py": "38103ad4d544aa3da80696629b627dc8ca715a4b27aa4a6a9b145ba80382eb5d",
+    "s6\\prompt_injection\\relation_contract_v2.py": "ece072613d0f913af47dda32f4cdc55fa9909f09c802d8a8b6a70b60640b1cc2",
+    "s6\\prompt_injection\\relation_conversion_v2.py": "888ebaaf48f919a0dd7d22273eaf95541cfd11ef240cbf13393f70541f0e68bf",
+    "s6\\prompt_injection\\prepare_relation_scale_training_v1.py": "2fbc253818943fe3dbc8139c90bea7c801e726b1a3689497f23753dc74a0530a",
+    "data/bipia/relation_scale_training_v1/protocol.json": "d46928ae87574005ee31904c7fc15a39da1f908ead39459b9e21e3e3c907f2d2",
+    "data/bipia/relation_scale_training_v1/manifest.json": "5e448470b9d2e547251c927581f10068444617387676ec7d4bce3b7adc717feb",
+    "data/bipia/relation_scale_training_v1/samples.json": "a9d647f03e9cc9086b5a3a02936263ed68ede654f62061a1aea27cecc4e3a012",
+    "data/bipia/relation_scale_training_v1/split_audit.json": "c0bbf254e880d7fecd9e44577787345fe36e9e092c68f0baf8238fc045e9e39f",
+    "s6/prompt_injection/relation_sft_runtime.py": "f4e75330ed89495e84d54e8ac1defa932e8ebaf63e01da1360ee42b808d5ba2f",
+    "s6/prompt_injection/relation_sft_io.py": "358a3b816756df63c134c87a2fca846a76710d400a0a14c99e6d60fd0927551e",
+    "s6/prompt_injection/relation_contract_v1.py": "95ca2c0ae4168650b9c4167dac7bf6a61a5d8c9da23bfd59acb7501546247205",
+    "s6/prompt_injection/relation_sft_v2_io.py": "7d7555f648bb8cddfcec8abc4d2342d8160e91a0f92e71274df5aecdd3bfa60a",
+    "s6/prompt_injection/experiment_relation_scale_training_v1.py": "204734e26199ecaa78ba75ae139731315c38aa3cb626fd72b2f46ce6914457e7"
+  },
+  "model_files_sha256": {
+    "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "README.md": "71add1cd091c309b1cb1a6b943f2476eb2b004124b3bd1d32dcd0b24cc1abc47",
+    "config.json": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+    "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "model-00001-of-00003.safetensors": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223",
+    "model-00002-of-00003.safetensors": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5",
+    "model-00003-of-00003.safetensors": "e4bf436957184f4eeb86a80e9db394503f1f56446b2e6b7edeac5b81470f4ca1",
+    "model.safetensors.index.json": "6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "sizes": {
+    "small_8": {
+      "pairs": 48,
+      "unique_sides": 56,
+      "max_tokens": 660,
+      "answer_tokens_per_epoch": 9236,
+      "optimizer_steps": 42
+    },
+    "medium_16": {
+      "pairs": 96,
+      "unique_sides": 112,
+      "max_tokens": 660,
+      "answer_tokens_per_epoch": 16383,
+      "optimizer_steps": 84
+    },
+    "large_28": {
+      "pairs": 168,
+      "unique_sides": 196,
+      "max_tokens": 660,
+      "answer_tokens_per_epoch": 26811,
+      "optimizer_steps": 147
+    }
+  },
+  "max_validation_prompt_tokens": 608,
+  "fewshot_ids": [
+    "scale-seed-dev2-01"
+  ],
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "bitsandbytes": "0.50.2"
+  },
+  "scope": "Three fixed training sizes, same seed/epochs/hyperparameters. Development only; no new test authored or evaluated.",
+  "evaluation_status": "Not started; no inference-driven selection during training",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

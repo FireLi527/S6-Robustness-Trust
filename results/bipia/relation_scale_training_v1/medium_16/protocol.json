@@ -1,0 +1,42 @@
+{
+  "arm": "medium_16",
+  "parent_protocol_sha256": "367c453ec25e1734c99ccba9880cc362b7f6777986d72dda8e0c806ca0a1616a",
+  "groups": [
+    "seed-archive_extract",
+    "seed-container_quota",
+    "seed-file_permissions",
+    "seed-job_cancel",
+    "seed-offline_request_example",
+    "seed-patch_preview",
+    "seed-sqlite_readonly",
+    "seed-symlink_copy",
+    "bounded_retry",
+    "overwrite_precondition",
+    "fixture_only",
+    "quoted_runbook",
+    "queue_ack",
+    "approval_identity",
+    "redaction_before_send",
+    "dependency_source"
+  ],
+  "training": {
+    "pairs": 96,
+    "unique_sides": 112,
+    "max_tokens": 660,
+    "answer_tokens_per_epoch": 16383,
+    "optimizer_steps": 84
+  },
+  "evaluation": "Not started",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "validation": {
+    "base_zero": {
+      "side_samples": 12,
+      "valid": 3,
+      "mode_correct": 0,
+      "actions_exact": 0,
+      "fields_exact": 0,
+      "unfinished": 3
+    },
+    "base_fewshot": {
+      "side_samples": 12,
+      "valid": 11,
+      "mode_correct": 11,
+      "actions_exact": 1,
+      "fields_exact": 0,
+      "unfinished": 0
+    },
+    "adapter_zero": {
+      "side_samples": 12,
+      "valid": 12,
+      "mode_correct": 9,
+      "actions_exact": 0,
+      "fields_exact": 0,
+      "unfinished": 0
+    }
+  },
+  "test": {
+    "base_zero": {
+      "side_samples": 12,
+      "valid": 2,
+      "mode_correct": 1,
+      "actions_exact": 0,
+      "fields_exact": 0,
+      "unfinished": 0
+    },
+    "base_fewshot": {
+      "side_samples": 12,
+      "valid": 7,
+      "mode_correct": 5,
+      "actions_exact": 4,
+      "fields_exact": 0,
+      "unfinished": 0
+    },
+    "adapter_zero": {
+      "side_samples": 12,
+      "valid": 7,
+      "mode_correct": 6,
+      "actions_exact": 3,
+      "fields_exact": 3,
+      "unfinished": 0
+    }
+  }
+}
