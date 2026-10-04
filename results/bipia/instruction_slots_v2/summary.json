@@ -1,0 +1,393 @@
+{
+  "direct": {
+    "samples": 32,
+    "known_labels": 32,
+    "unknown_labels": 0,
+    "decisions": {
+      "NORMAL": 12,
+      "RISK": 20
+    },
+    "coverage_all": 1.0,
+    "coverage_known": 1.0,
+    "selective_accuracy": 0.875,
+    "risk_auto_recall": 1.0,
+    "normal_auto_fpr": 0.25,
+    "auto_precision": 0.8,
+    "risk_auto_normal": 0,
+    "risk_review": 0,
+    "normal_review": 0,
+    "risk_count": 16,
+    "normal_count": 16,
+    "true_auto_risk": 16,
+    "false_auto_risk": 4,
+    "normal_review_rate": 0.0,
+    "risk_review_rate": 0.0,
+    "by_kind": {
+      "quote_escape": {
+        "samples": 8,
+        "known_labels": 8,
+        "unknown_labels": 0,
+        "decisions": {
+          "NORMAL": 4,
+          "RISK": 4
+        },
+        "coverage_all": 1.0,
+        "coverage_known": 1.0,
+        "selective_accuracy": 1.0,
+        "risk_auto_recall": 1.0,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": 1.0,
+        "risk_auto_normal": 0,
+        "risk_review": 0,
+        "normal_review": 0,
+        "risk_count": 4,
+        "normal_count": 4,
+        "true_auto_risk": 4,
+        "false_auto_risk": 0,
+        "normal_review_rate": 0.0,
+        "risk_review_rate": 0.0
+      },
+      "scope": {
+        "samples": 8,
+        "known_labels": 8,
+        "unknown_labels": 0,
+        "decisions": {
+          "RISK": 8
+        },
+        "coverage_all": 1.0,
+        "coverage_known": 1.0,
+        "selective_accuracy": 0.5,
+        "risk_auto_recall": 1.0,
+        "normal_auto_fpr": 1.0,
+        "auto_precision": 0.5,
+        "risk_auto_normal": 0,
+        "risk_review": 0,
+        "normal_review": 0,
+        "risk_count": 4,
+        "normal_count": 4,
+        "true_auto_risk": 4,
+        "false_auto_risk": 4,
+        "normal_review_rate": 0.0,
+        "risk_review_rate": 0.0
+      },
+      "target": {
+        "samples": 16,
+        "known_labels": 16,
+        "unknown_labels": 0,
+        "decisions": {
+          "NORMAL": 8,
+          "RISK": 8
+        },
+        "coverage_all": 1.0,
+        "coverage_known": 1.0,
+        "selective_accuracy": 1.0,
+        "risk_auto_recall": 1.0,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": 1.0,
+        "risk_auto_normal": 0,
+        "risk_review": 0,
+        "normal_review": 0,
+        "risk_count": 8,
+        "normal_count": 8,
+        "true_auto_risk": 8,
+        "false_auto_risk": 0,
+        "normal_review_rate": 0.0,
+        "risk_review_rate": 0.0
+      }
+    }
+  },
+  "structured_v1": {
+    "samples": 32,
+    "known_labels": 32,
+    "unknown_labels": 0,
+    "decisions": {
+      "REVIEW": 32
+    },
+    "coverage_all": 0.0,
+    "coverage_known": 0.0,
+    "selective_accuracy": null,
+    "risk_auto_recall": 0.0,
+    "normal_auto_fpr": 0.0,
+    "auto_precision": null,
+    "risk_auto_normal": 0,
+    "risk_review": 16,
+    "normal_review": 16,
+    "risk_count": 16,
+    "normal_count": 16,
+    "true_auto_risk": 0,
+    "false_auto_risk": 0,
+    "normal_review_rate": 1.0,
+    "risk_review_rate": 1.0,
+    "extraction": {
+      "task": {
+        "eligible": 32,
+        "extracted": 22,
+        "coverage": 0.6875,
+        "exact_correct": 8,
+        "conditional_exact_accuracy": 0.36363636363636365,
+        "fields": {
+          "mode": {
+            "correct": 12,
+            "accuracy": 0.5454545454545454
+          },
+          "operation": {
+            "correct": 16,
+            "accuracy": 0.7272727272727273
+          },
+          "target": {
+            "correct": 20,
+            "accuracy": 0.9090909090909091
+          }
+        }
+      },
+      "content": {
+        "eligible": 32,
+        "extracted": 22,
+        "coverage": 0.6875,
+        "exact_correct": 4,
+        "conditional_exact_accuracy": 0.18181818181818182,
+        "fields": {
+          "mode": {
+            "correct": 9,
+            "accuracy": 0.4090909090909091
+          },
+          "operation": {
+            "correct": 4,
+            "accuracy": 0.18181818181818182
+          },
+          "target": {
+            "correct": 9,
+            "accuracy": 0.4090909090909091
+          }
+        }
+      },
+      "both": {
+        "eligible": 32,
+        "extracted": 14,
+        "coverage": 0.4375,
+        "exact_correct": 0
+      }
+    },
+    "by_kind": {
+      "quote_escape": {
+        "samples": 8,
+        "known_labels": 8,
+        "unknown_labels": 0,
+        "decisions": {
+          "REVIEW": 8
+        },
+        "coverage_all": 0.0,
+        "coverage_known": 0.0,
+        "selective_accuracy": null,
+        "risk_auto_recall": 0.0,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": null,
+        "risk_auto_normal": 0,
+        "risk_review": 4,
+        "normal_review": 4,
+        "risk_count": 4,
+        "normal_count": 4,
+        "true_auto_risk": 0,
+        "false_auto_risk": 0,
+        "normal_review_rate": 1.0,
+        "risk_review_rate": 1.0
+      },
+      "scope": {
+        "samples": 8,
+        "known_labels": 8,
+        "unknown_labels": 0,
+        "decisions": {
+          "REVIEW": 8
+        },
+        "coverage_all": 0.0,
+        "coverage_known": 0.0,
+        "selective_accuracy": null,
+        "risk_auto_recall": 0.0,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": null,
+        "risk_auto_normal": 0,
+        "risk_review": 4,
+        "normal_review": 4,
+        "risk_count": 4,
+        "normal_count": 4,
+        "true_auto_risk": 0,
+        "false_auto_risk": 0,
+        "normal_review_rate": 1.0,
+        "risk_review_rate": 1.0
+      },
+      "target": {
+        "samples": 16,
+        "known_labels": 16,
+        "unknown_labels": 0,
+        "decisions": {
+          "REVIEW": 16
+        },
+        "coverage_all": 0.0,
+        "coverage_known": 0.0,
+        "selective_accuracy": null,
+        "risk_auto_recall": 0.0,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": null,
+        "risk_auto_normal": 0,
+        "risk_review": 8,
+        "normal_review": 8,
+        "risk_count": 8,
+        "normal_count": 8,
+        "true_auto_risk": 0,
+        "false_auto_risk": 0,
+        "normal_review_rate": 1.0,
+        "risk_review_rate": 1.0
+      }
+    }
+  },
+  "structured_v2": {
+    "samples": 32,
+    "known_labels": 32,
+    "unknown_labels": 0,
+    "decisions": {
+      "NORMAL": 14,
+      "RISK": 14,
+      "REVIEW": 4
+    },
+    "coverage_all": 0.875,
+    "coverage_known": 0.875,
+    "selective_accuracy": 1.0,
+    "risk_auto_recall": 0.875,
+    "normal_auto_fpr": 0.0,
+    "auto_precision": 1.0,
+    "risk_auto_normal": 0,
+    "risk_review": 2,
+    "normal_review": 2,
+    "risk_count": 16,
+    "normal_count": 16,
+    "true_auto_risk": 14,
+    "false_auto_risk": 0,
+    "normal_review_rate": 0.125,
+    "risk_review_rate": 0.125,
+    "extraction": {
+      "task": {
+        "eligible": 32,
+        "extracted": 28,
+        "coverage": 0.875,
+        "exact_correct": 28,
+        "conditional_exact_accuracy": 1.0,
+        "fields": {
+          "mode": {
+            "correct": 28,
+            "accuracy": 1.0
+          },
+          "operation": {
+            "correct": 28,
+            "accuracy": 1.0
+          },
+          "target": {
+            "correct": 28,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "content": {
+        "eligible": 32,
+        "extracted": 32,
+        "coverage": 1.0,
+        "exact_correct": 32,
+        "conditional_exact_accuracy": 1.0,
+        "fields": {
+          "mode": {
+            "correct": 32,
+            "accuracy": 1.0
+          },
+          "operation": {
+            "correct": 32,
+            "accuracy": 1.0
+          },
+          "target": {
+            "correct": 32,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "both": {
+        "eligible": 32,
+        "extracted": 28,
+        "coverage": 0.875,
+        "exact_correct": 28
+      }
+    },
+    "by_kind": {
+      "quote_escape": {
+        "samples": 8,
+        "known_labels": 8,
+        "unknown_labels": 0,
+        "decisions": {
+          "NORMAL": 4,
+          "RISK": 4
+        },
+        "coverage_all": 1.0,
+        "coverage_known": 1.0,
+        "selective_accuracy": 1.0,
+        "risk_auto_recall": 1.0,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": 1.0,
+        "risk_auto_normal": 0,
+        "risk_review": 0,
+        "normal_review": 0,
+        "risk_count": 4,
+        "normal_count": 4,
+        "true_auto_risk": 4,
+        "false_auto_risk": 0,
+        "normal_review_rate": 0.0,
+        "risk_review_rate": 0.0
+      },
+      "scope": {
+        "samples": 8,
+        "known_labels": 8,
+        "unknown_labels": 0,
+        "decisions": {
+          "NORMAL": 4,
+          "RISK": 4
+        },
+        "coverage_all": 1.0,
+        "coverage_known": 1.0,
+        "selective_accuracy": 1.0,
+        "risk_auto_recall": 1.0,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": 1.0,
+        "risk_auto_normal": 0,
+        "risk_review": 0,
+        "normal_review": 0,
+        "risk_count": 4,
+        "normal_count": 4,
+        "true_auto_risk": 4,
+        "false_auto_risk": 0,
+        "normal_review_rate": 0.0,
+        "risk_review_rate": 0.0
+      },
+      "target": {
+        "samples": 16,
+        "known_labels": 16,
+        "unknown_labels": 0,
+        "decisions": {
+          "NORMAL": 6,
+          "RISK": 6,
+          "REVIEW": 4
+        },
+        "coverage_all": 0.75,
+        "coverage_known": 0.75,
+        "selective_accuracy": 1.0,
+        "risk_auto_recall": 0.75,
+        "normal_auto_fpr": 0.0,
+        "auto_precision": 1.0,
+        "risk_auto_normal": 0,
+        "risk_review": 2,
+        "normal_review": 2,
+        "risk_count": 8,
+        "normal_count": 8,
+        "true_auto_risk": 6,
+        "false_auto_risk": 0,
+        "normal_review_rate": 0.25,
+        "risk_review_rate": 0.25
+      }
+    }
+  }
+}

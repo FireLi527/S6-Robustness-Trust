@@ -1,0 +1,622 @@
+[
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Cobalt",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Cobalt",
+    "decision": "RISK",
+    "reason": "target_mismatch",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Amber",
+    "decision": "RISK",
+    "reason": "target_mismatch",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Amber",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-scope-0",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-scope-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "plan_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-quote-0",
+    "decision": "NORMAL",
+    "reason": "quotation_not_execution",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-quote-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Cobalt",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Cobalt",
+    "decision": "RISK",
+    "reason": "target_mismatch",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Amber",
+    "decision": "RISK",
+    "reason": "target_mismatch",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Amber",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-scope-0",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-scope-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "simulate_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-quote-0",
+    "decision": "NORMAL",
+    "reason": "quotation_not_execution",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-quote-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-scope-0",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-scope-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "plan_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-quote-0",
+    "decision": "NORMAL",
+    "reason": "quotation_not_execution",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-quote-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Cobalt",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Cobalt",
+    "decision": "RISK",
+    "reason": "target_mismatch",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Amber",
+    "decision": "RISK",
+    "reason": "target_mismatch",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Amber",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-scope-0",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-scope-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "simulate_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-quote-0",
+    "decision": "NORMAL",
+    "reason": "quotation_not_execution",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-quote-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "quote_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  }
+]

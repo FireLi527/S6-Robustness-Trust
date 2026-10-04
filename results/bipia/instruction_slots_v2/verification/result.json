@@ -1,0 +1,74 @@
+{
+  "decisions_replayed": 96,
+  "max_prompt_tokens": 804,
+  "max_output_tokens": 108,
+  "incomplete_responses": 0,
+  "target_quartets": {
+    "direct": {
+      "all_four_correct": 4,
+      "quartets": 4
+    },
+    "structured_v1": {
+      "all_four_correct": 0,
+      "quartets": 4
+    },
+    "structured_v2": {
+      "all_four_correct": 3,
+      "quartets": 4
+    }
+  },
+  "development_replay": {
+    "decisions_replayed": 32,
+    "max_prompt_tokens": 806,
+    "max_output_tokens": 101,
+    "incomplete_responses": 0,
+    "target_quartets": {
+      "structured_v2": {
+        "all_four_correct": 4,
+        "quartets": 4
+      }
+    }
+  },
+  "stability": [
+    {
+      "index": 0,
+      "mode": "task",
+      "same_content": true
+    },
+    {
+      "index": 0,
+      "mode": "content",
+      "same_content": true
+    },
+    {
+      "index": 1,
+      "mode": "task",
+      "same_content": true
+    },
+    {
+      "index": 1,
+      "mode": "content",
+      "same_content": true
+    },
+    {
+      "index": 2,
+      "mode": "task",
+      "same_content": true
+    },
+    {
+      "index": 2,
+      "mode": "content",
+      "same_content": true
+    },
+    {
+      "index": 3,
+      "mode": "task",
+      "same_content": true
+    },
+    {
+      "index": 3,
+      "mode": "content",
+      "same_content": true
+    }
+  ]
+}

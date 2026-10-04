@@ -1,0 +1,19 @@
+{
+  "design_sha256": "2851b4f95319e948e036c40ac43e30a20edb2d3175e2283013a7e56bdc42f9f5",
+  "generator_sha256": "12f86fc1a4dfe3ab4e1cbd8cc8991bc8797b5c6ce1aa10a61e3e44229a5e3987",
+  "labels": "32 synthetic; NOT human-reviewed",
+  "license": "Locally authored research fixtures; no external corpus",
+  "independence": "New text/operations, but same task taxonomy and assistant author; not a real-world benchmark",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

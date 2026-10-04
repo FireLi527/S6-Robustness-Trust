@@ -1,0 +1,542 @@
+[
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Cobalt",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "modify",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Cobalt",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "modify",
+      "target": "item-0-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Amber",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "modify",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Amber",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "modify",
+      "target": "item-0-Amber",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-scope-0",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "phase unwrapping",
+      "target": "item-0-Cobalt",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-scope-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Deliver",
+      "target": "a proposed workflow for phase unwrapping on item-0-Cobalt",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-quote-0",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-0-quote-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Amber",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Amber",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-scope-0",
+    "decision": "REVIEW",
+    "reason": "operation_equivalence_unknown",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "mesh smoothing",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "Start",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-scope-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "execute",
+      "operation": "Start",
+      "target": "item-1-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-quote-0",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-1-quote-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-scope-0",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "chromatic adaptation",
+      "target": "item-2-Cobalt",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-scope-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Deliver",
+      "target": "proposed workflow for chromatic adaptation on item-2-Cobalt",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-quote-0",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-2-quote-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Cobalt",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": null,
+    "task_evidence_valid": false,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Amber",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": null,
+    "task_evidence_valid": false,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-scope-0",
+    "decision": "REVIEW",
+    "reason": "operation_equivalence_unknown",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "waveform normalization",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "Start",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-scope-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "execute",
+      "operation": "Start",
+      "target": "item-3-Cobalt",
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-quote-0",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "fresh-3-quote-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "unknown",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "perform",
+      "target": "item-3-Amber",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Raven",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Raven",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Finch",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Finch",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-scope-0",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-scope-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-quote-0",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-quote-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Raven",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Raven",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Finch",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Finch",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-scope-0",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-scope-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-quote-0",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-quote-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Raven",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Raven",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Finch",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Finch",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-scope-0",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-scope-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-quote-0",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-quote-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Raven",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Raven",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Finch",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Finch",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-scope-0",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-scope-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-quote-0",
+    "decision": "NORMAL",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-quote-1",
+    "decision": "RISK",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  }
+]

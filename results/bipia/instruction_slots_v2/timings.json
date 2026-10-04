@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 3.6686793999979272,
+    "prompt_tokens": 332,
+    "output_tokens": 90,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7778697000030661,
+    "prompt_tokens": 389,
+    "output_tokens": 48,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7949518999957945,
+    "prompt_tokens": 387,
+    "output_tokens": 61,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.1168819999875268,
+    "prompt_tokens": 789,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.0774988000048324,
+    "prompt_tokens": 775,
+    "output_tokens": 70,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.0093104999978095,
+    "prompt_tokens": 789,
+    "output_tokens": 71,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.9817490999994334,
+    "prompt_tokens": 775,
+    "output_tokens": 70,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7977401999960421,
+    "prompt_tokens": 389,
+    "output_tokens": 53,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7931005999998888,
+    "prompt_tokens": 387,
+    "output_tokens": 61,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.1717645000026096,
+    "prompt_tokens": 332,
+    "output_tokens": 91,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.1103675999911502,
+    "prompt_tokens": 332,
+    "output_tokens": 91,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.8121497999964049,
+    "prompt_tokens": 389,
+    "output_tokens": 54,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7928244000067934,
+    "prompt_tokens": 387,
+    "output_tokens": 61,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.9967093999875942,
+    "prompt_tokens": 789,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Cobalt-item-0-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.9707855999877211,
+    "prompt_tokens": 775,
+    "output_tokens": 69,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.984039600007236,
+    "prompt_tokens": 789,
+    "output_tokens": 71,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.9535678999964148,
+    "prompt_tokens": 775,
+    "output_tokens": 69,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.8046544999961043,
+    "prompt_tokens": 389,
+    "output_tokens": 53,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.8252684000035515,
+    "prompt_tokens": 387,
+    "output_tokens": 61,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-item-0-Amber-item-0-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.1516838999959873,
+    "prompt_tokens": 332,
+    "output_tokens": 90,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.908630699996138,
+    "prompt_tokens": 310,
+    "output_tokens": 69,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.8143424000008963,
+    "prompt_tokens": 381,
+    "output_tokens": 59,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.663650599992252,
+    "prompt_tokens": 373,
+    "output_tokens": 48,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8396088000008604,
+    "prompt_tokens": 781,
+    "output_tokens": 59,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.767038699996192,
+    "prompt_tokens": 761,
+    "output_tokens": 51,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8211446000059368,
+    "prompt_tokens": 780,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.7591882000124315,
+    "prompt_tokens": 761,
+    "output_tokens": 51,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.9254695999989053,
+    "prompt_tokens": 380,
+    "output_tokens": 65,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.6713897999870824,
+    "prompt_tokens": 373,
+    "output_tokens": 48,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-scope-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.9297730999969644,
+    "prompt_tokens": 309,
+    "output_tokens": 68,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.9327750000084052,
+    "prompt_tokens": 316,
+    "output_tokens": 74,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7497069000091869,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5749661000008928,
+    "prompt_tokens": 384,
+    "output_tokens": 38,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.7299409999977797,
+    "prompt_tokens": 776,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.7944873000087682,
+    "prompt_tokens": 772,
+    "output_tokens": 53,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.6897650000028079,
+    "prompt_tokens": 776,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.1545101000083378,
+    "prompt_tokens": 795,
+    "output_tokens": 89,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7465993000078015,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.8971163000096567,
+    "prompt_tokens": 407,
+    "output_tokens": 51,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-0-quote-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.2409212000056868,
+    "prompt_tokens": 339,
+    "output_tokens": 69,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.4294640000007348,
+    "prompt_tokens": 315,
+    "output_tokens": 73,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.9729934000060894,
+    "prompt_tokens": 380,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 1.119094199995743,
+    "prompt_tokens": 379,
+    "output_tokens": 54,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.211921699999948,
+    "prompt_tokens": 780,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.1052632000064477,
+    "prompt_tokens": 767,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.1883909000025596,
+    "prompt_tokens": 780,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.2194072999991477,
+    "prompt_tokens": 767,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.9782547999930102,
+    "prompt_tokens": 380,
+    "output_tokens": 42,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 1.0573168999981135,
+    "prompt_tokens": 379,
+    "output_tokens": 54,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.4170936000009533,
+    "prompt_tokens": 315,
+    "output_tokens": 74,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.7742937000002712,
+    "prompt_tokens": 315,
+    "output_tokens": 74,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 1.2748851999931503,
+    "prompt_tokens": 380,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 1.5653280999977142,
+    "prompt_tokens": 379,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.2824098999990383,
+    "prompt_tokens": 780,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Cobalt-item-1-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.367292399998405,
+    "prompt_tokens": 767,
+    "output_tokens": 54,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.2476557999907527,
+    "prompt_tokens": 780,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.2668273000017507,
+    "prompt_tokens": 767,
+    "output_tokens": 54,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 1.068422800002736,
+    "prompt_tokens": 380,
+    "output_tokens": 42,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 1.4491726999985985,
+    "prompt_tokens": 379,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-item-1-Amber-item-1-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 2.4882176000101026,
+    "prompt_tokens": 315,
+    "output_tokens": 73,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 2.547602200007532,
+    "prompt_tokens": 306,
+    "output_tokens": 65,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 1.6598902999976417,
+    "prompt_tokens": 379,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 1.1565176000003703,
+    "prompt_tokens": 371,
+    "output_tokens": 46,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.369587600012892,
+    "prompt_tokens": 779,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.2098362000106135,
+    "prompt_tokens": 759,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.1617497999977786,
+    "prompt_tokens": 780,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.0915949999907752,
+    "prompt_tokens": 759,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 1.1349640999978874,
+    "prompt_tokens": 380,
+    "output_tokens": 54,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 1.0328190000000177,
+    "prompt_tokens": 371,
+    "output_tokens": 46,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-scope-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.503942499999539,
+    "prompt_tokens": 307,
+    "output_tokens": 66,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.4227486000017961,
+    "prompt_tokens": 314,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7283001000032527,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7130643999989843,
+    "prompt_tokens": 382,
+    "output_tokens": 51,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.78453580000496,
+    "prompt_tokens": 776,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.7967348999954993,
+    "prompt_tokens": 770,
+    "output_tokens": 51,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.7148574000020744,
+    "prompt_tokens": 776,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.1741632999910507,
+    "prompt_tokens": 804,
+    "output_tokens": 85,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7656684999965364,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7131797000038205,
+    "prompt_tokens": 416,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-1-quote-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.463719499995932,
+    "prompt_tokens": 348,
+    "output_tokens": 108,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.0580965999979526,
+    "prompt_tokens": 322,
+    "output_tokens": 80,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7853171000024304,
+    "prompt_tokens": 385,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5949181000032695,
+    "prompt_tokens": 381,
+    "output_tokens": 37,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.9278729000070598,
+    "prompt_tokens": 785,
+    "output_tokens": 62,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.9019081000005826,
+    "prompt_tokens": 769,
+    "output_tokens": 58,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8443455999949947,
+    "prompt_tokens": 785,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.857659600005718,
+    "prompt_tokens": 769,
+    "output_tokens": 58,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7852892000082647,
+    "prompt_tokens": 385,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5909417999937432,
+    "prompt_tokens": 381,
+    "output_tokens": 37,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.0804369999968912,
+    "prompt_tokens": 322,
+    "output_tokens": 81,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.0328409999929136,
+    "prompt_tokens": 322,
+    "output_tokens": 81,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7977673999994295,
+    "prompt_tokens": 385,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5888757000066107,
+    "prompt_tokens": 381,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 1.0127744000055827,
+    "prompt_tokens": 785,
+    "output_tokens": 62,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Cobalt-item-2-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.888604599997052,
+    "prompt_tokens": 769,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8780336999916472,
+    "prompt_tokens": 785,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.8666085000004387,
+    "prompt_tokens": 769,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.823482799998601,
+    "prompt_tokens": 385,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5874608000012813,
+    "prompt_tokens": 381,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-item-2-Amber-item-2-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.0982780999911483,
+    "prompt_tokens": 322,
+    "output_tokens": 80,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.975068800005829,
+    "prompt_tokens": 308,
+    "output_tokens": 67,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.9122931000019889,
+    "prompt_tokens": 380,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.6567327999946428,
+    "prompt_tokens": 372,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8547956999973394,
+    "prompt_tokens": 780,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.7908095000020694,
+    "prompt_tokens": 760,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8069560000003548,
+    "prompt_tokens": 779,
+    "output_tokens": 48,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.850057999996352,
+    "prompt_tokens": 760,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.9354057000018656,
+    "prompt_tokens": 379,
+    "output_tokens": 63,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.6583232999983011,
+    "prompt_tokens": 372,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-scope-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.9332346000010148,
+    "prompt_tokens": 307,
+    "output_tokens": 66,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.979607200002647,
+    "prompt_tokens": 315,
+    "output_tokens": 73,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7499373000027845,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5955223000055412,
+    "prompt_tokens": 383,
+    "output_tokens": 37,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.7742597000033129,
+    "prompt_tokens": 776,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.8070045000058599,
+    "prompt_tokens": 771,
+    "output_tokens": 52,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.7325083000032464,
+    "prompt_tokens": 776,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.1299571999988984,
+    "prompt_tokens": 793,
+    "output_tokens": 81,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7497141000058036,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7111820999998599,
+    "prompt_tokens": 405,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-2-quote-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.2328102999890689,
+    "prompt_tokens": 337,
+    "output_tokens": 96,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.9917410000052769,
+    "prompt_tokens": 316,
+    "output_tokens": 74,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.6248760999878868,
+    "prompt_tokens": 380,
+    "output_tokens": 39,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7066180999972858,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8414134999911766,
+    "prompt_tokens": 780,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.8846284999890486,
+    "prompt_tokens": 768,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Cobalt",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8925089999975171,
+    "prompt_tokens": 780,
+    "output_tokens": 61,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Cobalt",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.87088559998665,
+    "prompt_tokens": 768,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Cobalt",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7124615000066115,
+    "prompt_tokens": 380,
+    "output_tokens": 41,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Cobalt",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.7124254000082146,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Cobalt",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.0176565000001574,
+    "prompt_tokens": 316,
+    "output_tokens": 75,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.9745552000094904,
+    "prompt_tokens": 316,
+    "output_tokens": 75,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.6210019000136526,
+    "prompt_tokens": 380,
+    "output_tokens": 39,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5962407000042731,
+    "prompt_tokens": 380,
+    "output_tokens": 40,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8459466000058455,
+    "prompt_tokens": 780,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Cobalt-item-3-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.8633200999902328,
+    "prompt_tokens": 768,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Amber",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.92947550000099,
+    "prompt_tokens": 780,
+    "output_tokens": 61,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Amber",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.847891500001424,
+    "prompt_tokens": 768,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Amber",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7125568999908864,
+    "prompt_tokens": 380,
+    "output_tokens": 41,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Amber",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.6087095999973826,
+    "prompt_tokens": 380,
+    "output_tokens": 40,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-item-3-Amber-item-3-Amber",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.0098197999905096,
+    "prompt_tokens": 316,
+    "output_tokens": 74,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.8861049999977695,
+    "prompt_tokens": 306,
+    "output_tokens": 65,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.830845100004808,
+    "prompt_tokens": 379,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.6842898999893805,
+    "prompt_tokens": 371,
+    "output_tokens": 46,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8820316000055755,
+    "prompt_tokens": 779,
+    "output_tokens": 61,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.7826536000065971,
+    "prompt_tokens": 759,
+    "output_tokens": 48,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.8565957000100752,
+    "prompt_tokens": 780,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.7403664999874309,
+    "prompt_tokens": 759,
+    "output_tokens": 48,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.8206040000077337,
+    "prompt_tokens": 380,
+    "output_tokens": 54,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.6826029000076232,
+    "prompt_tokens": 371,
+    "output_tokens": 46,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-scope-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.9022528000059538,
+    "prompt_tokens": 307,
+    "output_tokens": 66,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-0",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 0.9390717000060249,
+    "prompt_tokens": 314,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-0",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7290019999927608,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-0",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.5572972999943886,
+    "prompt_tokens": 382,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-0",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.7705947000067681,
+    "prompt_tokens": 776,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-0",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 0.8329289000103017,
+    "prompt_tokens": 770,
+    "output_tokens": 51,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-1",
+    "arm": "structured_v2",
+    "mode": "task",
+    "seconds": 0.7301456999994116,
+    "prompt_tokens": 776,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-1",
+    "arm": "structured_v2",
+    "mode": "content",
+    "seconds": 1.2399982000060845,
+    "prompt_tokens": 804,
+    "output_tokens": 91,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-1",
+    "arm": "structured_v1",
+    "mode": "task",
+    "seconds": 0.7481971999950474,
+    "prompt_tokens": 376,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-1",
+    "arm": "structured_v1",
+    "mode": "content",
+    "seconds": 0.6291898000054061,
+    "prompt_tokens": 416,
+    "output_tokens": 40,
+    "done_reason": "stop"
+  },
+  {
+    "id": "fresh-3-quote-1",
+    "arm": "direct",
+    "mode": "direct",
+    "seconds": 1.3841726000100607,
+    "prompt_tokens": 348,
+    "output_tokens": 108,
+    "done_reason": "stop"
+  }
+]

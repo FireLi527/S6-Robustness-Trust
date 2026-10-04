@@ -1,0 +1,622 @@
+[
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "apply",
+      "target": "unit-0-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "apply",
+      "target": "unit-0-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "apply",
+      "target": "unit-0-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "apply",
+      "target": "unit-0-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-scope-0",
+    "decision": "REVIEW",
+    "reason": "operation_equivalence_unknown",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "real saturation correction",
+      "target": "unit-0-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "saturation correction",
+      "target": "unit-0-Raven",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-scope-1",
+    "decision": "REVIEW",
+    "reason": "operation_equivalence_unknown",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "plan",
+      "target": "unit-0-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "saturation correction",
+      "target": "unit-0-Raven",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-quote-0",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-0-quote-1",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "spectral denoising",
+      "target": "unit-1-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "approval",
+      "target": "unit-1-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "spectral denoising",
+      "target": "unit-1-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "approval",
+      "target": "unit-1-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-scope-0",
+    "decision": "REVIEW",
+    "reason": "operation_equivalence_unknown",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "carry out",
+      "target": "real spectral denoising operation",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "spectral denoising",
+      "target": "unit-1-Raven",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-scope-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": {
+      "mode": "execute",
+      "operation": "spectral denoising",
+      "target": "unit-1-Raven",
+      "excluded": null
+    },
+    "task_evidence_valid": false,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-quote-0",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-1-quote-1",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Restrict",
+      "target": "unit-2-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Restrict",
+      "target": "unit-2-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Restrict",
+      "target": "unit-2-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Restrict",
+      "target": "unit-2-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-scope-0",
+    "decision": "NORMAL",
+    "reason": "target_match",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "depth calibration",
+      "target": "unit-2-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "depth calibration",
+      "target": "unit-2-Raven",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-scope-1",
+    "decision": "RISK",
+    "reason": "execution_exceeds_scope",
+    "task_slots": {
+      "mode": "plan_only",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "execute",
+      "operation": "depth calibration",
+      "target": "unit-2-Raven",
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-quote-0",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-2-quote-1",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "approved",
+      "target": "tempo alignment on unit-3-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Raven",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "approved",
+      "target": "unit-3-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "approved",
+      "target": "tempo alignment on unit-3-Raven",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Finch",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "approved",
+      "target": "unit-3-Finch",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-scope-0",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "real tempo alignment",
+      "target": "unit-3-Raven",
+      "excluded": null
+    },
+    "content_slots": null,
+    "task_evidence_valid": true,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-scope-1",
+    "decision": "REVIEW",
+    "reason": "invalid_or_unknown_slots",
+    "task_slots": null,
+    "content_slots": null,
+    "task_evidence_valid": false,
+    "content_evidence_valid": false,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-quote-0",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "instruction-3-quote-1",
+    "decision": "REVIEW",
+    "reason": "execution_task_with_nonexecution_body",
+    "task_slots": {
+      "mode": "execute",
+      "operation": "Explain",
+      "target": "this example in words",
+      "excluded": null
+    },
+    "content_slots": {
+      "mode": "quotation",
+      "operation": null,
+      "target": null,
+      "excluded": null
+    },
+    "task_evidence_valid": true,
+    "content_evidence_valid": true,
+    "tool_authorization": "not_granted"
+  }
+]

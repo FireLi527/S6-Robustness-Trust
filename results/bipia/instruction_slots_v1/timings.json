@@ -1,0 +1,770 @@
+[
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Raven",
+    "mode": "direct",
+    "seconds": 1.403325200008112,
+    "prompt_tokens": 318,
+    "output_tokens": 76,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Raven",
+    "mode": "task",
+    "seconds": 1.290772200009087,
+    "prompt_tokens": 386,
+    "output_tokens": 65,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Raven",
+    "mode": "content",
+    "seconds": 0.7960527999966871,
+    "prompt_tokens": 376,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Raven",
+    "mode": "task",
+    "seconds": 0.997943899987149,
+    "prompt_tokens": 386,
+    "output_tokens": 52,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Raven",
+    "mode": "content",
+    "seconds": 0.85701040001004,
+    "prompt_tokens": 376,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Raven",
+    "mode": "direct",
+    "seconds": 1.373643400002038,
+    "prompt_tokens": 318,
+    "output_tokens": 77,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Finch",
+    "mode": "direct",
+    "seconds": 1.3496910999965621,
+    "prompt_tokens": 318,
+    "output_tokens": 77,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Finch",
+    "mode": "task",
+    "seconds": 1.0482840999902692,
+    "prompt_tokens": 386,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Raven-unit-0-Finch",
+    "mode": "content",
+    "seconds": 0.857148099996266,
+    "prompt_tokens": 376,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Finch",
+    "mode": "task",
+    "seconds": 0.9494023000006564,
+    "prompt_tokens": 386,
+    "output_tokens": 52,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Finch",
+    "mode": "content",
+    "seconds": 0.7472268999990774,
+    "prompt_tokens": 376,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-unit-0-Finch-unit-0-Finch",
+    "mode": "direct",
+    "seconds": 1.311493100001826,
+    "prompt_tokens": 318,
+    "output_tokens": 76,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-scope-0",
+    "mode": "direct",
+    "seconds": 0.8439634999958798,
+    "prompt_tokens": 303,
+    "output_tokens": 62,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-scope-0",
+    "mode": "task",
+    "seconds": 1.1715193999989424,
+    "prompt_tokens": 380,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-scope-0",
+    "mode": "content",
+    "seconds": 0.898207199992612,
+    "prompt_tokens": 367,
+    "output_tokens": 43,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-scope-1",
+    "mode": "task",
+    "seconds": 1.0029264000040712,
+    "prompt_tokens": 375,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-scope-1",
+    "mode": "content",
+    "seconds": 0.8759866000036709,
+    "prompt_tokens": 367,
+    "output_tokens": 43,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-scope-1",
+    "mode": "direct",
+    "seconds": 1.2135299000074156,
+    "prompt_tokens": 298,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-quote-0",
+    "mode": "direct",
+    "seconds": 1.333062699995935,
+    "prompt_tokens": 308,
+    "output_tokens": 66,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-quote-0",
+    "mode": "task",
+    "seconds": 0.8421762000070885,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-quote-0",
+    "mode": "content",
+    "seconds": 0.9528493000107119,
+    "prompt_tokens": 381,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-quote-1",
+    "mode": "task",
+    "seconds": 0.679887400008738,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-quote-1",
+    "mode": "content",
+    "seconds": 0.86648339999374,
+    "prompt_tokens": 401,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-0-quote-1",
+    "mode": "direct",
+    "seconds": 1.3131033000099706,
+    "prompt_tokens": 328,
+    "output_tokens": 87,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Raven",
+    "mode": "direct",
+    "seconds": 1.1813915999955498,
+    "prompt_tokens": 320,
+    "output_tokens": 78,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Raven",
+    "mode": "task",
+    "seconds": 0.9462390999979107,
+    "prompt_tokens": 383,
+    "output_tokens": 53,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Raven",
+    "mode": "content",
+    "seconds": 0.8749744999950053,
+    "prompt_tokens": 381,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Raven",
+    "mode": "task",
+    "seconds": 0.7953913999954239,
+    "prompt_tokens": 383,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Raven",
+    "mode": "content",
+    "seconds": 0.8707251000014367,
+    "prompt_tokens": 381,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Raven",
+    "mode": "direct",
+    "seconds": 1.3088825000013458,
+    "prompt_tokens": 320,
+    "output_tokens": 78,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Finch",
+    "mode": "direct",
+    "seconds": 0.9571676000050502,
+    "prompt_tokens": 320,
+    "output_tokens": 78,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Finch",
+    "mode": "task",
+    "seconds": 0.7368123000051128,
+    "prompt_tokens": 383,
+    "output_tokens": 53,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Raven-unit-1-Finch",
+    "mode": "content",
+    "seconds": 0.584928200012655,
+    "prompt_tokens": 381,
+    "output_tokens": 38,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Finch",
+    "mode": "task",
+    "seconds": 0.595526900011464,
+    "prompt_tokens": 383,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Finch",
+    "mode": "content",
+    "seconds": 0.5648835000029067,
+    "prompt_tokens": 381,
+    "output_tokens": 38,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-unit-1-Finch-unit-1-Finch",
+    "mode": "direct",
+    "seconds": 1.0203577000065707,
+    "prompt_tokens": 320,
+    "output_tokens": 78,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-scope-0",
+    "mode": "direct",
+    "seconds": 0.8726027000084287,
+    "prompt_tokens": 307,
+    "output_tokens": 66,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-scope-0",
+    "mode": "task",
+    "seconds": 0.7964928000001237,
+    "prompt_tokens": 382,
+    "output_tokens": 58,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-scope-0",
+    "mode": "content",
+    "seconds": 0.6510257000045385,
+    "prompt_tokens": 369,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-scope-1",
+    "mode": "task",
+    "seconds": 0.7553762000025017,
+    "prompt_tokens": 377,
+    "output_tokens": 55,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-scope-1",
+    "mode": "content",
+    "seconds": 0.683451500008232,
+    "prompt_tokens": 369,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-scope-1",
+    "mode": "direct",
+    "seconds": 0.695301700005075,
+    "prompt_tokens": 302,
+    "output_tokens": 45,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-quote-0",
+    "mode": "direct",
+    "seconds": 0.8994667999941157,
+    "prompt_tokens": 310,
+    "output_tokens": 68,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-quote-0",
+    "mode": "task",
+    "seconds": 0.6329114999971353,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-quote-0",
+    "mode": "content",
+    "seconds": 0.7365022999874782,
+    "prompt_tokens": 383,
+    "output_tokens": 52,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-quote-1",
+    "mode": "task",
+    "seconds": 0.5706555000069784,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-quote-1",
+    "mode": "content",
+    "seconds": 0.7332469999964815,
+    "prompt_tokens": 418,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-1-quote-1",
+    "mode": "direct",
+    "seconds": 0.8775181999953929,
+    "prompt_tokens": 345,
+    "output_tokens": 63,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Raven",
+    "mode": "direct",
+    "seconds": 0.9492982999945525,
+    "prompt_tokens": 317,
+    "output_tokens": 75,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Raven",
+    "mode": "task",
+    "seconds": 0.8003089999983786,
+    "prompt_tokens": 381,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Raven",
+    "mode": "content",
+    "seconds": 0.6937449999968521,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Raven",
+    "mode": "task",
+    "seconds": 0.7457457999989856,
+    "prompt_tokens": 381,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Raven",
+    "mode": "content",
+    "seconds": 0.6725764999864623,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Raven",
+    "mode": "direct",
+    "seconds": 0.9680044999986421,
+    "prompt_tokens": 317,
+    "output_tokens": 76,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Finch",
+    "mode": "direct",
+    "seconds": 0.9676464000076521,
+    "prompt_tokens": 317,
+    "output_tokens": 76,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Finch",
+    "mode": "task",
+    "seconds": 0.7945679999975255,
+    "prompt_tokens": 381,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Raven-unit-2-Finch",
+    "mode": "content",
+    "seconds": 0.6765262000117218,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Finch",
+    "mode": "task",
+    "seconds": 0.7396850999939488,
+    "prompt_tokens": 381,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Finch",
+    "mode": "content",
+    "seconds": 0.6960394000052474,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-unit-2-Finch-unit-2-Finch",
+    "mode": "direct",
+    "seconds": 0.99619389999134,
+    "prompt_tokens": 317,
+    "output_tokens": 75,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-scope-0",
+    "mode": "direct",
+    "seconds": 0.8224425999942468,
+    "prompt_tokens": 303,
+    "output_tokens": 62,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-scope-0",
+    "mode": "task",
+    "seconds": 0.840211900009308,
+    "prompt_tokens": 380,
+    "output_tokens": 60,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-scope-0",
+    "mode": "content",
+    "seconds": 0.6689718999987235,
+    "prompt_tokens": 367,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-scope-1",
+    "mode": "task",
+    "seconds": 0.6877170999941882,
+    "prompt_tokens": 375,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-scope-1",
+    "mode": "content",
+    "seconds": 0.6708559999970021,
+    "prompt_tokens": 367,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-scope-1",
+    "mode": "direct",
+    "seconds": 0.8121898999961559,
+    "prompt_tokens": 298,
+    "output_tokens": 57,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-quote-0",
+    "mode": "direct",
+    "seconds": 0.8848878999997396,
+    "prompt_tokens": 308,
+    "output_tokens": 66,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-quote-0",
+    "mode": "task",
+    "seconds": 0.59143229998881,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-quote-0",
+    "mode": "content",
+    "seconds": 0.7018835999915609,
+    "prompt_tokens": 381,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-quote-1",
+    "mode": "task",
+    "seconds": 0.5794438000011723,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-quote-1",
+    "mode": "content",
+    "seconds": 0.6717231000075117,
+    "prompt_tokens": 401,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-2-quote-1",
+    "mode": "direct",
+    "seconds": 1.0999904999916907,
+    "prompt_tokens": 328,
+    "output_tokens": 87,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Raven",
+    "mode": "direct",
+    "seconds": 0.8898118000070099,
+    "prompt_tokens": 314,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Raven",
+    "mode": "task",
+    "seconds": 0.6337525999988429,
+    "prompt_tokens": 378,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Raven",
+    "mode": "content",
+    "seconds": 0.6723566000000574,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Raven",
+    "mode": "task",
+    "seconds": 0.6298157000128413,
+    "prompt_tokens": 378,
+    "output_tokens": 40,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Raven",
+    "mode": "content",
+    "seconds": 0.8047506000002613,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Raven",
+    "mode": "direct",
+    "seconds": 1.231678700001794,
+    "prompt_tokens": 314,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Finch",
+    "mode": "direct",
+    "seconds": 1.2152701000013622,
+    "prompt_tokens": 314,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Finch",
+    "mode": "task",
+    "seconds": 0.9349349999974947,
+    "prompt_tokens": 378,
+    "output_tokens": 44,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Raven-unit-3-Finch",
+    "mode": "content",
+    "seconds": 0.8961914999963483,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Finch",
+    "mode": "task",
+    "seconds": 0.6977654999936931,
+    "prompt_tokens": 378,
+    "output_tokens": 40,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Finch",
+    "mode": "content",
+    "seconds": 0.9024224000022514,
+    "prompt_tokens": 380,
+    "output_tokens": 49,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-unit-3-Finch-unit-3-Finch",
+    "mode": "direct",
+    "seconds": 1.5393874000001233,
+    "prompt_tokens": 314,
+    "output_tokens": 72,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-scope-0",
+    "mode": "direct",
+    "seconds": 1.4472662000043783,
+    "prompt_tokens": 303,
+    "output_tokens": 62,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-scope-0",
+    "mode": "task",
+    "seconds": 1.178678200012655,
+    "prompt_tokens": 380,
+    "output_tokens": 56,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-scope-0",
+    "mode": "content",
+    "seconds": 1.1754283000045689,
+    "prompt_tokens": 367,
+    "output_tokens": 42,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-scope-1",
+    "mode": "task",
+    "seconds": 1.3714486999961082,
+    "prompt_tokens": 375,
+    "output_tokens": 51,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-scope-1",
+    "mode": "content",
+    "seconds": 1.1399779999919701,
+    "prompt_tokens": 367,
+    "output_tokens": 42,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-scope-1",
+    "mode": "direct",
+    "seconds": 1.1979468999925302,
+    "prompt_tokens": 298,
+    "output_tokens": 43,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-quote-0",
+    "mode": "direct",
+    "seconds": 1.7156994999968447,
+    "prompt_tokens": 308,
+    "output_tokens": 66,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-quote-0",
+    "mode": "task",
+    "seconds": 1.0520778000063729,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-quote-0",
+    "mode": "content",
+    "seconds": 1.3656055999890668,
+    "prompt_tokens": 381,
+    "output_tokens": 50,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-quote-1",
+    "mode": "task",
+    "seconds": 1.0932881999906385,
+    "prompt_tokens": 371,
+    "output_tokens": 36,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-quote-1",
+    "mode": "content",
+    "seconds": 1.2456814000033773,
+    "prompt_tokens": 414,
+    "output_tokens": 47,
+    "done_reason": "stop"
+  },
+  {
+    "id": "instruction-3-quote-1",
+    "mode": "direct",
+    "seconds": 2.112905399990268,
+    "prompt_tokens": 341,
+    "output_tokens": 100,
+    "done_reason": "stop"
+  }
+]

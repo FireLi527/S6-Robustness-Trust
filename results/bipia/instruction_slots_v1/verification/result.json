@@ -1,0 +1,68 @@
+{
+  "decisions_replayed": 64,
+  "raw_responses": 96,
+  "max_prompt_tokens": 418,
+  "max_output_tokens": 100,
+  "stability": [
+    {
+      "index": 0,
+      "mode": "direct",
+      "same_content": true
+    },
+    {
+      "index": 0,
+      "mode": "task",
+      "same_content": false
+    },
+    {
+      "index": 0,
+      "mode": "content",
+      "same_content": true
+    },
+    {
+      "index": 1,
+      "mode": "direct",
+      "same_content": true
+    },
+    {
+      "index": 1,
+      "mode": "task",
+      "same_content": true
+    },
+    {
+      "index": 1,
+      "mode": "content",
+      "same_content": true
+    },
+    {
+      "index": 2,
+      "mode": "direct",
+      "same_content": true
+    },
+    {
+      "index": 2,
+      "mode": "task",
+      "same_content": true
+    },
+    {
+      "index": 2,
+      "mode": "content",
+      "same_content": true
+    },
+    {
+      "index": 3,
+      "mode": "direct",
+      "same_content": true
+    },
+    {
+      "index": 3,
+      "mode": "task",
+      "same_content": true
+    },
+    {
+      "index": 3,
+      "mode": "content",
+      "same_content": true
+    }
+  ]
+}
