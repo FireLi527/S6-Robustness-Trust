@@ -2,6 +2,16 @@
 
 # S6 两个独立安全 Base
 
+后续修改先遵循 [工程标准](ENGINEERING_ZH.md)；统一检查命令为 `python -m s6.engineering.check`（从项目根目录运行）。本轮整改和冻结兼容边界见 [工程审计记录](engineering/AUDIT_ZH.md)。
+
+2026-09-29研究更新：[提示词分块风险聚合实验](../results/bipia/risk_aggregation_v1/findings_ZH.md)已完成。128-token完整分块在开发验证中有局部检出收益，但正常维护文本误报仍高，未证明泛化改善，未替换前端默认模型。
+
+后续[任务边界补充训练对照](../results/bipia/boundary_transfer_v1/findings_ZH.md)已完成六折开发留出：补充审核数据后正文模型误报5/18→0/18、检出8/18→9/18；联合模型有召回代价。材料已被观察过，不能宣称独立泛化提升，未部署。
+
+2026-09-30：[不安全前置条件专项](../results/bipia/prerequisite_training_v1/report_ZH.md)已按12条新审核标签完成。原生校准阈值下风险检出0/7，补充训练未改善；记录第8条条件风险与任务成对指标，未部署。
+
+同日[大规模配对来源审计](../results/bipia/large_pair_source_audit_v1/report_ZH.md)完成：SecFid/ASPI固定快照已核验，尚未训练；SecOPD是后续训练候选，需先确认研究使用条件。审计展开行数不计作获准训练样本。
+
 S6 原型已经整理为两个可独立运行、持续扩展和复用的 base：
 
 1. [`prompt_injection`](prompt_injection/)：BIPIA 邮件及检索内容安全（P1 规则、P2 语义任务一致性、P3 工具权限、P3.1 显式授权；监督分类器为可选研究对照）。

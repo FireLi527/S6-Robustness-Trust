@@ -42,6 +42,9 @@ evaluation.
 - [数据投毒中文说明](s6/data_poisoning/README_ZH.md)
 - [Milestone roadmap](s6/BASELINE_ROADMAP.md) · [里程碑规划](s6/BASELINE_ROADMAP_ZH.md)
 - [S6 当前阶段中文汇总](results/s6_stage_update_20260928_ZH.md)
+- [SecOPD 首轮配对训练：同来源提升与跨场景局限](results/bipia/secopd_training_v1/report_ZH.md)
+- [跨来源训练：8组新模型、2组冻结对照及泛化评估](results/bipia/cross_source_training_v1/report_ZH.md)
+- [授权关系联合读取：NLI小规模方法验证](results/bipia/authorization_probe_v1/report_ZH.md)
 
 ## Dataset references
 
