@@ -21,6 +21,8 @@ S6_Robustness_and_Trust_讨论总结.md
 
 # Upstream datasets and generated samples
 external/
+data/bipia/secopd_pairs_v1/
+data/bipia/cross_source_v1/
 data/bipia/generated/
 # Rebuild locally from the recorded Python standard-library version and frozen hash.
 data/bipia/code_independent_v2/samples.jsonl
@@ -28,6 +30,10 @@ data/bipia/code_context_v1/samples.jsonl
 data/bipia/code_external_v1/samples.jsonl
 data/bipia/code_context_v2/samples.jsonl
 data/bipia/maintainer_negatives_v1/samples.jsonl
+results/bipia/repo_file_v1/model.joblib
+results/bipia/supervised/model.joblib
+results/bipia/supervised_v2/model.joblib
+results/bipia/**/adapter/
 
 # Embedding and model caches
 *.npz
@@ -40,6 +46,19 @@ data/bipia/maintainer_negatives_v1/samples.jsonl
 results/bipia/*_decisions.csv
 results/bipia/*_failures.csv
 results/bipia/tool_policy_audit.jsonl
+results/bipia/supervised/test_predictions.csv
+results/fruitfly_poisoning/semantic_sample_results.json
+results/stl10_poisoning/semantic_sample_results.json
+results/diptera_poisoning/**/candidate_predictions.json
+results/diptera_poisoning/*.log
+results/fruitfly_poisoning/multiseed_v1/batch.log
+results/fruitfly_poisoning/weighted_v2/testwrite.log
+results/local_frontend/
+results/engineering/checks/
+results/portal.stdout.log
+results/portal.stderr.log
+s6/data_poisoning/dashboard.stdout.log
+s6/data_poisoning/dashboard.stderr.log
 
 # OS files
 .DS_Store
@@ -47,3 +66,11 @@ Thumbs.db
 
 # Generated STL-10 PNGs
 data/stl10_poisoning/images/
+results/bipia/repo_file_v2_development/model.joblib
+results/bipia/native_pairs_v1/models.joblib
+
+# Classmate-contributed raw fruit-fly images (reference in place, never commit)
+data/fruitfly_poisoning/images/
+
+# Course presentation slides, not a code/data artifact
+*.pptx
