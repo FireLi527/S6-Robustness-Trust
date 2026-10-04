@@ -28,9 +28,12 @@ from semantic_detector import (
 from semantic_detector import detector_metadata as semantic_detector_metadata
 from confused_deputy_scenarios import SCENARIOS
 from task_intent import PRESETS, register as register_task, resolve as resolve_task
-from tool_policy import TOOL_REGISTRY, ToolCall, append_audit_record, evaluate_tool_call
+from tool_policy import TOOL_REGISTRY, append_audit_record, evaluate_tool_call
+from tool_policy import ToolCall as ToolCall  # Compatibility export used by existing callers/tests.
 from tool_policy import policy_metadata as tool_policy_metadata
 from approval_policy import ApprovalStore
+from task_scope import TaskScopeStore
+from request_inputs import content_text, tool_call as parse_tool_call
 
 
 HOST = "127.0.0.1"
@@ -47,6 +50,7 @@ MINILM_CACHE_DIR = PROJECT_ROOT / "external" / "minilm_cache"
 TOOL_POLICY_AUDIT_LOG = RESULTS_DIR / "tool_policy_audit.jsonl"
 TOOL_APPROVALS_FILE = RESULTS_DIR / "local_frontend" / "tool_approvals.json"
 APPROVAL_STORE = ApprovalStore(TOOL_APPROVALS_FILE)
+TASK_SCOPES = TaskScopeStore()
 
 SPLIT_SOURCES = {
     "development": "train",
@@ -202,6 +206,9 @@ def load_status() -> dict:
             },
             "evaluation": tool_policy_evaluation,
             "approval_evaluation": approval_evaluation,
+            "live_scope": {"version": "user-confirmed-v1", "requires_confirmation": True,
+                           "modes": ["read_only", "exact_action"], "simulation_only": True,
+                           "historical_evaluations_unchanged": True},
         },
     }
 
@@ -221,10 +228,12 @@ class S6RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler API
         parsed_url = urlparse(self.path)
         path = parsed_url.path
-        if path == "/":
-            body = INDEX_FILE.read_bytes()
+        if path in {"/", "/assets/request_state.js"}:
+            resource = INDEX_FILE if path == "/" else APP_DIR / "web" / "request_state.js"
+            body = resource.read_bytes()
             self.send_response(HTTPStatus.OK)
-            self.send_header("Content-Type", "text/html; charset=utf-8")
+            content_type = "text/html" if path == "/" else "application/javascript"
+            self.send_header("Content-Type", f"{content_type}; charset=utf-8")
             self.send_header("Content-Length", str(len(body)))
             self.send_header("Cache-Control", "no-store")
             self.end_headers()
@@ -296,9 +305,28 @@ class S6RequestHandler(BaseHTTPRequestHandler):
 
         self._send_json({"error": "Not found"}, HTTPStatus.NOT_FOUND)
 
+    def _handle_approval(self, payload: dict) -> dict:
+        """Manage explicit approvals; preserve scope and current-risk rechecks."""
+        action = payload.get("action")
+        if action == "revoke":
+            key = payload.get("scope_id")
+            if not isinstance(key, str) or not key:
+                raise ValueError("scope_id must be a non-empty string")
+            return {"revoked": APPROVAL_STORE.revoke(key), "approvals": APPROVAL_STORE.list()}
+        if action != "grant":
+            raise ValueError("action must be 'grant' or 'revoke'")
+        call = parse_tool_call(payload, required=True)
+        text = content_text(payload)
+        task = resolve_task(payload.get("question", ""), text, payload.get("task_context", ""))
+        risk = detect_prompt_injection(text)
+        mode = payload.get("mode")
+        key = TASK_SCOPES.grant(payload.get("task_scope_token", ""), task["question"], call,
+                               risk.decision, evaluate_tool_call(call, risk.decision), APPROVAL_STORE, mode)
+        return {"scope_id": key, "mode": mode, "approvals": APPROVAL_STORE.list()}
+
     def do_POST(self) -> None:  # noqa: N802 - BaseHTTPRequestHandler API
         endpoint = urlparse(self.path).path
-        if endpoint not in ("/api/detect", "/api/intent", "/api/intent-comparison", "/api/infer-intent", "/api/approvals"):
+        if endpoint not in ("/api/detect", "/api/intent", "/api/intent-comparison", "/api/infer-intent", "/api/approvals", "/api/task-scope"):
             self._send_json({"error": "Not found"}, HTTPStatus.NOT_FOUND)
             return
 
@@ -317,44 +345,25 @@ class S6RequestHandler(BaseHTTPRequestHandler):
 
         try:
             payload = json.loads(self.rfile.read(content_length).decode("utf-8"))
+            if not isinstance(payload, dict):
+                raise ValueError("Expected a JSON object")
+            if endpoint in {"/api/approvals", "/api/task-scope"}:
+                origin = self.headers.get("Origin")
+                if origin and origin != f"http://{self.headers.get('Host')}":
+                    raise ValueError("Cross-origin authorization is not allowed")
+                if self.headers.get_content_type() != "application/json":
+                    raise ValueError("Authorization requires application/json")
             if endpoint == "/api/approvals":
-                if not isinstance(payload, dict):
-                    raise ValueError("Expected a JSON object")
-                action = payload.get("action")
-                if action == "revoke":
-                    key = payload.get("scope_id")
-                    if not isinstance(key, str) or not key:
-                        raise ValueError("scope_id must be a non-empty string")
-                    self._send_json({"revoked": APPROVAL_STORE.revoke(key), "approvals": APPROVAL_STORE.list()})
-                    return
-                if action != "grant":
-                    raise ValueError("action must be 'grant' or 'revoke'")
-                tool_name = payload.get("tool_name")
-                target = payload.get("target", "")
-                parameters = payload.get("parameters", {})
-                mode = payload.get("mode")
-                if not isinstance(tool_name, str) or not tool_name.strip():
-                    raise ValueError("tool_name must be a non-empty string")
-                if not isinstance(target, str) or not isinstance(parameters, dict):
-                    raise ValueError("target must be a string and parameters must be an object")
-                if not all(isinstance(k, str) and isinstance(v, str) for k, v in parameters.items()):
-                    raise ValueError("approval parameters must contain string keys and values")
-                call = ToolCall(tool_name.strip(), target.strip(), parameters)
-                key = APPROVAL_STORE.grant(call, mode)
-                self._send_json({"scope_id": key, "mode": mode, "approvals": APPROVAL_STORE.list()})
+                self._send_json(self._handle_approval(payload))
                 return
             if endpoint == "/api/intent-comparison":
-                if not isinstance(payload, dict):
-                    raise ValueError("Expected a JSON object")
                 from intent_comparison import run_comparison
                 try:
                     self._send_json(run_comparison())
                 except Exception as error:
                     self._send_json({"error": f"Intent comparison unavailable: {error}"}, HTTPStatus.INTERNAL_SERVER_ERROR)
                 return
-            text = payload["text"]
-            if not isinstance(text, str) or not text.strip():
-                raise ValueError("text must be a non-empty string")
+            text = content_text(payload)
             if endpoint == "/api/infer-intent":
                 from live_intent import infer_content
                 try:
@@ -372,17 +381,12 @@ class S6RequestHandler(BaseHTTPRequestHandler):
             question = intent["question"]
             if endpoint == "/api/detect" and use_supervised and not question.strip():
                 raise ValueError("Supervised evaluation requires the user's real task")
-            tool_name = payload.get("tool_name", "")
-            if not isinstance(tool_name, str):
-                raise ValueError("tool_name must be a string")
-            target = payload.get("target", "")
-            if not isinstance(target, str):
-                raise ValueError("target must be a string")
-            parameters = payload.get("parameters", {})
-            if not isinstance(parameters, dict) or not all(
-                isinstance(k, str) and isinstance(v, str) for k, v in parameters.items()
-            ):
-                raise ValueError("parameters must contain string keys and values")
+            tool_call = parse_tool_call(payload)
+            if endpoint == "/api/task-scope":
+                token = TASK_SCOPES.confirm(question, payload.get("scope_mode"), tool_call, payload.get("confirmed"))
+                self._send_json({"task_scope_token": token, "scope_mode": payload["scope_mode"],
+                                 "expires_in_seconds": TASK_SCOPES.ttl, "simulation_only": True})
+                return
         except (UnicodeDecodeError, json.JSONDecodeError, KeyError, ValueError, TypeError) as error:
             self._send_json({"error": str(error)}, HTTPStatus.BAD_REQUEST)
             return
@@ -435,16 +439,19 @@ class S6RequestHandler(BaseHTTPRequestHandler):
                 "reasons": list(hybrid_reasons),
             }
 
-        if tool_name.strip():
-            tool_call = ToolCall(tool_name=tool_name.strip(), target=target.strip(), parameters=parameters)
+        if tool_call.tool_name:
             policy_result = evaluate_tool_call(tool_call, result.decision)
-            approval_result = APPROVAL_STORE.apply(tool_call, result.decision, policy_result)
-            entry = TOOL_REGISTRY.get(tool_name.strip())
+            scope_reason = TASK_SCOPES.check(payload.get("task_scope_token", ""), question, tool_call)
+            approval_result = TASK_SCOPES.apply(payload.get("task_scope_token", ""), question,
+                                               tool_call, result.decision, policy_result, APPROVAL_STORE)
+            entry = TOOL_REGISTRY.get(tool_call.tool_name)
             response["tool_policy"] = {
                 "detector": tool_policy_metadata(),
                 "decision": policy_result.decision,
                 "reasons": list(policy_result.reasons),
                 "permission": entry.permission if entry else None,
+                "task_scope": {"allowed": scope_reason is None, "reason": scope_reason,
+                               "version": "user-confirmed-v1", "simulation_only": True},
                 "approval": {
                     "final_decision": approval_result.decision,
                     "reasons": list(approval_result.reasons),
@@ -456,7 +463,8 @@ class S6RequestHandler(BaseHTTPRequestHandler):
             final_policy_result = type(policy_result)(approval_result.decision, approval_result.reasons)
             append_audit_record(
                 TOOL_POLICY_AUDIT_LOG, tool_call, result.decision, final_policy_result,
-                extra={"p3_base_decision": policy_result.decision, "approval_match": approval_result.matched},
+                extra={"p3_base_decision": policy_result.decision, "approval_match": approval_result.matched,
+                       "task_scope_reason": scope_reason, "live_policy_version": "user-confirmed-v1"},
             )
 
         self._send_json(response)

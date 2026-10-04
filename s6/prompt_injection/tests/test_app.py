@@ -100,6 +100,18 @@ class AppIntegrationTests(unittest.TestCase):
         self.assertIn('id="p1-metrics-body"', page)
         self.assertIn("sample-encoding", page)
 
+    def test_frontend_request_module_is_served_without_cache(self) -> None:
+        with urlopen(f"{self.base_url}/assets/request_state.js", timeout=2) as response:
+            self.assertIn("application/javascript", response.headers["Content-Type"])
+            self.assertEqual(response.headers["Cache-Control"], "no-store")
+            self.assertIn("class RequestState", response.read().decode("utf-8"))
+
+    def test_static_route_does_not_expose_arbitrary_files(self) -> None:
+        for path in ("/assets/app.py", "/assets/../app.py", "/assets/%2e%2e/app.py"):
+            with self.assertRaises(HTTPError) as error:
+                urlopen(self.base_url + path, timeout=2)
+            self.assertEqual(error.exception.code, 404)
+
 
 if __name__ == "__main__":
     unittest.main()

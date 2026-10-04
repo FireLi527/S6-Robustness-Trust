@@ -639,6 +639,18 @@
             </div>
           </div>
 
+          <div id="task-scope-panel" class="field">
+            <label for="task-scope-mode" data-i18n="scopeTitle">本次任务范围</label>
+            <div style="display:flex;gap:8px;align-items:center">
+              <select id="task-scope-mode">
+                <option value="read_only" data-i18n="scopeReadOnly">只读审查</option>
+                <option value="exact_action" data-i18n="scopeExact">仅当前工具、目标和参数</option>
+              </select>
+              <button type="button" id="confirm-task-scope" data-i18n="scopeConfirm">确认范围</button>
+            </div>
+            <p id="task-scope-status" class="hint"></p>
+            <p class="hint" data-i18n="scopeNote">长期批准仍受本次范围约束。这里只模拟授权，不执行工具。</p>
+          </div>
           <div class="actions">
             <button id="run-detection" class="button primary full" type="button">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.4 8.1-8 9-4.6-.9-8-4-8-9V7l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -807,6 +819,7 @@
     </details>
   </main>
 
+  <script src="/assets/request_state.js"></script>
   <script>
     const translations = {
       zh: {
@@ -857,7 +870,26 @@
       }
     };
 
+    Object.assign(translations.zh, {
+      scopeTitle:"本次任务范围", scopeReadOnly:"只读审查", scopeExact:"仅当前工具、目标和参数", scopeConfirm:"确认范围",
+      scopeNote:"长期批准仍受本次范围约束。这里只模拟授权，不执行工具。", scopePending:"尚未确认", scopeConfirmed:"已确认（1小时内有效）",
+      scopePrompt:"请确认本次任务和允许范围：", scopeNeedsTask:"请先设置用户任务。", scopeInvalidMode:"任务范围无效。",
+      scopeUnknownTool:"请选择已注册工具。", scopeRequired:"请先确认本次任务范围。", scopeExpired:"任务范围已过期，请重新确认。",
+      scopeTaskChanged:"用户任务已改变，请重新确认范围。", scopeReadOnlyDenied:"只读审查不允许此操作。", scopeActionChanged:"工具、目标或参数超出已确认范围。",
+      scopeNotApprovable:"当前内容或工具策略不允许批准。"
+    });
+    translations.zh.p3DetailBody = "本页为冻结P3/P3.1历史评估；实时演示另加用户确认的任务范围约束。";
+    Object.assign(translations.en, {
+      scopeTitle:"Current task scope", scopeReadOnly:"Read-only review", scopeExact:"Current tool, target and parameters only", scopeConfirm:"Confirm scope",
+      scopeNote:"Persistent approvals remain subject to this scope. Authorization simulation only; no tools are executed.", scopePending:"Not confirmed", scopeConfirmed:"Confirmed (valid for 1 hour)",
+      scopePrompt:"Confirm the task and permitted scope:", scopeNeedsTask:"Set the user task first.", scopeInvalidMode:"Invalid task scope.",
+      scopeUnknownTool:"Select a registered tool.", scopeRequired:"Confirm the current task scope first.", scopeExpired:"Task scope expired; confirm it again.",
+      scopeTaskChanged:"The user task changed; confirm the scope again.", scopeReadOnlyDenied:"Read-only review does not permit this operation.", scopeActionChanged:"Tool, target or parameters are outside the confirmed scope.",
+      scopeNotApprovable:"Current content or tool policy does not permit approval."
+    });
+    translations.en.p3DetailBody = "Frozen P3/P3.1 historical evaluation. The live demo additionally requires user-confirmed task scope.";
     const state = {
+      taskScopeToken: "", scopeTimer: null, approvalPending: false,
       language: localStorage.getItem("s6-prompt-language") === "en" ? "en" : "zh",
       connection: "loading",
       snapshot: null,
@@ -871,6 +903,7 @@
       startedAt: 0
     };
 
+    const requests = new S6RequestState();
     const byId = id => document.getElementById(id);
     const contentInput = byId("content");
     const questionInput = byId("question");
@@ -934,6 +967,7 @@
       updateContextNote();
       updateCounter();
       renderIntent();renderLiveInference();renderIntentComparison();
+      renderTaskScope();
       if (state.snapshot) renderStatus(state.snapshot);
       if (state.currentResult) renderResult(state.currentResult, false);
     }
@@ -1084,6 +1118,7 @@
       const none = document.createElement("option"); none.value = ""; none.textContent = t("noTool"); toolSelect.appendChild(none);
       Object.keys(registry).forEach(name => { const option = document.createElement("option"); option.value = name; option.textContent = name; toolSelect.appendChild(option); });
       if ([...toolSelect.options].some(option => option.value === selected)) toolSelect.value = selected;
+      else if (selected) { state.toolParameters = {}; invalidateTaskScope(); }
     }
 
     function renderStatus(data) {
@@ -1130,32 +1165,42 @@
       }
     }
 
+    function setSampleLoading(loading) {
+      byId("load-example").disabled = loading;
+      byId("load-example").querySelector("span").textContent = t(loading ? "loadingSample" : "loadSample");
+      byId("load-scenario").disabled = loading;
+      byId("load-scenario").textContent = t(loading ? "loadingScenario" : "loadScenario");
+    }
+
     async function loadExample() {
-      const button = byId("load-example");
-      const label = button.querySelector("span");
-      button.disabled = true; label.textContent = t("loadingSample"); hideError();
+      invalidateTaskScope();
+      const ticket = requests.begin("sample");
+      setSampleLoading(true); hideError();
       try {
         const split = byId("sample-split").value;
         const encoding = byId("sample-encoding").value;
         const data = await requestJson(`/api/example?split=${encodeURIComponent(split)}&encoding=${encodeURIComponent(encoding)}`);
+        if (!requests.current(ticket)) return;
         state.sampleMeta = data; state.scenarioMeta = null;
         contentInput.value = data.text || "";
         state.taskContext=data.task_context||"";state.intent=data.intent;byId("auto-intent").checked=true;questionInput.readOnly=true;
         questionInput.value = data.question || "";renderIntent();scheduleInference();
-        toolSelect.value = ""; targetInput.value = "";
-        updateContextNote(); updateCounter(); resetResult();
+        toolSelect.value = ""; targetInput.value = ""; state.toolParameters = {};
+        updateContextNote(); updateCounter(); invalidateTaskScope();
       } catch (error) {
-        showError(error);
+        if (requests.current(ticket)) showError(error);
       } finally {
-        button.disabled = false; label.textContent = t("loadSample");
+        if (requests.latest(ticket)) setSampleLoading(false);
       }
     }
 
     async function loadScenario() {
-      const button = byId("load-scenario");
-      button.disabled = true; button.textContent = t("loadingScenario"); hideError();
+      invalidateTaskScope();
+      const ticket = requests.begin("sample");
+      setSampleLoading(true); hideError();
       try {
         const data = await requestJson("/api/tool-scenario");
+        if (!requests.current(ticket)) return;
         state.scenarioMeta = data; state.sampleMeta = null;
         contentInput.value = data.content || "";
         state.taskContext=data.task_context||"";state.intent=data.intent;byId("auto-intent").checked=true;questionInput.readOnly=true;
@@ -1166,11 +1211,11 @@
         toolSelect.value = data.tool_name || "";
         targetInput.value = data.target || "";
         state.toolParameters = data.parameters || {};
-        updateContextNote(); updateCounter(); resetResult();
+        updateContextNote(); updateCounter(); invalidateTaskScope();
       } catch (error) {
-        showError(error);
+        if (requests.current(ticket)) showError(error);
       } finally {
-        button.disabled = false; button.textContent = t("loadScenario");
+        if (requests.latest(ticket)) setSampleLoading(false);
       }
     }
 
@@ -1198,28 +1243,27 @@
     }
 
     async function runDetection() {
+      if (state.approvalPending) return;
       const text = contentInput.value.trim();
       if (!text) {
         const banner = byId("request-error"); banner.textContent = t("contentRequired"); banner.classList.add("visible"); contentInput.focus(); return;
       }
-      hideError(); setDetectionLoading(true);
-      const payload = { text: contentInput.value, use_supervised: byId("use-supervised").checked };
-      if (byId("auto-intent").checked) payload.task_context=state.taskContext;
-      else if (questionInput.value.trim()) payload.question = questionInput.value.trim();
-      if (toolSelect.value) payload.tool_name = toolSelect.value;
-      if (targetInput.value.trim()) payload.target = targetInput.value.trim();
-      if (toolSelect.value) payload.parameters = state.toolParameters || {};
+      const ticket = requests.begin("detect");
+      hideError(); resetResult(); setDetectionLoading(true);
+      const payload = { ...scopePayload(), use_supervised: byId("use-supervised").checked,
+        task_scope_token: state.taskScopeToken };
       try {
         const data = await requestJson("/api/detect", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
-        state.sourceText = contentInput.value;
+        if (!requests.current(ticket)) return;
+        state.sourceText = payload.text;
         state.currentResult = data;
         state.intent=data.intent;renderIntent();
         renderResult(data, true);
       } catch (error) {
-        resetResult(); showError(error);
+        if (requests.current(ticket)) { resetResult(); showError(error); }
       } finally {
-        setDetectionLoading(false);
-        if (state.currentResult) {
+        if (requests.latest(ticket)) setDetectionLoading(false);
+        if (requests.current(ticket) && state.currentResult) {
           byId("result-empty").style.display = "none";
           byId("result-content").classList.add("visible");
         }
@@ -1227,7 +1271,7 @@
     }
 
     function addReasonGroup(container, title, reasons, open = false) {
-      const values = Array.isArray(reasons) && reasons.length ? reasons : [t("noReasons")];
+      const values = Array.isArray(reasons) && reasons.length ? reasons.map(reason => t(reason)) : [t("noReasons")];
       const details = document.createElement("details"); details.open = open;
       const summary = document.createElement("summary");
       const name = document.createElement("span"); name.textContent = title;
@@ -1285,7 +1329,7 @@
       setBadge(byId("p3-badge"), policy?.approval?.final_decision || policy?.decision);
       byId("p3-value").textContent = policy ? t("permission", { value: policy.permission ?? "—" }) : t("noToolValue");
       const approvalActions = byId("approval-actions");
-      approvalActions.style.display = policy?.approval?.can_approve ? "flex" : "none";
+      approvalActions.style.display = policy?.approval?.can_approve && !state.approvalPending ? "flex" : "none";
       byId("approve-once").textContent = state.language === "zh" ? "批准一次" : "Allow once";
       byId("approve-always").textContent = state.language === "zh" ? "以后都允许" : "Always allow";
 
@@ -1307,6 +1351,7 @@
 
     function resetResult() {
       state.currentResult = null; state.sourceText = "";
+      byId("approval-actions").style.display = "none";
       if (state.elapsedTimer) clearInterval(state.elapsedTimer);
       state.elapsedTimer = null;
       byId("result-loading").classList.remove("visible");
@@ -1373,30 +1418,71 @@
         :(zh?'加载场景以使用预设任务，或取消勾选后输入任务。':'Load a scenario to use its preset task, or uncheck the option to enter a task.');
     }
     byId('auto-intent').addEventListener('change',()=>{
+      invalidateTaskScope();
       questionInput.readOnly=byId('auto-intent').checked;
       if(byId('auto-intent').checked){const context=state.sampleMeta||state.scenarioMeta;questionInput.value=context?.question||'';state.intent=context?.intent||null;}
       else state.intent=questionInput.value.trim()?{status:'RESOLVED',source:'user_input',category:'user_request'}:null;
       renderIntent();resetResult();
     });
     async function grantApproval(mode) {
-      if (!toolSelect.value || !state.currentResult?.tool_policy?.approval?.can_approve) return;
-      hideError();
+      if (state.approvalPending || !toolSelect.value || !state.currentResult?.tool_policy?.approval?.can_approve) return;
+      const payload = { ...scopePayload(), action: "grant", mode, task_scope_token: state.taskScopeToken };
+      const ticket = requests.begin("approval");
+      state.approvalPending = true;
+      requests.begin("detect"); // Any older read result must not restore approval actions.
+      hideError(); resetResult(); setDetectionLoading(false);
       try {
         await requestJson("/api/approvals", {
           method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ action: "grant", mode, tool_name: toolSelect.value,
-            target: targetInput.value.trim(), parameters: state.toolParameters || {} })
+          body: JSON.stringify(payload)
         });
-        await runDetection();
-      } catch (error) { showError(error); }
+        state.approvalPending = false;
+        if (requests.current(ticket)) await runDetection();
+      } catch (error) {
+        if (requests.current(ticket)) showError(new Error(t(error.message)));
+      } finally { state.approvalPending = false; }
     }
+    function renderTaskScope() {
+      byId("task-scope-panel").style.display = toolSelect.value ? "" : "none";
+      byId("task-scope-status").textContent = t(state.taskScopeToken ? "scopeConfirmed" : "scopePending");
+    }
+    function invalidateTaskScope() {
+      state.taskScopeToken = ""; requests.invalidate();
+      clearTimeout(state.scopeTimer); state.scopeTimer = null;
+      renderTaskScope(); resetResult(); setDetectionLoading(false);
+    }
+    function scopePayload() {
+      const payload = {text:contentInput.value, tool_name:toolSelect.value,
+        target:targetInput.value.trim(), parameters:state.toolParameters || {}};
+      if (byId("auto-intent").checked) payload.task_context = state.taskContext;
+      else payload.question = questionInput.value.trim();
+      return payload;
+    }
+    byId("task-scope-mode").addEventListener("change", invalidateTaskScope);
+    byId("confirm-task-scope").addEventListener("click", async () => {
+      const payload = {...scopePayload(), scope_mode:byId("task-scope-mode").value, confirmed:true};
+      const summary = questionInput.value.trim() + "\n" + t(payload.scope_mode === "read_only" ? "scopeReadOnly" : "scopeExact")
+        + (payload.scope_mode === "exact_action" ? "\n" + JSON.stringify({tool:payload.tool_name,target:payload.target,parameters:payload.parameters},null,2) : "");
+      if (!window.confirm(t("scopePrompt") + "\n\n" + summary)) return;
+      const ticket = requests.begin("scope");
+      try {
+        const result = await requestJson("/api/task-scope", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(payload)});
+        if (!requests.current(ticket)) return;
+        requests.invalidate();
+        state.taskScopeToken = result.task_scope_token; renderTaskScope(); resetResult(); setDetectionLoading(false);
+        clearTimeout(state.scopeTimer);
+        state.scopeTimer = setTimeout(invalidateTaskScope, result.expires_in_seconds * 1000);
+      } catch(error) { if (requests.current(ticket)) showError(new Error(t(error.message))); }
+    });
     byId("approve-once").addEventListener("click", () => grantApproval("once"));
     byId("approve-always").addEventListener("click", () => grantApproval("always"));
-    toolSelect.addEventListener("change", () => { state.toolParameters = {}; resetResult(); });
-    targetInput.addEventListener("input", resetResult);
+    toolSelect.addEventListener("change", () => { state.toolParameters = {}; invalidateTaskScope(); });
+    targetInput.addEventListener("input", invalidateTaskScope);
 
     function clearForm() {
+      invalidateTaskScope();
       contentInput.value = ""; questionInput.value = ""; toolSelect.value = ""; targetInput.value = "";
+      renderTaskScope();
       state.sampleMeta = null; state.scenarioMeta = null; state.toolParameters = {};state.taskContext="";state.intent=null;renderIntent();scheduleInference();
       updateContextNote(); updateCounter(); hideError(); resetResult(); contentInput.focus();
     }
@@ -1414,6 +1500,11 @@
     byId("load-scenario").addEventListener("click", loadScenario);
     byId("run-detection").addEventListener("click", runDetection);
     byId("clear-form").addEventListener("click", clearForm);
+    byId("use-supervised").addEventListener("change", invalidateTaskScope);
+    byId("sample-split").addEventListener("change", invalidateTaskScope);
+    byId("sample-encoding").addEventListener("change", invalidateTaskScope);
+    contentInput.addEventListener("input", invalidateTaskScope);
+    questionInput.addEventListener("input", invalidateTaskScope);
     contentInput.addEventListener("input", () => { scheduleInference(700);updateCounter();state.taskContext="";state.sampleMeta=null;state.scenarioMeta=null;updateContextNote();if(byId("auto-intent").checked){questionInput.value="";state.intent=null;renderIntent();} if (state.currentResult) resetResult(); });
     questionInput.addEventListener("input", () => {state.intent=questionInput.value.trim()?{status:"RESOLVED",source:"user_input",category:"user_request"}:null;renderIntent(); if (state.currentResult) resetResult(); });
     document.addEventListener("keydown", event => {
