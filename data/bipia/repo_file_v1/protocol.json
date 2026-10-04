@@ -1,0 +1,52 @@
+{
+  "status": "FROZEN_BEFORE_MODEL_FITTING",
+  "source": "user-provided Hugging Face bucket copy",
+  "source_url": "https://huggingface.co/buckets/HXBY527/prompt-injection-repo-dataset-bucket",
+  "original_card": "https://huggingface.co/datasets/prodnull/prompt-injection-repo-dataset",
+  "source_sha256": "7dff37d6aa6812aa1cb8b136da89d651ad78a33a9bd0d06049d51c650f9a8fcc",
+  "seed": 2026,
+  "grouping": {
+    "kind": "char_tfidf_connected_components",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "min_df": 2,
+    "max_features": 150000,
+    "cosine_threshold": 0.88
+  },
+  "group_count": 5375,
+  "largest_group": 20,
+  "split_unit": "near-duplicate connected component, not repository or attack family",
+  "split_counts": {
+    "train": {
+      "rows": 3402,
+      "attacks": 1749,
+      "benign": 1653,
+      "groups": 3226
+    },
+    "validation": {
+      "rows": 1134,
+      "attacks": 583,
+      "benign": 551,
+      "groups": 1075
+    },
+    "test": {
+      "rows": 1135,
+      "attacks": 584,
+      "benign": 551,
+      "groups": 1074
+    }
+  },
+  "assignments_sha256": "2a142720e0d233385a958bf7b13b7cd8bca8c1199d2008700ab89d05363907d6",
+  "preselected_model": {
+    "features": "word TF-IDF (1,2) + char TF-IDF (3,5)",
+    "classifier": "LogisticRegression(liblinear,class_weight=balanced,C=1,seed=2026)",
+    "threshold": "choose on validation for max attack recall subject to benign FPR <=5%"
+  },
+  "limitations": [
+    "The published JSONL has no repository IDs or attack-family IDs; source/family leakage cannot be ruled out.",
+    "Near-duplicate grouping uses all unlabeled text to define splits, not labels for model fitting.",
+    "Internal test is not an independent-source test; report external stress tests separately."
+  ]
+}

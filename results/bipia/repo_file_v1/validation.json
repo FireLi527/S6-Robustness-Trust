@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "model_sha256": "989cd87b5a511f22e9b183400a2bc8ab1671c433fc19d941e1edc409df8cce55",
+  "threshold": 0.5378236356524083,
+  "validation": {
+    "tp": 541,
+    "fn": 42,
+    "fp": 26,
+    "tn": 525,
+    "accuracy": 0.9400352733686067,
+    "precision": 0.9541446208112875,
+    "recall": 0.9279588336192109,
+    "fpr": 0.047186932849364795
+  },
+  "train_rows": 3402,
+  "validation_rows": 1134,
+  "limitations": [
+    "The published JSONL has no repository IDs or attack-family IDs; source/family leakage cannot be ruled out.",
+    "Near-duplicate grouping uses all unlabeled text to define splits, not labels for model fitting.",
+    "Internal test is not an independent-source test; report external stress tests separately."
+  ]
+}

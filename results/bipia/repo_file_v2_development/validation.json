@@ -1,0 +1,106 @@
+{
+  "status": "THRESHOLDS_FROZEN_BEFORE_DEVELOPMENT_DIAGNOSTICS",
+  "model_sha256": "e527360127e943fb664eef48c8322605f4e5f4d5a610f9e0b8779c4889dd0e85",
+  "arms": {
+    "A_full_frozen": {
+      "threshold": 0.8915023297821077,
+      "validation_by_source": {
+        "agentic5k": {
+          "tp": 28,
+          "fn": 280,
+          "fp": 7,
+          "tn": 152,
+          "accuracy": 0.3854389721627409,
+          "precision": 0.8,
+          "recall": 0.09090909090909091,
+          "fpr": 0.0440251572327044
+        },
+        "repo_v1": {
+          "tp": 144,
+          "fn": 439,
+          "fp": 0,
+          "tn": 551,
+          "accuracy": 0.6128747795414462,
+          "precision": 1.0,
+          "recall": 0.2469982847341338,
+          "fpr": 0.0
+        }
+      }
+    },
+    "B_blocks_frozen": {
+      "threshold": 0.8915023297821077,
+      "validation_by_source": {
+        "agentic5k": {
+          "tp": 28,
+          "fn": 280,
+          "fp": 7,
+          "tn": 152,
+          "accuracy": 0.3854389721627409,
+          "precision": 0.8,
+          "recall": 0.09090909090909091,
+          "fpr": 0.0440251572327044
+        },
+        "repo_v1": {
+          "tp": 151,
+          "fn": 432,
+          "fp": 0,
+          "tn": 551,
+          "accuracy": 0.6190476190476191,
+          "precision": 1.0,
+          "recall": 0.25900514579759865,
+          "fpr": 0.0
+        }
+      }
+    },
+    "C_full_augmented": {
+      "threshold": 0.8927434252254774,
+      "validation_by_source": {
+        "agentic5k": {
+          "tp": 31,
+          "fn": 277,
+          "fp": 6,
+          "tn": 153,
+          "accuracy": 0.39400428265524623,
+          "precision": 0.8378378378378378,
+          "recall": 0.10064935064935066,
+          "fpr": 0.03773584905660377
+        },
+        "repo_v1": {
+          "tp": 143,
+          "fn": 440,
+          "fp": 0,
+          "tn": 551,
+          "accuracy": 0.6119929453262787,
+          "precision": 1.0,
+          "recall": 0.24528301886792453,
+          "fpr": 0.0
+        }
+      }
+    },
+    "D_blocks_augmented": {
+      "threshold": 0.8927434252254774,
+      "validation_by_source": {
+        "agentic5k": {
+          "tp": 31,
+          "fn": 277,
+          "fp": 6,
+          "tn": 153,
+          "accuracy": 0.39400428265524623,
+          "precision": 0.8378378378378378,
+          "recall": 0.10064935064935066,
+          "fpr": 0.03773584905660377
+        },
+        "repo_v1": {
+          "tp": 150,
+          "fn": 433,
+          "fp": 0,
+          "tn": 551,
+          "accuracy": 0.6181657848324515,
+          "precision": 1.0,
+          "recall": 0.25728987993138935,
+          "fpr": 0.0
+        }
+      }
+    }
+  }
+}

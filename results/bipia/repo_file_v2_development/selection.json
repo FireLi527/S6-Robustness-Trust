@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN_BEFORE_FITTING",
+  "hashes": {
+    "s6\\prompt_injection\\train_repo_file_v2_development.py": "4e75673d64b88bcb138617f44bac9ef2dcdbd97a2eaef0a735c01c39a9715bad",
+    "s6\\prompt_injection\\repo_file_blocks.py": "56bf1f445ca41a85acad2a284eb98a2493df0693883226161fa18c302f4a45d6",
+    "s6\\prompt_injection\\train_repo_file_v1.py": "8209815cd6bed87a06d0210300cb28dc3b8ed8d9a85516c602c0488af7447e62",
+    "data\\bipia\\repo_file_v2\\development_protocol.json": "c24265f7284003130553e8f2646ac66544b03a504b67e647e5bb8f637372e966",
+    "results\\bipia\\repo_file_v1\\model.joblib": "989cd87b5a511f22e9b183400a2bc8ab1671c433fc19d941e1edc409df8cce55"
+  },
+  "training_rows": 3438,
+  "validation_rows": 1601,
+  "arms": [
+    "A_full_frozen",
+    "B_blocks_frozen",
+    "C_full_augmented",
+    "D_blocks_augmented"
+  ],
+  "policy": "For each arm maximize mean source recall subject to FPR <=5% in EACH of original validation and new-source validation; tie: lower mean FPR then higher threshold; include reject-all threshold.",
+  "augmentation_weight": 1.0,
+  "scope": "EXPLORATORY_DEVELOPMENT_NO_INDEPENDENT_TEST",
+  "holdout_clarification": "v1 integrity loader reads source bytes to validate hashes; test rows are not fitted, calibrated, scored, or inspected for examples. agentic5k test parquet is not opened."
+}

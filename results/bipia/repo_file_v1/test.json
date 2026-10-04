@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETE",
+  "source_sha256": "7dff37d6aa6812aa1cb8b136da89d651ad78a33a9bd0d06049d51c650f9a8fcc",
+  "model_sha256": "989cd87b5a511f22e9b183400a2bc8ab1671c433fc19d941e1edc409df8cce55",
+  "threshold": 0.5378236356524083,
+  "test_rows": 1135,
+  "model": {
+    "tp": 527,
+    "fn": 57,
+    "fp": 27,
+    "tn": 524,
+    "accuracy": 0.9259911894273127,
+    "precision": 0.9512635379061372,
+    "recall": 0.9023972602739726,
+    "fpr": 0.04900181488203267
+  },
+  "p1": {
+    "tp": 51,
+    "fn": 533,
+    "fp": 28,
+    "tn": 523,
+    "accuracy": 0.505726872246696,
+    "precision": 0.6455696202531646,
+    "recall": 0.08732876712328767,
+    "fpr": 0.050816696914700546
+  },
+  "p1_or_model": {
+    "tp": 534,
+    "fn": 50,
+    "fp": 53,
+    "tn": 498,
+    "accuracy": 0.9092511013215859,
+    "precision": 0.909710391822828,
+    "recall": 0.9143835616438356,
+    "fpr": 0.09618874773139746
+  },
+  "limitations": [
+    "The published JSONL has no repository IDs or attack-family IDs; source/family leakage cannot be ruled out.",
+    "Near-duplicate grouping uses all unlabeled text to define splits, not labels for model fitting.",
+    "Internal test is not an independent-source test; report external stress tests separately."
+  ]
+}

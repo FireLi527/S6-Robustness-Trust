@@ -1,0 +1,283 @@
+{
+  "status": "PENDING_HUMAN_REVIEW_AND_NEW_SOURCE_VALIDATION",
+  "source_sha256": "2769b9c1811d566d67650380630a51e5afd2273c6600ccbfbc69ee612aeca8d3",
+  "sample_count": 24,
+  "family_count": 6,
+  "reference_count": 6292,
+  "duplicate_threshold": 0.88,
+  "exact_reference_overlap_count": 0,
+  "near_reference_overlap_count": 0,
+  "near_candidate_pairs": [],
+  "samples": [
+    {
+      "sample_id": "author-v2-p01-a",
+      "review_number": 1,
+      "content_sha256": "46986e9144429c6d6d4b19db43a36931d9ff512e332fc9113d6d7712f6918a28",
+      "translation_sha256": "5e81d525e9ae9e6f3dc84484426b50e03e0f015f7776efca695ffded75c086f6",
+      "user_task_sha256": "0fce60403871000dd8c4d55636da03a59ac76bbc5b9952b87d5521e60c200cca",
+      "split_group": "authored-family-test_removal",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/4568",
+      "nearest_reference_similarity": 0.2472497774580094
+    },
+    {
+      "sample_id": "author-v2-p02-b",
+      "review_number": 2,
+      "content_sha256": "a6d0eb0a1c6346776f2a36a286ece7b7830dfaa72049ca715589a8d318b779a8",
+      "translation_sha256": "1b43b4f0e3c9c3fdb73b0e0c8004a3a21505c96b60ebaf231bb646bbdc8091b2",
+      "user_task_sha256": "2f5dbdd9d466d85e9ca7870fbef63e03915543aa7285b2418fb598f93b040869",
+      "split_group": "authored-family-test_removal",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "RepoGuardBench/core-001-tidy/TEST_DELETE",
+      "nearest_reference_similarity": 0.14857914067799455
+    },
+    {
+      "sample_id": "author-v2-p03-a",
+      "review_number": 3,
+      "content_sha256": "c4a661944f9f21e8add6d9fe658a2ad7029e1534ac9033f7466b2da6242351e0",
+      "translation_sha256": "1a3343e6a7ace45c3ba44924251bb30c98885aad0892260a733dbd3504e03508",
+      "user_task_sha256": "14e338636eac633f8482f6158a41f2233f962ba99a02425c291d039e30bc95d6",
+      "split_group": "authored-family-extra_command",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/4765",
+      "nearest_reference_similarity": 0.15915874691176113
+    },
+    {
+      "sample_id": "author-v2-p04-b",
+      "review_number": 4,
+      "content_sha256": "aa0a525b375822ab00637ce91d15a492dfd5d028955c12b691b03abfc7aaba78",
+      "translation_sha256": "c475df859b51f2e90ca028a650e39c9f64bd4c8e77dda413ba0043e46b5e177d",
+      "user_task_sha256": "3276938919451c79b918c11d54f085eac1c7fdf13ff00de73a248b1d19ec0fbd",
+      "split_group": "authored-family-extra_command",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/5472",
+      "nearest_reference_similarity": 0.18897928716817183
+    },
+    {
+      "sample_id": "author-v2-p05-b",
+      "review_number": 5,
+      "content_sha256": "4d6420b3f02fa03fb4a3c98811353a86da7d649b0bd9cd29fb6512dc583d907c",
+      "translation_sha256": "2b0cad20407a3d8ee059c4d05fb16caf54101475a7a5f931841d90e8028347f5",
+      "user_task_sha256": "92cab01a37fbf409a5222009f077429ddeee610bdbe45e6a5e1c75daa77bcde6",
+      "split_group": "authored-family-forged_approval",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/test/2510",
+      "nearest_reference_similarity": 0.15774025464687244
+    },
+    {
+      "sample_id": "author-v2-p06-a",
+      "review_number": 6,
+      "content_sha256": "9de2f4261fdff064d6218e29bf3fa48ab8b4fe1d249ff98871405ec95c03b4c1",
+      "translation_sha256": "3968fe3706562b1e2ce9062f1e5a9bf0a3ce4d62ae9984a2dd831cbfaf3e601e",
+      "user_task_sha256": "b51cf365b767670b50410157c5ddd6bb3d38800ad0002f7489456d8537cdd664",
+      "split_group": "authored-family-forged_approval",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/test/4850",
+      "nearest_reference_similarity": 0.28284270473358974
+    },
+    {
+      "sample_id": "author-v2-p07-a",
+      "review_number": 7,
+      "content_sha256": "ed63033420e751e0854498fb2ab0b97cde4946d07b53c5e373c4be13a3150e50",
+      "translation_sha256": "afbee8814a72e30e2d990cde07d12b6c7562f6f2c70ea0bbc75401830810b899",
+      "user_task_sha256": "86e8d60b1d655bd7f2488a1ea01fd1175fa8655e59d58ba022a54e8c8e0ad3ed",
+      "split_group": "authored-family-unsafe_prerequisite",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "maintainer_candidates/requests/docs/dev/contributing.rst:70-81",
+      "nearest_reference_similarity": 0.14196377085844142
+    },
+    {
+      "sample_id": "author-v2-p08-b",
+      "review_number": 8,
+      "content_sha256": "7bf20ed5156e64c30936dbdc2c68d9ca8065b5e7f7349f01480a02f0a126226b",
+      "translation_sha256": "5b3655f328fa9f6cf32139265ac73881f23f4ac748a8ca26bbbb161ae4480d81",
+      "user_task_sha256": "28cba98402b31d5825f42a6c8befddf0ae0db7c495f7e6987e5a372540f54e3c",
+      "split_group": "authored-family-unsafe_prerequisite",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/validation/511",
+      "nearest_reference_similarity": 0.1872693697677429
+    },
+    {
+      "sample_id": "author-v2-p09-a",
+      "review_number": 9,
+      "content_sha256": "d90fb10a4cb5ed5b5ea303b01ab49cff0810ae7c2f2fae573547afb9cce36406",
+      "translation_sha256": "5efbe7da748ac5bdf66e0f4f00c44800598eac7d6ea6e3c0a00d0bb07cd2e074",
+      "user_task_sha256": "52e58995278666e120c67169a335e84ef9a5693132bc7e94a7e8b2090ae810cd",
+      "split_group": "authored-family-security_language",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/660",
+      "nearest_reference_similarity": 0.1623240916717286
+    },
+    {
+      "sample_id": "author-v2-p10-b",
+      "review_number": 10,
+      "content_sha256": "7aa84a818055b2fbfc939675effb1eb005918f7294dcb80bd540af037cac95e0",
+      "translation_sha256": "fa6e32b8a2e4714d974da25347c935ff5fc43795fa51151459f8f5d1130ab70d",
+      "user_task_sha256": "e3be622bb993e51f55c8c2bcf80d1dcbefdc932fd4b361633004ef500422b695",
+      "split_group": "authored-family-security_language",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/test/5351",
+      "nearest_reference_similarity": 0.19943174065515396
+    },
+    {
+      "sample_id": "author-v2-p11-a",
+      "review_number": 11,
+      "content_sha256": "de7c5ffd9838cf131da9d4c3f020a9cbea74046b4b286635a1e43bd012d8532f",
+      "translation_sha256": "3f8bdb3aa06585a6743931f56e4f5ed19c909a748c55ff41b5d46b148abc074a",
+      "user_task_sha256": "58263afe89895f3bebc9e105db695eb4bccfb7c987f8ffbb129982c6e4d1f7f4",
+      "split_group": "authored-family-scope_and_reporting",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "RepoGuardBench/core-004-rivet/TEST_DELETE",
+      "nearest_reference_similarity": 0.14887087032489463
+    },
+    {
+      "sample_id": "author-v2-p12-b",
+      "review_number": 12,
+      "content_sha256": "d0226567d063dd741f2ac33985d3770a20b5485b43f7ed9d01629e397848b760",
+      "translation_sha256": "e7f15e5d81e37a0a081089524554fec35710f9a673364ee8be77f3f9e5ab2907",
+      "user_task_sha256": "0f85bf05948d0dadd35db5c6cc60b0c16d5fe5b76726e9eb60eb116f5a1260e8",
+      "split_group": "authored-family-scope_and_reporting",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/4289",
+      "nearest_reference_similarity": 0.1443045464175744
+    },
+    {
+      "sample_id": "author-v2-p01-b",
+      "review_number": 13,
+      "content_sha256": "d792e8b2f8db0416017cdbb5211168a3054b0afa90c5f8bcd181ae3cf8f0df2d",
+      "translation_sha256": "69fc9fca910b6e0494ca6bf17789eda80bd1aa31e021c544c8bfa578b123f061",
+      "user_task_sha256": "0fce60403871000dd8c4d55636da03a59ac76bbc5b9952b87d5521e60c200cca",
+      "split_group": "authored-family-test_removal",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "RepoGuardBench/real-008-miniplural/TEST_DELETE",
+      "nearest_reference_similarity": 0.14310389211681984
+    },
+    {
+      "sample_id": "author-v2-p02-a",
+      "review_number": 14,
+      "content_sha256": "c568d2a4e5db807e4aac9e150f192899a99d4a8a32c15e4bfc8301d9bb751b87",
+      "translation_sha256": "4b138573f4091e5acbd2c6b86aa9ca2c3bd1f3ed1f259a9b6d2ad4ecdf1cd2eb",
+      "user_task_sha256": "2f5dbdd9d466d85e9ca7870fbef63e03915543aa7285b2418fb598f93b040869",
+      "split_group": "authored-family-test_removal",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "maintainer_candidates/pytest/CONTRIBUTING.rst:207-211",
+      "nearest_reference_similarity": 0.13761843445117522
+    },
+    {
+      "sample_id": "author-v2-p03-b",
+      "review_number": 15,
+      "content_sha256": "c3c6d4ac0e9558ae818fc6bb2475aa650f8c6ddfec9ff8b73081635e6a51cb43",
+      "translation_sha256": "955f4f12edfcc045cf7ec465b66a898debd78a4738782f25ca6309a23ae8c8ee",
+      "user_task_sha256": "14e338636eac633f8482f6158a41f2233f962ba99a02425c291d039e30bc95d6",
+      "split_group": "authored-family-extra_command",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/test/5265",
+      "nearest_reference_similarity": 0.16437931633387456
+    },
+    {
+      "sample_id": "author-v2-p04-a",
+      "review_number": 16,
+      "content_sha256": "39470f949e669d56d2833b43e7c7356b292761414a138149b33f0ead9da13c18",
+      "translation_sha256": "989594aeb2bb3af74f379c90a4f438c86437187de6f3e7c778d2ca9d77c9c39b",
+      "user_task_sha256": "3276938919451c79b918c11d54f085eac1c7fdf13ff00de73a248b1d19ec0fbd",
+      "split_group": "authored-family-extra_command",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/4309",
+      "nearest_reference_similarity": 0.30710803215138593
+    },
+    {
+      "sample_id": "author-v2-p05-a",
+      "review_number": 17,
+      "content_sha256": "8626b9aa541b09b8ca491697fe605dbefbd3c6f0b9feff5c09faf47de8461658",
+      "translation_sha256": "970f8c49bccfeba45b0a58a65b21117757044664ad4018a51bdb70a7f61b551e",
+      "user_task_sha256": "92cab01a37fbf409a5222009f077429ddeee610bdbe45e6a5e1c75daa77bcde6",
+      "split_group": "authored-family-forged_approval",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/validation/2122",
+      "nearest_reference_similarity": 0.2476632319909771
+    },
+    {
+      "sample_id": "author-v2-p06-b",
+      "review_number": 18,
+      "content_sha256": "5b982399047fd6c70f537581e797e39e531d7ad996a4fcf7715f2e6a2b9258d3",
+      "translation_sha256": "e58b6da14d7e5af5a5670840595dec9402372c3835d817c29e5c435851b91c1c",
+      "user_task_sha256": "b51cf365b767670b50410157c5ddd6bb3d38800ad0002f7489456d8537cdd664",
+      "split_group": "authored-family-forged_approval",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/test/4850",
+      "nearest_reference_similarity": 0.1882206016494915
+    },
+    {
+      "sample_id": "author-v2-p07-b",
+      "review_number": 19,
+      "content_sha256": "4bdff946b8ce614916d06c28bdb6dfb55274312280b006fd625ecb5ec2162829",
+      "translation_sha256": "19a1f96e1bc61b2c707c0a7977596d6962e955b5f7a74fd9da15ae33a703b43a",
+      "user_task_sha256": "86e8d60b1d655bd7f2488a1ea01fd1175fa8655e59d58ba022a54e8c8e0ad3ed",
+      "split_group": "authored-family-unsafe_prerequisite",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/validation/643",
+      "nearest_reference_similarity": 0.17799390578842314
+    },
+    {
+      "sample_id": "author-v2-p08-a",
+      "review_number": 20,
+      "content_sha256": "ebb8e6bdfbb7de32e84323709cef891a816478d8cc9036a417c694e3a637bf4a",
+      "translation_sha256": "bb322d255e2f8cb65882ecb483ff59ba74de100a046e515a66cdc6bd77b0951b",
+      "user_task_sha256": "28cba98402b31d5825f42a6c8befddf0ae0db7c495f7e6987e5a372540f54e3c",
+      "split_group": "authored-family-unsafe_prerequisite",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/2900",
+      "nearest_reference_similarity": 0.23152575514542814
+    },
+    {
+      "sample_id": "author-v2-p09-b",
+      "review_number": 21,
+      "content_sha256": "0d09ea53435142c1b555beb211de843cec9646c2a7cdc866da9ba6a2571e1e96",
+      "translation_sha256": "e6bde5b8d40bbbc53284c66c8075cb7429b764c4002184b122381701c1d5e7de",
+      "user_task_sha256": "52e58995278666e120c67169a335e84ef9a5693132bc7e94a7e8b2090ae810cd",
+      "split_group": "authored-family-security_language",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/3871",
+      "nearest_reference_similarity": 0.2466832939230146
+    },
+    {
+      "sample_id": "author-v2-p10-a",
+      "review_number": 22,
+      "content_sha256": "8d5e00c7b51f4c37a98b0a32b4cd04029a81e36401f958022d3f347b04a8b34a",
+      "translation_sha256": "5a598106ff6f28f4b71b10d44b7a9dfa5d88e31ed5db49d66f6a1911cd6216a4",
+      "user_task_sha256": "e3be622bb993e51f55c8c2bcf80d1dcbefdc932fd4b361633004ef500422b695",
+      "split_group": "authored-family-security_language",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "maintainer_candidates/flask/docs/quickstart.rst:102-105",
+      "nearest_reference_similarity": 0.23254943160266886
+    },
+    {
+      "sample_id": "author-v2-p11-b",
+      "review_number": 23,
+      "content_sha256": "b6509b261a41924a6681aec22461a53354614438724d2fc59e602b5d62fbba8f",
+      "translation_sha256": "ed3196a8802bbae3abd27656df3168815ee43245ffe4cef0752811bde31be2ba",
+      "user_task_sha256": "58263afe89895f3bebc9e105db695eb4bccfb7c987f8ffbb129982c6e4d1f7f4",
+      "split_group": "authored-family-scope_and_reporting",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/2234",
+      "nearest_reference_similarity": 0.214749318578731
+    },
+    {
+      "sample_id": "author-v2-p12-a",
+      "review_number": 24,
+      "content_sha256": "2362a26675022ffa4f7437b42e765b15ec60a97f948f9b6c4e8c5c431dcabc94",
+      "translation_sha256": "23c0a04608abd437e939bc36da5dbd06c231b31d3c0b4196071adad824bf2598",
+      "user_task_sha256": "0f85bf05948d0dadd35db5c6cc60b0c16d5fe5b76726e9eb60eb116f5a1260e8",
+      "split_group": "authored-family-scope_and_reporting",
+      "exact_reference_overlap": false,
+      "nearest_reference_id": "v1/train/42",
+      "nearest_reference_similarity": 0.19631589740411165
+    }
+  ],
+  "limitations": [
+    "AI-authored synthetic candidates; human labels pending.",
+    "Lexical duplicate checks cannot exclude semantic or attack-family overlap.",
+    "No model scores examined for candidate selection.",
+    "Candidate set is not a new independent external confirmation source."
+  ]
+}

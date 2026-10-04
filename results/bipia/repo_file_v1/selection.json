@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_BEFORE_FITTING",
+  "script_sha256": "8209815cd6bed87a06d0210300cb28dc3b8ed8d9a85516c602c0488af7447e62",
+  "source_sha256": "7dff37d6aa6812aa1cb8b136da89d651ad78a33a9bd0d06049d51c650f9a8fcc",
+  "assignments_sha256": "2a142720e0d233385a958bf7b13b7cd8bca8c1199d2008700ab89d05363907d6",
+  "features": {
+    "word_ngrams": [
+      1,
+      2
+    ],
+    "word_max_features": 50000,
+    "char_ngrams": [
+      3,
+      5
+    ],
+    "char_max_features": 100000,
+    "min_df": 2,
+    "sublinear_tf": true
+  },
+  "classifier": "LogisticRegression(C=1, class_weight=balanced, liblinear, max_iter=1000, seed=2026)",
+  "threshold_policy": "highest validation recall with benign FPR <=5%; tie: lower FPR then higher threshold",
+  "test_policy": "one evaluation after fitting and threshold freeze; external-source stress tests separate; research only"
+}

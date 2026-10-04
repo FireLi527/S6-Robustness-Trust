@@ -1,0 +1,138 @@
+{
+  "status": "PENDING_HUMAN_REVIEW",
+  "candidate_sha256": "96657e17648dd382369501f61d8e61c98cdcb3333375b27cb742213fd7d82072",
+  "batch1_sha256": "2769b9c1811d566d67650380630a51e5afd2273c6600ccbfbc69ee612aeca8d3",
+  "sample_count": 12,
+  "reference_count": 6316,
+  "cross_batch_family_grouping_verified": true,
+  "duplicate_threshold": 0.88,
+  "exact_overlap_count": 0,
+  "near_overlap_count": 0,
+  "samples": [
+    {
+      "sample_id": "author-v2-b2-p01-a",
+      "review_number": 1,
+      "content_sha256": "2abcee9c1a21e5471b2d6cc55c5832595e6d355ea9560936b31bf633ae5df87a",
+      "translation_sha256": "0f82d6224f3d1c11ede30d6a20ca244112a12b599bb505ec000c074af7872e42",
+      "task_sha256": "3468d2149f617d049b8e98a29a80400eb76c883041800d10bfec4f36d2727be9",
+      "exact_overlap": false,
+      "nearest_reference": "author-v2-p01-a",
+      "cosine": 0.3031339906152852
+    },
+    {
+      "sample_id": "author-v2-b2-p02-b",
+      "review_number": 2,
+      "content_sha256": "a001727964f919d64f8fd949f240a3016c8b378e72ab91d0a6587ee4c660ca74",
+      "translation_sha256": "9b8d3dd4a3c92ec1ebd0d09c1157e0a232571039fb7678ed55ac6248624c2ab5",
+      "task_sha256": "06d3cd5a377d95ad690bdbdf8af68ba1e46661204e682019152c7f5c73fa2a04",
+      "exact_overlap": false,
+      "nearest_reference": "v1/validation/79",
+      "cosine": 0.22333374106214168
+    },
+    {
+      "sample_id": "author-v2-b2-p03-b",
+      "review_number": 3,
+      "content_sha256": "26359b5dfa5274d3616af7de62047450e458a4876fc8fa02d31d28d92a281cb0",
+      "translation_sha256": "6a32fadc281927b1df09c1dd65f9c4e60cdbb753a9db3d91d71446e294696926",
+      "task_sha256": "91cbd405cce7c0959e9ebec7f8ab275b539187a8c293b47980caa587bd7d103a",
+      "exact_overlap": false,
+      "nearest_reference": "v1/test/5607",
+      "cosine": 0.26799981958934843
+    },
+    {
+      "sample_id": "author-v2-b2-p04-a",
+      "review_number": 4,
+      "content_sha256": "cc9931ab779d0fa6bbe3b6692a0e3cd586e18a8201c37246cfafc9f32a144230",
+      "translation_sha256": "cbe1ffb03f06fb390ef4dc656bd8f12bb08fb3c3c840758d6e5b2491c5e134b1",
+      "task_sha256": "9b7ffe4fc757ae5d871cf36183342f76ec745450eda78fdda0bd84ccedfb3373",
+      "exact_overlap": false,
+      "nearest_reference": "v1/train/889",
+      "cosine": 0.23373146373566525
+    },
+    {
+      "sample_id": "author-v2-b2-p05-a",
+      "review_number": 5,
+      "content_sha256": "ab8b8f0a21280a9ef0e7ba67201e654a63f445a9d08bed425e471f413c7d1bbf",
+      "translation_sha256": "fa959cd84309c89aa0c8bb0e846d99124060d8b47b2d6fcbf0da676dee037700",
+      "task_sha256": "a7d14297163e661801507e2f3715ca57c9b419fad81b322382f6314a5a8722b3",
+      "exact_overlap": false,
+      "nearest_reference": "v1/train/5170",
+      "cosine": 0.12282935134306039
+    },
+    {
+      "sample_id": "author-v2-b2-p06-b",
+      "review_number": 6,
+      "content_sha256": "122b5ab344e7fb4e9e5028ecec66673c5dce034a5a93ae2e9d351cb709fb1484",
+      "translation_sha256": "8d49948263efc35f74063f7fe61ea7f46fb187b54760ecf42b1e668c1533ab2b",
+      "task_sha256": "57853ba3b876aebd1236268ef833ed3cab380dd80e9fb9d4e95c2ac03083dec9",
+      "exact_overlap": false,
+      "nearest_reference": "v1/train/1232",
+      "cosine": 0.20756401359048374
+    },
+    {
+      "sample_id": "author-v2-b2-p01-b",
+      "review_number": 7,
+      "content_sha256": "52afb2d842558e31cce0cdb694c0bd07afb54850d226810548d014ad1edb4286",
+      "translation_sha256": "e103e67e124b010f301fe9335402bb4498f722658c914e19d3bcd49c424296cb",
+      "task_sha256": "3468d2149f617d049b8e98a29a80400eb76c883041800d10bfec4f36d2727be9",
+      "exact_overlap": false,
+      "nearest_reference": "author-v2-p01-a",
+      "cosine": 0.14152527874067686
+    },
+    {
+      "sample_id": "author-v2-b2-p02-a",
+      "review_number": 8,
+      "content_sha256": "c50b0d4d8e688d4c0f3a6eeba3e200cca4e62e18454ee627a5262ba92778ec85",
+      "translation_sha256": "8901456699063cb932dd79e2bcb0467ce24d75b9c83fa3889713dba70cb0901a",
+      "task_sha256": "06d3cd5a377d95ad690bdbdf8af68ba1e46661204e682019152c7f5c73fa2a04",
+      "exact_overlap": false,
+      "nearest_reference": "v1/validation/3497",
+      "cosine": 0.21556194136027237
+    },
+    {
+      "sample_id": "author-v2-b2-p03-a",
+      "review_number": 9,
+      "content_sha256": "7af7bccb63fd9d840a98e2d41710592b8d71a5dd231124e512afc7acc6fbd11c",
+      "translation_sha256": "84493e7beceac0645d49e3a557b3282b2723dc194d1eba400171a7b8947b45b5",
+      "task_sha256": "91cbd405cce7c0959e9ebec7f8ab275b539187a8c293b47980caa587bd7d103a",
+      "exact_overlap": false,
+      "nearest_reference": "v1/train/5502",
+      "cosine": 0.2020813218422924
+    },
+    {
+      "sample_id": "author-v2-b2-p04-b",
+      "review_number": 10,
+      "content_sha256": "6d27a70275117a4017e7aa6bf75602b85e58e308ec94db3290bcc318ebfec87e",
+      "translation_sha256": "84b2cc34e22fca0dae44e6b32de8a05622c1b0ef94992b8ffcdc0aee41bab836",
+      "task_sha256": "9b7ffe4fc757ae5d871cf36183342f76ec745450eda78fdda0bd84ccedfb3373",
+      "exact_overlap": false,
+      "nearest_reference": "v1/test/2555",
+      "cosine": 0.28092385984799845
+    },
+    {
+      "sample_id": "author-v2-b2-p05-b",
+      "review_number": 11,
+      "content_sha256": "b320b012dbb9686d34dfd37cf227ef74f8b54be7931de7a9fbd926c879044459",
+      "translation_sha256": "ed1f8e72c1b09c4776b8543ee08a1f452a64199821e345cdddc66ce6ffe4d9ab",
+      "task_sha256": "a7d14297163e661801507e2f3715ca57c9b419fad81b322382f6314a5a8722b3",
+      "exact_overlap": false,
+      "nearest_reference": "author-v2-p09-b",
+      "cosine": 0.21250513272607455
+    },
+    {
+      "sample_id": "author-v2-b2-p06-a",
+      "review_number": 12,
+      "content_sha256": "40710d35f16309021bbb9b50ac43a5833158cda996a5193dfe514ee6ab22de97",
+      "translation_sha256": "3fd175358146c9bb62f3f5c3aef078127f1ef653a442fd6820cace1dcb757d9a",
+      "task_sha256": "57853ba3b876aebd1236268ef833ed3cab380dd80e9fb9d4e95c2ac03083dec9",
+      "exact_overlap": false,
+      "nearest_reference": "v1/validation/4225",
+      "cosine": 0.22892268930262744
+    }
+  ],
+  "limitations": [
+    "Synthetic authored candidates; neither real-world prevalence nor an independent external test.",
+    "Lexical near-duplicate audit does not exclude semantic or family overlap.",
+    "No classifier scores inspected; human labels and dataset assignments still pending."
+  ]
+}

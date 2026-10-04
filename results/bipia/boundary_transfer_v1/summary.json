@@ -1,0 +1,538 @@
+{
+  "heldout": {
+    "native_content": {
+      "calibrated": {
+        "tp": 8,
+        "fp": 5,
+        "fn": 10,
+        "tn": 13,
+        "samples": 36,
+        "accuracy": 0.5833333333333334,
+        "precision": 0.6153846153846154,
+        "recall": 0.4444444444444444,
+        "fpr": 0.2777777777777778
+      },
+      "fixed05": {
+        "tp": 14,
+        "fp": 13,
+        "fn": 4,
+        "tn": 5,
+        "samples": 36,
+        "accuracy": 0.5277777777777778,
+        "precision": 0.5185185185185185,
+        "recall": 0.7777777777777778,
+        "fpr": 0.7222222222222222
+      },
+      "per_fold": {
+        "0": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "tn": 1,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "fpr": 0.6666666666666666
+        },
+        "1": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "2": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "tn": 1,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "fpr": 0.6666666666666666
+        },
+        "3": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 1,
+          "tn": 2,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "fpr": 0.3333333333333333
+        },
+        "4": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        }
+      }
+    },
+    "native_joint": {
+      "calibrated": {
+        "tp": 7,
+        "fp": 4,
+        "fn": 11,
+        "tn": 14,
+        "samples": 36,
+        "accuracy": 0.5833333333333334,
+        "precision": 0.6363636363636364,
+        "recall": 0.3888888888888889,
+        "fpr": 0.2222222222222222
+      },
+      "fixed05": {
+        "tp": 16,
+        "fp": 18,
+        "fn": 2,
+        "tn": 0,
+        "samples": 36,
+        "accuracy": 0.4444444444444444,
+        "precision": 0.47058823529411764,
+        "recall": 0.8888888888888888,
+        "fpr": 1.0
+      },
+      "per_fold": {
+        "0": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "tn": 2,
+          "samples": 6,
+          "accuracy": 0.8333333333333334,
+          "precision": 0.75,
+          "recall": 1.0,
+          "fpr": 0.3333333333333333
+        },
+        "1": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "2": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 1,
+          "tn": 1,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "fpr": 0.6666666666666666
+        },
+        "3": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "4": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 2,
+          "tn": 2,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "fpr": 0.3333333333333333
+        },
+        "5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        }
+      }
+    },
+    "augmented_content": {
+      "calibrated": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 9,
+        "tn": 18,
+        "samples": 36,
+        "accuracy": 0.75,
+        "precision": 1.0,
+        "recall": 0.5,
+        "fpr": 0.0
+      },
+      "fixed05": {
+        "tp": 9,
+        "fp": 6,
+        "fn": 9,
+        "tn": 12,
+        "samples": 36,
+        "accuracy": 0.5833333333333334,
+        "precision": 0.6,
+        "recall": 0.5,
+        "fpr": 0.3333333333333333
+      },
+      "per_fold": {
+        "0": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.8333333333333334,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "fpr": 0.0
+        },
+        "1": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "2": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fpr": 0.0
+        },
+        "3": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.8333333333333334,
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "fpr": 0.0
+        },
+        "4": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        }
+      }
+    },
+    "augmented_joint": {
+      "calibrated": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 12,
+        "tn": 17,
+        "samples": 36,
+        "accuracy": 0.6388888888888888,
+        "precision": 0.8571428571428571,
+        "recall": 0.3333333333333333,
+        "fpr": 0.05555555555555555
+      },
+      "fixed05": {
+        "tp": 11,
+        "fp": 6,
+        "fn": 7,
+        "tn": 12,
+        "samples": 36,
+        "accuracy": 0.6388888888888888,
+        "precision": 0.6470588235294118,
+        "recall": 0.6111111111111112,
+        "fpr": 0.3333333333333333
+      },
+      "per_fold": {
+        "0": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "1": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "2": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "tn": 2,
+          "samples": 6,
+          "accuracy": 0.8333333333333334,
+          "precision": 0.75,
+          "recall": 1.0,
+          "fpr": 0.3333333333333333
+        },
+        "3": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "fpr": 0.0
+        },
+        "4": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "5": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "tn": 3,
+          "samples": 6,
+          "accuracy": 0.5,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        }
+      }
+    }
+  },
+  "maintenance_seen_correlated": {
+    "native_content": {
+      "pooled_180_decisions_not_independent": {
+        "tp": 0,
+        "fp": 27,
+        "fn": 0,
+        "tn": 153,
+        "samples": 180,
+        "accuracy": 0.85,
+        "precision": 0.0,
+        "recall": null,
+        "fpr": 0.15
+      },
+      "per_fold": {
+        "0": {
+          "tp": 0,
+          "fp": 12,
+          "fn": 0,
+          "tn": 18,
+          "samples": 30,
+          "accuracy": 0.6,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.4
+        },
+        "1": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 30,
+          "samples": 30,
+          "accuracy": 1.0,
+          "precision": null,
+          "recall": null,
+          "fpr": 0.0
+        },
+        "2": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 27,
+          "samples": 30,
+          "accuracy": 0.9,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.1
+        },
+        "3": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 26,
+          "samples": 30,
+          "accuracy": 0.8666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.13333333333333333
+        },
+        "4": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 26,
+          "samples": 30,
+          "accuracy": 0.8666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.13333333333333333
+        },
+        "5": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 26,
+          "samples": 30,
+          "accuracy": 0.8666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.13333333333333333
+        }
+      }
+    },
+    "augmented_content": {
+      "pooled_180_decisions_not_independent": {
+        "tp": 0,
+        "fp": 6,
+        "fn": 0,
+        "tn": 174,
+        "samples": 180,
+        "accuracy": 0.9666666666666667,
+        "precision": 0.0,
+        "recall": null,
+        "fpr": 0.03333333333333333
+      },
+      "per_fold": {
+        "0": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 29,
+          "samples": 30,
+          "accuracy": 0.9666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.03333333333333333
+        },
+        "1": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 29,
+          "samples": 30,
+          "accuracy": 0.9666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.03333333333333333
+        },
+        "2": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 29,
+          "samples": 30,
+          "accuracy": 0.9666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.03333333333333333
+        },
+        "3": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 29,
+          "samples": 30,
+          "accuracy": 0.9666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.03333333333333333
+        },
+        "4": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 29,
+          "samples": 30,
+          "accuracy": 0.9666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.03333333333333333
+        },
+        "5": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 29,
+          "samples": 30,
+          "accuracy": 0.9666666666666667,
+          "precision": 0.0,
+          "recall": null,
+          "fpr": 0.03333333333333333
+        }
+      }
+    }
+  },
+  "independent_test": false,
+  "deployed": false
+}

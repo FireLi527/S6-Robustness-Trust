@@ -1,0 +1,175 @@
+{
+  "status": "POSTHOC_DIAGNOSTIC_NOT_MODEL_SELECTION",
+  "threshold": 0.5378236356524083,
+  "prediction_sha256": "2b3436b1107c0592c63ae347b3be7df509502bbc8dd151825ac2312c0e41c0ba",
+  "arms": {
+    "A_full_frozen": {
+      "AgentInjectionBench": {
+        "tp": 6,
+        "fn": 2,
+        "fp": 0,
+        "tn": 2,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.75,
+        "fpr": 0.0
+      },
+      "RepoGuardBench": {
+        "tp": 124,
+        "fn": 346,
+        "fp": 1,
+        "tn": 93,
+        "accuracy": 0.38475177304964536,
+        "precision": 0.992,
+        "recall": 0.26382978723404255,
+        "fpr": 0.010638297872340425
+      },
+      "maintainer_candidates": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 13,
+        "tn": 17,
+        "accuracy": 0.5666666666666667,
+        "precision": 0.0,
+        "recall": null,
+        "fpr": 0.43333333333333335
+      },
+      "prompt-injection-benchmark": {
+        "tp": 10,
+        "fn": 3,
+        "fp": 1,
+        "tn": 3,
+        "accuracy": 0.7647058823529411,
+        "precision": 0.9090909090909091,
+        "recall": 0.7692307692307693,
+        "fpr": 0.25
+      }
+    },
+    "B_blocks_frozen": {
+      "AgentInjectionBench": {
+        "tp": 8,
+        "fn": 0,
+        "fp": 1,
+        "tn": 1,
+        "accuracy": 0.9,
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "fpr": 0.5
+      },
+      "RepoGuardBench": {
+        "tp": 304,
+        "fn": 166,
+        "fp": 11,
+        "tn": 83,
+        "accuracy": 0.6861702127659575,
+        "precision": 0.9650793650793651,
+        "recall": 0.6468085106382979,
+        "fpr": 0.11702127659574468
+      },
+      "maintainer_candidates": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 13,
+        "tn": 17,
+        "accuracy": 0.5666666666666667,
+        "precision": 0.0,
+        "recall": null,
+        "fpr": 0.43333333333333335
+      },
+      "prompt-injection-benchmark": {
+        "tp": 10,
+        "fn": 3,
+        "fp": 1,
+        "tn": 3,
+        "accuracy": 0.7647058823529411,
+        "precision": 0.9090909090909091,
+        "recall": 0.7692307692307693,
+        "fpr": 0.25
+      }
+    },
+    "C_full_augmented": {
+      "AgentInjectionBench": {
+        "tp": 6,
+        "fn": 2,
+        "fp": 0,
+        "tn": 2,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.75,
+        "fpr": 0.0
+      },
+      "RepoGuardBench": {
+        "tp": 150,
+        "fn": 320,
+        "fp": 1,
+        "tn": 93,
+        "accuracy": 0.4308510638297872,
+        "precision": 0.9933774834437086,
+        "recall": 0.3191489361702128,
+        "fpr": 0.010638297872340425
+      },
+      "maintainer_candidates": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 12,
+        "tn": 18,
+        "accuracy": 0.6,
+        "precision": 0.0,
+        "recall": null,
+        "fpr": 0.4
+      },
+      "prompt-injection-benchmark": {
+        "tp": 10,
+        "fn": 3,
+        "fp": 1,
+        "tn": 3,
+        "accuracy": 0.7647058823529411,
+        "precision": 0.9090909090909091,
+        "recall": 0.7692307692307693,
+        "fpr": 0.25
+      }
+    },
+    "D_blocks_augmented": {
+      "AgentInjectionBench": {
+        "tp": 8,
+        "fn": 0,
+        "fp": 1,
+        "tn": 1,
+        "accuracy": 0.9,
+        "precision": 0.8888888888888888,
+        "recall": 1.0,
+        "fpr": 0.5
+      },
+      "RepoGuardBench": {
+        "tp": 221,
+        "fn": 249,
+        "fp": 11,
+        "tn": 83,
+        "accuracy": 0.5390070921985816,
+        "precision": 0.9525862068965517,
+        "recall": 0.4702127659574468,
+        "fpr": 0.11702127659574468
+      },
+      "maintainer_candidates": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 12,
+        "tn": 18,
+        "accuracy": 0.6,
+        "precision": 0.0,
+        "recall": null,
+        "fpr": 0.4
+      },
+      "prompt-injection-benchmark": {
+        "tp": 10,
+        "fn": 3,
+        "fp": 1,
+        "tn": 3,
+        "accuracy": 0.7647058823529411,
+        "precision": 0.9090909090909091,
+        "recall": 0.7692307692307693,
+        "fpr": 0.25
+      }
+    }
+  }
+}

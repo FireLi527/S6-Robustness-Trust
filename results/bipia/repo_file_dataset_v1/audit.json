@@ -1,0 +1,30 @@
+{
+  "status": "AUDITED_NO_TRAINING",
+  "source_sha256": "7dff37d6aa6812aa1cb8b136da89d651ad78a33a9bd0d06049d51c650f9a8fcc",
+  "row_count": 5671,
+  "labels": {
+    "0": 2755,
+    "1": 2916
+  },
+  "fields": [
+    "label",
+    "text"
+  ],
+  "normalized_unique_texts": 5668,
+  "exact_duplicate_rows": 2,
+  "normalized_duplicate_rows": 3,
+  "conflicting_label_groups": 0,
+  "text_length_chars": {
+    "min": 10,
+    "p50": 59,
+    "p90": 127,
+    "max": 13046
+  },
+  "train_readiness": "REQUIRES_PROVENANCE_AND_FAMILY_REVIEW",
+  "limitations": [
+    "The released file alone does not establish repository/source or attack-family disjoint splits.",
+    "Dataset labels and benign hard negatives require spot-checking against the target trust boundary.",
+    "A separate external source must remain untouched for final evaluation."
+  ],
+  "source_path": "E:\\研究生\\高级计算机项目\\external\\prompt-injection-repo-dataset\\train.jsonl"
+}

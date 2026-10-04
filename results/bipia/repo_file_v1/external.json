@@ -1,0 +1,92 @@
+{
+  "status": "COMPLETE_RESEARCH_ONLY",
+  "model_sha256": "989cd87b5a511f22e9b183400a2bc8ab1671c433fc19d941e1edc409df8cce55",
+  "threshold": 0.5378236356524083,
+  "sources": {
+    "RepoGuardBench": {
+      "count": 564,
+      "exact_training_overlap": 0,
+      "model": {
+        "tp": 124,
+        "fn": 346,
+        "fp": 1,
+        "tn": 93,
+        "accuracy": 0.38475177304964536,
+        "precision": 0.992,
+        "recall": 0.26382978723404255,
+        "fpr": 0.010638297872340425
+      },
+      "p1": {
+        "tp": 0,
+        "fn": 470,
+        "fp": 0,
+        "tn": 94,
+        "accuracy": 0.16666666666666666,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0
+      }
+    },
+    "AgentInjectionBench": {
+      "count": 10,
+      "exact_training_overlap": 0,
+      "model": {
+        "tp": 6,
+        "fn": 2,
+        "fp": 0,
+        "tn": 2,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.75,
+        "fpr": 0.0
+      },
+      "p1": {
+        "tp": 1,
+        "fn": 7,
+        "fp": 0,
+        "tn": 2,
+        "accuracy": 0.3,
+        "precision": 1.0,
+        "recall": 0.125,
+        "fpr": 0.0
+      }
+    },
+    "prompt-injection-benchmark": {
+      "count": 17,
+      "exact_training_overlap": 0,
+      "model": {
+        "tp": 10,
+        "fn": 3,
+        "fp": 1,
+        "tn": 3,
+        "accuracy": 0.7647058823529411,
+        "precision": 0.9090909090909091,
+        "recall": 0.7692307692307693,
+        "fpr": 0.25
+      },
+      "p1": {
+        "tp": 0,
+        "fn": 13,
+        "fp": 0,
+        "tn": 4,
+        "accuracy": 0.23529411764705882,
+        "precision": null,
+        "recall": 0.0,
+        "fpr": 0.0
+      }
+    }
+  },
+  "maintainer_unreviewed": {
+    "count": 30,
+    "model_flagged": 13,
+    "p1_flagged": 3,
+    "exact_training_overlap": 0,
+    "warning": "Flagged count, not FPR: no independent benign labels."
+  },
+  "limitations": [
+    "RepoGuardBench has five repeated attack templates across 94 tasks; row counts are correlated.",
+    "AgentInjectionBench has only eight unsafe and two safe file-content cases.",
+    "prompt-injection-benchmark is an adjacent indirect-input domain, not a repository-only corpus.",
+    "Exact normalized-string overlap check does not rule out paraphrase or source-family overlap."
+  ]
+}

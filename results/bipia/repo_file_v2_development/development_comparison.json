@@ -1,0 +1,186 @@
+{
+  "status": "COMPLETE_DEVELOPMENT_ONLY",
+  "arms": {
+    "A_full_frozen": {
+      "threshold": 0.8915023297821077,
+      "sources": {
+        "AgentInjectionBench": {
+          "tp": 0,
+          "fn": 8,
+          "fp": 0,
+          "tn": 2,
+          "accuracy": 0.2,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "RepoGuardBench": {
+          "tp": 0,
+          "fn": 470,
+          "fp": 0,
+          "tn": 94,
+          "accuracy": 0.16666666666666666,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "maintainer_candidates": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "accuracy": 1.0,
+          "precision": null,
+          "recall": null,
+          "fpr": 0.0
+        },
+        "prompt-injection-benchmark": {
+          "tp": 1,
+          "fn": 12,
+          "fp": 0,
+          "tn": 4,
+          "accuracy": 0.29411764705882354,
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "fpr": 0.0
+        }
+      }
+    },
+    "B_blocks_frozen": {
+      "threshold": 0.8915023297821077,
+      "sources": {
+        "AgentInjectionBench": {
+          "tp": 3,
+          "fn": 5,
+          "fp": 0,
+          "tn": 2,
+          "accuracy": 0.5,
+          "precision": 1.0,
+          "recall": 0.375,
+          "fpr": 0.0
+        },
+        "RepoGuardBench": {
+          "tp": 0,
+          "fn": 470,
+          "fp": 0,
+          "tn": 94,
+          "accuracy": 0.16666666666666666,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "maintainer_candidates": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "accuracy": 1.0,
+          "precision": null,
+          "recall": null,
+          "fpr": 0.0
+        },
+        "prompt-injection-benchmark": {
+          "tp": 1,
+          "fn": 12,
+          "fp": 0,
+          "tn": 4,
+          "accuracy": 0.29411764705882354,
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "fpr": 0.0
+        }
+      }
+    },
+    "C_full_augmented": {
+      "threshold": 0.8927434252254774,
+      "sources": {
+        "AgentInjectionBench": {
+          "tp": 0,
+          "fn": 8,
+          "fp": 0,
+          "tn": 2,
+          "accuracy": 0.2,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "RepoGuardBench": {
+          "tp": 0,
+          "fn": 470,
+          "fp": 0,
+          "tn": 94,
+          "accuracy": 0.16666666666666666,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "maintainer_candidates": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "accuracy": 1.0,
+          "precision": null,
+          "recall": null,
+          "fpr": 0.0
+        },
+        "prompt-injection-benchmark": {
+          "tp": 1,
+          "fn": 12,
+          "fp": 0,
+          "tn": 4,
+          "accuracy": 0.29411764705882354,
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "fpr": 0.0
+        }
+      }
+    },
+    "D_blocks_augmented": {
+      "threshold": 0.8927434252254774,
+      "sources": {
+        "AgentInjectionBench": {
+          "tp": 3,
+          "fn": 5,
+          "fp": 0,
+          "tn": 2,
+          "accuracy": 0.5,
+          "precision": 1.0,
+          "recall": 0.375,
+          "fpr": 0.0
+        },
+        "RepoGuardBench": {
+          "tp": 0,
+          "fn": 470,
+          "fp": 0,
+          "tn": 94,
+          "accuracy": 0.16666666666666666,
+          "precision": null,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        "maintainer_candidates": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "accuracy": 1.0,
+          "precision": null,
+          "recall": null,
+          "fpr": 0.0
+        },
+        "prompt-injection-benchmark": {
+          "tp": 1,
+          "fn": 12,
+          "fp": 0,
+          "tn": 4,
+          "accuracy": 0.29411764705882354,
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "fpr": 0.0
+        }
+      }
+    }
+  },
+  "fresh_external_test": null
+}
