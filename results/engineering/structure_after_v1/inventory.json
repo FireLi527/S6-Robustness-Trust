@@ -1,0 +1,4815 @@
+{
+  "scope": "s6 production Python plus HTML; tests and external data excluded",
+  "limitations": "Line/branch counts are heuristics, not formal complexity; AST clones may be intentional frozen copies; no automatic deletion recommendation.",
+  "files": [
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "lines": 707,
+      "protection": "requires_review",
+      "imports": [
+        "PIL",
+        "__future__",
+        "dataclasses",
+        "manifest_protocol",
+        "pathlib",
+        "sklearn.metrics",
+        "torch",
+        "torch.utils.data",
+        "torch.utils.tensorboard",
+        "torchvision",
+        "torchvision.models",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "lines": 707,
+      "protection": "requires_review",
+      "imports": [
+        "PIL",
+        "__future__",
+        "dataclasses",
+        "dataset_config",
+        "manifest_protocol",
+        "pathlib",
+        "sklearn.metrics",
+        "torch",
+        "torch.utils.data",
+        "torch.utils.tensorboard",
+        "torchvision",
+        "torchvision.models",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "lines": 497,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "approval_policy",
+        "confused_deputy_scenarios",
+        "detector",
+        "functools",
+        "http",
+        "http.server",
+        "intent_comparison",
+        "live_intent",
+        "pathlib",
+        "request_inputs",
+        "semantic_detector",
+        "supervised_detector",
+        "task_intent",
+        "task_scope",
+        "tool_policy",
+        "urllib.parse"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "lines": 421,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataset_config",
+        "http",
+        "http.server",
+        "integrity_detector",
+        "manifest_protocol",
+        "pathlib",
+        "semantic_detector",
+        "urllib.parse"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "lines": 356,
+      "protection": "explicitly_protected",
+      "imports": [
+        "PIL",
+        "__future__",
+        "collections",
+        "dataclasses",
+        "pathlib",
+        "sklearn.linear_model",
+        "sklearn.model_selection",
+        "sklearn.neighbors",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/confused_deputy_scenarios.py",
+      "lines": 352,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "tool_policy"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "lines": 297,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "scipy.stats"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "lines": 269,
+      "protection": "explicitly_protected",
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "detector",
+        "functools",
+        "pathlib",
+        "transformers",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_semantic.py",
+      "lines": 263,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "detector",
+        "eval_common",
+        "pathlib",
+        "semantic_detector"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_tool_policy.py",
+      "lines": 231,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "confused_deputy_scenarios",
+        "detector",
+        "eval_common",
+        "pathlib",
+        "tool_policy"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "lines": 227,
+      "protection": "explicitly_protected",
+      "imports": [
+        "collections",
+        "detector",
+        "experiment_joint_context_v1",
+        "pathlib",
+        "semantic_detector",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model",
+        "sklearn.model_selection",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/detector.py",
+      "lines": 219,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataclasses"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "lines": 217,
+      "protection": "requires_review",
+      "imports": [
+        "PIL",
+        "collections",
+        "concurrent.futures",
+        "itertools",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_semantic.py",
+      "lines": 214,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataset_config",
+        "manifest_protocol",
+        "pathlib",
+        "semantic_detector",
+        "sklearn.metrics"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "lines": 212,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_independent_v2.py",
+      "lines": 211,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "detector",
+        "pathlib",
+        "supervised_data",
+        "supervised_detector"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/analyze_repo_file_errors_v1.py",
+      "lines": 205,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "evaluate_repo_file_external_v1",
+        "pathlib",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/tool_policy.py",
+      "lines": 202,
+      "protection": "explicitly_protected",
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "datetime",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "lines": 194,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "approval_policy",
+        "confused_deputy_scenarios",
+        "detector",
+        "eval_common",
+        "pathlib",
+        "tool_policy"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "lines": 193,
+      "protection": "requires_review",
+      "imports": [
+        "collections",
+        "detector",
+        "pathlib",
+        "scipy.sparse",
+        "semantic_detector",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model",
+        "sklearn.metrics",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_external_v1.py",
+      "lines": 192,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "code_context_signal",
+        "detector",
+        "pathlib",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "lines": 191,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "detector",
+        "pathlib",
+        "scipy.sparse",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model",
+        "supervised_data",
+        "train_supervised"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "lines": 190,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "manifest_protocol",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_baseline.py",
+      "lines": 180,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "detector",
+        "eval_common",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "lines": 174,
+      "protection": "requires_review",
+      "imports": [
+        "audit_diptera",
+        "fruitfly_group_detector",
+        "manifest_protocol",
+        "pathlib",
+        "prepare_diptera_poisoning",
+        "semantic_detector",
+        "sklearn.linear_model",
+        "sklearn.metrics"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "lines": 170,
+      "protection": "explicitly_protected",
+      "imports": [
+        "__future__",
+        "detector",
+        "pathlib",
+        "prepare_repo_file_splits_v1",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model",
+        "sklearn.pipeline"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_injection_data.py",
+      "lines": 163,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "pathlib",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "lines": 157,
+      "protection": "explicitly_protected",
+      "imports": [
+        "evaluate_repo_file_external_v1",
+        "pathlib",
+        "repo_file_blocks",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "lines": 155,
+      "protection": "requires_review",
+      "imports": [
+        "PIL",
+        "collections",
+        "concurrent.futures",
+        "manifest_protocol",
+        "pathlib",
+        "zipfile"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/integrity_detector.py",
+      "lines": 148,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "dataclasses",
+        "manifest_protocol",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/engineering/text_embeddings.py",
+      "lines": 148,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "pathlib",
+        "s6.engineering.artifacts",
+        "transformers",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_clean_corpus.py",
+      "lines": 148,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "eval_common",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/dedup_diptera.py",
+      "lines": 144,
+      "protection": "requires_review",
+      "imports": [
+        "audit_diptera",
+        "collections",
+        "pathlib",
+        "semantic_detector"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_detector.py",
+      "lines": 143,
+      "protection": "requires_review",
+      "imports": [
+        "audit_diptera",
+        "evaluate_diptera_detection",
+        "fruitfly_group_detector",
+        "pathlib",
+        "semantic_detector"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_grouped_defense.py",
+      "lines": 136,
+      "protection": "requires_review",
+      "imports": [
+        "collections",
+        "fruitfly_group_detector",
+        "manifest_protocol",
+        "pathlib",
+        "prepare_fruitfly",
+        "prepare_stl10_defense",
+        "semantic_detector"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_poisoning.py",
+      "lines": 133,
+      "protection": "requires_review",
+      "imports": [
+        "PIL",
+        "__future__",
+        "dataset_config",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_cleaning_v3.py",
+      "lines": 129,
+      "protection": "requires_review",
+      "imports": [
+        "audit_diptera",
+        "calibrate_diptera_detector",
+        "evaluate_diptera_detection",
+        "fruitfly_group_detector",
+        "functools",
+        "pathlib",
+        "semantic_detector"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_weighted.py",
+      "lines": 129,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib",
+        "prepare_fruitfly"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "lines": 129,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "pathlib",
+        "sklearn.feature_extraction.text",
+        "sklearn.metrics.pairwise",
+        "sklearn.model_selection",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "lines": 128,
+      "protection": "requires_review",
+      "imports": [
+        "collections",
+        "confused_deputy_scenarios",
+        "detector",
+        "pathlib",
+        "semantic_detector",
+        "task_intent"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v1.py",
+      "lines": 126,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "code_context_signal",
+        "detector",
+        "evaluate_code_independent_v2",
+        "pathlib",
+        "supervised_data",
+        "supervised_detector"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/split_diptera.py",
+      "lines": 125,
+      "protection": "requires_review",
+      "imports": [
+        "audit_diptera",
+        "collections"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_multiseed.py",
+      "lines": 125,
+      "protection": "requires_review",
+      "imports": [
+        "dataset_config",
+        "pathlib",
+        "prepare_stl10_defense",
+        "report_stl10_defense",
+        "report_stl10_multiseed"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_defense.py",
+      "lines": 123,
+      "protection": "requires_review",
+      "imports": [
+        "collections",
+        "dataset_config",
+        "manifest_protocol",
+        "pathlib",
+        "prepare_stl10_defense",
+        "sklearn.metrics"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "lines": 121,
+      "protection": "explicitly_protected",
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "pathlib",
+        "tool_policy"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_splits.py",
+      "lines": 119,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/experiment_joint_context_v1.py",
+      "lines": 118,
+      "protection": "explicitly_protected",
+      "imports": [
+        "pathlib",
+        "semantic_detector",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model",
+        "sklearn.pipeline"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_repo_file_external_v1.py",
+      "lines": 109,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "detector",
+        "pathlib",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "lines": 107,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "code_context_signal",
+        "code_workflow_signal",
+        "detector",
+        "evaluate_code_external_v1",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/run_fruitfly.py",
+      "lines": 104,
+      "protection": "requires_review",
+      "imports": [
+        "manifest_protocol",
+        "pathlib",
+        "prepare_fruitfly"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_maintainer_negatives_v1.py",
+      "lines": 103,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_multiseed.py",
+      "lines": 102,
+      "protection": "requires_review",
+      "imports": [
+        "dataset_config",
+        "pathlib",
+        "prepare_stl10_defense",
+        "statistics",
+        "train_stl10_multiseed"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/download_enron_clean.py",
+      "lines": 100,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "eval_common",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "lines": 100,
+      "protection": "requires_review",
+      "imports": [
+        "nltk.tokenize.punkt",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/engineering/check.py",
+      "lines": 99,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "datetime",
+        "pathlib",
+        "s6.engineering.artifacts"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "lines": 98,
+      "protection": "requires_review",
+      "imports": [
+        "collections",
+        "functools",
+        "integrity_detector",
+        "manifest_protocol",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_weighted_v2.py",
+      "lines": 98,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib",
+        "prepare_fruitfly"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_repeat_v1.py",
+      "lines": 97,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "prepare_fruitfly",
+        "train_fruitfly_weighted_v2"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/code_workflow_signal.py",
+      "lines": 97,
+      "protection": "requires_review",
+      "imports": [
+        "__future__"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_code_context_v1.py",
+      "lines": 97,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "evaluate_code_independent_v2",
+        "pathlib",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/download_stl10.py",
+      "lines": 95,
+      "protection": "requires_review",
+      "imports": [
+        "PIL",
+        "concurrent.futures",
+        "dataset_config",
+        "io",
+        "pathlib",
+        "prepare_stl10_poisoning"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_defense.py",
+      "lines": 95,
+      "protection": "requires_review",
+      "imports": [
+        "manifest_protocol",
+        "pathlib",
+        "prepare_fruitfly",
+        "prepare_fruitfly_grouped_defense",
+        "sklearn.metrics",
+        "train_fruitfly_defense"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_defense.py",
+      "lines": 93,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib",
+        "prepare_fruitfly",
+        "prepare_fruitfly_grouped_defense",
+        "report_fruitfly_defense",
+        "run_fruitfly"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/prepare_diptera_poisoning.py",
+      "lines": 92,
+      "protection": "requires_review",
+      "imports": [
+        "audit_diptera",
+        "collections",
+        "manifest_protocol"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/experiment_long_text_v1.py",
+      "lines": 92,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "s6.engineering.artifacts",
+        "s6.engineering.metrics",
+        "s6.engineering.text_embeddings",
+        "sklearn.linear_model"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_repeat_v1.py",
+      "lines": 90,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "prepare_fruitfly"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/repo_file_blocks.py",
+      "lines": 90,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataclasses"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/verify_training_environment.py",
+      "lines": 85,
+      "protection": "requires_review",
+      "imports": [
+        "PIL",
+        "__future__",
+        "dataset_config",
+        "importlib.metadata",
+        "pathlib",
+        "torchvision.models"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_v2_development.py",
+      "lines": 85,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib",
+        "sklearn.feature_extraction.text",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_manifests.py",
+      "lines": 83,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataclasses",
+        "integrity_detector",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/audit_gated_repo_dataset.py",
+      "lines": 82,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "pathlib",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/task_scope.py",
+      "lines": 82,
+      "protection": "requires_review",
+      "imports": [
+        "approval_policy",
+        "collections",
+        "dataclasses",
+        "tool_policy"
+      ]
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "lines": 81,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "contextlib",
+        "datetime",
+        "importlib.metadata",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_defense.py",
+      "lines": 80,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "dataset_config",
+        "manifest_protocol",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_code_context_v2.py",
+      "lines": 80,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "evaluate_code_external_v1",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/fruitfly_group_detector.py",
+      "lines": 75,
+      "protection": "requires_review",
+      "imports": [
+        "dataclasses",
+        "sklearn.linear_model"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/manifest_protocol.py",
+      "lines": 75,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "pathlib",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_training.py",
+      "lines": 75,
+      "protection": "requires_review",
+      "imports": [
+        "dataset_config",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_bipia.py",
+      "lines": 73,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "bipia.data",
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_task_scope_v1.py",
+      "lines": 67,
+      "protection": "requires_review",
+      "imports": [
+        "approval_policy",
+        "detector",
+        "pathlib",
+        "task_scope",
+        "tool_policy"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/task_intent.py",
+      "lines": 67,
+      "protection": "requires_review",
+      "imports": [
+        "collections"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/verify_fruitfly.py",
+      "lines": 66,
+      "protection": "requires_review",
+      "imports": [
+        "manifest_protocol",
+        "pathlib",
+        "prepare_fruitfly",
+        "run_fruitfly",
+        "semantic_detector",
+        "sklearn.metrics"
+      ]
+    },
+    {
+      "path": "s6/engineering/structure_audit.py",
+      "lines": 66,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "collections",
+        "pathlib",
+        "s6.engineering.artifacts"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_candidates_v2.py",
+      "lines": 64,
+      "protection": "requires_review",
+      "imports": [
+        "evaluate_repo_file_external_v1",
+        "pathlib",
+        "sklearn.feature_extraction.text",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/review_maintainer_negatives_v1.py",
+      "lines": 64,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "code_workflow_signal",
+        "detector",
+        "pathlib",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_defense.py",
+      "lines": 63,
+      "protection": "requires_review",
+      "imports": [
+        "dataset_config",
+        "pathlib",
+        "prepare_stl10_defense"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/verify_supervised.py",
+      "lines": 63,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib",
+        "supervised_data",
+        "supervised_detector",
+        "train_supervised"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_repo_blocks_v2.py",
+      "lines": 62,
+      "protection": "requires_review",
+      "imports": [
+        "evaluate_repo_file_external_v1",
+        "pathlib",
+        "repo_file_blocks",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_weighted_v2.py",
+      "lines": 61,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_batch2.py",
+      "lines": 58,
+      "protection": "requires_review",
+      "imports": [
+        "evaluate_repo_file_external_v1",
+        "sklearn.feature_extraction.text",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/report_supervised_v2.py",
+      "lines": 55,
+      "protection": "requires_review",
+      "imports": [
+        "supervised_data",
+        "train_supervised",
+        "train_supervised_v2"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_role_boundary_simulation.py",
+      "lines": 48,
+      "protection": "requires_review",
+      "imports": [
+        "approval_policy",
+        "detector",
+        "pathlib",
+        "tool_policy",
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/prepare_agentic5k_source.py",
+      "lines": 46,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/code_context_signal.py",
+      "lines": 37,
+      "protection": "requires_review",
+      "imports": [
+        "__future__"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/supervised_detector.py",
+      "lines": 36,
+      "protection": "requires_review",
+      "imports": [
+        "functools",
+        "pathlib",
+        "supervised_data"
+      ]
+    },
+    {
+      "path": "s6/engineering/metrics.py",
+      "lines": 33,
+      "protection": "requires_review",
+      "imports": [
+        "__future__"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/request_inputs.py",
+      "lines": 32,
+      "protection": "requires_review",
+      "imports": [
+        "__future__",
+        "tool_policy",
+        "typing"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/summarize_repo_v2_development.py",
+      "lines": 27,
+      "protection": "requires_review",
+      "imports": [
+        "train_repo_file_v1"
+      ]
+    },
+    {
+      "path": "s6/prompt_injection/live_intent.py",
+      "lines": 25,
+      "protection": "requires_review",
+      "imports": [
+        "functools",
+        "intent_comparison",
+        "semantic_detector"
+      ]
+    },
+    {
+      "path": "s6/data_poisoning/dataset_config.py",
+      "lines": 23,
+      "protection": "requires_review",
+      "imports": [
+        "pathlib",
+        "semantic_detector"
+      ]
+    },
+    {
+      "path": "s6/engineering/__init__.py",
+      "lines": 1,
+      "protection": "requires_review",
+      "imports": []
+    }
+  ],
+  "functions": [
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "train_dataset",
+      "line": 419,
+      "lines": 186,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "train_dataset",
+      "line": 419,
+      "lines": 186,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "assess_semantic",
+      "line": 211,
+      "lines": 146,
+      "branch_nodes": 17
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "do_POST",
+      "line": 324,
+      "lines": 144,
+      "branch_nodes": 23
+    },
+    {
+      "path": "s6/prompt_injection/analyze_repo_file_errors_v1.py",
+      "name": "run",
+      "line": 60,
+      "lines": 142,
+      "branch_nodes": 27
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "load_status",
+      "line": 93,
+      "lines": 120,
+      "branch_nodes": 9
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "do_GET",
+      "line": 273,
+      "lines": 118,
+      "branch_nodes": 23
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_semantic.py",
+      "name": "main",
+      "line": 143,
+      "lines": 117,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_tool_policy.py",
+      "name": "main",
+      "line": 132,
+      "lines": 96,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/integrity_detector.py",
+      "name": "assess_manifest",
+      "line": 55,
+      "lines": 94,
+      "branch_nodes": 13
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_baseline.py",
+      "name": "main",
+      "line": 84,
+      "lines": 93,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/split_diptera.py",
+      "name": "main",
+      "line": 33,
+      "lines": 89,
+      "branch_nodes": 15
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_grouped_defense.py",
+      "name": "main",
+      "line": 49,
+      "lines": 86,
+      "branch_nodes": 16
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_defense.py",
+      "name": "main",
+      "line": 37,
+      "lines": 83,
+      "branch_nodes": 9
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_weighted.py",
+      "name": "main",
+      "line": 45,
+      "lines": 81,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "prepare",
+      "line": 52,
+      "lines": 81,
+      "branch_nodes": 18
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_multiseed.py",
+      "name": "main",
+      "line": 43,
+      "lines": 79,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "markdown",
+      "line": 194,
+      "lines": 77,
+      "branch_nodes": 10
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "do_GET",
+      "line": 227,
+      "lines": 77,
+      "branch_nodes": 10
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_multiseed.py",
+      "name": "main",
+      "line": 23,
+      "lines": 76,
+      "branch_nodes": 12
+    },
+    {
+      "path": "s6/prompt_injection/detector.py",
+      "name": "detect_prompt_injection",
+      "line": 144,
+      "lines": 76,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_semantic.py",
+      "name": "main",
+      "line": 136,
+      "lines": 75,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_repeat_v1.py",
+      "name": "main",
+      "line": 20,
+      "lines": 74,
+      "branch_nodes": 14
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_semantic.py",
+      "name": "evaluate_dataset",
+      "line": 62,
+      "lines": 72,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_v2_development.py",
+      "name": "main",
+      "line": 10,
+      "lines": 72,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_injection_data.py",
+      "name": "audit",
+      "line": 32,
+      "lines": 70,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "main",
+      "line": 145,
+      "lines": 69,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_independent_v2.py",
+      "name": "prepare",
+      "line": 68,
+      "lines": 65,
+      "branch_nodes": 12
+    },
+    {
+      "path": "s6/prompt_injection/experiment_joint_context_v1.py",
+      "name": "main",
+      "line": 51,
+      "lines": 64,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_external_v1.py",
+      "name": "prepare",
+      "line": 80,
+      "lines": 63,
+      "branch_nodes": 12
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "main",
+      "line": 92,
+      "lines": 62,
+      "branch_nodes": 15
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_defense.py",
+      "name": "main",
+      "line": 26,
+      "lines": 62,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/data_poisoning/dedup_diptera.py",
+      "name": "main",
+      "line": 80,
+      "lines": 61,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_semantic.py",
+      "name": "classify",
+      "line": 80,
+      "lines": 61,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/prepare_code_context_v1.py",
+      "name": "prepare",
+      "line": 31,
+      "lines": 61,
+      "branch_nodes": 11
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "name": "main",
+      "line": 69,
+      "lines": 61,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_defense.py",
+      "name": "main",
+      "line": 34,
+      "lines": 60,
+      "branch_nodes": 14
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_training.py",
+      "name": "main",
+      "line": 12,
+      "lines": 60,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "name": "evaluate",
+      "line": 131,
+      "lines": 60,
+      "branch_nodes": 14
+    },
+    {
+      "path": "s6/prompt_injection/prepare_code_context_v2.py",
+      "name": "prepare",
+      "line": 18,
+      "lines": 59,
+      "branch_nodes": 12
+    },
+    {
+      "path": "s6/prompt_injection/repo_file_blocks.py",
+      "name": "extract_blocks",
+      "line": 16,
+      "lines": 59,
+      "branch_nodes": 17
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_repeat_v1.py",
+      "name": "main",
+      "line": 29,
+      "lines": 58,
+      "branch_nodes": 12
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "extract_embeddings",
+      "line": 145,
+      "lines": 58,
+      "branch_nodes": 10
+    },
+    {
+      "path": "s6/data_poisoning/verify_training_environment.py",
+      "name": "main",
+      "line": 24,
+      "lines": 58,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_manifests.py",
+      "name": "main",
+      "line": 25,
+      "lines": 55,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/prepare_diptera_poisoning.py",
+      "name": "main",
+      "line": 34,
+      "lines": 55,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_poisoning.py",
+      "name": "main",
+      "line": 75,
+      "lines": 55,
+      "branch_nodes": 9
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "detect_and_score",
+      "line": 109,
+      "lines": 54,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/engineering/text_embeddings.py",
+      "name": "encode_one",
+      "line": 95,
+      "lines": 54,
+      "branch_nodes": 10
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_independent_v2.py",
+      "name": "evaluate",
+      "line": 144,
+      "lines": 53,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "name": "prepare",
+      "line": 73,
+      "lines": 53,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/verify_fruitfly.py",
+      "name": "main",
+      "line": 14,
+      "lines": 51,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_candidates_v2.py",
+      "name": "main",
+      "line": 10,
+      "lines": 51,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/experiment_long_text_v1.py",
+      "name": "main",
+      "line": 38,
+      "lines": 51,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "evaluate",
+      "line": 330,
+      "lines": 50,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_defense.py",
+      "name": "main",
+      "line": 10,
+      "lines": 50,
+      "branch_nodes": 12
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "evaluate",
+      "line": 330,
+      "lines": 50,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_task_scope_v1.py",
+      "name": "main",
+      "line": 14,
+      "lines": 50,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/prepare_maintainer_negatives_v1.py",
+      "name": "prepare",
+      "line": 50,
+      "lines": 50,
+      "branch_nodes": 13
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "research_payload",
+      "line": 210,
+      "lines": 49,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_cleaning_v3.py",
+      "name": "main",
+      "line": 77,
+      "lines": 49,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/prompt_injection/verify_supervised.py",
+      "name": "main",
+      "line": 12,
+      "lines": 49,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_repo_blocks_v2.py",
+      "name": "main",
+      "line": 11,
+      "lines": 48,
+      "branch_nodes": 9
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "summarize_split",
+      "line": 146,
+      "lines": 47,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "name": "main",
+      "line": 144,
+      "lines": 47,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_repo_file_external_v1.py",
+      "name": "evaluate",
+      "line": 59,
+      "lines": 47,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_batch2.py",
+      "name": "main",
+      "line": 9,
+      "lines": 46,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "assess_task_consistency",
+      "line": 108,
+      "lines": 46,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "semantic_payload",
+      "line": 140,
+      "lines": 45,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v1.py",
+      "name": "confirm",
+      "line": 75,
+      "lines": 45,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/run_fruitfly.py",
+      "name": "main",
+      "line": 59,
+      "lines": 44,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "evaluate",
+      "line": 179,
+      "lines": 44,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/prepare_clean_corpus.py",
+      "name": "assign_and_sample",
+      "line": 45,
+      "lines": 44,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_detector.py",
+      "name": "main",
+      "line": 97,
+      "lines": 43,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "main",
+      "line": 144,
+      "lines": 43,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_tool_policy.py",
+      "name": "classify",
+      "line": 68,
+      "lines": 43,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_defense.py",
+      "name": "main",
+      "line": 35,
+      "lines": 42,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "build_comparison",
+      "line": 607,
+      "lines": 41,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "build_comparison",
+      "line": 607,
+      "lines": 41,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "compute_metrics",
+      "line": 288,
+      "lines": 40,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "compute_metrics",
+      "line": 288,
+      "lines": 40,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/report_supervised_v2.py",
+      "name": "main",
+      "line": 12,
+      "lines": 40,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/tool_policy.py",
+      "name": "evaluate_tool_call",
+      "line": 105,
+      "lines": 40,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "diagnose",
+      "line": 111,
+      "lines": 40,
+      "branch_nodes": 9
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "name": "simulate",
+      "line": 74,
+      "lines": 39,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "embed_texts",
+      "line": 208,
+      "lines": 39,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/fruitfly_group_detector.py",
+      "name": "signals",
+      "line": 30,
+      "lines": 37,
+      "branch_nodes": 9
+    },
+    {
+      "path": "s6/prompt_injection/audit_gated_repo_dataset.py",
+      "name": "audit_bytes",
+      "line": 26,
+      "lines": 37,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_external_v1.py",
+      "name": "evaluate",
+      "line": 150,
+      "lines": 36,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "name": "evaluate",
+      "line": 71,
+      "lines": 36,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "train_variant",
+      "line": 104,
+      "lines": 36,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/engineering/structure_audit.py",
+      "name": "inventory",
+      "line": 15,
+      "lines": 35,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/prompt_injection/detector.py",
+      "name": "detector_metadata",
+      "line": 83,
+      "lines": 35,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_role_boundary_simulation.py",
+      "name": "main",
+      "line": 10,
+      "lines": 35,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_weighted_v2.py",
+      "name": "main",
+      "line": 24,
+      "lines": 34,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "main",
+      "line": 670,
+      "lines": 34,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "main",
+      "line": 670,
+      "lines": 34,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/engineering/check.py",
+      "name": "main",
+      "line": 62,
+      "lines": 34,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_weighted_v2.py",
+      "name": "main",
+      "line": 62,
+      "lines": 33,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/tool_policy.py",
+      "name": "append_audit_record",
+      "line": 170,
+      "lines": 33,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "main",
+      "line": 155,
+      "lines": 33,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "compare",
+      "line": 100,
+      "lines": 32,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/prepare_splits.py",
+      "name": "build_split_manifests",
+      "line": 47,
+      "lines": 32,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_injection_data.py",
+      "name": "candidate_manifest",
+      "line": 104,
+      "lines": 31,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/prompt_injection/code_workflow_signal.py",
+      "name": "code_text_blocks",
+      "line": 53,
+      "lines": 31,
+      "branch_nodes": 10
+    },
+    {
+      "path": "s6/prompt_injection/prepare_agentic5k_source.py",
+      "name": "main",
+      "line": 13,
+      "lines": 30,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "load_examples",
+      "line": 62,
+      "lines": 29,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/download_enron_clean.py",
+      "name": "main",
+      "line": 68,
+      "lines": 29,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v1.py",
+      "name": "development",
+      "line": 44,
+      "lines": 29,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_cleaning_v3.py",
+      "name": "freeze_protocol",
+      "line": 47,
+      "lines": 28,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "__init__",
+      "line": 115,
+      "lines": 28,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "__init__",
+      "line": 115,
+      "lines": 28,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "name": "test",
+      "line": 136,
+      "lines": 28,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/download_stl10.py",
+      "name": "restore",
+      "line": 50,
+      "lines": 27,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "group_split",
+      "line": 64,
+      "lines": 27,
+      "branch_nodes": 13
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "train_one_epoch",
+      "line": 259,
+      "lines": 27,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "train_one_epoch",
+      "line": 259,
+      "lines": 27,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/prepare_bipia.py",
+      "name": "main",
+      "line": 43,
+      "lines": 27,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "name": "grouped_components",
+      "line": 44,
+      "lines": 27,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "build_clean_manifest",
+      "line": 51,
+      "lines": 26,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_baseline.py",
+      "name": "classify",
+      "line": 56,
+      "lines": 26,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/prepare_splits.py",
+      "name": "main",
+      "line": 90,
+      "lines": 26,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_detector.py",
+      "name": "freeze_protocol",
+      "line": 70,
+      "lines": 25,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "resolve_clean_files",
+      "line": 59,
+      "lines": 25,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/prepare_bipia.py",
+      "name": "parse_args",
+      "line": 16,
+      "lines": 25,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "name": "train",
+      "line": 109,
+      "lines": 25,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/run_fruitfly.py",
+      "name": "evaluate_detector",
+      "line": 33,
+      "lines": 24,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_external_v1.py",
+      "name": "source_sample",
+      "line": 54,
+      "lines": 24,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_repo_file_external_v1.py",
+      "name": "external_cases",
+      "line": 29,
+      "lines": 24,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "fit",
+      "line": 85,
+      "lines": 24,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "seed_average",
+      "line": 143,
+      "lines": 23,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/engineering/text_embeddings.py",
+      "name": "__init__",
+      "line": 65,
+      "lines": 23,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/prepare_clean_corpus.py",
+      "name": "main",
+      "line": 122,
+      "lines": 23,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/review_maintainer_negatives_v1.py",
+      "name": "review_queue",
+      "line": 19,
+      "lines": 23,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "main",
+      "line": 396,
+      "lines": 22,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "id_adjacency",
+      "line": 121,
+      "lines": 22,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "validated",
+      "line": 38,
+      "lines": 22,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "detector_metadata",
+      "line": 100,
+      "lines": 22,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_baseline.py",
+      "name": "parse_args",
+      "line": 32,
+      "lines": 22,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_semantic.py",
+      "name": "parse_args",
+      "line": 56,
+      "lines": 22,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "split_sources",
+      "line": 44,
+      "lines": 22,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "semantic_sample_payload",
+      "line": 187,
+      "lines": 21,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/download_stl10.py",
+      "name": "download",
+      "line": 27,
+      "lines": 21,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_poisoning.py",
+      "name": "extract_verified",
+      "line": 39,
+      "lines": 21,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "main",
+      "line": 273,
+      "lines": 21,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "make_loader",
+      "line": 206,
+      "lines": 21,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "make_loader",
+      "line": 206,
+      "lines": 21,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/engineering/check.py",
+      "name": "static_checks",
+      "line": 39,
+      "lines": 21,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "main",
+      "line": 473,
+      "lines": 21,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "name": "summarise",
+      "line": 115,
+      "lines": 21,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "extract_embeddings",
+      "line": 249,
+      "lines": 21,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/tool_policy.py",
+      "name": "policy_metadata",
+      "line": 147,
+      "lines": 21,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "name": "frozen_rows",
+      "line": 26,
+      "lines": 21,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "near_duplicates",
+      "line": 99,
+      "lines": 20,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "analyse",
+      "line": 168,
+      "lines": 20,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_weighted_v2.py",
+      "name": "__init__",
+      "line": 19,
+      "lines": 20,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "environment_metadata",
+      "line": 397,
+      "lines": 20,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "__init__",
+      "line": 76,
+      "lines": 20,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "environment_metadata",
+      "line": 397,
+      "lines": 20,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "__init__",
+      "line": 76,
+      "lines": 20,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/download_enron_clean.py",
+      "name": "download",
+      "line": 46,
+      "lines": 20,
+      "branch_nodes": 7
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_detector.py",
+      "name": "development_cases",
+      "line": 42,
+      "lines": 19,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_defense.py",
+      "name": "validate_run",
+      "line": 16,
+      "lines": 19,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/run_fruitfly.py",
+      "name": "verify_inputs",
+      "line": 12,
+      "lines": 19,
+      "branch_nodes": 10
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "grant",
+      "line": 69,
+      "lines": 19,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "fit",
+      "line": 158,
+      "lines": 19,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "enumerate_files",
+      "line": 64,
+      "lines": 18,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "_fit_score",
+      "line": 32,
+      "lines": 18,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_semantic.py",
+      "name": "_sample_result_payload",
+      "line": 42,
+      "lines": 18,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "parse_args",
+      "line": 650,
+      "lines": 18,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "parse_args",
+      "line": 650,
+      "lines": 18,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/analyze_repo_file_errors_v1.py",
+      "name": "top_features",
+      "line": 40,
+      "lines": 18,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "_handle_approval",
+      "line": 305,
+      "lines": 18,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "failure_rows",
+      "line": 195,
+      "lines": 18,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_external_v1.py",
+      "name": "benchmark_payloads",
+      "line": 34,
+      "lines": 18,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "inputs",
+      "line": 41,
+      "lines": 18,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "choose_thresholds",
+      "line": 84,
+      "lines": 18,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_defense.py",
+      "name": "validate_predictions",
+      "line": 15,
+      "lines": 17,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "fruitfly_runs",
+      "line": 70,
+      "lines": 17,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "apply",
+      "line": 105,
+      "lines": 17,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "load_selected_attacks",
+      "line": 93,
+      "lines": 17,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "name": "confirm",
+      "line": 84,
+      "lines": 17,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_independent_v2.py",
+      "name": "source_snippet",
+      "line": 49,
+      "lines": 17,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_tool_policy.py",
+      "name": "failure_rows",
+      "line": 113,
+      "lines": 17,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/prepare_splits.py",
+      "name": "_catalog_records",
+      "line": 28,
+      "lines": 17,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/review_maintainer_negatives_v1.py",
+      "name": "write",
+      "line": 44,
+      "lines": 17,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/summarize_repo_v2_development.py",
+      "name": "main",
+      "line": 7,
+      "lines": 17,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/task_scope.py",
+      "name": "check",
+      "line": 51,
+      "lines": 17,
+      "branch_nodes": 8
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "name": "choose_threshold",
+      "line": 37,
+      "lines": 17,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "semantic_assessment",
+      "line": 89,
+      "lines": 16,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "audit_image",
+      "line": 47,
+      "lines": 16,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "name": "development",
+      "line": 66,
+      "lines": 16,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/experiment_joint_context_v1.py",
+      "name": "load_rows",
+      "line": 33,
+      "lines": 16,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/request_inputs.py",
+      "name": "tool_call",
+      "line": 17,
+      "lines": 16,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "detector_metadata",
+      "line": 168,
+      "lines": 16,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "name": "select",
+      "line": 91,
+      "lines": 16,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "assessment_payload",
+      "line": 72,
+      "lines": 15,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dedup_diptera.py",
+      "name": "components",
+      "line": 63,
+      "lines": 15,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "load_run",
+      "line": 38,
+      "lines": 15,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_weighted_v2.py",
+      "name": "weighted_train_one_epoch",
+      "line": 45,
+      "lines": 15,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "name": "new_run",
+      "line": 67,
+      "lines": 15,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/prepare_clean_corpus.py",
+      "name": "format_record",
+      "line": 91,
+      "lines": 15,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "extract_candidate_instructions",
+      "line": 77,
+      "lines": 15,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "source_records",
+      "line": 28,
+      "lines": 15,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "variants",
+      "line": 82,
+      "lines": 15,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/task_intent.py",
+      "name": "resolve",
+      "line": 53,
+      "lines": 15,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/task_scope.py",
+      "name": "confirm",
+      "line": 31,
+      "lines": 15,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "select_by_source",
+      "line": 24,
+      "lines": 15,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "iterative_classifier_signal",
+      "line": 66,
+      "lines": 14,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/manifest_protocol.py",
+      "name": "validate_candidate_truth_pair",
+      "line": 62,
+      "lines": 14,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_grouped_defense.py",
+      "name": "development_cases",
+      "line": 31,
+      "lines": 14,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "targeted_label_flip",
+      "line": 92,
+      "lines": 14,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "name": "atomic_binary",
+      "line": 35,
+      "lines": 14,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "load_jsonl",
+      "line": 36,
+      "lines": 14,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/prepare_maintainer_negatives_v1.py",
+      "name": "paragraphs",
+      "line": 34,
+      "lines": 14,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/repo_file_blocks.py",
+      "name": "score_documents",
+      "line": 77,
+      "lines": 14,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "catalogs",
+      "line": 67,
+      "lines": 14,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "audit",
+      "line": 84,
+      "lines": 13,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/download_stl10.py",
+      "name": "main",
+      "line": 79,
+      "lines": 13,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "stl10_runs",
+      "line": 55,
+      "lines": 13,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/engineering/metrics.py",
+      "name": "binary_metrics",
+      "line": 7,
+      "lines": 13,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/repo_file_blocks.py",
+      "name": "add",
+      "line": 28,
+      "lines": 13,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/supervised_detector.py",
+      "name": "_load",
+      "line": 12,
+      "lines": 13,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "name": "select_threshold",
+      "line": 76,
+      "lines": 13,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "semantic_payload",
+      "line": 72,
+      "lines": 12,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_defense.py",
+      "name": "select_rows",
+      "line": 21,
+      "lines": 12,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_multiseed.py",
+      "name": "verify",
+      "line": 29,
+      "lines": 12,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/engineering/metrics.py",
+      "name": "calibrate_threshold",
+      "line": 22,
+      "lines": 12,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/engineering/text_embeddings.py",
+      "name": "token_windows",
+      "line": 36,
+      "lines": 12,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/code_workflow_signal.py",
+      "name": "assess_workflow_redirection",
+      "line": 86,
+      "lines": 12,
+      "branch_nodes": 6
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v1.py",
+      "name": "samples",
+      "line": 22,
+      "lines": 12,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "name": "predict",
+      "line": 30,
+      "lines": 12,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/experiment_long_text_v1.py",
+      "name": "development_rows",
+      "line": 19,
+      "lines": 12,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/prepare_clean_corpus.py",
+      "name": "parse_args",
+      "line": 108,
+      "lines": 12,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/task_intent.py",
+      "name": "category",
+      "line": 24,
+      "lines": 12,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "name": "confusion",
+      "line": 62,
+      "lines": 12,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "best_threshold",
+      "line": 70,
+      "lines": 12,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "random_label_flip",
+      "line": 79,
+      "lines": 11,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "write_hidden_ground_truth",
+      "line": 120,
+      "lines": 11,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_poisoning.py",
+      "name": "split_train",
+      "line": 62,
+      "lines": 11,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "training_transform",
+      "line": 164,
+      "lines": 11,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "training_transform",
+      "line": 164,
+      "lines": 11,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/engineering/structure_audit.py",
+      "name": "main",
+      "line": 52,
+      "lines": 11,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/engineering/text_embeddings.py",
+      "name": "validate",
+      "line": 23,
+      "lines": 11,
+      "branch_nodes": 5
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "features",
+      "line": 145,
+      "lines": 11,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "name": "run_comparison",
+      "line": 114,
+      "lines": 11,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/supervised_detector.py",
+      "name": "assess_supervised",
+      "line": 26,
+      "lines": 11,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v1.py",
+      "name": "make_pipeline",
+      "line": 49,
+      "lines": 11,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "freeze",
+      "line": 66,
+      "lines": 11,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "evaluate",
+      "line": 142,
+      "lines": 11,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dedup_diptera.py",
+      "name": "resolve",
+      "line": 39,
+      "lines": 10,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/dedup_diptera.py",
+      "name": "cosine_pairs",
+      "line": 51,
+      "lines": 10,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/fruitfly_group_detector.py",
+      "name": "fold_indices",
+      "line": 14,
+      "lines": 10,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "write_candidate_manifest",
+      "line": 108,
+      "lines": 10,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_repeat_v1.py",
+      "name": "summary_path",
+      "line": 17,
+      "lines": 10,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_defense.py",
+      "name": "verify_run",
+      "line": 14,
+      "lines": 10,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "__getitem__",
+      "line": 100,
+      "lines": 10,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "__getitem__",
+      "line": 100,
+      "lines": 10,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/engineering/text_embeddings.py",
+      "name": "coverage_weights",
+      "line": 50,
+      "lines": 10,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "revoke",
+      "line": 89,
+      "lines": 10,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/audit_gated_repo_dataset.py",
+      "name": "run",
+      "line": 65,
+      "lines": 10,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_injection_data.py",
+      "name": "write_manifest",
+      "line": 147,
+      "lines": 10,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/detector.py",
+      "name": "_content_lines",
+      "line": 120,
+      "lines": 10,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/detector.py",
+      "name": "_is_encoded_instruction",
+      "line": 132,
+      "lines": 10,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "_attack_groups",
+      "line": 134,
+      "lines": 10,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/prepare_splits.py",
+      "name": "_load_catalog",
+      "line": 16,
+      "lines": 10,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "combine_hybrid",
+      "line": 156,
+      "lines": 10,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "name": "metrics",
+      "line": 26,
+      "lines": 10,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "frozen_detector",
+      "line": 82,
+      "lines": 9,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "rates",
+      "line": 93,
+      "lines": 9,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/manifest_protocol.py",
+      "name": "_read_strict_csv",
+      "line": 27,
+      "lines": 9,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "describe",
+      "line": 133,
+      "lines": 9,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_weighted.py",
+      "name": "load_run",
+      "line": 34,
+      "lines": 9,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "evaluation_transform",
+      "line": 177,
+      "lines": 9,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "set_reproducible_seed",
+      "line": 188,
+      "lines": 9,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "evaluation_transform",
+      "line": 177,
+      "lines": 9,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "set_reproducible_seed",
+      "line": 188,
+      "lines": 9,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "_load",
+      "line": 50,
+      "lines": 9,
+      "branch_nodes": 4
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_independent_v2.py",
+      "name": "main",
+      "line": 199,
+      "lines": 9,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/task_intent.py",
+      "name": "register",
+      "line": 43,
+      "lines": 9,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "name": "score_sources",
+      "line": 59,
+      "lines": 9,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "score_sources",
+      "line": 59,
+      "lines": 9,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "__init__",
+      "line": 38,
+      "lines": 9,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "semantic_result_by_sample_id",
+      "line": 107,
+      "lines": 8,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "_send_json",
+      "line": 264,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/manifest_protocol.py",
+      "name": "index_unique",
+      "line": 52,
+      "lines": 8,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "blind_record_from_row",
+      "line": 90,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "load_embedding_cache",
+      "line": 124,
+      "lines": 8,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "load_class_names",
+      "line": 229,
+      "lines": 8,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "write_csv",
+      "line": 382,
+      "lines": 8,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "load_class_names",
+      "line": 229,
+      "lines": 8,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "write_csv",
+      "line": 382,
+      "lines": 8,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_multiseed.py",
+      "name": "save_progress",
+      "line": 87,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "name": "environment",
+      "line": 56,
+      "lines": 8,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "_send_json",
+      "line": 218,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "_save",
+      "line": 60,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_injection_data.py",
+      "name": "write",
+      "line": 137,
+      "lines": 8,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "_latency_summary",
+      "line": 124,
+      "lines": 8,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "load",
+      "line": 135,
+      "lines": 8,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "name": "predict_intent",
+      "line": 53,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "name": "metrics",
+      "line": 62,
+      "lines": 8,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/prompt_injection/live_intent.py",
+      "name": "infer_content",
+      "line": 18,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/prepare_clean_corpus.py",
+      "name": "load_sent_mail",
+      "line": 35,
+      "lines": 8,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "name": "load_source",
+      "line": 34,
+      "lines": 8,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/task_scope.py",
+      "name": "grant",
+      "line": 75,
+      "lines": 8,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "class_names",
+      "line": 63,
+      "lines": 7,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "semantic_sample_results",
+      "line": 131,
+      "lines": 7,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "assessment_payload",
+      "line": 61,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "training_payload",
+      "line": 92,
+      "lines": 7,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/manifest_protocol.py",
+      "name": "load_candidate_manifest",
+      "line": 38,
+      "lines": 7,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "safe_name",
+      "line": 39,
+      "lines": 7,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "holm",
+      "line": 134,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "_deterministic_subset",
+      "line": 155,
+      "lines": 7,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "_deterministic_subset",
+      "line": 155,
+      "lines": 7,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "name": "file_sha256",
+      "line": 16,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/code_context_signal.py",
+      "name": "comment_lines",
+      "line": 22,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/code_context_signal.py",
+      "name": "assess_comment_redirection",
+      "line": 31,
+      "lines": 7,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "name": "load_rows",
+      "line": 21,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "name": "groups",
+      "line": 50,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_independent_v2.py",
+      "name": "rates",
+      "line": 135,
+      "lines": 7,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_tool_policy.py",
+      "name": "_latency_summary",
+      "line": 51,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/experiment_joint_context_v1.py",
+      "name": "metrics",
+      "line": 24,
+      "lines": 7,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/prepare_splits.py",
+      "name": "parse_args",
+      "line": 81,
+      "lines": 7,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "_load_model",
+      "line": 199,
+      "lines": 7,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "sha",
+      "line": 37,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "write_csv",
+      "line": 50,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_cleaning_v3.py",
+      "name": "fixed_c",
+      "line": 39,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "semantic_result_by_sample_id",
+      "line": 85,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dedup_diptera.py",
+      "name": "read_audit",
+      "line": 31,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "_prepare",
+      "line": 52,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "main",
+      "line": 165,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "sha256_file",
+      "line": 35,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/prepare_ip102_poisoning.py",
+      "name": "load_class_names",
+      "line": 43,
+      "lines": 6,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_poisoning.py",
+      "name": "digest_file",
+      "line": 31,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_defense.py",
+      "name": "save",
+      "line": 56,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "file_sha256",
+      "line": 239,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "__getitem__",
+      "line": 147,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "file_sha256",
+      "line": 239,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "__getitem__",
+      "line": 147,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/engineering/check.py",
+      "name": "initialize_registry",
+      "line": 31,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "_scope_payload",
+      "line": 20,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/download_enron_clean.py",
+      "name": "digest_file",
+      "line": 38,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "sha256_file",
+      "line": 28,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "_decision_counts",
+      "line": 112,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_tool_policy.py",
+      "name": "parse_args",
+      "line": 60,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "threshold_for",
+      "line": 44,
+      "lines": 6,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/request_inputs.py",
+      "name": "content_text",
+      "line": 9,
+      "lines": 6,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "semantic_summary_document",
+      "line": 117,
+      "lines": 5,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "semantic_offline_metrics",
+      "line": 124,
+      "lines": 5,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/calibrate_diptera_detector.py",
+      "name": "f1",
+      "line": 63,
+      "lines": 5,
+      "branch_nodes": 3
+    },
+    {
+      "path": "s6/data_poisoning/dataset_config.py",
+      "name": "evaluation_matches",
+      "line": 19,
+      "lines": 5,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dedup_diptera.py",
+      "name": "find",
+      "line": 66,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "sha",
+      "line": 24,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_grouped_defense.py",
+      "name": "rate_metrics",
+      "line": 25,
+      "lines": 5,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "_single_run",
+      "line": 31,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "_mcnemar",
+      "line": 89,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/split_diptera.py",
+      "name": "find",
+      "line": 42,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "seed_worker",
+      "line": 199,
+      "lines": 5,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "build_model",
+      "line": 252,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "seed_worker",
+      "line": 199,
+      "lines": 5,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "build_model",
+      "line": 252,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/engineering/text_embeddings.py",
+      "name": "encode",
+      "line": 89,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "load_multi_jsonl",
+      "line": 52,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "attack_category",
+      "line": 86,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "name": "_reviewer_grants",
+      "line": 67,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "name": "save_predictions",
+      "line": 59,
+      "lines": 5,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "name": "signature",
+      "line": 41,
+      "lines": 5,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "name": "unit",
+      "line": 47,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/intent_comparison.py",
+      "name": "load_report",
+      "line": 108,
+      "lines": 5,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "name": "find",
+      "line": 51,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "texts_requiring_embeddings",
+      "line": 94,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "_cosine",
+      "line": 101,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "load_embedding_cache",
+      "line": 186,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/task_intent.py",
+      "name": "description",
+      "line": 37,
+      "lines": 5,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/task_scope.py",
+      "name": "apply",
+      "line": 69,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "write",
+      "line": 17,
+      "lines": 5,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "load_manifest",
+      "line": 57,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "dhash",
+      "line": 58,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "load_manifest",
+      "line": 33,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/dataset_config.py",
+      "name": "manifest_hashes",
+      "line": 13,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "classifier_signal",
+      "line": 60,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/fruitfly_group_detector.py",
+      "name": "group_weights",
+      "line": 25,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/fruitfly_group_detector.py",
+      "name": "decisions",
+      "line": 72,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/integrity_detector.py",
+      "name": "_distribution",
+      "line": 44,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "write_csv",
+      "line": 34,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "find",
+      "line": 66,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "save_embedding_cache",
+      "line": 139,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "_unit_normalize",
+      "line": 205,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/split_diptera.py",
+      "name": "union",
+      "line": 48,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "__init__",
+      "line": 45,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "list",
+      "line": 100,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "name": "_phase_call",
+      "line": 61,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "name": "parse_args",
+      "line": 138,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v2.py",
+      "name": "metrics",
+      "line": 44,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "find",
+      "line": 89,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "name": "union",
+      "line": 57,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "question_for",
+      "line": 23,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/task_scope.py",
+      "name": "__init__",
+      "line": 26,
+      "lines": 4,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "check_freeze",
+      "line": 79,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "transform",
+      "line": 48,
+      "lines": 4,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/audit_diptera.py",
+      "name": "write_json",
+      "line": 45,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "_read",
+      "line": 18,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "document",
+      "line": 22,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "require",
+      "line": 29,
+      "lines": 3,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_diptera_detection.py",
+      "name": "group_ids",
+      "line": 104,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/fruitfly_group_detector.py",
+      "name": "group_id",
+      "line": 68,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/integrity_detector.py",
+      "name": "_total_variation",
+      "line": 50,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/manifest_protocol.py",
+      "name": "load_hidden_ground_truth",
+      "line": 47,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly.py",
+      "name": "write_json",
+      "line": 30,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_grouped_defense.py",
+      "name": "frozen_json",
+      "line": 21,
+      "lines": 3,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_weighted.py",
+      "name": "require",
+      "line": 20,
+      "lines": 3,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_weighted.py",
+      "name": "csv_rows",
+      "line": 29,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_stl10_multiseed.py",
+      "name": "statistics",
+      "line": 18,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/semantic_detector.py",
+      "name": "embedding_metadata",
+      "line": 134,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/split_diptera.py",
+      "name": "read_csv",
+      "line": 28,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_weighted_v2.py",
+      "name": "__getitem__",
+      "line": 40,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "canonical_hash",
+      "line": 247,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "write_json",
+      "line": 392,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "canonical_hash",
+      "line": 247,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "write_json",
+      "line": 392,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_multiseed.py",
+      "name": "require",
+      "line": 20,
+      "lines": 3,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "name": "require_hash",
+      "line": 25,
+      "lines": 3,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "name": "read_json",
+      "line": 30,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/engineering/artifacts.py",
+      "name": "write_json",
+      "line": 51,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/approval_policy.py",
+      "name": "scope_id",
+      "line": 28,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_external_v1.py",
+      "name": "counts",
+      "line": 145,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/experiment_long_text_v1.py",
+      "name": "joint_features",
+      "line": 33,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "save",
+      "line": 35,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "save_embedding_cache",
+      "line": 193,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "model_text",
+      "line": 98,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_repo_file_v2_development.py",
+      "name": "tracked_hashes",
+      "line": 61,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "name": "write",
+      "line": 22,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised.py",
+      "name": "source_batch",
+      "line": 55,
+      "lines": 3,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "write",
+      "line": 32,
+      "lines": 3,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/train_supervised_v2.py",
+      "name": "source_batch",
+      "line": 54,
+      "lines": 3,
+      "branch_nodes": 2
+    },
+    {
+      "path": "s6/data_poisoning/app.py",
+      "name": "log_message",
+      "line": 392,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "digest",
+      "line": 26,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/dashboard_fruitfly.py",
+      "name": "class_names",
+      "line": 69,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/evaluate_semantic.py",
+      "name": "load_manifest_rows",
+      "line": 38,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/integrity_detector.py",
+      "name": "load_manifest",
+      "line": 40,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_diptera_poisoning.py",
+      "name": "sample_id",
+      "line": 30,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_grouped_defense.py",
+      "name": "inputs",
+      "line": 46,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_weighted_v2.py",
+      "name": "sha",
+      "line": 20,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_stl10_defense.py",
+      "name": "sha",
+      "line": 17,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_defense.py",
+      "name": "csv_rows",
+      "line": 12,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_weighted.py",
+      "name": "read",
+      "line": 25,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "_ci",
+      "line": 96,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_significance.py",
+      "name": "_fmt_p",
+      "line": 190,
+      "lines": 2,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_fruitfly_defense.py",
+      "name": "require",
+      "line": 11,
+      "lines": 2,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "__len__",
+      "line": 97,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_ip102_models.py",
+      "name": "__len__",
+      "line": 144,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "__len__",
+      "line": 97,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_models.py",
+      "name": "__len__",
+      "line": 144,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_multiseed.py",
+      "name": "read",
+      "line": 16,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/train_stl10_multiseed.py",
+      "name": "expected_protocol",
+      "line": 25,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/verify_fruitfly.py",
+      "name": "read_csv",
+      "line": 11,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/verify_training_environment.py",
+      "name": "sample_image_path",
+      "line": 20,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/analyze_repo_file_errors_v1.py",
+      "name": "sha",
+      "line": 32,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/analyze_repo_file_errors_v1.py",
+      "name": "dump",
+      "line": 36,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/app.py",
+      "name": "log_message",
+      "line": 469,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/audit_gated_repo_dataset.py",
+      "name": "normalized_text",
+      "line": 22,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/audit_gated_repo_dataset.py",
+      "name": "quantile",
+      "line": 49,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_injection_data.py",
+      "name": "file_sha",
+      "line": 24,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/audit_repo_injection_data.py",
+      "name": "lines",
+      "line": 28,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/eval_common.py",
+      "name": "_rate",
+      "line": 120,
+      "lines": 2,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_approval_policy.py",
+      "name": "_rate",
+      "line": 57,
+      "lines": 2,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v1.py",
+      "name": "key",
+      "line": 36,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_context_v1.py",
+      "name": "summarize",
+      "line": 40,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_external_v1.py",
+      "name": "sha",
+      "line": 30,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_code_independent_v2.py",
+      "name": "digest",
+      "line": 45,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_repo_file_external_v1.py",
+      "name": "read_rows",
+      "line": 25,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_repo_file_external_v1.py",
+      "name": "normalized",
+      "line": 55,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/evaluate_tool_policy.py",
+      "name": "_rate",
+      "line": 47,
+      "lines": 2,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/experiment_joint_context_v1.py",
+      "name": "digest",
+      "line": 20,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "sha",
+      "line": 31,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "normalize",
+      "line": 40,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/experiment_native_pairs_v1.py",
+      "name": "table_row",
+      "line": 207,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/prepare_maintainer_negatives_v1.py",
+      "name": "sha",
+      "line": 30,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "name": "sha",
+      "line": 26,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/prepare_repo_file_splits_v1.py",
+      "name": "normalized",
+      "line": 30,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/semantic_detector.py",
+      "name": "text_sha256",
+      "line": 73,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "digest",
+      "line": 14,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "as_text",
+      "line": 17,
+      "lines": 2,
+      "branch_nodes": 1
+    },
+    {
+      "path": "s6/prompt_injection/supervised_data.py",
+      "name": "content_group",
+      "line": 20,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/prompt_injection/task_scope.py",
+      "name": "_question_hash",
+      "line": 48,
+      "lines": 2,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/prepare_fruitfly_grouped_defense.py",
+      "name": "read",
+      "line": 19,
+      "lines": 1,
+      "branch_nodes": 0
+    },
+    {
+      "path": "s6/data_poisoning/report_fruitfly_defense.py",
+      "name": "pct",
+      "line": 80,
+      "lines": 1,
+      "branch_nodes": 1
+    }
+  ],
+  "exact_body_clone_groups": [
+    [
+      {
+        "path": "s6/data_poisoning/app.py",
+        "name": "_send_json",
+        "line": 264,
+        "lines": 8,
+        "branch_nodes": 0
+      },
+      {
+        "path": "s6/prompt_injection/app.py",
+        "name": "_send_json",
+        "line": 218,
+        "lines": 8,
+        "branch_nodes": 0
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "training_transform",
+        "line": 164,
+        "lines": 11,
+        "branch_nodes": 0
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "training_transform",
+        "line": 164,
+        "lines": 11,
+        "branch_nodes": 0
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "evaluation_transform",
+        "line": 177,
+        "lines": 9,
+        "branch_nodes": 0
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "evaluation_transform",
+        "line": 177,
+        "lines": 9,
+        "branch_nodes": 0
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "set_reproducible_seed",
+        "line": 188,
+        "lines": 9,
+        "branch_nodes": 1
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "set_reproducible_seed",
+        "line": 188,
+        "lines": 9,
+        "branch_nodes": 1
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "make_loader",
+        "line": 206,
+        "lines": 21,
+        "branch_nodes": 0
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "make_loader",
+        "line": 206,
+        "lines": 21,
+        "branch_nodes": 0
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "train_one_epoch",
+        "line": 259,
+        "lines": 27,
+        "branch_nodes": 1
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "train_one_epoch",
+        "line": 259,
+        "lines": 27,
+        "branch_nodes": 1
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "compute_metrics",
+        "line": 288,
+        "lines": 40,
+        "branch_nodes": 3
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "compute_metrics",
+        "line": 288,
+        "lines": 40,
+        "branch_nodes": 3
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "evaluate",
+        "line": 330,
+        "lines": 50,
+        "branch_nodes": 2
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "evaluate",
+        "line": 330,
+        "lines": 50,
+        "branch_nodes": 2
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "write_csv",
+        "line": 382,
+        "lines": 8,
+        "branch_nodes": 1
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "write_csv",
+        "line": 382,
+        "lines": 8,
+        "branch_nodes": 1
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "environment_metadata",
+        "line": 397,
+        "lines": 20,
+        "branch_nodes": 1
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "environment_metadata",
+        "line": 397,
+        "lines": 20,
+        "branch_nodes": 1
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "build_comparison",
+        "line": 607,
+        "lines": 41,
+        "branch_nodes": 2
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "build_comparison",
+        "line": 607,
+        "lines": 41,
+        "branch_nodes": 2
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "parse_args",
+        "line": 650,
+        "lines": 18,
+        "branch_nodes": 0
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "parse_args",
+        "line": 650,
+        "lines": 18,
+        "branch_nodes": 0
+      }
+    ],
+    [
+      {
+        "path": "s6/data_poisoning/train_ip102_models.py",
+        "name": "main",
+        "line": 670,
+        "lines": 34,
+        "branch_nodes": 4
+      },
+      {
+        "path": "s6/data_poisoning/train_stl10_models.py",
+        "name": "main",
+        "line": 670,
+        "lines": 34,
+        "branch_nodes": 4
+      }
+    ]
+  ],
+  "frontends": [
+    {
+      "path": "index.html",
+      "lines": 32,
+      "inline_script_blocks": 1,
+      "inline_style_blocks": 1
+    },
+    {
+      "path": "s6/data_poisoning/web/index.html",
+      "lines": 668,
+      "inline_script_blocks": 1,
+      "inline_style_blocks": 1
+    },
+    {
+      "path": "s6/prompt_injection/web/index.html",
+      "lines": 1509,
+      "inline_script_blocks": 1,
+      "inline_style_blocks": 1
+    }
+  ]
+}
