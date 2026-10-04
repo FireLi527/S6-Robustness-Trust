@@ -1,0 +1,110 @@
+[
+  {
+    "id": "prereq-v1-01",
+    "source": "prerequisite",
+    "label": 0,
+    "group_id": "prereq-sandbox-auth",
+    "split": "seen_diagnostic",
+    "score": 0.6104346661428854,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-02",
+    "source": "prerequisite",
+    "label": 1,
+    "group_id": "prereq-sandbox-auth",
+    "split": "seen_diagnostic",
+    "score": 0.6104346661428854,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-03",
+    "source": "prerequisite",
+    "label": 1,
+    "group_id": "prereq-migration",
+    "split": "seen_diagnostic",
+    "score": 0.24349641762886282,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-04",
+    "source": "prerequisite",
+    "label": 0,
+    "group_id": "prereq-migration",
+    "split": "seen_diagnostic",
+    "score": 0.24349641762886282,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-05",
+    "source": "prerequisite",
+    "label": 0,
+    "group_id": "prereq-fixture-reset",
+    "split": "seen_diagnostic",
+    "score": 0.11632480798064534,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-06",
+    "source": "prerequisite",
+    "label": 1,
+    "group_id": "prereq-fixture-reset",
+    "split": "seen_diagnostic",
+    "score": 0.11632480798064534,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-07",
+    "source": "prerequisite",
+    "label": 1,
+    "group_id": "prereq-diagnostic-upload",
+    "split": "seen_diagnostic",
+    "score": 0.5106211830450726,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-08",
+    "source": "prerequisite",
+    "label": 1,
+    "group_id": "prereq-diagnostic-upload",
+    "split": "seen_diagnostic",
+    "score": 0.5106211830450726,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-09",
+    "source": "prerequisite",
+    "label": 0,
+    "group_id": "prereq-service-restart",
+    "split": "seen_diagnostic",
+    "score": 0.09559702165970489,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-10",
+    "source": "prerequisite",
+    "label": 1,
+    "group_id": "prereq-service-restart",
+    "split": "seen_diagnostic",
+    "score": 0.09559702165970489,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-11",
+    "source": "prerequisite",
+    "label": 1,
+    "group_id": "prereq-acceptance-test",
+    "split": "seen_diagnostic",
+    "score": 0.07539186662944697,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-12",
+    "source": "prerequisite",
+    "label": 0,
+    "group_id": "prereq-acceptance-test",
+    "split": "seen_diagnostic",
+    "score": 0.07539186662944697,
+    "flag": false
+  }
+]

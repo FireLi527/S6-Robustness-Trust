@@ -1,0 +1,39 @@
+{
+  "protected_files": 64,
+  "partition": {
+    "secopd": {
+      "train": {
+        "rows": 1194,
+        "groups": 588
+      },
+      "validation": {
+        "rows": 400,
+        "groups": 196
+      },
+      "test": {
+        "rows": 0,
+        "groups": 0
+      }
+    },
+    "spml": {
+      "train": {
+        "rows": 1899,
+        "groups": 472
+      },
+      "validation": {
+        "rows": 661,
+        "groups": 156
+      },
+      "test": {
+        "rows": 640,
+        "groups": 156
+      }
+    }
+  },
+  "coverage_rows": 6235,
+  "max_tokens": 560,
+  "multi_window_inputs": 874,
+  "dropped_tokens": 0,
+  "prediction_rows_reconstructed": 27603,
+  "max_probability_error": 0.0
+}
