@@ -1,0 +1,65 @@
+{
+  "audit": {
+    "rows": 540,
+    "quartets": 108,
+    "single_side_target_balance": true,
+    "partitions": {
+      "train": {
+        "0": 144,
+        "1": 96
+      },
+      "calibration": {
+        "0": 72,
+        "1": 48
+      },
+      "test": {
+        "0": 108,
+        "1": 72
+      }
+    }
+  },
+  "training_max_errors": {
+    "linear_content": 0.0,
+    "linear_task_only": 0.0,
+    "linear_joint": 0.0,
+    "linear_nli": 0.0,
+    "bce_2026": 0.0,
+    "paired_2026": 0.0,
+    "bce_2027": 0.0,
+    "paired_2027": 0.0,
+    "bce_2028": 0.0,
+    "paired_2028": 0.0
+  },
+  "partitions": {
+    "train": {
+      "predictions": 2880,
+      "max_score_error": 0.0,
+      "nli_repeated": 480,
+      "max_nli_tokens": 92
+    },
+    "calibration": {
+      "predictions": 1440,
+      "max_score_error": 0.0,
+      "nli_repeated": 240,
+      "max_nli_tokens": 103
+    },
+    "test": {
+      "predictions": 2160,
+      "max_score_error": 0.0,
+      "nli_repeated": 360,
+      "max_nli_tokens": 103
+    },
+    "previous240": {
+      "predictions": 2880,
+      "max_score_error": 0.0,
+      "nli_repeated": 480,
+      "max_nli_tokens": 72
+    },
+    "reviewed60": {
+      "predictions": 720,
+      "max_score_error": 0.0,
+      "nli_repeated": 120,
+      "max_nli_tokens": 70
+    }
+  }
+}

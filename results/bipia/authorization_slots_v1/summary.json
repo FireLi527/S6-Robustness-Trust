@@ -1,0 +1,409 @@
+{
+  "grammar_contract": {
+    "samples": 216,
+    "known_labels": 216,
+    "unknown_labels": 0,
+    "decisions": {
+      "NORMAL": 108,
+      "RISK": 108
+    },
+    "coverage_all": 1.0,
+    "coverage_known": 1.0,
+    "selective_accuracy": 1.0,
+    "risk_auto_recall": 1.0,
+    "normal_auto_fpr": 0.0,
+    "auto_precision": 1.0,
+    "risk_auto_normal": 0,
+    "risk_review": 0,
+    "normal_review": 0,
+    "risk_count": 108,
+    "normal_count": 108,
+    "true_auto_risk": 108,
+    "false_auto_risk": 0,
+    "normal_review_rate": 0.0,
+    "risk_review_rate": 0.0,
+    "extraction": {
+      "task": {
+        "eligible": 216,
+        "extracted": 216,
+        "coverage": 1.0,
+        "exact_correct": 216,
+        "conditional_exact_accuracy": 1.0,
+        "fields": {
+          "mode": {
+            "correct": 216,
+            "accuracy": 1.0
+          },
+          "operation": {
+            "correct": 216,
+            "accuracy": 1.0
+          },
+          "target": {
+            "correct": 216,
+            "accuracy": 1.0
+          },
+          "excluded": {
+            "correct": 216,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "content": {
+        "eligible": 216,
+        "extracted": 216,
+        "coverage": 1.0,
+        "exact_correct": 216,
+        "conditional_exact_accuracy": 1.0,
+        "fields": {
+          "mode": {
+            "correct": 216,
+            "accuracy": 1.0
+          },
+          "operation": {
+            "correct": 216,
+            "accuracy": 1.0
+          },
+          "target": {
+            "correct": 216,
+            "accuracy": 1.0
+          },
+          "excluded": {
+            "correct": 216,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "both": {
+        "eligible": 216,
+        "extracted": 216,
+        "coverage": 1.0,
+        "exact_correct": 216
+      }
+    }
+  },
+  "wording_holdout": {
+    "samples": 72,
+    "known_labels": 72,
+    "unknown_labels": 0,
+    "decisions": {
+      "REVIEW": 72
+    },
+    "coverage_all": 0.0,
+    "coverage_known": 0.0,
+    "selective_accuracy": null,
+    "risk_auto_recall": 0.0,
+    "normal_auto_fpr": 0.0,
+    "auto_precision": null,
+    "risk_auto_normal": 0,
+    "risk_review": 36,
+    "normal_review": 36,
+    "risk_count": 36,
+    "normal_count": 36,
+    "true_auto_risk": 0,
+    "false_auto_risk": 0,
+    "normal_review_rate": 1.0,
+    "risk_review_rate": 1.0,
+    "extraction": {
+      "task": {
+        "eligible": 72,
+        "extracted": 0,
+        "coverage": 0.0,
+        "exact_correct": 0,
+        "conditional_exact_accuracy": null,
+        "fields": {
+          "mode": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "operation": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "target": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "excluded": {
+            "correct": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "content": {
+        "eligible": 72,
+        "extracted": 0,
+        "coverage": 0.0,
+        "exact_correct": 0,
+        "conditional_exact_accuracy": null,
+        "fields": {
+          "mode": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "operation": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "target": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "excluded": {
+            "correct": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "both": {
+        "eligible": 72,
+        "extracted": 0,
+        "coverage": 0.0,
+        "exact_correct": 0
+      }
+    }
+  },
+  "boundary_pressure": {
+    "samples": 36,
+    "known_labels": 18,
+    "unknown_labels": 18,
+    "decisions": {
+      "REVIEW": 36
+    },
+    "coverage_all": 0.0,
+    "coverage_known": 0.0,
+    "selective_accuracy": null,
+    "risk_auto_recall": 0.0,
+    "normal_auto_fpr": null,
+    "auto_precision": null,
+    "risk_auto_normal": 0,
+    "risk_review": 18,
+    "normal_review": 0,
+    "risk_count": 18,
+    "normal_count": 0,
+    "true_auto_risk": 0,
+    "false_auto_risk": 0,
+    "normal_review_rate": null,
+    "risk_review_rate": 1.0,
+    "extraction": {
+      "task": {
+        "eligible": 30,
+        "extracted": 30,
+        "coverage": 1.0,
+        "exact_correct": 30,
+        "conditional_exact_accuracy": 1.0,
+        "fields": {
+          "mode": {
+            "correct": 30,
+            "accuracy": 1.0
+          },
+          "operation": {
+            "correct": 30,
+            "accuracy": 1.0
+          },
+          "target": {
+            "correct": 30,
+            "accuracy": 1.0
+          },
+          "excluded": {
+            "correct": 30,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "content": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0,
+        "conditional_exact_accuracy": null,
+        "fields": {
+          "mode": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "operation": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "target": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "excluded": {
+            "correct": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "both": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0
+      }
+    }
+  },
+  "seen540": {
+    "samples": 540,
+    "known_labels": 540,
+    "unknown_labels": 0,
+    "decisions": {
+      "NORMAL": 324,
+      "RISK": 216
+    },
+    "coverage_all": 1.0,
+    "coverage_known": 1.0,
+    "selective_accuracy": 1.0,
+    "risk_auto_recall": 1.0,
+    "normal_auto_fpr": 0.0,
+    "auto_precision": 1.0,
+    "risk_auto_normal": 0,
+    "risk_review": 0,
+    "normal_review": 0,
+    "risk_count": 216,
+    "normal_count": 324,
+    "true_auto_risk": 216,
+    "false_auto_risk": 0,
+    "normal_review_rate": 0.0,
+    "risk_review_rate": 0.0,
+    "extraction": {
+      "task": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0,
+        "conditional_exact_accuracy": null,
+        "fields": {
+          "mode": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "operation": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "target": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "excluded": {
+            "correct": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "content": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0,
+        "conditional_exact_accuracy": null,
+        "fields": {
+          "mode": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "operation": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "target": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "excluded": {
+            "correct": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "both": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0
+      }
+    }
+  },
+  "reviewed60": {
+    "samples": 60,
+    "known_labels": 60,
+    "unknown_labels": 0,
+    "decisions": {
+      "REVIEW": 60
+    },
+    "coverage_all": 0.0,
+    "coverage_known": 0.0,
+    "selective_accuracy": null,
+    "risk_auto_recall": 0.0,
+    "normal_auto_fpr": 0.0,
+    "auto_precision": null,
+    "risk_auto_normal": 0,
+    "risk_review": 24,
+    "normal_review": 36,
+    "risk_count": 24,
+    "normal_count": 36,
+    "true_auto_risk": 0,
+    "false_auto_risk": 0,
+    "normal_review_rate": 1.0,
+    "risk_review_rate": 1.0,
+    "extraction": {
+      "task": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0,
+        "conditional_exact_accuracy": null,
+        "fields": {
+          "mode": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "operation": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "target": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "excluded": {
+            "correct": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "content": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0,
+        "conditional_exact_accuracy": null,
+        "fields": {
+          "mode": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "operation": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "target": {
+            "correct": 0,
+            "accuracy": null
+          },
+          "excluded": {
+            "correct": 0,
+            "accuracy": null
+          }
+        }
+      },
+      "both": {
+        "eligible": 0,
+        "extracted": 0,
+        "coverage": null,
+        "exact_correct": 0
+      }
+    }
+  }
+}

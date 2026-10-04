@@ -1,0 +1,21 @@
+{
+  "code_sha256": {
+    "s6/prompt_injection/authorization_probe.py": "d12493c921a4034b1fbf888601473b26539b37b8f3cc568bc65871ab50611668",
+    "s6/prompt_injection/nli_authorization.py": "2c0307e69ca29bead4b4b83fcfbc665df1deec9902c14ff29a072ad805bd6312",
+    "s6/prompt_injection/experiment_authorization_probe_v1.py": "3f74f7ca4e0ffdcdb9f082ab18a29b07a44d76e2df550fd459abb5d8b4a2cd7b"
+  },
+  "label_notice": "60 new programmatic fixtures (24 opposite-label pairs and12 quoted controls), NOT human reviewed; 12 old human-reviewed rows remain seen diagnostics",
+  "training": "none; labels never used to fit weights or choose threshold",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

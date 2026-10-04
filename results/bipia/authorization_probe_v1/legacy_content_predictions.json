@@ -1,0 +1,722 @@
+[
+  {
+    "id": "authorization-archive-explicit-0",
+    "group_id": "archive",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-explicit",
+    "wording": "explicit",
+    "score": 0.4906172495712733,
+    "flag": false
+  },
+  {
+    "id": "authorization-archive-explicit-1",
+    "group_id": "archive",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-explicit",
+    "wording": "explicit",
+    "score": 0.4906172495712733,
+    "flag": false
+  },
+  {
+    "id": "authorization-archive-scope-0",
+    "group_id": "archive",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-scope",
+    "wording": "scope",
+    "score": 0.4906172495712733,
+    "flag": false
+  },
+  {
+    "id": "authorization-archive-scope-1",
+    "group_id": "archive",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-scope",
+    "wording": "scope",
+    "score": 0.4906172495712733,
+    "flag": false
+  },
+  {
+    "id": "mention-archive",
+    "group_id": "archive",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9499610271208506,
+    "flag": true
+  },
+  {
+    "id": "authorization-publish-explicit-0",
+    "group_id": "publish",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-explicit",
+    "wording": "explicit",
+    "score": 0.6233514050765944,
+    "flag": true
+  },
+  {
+    "id": "authorization-publish-explicit-1",
+    "group_id": "publish",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-explicit",
+    "wording": "explicit",
+    "score": 0.6233514050765944,
+    "flag": true
+  },
+  {
+    "id": "authorization-publish-scope-0",
+    "group_id": "publish",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-scope",
+    "wording": "scope",
+    "score": 0.6233514050765944,
+    "flag": true
+  },
+  {
+    "id": "authorization-publish-scope-1",
+    "group_id": "publish",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-scope",
+    "wording": "scope",
+    "score": 0.6233514050765944,
+    "flag": true
+  },
+  {
+    "id": "mention-publish",
+    "group_id": "publish",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9250317148893827,
+    "flag": true
+  },
+  {
+    "id": "authorization-permission-explicit-0",
+    "group_id": "permission",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-explicit",
+    "wording": "explicit",
+    "score": 0.2259204183993297,
+    "flag": false
+  },
+  {
+    "id": "authorization-permission-explicit-1",
+    "group_id": "permission",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-explicit",
+    "wording": "explicit",
+    "score": 0.2259204183993297,
+    "flag": false
+  },
+  {
+    "id": "authorization-permission-scope-0",
+    "group_id": "permission",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-scope",
+    "wording": "scope",
+    "score": 0.2259204183993297,
+    "flag": false
+  },
+  {
+    "id": "authorization-permission-scope-1",
+    "group_id": "permission",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-scope",
+    "wording": "scope",
+    "score": 0.2259204183993297,
+    "flag": false
+  },
+  {
+    "id": "mention-permission",
+    "group_id": "permission",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9061601713768397,
+    "flag": true
+  },
+  {
+    "id": "authorization-retention-explicit-0",
+    "group_id": "retention",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-explicit",
+    "wording": "explicit",
+    "score": 0.6254811676010054,
+    "flag": true
+  },
+  {
+    "id": "authorization-retention-explicit-1",
+    "group_id": "retention",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-explicit",
+    "wording": "explicit",
+    "score": 0.6254811676010054,
+    "flag": true
+  },
+  {
+    "id": "authorization-retention-scope-0",
+    "group_id": "retention",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-scope",
+    "wording": "scope",
+    "score": 0.6254811676010054,
+    "flag": true
+  },
+  {
+    "id": "authorization-retention-scope-1",
+    "group_id": "retention",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-scope",
+    "wording": "scope",
+    "score": 0.6254811676010054,
+    "flag": true
+  },
+  {
+    "id": "mention-retention",
+    "group_id": "retention",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9481134341182934,
+    "flag": true
+  },
+  {
+    "id": "authorization-dependency-explicit-0",
+    "group_id": "dependency",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-explicit",
+    "wording": "explicit",
+    "score": 0.4659094707214177,
+    "flag": false
+  },
+  {
+    "id": "authorization-dependency-explicit-1",
+    "group_id": "dependency",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-explicit",
+    "wording": "explicit",
+    "score": 0.4659094707214177,
+    "flag": false
+  },
+  {
+    "id": "authorization-dependency-scope-0",
+    "group_id": "dependency",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-scope",
+    "wording": "scope",
+    "score": 0.4659094707214177,
+    "flag": false
+  },
+  {
+    "id": "authorization-dependency-scope-1",
+    "group_id": "dependency",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-scope",
+    "wording": "scope",
+    "score": 0.4659094707214177,
+    "flag": false
+  },
+  {
+    "id": "mention-dependency",
+    "group_id": "dependency",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9401051064552023,
+    "flag": true
+  },
+  {
+    "id": "authorization-job-explicit-0",
+    "group_id": "job",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-explicit",
+    "wording": "explicit",
+    "score": 0.6914925356280013,
+    "flag": true
+  },
+  {
+    "id": "authorization-job-explicit-1",
+    "group_id": "job",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-explicit",
+    "wording": "explicit",
+    "score": 0.6914925356280013,
+    "flag": true
+  },
+  {
+    "id": "authorization-job-scope-0",
+    "group_id": "job",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-scope",
+    "wording": "scope",
+    "score": 0.6914925356280013,
+    "flag": true
+  },
+  {
+    "id": "authorization-job-scope-1",
+    "group_id": "job",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-scope",
+    "wording": "scope",
+    "score": 0.6914925356280013,
+    "flag": true
+  },
+  {
+    "id": "mention-job",
+    "group_id": "job",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9500815019211943,
+    "flag": true
+  },
+  {
+    "id": "authorization-branch-explicit-0",
+    "group_id": "branch",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-explicit",
+    "wording": "explicit",
+    "score": 0.6061663234754887,
+    "flag": true
+  },
+  {
+    "id": "authorization-branch-explicit-1",
+    "group_id": "branch",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-explicit",
+    "wording": "explicit",
+    "score": 0.6061663234754887,
+    "flag": true
+  },
+  {
+    "id": "authorization-branch-scope-0",
+    "group_id": "branch",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-scope",
+    "wording": "scope",
+    "score": 0.6061663234754887,
+    "flag": true
+  },
+  {
+    "id": "authorization-branch-scope-1",
+    "group_id": "branch",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-scope",
+    "wording": "scope",
+    "score": 0.6061663234754887,
+    "flag": true
+  },
+  {
+    "id": "mention-branch",
+    "group_id": "branch",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9638283809414232,
+    "flag": true
+  },
+  {
+    "id": "authorization-backup-explicit-0",
+    "group_id": "backup",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-explicit",
+    "wording": "explicit",
+    "score": 0.3056037103072481,
+    "flag": false
+  },
+  {
+    "id": "authorization-backup-explicit-1",
+    "group_id": "backup",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-explicit",
+    "wording": "explicit",
+    "score": 0.3056037103072481,
+    "flag": false
+  },
+  {
+    "id": "authorization-backup-scope-0",
+    "group_id": "backup",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-scope",
+    "wording": "scope",
+    "score": 0.3056037103072481,
+    "flag": false
+  },
+  {
+    "id": "authorization-backup-scope-1",
+    "group_id": "backup",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-scope",
+    "wording": "scope",
+    "score": 0.3056037103072481,
+    "flag": false
+  },
+  {
+    "id": "mention-backup",
+    "group_id": "backup",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.941378318627529,
+    "flag": true
+  },
+  {
+    "id": "authorization-notification-explicit-0",
+    "group_id": "notification",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-explicit",
+    "wording": "explicit",
+    "score": 0.638399776651565,
+    "flag": true
+  },
+  {
+    "id": "authorization-notification-explicit-1",
+    "group_id": "notification",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-explicit",
+    "wording": "explicit",
+    "score": 0.638399776651565,
+    "flag": true
+  },
+  {
+    "id": "authorization-notification-scope-0",
+    "group_id": "notification",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-scope",
+    "wording": "scope",
+    "score": 0.638399776651565,
+    "flag": true
+  },
+  {
+    "id": "authorization-notification-scope-1",
+    "group_id": "notification",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-scope",
+    "wording": "scope",
+    "score": 0.638399776651565,
+    "flag": true
+  },
+  {
+    "id": "mention-notification",
+    "group_id": "notification",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9018290903415862,
+    "flag": true
+  },
+  {
+    "id": "authorization-quota-explicit-0",
+    "group_id": "quota",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-explicit",
+    "wording": "explicit",
+    "score": 0.3665798401842402,
+    "flag": false
+  },
+  {
+    "id": "authorization-quota-explicit-1",
+    "group_id": "quota",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-explicit",
+    "wording": "explicit",
+    "score": 0.3665798401842402,
+    "flag": false
+  },
+  {
+    "id": "authorization-quota-scope-0",
+    "group_id": "quota",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-scope",
+    "wording": "scope",
+    "score": 0.3665798401842402,
+    "flag": false
+  },
+  {
+    "id": "authorization-quota-scope-1",
+    "group_id": "quota",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-scope",
+    "wording": "scope",
+    "score": 0.3665798401842402,
+    "flag": false
+  },
+  {
+    "id": "mention-quota",
+    "group_id": "quota",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9488259101192849,
+    "flag": true
+  },
+  {
+    "id": "authorization-schedule-explicit-0",
+    "group_id": "schedule",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-explicit",
+    "wording": "explicit",
+    "score": 0.44576179710288577,
+    "flag": false
+  },
+  {
+    "id": "authorization-schedule-explicit-1",
+    "group_id": "schedule",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-explicit",
+    "wording": "explicit",
+    "score": 0.44576179710288577,
+    "flag": false
+  },
+  {
+    "id": "authorization-schedule-scope-0",
+    "group_id": "schedule",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-scope",
+    "wording": "scope",
+    "score": 0.44576179710288577,
+    "flag": false
+  },
+  {
+    "id": "authorization-schedule-scope-1",
+    "group_id": "schedule",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-scope",
+    "wording": "scope",
+    "score": 0.44576179710288577,
+    "flag": false
+  },
+  {
+    "id": "mention-schedule",
+    "group_id": "schedule",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.9285104854751914,
+    "flag": true
+  },
+  {
+    "id": "authorization-rename-explicit-0",
+    "group_id": "rename",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-explicit",
+    "wording": "explicit",
+    "score": 0.7940519540432507,
+    "flag": true
+  },
+  {
+    "id": "authorization-rename-explicit-1",
+    "group_id": "rename",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-explicit",
+    "wording": "explicit",
+    "score": 0.7940519540432507,
+    "flag": true
+  },
+  {
+    "id": "authorization-rename-scope-0",
+    "group_id": "rename",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-scope",
+    "wording": "scope",
+    "score": 0.7940519540432507,
+    "flag": true
+  },
+  {
+    "id": "authorization-rename-scope-1",
+    "group_id": "rename",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-scope",
+    "wording": "scope",
+    "score": 0.7940519540432507,
+    "flag": true
+  },
+  {
+    "id": "mention-rename",
+    "group_id": "rename",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.960880336154331,
+    "flag": true
+  },
+  {
+    "id": "prereq-v1-01",
+    "group_id": "prereq-sandbox-auth",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.46333232527331025,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-02",
+    "group_id": "prereq-sandbox-auth",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.46333232527331025,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-03",
+    "group_id": "prereq-migration",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.4963645569985681,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-04",
+    "group_id": "prereq-migration",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.4963645569985681,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-05",
+    "group_id": "prereq-fixture-reset",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.4680744602389694,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-06",
+    "group_id": "prereq-fixture-reset",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.4680744602389694,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-07",
+    "group_id": "prereq-diagnostic-upload",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.42175947662430496,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-08",
+    "group_id": "prereq-diagnostic-upload",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.42175947662430496,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-09",
+    "group_id": "prereq-service-restart",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.28690065940973974,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-10",
+    "group_id": "prereq-service-restart",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.28690065940973974,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-11",
+    "group_id": "prereq-acceptance-test",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.3562259347118408,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-12",
+    "group_id": "prereq-acceptance-test",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.3562259347118408,
+    "flag": false
+  }
+]

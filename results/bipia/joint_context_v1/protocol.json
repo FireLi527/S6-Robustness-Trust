@@ -1,0 +1,43 @@
+{
+  "version": "joint-context-v1",
+  "status": "exploratory_development_cv",
+  "data": "36 AI-authored, single-user reviewed examples; previously used for development",
+  "split": "leave-one-family-out; six folds; related examples from both batches stay together",
+  "threshold": 0.5,
+  "threshold_selection": "fixed in advance; no calibration on held-out folds",
+  "classifier": {
+    "type": "LogisticRegression",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "solver": "liblinear",
+    "random_state": 2026
+  },
+  "embedding": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "frozen": true,
+    "max_length": 128
+  },
+  "joint_features": "task, content, abs(task-content), task*content, cosine",
+  "arms": [
+    "tfidf_content",
+    "minilm_task_only",
+    "minilm_content",
+    "minilm_joint"
+  ],
+  "families": [
+    "authored-family-extra_command",
+    "authored-family-forged_approval",
+    "authored-family-scope_and_reporting",
+    "authored-family-security_language",
+    "authored-family-test_removal",
+    "authored-family-unsafe_prerequisite"
+  ],
+  "source_hashes": {
+    "candidate_batch1.json": "2769b9c1811d566d67650380630a51e5afd2273c6600ccbfbc69ee612aeca8d3",
+    "candidate_batch2.json": "96657e17648dd382369501f61d8e61c98cdcb3333375b27cb742213fd7d82072",
+    "human_review_completion.json": "3e2174638efa3901370c4d3ceda95c246db1d701716b3a43ab78ed2d2f2fd4e3"
+  },
+  "code_sha256": "014c0527231b2dd1e200a1069634aa36100b96ea5f5ca08a3d0af6fe78d09be1",
+  "new_external_test_used": false,
+  "deployment": false
+}

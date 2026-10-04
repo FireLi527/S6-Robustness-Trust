@@ -1,0 +1,38 @@
+{
+  "code_sha256": "bad5056c16241d92e00ddba4f7c77d6bbd5ad983fa0f41d274cd3b77ed76a420",
+  "artifacts_sha256": {
+    "results\\bipia\\authorization_relation_v1\\calibration_coverage.json": "1d8b86beb343992ee4cd007986012d18e03259e274a1cf3df4d5112de1c1b4d3",
+    "results\\bipia\\authorization_relation_v1\\calibration_features.npz": "6e199c2dc5b396504ad8e731ac511eaf7b32fe61b09c0cde285c83cc0b621063",
+    "results\\bipia\\authorization_relation_v1\\calibration_predictions.json": "2cc15a88154d2a4c52e6193bd7c407315e25fe48d239a0314e310d81295935f0",
+    "results\\bipia\\authorization_relation_v1\\heads.json": "54fd79ba97bc5419a3217a8c4b0143a92af64a318885cc0471ab9b317a142994",
+    "results\\bipia\\authorization_relation_v1\\integrity.json": "58d4d004cf7fa7b829436eff3e602a818faec95ca646876ad03de415c09107a0",
+    "results\\bipia\\authorization_relation_v1\\previous240_coverage.json": "83f86b713a9e732e5639dc0907b98d863d0855bdf8a6ef9ae8aab3b88fb5bfde",
+    "results\\bipia\\authorization_relation_v1\\previous240_features.npz": "49e11782fc45a0d024b432d11a95a4f0076faf4b9eed22516af0670c6e4f5cf5",
+    "results\\bipia\\authorization_relation_v1\\previous240_predictions.json": "6b37418e2a166de985589df01e9328f0ae04dc6d8e6d75f322493a529ddbb348",
+    "results\\bipia\\authorization_relation_v1\\protocol.json": "de8abe15dfc7fb6c06e003aedee9b68ee134ea91141de341b9da1c2defe9c4d6",
+    "results\\bipia\\authorization_relation_v1\\reviewed60_coverage.json": "ebea49aa7df097a244090e71be2c3d2349a17c6fa9862be8101860fb016ed339",
+    "results\\bipia\\authorization_relation_v1\\reviewed60_features.npz": "b113796fb8fee49106c49ac9dc3b9a97167a0468dc32333f8561ed67c3cc0721",
+    "results\\bipia\\authorization_relation_v1\\reviewed60_predictions.json": "9d527e158ccc842d56a3b5b2978c6b186621e4dc811dea6ec15b0522fe86ed13",
+    "results\\bipia\\authorization_relation_v1\\seed_summary.json": "d50893634095f567b8725e74b112465c75223ba345c45f5b4164cd9b0cd6465f",
+    "results\\bipia\\authorization_relation_v1\\status.json": "c790d94c6ab53bf935213246b0f97ac0020463f7b8423d6450f851bec9f29184",
+    "results\\bipia\\authorization_relation_v1\\summary.json": "2bc46943bb6b5e3d3f3aa4da136b00923ddfb25ad8daa017443e397fc086161b",
+    "results\\bipia\\authorization_relation_v1\\test_coverage.json": "52ecdbfc1e7efd662c8c560b7b633d95291b48d06525d47f1317105bb03497b5",
+    "results\\bipia\\authorization_relation_v1\\test_features.npz": "7285a30951f9591de64b316c2e854d0b76b73bc7638df24fff91d81a5fa87262",
+    "results\\bipia\\authorization_relation_v1\\test_predictions.json": "732f0de37d2226bd486b264c26b446d3707d675e52619a964ed1cc42b917cabe",
+    "results\\bipia\\authorization_relation_v1\\train_coverage.json": "f386ccb10e6b4f93e060f51cf5940670684a4571b32f31c92caf31db7a1e2cfc",
+    "results\\bipia\\authorization_relation_v1\\train_features.npz": "f87846849fa348b73f8798e6ad00f27af18cdf548563b490f3589d81e4c49342",
+    "results\\bipia\\authorization_relation_v1\\train_predictions.json": "0c45d0157c0c87bf33afa611e2aef2639ed1741a444901b0dcb3546f5fc38f9b"
+  },
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "authorization-archive-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-archive-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-archive-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-archive-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-archive",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-publish-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-publish-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-publish-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-publish-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-publish",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-permission-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-permission-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-permission-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-permission-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-permission",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-retention-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-retention-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-retention-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-retention-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-retention",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-dependency-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-dependency-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-dependency-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-dependency-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-dependency",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-job-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-job-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-job-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-job-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-job",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-branch-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-branch-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-branch-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-branch-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-branch",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-backup-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-backup-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-backup-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-backup-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-backup",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-notification-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-notification-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-notification-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-notification-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-notification",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-quota-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-quota-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-quota-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-quota-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-quota",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-schedule-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-schedule-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-schedule-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-schedule-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-schedule",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-rename-explicit-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-rename-explicit-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-rename-scope-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "authorization-rename-scope-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "mention-rename",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  }
+]

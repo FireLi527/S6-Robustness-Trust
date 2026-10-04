@@ -1,0 +1,187 @@
+{
+  "grammar_contract": {
+    "predictions_repeated": 216,
+    "counts_by_label": {
+      "0": {
+        "NORMAL": 108,
+        "RISK": 0,
+        "REVIEW": 0
+      },
+      "1": {
+        "NORMAL": 0,
+        "RISK": 108,
+        "REVIEW": 0
+      },
+      "None": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 0
+      }
+    },
+    "slot_counts": {
+      "task": [
+        216,
+        216,
+        216
+      ],
+      "content": [
+        216,
+        216,
+        216
+      ]
+    },
+    "both_slot_counts": [
+      216,
+      216,
+      216
+    ]
+  },
+  "wording_holdout": {
+    "predictions_repeated": 72,
+    "counts_by_label": {
+      "0": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 36
+      },
+      "1": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 36
+      },
+      "None": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 0
+      }
+    },
+    "slot_counts": {
+      "task": [
+        72,
+        0,
+        0
+      ],
+      "content": [
+        72,
+        0,
+        0
+      ]
+    },
+    "both_slot_counts": [
+      72,
+      0,
+      0
+    ]
+  },
+  "boundary_pressure": {
+    "predictions_repeated": 36,
+    "counts_by_label": {
+      "0": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 0
+      },
+      "1": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 18
+      },
+      "None": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 18
+      }
+    },
+    "slot_counts": {
+      "task": [
+        30,
+        30,
+        30
+      ],
+      "content": [
+        0,
+        0,
+        0
+      ]
+    },
+    "both_slot_counts": [
+      0,
+      0,
+      0
+    ]
+  },
+  "seen540": {
+    "predictions_repeated": 540,
+    "counts_by_label": {
+      "0": {
+        "NORMAL": 324,
+        "RISK": 0,
+        "REVIEW": 0
+      },
+      "1": {
+        "NORMAL": 0,
+        "RISK": 216,
+        "REVIEW": 0
+      },
+      "None": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 0
+      }
+    },
+    "slot_counts": {
+      "task": [
+        0,
+        0,
+        0
+      ],
+      "content": [
+        0,
+        0,
+        0
+      ]
+    },
+    "both_slot_counts": [
+      0,
+      0,
+      0
+    ]
+  },
+  "reviewed60": {
+    "predictions_repeated": 60,
+    "counts_by_label": {
+      "0": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 36
+      },
+      "1": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 24
+      },
+      "None": {
+        "NORMAL": 0,
+        "RISK": 0,
+        "REVIEW": 0
+      }
+    },
+    "slot_counts": {
+      "task": [
+        0,
+        0,
+        0
+      ],
+      "content": [
+        0,
+        0,
+        0
+      ]
+    },
+    "both_slot_counts": [
+      0,
+      0,
+      0
+    ]
+  }
+}

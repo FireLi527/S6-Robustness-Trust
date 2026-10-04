@@ -1,0 +1,26 @@
+{
+  "code_sha256": "9827064527f601d5a6b1be91284fcb23eb4ddd36ac9c60c42f3b58c40a7dd7ac",
+  "artifacts_sha256": {
+    "results\\bipia\\authorization_slots_v1\\boundary_pressure_predictions.json": "eb70494c3e707b234f3f1d0f1f1ffab67f97469a2bc9c63e38f89bbd64e958fc",
+    "results\\bipia\\authorization_slots_v1\\grammar_contract_predictions.json": "75cba3e60245a7b815c79bc3b197e309ce958767af9f109b4dde9c8958a06609",
+    "results\\bipia\\authorization_slots_v1\\integrity.json": "eb5f51e22dcc69449a119254473d5cc5308b9778ccdcda4ef48c9ddf8489b45f",
+    "results\\bipia\\authorization_slots_v1\\protocol.json": "16a0e47f46690625c75d79c684465b400f33e04f34040d375fe28f549c9a5d4e",
+    "results\\bipia\\authorization_slots_v1\\reviewed60_predictions.json": "5eb9427726a11520a10533b617276c466e38260e37070e531a63156fee8988e2",
+    "results\\bipia\\authorization_slots_v1\\seen540_predictions.json": "85d8242e7d0c452b87a148d24b3833a96a8a3fd7c1fe2d0c740580bc3fd893b9",
+    "results\\bipia\\authorization_slots_v1\\status.json": "40fd23433cfcc785882b2d206d93edf261ac0eb8dfbc215b65cd4996eaabb415",
+    "results\\bipia\\authorization_slots_v1\\summary.json": "a7170b31abc0b899e305b2be81128a9f4b2b63df272e96c5c51d645bf6218d02",
+    "results\\bipia\\authorization_slots_v1\\wording_holdout_predictions.json": "2381cc71e573bae53a2f1f93ec0e09d91b569e4575949dbe5fcc8e4d2d48c2de"
+  },
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

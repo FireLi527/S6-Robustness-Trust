@@ -1,0 +1,252 @@
+{
+  "train": {
+    "bce": {
+      "accuracy": {
+        "mean": 0.6,
+        "sample_sd": 0.0
+      },
+      "recall": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      },
+      "fpr": {
+        "mean": 0.6666666666666666,
+        "sample_sd": 0.0
+      },
+      "both_correct": [
+        0,
+        0,
+        0
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    },
+    "paired": {
+      "accuracy": {
+        "mean": 0.6638888888888889,
+        "sample_sd": 0.06254627916220945
+      },
+      "recall": {
+        "mean": 0.5104166666666666,
+        "sample_sd": 0.44451225611149725
+      },
+      "fpr": {
+        "mean": 0.23379629629629628,
+        "sample_sd": 0.2176541481095649
+      },
+      "both_correct": [
+        24,
+        0,
+        31
+      ],
+      "quartets_correct": [
+        4,
+        0,
+        3
+      ]
+    }
+  },
+  "calibration": {
+    "bce": {
+      "accuracy": {
+        "mean": 0.6027777777777777,
+        "sample_sd": 0.004811252243246865
+      },
+      "recall": {
+        "mean": 0.0625,
+        "sample_sd": 0.0
+      },
+      "fpr": {
+        "mean": 0.037037037037037035,
+        "sample_sd": 0.008018753738744801
+      },
+      "both_correct": [
+        1,
+        1,
+        1
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    },
+    "paired": {
+      "accuracy": {
+        "mean": 0.625,
+        "sample_sd": 0.008333333333333304
+      },
+      "recall": {
+        "mean": 0.11805555555555557,
+        "sample_sd": 0.0120281306081172
+      },
+      "fpr": {
+        "mean": 0.037037037037037035,
+        "sample_sd": 0.008018753738744801
+      },
+      "both_correct": [
+        4,
+        2,
+        3
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "test": {
+    "bce": {
+      "accuracy": {
+        "mean": 0.6018518518518517,
+        "sample_sd": 0.00320750149549791
+      },
+      "recall": {
+        "mean": 0.1388888888888889,
+        "sample_sd": 0.0
+      },
+      "fpr": {
+        "mean": 0.08950617283950617,
+        "sample_sd": 0.005345835825829868
+      },
+      "both_correct": [
+        2,
+        3,
+        2
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    },
+    "paired": {
+      "accuracy": {
+        "mean": 0.6185185185185186,
+        "sample_sd": 0.006415002990995819
+      },
+      "recall": {
+        "mean": 0.4351851851851852,
+        "sample_sd": 0.008018753738744774
+      },
+      "fpr": {
+        "mean": 0.2592592592592593,
+        "sample_sd": 0.009259259259259273
+      },
+      "both_correct": [
+        5,
+        6,
+        5
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "previous240": {
+    "bce": {
+      "accuracy": {
+        "mean": 0.5875,
+        "sample_sd": 0.0
+      },
+      "recall": {
+        "mean": 0.010416666666666666,
+        "sample_sd": 0.0
+      },
+      "fpr": {
+        "mean": 0.027777777777777776,
+        "sample_sd": 0.0
+      },
+      "both_correct": [
+        0,
+        0,
+        0
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    },
+    "paired": {
+      "accuracy": {
+        "mean": 0.6055555555555555,
+        "sample_sd": 0.0024056261216234324
+      },
+      "recall": {
+        "mean": 0.04513888888888889,
+        "sample_sd": 0.0060140653040586045
+      },
+      "fpr": {
+        "mean": 0.020833333333333332,
+        "sample_sd": 0.0
+      },
+      "both_correct": [
+        1,
+        2,
+        1
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "reviewed60": {
+    "bce": {
+      "accuracy": {
+        "mean": 0.5944444444444444,
+        "sample_sd": 0.00962250448649373
+      },
+      "recall": {
+        "mean": 0.0,
+        "sample_sd": 0.0
+      },
+      "fpr": {
+        "mean": 0.009259259259259259,
+        "sample_sd": 0.016037507477489603
+      },
+      "both_correct": [
+        0,
+        0,
+        0
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    },
+    "paired": {
+      "accuracy": {
+        "mean": 0.6444444444444444,
+        "sample_sd": 0.009622504486493794
+      },
+      "recall": {
+        "mean": 0.18055555555555555,
+        "sample_sd": 0.024056261216234418
+      },
+      "fpr": {
+        "mean": 0.0462962962962963,
+        "sample_sd": 0.016037507477489603
+      },
+      "both_correct": [
+        2,
+        3,
+        3
+      ],
+      "quartets_correct": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

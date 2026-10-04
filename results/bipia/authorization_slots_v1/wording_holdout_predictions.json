@@ -1,0 +1,578 @@
+[
+  {
+    "id": "slots-wording_holdout-0-unseen-0-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-0-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-0-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-0-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-0-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-0-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-1-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-1-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-1-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-1-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-1-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-0-unseen-1-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-0-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-0-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-0-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-0-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-0-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-0-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-1-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-1-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-1-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-1-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-1-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-1-unseen-1-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-0-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-0-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-0-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-0-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-0-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-0-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-1-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-1-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-1-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-1-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-1-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-2-unseen-1-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-0-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-0-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-0-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-0-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-0-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-0-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-1-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-1-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-1-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-1-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-1-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-3-unseen-1-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-0-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-0-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-0-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-0-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-0-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-0-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-1-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-1-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-1-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-1-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-1-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-4-unseen-1-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-0-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-0-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-0-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-0-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-0-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-0-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-1-0-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-1-0-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-1-1-0",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-1-1-1",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-1-quote",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  },
+  {
+    "id": "slots-wording_holdout-5-unseen-1-live",
+    "decision": "REVIEW",
+    "reason": "unsupported_or_ambiguous_text",
+    "task_slots": null,
+    "content_slots": null,
+    "tool_authorization": "not_granted"
+  }
+]

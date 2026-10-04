@@ -1,0 +1,2594 @@
+[
+  {
+    "id": "authorization-archive-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 53,
+    "covered_tokens_with_special": 53,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.04025646299123764,
+      0.0003250595473218709,
+      0.9594184160232544
+    ]
+  },
+  {
+    "id": "authorization-archive-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0001689785858616233,
+      0.6730234026908875,
+      0.3268076777458191
+    ]
+  },
+  {
+    "id": "authorization-archive-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0013070603599771857,
+      0.026766283437609673,
+      0.9719266891479492
+    ]
+  },
+  {
+    "id": "authorization-archive-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003658389439806342,
+      0.0006065819761715829,
+      0.9957350492477417
+    ]
+  },
+  {
+    "id": "mention-archive",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 67,
+    "covered_tokens_with_special": 67,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00019895355217158794,
+      0.9740914702415466,
+      0.025709595531225204
+    ]
+  },
+  {
+    "id": "authorization-publish-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 57,
+    "covered_tokens_with_special": 57,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.9115507006645203,
+      0.00023245358897838742,
+      0.0882168859243393
+    ]
+  },
+  {
+    "id": "authorization-publish-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0001764877961250022,
+      0.9093239307403564,
+      0.09049952030181885
+    ]
+  },
+  {
+    "id": "authorization-publish-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 62,
+    "covered_tokens_with_special": 62,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003953775856643915,
+      0.2841047942638397,
+      0.7119414210319519
+    ]
+  },
+  {
+    "id": "authorization-publish-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 62,
+    "covered_tokens_with_special": 62,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.009255493059754372,
+      0.0006840096320956945,
+      0.9900604486465454
+    ]
+  },
+  {
+    "id": "mention-publish",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 69,
+    "covered_tokens_with_special": 69,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0001943661627592519,
+      0.9725573658943176,
+      0.027248263359069824
+    ]
+  },
+  {
+    "id": "authorization-permission-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 59,
+    "covered_tokens_with_special": 59,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.132613405585289,
+      0.00037927183439023793,
+      0.867007315158844
+    ]
+  },
+  {
+    "id": "authorization-permission-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 62,
+    "covered_tokens_with_special": 62,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00018042500596493483,
+      0.7870092391967773,
+      0.21281030774116516
+    ]
+  },
+  {
+    "id": "authorization-permission-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 64,
+    "covered_tokens_with_special": 64,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.002079986734315753,
+      0.23077882826328278,
+      0.7671412229537964
+    ]
+  },
+  {
+    "id": "authorization-permission-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 64,
+    "covered_tokens_with_special": 64,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005860398057848215,
+      0.0005931067280471325,
+      0.9935464262962341
+    ]
+  },
+  {
+    "id": "mention-permission",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 70,
+    "covered_tokens_with_special": 70,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00029082834953442216,
+      0.9769777059555054,
+      0.0227314792573452
+    ]
+  },
+  {
+    "id": "authorization-retention-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 57,
+    "covered_tokens_with_special": 57,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.012619218789041042,
+      0.00043928175000473857,
+      0.9869415163993835
+    ]
+  },
+  {
+    "id": "authorization-retention-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00011309685214655474,
+      0.9279718995094299,
+      0.07191500067710876
+    ]
+  },
+  {
+    "id": "authorization-retention-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 62,
+    "covered_tokens_with_special": 62,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.004322505090385675,
+      0.25878459215164185,
+      0.7368929386138916
+    ]
+  },
+  {
+    "id": "authorization-retention-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 62,
+    "covered_tokens_with_special": 62,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0028911943081766367,
+      0.0011537852697074413,
+      0.9959549903869629
+    ]
+  },
+  {
+    "id": "mention-retention",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 69,
+    "covered_tokens_with_special": 69,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00032033189199864864,
+      0.9683917164802551,
+      0.031287964433431625
+    ]
+  },
+  {
+    "id": "authorization-dependency-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 53,
+    "covered_tokens_with_special": 53,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.013309921137988567,
+      0.0003655260952655226,
+      0.9863244891166687
+    ]
+  },
+  {
+    "id": "authorization-dependency-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00021808737074024975,
+      0.8294013142585754,
+      0.1703805774450302
+    ]
+  },
+  {
+    "id": "authorization-dependency-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0012517310678958893,
+      0.0161298681050539,
+      0.9826183319091797
+    ]
+  },
+  {
+    "id": "authorization-dependency-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.002941967686638236,
+      0.0008358489139936864,
+      0.9962221384048462
+    ]
+  },
+  {
+    "id": "mention-dependency",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 67,
+    "covered_tokens_with_special": 67,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0002494772197678685,
+      0.9698153734207153,
+      0.029935132712125778
+    ]
+  },
+  {
+    "id": "authorization-job-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 51,
+    "covered_tokens_with_special": 51,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001623986172489822,
+      0.0012941374443471432,
+      0.9970818161964417
+    ]
+  },
+  {
+    "id": "authorization-job-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 54,
+    "covered_tokens_with_special": 54,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00018810464825946838,
+      0.7093693614006042,
+      0.290442556142807
+    ]
+  },
+  {
+    "id": "authorization-job-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001281651551835239,
+      0.1587832123041153,
+      0.8399350643157959
+    ]
+  },
+  {
+    "id": "authorization-job-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00042775619658641517,
+      0.004049450624734163,
+      0.9955228567123413
+    ]
+  },
+  {
+    "id": "mention-job",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 66,
+    "covered_tokens_with_special": 66,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00029880483634769917,
+      0.9618803858757019,
+      0.037820808589458466
+    ]
+  },
+  {
+    "id": "authorization-branch-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 55,
+    "covered_tokens_with_special": 55,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.5310541987419128,
+      0.0005132913356646895,
+      0.4684324860572815
+    ]
+  },
+  {
+    "id": "authorization-branch-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00028833674150519073,
+      0.9436700940132141,
+      0.056041549891233444
+    ]
+  },
+  {
+    "id": "authorization-branch-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005493930075317621,
+      0.5412031412124634,
+      0.45330289006233215
+    ]
+  },
+  {
+    "id": "authorization-branch-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.007910270243883133,
+      0.001078433939255774,
+      0.9910112619400024
+    ]
+  },
+  {
+    "id": "mention-branch",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 68,
+    "covered_tokens_with_special": 68,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0003459130530245602,
+      0.9619085192680359,
+      0.03774557262659073
+    ]
+  },
+  {
+    "id": "authorization-backup-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 55,
+    "covered_tokens_with_special": 55,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.17176932096481323,
+      0.0003531631955411285,
+      0.8278775215148926
+    ]
+  },
+  {
+    "id": "authorization-backup-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00014871559687890112,
+      0.8609898090362549,
+      0.1388614922761917
+    ]
+  },
+  {
+    "id": "authorization-backup-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003358778776600957,
+      0.06535433232784271,
+      0.9312869310379028
+    ]
+  },
+  {
+    "id": "authorization-backup-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005614352412521839,
+      0.0006399686681106687,
+      0.9937456846237183
+    ]
+  },
+  {
+    "id": "mention-backup",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 68,
+    "covered_tokens_with_special": 68,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00022580556105822325,
+      0.9596142172813416,
+      0.040159907191991806
+    ]
+  },
+  {
+    "id": "authorization-notification-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 59,
+    "covered_tokens_with_special": 59,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.2551150918006897,
+      0.0003415726241655648,
+      0.7445433139801025
+    ]
+  },
+  {
+    "id": "authorization-notification-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 62,
+    "covered_tokens_with_special": 62,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00021975499112159014,
+      0.6639967560768127,
+      0.33578360080718994
+    ]
+  },
+  {
+    "id": "authorization-notification-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 64,
+    "covered_tokens_with_special": 64,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0010591759346425533,
+      0.19429977238178253,
+      0.8046410083770752
+    ]
+  },
+  {
+    "id": "authorization-notification-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 64,
+    "covered_tokens_with_special": 64,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0053449030965566635,
+      0.0005779830389656126,
+      0.9940770864486694
+    ]
+  },
+  {
+    "id": "mention-notification",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 70,
+    "covered_tokens_with_special": 70,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0002553054073359817,
+      0.9777392745018005,
+      0.022005511447787285
+    ]
+  },
+  {
+    "id": "authorization-quota-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 55,
+    "covered_tokens_with_special": 55,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.021013133227825165,
+      0.000522205897141248,
+      0.9784646034240723
+    ]
+  },
+  {
+    "id": "authorization-quota-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00011152007209602743,
+      0.9426518678665161,
+      0.057236675173044205
+    ]
+  },
+  {
+    "id": "authorization-quota-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001997679937630892,
+      0.05603664368391037,
+      0.9419657588005066
+    ]
+  },
+  {
+    "id": "authorization-quota-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 60,
+    "covered_tokens_with_special": 60,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003765798406675458,
+      0.001333481166511774,
+      0.9949007034301758
+    ]
+  },
+  {
+    "id": "mention-quota",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 68,
+    "covered_tokens_with_special": 68,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00026198578416369855,
+      0.9774162173271179,
+      0.02232191525399685
+    ]
+  },
+  {
+    "id": "authorization-schedule-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 51,
+    "covered_tokens_with_special": 51,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.007331125438213348,
+      0.00031060638139024377,
+      0.9923582673072815
+    ]
+  },
+  {
+    "id": "authorization-schedule-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 54,
+    "covered_tokens_with_special": 54,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00016456766752526164,
+      0.7776956558227539,
+      0.22213973104953766
+    ]
+  },
+  {
+    "id": "authorization-schedule-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0006756825023330748,
+      0.06739043444395065,
+      0.9319338798522949
+    ]
+  },
+  {
+    "id": "authorization-schedule-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.002249111421406269,
+      0.0007528975838795304,
+      0.9969979524612427
+    ]
+  },
+  {
+    "id": "mention-schedule",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 67,
+    "covered_tokens_with_special": 67,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.000265150738414377,
+      0.9696051478385925,
+      0.030129659920930862
+    ]
+  },
+  {
+    "id": "authorization-rename-explicit-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 53,
+    "covered_tokens_with_special": 53,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.020187916234135628,
+      0.0002885130816139281,
+      0.9795235991477966
+    ]
+  },
+  {
+    "id": "authorization-rename-explicit-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00011490021279314533,
+      0.6319630146026611,
+      0.3679221272468567
+    ]
+  },
+  {
+    "id": "authorization-rename-scope-0",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.002314220881089568,
+      0.027377398684620857,
+      0.9703083634376526
+    ]
+  },
+  {
+    "id": "authorization-rename-scope-1",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 58,
+    "covered_tokens_with_special": 58,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0029124075081199408,
+      0.0006314102793112397,
+      0.9964562058448792
+    ]
+  },
+  {
+    "id": "mention-rename",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 68,
+    "covered_tokens_with_special": 68,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0003021458978764713,
+      0.971359133720398,
+      0.028338739648461342
+    ]
+  },
+  {
+    "id": "prereq-v1-01",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 94,
+    "covered_tokens_with_special": 94,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0030180062167346478,
+      0.0028348243795335293,
+      0.9941471815109253
+    ]
+  },
+  {
+    "id": "prereq-v1-02",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 84,
+    "covered_tokens_with_special": 84,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.004960144869983196,
+      0.0003482312604319304,
+      0.9946915507316589
+    ]
+  },
+  {
+    "id": "prereq-v1-03",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 78,
+    "covered_tokens_with_special": 78,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0006137755117379129,
+      0.0012614885345101357,
+      0.9981247782707214
+    ]
+  },
+  {
+    "id": "prereq-v1-04",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 87,
+    "covered_tokens_with_special": 87,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0033882514107972383,
+      0.00039207926602102816,
+      0.9962196946144104
+    ]
+  },
+  {
+    "id": "prereq-v1-05",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 88,
+    "covered_tokens_with_special": 88,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.015976332128047943,
+      0.0002754052693489939,
+      0.983748197555542
+    ]
+  },
+  {
+    "id": "prereq-v1-06",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 81,
+    "covered_tokens_with_special": 81,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0079950001090765,
+      0.00018106131756212562,
+      0.9918239712715149
+    ]
+  },
+  {
+    "id": "prereq-v1-07",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 85,
+    "covered_tokens_with_special": 85,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0038046601694077253,
+      0.00042379231308586895,
+      0.995771586894989
+    ]
+  },
+  {
+    "id": "prereq-v1-08",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 111,
+    "covered_tokens_with_special": 111,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.030049702152609825,
+      0.0009538120357319713,
+      0.9689964652061462
+    ]
+  },
+  {
+    "id": "prereq-v1-09",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 77,
+    "covered_tokens_with_special": 77,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0017441653180867434,
+      0.0015051153022795916,
+      0.9967507123947144
+    ]
+  },
+  {
+    "id": "prereq-v1-10",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 70,
+    "covered_tokens_with_special": 70,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003277391428127885,
+      0.00011624292528722435,
+      0.9966063499450684
+    ]
+  },
+  {
+    "id": "prereq-v1-11",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 89,
+    "covered_tokens_with_special": 89,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.13044320046901703,
+      0.0035323749762028456,
+      0.8660244345664978
+    ]
+  },
+  {
+    "id": "prereq-v1-12",
+    "mode": "conflict_hypothesis",
+    "input_tokens_with_special": 94,
+    "covered_tokens_with_special": 94,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.16917425394058228,
+      0.004262428730726242,
+      0.8265633583068848
+    ]
+  },
+  {
+    "id": "authorization-archive-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00041501151281408966,
+      0.9928204417228699,
+      0.006764470133930445
+    ]
+  },
+  {
+    "id": "authorization-archive-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 34,
+    "covered_tokens_with_special": 34,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.9852895140647888,
+      0.0017326191300526261,
+      0.012977881357073784
+    ]
+  },
+  {
+    "id": "authorization-archive-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0005647176294587553,
+      0.987936794757843,
+      0.011498535051941872
+    ]
+  },
+  {
+    "id": "authorization-archive-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.03619462624192238,
+      0.7271808981895447,
+      0.23662446439266205
+    ]
+  },
+  {
+    "id": "mention-archive",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 45,
+    "covered_tokens_with_special": 45,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.004494918044656515,
+      0.6073298454284668,
+      0.38817524909973145
+    ]
+  },
+  {
+    "id": "authorization-publish-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 35,
+    "covered_tokens_with_special": 35,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0029559729155153036,
+      0.9610071182250977,
+      0.03603685647249222
+    ]
+  },
+  {
+    "id": "authorization-publish-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.411293625831604,
+      0.0036906118039041758,
+      0.5850157141685486
+    ]
+  },
+  {
+    "id": "authorization-publish-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 40,
+    "covered_tokens_with_special": 40,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0003270110464654863,
+      0.9846559762954712,
+      0.015017038211226463
+    ]
+  },
+  {
+    "id": "authorization-publish-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 40,
+    "covered_tokens_with_special": 40,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.02459981106221676,
+      0.03556519374251366,
+      0.9398349523544312
+    ]
+  },
+  {
+    "id": "mention-publish",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 47,
+    "covered_tokens_with_special": 47,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0031942531932145357,
+      0.21950319409370422,
+      0.7773025631904602
+    ]
+  },
+  {
+    "id": "authorization-permission-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 37,
+    "covered_tokens_with_special": 37,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00043402743176557124,
+      0.9846712946891785,
+      0.014894567430019379
+    ]
+  },
+  {
+    "id": "authorization-permission-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 40,
+    "covered_tokens_with_special": 40,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.05197301134467125,
+      0.003124138107523322,
+      0.944902777671814
+    ]
+  },
+  {
+    "id": "authorization-permission-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 42,
+    "covered_tokens_with_special": 42,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.000642484228592366,
+      0.9566225409507751,
+      0.04273498058319092
+    ]
+  },
+  {
+    "id": "authorization-permission-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 42,
+    "covered_tokens_with_special": 42,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.017412200570106506,
+      0.10539580136537552,
+      0.877191960811615
+    ]
+  },
+  {
+    "id": "mention-permission",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 48,
+    "covered_tokens_with_special": 48,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0031109109986573458,
+      0.8361800312995911,
+      0.16070903837680817
+    ]
+  },
+  {
+    "id": "authorization-retention-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 35,
+    "covered_tokens_with_special": 35,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0004566251009237021,
+      0.9947497248649597,
+      0.004793611820787191
+    ]
+  },
+  {
+    "id": "authorization-retention-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.989809513092041,
+      0.0011827672133222222,
+      0.009007720276713371
+    ]
+  },
+  {
+    "id": "authorization-retention-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 40,
+    "covered_tokens_with_special": 40,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007206290611065924,
+      0.9909709692001343,
+      0.008308462798595428
+    ]
+  },
+  {
+    "id": "authorization-retention-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 40,
+    "covered_tokens_with_special": 40,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.02998935990035534,
+      0.7476512789726257,
+      0.2223593145608902
+    ]
+  },
+  {
+    "id": "mention-retention",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 47,
+    "covered_tokens_with_special": 47,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.006333527155220509,
+      0.6494958400726318,
+      0.34417060017585754
+    ]
+  },
+  {
+    "id": "authorization-dependency-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0002870603639166802,
+      0.992784857749939,
+      0.006927999202162027
+    ]
+  },
+  {
+    "id": "authorization-dependency-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 34,
+    "covered_tokens_with_special": 34,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.5467106103897095,
+      0.02753184176981449,
+      0.4257575273513794
+    ]
+  },
+  {
+    "id": "authorization-dependency-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0004289821663405746,
+      0.9851542115211487,
+      0.014416809193789959
+    ]
+  },
+  {
+    "id": "authorization-dependency-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.006542520597577095,
+      0.8825730681419373,
+      0.1108844205737114
+    ]
+  },
+  {
+    "id": "mention-dependency",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 45,
+    "covered_tokens_with_special": 45,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003384570125490427,
+      0.1295686960220337,
+      0.8670467734336853
+    ]
+  },
+  {
+    "id": "authorization-job-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0009407348115928471,
+      0.9655032753944397,
+      0.03355610743165016
+    ]
+  },
+  {
+    "id": "authorization-job-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.02055284194648266,
+      0.004403524566441774,
+      0.9750435948371887
+    ]
+  },
+  {
+    "id": "authorization-job-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 34,
+    "covered_tokens_with_special": 34,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0021889915224164724,
+      0.9828940033912659,
+      0.014917085878551006
+    ]
+  },
+  {
+    "id": "authorization-job-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 34,
+    "covered_tokens_with_special": 34,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.04186926782131195,
+      0.14096185564994812,
+      0.8171688914299011
+    ]
+  },
+  {
+    "id": "mention-job",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 44,
+    "covered_tokens_with_special": 44,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.002624544547870755,
+      0.05032138526439667,
+      0.9470540285110474
+    ]
+  },
+  {
+    "id": "authorization-branch-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0005543468287214637,
+      0.9884012937545776,
+      0.011044382117688656
+    ]
+  },
+  {
+    "id": "authorization-branch-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.16231301426887512,
+      0.008103069849312305,
+      0.8295838832855225
+    ]
+  },
+  {
+    "id": "authorization-branch-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0006860232097096741,
+      0.9881463050842285,
+      0.011167619377374649
+    ]
+  },
+  {
+    "id": "authorization-branch-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.020538339391350746,
+      0.047926343977451324,
+      0.9315353631973267
+    ]
+  },
+  {
+    "id": "mention-branch",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 46,
+    "covered_tokens_with_special": 46,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0024790724273771048,
+      0.09294450283050537,
+      0.9045764803886414
+    ]
+  },
+  {
+    "id": "authorization-backup-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001664646784774959,
+      0.9552032351493835,
+      0.04313209652900696
+    ]
+  },
+  {
+    "id": "authorization-backup-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.02521873451769352,
+      0.004741794895380735,
+      0.970039427280426
+    ]
+  },
+  {
+    "id": "authorization-backup-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0019906973466277122,
+      0.9336068630218506,
+      0.06440243870019913
+    ]
+  },
+  {
+    "id": "authorization-backup-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005959118716418743,
+      0.008788316510617733,
+      0.9852525591850281
+    ]
+  },
+  {
+    "id": "mention-backup",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 46,
+    "covered_tokens_with_special": 46,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0021200692281126976,
+      0.0468292236328125,
+      0.9510507583618164
+    ]
+  },
+  {
+    "id": "authorization-notification-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 37,
+    "covered_tokens_with_special": 37,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0010136899072676897,
+      0.9400153756141663,
+      0.05897093936800957
+    ]
+  },
+  {
+    "id": "authorization-notification-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 40,
+    "covered_tokens_with_special": 40,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.27698302268981934,
+      0.0037841959856450558,
+      0.7192327976226807
+    ]
+  },
+  {
+    "id": "authorization-notification-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 42,
+    "covered_tokens_with_special": 42,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0003093250561505556,
+      0.9749436378479004,
+      0.024747109040617943
+    ]
+  },
+  {
+    "id": "authorization-notification-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 42,
+    "covered_tokens_with_special": 42,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005792748648673296,
+      0.018133495002985,
+      0.9760737419128418
+    ]
+  },
+  {
+    "id": "mention-notification",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 48,
+    "covered_tokens_with_special": 48,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0044288854114711285,
+      0.22974058985710144,
+      0.7658305168151855
+    ]
+  },
+  {
+    "id": "authorization-quota-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00020682306785602123,
+      0.9948458671569824,
+      0.004947326611727476
+    ]
+  },
+  {
+    "id": "authorization-quota-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.9634451270103455,
+      0.0035354276187717915,
+      0.03301941603422165
+    ]
+  },
+  {
+    "id": "authorization-quota-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007789806113578379,
+      0.9891008734703064,
+      0.010120122693479061
+    ]
+  },
+  {
+    "id": "authorization-quota-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 38,
+    "covered_tokens_with_special": 38,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.01799745485186577,
+      0.779805064201355,
+      0.20219749212265015
+    ]
+  },
+  {
+    "id": "mention-quota",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 46,
+    "covered_tokens_with_special": 46,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005808154586702585,
+      0.27564266324043274,
+      0.7185491919517517
+    ]
+  },
+  {
+    "id": "authorization-schedule-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00040291232289746404,
+      0.9867640137672424,
+      0.01283313985913992
+    ]
+  },
+  {
+    "id": "authorization-schedule-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.8279881477355957,
+      0.0038381742779165506,
+      0.1681736409664154
+    ]
+  },
+  {
+    "id": "authorization-schedule-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 34,
+    "covered_tokens_with_special": 34,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0009714319021441042,
+      0.9867171049118042,
+      0.012311423197388649
+    ]
+  },
+  {
+    "id": "authorization-schedule-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 34,
+    "covered_tokens_with_special": 34,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.006560283247381449,
+      0.9344080686569214,
+      0.05903159826993942
+    ]
+  },
+  {
+    "id": "mention-schedule",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 45,
+    "covered_tokens_with_special": 45,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005367698613554239,
+      0.09872445464134216,
+      0.8959078192710876
+    ]
+  },
+  {
+    "id": "authorization-rename-explicit-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007094875327311456,
+      0.9804716110229492,
+      0.01881897635757923
+    ]
+  },
+  {
+    "id": "authorization-rename-explicit-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 34,
+    "covered_tokens_with_special": 34,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.03417448699474335,
+      0.002270674565806985,
+      0.9635547995567322
+    ]
+  },
+  {
+    "id": "authorization-rename-scope-0",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.004855778068304062,
+      0.5905721187591553,
+      0.40457209944725037
+    ]
+  },
+  {
+    "id": "authorization-rename-scope-1",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 36,
+    "covered_tokens_with_special": 36,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.013156184926629066,
+      0.039327867329120636,
+      0.9475159645080566
+    ]
+  },
+  {
+    "id": "mention-rename",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 46,
+    "covered_tokens_with_special": 46,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.006162984296679497,
+      0.1487605720758438,
+      0.8450764417648315
+    ]
+  },
+  {
+    "id": "prereq-v1-01",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 72,
+    "covered_tokens_with_special": 72,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0021733937319368124,
+      0.9892048835754395,
+      0.00862162746489048
+    ]
+  },
+  {
+    "id": "prereq-v1-02",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 62,
+    "covered_tokens_with_special": 62,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.44620591402053833,
+      0.0006049140938557684,
+      0.553189218044281
+    ]
+  },
+  {
+    "id": "prereq-v1-03",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.29842811822891235,
+      0.0001826138177420944,
+      0.7013892531394958
+    ]
+  },
+  {
+    "id": "prereq-v1-04",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 65,
+    "covered_tokens_with_special": 65,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0005512973293662071,
+      0.0005371010047383606,
+      0.9989116191864014
+    ]
+  },
+  {
+    "id": "prereq-v1-05",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 66,
+    "covered_tokens_with_special": 66,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.9898099899291992,
+      0.001744877896271646,
+      0.008445052430033684
+    ]
+  },
+  {
+    "id": "prereq-v1-06",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 59,
+    "covered_tokens_with_special": 59,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.9653410315513611,
+      6.763522833352908e-05,
+      0.034591302275657654
+    ]
+  },
+  {
+    "id": "prereq-v1-07",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 63,
+    "covered_tokens_with_special": 63,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.8715250492095947,
+      8.056545630097389e-05,
+      0.12839442491531372
+    ]
+  },
+  {
+    "id": "prereq-v1-08",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 89,
+    "covered_tokens_with_special": 89,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0016695063095539808,
+      0.0010507842525839806,
+      0.9972796440124512
+    ]
+  },
+  {
+    "id": "prereq-v1-09",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 55,
+    "covered_tokens_with_special": 55,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003432499011978507,
+      0.0005232692928984761,
+      0.9960442781448364
+    ]
+  },
+  {
+    "id": "prereq-v1-10",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 48,
+    "covered_tokens_with_special": 48,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.060404691845178604,
+      0.00019400462042540312,
+      0.9394012689590454
+    ]
+  },
+  {
+    "id": "prereq-v1-11",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 67,
+    "covered_tokens_with_special": 67,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.9204925894737244,
+      0.00023511698236688972,
+      0.07927228510379791
+    ]
+  },
+  {
+    "id": "prereq-v1-12",
+    "mode": "raw_contradiction",
+    "input_tokens_with_special": 72,
+    "covered_tokens_with_special": 72,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00021392737107817084,
+      0.0013632323825731874,
+      0.9984228610992432
+    ]
+  },
+  {
+    "id": "authorization-archive-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0014003848191350698,
+      0.0007754468242637813,
+      0.9978241920471191
+    ]
+  },
+  {
+    "id": "authorization-archive-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0014003848191350698,
+      0.0007754468242637813,
+      0.9978241920471191
+    ]
+  },
+  {
+    "id": "authorization-archive-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0014003848191350698,
+      0.0007754468242637813,
+      0.9978241920471191
+    ]
+  },
+  {
+    "id": "authorization-archive-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0014003848191350698,
+      0.0007754468242637813,
+      0.9978241920471191
+    ]
+  },
+  {
+    "id": "mention-archive",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 48,
+    "covered_tokens_with_special": 48,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0006632473669014871,
+      0.004818904213607311,
+      0.9945178627967834
+    ]
+  },
+  {
+    "id": "authorization-publish-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005618026480078697,
+      0.00035292303073219955,
+      0.9940290451049805
+    ]
+  },
+  {
+    "id": "authorization-publish-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0056180208921432495,
+      0.00035292303073219955,
+      0.9940290451049805
+    ]
+  },
+  {
+    "id": "authorization-publish-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0056180208921432495,
+      0.00035292303073219955,
+      0.9940290451049805
+    ]
+  },
+  {
+    "id": "authorization-publish-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005618026480078697,
+      0.00035292303073219955,
+      0.9940290451049805
+    ]
+  },
+  {
+    "id": "mention-publish",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 50,
+    "covered_tokens_with_special": 50,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0006124228239059448,
+      0.0018693978199735284,
+      0.9975181818008423
+    ]
+  },
+  {
+    "id": "authorization-permission-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003374516498297453,
+      0.0006217001937329769,
+      0.9960038065910339
+    ]
+  },
+  {
+    "id": "authorization-permission-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003374516498297453,
+      0.0006217001937329769,
+      0.9960038065910339
+    ]
+  },
+  {
+    "id": "authorization-permission-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003374516498297453,
+      0.0006217001937329769,
+      0.9960038065910339
+    ]
+  },
+  {
+    "id": "authorization-permission-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003374516498297453,
+      0.0006217001937329769,
+      0.9960038065910339
+    ]
+  },
+  {
+    "id": "mention-permission",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 51,
+    "covered_tokens_with_special": 51,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0009240102954208851,
+      0.0035961102694272995,
+      0.9954798221588135
+    ]
+  },
+  {
+    "id": "authorization-retention-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0013678063405677676,
+      0.0005460094544105232,
+      0.9980862140655518
+    ]
+  },
+  {
+    "id": "authorization-retention-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0013678063405677676,
+      0.0005460097454488277,
+      0.9980862140655518
+    ]
+  },
+  {
+    "id": "authorization-retention-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0013678063405677676,
+      0.0005460097454488277,
+      0.9980862140655518
+    ]
+  },
+  {
+    "id": "authorization-retention-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 32,
+    "covered_tokens_with_special": 32,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0013678063405677676,
+      0.0005460097454488277,
+      0.9980862140655518
+    ]
+  },
+  {
+    "id": "mention-retention",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 50,
+    "covered_tokens_with_special": 50,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0008838899666443467,
+      0.0023966021835803986,
+      0.9967195391654968
+    ]
+  },
+  {
+    "id": "authorization-dependency-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0016175402561202645,
+      0.00033292878651991487,
+      0.9980494976043701
+    ]
+  },
+  {
+    "id": "authorization-dependency-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0016175402561202645,
+      0.00033292878651991487,
+      0.9980494976043701
+    ]
+  },
+  {
+    "id": "authorization-dependency-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0016175417695194483,
+      0.0003329291066620499,
+      0.9980494976043701
+    ]
+  },
+  {
+    "id": "authorization-dependency-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0016175417695194483,
+      0.0003329291066620499,
+      0.9980494976043701
+    ]
+  },
+  {
+    "id": "mention-dependency",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 48,
+    "covered_tokens_with_special": 48,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0006178666953928769,
+      0.0027377703227102757,
+      0.9966443777084351
+    ]
+  },
+  {
+    "id": "authorization-job-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.000503147195558995,
+      0.003639079863205552,
+      0.9958577752113342
+    ]
+  },
+  {
+    "id": "authorization-job-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.000503147195558995,
+      0.003639079863205552,
+      0.9958577752113342
+    ]
+  },
+  {
+    "id": "authorization-job-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.000503147195558995,
+      0.003639079863205552,
+      0.9958577752113342
+    ]
+  },
+  {
+    "id": "authorization-job-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.000503147195558995,
+      0.003639079863205552,
+      0.9958577752113342
+    ]
+  },
+  {
+    "id": "mention-job",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 47,
+    "covered_tokens_with_special": 47,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007577335345558822,
+      0.003966044634580612,
+      0.9952762126922607
+    ]
+  },
+  {
+    "id": "authorization-branch-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005867868196219206,
+      0.000357107724994421,
+      0.9937750101089478
+    ]
+  },
+  {
+    "id": "authorization-branch-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.005867868196219206,
+      0.000357107724994421,
+      0.9937750101089478
+    ]
+  },
+  {
+    "id": "authorization-branch-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00586787099018693,
+      0.000357107724994421,
+      0.9937750101089478
+    ]
+  },
+  {
+    "id": "authorization-branch-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00586787099018693,
+      0.000357107724994421,
+      0.9937750101089478
+    ]
+  },
+  {
+    "id": "mention-branch",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 49,
+    "covered_tokens_with_special": 49,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007787054637447,
+      0.0020104567520320415,
+      0.9972108006477356
+    ]
+  },
+  {
+    "id": "authorization-backup-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0030539988074451685,
+      0.00026812596479430795,
+      0.9966778755187988
+    ]
+  },
+  {
+    "id": "authorization-backup-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0030539988074451685,
+      0.00026812596479430795,
+      0.9966778755187988
+    ]
+  },
+  {
+    "id": "authorization-backup-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0030539988074451685,
+      0.00026812596479430795,
+      0.9966778755187988
+    ]
+  },
+  {
+    "id": "authorization-backup-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0030540002044290304,
+      0.00026812596479430795,
+      0.9966778755187988
+    ]
+  },
+  {
+    "id": "mention-backup",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 49,
+    "covered_tokens_with_special": 49,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0005813436000607908,
+      0.0016982164233922958,
+      0.9977204203605652
+    ]
+  },
+  {
+    "id": "authorization-notification-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00377868115901947,
+      0.0002691418048925698,
+      0.9959521293640137
+    ]
+  },
+  {
+    "id": "authorization-notification-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00377868115901947,
+      0.0002691418048925698,
+      0.9959521293640137
+    ]
+  },
+  {
+    "id": "authorization-notification-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00377868115901947,
+      0.0002691418048925698,
+      0.9959521293640137
+    ]
+  },
+  {
+    "id": "authorization-notification-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 33,
+    "covered_tokens_with_special": 33,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.00377868115901947,
+      0.0002691418048925698,
+      0.9959521293640137
+    ]
+  },
+  {
+    "id": "mention-notification",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 51,
+    "covered_tokens_with_special": 51,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007033704314380884,
+      0.0019867410883307457,
+      0.9973099231719971
+    ]
+  },
+  {
+    "id": "authorization-quota-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001790829817764461,
+      0.0004136465140618384,
+      0.997795581817627
+    ]
+  },
+  {
+    "id": "authorization-quota-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001790829817764461,
+      0.0004136465140618384,
+      0.997795581817627
+    ]
+  },
+  {
+    "id": "authorization-quota-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001790829817764461,
+      0.0004136465140618384,
+      0.997795581817627
+    ]
+  },
+  {
+    "id": "authorization-quota-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 31,
+    "covered_tokens_with_special": 31,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.001790829817764461,
+      0.0004136465140618384,
+      0.997795581817627
+    ]
+  },
+  {
+    "id": "mention-quota",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 49,
+    "covered_tokens_with_special": 49,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0008115482633002102,
+      0.0024029011838138103,
+      0.9967855215072632
+    ]
+  },
+  {
+    "id": "authorization-schedule-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0015243248781189322,
+      0.0007803374319337308,
+      0.99769526720047
+    ]
+  },
+  {
+    "id": "authorization-schedule-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0015243248781189322,
+      0.0007803374319337308,
+      0.99769526720047
+    ]
+  },
+  {
+    "id": "authorization-schedule-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0015243248781189322,
+      0.0007803374319337308,
+      0.99769526720047
+    ]
+  },
+  {
+    "id": "authorization-schedule-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 29,
+    "covered_tokens_with_special": 29,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0015243248781189322,
+      0.0007803374319337308,
+      0.99769526720047
+    ]
+  },
+  {
+    "id": "mention-schedule",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 48,
+    "covered_tokens_with_special": 48,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007372925174422562,
+      0.004216270055621862,
+      0.9950464963912964
+    ]
+  },
+  {
+    "id": "authorization-rename-explicit-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0031223988626152277,
+      0.0003605922975111753,
+      0.9965169429779053
+    ]
+  },
+  {
+    "id": "authorization-rename-explicit-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0031224002595990896,
+      0.00036059264675714076,
+      0.9965169429779053
+    ]
+  },
+  {
+    "id": "authorization-rename-scope-0",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0031224002595990896,
+      0.00036059264675714076,
+      0.9965169429779053
+    ]
+  },
+  {
+    "id": "authorization-rename-scope-1",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 30,
+    "covered_tokens_with_special": 30,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0031224002595990896,
+      0.00036059264675714076,
+      0.9965169429779053
+    ]
+  },
+  {
+    "id": "mention-rename",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 49,
+    "covered_tokens_with_special": 49,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0007484874222427607,
+      0.002634391887113452,
+      0.9966171383857727
+    ]
+  },
+  {
+    "id": "prereq-v1-01",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0042147464118897915,
+      0.0006496677524410188,
+      0.9951356053352356
+    ]
+  },
+  {
+    "id": "prereq-v1-02",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 56,
+    "covered_tokens_with_special": 56,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0042147464118897915,
+      0.0006496677524410188,
+      0.9951356053352356
+    ]
+  },
+  {
+    "id": "prereq-v1-03",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 52,
+    "covered_tokens_with_special": 52,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003339734859764576,
+      0.00025024148635566235,
+      0.996410071849823
+    ]
+  },
+  {
+    "id": "prereq-v1-04",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 52,
+    "covered_tokens_with_special": 52,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.003339734859764576,
+      0.00025024148635566235,
+      0.996410071849823
+    ]
+  },
+  {
+    "id": "prereq-v1-05",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 52,
+    "covered_tokens_with_special": 52,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0033325927797704935,
+      0.00047475044266320765,
+      0.9961926937103271
+    ]
+  },
+  {
+    "id": "prereq-v1-06",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 52,
+    "covered_tokens_with_special": 52,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0033325927797704935,
+      0.00047475044266320765,
+      0.9961926937103271
+    ]
+  },
+  {
+    "id": "prereq-v1-07",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 59,
+    "covered_tokens_with_special": 59,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0017646744381636381,
+      0.0017013619653880596,
+      0.996533989906311
+    ]
+  },
+  {
+    "id": "prereq-v1-08",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 59,
+    "covered_tokens_with_special": 59,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.0017646744381636381,
+      0.0017013619653880596,
+      0.996533989906311
+    ]
+  },
+  {
+    "id": "prereq-v1-09",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 45,
+    "covered_tokens_with_special": 45,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.002319488674402237,
+      0.00016738992417231202,
+      0.9975131750106812
+    ]
+  },
+  {
+    "id": "prereq-v1-10",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 45,
+    "covered_tokens_with_special": 45,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.002319488674402237,
+      0.00016738992417231202,
+      0.9975131750106812
+    ]
+  },
+  {
+    "id": "prereq-v1-11",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 57,
+    "covered_tokens_with_special": 57,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.004695532843470573,
+      0.00035008517443202436,
+      0.9949544072151184
+    ]
+  },
+  {
+    "id": "prereq-v1-12",
+    "mode": "task_ablated",
+    "input_tokens_with_special": 57,
+    "covered_tokens_with_special": 57,
+    "dropped_tokens": 0,
+    "nli_probabilities": [
+      0.004695532843470573,
+      0.00035008517443202436,
+      0.9949544072151184
+    ]
+  }
+]

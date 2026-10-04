@@ -1,0 +1,35 @@
+{
+  "code_sha256": "7f9f82f468c67910926e32b3cb205e3fc29e06e5d47933190eab145e1d0f793d",
+  "artifacts_sha256": {
+    "results\\bipia\\authorization_calibration_v1\\calibration_coverage.json": "e4be7eee9626be1743e4f30f6a224f7451cc7f541fdcf4034f9870da07773647",
+    "results\\bipia\\authorization_calibration_v1\\calibration_features.npz": "09a1435918133de519339466669fcaa372f523b67408f2c0f078a94d849bb15e",
+    "results\\bipia\\authorization_calibration_v1\\calibration_predictions.json": "2be831bf09c0695d7e47fc89d682149972fbe75f0c5bf7cd826b5c95ea708da2",
+    "results\\bipia\\authorization_calibration_v1\\integrity.json": "523543284cf27b4146000f62aec756c8a14bbadfad787a9f7a3fcbb2f066f5fd",
+    "results\\bipia\\authorization_calibration_v1\\protocol.json": "80ff2a283a72bee254b574c78d129d047882ec11b47052aeeedc056d640d6add",
+    "results\\bipia\\authorization_calibration_v1\\reviewed_diagnostic_coverage.json": "ebea49aa7df097a244090e71be2c3d2349a17c6fa9862be8101860fb016ed339",
+    "results\\bipia\\authorization_calibration_v1\\reviewed_diagnostic_features.npz": "b113796fb8fee49106c49ac9dc3b9a97167a0468dc32333f8561ed67c3cc0721",
+    "results\\bipia\\authorization_calibration_v1\\reviewed_diagnostic_predictions.json": "238aefa3f0f9753938af64031acbbdab0049c876fe8c01f59be443ec608774ec",
+    "results\\bipia\\authorization_calibration_v1\\selection.json": "789d1d9d44bef8bb054c6cb284b38c3cdc134cf43b0e2cc937c3f322757b8bd2",
+    "results\\bipia\\authorization_calibration_v1\\status.json": "347a091190d5e3381eab1202d6f97261a165c8f3159188623ee70049825c993e",
+    "results\\bipia\\authorization_calibration_v1\\summary.json": "ced489d466f570f34a3ec1afae00213943266949c659e0175fc576465fde3897",
+    "results\\bipia\\authorization_calibration_v1\\test_coverage.json": "94085c5d540c2b981e685ce4cd7b20f74392d3ed278ced6d76a3053dc3a6d8e3",
+    "results\\bipia\\authorization_calibration_v1\\test_features.npz": "2030f30588fc4c07309ef386bc94b9187e7cfe24337fc7c0926de2fc5995ddcc",
+    "results\\bipia\\authorization_calibration_v1\\test_predictions.json": "776302f48e5d82c1c71ff12e6baca4bfde30859ae2a1bd9627466e606c6d46cd",
+    "results\\bipia\\authorization_calibration_v1\\train_coverage.json": "5d68fb0bdd28c158bdeaad6c5f37fd0ebdffb64a6af770a9656196c42a241a9e",
+    "results\\bipia\\authorization_calibration_v1\\train_features.npz": "91f8061cd4642f827016f2304a98665b2e6d482aebc17e6c0aba47d2b7361265",
+    "results\\bipia\\authorization_calibration_v1\\train_predictions.json": "bf81b8e293538e4c32e868c8a4e08677c04310f53bf4eb2b08d62359611f682c"
+  },
+  "extra_auc_and_fixed_threshold": "post-hoc diagnostics, not model selection",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

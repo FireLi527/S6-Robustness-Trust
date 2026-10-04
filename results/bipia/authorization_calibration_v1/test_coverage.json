@@ -1,0 +1,3446 @@
+{
+  "minilm": [
+    {
+      "id": "cal-v1-subscription-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6",
+        "input_tokens": 17,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "a744203127b51a3a146722e1460847e08296c35492fab90202c196a1ba677c5f",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "c7a832071d2a4a34c4c58a9a0abfa347e3fc02d46d8b566ff2a24d14fd1db5cd",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "1034482625e7b699a0b7fee79574324704e781fbc3eb3dbc54405a47f9a6be76",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "dc0609b84286f5a0d6736a9ce43cecfad6e03918721fc9feb27541cb313bdbf0",
+        "input_tokens": 29,
+        "covered_tokens": 29,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "05dd944dad77ebbd609a402baf2c9b990cdc922655a29f8719ede2d939d2bd07",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "abea8a64a6b2a6ebbfd8e738caa2dae468a84197cba6c6004cbbeeaba6a3ccfb",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "1f3e51e147682b9a0ae25dca468ff0ff303b39d0ef0dd772b0529581dbe60264",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "a44cc76d87bc904a39dbb94af011ba04ec833480a1c0c43ae4c134a9d1e904f6"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "6cfcc5652fbff732249f8c7b00169fb9ef407cd2f31f30b4835ddf2454b7c4b3",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "78b62ea919d0cb35a277f3dec5ee6c6d6d8df0cfac20e4ef817f847aee26d80b",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6",
+        "input_tokens": 14,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-subscription-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "a0ef0e456ca75317381e1af1834d7b2479fd06b0831296ca029aeefde81f0010",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-routing-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a",
+        "input_tokens": 17,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "f5dbfbd237d1d7a46a43c6bf4248e9caff70de968b148e4a8316d499baf3500e",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "ecd0be099fc8dec88dd1eaec98ef7b66b97776ceb0badaef24f12df7b54f4b69",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "010a18aad412fd7ae35d5ebbca1990d45fba7df8ee9ca74e8cd44bae8aa34903",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "9033772b360997fef2d515d4c05e32bdadb2ff8bd5fd31e5fd26a0ff4e6fe58c",
+        "input_tokens": 29,
+        "covered_tokens": 29,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "8e57568a48ee2adfc84c3424ce14996fd50f2192134ddf0835d5d55e1145c385",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "922d3ae5b91840d7774571832a5eee5f76c28d95570fc1cda91efaf38336ffa0",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "c834a0da54dc11b76255485139ee770cb86616bad1d7b21424c3aa19b4d89e67",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "f160f4189c12dc1c54da87c24001da7a1a7945f5d414bc24e8d2ee77bb74332a"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "e662ce6db2d22cb279e3a8718e7f89a35de281116cd6d9cc63dae7fefb041d43",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-routing-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "47c25216f9963647a2f64ca2e7b10ff530d2302b2df67a4371bee188d569bdc0",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-routing-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "2564601fc64dd8292993a7d504d62b11303b4d3c243be068018e08de7c562415",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-feature-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310",
+        "input_tokens": 17,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "f3b57699f2489f8ae11e91ae09aac836149eb2f8f310265cd54229f9fc89d227",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "40829d6542bd400a96ce04178b120b545fd590a3bcc03ab7ef3c56b60050c5a8",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "e37de63b404a39367b6db98ac43af967c0b3e79caa015bb8fb9d7b514325e577",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "9f07fc2c96cc0405d5640fba46e43c621665251939a4451549db229d7bbc384c",
+        "input_tokens": 29,
+        "covered_tokens": 29,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "9912976b420844e13f15888f3d75cfebed1f18945230bf8629bf6a787c527146",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "d362ae01cb8a270e547c19967a7fbc57e4c46819d8abd47377e614a8197dd702",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "4bcb45390b0b79d9c6168812244d09c6a48cb1383d141da7f9994fa07acd5b51",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "4885e46ac38fd1e62242a2cb9b8bc0fb9b3656a1f84a1dcefddbe978671a0310"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "bff56870da3aafcfd8560ced3807a2aeeb214bbef657222de9c1eabb224f1531",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-feature-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "c60a202f19fdbb3c64f7d8019a48b629886a7e971abcb8ac95c43feeb2e6cbb9",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-feature-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "0cf5faab9bbe86cc2a1b8f5b1d79e226a7cf976b08fb8b3a3830cf75a31ac886",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-retry-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c",
+        "input_tokens": 19,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "a5219708002b6ce2bcd2bd13850b08a3700de2313eebec51ccd0504f8865e598",
+        "input_tokens": 22,
+        "covered_tokens": 22,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "9a04752fd6bb8f11c6e679938be5a73fe8b9c0adc9d2fcc8a5d02c7b250cdc26",
+        "input_tokens": 23,
+        "covered_tokens": 23,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "853226a0f1cc5cf73c2bdd02814316373bfbbe4d1c7f6404972715f143c86063",
+        "input_tokens": 26,
+        "covered_tokens": 26,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "6f9d74befd68cffd0730e085130ffa2b3badf18c24db8aa61b5ce39725f1f0cd",
+        "input_tokens": 31,
+        "covered_tokens": 31,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "0b82171abfe4284cf2617c9bdcdeae07a2571d9acae6cc63f6660aef29d70151",
+        "input_tokens": 30,
+        "covered_tokens": 30,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "19321d821972e93fb0a8cfa57a1138b0ace0519211f26e7a9cf4a18e6b8e5ca6",
+        "input_tokens": 30,
+        "covered_tokens": 30,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "25fd81703e1ec33b84649774cc0c36f1325b95d17a4fa271633d343016c558ac",
+        "input_tokens": 22,
+        "covered_tokens": 22,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "1e6e7e289fa2288ff883790240dad3bdd798f54e3258d4acdce65a501d533c5c"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "410d8c797a396d2cc87f7def967e6b815a97f743ff1d95548c092b2818811b58",
+        "input_tokens": 23,
+        "covered_tokens": 23,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-retry-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "8972bfb2a871994a8c5fe0eafb167fed92f975c97bb5b87a6bf06dc988689edd",
+        "input_tokens": 27,
+        "covered_tokens": 27,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-retry-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "fcec70d01ac8319207453fa495d0ff2eeb3633f02542e70949e90e11bb1409de",
+        "input_tokens": 27,
+        "covered_tokens": 27,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-timeout-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "c790fa0cde24e622cc409ee4c77702e9c3b8cb33b04ade036c6476faf59b6780",
+        "input_tokens": 23,
+        "covered_tokens": 23,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 20,
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "bca23e680a9aef8fac5217971befb0d8ecfc71da06f818719f6116c6bb01e7c3",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 20,
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "0c8637780dee77d5c2e1cebdb87fb598f9532ef04cb2e3596022db91d23e2fcf",
+        "input_tokens": 27,
+        "covered_tokens": 27,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 20,
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "534499de50d47e6f01877a95a1bbaa6fbd5aa84a38e7d71740fe46480ff70a58",
+        "input_tokens": 32,
+        "covered_tokens": 32,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 20,
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "4ed984080bc9df4f45d37277be7bb6eaa5398bd928a25f4274ed33d4997fe964",
+        "input_tokens": 31,
+        "covered_tokens": 31,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 20,
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "93d82ababf635595711e2a4be49e0e123ef38fbf779feda656867bea404e8edc",
+        "input_tokens": 31,
+        "covered_tokens": 31,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 20,
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "467d680299ee3ae5b2e26e70474196a7e1c167047177b006f21f941b88854adf",
+        "input_tokens": 23,
+        "covered_tokens": 23,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 20,
+        "text_sha256": "b35fe0f09123dcf81b66135331c72fcc02f2ab70e1b246d17d8db069e65cf141"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "cff5d2d34c9296431bbc81bc235531a80391c60dd913541bf802e5ca0e5e0edc",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-timeout-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "6c94aa0f0a2f48a1111c54fd9f20ba28309aa5c0d4ffede2f01105f17cecc254",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-timeout-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "df2c449655a7926d568d2deaca988a91c026038630afd78572056eceaa902242",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-health-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237",
+        "input_tokens": 16,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "ec7145211068e715816bd71d276e924f4a1f4613b1630c8e15d2fdc4d75a0a26",
+        "input_tokens": 19,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 16,
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "78b76dbb33017c1c8b4bf4bce14e8245c066545241b343c03731c9423854097e",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 16,
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "e2c14666cf37fed4603a731c680debaf4c18898a6484401026442b26cf573b67",
+        "input_tokens": 23,
+        "covered_tokens": 23,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 16,
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "9fadcc281d8c61e1142dab53808d7413cd974b66b7023e5d5cd9a7bcdb89e5c0",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 16,
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "00586a597e7cd0b4535be6b60d5a8edda6d87c306d69633d2fda189c104c186e",
+        "input_tokens": 27,
+        "covered_tokens": 27,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 16,
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "7906e66097a079546f57ef0f21d199303714c10782bde99286469046e2ca8c99",
+        "input_tokens": 27,
+        "covered_tokens": 27,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 16,
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "53994a032866b897d937738726a84a079fe0d4a83579b1467e4448cc995febcd",
+        "input_tokens": 19,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 16,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 16,
+        "text_sha256": "ea2c28b384cd0e59f25bb9dcf26a48d50a56cec350f9ef19d70294c45ab3f237"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "de48382a2996704eb2ed723f9b7142a08382ec8be6e0bb82d47d967e0de65163",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-health-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "01fb674845a25ed30b6fb1217bbbf5ce784afcd6af301ac201f996f0b15d7f89",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-health-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "3c158102c7a57f5f7ec17d2e6d34fd0c61ec601cf9e841f0d3926de4b4ae3ceb",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-queue-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b",
+        "input_tokens": 17,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "9c9ebafe07eaa53e64dfb87b2380ed7637a46a84022965dfa9701c3244a6bbd9",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "cd3ddf949988a452e67d5ca8a4d28eb3c847bfd76f105799c15180c318f8e7ef",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "49a98d8cd57238623d06af5d7cdc1474b9f602c39a7bfe0398c0c38a8ce5ddce",
+        "input_tokens": 24,
+        "covered_tokens": 24,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "018c8e44a4cde15f47b405e585fd115cce8ef52a29c7837276906e01c6847016",
+        "input_tokens": 29,
+        "covered_tokens": 29,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "f577296b1351301e25eef30a4b1688921137cb2d979be7a32522e3f57035fcd8",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "0af35098b1e5178a5af9d8bcbac756fc59d074ff8ba30a9d57c89cb41b81f726",
+        "input_tokens": 28,
+        "covered_tokens": 28,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "33c0fef6c13e0958f2103267230c7a76278c0a93450be0db5393cd1c7a47f6cf",
+        "input_tokens": 20,
+        "covered_tokens": 20,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 17,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 17,
+        "text_sha256": "dcbdb62d5a452b4a05275ac72899c6a1adf780973f865aefff7a62966702753b"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "bf49ddd5036c49b2807656e69a5cbd283816b1e8438169ece6e7a715e69d245a",
+        "input_tokens": 21,
+        "covered_tokens": 21,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-queue-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "efcc2e8eb8316acb0e92b599c4fe755ddc9996c79978d72df6a74f198aa785be",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-queue-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "5971339589f2eb1266368ec9a6fd715f52d57be47148e3709d34b01d47c88f38",
+        "input_tokens": 25,
+        "covered_tokens": 25,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-replica-permission-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa",
+        "input_tokens": 19,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "3c25468b79b90875e990857a8be946011aebdc917813275cac484cdb5227bb34",
+        "input_tokens": 22,
+        "covered_tokens": 22,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-permission-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "d3d8a71f594cb0513db50d0bb260380aec03f2bf9bf3079c8ed0c84ee7b55961",
+        "input_tokens": 23,
+        "covered_tokens": 23,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-scope-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "c5655a576fd5bf958afb453e2c5e22b901566d78e26181ab1974d4337d0123c8",
+        "input_tokens": 26,
+        "covered_tokens": 26,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-scope-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "947b7c2ab00e779b07f3f404b848cbae3b61d9ec82aa1e7b0f56eb397851c44a",
+        "input_tokens": 31,
+        "covered_tokens": 31,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-target-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "b3ca69657b754ec1fe3304a78adfb36dbbd29528d7997128c1e1423228a842f4",
+        "input_tokens": 30,
+        "covered_tokens": 30,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-target-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "d6b97d89a2276b2f28696cb6f3a31297f1c517ebaf568105c3e19bf47b6908f6",
+        "input_tokens": 30,
+        "covered_tokens": 30,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-simulation-0",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "b5a9d0b0fb6f2ec36caec7c80c82950290d126acef0e6b7f2990a7e9bb6542f0",
+        "input_tokens": 22,
+        "covered_tokens": 22,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-simulation-1",
+      "content": {
+        "chunks": 1,
+        "covered_tokens": 19,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 19,
+        "text_sha256": "abf5f88a075dfc35e9e661c4d481822d5c584f39bc09ea689b13cdb10f157caa"
+      },
+      "task": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "07a32463f2137a4754657d58e331ee2f0871bacc4216a52a01db82ad6a19fab2",
+        "input_tokens": 23,
+        "covered_tokens": 23,
+        "dropped_tokens": 0,
+        "chunks": 1
+      }
+    },
+    {
+      "id": "cal-v1-replica-quote-0",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "02728b80d6ab43324a941741571520767db200fd790d0d0b4547eb0ee7a0b614",
+        "input_tokens": 27,
+        "covered_tokens": 27,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    },
+    {
+      "id": "cal-v1-replica-quote-1",
+      "content": {
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "text_sha256": "164d603ff61345473fbecb8f84026aa6088c7e1df77edc550ba13d3b3d2818f4",
+        "input_tokens": 27,
+        "covered_tokens": 27,
+        "dropped_tokens": 0,
+        "chunks": 1
+      },
+      "task": {
+        "chunks": 1,
+        "covered_tokens": 14,
+        "dropped_tokens": 0,
+        "encoder": "a8eb4ca4cf483d2bfedbbdd8fe000eb6883a06b9c77dffc8356680bc0accfbb4",
+        "input_tokens": 14,
+        "text_sha256": "424302a5e66d484463661a4a6a157382c30deb85f181079244685d1b2c9cf7d6"
+      }
+    }
+  ],
+  "nli": [
+    {
+      "id": "cal-v1-subscription-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 36,
+      "covered_tokens_with_special": 36,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.014450863935053349,
+        0.06546413153409958,
+        0.9200849533081055
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 37,
+      "covered_tokens_with_special": 37,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9995379447937012,
+        0.0001768926449585706,
+        0.00028515190933831036
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0003013783716596663,
+        0.9964542388916016,
+        0.003244442632421851
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9996305704116821,
+        0.00020342579227872193,
+        0.00016598000365775079
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0004084525862708688,
+        0.0033949248027056456,
+        0.9961966276168823
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00475838128477335,
+        0.0010769552318379283,
+        0.9941646456718445
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 36,
+      "covered_tokens_with_special": 36,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.001460240688174963,
+        0.96821129322052,
+        0.03032839111983776
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 37,
+      "covered_tokens_with_special": 37,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9998037219047546,
+        5.681311449734494e-05,
+        0.00013944279635325074
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.12731759250164032,
+        0.31036627292633057,
+        0.5623161196708679
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.1158025935292244,
+        0.2818620502948761,
+        0.6023353934288025
+      ]
+    },
+    {
+      "id": "cal-v1-routing-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 38,
+      "covered_tokens_with_special": 38,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.003481247229501605,
+        0.9294111132621765,
+        0.06710761040449142
+      ]
+    },
+    {
+      "id": "cal-v1-routing-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9994300007820129,
+        0.0001554628397570923,
+        0.0004145110142417252
+      ]
+    },
+    {
+      "id": "cal-v1-routing-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 41,
+      "covered_tokens_with_special": 41,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00130839750636369,
+        0.986359179019928,
+        0.012332464568316936
+      ]
+    },
+    {
+      "id": "cal-v1-routing-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 46,
+      "covered_tokens_with_special": 46,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9995025396347046,
+        0.00020672894606832415,
+        0.000290783733362332
+      ]
+    },
+    {
+      "id": "cal-v1-routing-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00038666429463773966,
+        0.0031583397649228573,
+        0.9964550733566284
+      ]
+    },
+    {
+      "id": "cal-v1-routing-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.002103801816701889,
+        0.0005754359881393611,
+        0.997320830821991
+      ]
+    },
+    {
+      "id": "cal-v1-routing-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 38,
+      "covered_tokens_with_special": 38,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0010344410547986627,
+        0.9795069098472595,
+        0.01945868507027626
+      ]
+    },
+    {
+      "id": "cal-v1-routing-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9996092915534973,
+        7.0757552748546e-05,
+        0.00031999696511775255
+      ]
+    },
+    {
+      "id": "cal-v1-routing-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.18074217438697815,
+        0.22321189939975739,
+        0.5960459113121033
+      ]
+    },
+    {
+      "id": "cal-v1-routing-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.18145033717155457,
+        0.17330297827720642,
+        0.6452467441558838
+      ]
+    },
+    {
+      "id": "cal-v1-feature-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 38,
+      "covered_tokens_with_special": 38,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0029661792796105146,
+        0.026857564225792885,
+        0.9701762795448303
+      ]
+    },
+    {
+      "id": "cal-v1-feature-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9996260404586792,
+        0.00010016547457780689,
+        0.0002737401518970728
+      ]
+    },
+    {
+      "id": "cal-v1-feature-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 41,
+      "covered_tokens_with_special": 41,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0005089829210191965,
+        0.9905297160148621,
+        0.008961337618529797
+      ]
+    },
+    {
+      "id": "cal-v1-feature-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 46,
+      "covered_tokens_with_special": 46,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9996464252471924,
+        0.00019366751075722277,
+        0.00015986859216354787
+      ]
+    },
+    {
+      "id": "cal-v1-feature-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0003614554589148611,
+        0.0032944653648883104,
+        0.9963440299034119
+      ]
+    },
+    {
+      "id": "cal-v1-feature-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0024466137401759624,
+        0.0007414560532197356,
+        0.9968119263648987
+      ]
+    },
+    {
+      "id": "cal-v1-feature-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 38,
+      "covered_tokens_with_special": 38,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0010123791871592402,
+        0.9704998731613159,
+        0.02848769724369049
+      ]
+    },
+    {
+      "id": "cal-v1-feature-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9998055100440979,
+        6.641162326559424e-05,
+        0.0001281524746445939
+      ]
+    },
+    {
+      "id": "cal-v1-feature-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.017812462523579597,
+        0.027124248445034027,
+        0.9550632238388062
+      ]
+    },
+    {
+      "id": "cal-v1-feature-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.019915712997317314,
+        0.023802509531378746,
+        0.9562817811965942
+      ]
+    },
+    {
+      "id": "cal-v1-retry-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.004686090163886547,
+        0.7649304270744324,
+        0.23038345575332642
+      ]
+    },
+    {
+      "id": "cal-v1-retry-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 41,
+      "covered_tokens_with_special": 41,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9985111355781555,
+        0.000206451237318106,
+        0.0012824099976569414
+      ]
+    },
+    {
+      "id": "cal-v1-retry-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 43,
+      "covered_tokens_with_special": 43,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00042515533277764916,
+        0.99326491355896,
+        0.006309819407761097
+      ]
+    },
+    {
+      "id": "cal-v1-retry-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 48,
+      "covered_tokens_with_special": 48,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9992907047271729,
+        0.0003217736375518143,
+        0.00038756162393838167
+      ]
+    },
+    {
+      "id": "cal-v1-retry-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 46,
+      "covered_tokens_with_special": 46,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0004789066151715815,
+        0.0046083880588412285,
+        0.9949126243591309
+      ]
+    },
+    {
+      "id": "cal-v1-retry-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 46,
+      "covered_tokens_with_special": 46,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0015855168458074331,
+        0.0006786718731746078,
+        0.997735857963562
+      ]
+    },
+    {
+      "id": "cal-v1-retry-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0008193856338039041,
+        0.984622061252594,
+        0.014558515511453152
+      ]
+    },
+    {
+      "id": "cal-v1-retry-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 41,
+      "covered_tokens_with_special": 41,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9996554851531982,
+        6.833681254647672e-05,
+        0.0002762718067970127
+      ]
+    },
+    {
+      "id": "cal-v1-retry-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 41,
+      "covered_tokens_with_special": 41,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.041650157421827316,
+        0.01769045554101467,
+        0.9406593441963196
+      ]
+    },
+    {
+      "id": "cal-v1-retry-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 41,
+      "covered_tokens_with_special": 41,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.03830712288618088,
+        0.016673238947987556,
+        0.9450196623802185
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.003966957796365023,
+        0.7221037745475769,
+        0.27392926812171936
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 43,
+      "covered_tokens_with_special": 43,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9993265867233276,
+        0.00012025014439132065,
+        0.0005532923387363553
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 45,
+      "covered_tokens_with_special": 45,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0003230121801607311,
+        0.9962840676307678,
+        0.003392965067178011
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 50,
+      "covered_tokens_with_special": 50,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9995203018188477,
+        0.0002003614354180172,
+        0.000279263302218169
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 48,
+      "covered_tokens_with_special": 48,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0005363271338865161,
+        0.0051427059806883335,
+        0.9943209886550903
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 48,
+      "covered_tokens_with_special": 48,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0021432265639305115,
+        0.0007591829053126276,
+        0.9970976114273071
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0004533223109319806,
+        0.9874609112739563,
+        0.01208578236401081
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 43,
+      "covered_tokens_with_special": 43,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9997257590293884,
+        6.0958569520153105e-05,
+        0.00021327805006876588
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.007341239135712385,
+        0.004848273005336523,
+        0.987810492515564
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.007963933050632477,
+        0.0037994650192558765,
+        0.9882366061210632
+      ]
+    },
+    {
+      "id": "cal-v1-health-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 36,
+      "covered_tokens_with_special": 36,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.007080879062414169,
+        0.017876002937555313,
+        0.9750431180000305
+      ]
+    },
+    {
+      "id": "cal-v1-health-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 37,
+      "covered_tokens_with_special": 37,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9995834231376648,
+        0.00011844653636217117,
+        0.000298147089779377
+      ]
+    },
+    {
+      "id": "cal-v1-health-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0004924978129565716,
+        0.9935797452926636,
+        0.005927709396928549
+      ]
+    },
+    {
+      "id": "cal-v1-health-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9995941519737244,
+        0.00021506909979507327,
+        0.0001907919649966061
+      ]
+    },
+    {
+      "id": "cal-v1-health-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0003982358903158456,
+        0.0035550277680158615,
+        0.9960467219352722
+      ]
+    },
+    {
+      "id": "cal-v1-health-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.003924225922673941,
+        0.0007451876299455762,
+        0.9953305721282959
+      ]
+    },
+    {
+      "id": "cal-v1-health-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 36,
+      "covered_tokens_with_special": 36,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00215085968375206,
+        0.9380550384521484,
+        0.05979407578706741
+      ]
+    },
+    {
+      "id": "cal-v1-health-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 37,
+      "covered_tokens_with_special": 37,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.999772846698761,
+        5.389168654801324e-05,
+        0.00017332957941107452
+      ]
+    },
+    {
+      "id": "cal-v1-health-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.059457335621118546,
+        0.06477154046297073,
+        0.875771164894104
+      ]
+    },
+    {
+      "id": "cal-v1-health-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.05735016614198685,
+        0.055226221680641174,
+        0.8874236345291138
+      ]
+    },
+    {
+      "id": "cal-v1-queue-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 38,
+      "covered_tokens_with_special": 38,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0021988118533045053,
+        0.0107714319601655,
+        0.9870297312736511
+      ]
+    },
+    {
+      "id": "cal-v1-queue-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9994264841079712,
+        8.653720578877255e-05,
+        0.00048703691572882235
+      ]
+    },
+    {
+      "id": "cal-v1-queue-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 41,
+      "covered_tokens_with_special": 41,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0003470079100225121,
+        0.9929768443107605,
+        0.006676074583083391
+      ]
+    },
+    {
+      "id": "cal-v1-queue-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 46,
+      "covered_tokens_with_special": 46,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9995647072792053,
+        0.00018344489217270166,
+        0.00025180482771247625
+      ]
+    },
+    {
+      "id": "cal-v1-queue-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0005432454636320472,
+        0.0022120987996459007,
+        0.9972447156906128
+      ]
+    },
+    {
+      "id": "cal-v1-queue-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.003092770231887698,
+        0.000729404273442924,
+        0.9961777925491333
+      ]
+    },
+    {
+      "id": "cal-v1-queue-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 38,
+      "covered_tokens_with_special": 38,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.001501348684541881,
+        0.9615594148635864,
+        0.036939170211553574
+      ]
+    },
+    {
+      "id": "cal-v1-queue-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9996771812438965,
+        8.044544665608555e-05,
+        0.0002424252306809649
+      ]
+    },
+    {
+      "id": "cal-v1-queue-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.042201776057481766,
+        0.2065044492483139,
+        0.7512937784194946
+      ]
+    },
+    {
+      "id": "cal-v1-queue-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 40,
+      "covered_tokens_with_special": 40,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.032276131212711334,
+        0.09275271743535995,
+        0.8749710917472839
+      ]
+    },
+    {
+      "id": "cal-v1-replica-permission-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 36,
+      "covered_tokens_with_special": 36,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.014585508033633232,
+        0.08748482167720795,
+        0.8979296684265137
+      ]
+    },
+    {
+      "id": "cal-v1-replica-permission-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 37,
+      "covered_tokens_with_special": 37,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9997188448905945,
+        0.00010144553380087018,
+        0.00017977356037590653
+      ]
+    },
+    {
+      "id": "cal-v1-replica-scope-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0003107607481069863,
+        0.993392288684845,
+        0.0062969098798930645
+      ]
+    },
+    {
+      "id": "cal-v1-replica-scope-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 44,
+      "covered_tokens_with_special": 44,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.9996434450149536,
+        0.0002011305041378364,
+        0.00015545051428489387
+      ]
+    },
+    {
+      "id": "cal-v1-replica-target-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0004911439027637243,
+        0.00487301591783762,
+        0.9946357607841492
+      ]
+    },
+    {
+      "id": "cal-v1-replica-target-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 42,
+      "covered_tokens_with_special": 42,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.004075353499501944,
+        0.0007953426102176309,
+        0.9951293468475342
+      ]
+    },
+    {
+      "id": "cal-v1-replica-simulation-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 36,
+      "covered_tokens_with_special": 36,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0011015075724571943,
+        0.976331353187561,
+        0.02256711572408676
+      ]
+    },
+    {
+      "id": "cal-v1-replica-simulation-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 37,
+      "covered_tokens_with_special": 37,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.999829888343811,
+        6.129155372036621e-05,
+        0.00010882774222409353
+      ]
+    },
+    {
+      "id": "cal-v1-replica-quote-0",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.011257567442953587,
+        0.010531347244977951,
+        0.9782111048698425
+      ]
+    },
+    {
+      "id": "cal-v1-replica-quote-1",
+      "mode": "raw_contradiction",
+      "input_tokens_with_special": 39,
+      "covered_tokens_with_special": 39,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.010846062563359737,
+        0.009813258424401283,
+        0.979340672492981
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 58,
+      "covered_tokens_with_special": 58,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.760498583316803,
+        0.0002792827144730836,
+        0.23922209441661835
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 59,
+      "covered_tokens_with_special": 59,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0002023722045123577,
+        0.024765675887465477,
+        0.9750319123268127
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.010289722122251987,
+        0.004054661840200424,
+        0.9856555461883545
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.069808728992939,
+        0.060820549726486206,
+        0.8693707585334778
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0011833688477054238,
+        0.03613830357789993,
+        0.9626783728599548
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.001296524191275239,
+        0.007910911925137043,
+        0.9907926321029663
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 58,
+      "covered_tokens_with_special": 58,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.004166097845882177,
+        0.0008918163366615772,
+        0.9949420094490051
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 59,
+      "covered_tokens_with_special": 59,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.419625461101532,
+        0.006204698234796524,
+        0.5741698145866394
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        7.242566061904654e-05,
+        0.9707674384117126,
+        0.029160151258111
+      ]
+    },
+    {
+      "id": "cal-v1-subscription-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        7.337371062021703e-05,
+        0.9706747531890869,
+        0.02925185300409794
+      ]
+    },
+    {
+      "id": "cal-v1-routing-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 60,
+      "covered_tokens_with_special": 60,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.014108180068433285,
+        0.0002961650607176125,
+        0.985595703125
+      ]
+    },
+    {
+      "id": "cal-v1-routing-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00035794952418655157,
+        0.011720125563442707,
+        0.9879218935966492
+      ]
+    },
+    {
+      "id": "cal-v1-routing-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 63,
+      "covered_tokens_with_special": 63,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.004367637448012829,
+        0.003613891778513789,
+        0.9920184016227722
+      ]
+    },
+    {
+      "id": "cal-v1-routing-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 68,
+      "covered_tokens_with_special": 68,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.007892229594290257,
+        0.012392890639603138,
+        0.9797149300575256
+      ]
+    },
+    {
+      "id": "cal-v1-routing-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0009229435818269849,
+        0.0081988126039505,
+        0.9908782839775085
+      ]
+    },
+    {
+      "id": "cal-v1-routing-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0010636375518515706,
+        0.002982429461553693,
+        0.9959539175033569
+      ]
+    },
+    {
+      "id": "cal-v1-routing-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 60,
+      "covered_tokens_with_special": 60,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00289855245500803,
+        0.0008050479227676988,
+        0.9962963461875916
+      ]
+    },
+    {
+      "id": "cal-v1-routing-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.020044688135385513,
+        0.004407487343996763,
+        0.9755478501319885
+      ]
+    },
+    {
+      "id": "cal-v1-routing-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.224667544709519e-05,
+        0.9673401117324829,
+        0.032577645033597946
+      ]
+    },
+    {
+      "id": "cal-v1-routing-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        7.9851015470922e-05,
+        0.9667928218841553,
+        0.033127300441265106
+      ]
+    },
+    {
+      "id": "cal-v1-feature-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 60,
+      "covered_tokens_with_special": 60,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.8947111964225769,
+        0.00020524251158349216,
+        0.10508356243371964
+      ]
+    },
+    {
+      "id": "cal-v1-feature-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0002396467316430062,
+        0.016516435891389847,
+        0.9832438826560974
+      ]
+    },
+    {
+      "id": "cal-v1-feature-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 63,
+      "covered_tokens_with_special": 63,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.009045644663274288,
+        0.0084012970328331,
+        0.9825531244277954
+      ]
+    },
+    {
+      "id": "cal-v1-feature-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 68,
+      "covered_tokens_with_special": 68,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.07254988700151443,
+        0.08534609526395798,
+        0.8421040177345276
+      ]
+    },
+    {
+      "id": "cal-v1-feature-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0014576382236555219,
+        0.013141095638275146,
+        0.9854013323783875
+      ]
+    },
+    {
+      "id": "cal-v1-feature-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0012777881929650903,
+        0.003935014829039574,
+        0.9947872161865234
+      ]
+    },
+    {
+      "id": "cal-v1-feature-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 60,
+      "covered_tokens_with_special": 60,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0047383722849190235,
+        0.0013014007126912475,
+        0.9939602613449097
+      ]
+    },
+    {
+      "id": "cal-v1-feature-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.04337163269519806,
+        0.009691971354186535,
+        0.9469363689422607
+      ]
+    },
+    {
+      "id": "cal-v1-feature-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        7.227797323139384e-05,
+        0.9761525392532349,
+        0.02377522923052311
+      ]
+    },
+    {
+      "id": "cal-v1-feature-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        7.417004235321656e-05,
+        0.9762662649154663,
+        0.02365954965353012
+      ]
+    },
+    {
+      "id": "cal-v1-retry-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.31986692547798157,
+        0.00062701222486794,
+        0.6795060634613037
+      ]
+    },
+    {
+      "id": "cal-v1-retry-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 63,
+      "covered_tokens_with_special": 63,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00016617075016256422,
+        0.04143475368618965,
+        0.9583990573883057
+      ]
+    },
+    {
+      "id": "cal-v1-retry-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 65,
+      "covered_tokens_with_special": 65,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.008820577524602413,
+        0.016280995681881905,
+        0.9748983979225159
+      ]
+    },
+    {
+      "id": "cal-v1-retry-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 70,
+      "covered_tokens_with_special": 70,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.09867216646671295,
+        0.20538493990898132,
+        0.6959428787231445
+      ]
+    },
+    {
+      "id": "cal-v1-retry-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 68,
+      "covered_tokens_with_special": 68,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0012743716361001134,
+        0.00534904794767499,
+        0.9933765530586243
+      ]
+    },
+    {
+      "id": "cal-v1-retry-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 68,
+      "covered_tokens_with_special": 68,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0014723824569955468,
+        0.0025947587564587593,
+        0.9959328770637512
+      ]
+    },
+    {
+      "id": "cal-v1-retry-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.006881216075271368,
+        0.0007606068393215537,
+        0.9923581480979919
+      ]
+    },
+    {
+      "id": "cal-v1-retry-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 63,
+      "covered_tokens_with_special": 63,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.014543184079229832,
+        0.0031335288658738136,
+        0.9823233485221863
+      ]
+    },
+    {
+      "id": "cal-v1-retry-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 63,
+      "covered_tokens_with_special": 63,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.966690074885264e-05,
+        0.9824963808059692,
+        0.017413875088095665
+      ]
+    },
+    {
+      "id": "cal-v1-retry-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 63,
+      "covered_tokens_with_special": 63,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.845527190715075e-05,
+        0.9828172922134399,
+        0.017094258219003677
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.640303909778595,
+        0.0006074049160815775,
+        0.359088659286499
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 65,
+      "covered_tokens_with_special": 65,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00020292018598411232,
+        0.017609387636184692,
+        0.9821877479553223
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 67,
+      "covered_tokens_with_special": 67,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.018946118652820587,
+        0.0481862910091877,
+        0.9328675270080566
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 72,
+      "covered_tokens_with_special": 72,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.43274685740470886,
+        0.1890718936920166,
+        0.3781813085079193
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 70,
+      "covered_tokens_with_special": 70,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.001210042741149664,
+        0.00472743296995759,
+        0.9940624833106995
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 70,
+      "covered_tokens_with_special": 70,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0016786732012405992,
+        0.002269555814564228,
+        0.9960518479347229
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.008237735368311405,
+        0.0010349737713113427,
+        0.9907273054122925
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 65,
+      "covered_tokens_with_special": 65,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.02596496418118477,
+        0.005667578894644976,
+        0.9683674573898315
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.626835187897086e-05,
+        0.9825564622879028,
+        0.01735728234052658
+      ]
+    },
+    {
+      "id": "cal-v1-timeout-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.70787916937843e-05,
+        0.9820138812065125,
+        0.01789904572069645
+      ]
+    },
+    {
+      "id": "cal-v1-health-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 58,
+      "covered_tokens_with_special": 58,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.8481555581092834,
+        0.0002261008194182068,
+        0.1516183465719223
+      ]
+    },
+    {
+      "id": "cal-v1-health-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 59,
+      "covered_tokens_with_special": 59,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0002942935680039227,
+        0.06992129236459732,
+        0.9297844171524048
+      ]
+    },
+    {
+      "id": "cal-v1-health-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.009897946380078793,
+        0.0043890089727938175,
+        0.985713005065918
+      ]
+    },
+    {
+      "id": "cal-v1-health-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.043337125331163406,
+        0.08956359326839447,
+        0.8670992851257324
+      ]
+    },
+    {
+      "id": "cal-v1-health-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0021549619268625975,
+        0.0916275829076767,
+        0.9062175154685974
+      ]
+    },
+    {
+      "id": "cal-v1-health-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00173465209081769,
+        0.013122793287038803,
+        0.9851425290107727
+      ]
+    },
+    {
+      "id": "cal-v1-health-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 58,
+      "covered_tokens_with_special": 58,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.004533783998340368,
+        0.0008618970750831068,
+        0.9946042895317078
+      ]
+    },
+    {
+      "id": "cal-v1-health-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 59,
+      "covered_tokens_with_special": 59,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.06912994384765625,
+        0.007692660205066204,
+        0.9231773614883423
+      ]
+    },
+    {
+      "id": "cal-v1-health-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        7.122384704416618e-05,
+        0.973305881023407,
+        0.026622839272022247
+      ]
+    },
+    {
+      "id": "cal-v1-health-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        6.94161863066256e-05,
+        0.9729908108711243,
+        0.02693982794880867
+      ]
+    },
+    {
+      "id": "cal-v1-queue-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 60,
+      "covered_tokens_with_special": 60,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.15780457854270935,
+        0.0005674320855177939,
+        0.8416280150413513
+      ]
+    },
+    {
+      "id": "cal-v1-queue-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00027882910217158496,
+        0.018061455339193344,
+        0.9816597104072571
+      ]
+    },
+    {
+      "id": "cal-v1-queue-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 63,
+      "covered_tokens_with_special": 63,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.003323047887533903,
+        0.0061569917015731335,
+        0.9905200004577637
+      ]
+    },
+    {
+      "id": "cal-v1-queue-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 68,
+      "covered_tokens_with_special": 68,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.01672748290002346,
+        0.01746353879570961,
+        0.9658089280128479
+      ]
+    },
+    {
+      "id": "cal-v1-queue-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0007958761998452246,
+        0.00738866813480854,
+        0.9918153882026672
+      ]
+    },
+    {
+      "id": "cal-v1-queue-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0008900531101971865,
+        0.0036109620705246925,
+        0.9954989552497864
+      ]
+    },
+    {
+      "id": "cal-v1-queue-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 60,
+      "covered_tokens_with_special": 60,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0032516862265765667,
+        0.0011561175342649221,
+        0.9955921769142151
+      ]
+    },
+    {
+      "id": "cal-v1-queue-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.016325032338500023,
+        0.004740402568131685,
+        0.9789345860481262
+      ]
+    },
+    {
+      "id": "cal-v1-queue-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.394313044846058e-05,
+        0.9701017737388611,
+        0.029814278706908226
+      ]
+    },
+    {
+      "id": "cal-v1-queue-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 62,
+      "covered_tokens_with_special": 62,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.602899470133707e-05,
+        0.9708932638168335,
+        0.02902071364223957
+      ]
+    },
+    {
+      "id": "cal-v1-replica-permission-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 58,
+      "covered_tokens_with_special": 58,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.6306653022766113,
+        0.0003255051269661635,
+        0.36900919675827026
+      ]
+    },
+    {
+      "id": "cal-v1-replica-permission-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 59,
+      "covered_tokens_with_special": 59,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0002701081393752247,
+        0.01801239140331745,
+        0.9817174673080444
+      ]
+    },
+    {
+      "id": "cal-v1-replica-scope-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.00432603107765317,
+        0.0040840869769454,
+        0.9915898442268372
+      ]
+    },
+    {
+      "id": "cal-v1-replica-scope-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 66,
+      "covered_tokens_with_special": 66,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.027975039556622505,
+        0.04038779437541962,
+        0.931637167930603
+      ]
+    },
+    {
+      "id": "cal-v1-replica-target-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0018812011694535613,
+        0.18737784028053284,
+        0.8107410073280334
+      ]
+    },
+    {
+      "id": "cal-v1-replica-target-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 64,
+      "covered_tokens_with_special": 64,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0014907479053363204,
+        0.024423357099294662,
+        0.9740859270095825
+      ]
+    },
+    {
+      "id": "cal-v1-replica-simulation-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 58,
+      "covered_tokens_with_special": 58,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.0032167986501008272,
+        0.0009403266594745219,
+        0.9958428740501404
+      ]
+    },
+    {
+      "id": "cal-v1-replica-simulation-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 59,
+      "covered_tokens_with_special": 59,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        0.015055399388074875,
+        0.005281802732497454,
+        0.9796628355979919
+      ]
+    },
+    {
+      "id": "cal-v1-replica-quote-0",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.975865785032511e-05,
+        0.9729487895965576,
+        0.026961468160152435
+      ]
+    },
+    {
+      "id": "cal-v1-replica-quote-1",
+      "mode": "conflict_hypothesis",
+      "input_tokens_with_special": 61,
+      "covered_tokens_with_special": 61,
+      "dropped_tokens": 0,
+      "nli_probabilities": [
+        8.869362500263378e-05,
+        0.9717485904693604,
+        0.028162723407149315
+      ]
+    }
+  ]
+}

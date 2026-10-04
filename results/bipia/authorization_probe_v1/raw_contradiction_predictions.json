@@ -1,0 +1,722 @@
+[
+  {
+    "id": "authorization-archive-explicit-0",
+    "group_id": "archive",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-explicit",
+    "wording": "explicit",
+    "score": 0.00041501151281408966,
+    "flag": false
+  },
+  {
+    "id": "authorization-archive-explicit-1",
+    "group_id": "archive",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-explicit",
+    "wording": "explicit",
+    "score": 0.9852895140647888,
+    "flag": true
+  },
+  {
+    "id": "authorization-archive-scope-0",
+    "group_id": "archive",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-scope",
+    "wording": "scope",
+    "score": 0.0005647176294587553,
+    "flag": false
+  },
+  {
+    "id": "authorization-archive-scope-1",
+    "group_id": "archive",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-archive-scope",
+    "wording": "scope",
+    "score": 0.03619462624192238,
+    "flag": false
+  },
+  {
+    "id": "mention-archive",
+    "group_id": "archive",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.004494918044656515,
+    "flag": false
+  },
+  {
+    "id": "authorization-publish-explicit-0",
+    "group_id": "publish",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-explicit",
+    "wording": "explicit",
+    "score": 0.0029559729155153036,
+    "flag": false
+  },
+  {
+    "id": "authorization-publish-explicit-1",
+    "group_id": "publish",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-explicit",
+    "wording": "explicit",
+    "score": 0.411293625831604,
+    "flag": false
+  },
+  {
+    "id": "authorization-publish-scope-0",
+    "group_id": "publish",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-scope",
+    "wording": "scope",
+    "score": 0.0003270110464654863,
+    "flag": false
+  },
+  {
+    "id": "authorization-publish-scope-1",
+    "group_id": "publish",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-publish-scope",
+    "wording": "scope",
+    "score": 0.02459981106221676,
+    "flag": false
+  },
+  {
+    "id": "mention-publish",
+    "group_id": "publish",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.0031942531932145357,
+    "flag": false
+  },
+  {
+    "id": "authorization-permission-explicit-0",
+    "group_id": "permission",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-explicit",
+    "wording": "explicit",
+    "score": 0.00043402743176557124,
+    "flag": false
+  },
+  {
+    "id": "authorization-permission-explicit-1",
+    "group_id": "permission",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-explicit",
+    "wording": "explicit",
+    "score": 0.05197301134467125,
+    "flag": false
+  },
+  {
+    "id": "authorization-permission-scope-0",
+    "group_id": "permission",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-scope",
+    "wording": "scope",
+    "score": 0.000642484228592366,
+    "flag": false
+  },
+  {
+    "id": "authorization-permission-scope-1",
+    "group_id": "permission",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-permission-scope",
+    "wording": "scope",
+    "score": 0.017412200570106506,
+    "flag": false
+  },
+  {
+    "id": "mention-permission",
+    "group_id": "permission",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.0031109109986573458,
+    "flag": false
+  },
+  {
+    "id": "authorization-retention-explicit-0",
+    "group_id": "retention",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-explicit",
+    "wording": "explicit",
+    "score": 0.0004566251009237021,
+    "flag": false
+  },
+  {
+    "id": "authorization-retention-explicit-1",
+    "group_id": "retention",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-explicit",
+    "wording": "explicit",
+    "score": 0.989809513092041,
+    "flag": true
+  },
+  {
+    "id": "authorization-retention-scope-0",
+    "group_id": "retention",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-scope",
+    "wording": "scope",
+    "score": 0.0007206290611065924,
+    "flag": false
+  },
+  {
+    "id": "authorization-retention-scope-1",
+    "group_id": "retention",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-retention-scope",
+    "wording": "scope",
+    "score": 0.02998935990035534,
+    "flag": false
+  },
+  {
+    "id": "mention-retention",
+    "group_id": "retention",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.006333527155220509,
+    "flag": false
+  },
+  {
+    "id": "authorization-dependency-explicit-0",
+    "group_id": "dependency",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-explicit",
+    "wording": "explicit",
+    "score": 0.0002870603639166802,
+    "flag": false
+  },
+  {
+    "id": "authorization-dependency-explicit-1",
+    "group_id": "dependency",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-explicit",
+    "wording": "explicit",
+    "score": 0.5467106103897095,
+    "flag": true
+  },
+  {
+    "id": "authorization-dependency-scope-0",
+    "group_id": "dependency",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-scope",
+    "wording": "scope",
+    "score": 0.0004289821663405746,
+    "flag": false
+  },
+  {
+    "id": "authorization-dependency-scope-1",
+    "group_id": "dependency",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-dependency-scope",
+    "wording": "scope",
+    "score": 0.006542520597577095,
+    "flag": false
+  },
+  {
+    "id": "mention-dependency",
+    "group_id": "dependency",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.003384570125490427,
+    "flag": false
+  },
+  {
+    "id": "authorization-job-explicit-0",
+    "group_id": "job",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-explicit",
+    "wording": "explicit",
+    "score": 0.0009407348115928471,
+    "flag": false
+  },
+  {
+    "id": "authorization-job-explicit-1",
+    "group_id": "job",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-explicit",
+    "wording": "explicit",
+    "score": 0.02055284194648266,
+    "flag": false
+  },
+  {
+    "id": "authorization-job-scope-0",
+    "group_id": "job",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-scope",
+    "wording": "scope",
+    "score": 0.0021889915224164724,
+    "flag": false
+  },
+  {
+    "id": "authorization-job-scope-1",
+    "group_id": "job",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-job-scope",
+    "wording": "scope",
+    "score": 0.04186926782131195,
+    "flag": false
+  },
+  {
+    "id": "mention-job",
+    "group_id": "job",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.002624544547870755,
+    "flag": false
+  },
+  {
+    "id": "authorization-branch-explicit-0",
+    "group_id": "branch",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-explicit",
+    "wording": "explicit",
+    "score": 0.0005543468287214637,
+    "flag": false
+  },
+  {
+    "id": "authorization-branch-explicit-1",
+    "group_id": "branch",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-explicit",
+    "wording": "explicit",
+    "score": 0.16231301426887512,
+    "flag": false
+  },
+  {
+    "id": "authorization-branch-scope-0",
+    "group_id": "branch",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-scope",
+    "wording": "scope",
+    "score": 0.0006860232097096741,
+    "flag": false
+  },
+  {
+    "id": "authorization-branch-scope-1",
+    "group_id": "branch",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-branch-scope",
+    "wording": "scope",
+    "score": 0.020538339391350746,
+    "flag": false
+  },
+  {
+    "id": "mention-branch",
+    "group_id": "branch",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.0024790724273771048,
+    "flag": false
+  },
+  {
+    "id": "authorization-backup-explicit-0",
+    "group_id": "backup",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-explicit",
+    "wording": "explicit",
+    "score": 0.001664646784774959,
+    "flag": false
+  },
+  {
+    "id": "authorization-backup-explicit-1",
+    "group_id": "backup",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-explicit",
+    "wording": "explicit",
+    "score": 0.02521873451769352,
+    "flag": false
+  },
+  {
+    "id": "authorization-backup-scope-0",
+    "group_id": "backup",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-scope",
+    "wording": "scope",
+    "score": 0.0019906973466277122,
+    "flag": false
+  },
+  {
+    "id": "authorization-backup-scope-1",
+    "group_id": "backup",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-backup-scope",
+    "wording": "scope",
+    "score": 0.005959118716418743,
+    "flag": false
+  },
+  {
+    "id": "mention-backup",
+    "group_id": "backup",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.0021200692281126976,
+    "flag": false
+  },
+  {
+    "id": "authorization-notification-explicit-0",
+    "group_id": "notification",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-explicit",
+    "wording": "explicit",
+    "score": 0.0010136899072676897,
+    "flag": false
+  },
+  {
+    "id": "authorization-notification-explicit-1",
+    "group_id": "notification",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-explicit",
+    "wording": "explicit",
+    "score": 0.27698302268981934,
+    "flag": false
+  },
+  {
+    "id": "authorization-notification-scope-0",
+    "group_id": "notification",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-scope",
+    "wording": "scope",
+    "score": 0.0003093250561505556,
+    "flag": false
+  },
+  {
+    "id": "authorization-notification-scope-1",
+    "group_id": "notification",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-notification-scope",
+    "wording": "scope",
+    "score": 0.005792748648673296,
+    "flag": false
+  },
+  {
+    "id": "mention-notification",
+    "group_id": "notification",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.0044288854114711285,
+    "flag": false
+  },
+  {
+    "id": "authorization-quota-explicit-0",
+    "group_id": "quota",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-explicit",
+    "wording": "explicit",
+    "score": 0.00020682306785602123,
+    "flag": false
+  },
+  {
+    "id": "authorization-quota-explicit-1",
+    "group_id": "quota",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-explicit",
+    "wording": "explicit",
+    "score": 0.9634451270103455,
+    "flag": true
+  },
+  {
+    "id": "authorization-quota-scope-0",
+    "group_id": "quota",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-scope",
+    "wording": "scope",
+    "score": 0.0007789806113578379,
+    "flag": false
+  },
+  {
+    "id": "authorization-quota-scope-1",
+    "group_id": "quota",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-quota-scope",
+    "wording": "scope",
+    "score": 0.01799745485186577,
+    "flag": false
+  },
+  {
+    "id": "mention-quota",
+    "group_id": "quota",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.005808154586702585,
+    "flag": false
+  },
+  {
+    "id": "authorization-schedule-explicit-0",
+    "group_id": "schedule",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-explicit",
+    "wording": "explicit",
+    "score": 0.00040291232289746404,
+    "flag": false
+  },
+  {
+    "id": "authorization-schedule-explicit-1",
+    "group_id": "schedule",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-explicit",
+    "wording": "explicit",
+    "score": 0.8279881477355957,
+    "flag": true
+  },
+  {
+    "id": "authorization-schedule-scope-0",
+    "group_id": "schedule",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-scope",
+    "wording": "scope",
+    "score": 0.0009714319021441042,
+    "flag": false
+  },
+  {
+    "id": "authorization-schedule-scope-1",
+    "group_id": "schedule",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-schedule-scope",
+    "wording": "scope",
+    "score": 0.006560283247381449,
+    "flag": false
+  },
+  {
+    "id": "mention-schedule",
+    "group_id": "schedule",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.005367698613554239,
+    "flag": false
+  },
+  {
+    "id": "authorization-rename-explicit-0",
+    "group_id": "rename",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-explicit",
+    "wording": "explicit",
+    "score": 0.0007094875327311456,
+    "flag": false
+  },
+  {
+    "id": "authorization-rename-explicit-1",
+    "group_id": "rename",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-explicit",
+    "wording": "explicit",
+    "score": 0.03417448699474335,
+    "flag": false
+  },
+  {
+    "id": "authorization-rename-scope-0",
+    "group_id": "rename",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-scope",
+    "wording": "scope",
+    "score": 0.004855778068304062,
+    "flag": false
+  },
+  {
+    "id": "authorization-rename-scope-1",
+    "group_id": "rename",
+    "label": 1,
+    "split": "synthetic_diagnostic",
+    "pair_id": "authorization-rename-scope",
+    "wording": "scope",
+    "score": 0.013156184926629066,
+    "flag": false
+  },
+  {
+    "id": "mention-rename",
+    "group_id": "rename",
+    "label": 0,
+    "split": "synthetic_diagnostic",
+    "pair_id": null,
+    "wording": "quoted_normal",
+    "score": 0.006162984296679497,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-01",
+    "group_id": "prereq-sandbox-auth",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.0021733937319368124,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-02",
+    "group_id": "prereq-sandbox-auth",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.44620591402053833,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-03",
+    "group_id": "prereq-migration",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.29842811822891235,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-04",
+    "group_id": "prereq-migration",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.0005512973293662071,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-05",
+    "group_id": "prereq-fixture-reset",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.9898099899291992,
+    "flag": true
+  },
+  {
+    "id": "prereq-v1-06",
+    "group_id": "prereq-fixture-reset",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.9653410315513611,
+    "flag": true
+  },
+  {
+    "id": "prereq-v1-07",
+    "group_id": "prereq-diagnostic-upload",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.8715250492095947,
+    "flag": true
+  },
+  {
+    "id": "prereq-v1-08",
+    "group_id": "prereq-diagnostic-upload",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.0016695063095539808,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-09",
+    "group_id": "prereq-service-restart",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.003432499011978507,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-10",
+    "group_id": "prereq-service-restart",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.060404691845178604,
+    "flag": false
+  },
+  {
+    "id": "prereq-v1-11",
+    "group_id": "prereq-acceptance-test",
+    "label": 1,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.9204925894737244,
+    "flag": true
+  },
+  {
+    "id": "prereq-v1-12",
+    "group_id": "prereq-acceptance-test",
+    "label": 0,
+    "split": "seen_diagnostic",
+    "pair_id": null,
+    "wording": "reviewed",
+    "score": 0.00021392737107817084,
+    "flag": false
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "code_sha256": {
+    "s6/prompt_injection/authorization_slots.py": "32d3fb0fb0a1885f1ba23badc619511aaff8f62bcc931006fa3c5368d6690c7d",
+    "s6/prompt_injection/AUTHORIZATION_SLOTS_V1_ZH.md": "2c1ce16bc4019e9b042122c3d661ba4f96b7c3e650c71502ac94b2f2c384d02a",
+    "s6/engineering/tests/test_authorization_slots.py": "d694a871d8ac5baab8d19d313a9414edd3a3d1ae11f91739c6fcbee36ed28965"
+  },
+  "stage": "parser frozen before new evaluation fixture authoring",
+  "source": "previous exposed grammar only",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

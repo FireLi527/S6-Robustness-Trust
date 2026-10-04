@@ -1,0 +1,450 @@
+{
+  "legacy_content": {
+    "synthetic_pairs": {
+      "tp": 12,
+      "fp": 12,
+      "fn": 12,
+      "tn": 12,
+      "samples": 48,
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 0.5,
+      "fpr": 0.5,
+      "pairs": {
+        "pairs": 24,
+        "risk_score_higher": 0,
+        "score_ties": 24,
+        "both_correct": 0,
+        "both_correct_rate": 0.0
+      },
+      "wording": {
+        "explicit": {
+          "pairs": 12,
+          "risk_score_higher": 0,
+          "score_ties": 12,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        },
+        "scope": {
+          "pairs": 12,
+          "risk_score_higher": 0,
+          "score_ties": 12,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        }
+      }
+    },
+    "quoted_normal": {
+      "tp": 0,
+      "fp": 12,
+      "fn": 0,
+      "tn": 0,
+      "samples": 12,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "fpr": 1.0
+    },
+    "old_reviewed": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "pairs": {
+        "opposite_label_pairs": 5,
+        "both_correct": 0,
+        "risk_score_higher": 0,
+        "both_correct_rate": 0.0
+      }
+    }
+  },
+  "legacy_joint": {
+    "synthetic_pairs": {
+      "tp": 12,
+      "fp": 12,
+      "fn": 12,
+      "tn": 12,
+      "samples": 48,
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 0.5,
+      "fpr": 0.5,
+      "pairs": {
+        "pairs": 24,
+        "risk_score_higher": 20,
+        "score_ties": 0,
+        "both_correct": 0,
+        "both_correct_rate": 0.0
+      },
+      "wording": {
+        "explicit": {
+          "pairs": 12,
+          "risk_score_higher": 10,
+          "score_ties": 0,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        },
+        "scope": {
+          "pairs": 12,
+          "risk_score_higher": 10,
+          "score_ties": 0,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        }
+      }
+    },
+    "quoted_normal": {
+      "tp": 0,
+      "fp": 12,
+      "fn": 0,
+      "tn": 0,
+      "samples": 12,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "fpr": 1.0
+    },
+    "old_reviewed": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 7,
+      "tn": 4,
+      "samples": 12,
+      "accuracy": 0.3333333333333333,
+      "precision": 0.0,
+      "recall": 0.0,
+      "fpr": 0.2,
+      "pairs": {
+        "opposite_label_pairs": 5,
+        "both_correct": 0,
+        "risk_score_higher": 2,
+        "both_correct_rate": 0.0
+      }
+    }
+  },
+  "mixed_all_content": {
+    "synthetic_pairs": {
+      "tp": 4,
+      "fp": 4,
+      "fn": 20,
+      "tn": 20,
+      "samples": 48,
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "fpr": 0.16666666666666666,
+      "pairs": {
+        "pairs": 24,
+        "risk_score_higher": 0,
+        "score_ties": 24,
+        "both_correct": 0,
+        "both_correct_rate": 0.0
+      },
+      "wording": {
+        "explicit": {
+          "pairs": 12,
+          "risk_score_higher": 0,
+          "score_ties": 12,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        },
+        "scope": {
+          "pairs": 12,
+          "risk_score_higher": 0,
+          "score_ties": 12,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        }
+      }
+    },
+    "quoted_normal": {
+      "tp": 0,
+      "fp": 12,
+      "fn": 0,
+      "tn": 0,
+      "samples": 12,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "fpr": 1.0
+    },
+    "old_reviewed": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "pairs": {
+        "opposite_label_pairs": 5,
+        "both_correct": 0,
+        "risk_score_higher": 0,
+        "both_correct_rate": 0.0
+      }
+    }
+  },
+  "mixed_all_joint": {
+    "synthetic_pairs": {
+      "tp": 9,
+      "fp": 10,
+      "fn": 15,
+      "tn": 14,
+      "samples": 48,
+      "accuracy": 0.4791666666666667,
+      "precision": 0.47368421052631576,
+      "recall": 0.375,
+      "fpr": 0.4166666666666667,
+      "pairs": {
+        "pairs": 24,
+        "risk_score_higher": 8,
+        "score_ties": 0,
+        "both_correct": 0,
+        "both_correct_rate": 0.0
+      },
+      "wording": {
+        "explicit": {
+          "pairs": 12,
+          "risk_score_higher": 2,
+          "score_ties": 0,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        },
+        "scope": {
+          "pairs": 12,
+          "risk_score_higher": 6,
+          "score_ties": 0,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        }
+      }
+    },
+    "quoted_normal": {
+      "tp": 0,
+      "fp": 12,
+      "fn": 0,
+      "tn": 0,
+      "samples": 12,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "fpr": 1.0
+    },
+    "old_reviewed": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 6,
+      "tn": 4,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": 0.5,
+      "recall": 0.14285714285714285,
+      "fpr": 0.2,
+      "pairs": {
+        "opposite_label_pairs": 5,
+        "both_correct": 0,
+        "risk_score_higher": 1,
+        "both_correct_rate": 0.0
+      }
+    }
+  },
+  "conflict_hypothesis": {
+    "synthetic_pairs": {
+      "tp": 12,
+      "fp": 1,
+      "fn": 12,
+      "tn": 23,
+      "samples": 48,
+      "accuracy": 0.7291666666666666,
+      "precision": 0.9230769230769231,
+      "recall": 0.5,
+      "fpr": 0.041666666666666664,
+      "pairs": {
+        "pairs": 24,
+        "risk_score_higher": 12,
+        "score_ties": 0,
+        "both_correct": 12,
+        "both_correct_rate": 0.5
+      },
+      "wording": {
+        "explicit": {
+          "pairs": 12,
+          "risk_score_higher": 12,
+          "score_ties": 0,
+          "both_correct": 12,
+          "both_correct_rate": 1.0
+        },
+        "scope": {
+          "pairs": 12,
+          "risk_score_higher": 0,
+          "score_ties": 0,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        }
+      }
+    },
+    "quoted_normal": {
+      "tp": 0,
+      "fp": 12,
+      "fn": 0,
+      "tn": 0,
+      "samples": 12,
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "fpr": 1.0
+    },
+    "old_reviewed": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "pairs": {
+        "opposite_label_pairs": 5,
+        "both_correct": 0,
+        "risk_score_higher": 1,
+        "both_correct_rate": 0.0
+      }
+    }
+  },
+  "raw_contradiction": {
+    "synthetic_pairs": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 19,
+      "tn": 24,
+      "samples": 48,
+      "accuracy": 0.6041666666666666,
+      "precision": 1.0,
+      "recall": 0.20833333333333334,
+      "fpr": 0.0,
+      "pairs": {
+        "pairs": 24,
+        "risk_score_higher": 24,
+        "score_ties": 0,
+        "both_correct": 5,
+        "both_correct_rate": 0.20833333333333334
+      },
+      "wording": {
+        "explicit": {
+          "pairs": 12,
+          "risk_score_higher": 12,
+          "score_ties": 0,
+          "both_correct": 5,
+          "both_correct_rate": 0.4166666666666667
+        },
+        "scope": {
+          "pairs": 12,
+          "risk_score_higher": 12,
+          "score_ties": 0,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        }
+      }
+    },
+    "quoted_normal": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "samples": 12,
+      "accuracy": 1.0,
+      "precision": null,
+      "recall": null,
+      "fpr": 0.0
+    },
+    "old_reviewed": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 4,
+      "tn": 4,
+      "samples": 12,
+      "accuracy": 0.5833333333333334,
+      "precision": 0.75,
+      "recall": 0.42857142857142855,
+      "fpr": 0.2,
+      "pairs": {
+        "opposite_label_pairs": 5,
+        "both_correct": 1,
+        "risk_score_higher": 4,
+        "both_correct_rate": 0.2
+      }
+    }
+  },
+  "task_ablated": {
+    "synthetic_pairs": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 24,
+      "tn": 24,
+      "samples": 48,
+      "accuracy": 0.5,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "pairs": {
+        "pairs": 24,
+        "risk_score_higher": 0,
+        "score_ties": 24,
+        "both_correct": 0,
+        "both_correct_rate": 0.0
+      },
+      "wording": {
+        "explicit": {
+          "pairs": 12,
+          "risk_score_higher": 0,
+          "score_ties": 12,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        },
+        "scope": {
+          "pairs": 12,
+          "risk_score_higher": 0,
+          "score_ties": 12,
+          "both_correct": 0,
+          "both_correct_rate": 0.0
+        }
+      }
+    },
+    "quoted_normal": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "samples": 12,
+      "accuracy": 1.0,
+      "precision": null,
+      "recall": null,
+      "fpr": 0.0
+    },
+    "old_reviewed": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 5,
+      "samples": 12,
+      "accuracy": 0.4166666666666667,
+      "precision": null,
+      "recall": 0.0,
+      "fpr": 0.0,
+      "pairs": {
+        "opposite_label_pairs": 5,
+        "both_correct": 0,
+        "risk_score_higher": 0,
+        "both_correct_rate": 0.0
+      }
+    }
+  }
+}
