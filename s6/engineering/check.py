@@ -80,7 +80,11 @@ def static_checks() -> list[str]:
                     "trusted_review_runtime_v1.py", "experiment_trusted_review_live_v1.py",
                     "trusted_route_candidates_v2.py", "prepare_trusted_route_candidates_v2.py",
                     "experiment_trusted_route_confirmation_v2.py", "approval_readiness_v1.py",
-                    "experiment_approval_readiness_v1.py", "experiment_approval_readiness_validation_v1.py"))
+                    "experiment_approval_readiness_v1.py", "experiment_approval_readiness_validation_v1.py",
+                    "approval_readiness_v2.py", "experiment_readiness_routing_v2.py",
+                    "chinese_analysis_v3.py", "experiment_readiness_routing_v3.py",
+                    "prepare_chinese_analysis_confirmation_v1.py", "prepare_chinese_analysis_confirmation_v1_compat.py",
+                    "experiment_chinese_analysis_confirmation_v1.py"))
     managed.extend(ROOT / "s6/prompt_injection" / name for name in
                    ("relation_scale_targets_v1.py", "relation_scale_data_v1.py", "prepare_relation_scale_training_v1.py",
                     "experiment_relation_scale_training_v1.py"))

@@ -1,0 +1,37 @@
+[05/Oct/2026 15:25:45] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:45] "GET /api/example?split=unknown HTTP/1.1" 400 -
+[05/Oct/2026 15:25:45] "GET /api/example?split=development&encoding=stealth HTTP/1.1" 200 -
+[05/Oct/2026 15:25:45] "GET / HTTP/1.1" 200 -
+[05/Oct/2026 15:25:45] "GET /assets/request_state.js HTTP/1.1" 200 -
+[05/Oct/2026 15:25:45] "GET /assets/app.py HTTP/1.1" 404 -
+[05/Oct/2026 15:25:45] "GET /assets/../app.py HTTP/1.1" 404 -
+[05/Oct/2026 15:25:45] "GET /assets/%2e%2e/app.py HTTP/1.1" 404 -
+[05/Oct/2026 15:25:45] "GET /api/status HTTP/1.1" 200 -
+[05/Oct/2026 15:25:45] "POST /api/detect HTTP/1.1" 400 -
+[05/Oct/2026 15:25:45] "POST /api/detect HTTP/1.1" 400 -
+[05/Oct/2026 15:25:45] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:47] "GET /api/example HTTP/1.1" 200 -
+[05/Oct/2026 15:25:47] "POST /api/intent HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/intent HTTP/1.1" 400 -
+[05/Oct/2026 15:25:48] "POST /api/intent HTTP/1.1" 400 -
+[05/Oct/2026 15:25:48] "POST /api/intent HTTP/1.1" 400 -
+[05/Oct/2026 15:25:48] "POST /api/infer-intent HTTP/1.1" 400 -
+[05/Oct/2026 15:25:48] "POST /api/infer-intent HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "GET /api/tool-scenario HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/intent HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/task-scope HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/approvals HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/detect HTTP/1.1" 200 -
+[05/Oct/2026 15:25:48] "POST /api/approvals HTTP/1.1" 400 -
+[05/Oct/2026 15:25:49] "POST /api/task-scope HTTP/1.1" 400 -
+[05/Oct/2026 15:25:49] "POST /api/task-scope HTTP/1.1" 400 -
+.......................................................................................................................................................
+----------------------------------------------------------------------
+Ran 151 tests in 3.910s
+
+OK

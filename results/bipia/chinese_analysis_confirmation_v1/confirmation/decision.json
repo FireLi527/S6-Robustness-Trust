@@ -1,0 +1,13 @@
+{
+  "state": "CONTROLLED_CONFIRMATION_PASSED",
+  "accuracy": {
+    "hits": 40,
+    "n": 40
+  },
+  "prior609_unchanged": true,
+  "scope": "New human-reviewed assistant-authored controlled Chinese forty; fixed candidate, no output-guided tuning",
+  "limits": "Not natural-distribution or blinded-author confirmation; model UNKNOWN0/8, rule-assisted final UNKNOWN8/8; historical failures and development residual retained",
+  "deployment": false,
+  "training": false,
+  "execution_authorized": false
+}

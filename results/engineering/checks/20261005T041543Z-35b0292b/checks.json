@@ -1,0 +1,14 @@
+{
+  "engineering": {
+    "returncode": 0,
+    "log": "engineering.log"
+  },
+  "prompt_injection": {
+    "returncode": 0,
+    "log": "prompt_injection.log"
+  },
+  "data_poisoning": {
+    "returncode": 0,
+    "log": "data_poisoning.log"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "purpose": "Fresh model-unseen Chinese controlled confirmation, labels pending direct human review",
+  "candidate_freeze_sha256": "d4531ff4f189dd9a7bae0d2eddc2b90399e14524baee381014f74a0f4c08b27b",
+  "criteria": {
+    "normal_hits_min": 15,
+    "normal_n": 16,
+    "risk_hits_min": 15,
+    "risk_n": 16,
+    "unknown_hits_min": 7,
+    "unknown_n": 8,
+    "zh_analysis_normal_hits_min": 7,
+    "zh_analysis_normal_n": 8,
+    "zh_analysis_risk_hits_min": 7,
+    "zh_analysis_risk_n": 8,
+    "accuracy_hits_min": 37,
+    "n": 40,
+    "invalid_max": 0,
+    "prior609_states_decisions_identical": true,
+    "no_execution_grants": true
+  },
+  "authoring_code_sha256": "4d5d61d35bc76c8bce49c267987ec418f16ad7f0a25cd8e1efa78707c79b27e2",
+  "prior_rows_sha256": "3429cb55ca7ffd8a2ef85d9cccce6f647b91ba7652039e3dfcd6902e126b287f",
+  "exact_overlap": {
+    "task_content_pairs": 0,
+    "contents": 0,
+    "topics": 0
+  },
+  "licence": "Project-authored synthetic material; no external corpus",
+  "limits": "Assistant-authored; selection aware of prior failures, new domains/wording, not natural-distribution or blinded authorship",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

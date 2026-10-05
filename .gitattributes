@@ -22,3 +22,9 @@ s6/prompt_injection/run_content_probe_v1_compat.py -text whitespace=trailing-spa
 # These reviewed, hashed Markdown snapshots include a final empty line.
 data/bipia/approval_readiness_validation_candidates_v1/REVIEW_ZH.md whitespace=trailing-space,space-before-tab,-blank-at-eof
 data/bipia/trusted_route_confirmation_candidates_v2/REVIEW_ZH.md whitespace=trailing-space,space-before-tab,-blank-at-eof
+
+# Preserve the reviewed new material and exact Windows test-log bytes.
+data/bipia/chinese_analysis_confirmation_candidates_v1_compat/REVIEW_ZH.md whitespace=trailing-space,space-before-tab,-blank-at-eof
+results/engineering/checks/20261005T040602Z-f0413f34/*.log -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/engineering/checks/20261005T041543Z-35b0292b/*.log -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/engineering/checks/20261005T042533Z-55a75e61/*.log -text whitespace=trailing-space,space-before-tab,cr-at-eol

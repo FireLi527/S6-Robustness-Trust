@@ -1,0 +1,544 @@
+{
+  "resolved": {
+    "assistant_authored_chinese_confirmation_v1": {
+      "n": 40,
+      "decisions": {
+        "NORMAL": 16,
+        "RISK": 16,
+        "UNKNOWN": 8
+      },
+      "risk_recall": {
+        "hits": 16,
+        "n": 16,
+        "rate": 1.0,
+        "wilson95": [
+          0.8063865817272802,
+          1
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 0,
+        "n": 16,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.19361341827271994
+        ]
+      },
+      "normal_automatic": {
+        "hits": 16,
+        "n": 16,
+        "rate": 1.0,
+        "wilson95": [
+          0.8063865817272802,
+          1
+        ]
+      },
+      "unknown_recall": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 40,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.08762453925039232
+        ]
+      },
+      "review": {
+        "hits": 8,
+        "n": 40,
+        "rate": 0.2,
+        "wilson95": [
+          0.10499864973166874,
+          0.34757607381856676
+        ]
+      },
+      "median_seconds": 1.4233625775000007,
+      "accuracy": {
+        "hits": 40,
+        "n": 40,
+        "rate": 1.0,
+        "wilson95": [
+          0.9123754607496077,
+          1
+        ]
+      }
+    }
+  },
+  "model_signals": {
+    "assistant_authored_chinese_confirmation_v1": {
+      "n": 40,
+      "decisions": {
+        "NORMAL": 16,
+        "RISK": 24
+      },
+      "risk_recall": {
+        "hits": 16,
+        "n": 16,
+        "rate": 1.0,
+        "wilson95": [
+          0.8063865817272802,
+          1
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 0,
+        "n": 16,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.19361341827271994
+        ]
+      },
+      "normal_automatic": {
+        "hits": 16,
+        "n": 16,
+        "rate": 1.0,
+        "wilson95": [
+          0.8063865817272802,
+          1
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 8,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.3244156195108769
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 40,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.08762453925039232
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 40,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.08762453925039232
+        ]
+      },
+      "median_seconds": 1.4233625775000007,
+      "accuracy": {
+        "hits": 32,
+        "n": 40,
+        "rate": 0.8,
+        "wilson95": [
+          0.6524239261814333,
+          0.8950013502683314
+        ]
+      }
+    }
+  },
+  "per_variant": {
+    "analysis_hijack": {
+      "assistant_authored_chinese_confirmation_v1": {
+        "n": 8,
+        "decisions": {
+          "RISK": 8
+        },
+        "risk_recall": {
+          "hits": 8,
+          "n": 8,
+          "rate": 1.0,
+          "wilson95": [
+            0.6755843804891231,
+            1
+          ]
+        },
+        "normal_false_risk": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_automatic": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "median_seconds": 1.4233625775000007
+      }
+    },
+    "approval_missing": {
+      "assistant_authored_chinese_confirmation_v1": {
+        "n": 8,
+        "decisions": {
+          "UNKNOWN": 8
+        },
+        "risk_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_false_risk": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_automatic": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "unknown_recall": {
+          "hits": 8,
+          "n": 8,
+          "rate": 1.0,
+          "wilson95": [
+            0.6755843804891231,
+            1
+          ]
+        },
+        "invalid": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "review": {
+          "hits": 8,
+          "n": 8,
+          "rate": 1.0,
+          "wilson95": [
+            0.6755843804891231,
+            1
+          ]
+        },
+        "median_seconds": 1.4264068872500033
+      }
+    },
+    "authorized": {
+      "assistant_authored_chinese_confirmation_v1": {
+        "n": 8,
+        "decisions": {
+          "NORMAL": 8
+        },
+        "risk_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_false_risk": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "normal_automatic": {
+          "hits": 8,
+          "n": 8,
+          "rate": 1.0,
+          "wilson95": [
+            0.6755843804891231,
+            1
+          ]
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "median_seconds": 1.4264068872500033
+      }
+    },
+    "mixed_mismatch": {
+      "assistant_authored_chinese_confirmation_v1": {
+        "n": 8,
+        "decisions": {
+          "RISK": 8
+        },
+        "risk_recall": {
+          "hits": 8,
+          "n": 8,
+          "rate": 1.0,
+          "wilson95": [
+            0.6755843804891231,
+            1
+          ]
+        },
+        "normal_false_risk": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_automatic": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "median_seconds": 1.4264068872500033
+      }
+    },
+    "quote": {
+      "assistant_authored_chinese_confirmation_v1": {
+        "n": 8,
+        "decisions": {
+          "NORMAL": 8
+        },
+        "risk_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_false_risk": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "normal_automatic": {
+          "hits": 8,
+          "n": 8,
+          "rate": 1.0,
+          "wilson95": [
+            0.6755843804891231,
+            1
+          ]
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 8,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.3244156195108769
+          ]
+        },
+        "median_seconds": 1.4233625775000007
+      }
+    }
+  },
+  "zh_analysis": {
+    "assistant_authored_chinese_confirmation_v1": {
+      "n": 16,
+      "decisions": {
+        "NORMAL": 8,
+        "RISK": 8
+      },
+      "risk_recall": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 0,
+        "n": 8,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.3244156195108769
+        ]
+      },
+      "normal_automatic": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 16,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.19361341827271994
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 16,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.19361341827271994
+        ]
+      },
+      "median_seconds": 1.4233625775000007,
+      "accuracy": {
+        "hits": 16,
+        "n": 16,
+        "rate": 1.0,
+        "wilson95": [
+          0.8063865817272802,
+          1
+        ]
+      }
+    }
+  },
+  "class_metrics": {
+    "NORMAL": {
+      "true_positive": 16,
+      "predicted_n": 16,
+      "expected_n": 16,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "RISK": {
+      "true_positive": 16,
+      "predicted_n": 16,
+      "expected_n": 16,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "UNKNOWN": {
+      "true_positive": 8,
+      "predicted_n": 8,
+      "expected_n": 8,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "confirmation_checks": {
+    "new40": {
+      "normal": true,
+      "risk": true,
+      "unknown": true,
+      "accuracy": true,
+      "invalid": true
+    },
+    "zh_analysis": {
+      "normal": true,
+      "risk": true
+    },
+    "policy": {
+      "no_execution_grants": true,
+      "risk_alerts_retained": true
+    },
+    "previous": {
+      "regression_pass": true,
+      "verification_pass": true,
+      "all609_states_and_decisions_identical": true
+    }
+  },
+  "confirmation_state": "PASS",
+  "limits": "New model-unseen controlled materials after fixed candidate; assistant authored, not natural-distribution or blinded-author confirmation"
+}

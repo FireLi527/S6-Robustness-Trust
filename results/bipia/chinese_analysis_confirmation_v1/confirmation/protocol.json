@@ -1,0 +1,16 @@
+{
+  "summary_sha256": "b14602a1c7d2afad99e48b25646ca083bda800c3fa636ca1b6f55f8edfd65d02",
+  "verification_sha256": "48312e05742ae4efe7bd80fc87ae8924f8630b20874d2e720c26af108cbf56c2",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}
