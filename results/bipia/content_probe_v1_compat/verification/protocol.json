@@ -1,0 +1,19 @@
+{
+  "predictions_sha256": {
+    "classifier": "18cd7e536e4bf540f67ec9350b99cc7a1feb52e89347ad332d63c4c40b1c2ab5",
+    "direct": "6e31871cc91a2cfe3a7f03d4d9339956dff638ca460efe6d0c800dd594d207c2"
+  },
+  "verifier_sha256": "a1b606566106453d48060fece6dd040941ec568f455cae02b5d264c853763061",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

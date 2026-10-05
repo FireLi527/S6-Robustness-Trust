@@ -1,0 +1,95 @@
+{
+  "id": "secopd-15909-attacked",
+  "source": "secopd",
+  "expected": "RISK",
+  "decision": "RISK",
+  "score": 0.9934667944908142,
+  "whole_score": 0.9908493757247925,
+  "whole_decision": "RISK",
+  "coverage": [
+    {
+      "segment": 0,
+      "tokens": 67,
+      "windows": [
+        [
+          0,
+          67
+        ]
+      ]
+    },
+    {
+      "segment": 1,
+      "tokens": 6,
+      "windows": [
+        [
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "segment": 2,
+      "tokens": 29,
+      "windows": [
+        [
+          0,
+          29
+        ]
+      ]
+    },
+    {
+      "segment": 3,
+      "tokens": 21,
+      "windows": [
+        [
+          0,
+          21
+        ]
+      ]
+    },
+    {
+      "segment": 4,
+      "tokens": 11,
+      "windows": [
+        [
+          0,
+          11
+        ]
+      ]
+    }
+  ],
+  "window_scores": [
+    {
+      "segment": 0,
+      "start": 0,
+      "end": 67,
+      "risk_probability": 0.9908493757247925
+    },
+    {
+      "segment": 1,
+      "start": 0,
+      "end": 6,
+      "risk_probability": 0.0009020125726237893
+    },
+    {
+      "segment": 2,
+      "start": 0,
+      "end": 29,
+      "risk_probability": 0.9934667944908142
+    },
+    {
+      "segment": 3,
+      "start": 0,
+      "end": 21,
+      "risk_probability": 0.001739424653351307
+    },
+    {
+      "segment": 4,
+      "start": 0,
+      "end": 11,
+      "risk_probability": 0.001545582665130496
+    }
+  ],
+  "seconds": 0.012915053999989823,
+  "valid": true
+}

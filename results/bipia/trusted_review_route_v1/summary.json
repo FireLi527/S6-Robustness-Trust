@@ -1,0 +1,785 @@
+{
+  "resolved": {
+    "assistant_authored_confirmation_candidates": {
+      "n": 32,
+      "decisions": {
+        "NORMAL": 16,
+        "RISK": 8,
+        "UNKNOWN": 8
+      },
+      "risk_recall": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 0,
+        "n": 16,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.19361341827271994
+        ]
+      },
+      "normal_automatic": {
+        "hits": 16,
+        "n": 16,
+        "rate": 1.0,
+        "wilson95": [
+          0.8063865817272802,
+          1
+        ]
+      },
+      "unknown_recall": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 32,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1071827150573635
+        ]
+      },
+      "review": {
+        "hits": 8,
+        "n": 32,
+        "rate": 0.25,
+        "wilson95": [
+          0.1325224398262155,
+          0.42106891770246624
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 32,
+        "n": 32,
+        "rate": 1.0,
+        "wilson95": [
+          0.8928172849426366,
+          1
+        ]
+      }
+    },
+    "injecagent": {
+      "n": 64,
+      "decisions": {
+        "RISK": 58,
+        "NORMAL": 6
+      },
+      "risk_recall": {
+        "hits": 58,
+        "n": 64,
+        "rate": 0.90625,
+        "wilson95": [
+          0.8101690141672233,
+          0.9563223421687121
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "normal_automatic": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 64,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.056626022971156334
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 64,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.056626022971156334
+        ]
+      },
+      "median_seconds": 0
+    },
+    "notinject_quoted_stress": {
+      "n": 339,
+      "decisions": {
+        "NORMAL": 327,
+        "RISK": 12
+      },
+      "risk_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "normal_false_risk": {
+        "hits": 12,
+        "n": 339,
+        "rate": 0.035398230088495575,
+        "wilson95": [
+          0.0203630098125547,
+          0.060845338299226386
+        ]
+      },
+      "normal_automatic": {
+        "hits": 327,
+        "n": 339,
+        "rate": 0.9646017699115044,
+        "wilson95": [
+          0.9391546617007736,
+          0.9796369901874453
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 339,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.011205174634583434
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 339,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.011205174634583434
+        ]
+      },
+      "median_seconds": 0
+    },
+    "relation_holdout": {
+      "n": 18,
+      "decisions": {
+        "RISK": 13,
+        "NORMAL": 5
+      },
+      "risk_recall": {
+        "hits": 6,
+        "n": 6,
+        "rate": 1.0,
+        "wilson95": [
+          0.6096569663469354,
+          0.9999999999999999
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 6,
+        "rate": 0.16666666666666666,
+        "wilson95": [
+          0.03005258587173032,
+          0.563509436563646
+        ]
+      },
+      "normal_automatic": {
+        "hits": 5,
+        "n": 6,
+        "rate": 0.8333333333333334,
+        "wilson95": [
+          0.43649056343635395,
+          0.9699474141282697
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 6,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.3903430336530645
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 18,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1758845505823749
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 18,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1758845505823749
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 11,
+        "n": 18,
+        "rate": 0.6111111111111112,
+        "wilson95": [
+          0.3861866858065617,
+          0.7969500807306884
+        ]
+      }
+    },
+    "secopd": {
+      "n": 80,
+      "decisions": {
+        "NORMAL": 46,
+        "RISK": 34
+      },
+      "risk_recall": {
+        "hits": 33,
+        "n": 40,
+        "rate": 0.825,
+        "wilson95": [
+          0.6804970794560755,
+          0.9125469700311694
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 40,
+        "rate": 0.025,
+        "wilson95": [
+          0.0044267174077949195,
+          0.1288165948800778
+        ]
+      },
+      "normal_automatic": {
+        "hits": 39,
+        "n": 40,
+        "rate": 0.975,
+        "wilson95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 80,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.0458197362645751
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 80,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.0458197362645751
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 72,
+        "n": 80,
+        "rate": 0.9,
+        "wilson95": [
+          0.8148912101660255,
+          0.9484530008223144
+        ]
+      }
+    },
+    "task_swap": {
+      "n": 12,
+      "decisions": {
+        "NORMAL": 5,
+        "RISK": 7
+      },
+      "risk_recall": {
+        "hits": 6,
+        "n": 6,
+        "rate": 1.0,
+        "wilson95": [
+          0.6096569663469354,
+          0.9999999999999999
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 6,
+        "rate": 0.16666666666666666,
+        "wilson95": [
+          0.03005258587173032,
+          0.563509436563646
+        ]
+      },
+      "normal_automatic": {
+        "hits": 5,
+        "n": 6,
+        "rate": 0.8333333333333334,
+        "wilson95": [
+          0.43649056343635395,
+          0.9699474141282697
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 12,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.2425007574992425
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 12,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.2425007574992425
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 11,
+        "n": 12,
+        "rate": 0.9166666666666666,
+        "wilson95": [
+          0.6461140782014047,
+          0.9851352905492264
+        ]
+      }
+    }
+  },
+  "model_signals": {
+    "assistant_authored_confirmation_candidates": {
+      "n": 32,
+      "decisions": {
+        "NORMAL": 16,
+        "RISK": 16
+      },
+      "risk_recall": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 0,
+        "n": 16,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.19361341827271994
+        ]
+      },
+      "normal_automatic": {
+        "hits": 16,
+        "n": 16,
+        "rate": 1.0,
+        "wilson95": [
+          0.8063865817272802,
+          1
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 8,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.3244156195108769
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 32,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1071827150573635
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 32,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1071827150573635
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 24,
+        "n": 32,
+        "rate": 0.75,
+        "wilson95": [
+          0.5789310822975338,
+          0.8674775601737845
+        ]
+      }
+    },
+    "injecagent": {
+      "n": 64,
+      "decisions": {
+        "RISK": 58,
+        "NORMAL": 6
+      },
+      "risk_recall": {
+        "hits": 58,
+        "n": 64,
+        "rate": 0.90625,
+        "wilson95": [
+          0.8101690141672233,
+          0.9563223421687121
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "normal_automatic": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 64,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.056626022971156334
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 64,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.056626022971156334
+        ]
+      },
+      "median_seconds": 0
+    },
+    "notinject_quoted_stress": {
+      "n": 339,
+      "decisions": {
+        "NORMAL": 327,
+        "RISK": 12
+      },
+      "risk_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "normal_false_risk": {
+        "hits": 12,
+        "n": 339,
+        "rate": 0.035398230088495575,
+        "wilson95": [
+          0.0203630098125547,
+          0.060845338299226386
+        ]
+      },
+      "normal_automatic": {
+        "hits": 327,
+        "n": 339,
+        "rate": 0.9646017699115044,
+        "wilson95": [
+          0.9391546617007736,
+          0.9796369901874453
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 339,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.011205174634583434
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 339,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.011205174634583434
+        ]
+      },
+      "median_seconds": 0
+    },
+    "relation_holdout": {
+      "n": 18,
+      "decisions": {
+        "RISK": 13,
+        "NORMAL": 5
+      },
+      "risk_recall": {
+        "hits": 6,
+        "n": 6,
+        "rate": 1.0,
+        "wilson95": [
+          0.6096569663469354,
+          0.9999999999999999
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 6,
+        "rate": 0.16666666666666666,
+        "wilson95": [
+          0.03005258587173032,
+          0.563509436563646
+        ]
+      },
+      "normal_automatic": {
+        "hits": 5,
+        "n": 6,
+        "rate": 0.8333333333333334,
+        "wilson95": [
+          0.43649056343635395,
+          0.9699474141282697
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 6,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.3903430336530645
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 18,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1758845505823749
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 18,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1758845505823749
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 11,
+        "n": 18,
+        "rate": 0.6111111111111112,
+        "wilson95": [
+          0.3861866858065617,
+          0.7969500807306884
+        ]
+      }
+    },
+    "secopd": {
+      "n": 80,
+      "decisions": {
+        "NORMAL": 46,
+        "RISK": 34
+      },
+      "risk_recall": {
+        "hits": 33,
+        "n": 40,
+        "rate": 0.825,
+        "wilson95": [
+          0.6804970794560755,
+          0.9125469700311694
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 40,
+        "rate": 0.025,
+        "wilson95": [
+          0.0044267174077949195,
+          0.1288165948800778
+        ]
+      },
+      "normal_automatic": {
+        "hits": 39,
+        "n": 40,
+        "rate": 0.975,
+        "wilson95": [
+          0.8711834051199223,
+          0.9955732825922052
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 80,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.0458197362645751
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 80,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.0458197362645751
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 72,
+        "n": 80,
+        "rate": 0.9,
+        "wilson95": [
+          0.8148912101660255,
+          0.9484530008223144
+        ]
+      }
+    },
+    "task_swap": {
+      "n": 12,
+      "decisions": {
+        "NORMAL": 5,
+        "RISK": 7
+      },
+      "risk_recall": {
+        "hits": 6,
+        "n": 6,
+        "rate": 1.0,
+        "wilson95": [
+          0.6096569663469354,
+          0.9999999999999999
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 6,
+        "rate": 0.16666666666666666,
+        "wilson95": [
+          0.03005258587173032,
+          0.563509436563646
+        ]
+      },
+      "normal_automatic": {
+        "hits": 5,
+        "n": 6,
+        "rate": 0.8333333333333334,
+        "wilson95": [
+          0.43649056343635395,
+          0.9699474141282697
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 0,
+        "rate": null,
+        "wilson95": null
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 12,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.2425007574992425
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 12,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.2425007574992425
+        ]
+      },
+      "median_seconds": 0,
+      "accuracy": {
+        "hits": 11,
+        "n": 12,
+        "rate": 0.9166666666666666,
+        "wilson95": [
+          0.6461140782014047,
+          0.9851352905492264
+        ]
+      }
+    }
+  },
+  "controlled_all_four_correct": {
+    "hits": 8,
+    "n": 8
+  }
+}

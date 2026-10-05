@@ -1,0 +1,24 @@
+{
+  "arm": "both",
+  "code_sha256": {
+    "experiment_reviewer_refinement_v3.py": "bb241265f2d2d74e17fe9ee79e0f73d41e7bc4135c3e310410e6683525519313",
+    "reviewer_refinement_v3.py": "181a62a2d8285f61375172c5c9ab3378854ad3a12624c4aee812f710c09047e8",
+    "reviewer_ablation_v1.py": "1bd227318d3b3b1bba815c2be65cfe13aa3627027e01ede03e5a16a4402da51a",
+    "content_probe_v1.py": "2a1c67e615e884680a3d58f8bd663913719dc4b810a6a1d14c1257c3729d5d4f",
+    "content_fusion_v1.py": "c19104e0b6aa2d9cbdf1a655bc6fbb39f397a008aabebbf42cfe25cd5d85c83c",
+    "reviewer_priority_fusion_v1.py": "1f8be764990e8087c18b8c9b5d02a80a4add2112645c1df11e1d3f9a37ca3db3"
+  },
+  "batch_size": 4,
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

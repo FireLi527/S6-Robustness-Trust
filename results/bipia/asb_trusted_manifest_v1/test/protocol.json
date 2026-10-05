@@ -1,0 +1,22 @@
+{
+  "split": "test",
+  "code_sha256": {
+    "asb_trusted_manifest_v1.py": "cb4f35e155c60e343845655274f06f9aeb1f52ddb9c83f8db71fbf21ea2be8e0",
+    "evaluate_asb_trusted_manifest_v1.py": "935fb979d55c4c9dcf92bdd9816535f49e5d35c5acf0d969e45d99a87d1da41e"
+  },
+  "data_sha256": "8cf26bcffad15995c36c0ccf4d782735a34893179166cbcf56b2dec509c95654",
+  "rule": "registration-time manifest, no free parameter selected on development",
+  "p3_style": "every call REVIEW (no read/write class derivable from these tool names)",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

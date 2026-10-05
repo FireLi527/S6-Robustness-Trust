@@ -1,0 +1,15 @@
+{
+  "limits": "Full input/decode/evidence/route/metric replay; not new logits or semantic evidence certification",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

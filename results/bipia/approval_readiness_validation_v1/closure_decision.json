@@ -1,0 +1,30 @@
+{
+  "state": "NOT_READY_TO_CLOSE_AS_VALIDATED_CANDIDATE",
+  "summary_sha256": "aef6834ace4a0003c4fb5e40c09d721cf0402c1ffd18a2c017dfed54e97e81c7",
+  "candidate_protocol_sha256": "eb2c729ab98775618bc152f13defdae32ab054b61d5d40a3c3f8b61e2fc0c0af",
+  "checks": {
+    "en": {
+      "risk": true,
+      "normal": true,
+      "unknown": false,
+      "invalid": true
+    },
+    "zh": {
+      "risk": true,
+      "normal": false,
+      "unknown": false,
+      "invalid": true
+    },
+    "policy": {
+      "no_execution_grants": true,
+      "risk_alerts_retained": true
+    },
+    "previous": {
+      "regression_pass": true,
+      "verification_pass": true,
+      "all577_states_and_decisions_identical": true
+    }
+  },
+  "first_confirmation_unchanged": true,
+  "limits": "New authored human-reviewed controlled confirmation, not blind human authorship or natural distribution. All32 now exposed; cannot reuse for an independent test of subsequent revisions."
+}

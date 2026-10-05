@@ -1,0 +1,452 @@
+{
+  "resolved": {
+    "assistant_authored_bilingual_route_confirmation_v2": {
+      "n": 32,
+      "decisions": {
+        "NORMAL": 15,
+        "RISK": 15,
+        "UNKNOWN": 2
+      },
+      "risk_recall": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 16,
+        "rate": 0.0625,
+        "wilson95": [
+          0.01111905730833121,
+          0.2832926836802987
+        ]
+      },
+      "normal_automatic": {
+        "hits": 15,
+        "n": 16,
+        "rate": 0.9375,
+        "wilson95": [
+          0.7167073163197013,
+          0.9888809426916687
+        ]
+      },
+      "unknown_recall": {
+        "hits": 2,
+        "n": 8,
+        "rate": 0.25,
+        "wilson95": [
+          0.07147768885802763,
+          0.5907301208974108
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 32,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1071827150573635
+        ]
+      },
+      "review": {
+        "hits": 2,
+        "n": 32,
+        "rate": 0.0625,
+        "wilson95": [
+          0.017310203195157234,
+          0.2014746724800358
+        ]
+      },
+      "median_seconds": 1.0181786959999997,
+      "accuracy": {
+        "hits": 25,
+        "n": 32,
+        "rate": 0.78125,
+        "wilson95": [
+          0.6124466920955516,
+          0.8897630306846815
+        ]
+      }
+    }
+  },
+  "model_signals": {
+    "assistant_authored_bilingual_route_confirmation_v2": {
+      "n": 32,
+      "decisions": {
+        "NORMAL": 15,
+        "RISK": 17
+      },
+      "risk_recall": {
+        "hits": 8,
+        "n": 8,
+        "rate": 1.0,
+        "wilson95": [
+          0.6755843804891231,
+          1
+        ]
+      },
+      "normal_false_risk": {
+        "hits": 1,
+        "n": 16,
+        "rate": 0.0625,
+        "wilson95": [
+          0.01111905730833121,
+          0.2832926836802987
+        ]
+      },
+      "normal_automatic": {
+        "hits": 15,
+        "n": 16,
+        "rate": 0.9375,
+        "wilson95": [
+          0.7167073163197013,
+          0.9888809426916687
+        ]
+      },
+      "unknown_recall": {
+        "hits": 0,
+        "n": 8,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.3244156195108769
+        ]
+      },
+      "invalid": {
+        "hits": 0,
+        "n": 32,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1071827150573635
+        ]
+      },
+      "review": {
+        "hits": 0,
+        "n": 32,
+        "rate": 0.0,
+        "wilson95": [
+          0,
+          0.1071827150573635
+        ]
+      },
+      "median_seconds": 1.0181786959999997,
+      "accuracy": {
+        "hits": 23,
+        "n": 32,
+        "rate": 0.71875,
+        "wilson95": [
+          0.546251630618882,
+          0.8443559315435214
+        ]
+      }
+    }
+  },
+  "all_four_correct": {
+    "hits": 2,
+    "n": 8
+  },
+  "per_language": {
+    "en": {
+      "resolved": {
+        "assistant_authored_bilingual_route_confirmation_v2": {
+          "n": 16,
+          "decisions": {
+            "NORMAL": 8,
+            "RISK": 6,
+            "UNKNOWN": 2
+          },
+          "risk_recall": {
+            "hits": 4,
+            "n": 4,
+            "rate": 1.0,
+            "wilson95": [
+              0.5100999795960008,
+              1
+            ]
+          },
+          "normal_false_risk": {
+            "hits": 0,
+            "n": 8,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.3244156195108769
+            ]
+          },
+          "normal_automatic": {
+            "hits": 8,
+            "n": 8,
+            "rate": 1.0,
+            "wilson95": [
+              0.6755843804891231,
+              1
+            ]
+          },
+          "unknown_recall": {
+            "hits": 2,
+            "n": 4,
+            "rate": 0.5,
+            "wilson95": [
+              0.15003570882017148,
+              0.8499642911798285
+            ]
+          },
+          "invalid": {
+            "hits": 0,
+            "n": 16,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.19361341827271994
+            ]
+          },
+          "review": {
+            "hits": 2,
+            "n": 16,
+            "rate": 0.125,
+            "wilson95": [
+              0.034976749337057134,
+              0.3602333143674828
+            ]
+          },
+          "median_seconds": 1.072747867499995,
+          "accuracy": {
+            "hits": 14,
+            "n": 16,
+            "rate": 0.875,
+            "wilson95": [
+              0.6397666856325173,
+              0.9650232506629428
+            ]
+          }
+        }
+      },
+      "model_signals": {
+        "assistant_authored_bilingual_route_confirmation_v2": {
+          "n": 16,
+          "decisions": {
+            "NORMAL": 8,
+            "RISK": 8
+          },
+          "risk_recall": {
+            "hits": 4,
+            "n": 4,
+            "rate": 1.0,
+            "wilson95": [
+              0.5100999795960008,
+              1
+            ]
+          },
+          "normal_false_risk": {
+            "hits": 0,
+            "n": 8,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.3244156195108769
+            ]
+          },
+          "normal_automatic": {
+            "hits": 8,
+            "n": 8,
+            "rate": 1.0,
+            "wilson95": [
+              0.6755843804891231,
+              1
+            ]
+          },
+          "unknown_recall": {
+            "hits": 0,
+            "n": 4,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.48990002040399916
+            ]
+          },
+          "invalid": {
+            "hits": 0,
+            "n": 16,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.19361341827271994
+            ]
+          },
+          "review": {
+            "hits": 0,
+            "n": 16,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.19361341827271994
+            ]
+          },
+          "median_seconds": 1.072747867499995,
+          "accuracy": {
+            "hits": 12,
+            "n": 16,
+            "rate": 0.75,
+            "wilson95": [
+              0.5050123107060135,
+              0.8981809801576265
+            ]
+          }
+        }
+      }
+    },
+    "zh": {
+      "resolved": {
+        "assistant_authored_bilingual_route_confirmation_v2": {
+          "n": 16,
+          "decisions": {
+            "NORMAL": 7,
+            "RISK": 9
+          },
+          "risk_recall": {
+            "hits": 4,
+            "n": 4,
+            "rate": 1.0,
+            "wilson95": [
+              0.5100999795960008,
+              1
+            ]
+          },
+          "normal_false_risk": {
+            "hits": 1,
+            "n": 8,
+            "rate": 0.125,
+            "wilson95": [
+              0.02241690886329617,
+              0.4708948057698615
+            ]
+          },
+          "normal_automatic": {
+            "hits": 7,
+            "n": 8,
+            "rate": 0.875,
+            "wilson95": [
+              0.5291051942301386,
+              0.9775830911367038
+            ]
+          },
+          "unknown_recall": {
+            "hits": 0,
+            "n": 4,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.48990002040399916
+            ]
+          },
+          "invalid": {
+            "hits": 0,
+            "n": 16,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.19361341827271994
+            ]
+          },
+          "review": {
+            "hits": 0,
+            "n": 16,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.19361341827271994
+            ]
+          },
+          "median_seconds": 0.9742073775000009,
+          "accuracy": {
+            "hits": 11,
+            "n": 16,
+            "rate": 0.6875,
+            "wilson95": [
+              0.4440393186673406,
+              0.8583556494803894
+            ]
+          }
+        }
+      },
+      "model_signals": {
+        "assistant_authored_bilingual_route_confirmation_v2": {
+          "n": 16,
+          "decisions": {
+            "NORMAL": 7,
+            "RISK": 9
+          },
+          "risk_recall": {
+            "hits": 4,
+            "n": 4,
+            "rate": 1.0,
+            "wilson95": [
+              0.5100999795960008,
+              1
+            ]
+          },
+          "normal_false_risk": {
+            "hits": 1,
+            "n": 8,
+            "rate": 0.125,
+            "wilson95": [
+              0.02241690886329617,
+              0.4708948057698615
+            ]
+          },
+          "normal_automatic": {
+            "hits": 7,
+            "n": 8,
+            "rate": 0.875,
+            "wilson95": [
+              0.5291051942301386,
+              0.9775830911367038
+            ]
+          },
+          "unknown_recall": {
+            "hits": 0,
+            "n": 4,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.48990002040399916
+            ]
+          },
+          "invalid": {
+            "hits": 0,
+            "n": 16,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.19361341827271994
+            ]
+          },
+          "review": {
+            "hits": 0,
+            "n": 16,
+            "rate": 0.0,
+            "wilson95": [
+              0,
+              0.19361341827271994
+            ]
+          },
+          "median_seconds": 0.9742073775000009,
+          "accuracy": {
+            "hits": 11,
+            "n": 16,
+            "rate": 0.6875,
+            "wilson95": [
+              0.4440393186673406,
+              0.8583556494803894
+            ]
+          }
+        }
+      }
+    }
+  }
+}

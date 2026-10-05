@@ -1,0 +1,56 @@
+{
+  "state": "CRITERIA_NOT_MET",
+  "criteria_source_sha256": "4c294bde1fe1be33029199740e68169fdc4c51f68f2d5303941822c8dd2c6803",
+  "summary_sha256": "848ad8f9a4a537a8d1f97c119979a03b535e3aff88f86452ab1feeee0f8b2165",
+  "per_language_checks": {
+    "en": {
+      "risk": true,
+      "normal": true,
+      "unknown": false,
+      "invalid": true
+    },
+    "zh": {
+      "risk": true,
+      "normal": true,
+      "unknown": false,
+      "invalid": true
+    }
+  },
+  "confusion": {
+    "en": {
+      "NORMAL": {
+        "NORMAL": 8
+      },
+      "RISK": {
+        "RISK": 4
+      },
+      "UNKNOWN": {
+        "UNKNOWN": 2,
+        "RISK": 2
+      }
+    },
+    "zh": {
+      "NORMAL": {
+        "NORMAL": 7,
+        "RISK": 1
+      },
+      "RISK": {
+        "RISK": 4
+      },
+      "UNKNOWN": {
+        "RISK": 4
+      }
+    }
+  },
+  "risk_precision": {
+    "en": {
+      "hits": 4,
+      "n": 6
+    },
+    "zh": {
+      "hits": 4,
+      "n": 9
+    }
+  },
+  "limits": "First predeclared controlled confirmation; not natural distribution or blind human authorship. After inspection this material is exposed development for any subsequent changes."
+}

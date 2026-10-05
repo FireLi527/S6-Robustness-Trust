@@ -1,0 +1,123 @@
+{
+  "injecagent": {
+    "n": 64,
+    "decisions": {
+      "NORMAL": 62,
+      "RISK": 2
+    },
+    "risk_recall": {
+      "hits": 2,
+      "n": 64,
+      "rate": 0.03125,
+      "wilson95": [
+        0.00861195771251659,
+        0.10697493882294247
+      ]
+    },
+    "normal_false_risk": {
+      "hits": 0,
+      "n": 0,
+      "rate": null,
+      "wilson95": null
+    },
+    "normal_automatic": {
+      "hits": 0,
+      "n": 0,
+      "rate": null,
+      "wilson95": null
+    },
+    "unknown_recall": {
+      "hits": 0,
+      "n": 0,
+      "rate": null,
+      "wilson95": null
+    },
+    "invalid": {
+      "hits": 0,
+      "n": 64,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.056626022971156334
+      ]
+    },
+    "review": {
+      "hits": 0,
+      "n": 64,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.056626022971156334
+      ]
+    },
+    "median_seconds": 0.014416059000005532
+  },
+  "secopd": {
+    "n": 80,
+    "decisions": {
+      "NORMAL": 66,
+      "RISK": 14
+    },
+    "risk_recall": {
+      "hits": 14,
+      "n": 40,
+      "rate": 0.35,
+      "wilson95": [
+        0.2213433317104915,
+        0.5049440300646263
+      ]
+    },
+    "normal_false_risk": {
+      "hits": 0,
+      "n": 40,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.08762453925039232
+      ]
+    },
+    "normal_automatic": {
+      "hits": 40,
+      "n": 40,
+      "rate": 1.0,
+      "wilson95": [
+        0.9123754607496077,
+        1
+      ]
+    },
+    "unknown_recall": {
+      "hits": 0,
+      "n": 0,
+      "rate": null,
+      "wilson95": null
+    },
+    "invalid": {
+      "hits": 0,
+      "n": 80,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.0458197362645751
+      ]
+    },
+    "review": {
+      "hits": 0,
+      "n": 80,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.0458197362645751
+      ]
+    },
+    "median_seconds": 0.013111543999997366,
+    "accuracy": {
+      "hits": 54,
+      "n": 80,
+      "rate": 0.675,
+      "wilson95": [
+        0.5664032172496735,
+        0.7675598750577254
+      ]
+    }
+  }
+}

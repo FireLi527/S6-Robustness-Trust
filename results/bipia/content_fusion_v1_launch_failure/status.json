@@ -1,0 +1,6 @@
+{
+  "state": "FAILED",
+  "started": "2026-10-04T11:49:15.251732+00:00",
+  "error_type": "RuntimeError",
+  "error": "WSL FileNotFoundError on frozen Windows backslash relative path; no model inference or predictions occurred"
+}

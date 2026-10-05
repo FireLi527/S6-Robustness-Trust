@@ -1,0 +1,21 @@
+{
+  "repo": "meta-llama/Llama-Prompt-Guard-2-22M",
+  "revision": "11614a155199674a0a95e6602d6ab0417b790ed0",
+  "path": "external/llama_prompt_guard_2_22m",
+  "origin": "User downloaded; renamed from external/新建文件夹",
+  "license": "Llama 4 Community License; original LICENSE/USE_POLICY retained",
+  "upstream_weight_sha256": "5120e30bcd536ce285345d9ec104bea6bd6e8f94365b99a340c764f417ea5fa1",
+  "full_file_revision_verified": false,
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

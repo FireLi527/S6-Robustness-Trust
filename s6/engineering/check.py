@@ -64,7 +64,23 @@ def static_checks() -> list[str]:
                     "evaluate_call_alignment_v1.py", "prepare_agentdojo_alignment_v1.py", "agentdojo_alignment_v1.py",
                     "evaluate_agentdojo_alignment_v1.py", "agentdojo_alignment_v2.py",
                     "diagnose_agentdojo_alignment_v2.py", "prepare_asb_alignment_v1.py", "asb_alignment_v1.py",
-                    "evaluate_asb_alignment_v1.py"))
+                    "evaluate_asb_alignment_v1.py", "asb_trusted_manifest_v1.py",
+                    "evaluate_asb_trusted_manifest_v1.py", "content_probe_v1.py",
+                    "prepare_content_probe_v1.py", "download_content_classifier_v1.py",
+                    "run_content_probe_v1.py", "run_content_probe_v1_compat.py",
+                    "verify_content_probe_v1.py", "evaluate_content_controls_v1.py",
+                    "evaluate_prompt_guard_2_v1.py", "content_fusion_v1.py",
+                    "content_reviewer_runtime_v1.py", "experiment_content_fusion_v1.py",
+                    "experiment_content_fusion_v1_compat.py", "reviewer_ablation_v1.py",
+                    "experiment_reviewer_ablation_v1.py", "reviewer_priority_fusion_v1.py",
+                    "experiment_reviewer_confirmation_v1.py", "experiment_reviewer_pressure_v2.py",
+                    "reviewer_refinement_v2.py", "experiment_reviewer_refinement_v2.py",
+                    "reviewer_refinement_v3.py", "experiment_reviewer_refinement_v3.py",
+                    "trusted_review_route_v1.py", "experiment_trusted_review_route_v1.py",
+                    "trusted_review_runtime_v1.py", "experiment_trusted_review_live_v1.py",
+                    "trusted_route_candidates_v2.py", "prepare_trusted_route_candidates_v2.py",
+                    "experiment_trusted_route_confirmation_v2.py", "approval_readiness_v1.py",
+                    "experiment_approval_readiness_v1.py", "experiment_approval_readiness_validation_v1.py"))
     managed.extend(ROOT / "s6/prompt_injection" / name for name in
                    ("relation_scale_targets_v1.py", "relation_scale_data_v1.py", "prepare_relation_scale_training_v1.py",
                     "experiment_relation_scale_training_v1.py"))

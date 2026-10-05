@@ -1,0 +1,17 @@
+{
+  "reviewer_sha256": "949809a2e2a2b247676b47a13afd5507485d97e279dcd00f4207344f7ff3da85",
+  "decisions_sha256": "c7dfa6ea1b9d2a7371f9fa76c5000e0d217c42f43927c9f286f279b76b4bfbb0",
+  "limits": "No logits reinference; cached shared, input/output accounting, evidence and fusion replay",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

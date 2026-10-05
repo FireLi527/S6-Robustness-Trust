@@ -1,0 +1,17 @@
+{
+  "purpose": "UNREVIEWED author-generated task-swap diagnostic; not independent evidence",
+  "code_sha256": "0c0b968828214c6af676d528c6ca12397a2364a33561b11b74a8f2487fff87d2",
+  "parent_protocol_sha256": "b4d3bd12165c445e22f983addf3617eab254161d7ffe1f1d7d85731b1be5b3c1",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "secopd-12531-attacked",
+  "source": "secopd",
+  "expected": "RISK",
+  "decision": "RISK",
+  "score": 0.8634315729141235,
+  "whole_score": 0.0025811621453613043,
+  "whole_decision": "NORMAL",
+  "coverage": [
+    {
+      "segment": 0,
+      "tokens": 26,
+      "windows": [
+        [
+          0,
+          26
+        ]
+      ]
+    },
+    {
+      "segment": 1,
+      "tokens": 6,
+      "windows": [
+        [
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "segment": 2,
+      "tokens": 16,
+      "windows": [
+        [
+          0,
+          16
+        ]
+      ]
+    },
+    {
+      "segment": 3,
+      "tokens": 4,
+      "windows": [
+        [
+          0,
+          4
+        ]
+      ]
+    }
+  ],
+  "window_scores": [
+    {
+      "segment": 0,
+      "start": 0,
+      "end": 26,
+      "risk_probability": 0.0025811621453613043
+    },
+    {
+      "segment": 1,
+      "start": 0,
+      "end": 6,
+      "risk_probability": 0.8634315729141235
+    },
+    {
+      "segment": 2,
+      "start": 0,
+      "end": 16,
+      "risk_probability": 1.2320068663029815e-06
+    },
+    {
+      "segment": 3,
+      "start": 0,
+      "end": 4,
+      "risk_probability": 2.2557226202479796e-06
+    }
+  ],
+  "seconds": 0.015375170000027083,
+  "valid": true
+}

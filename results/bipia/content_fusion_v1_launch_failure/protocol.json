@@ -1,0 +1,17 @@
+{
+  "stage": "pre-inference load_inputs",
+  "code_sha256": "793527fcc23b082924fa2eb54a189641d98fe0fed7235ee6eb49e899418dcf56",
+  "original_protocol_sha256": "2604fb8ef8c010df543df52548d7eddb21747dc13b9369911c9764e518fca612",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

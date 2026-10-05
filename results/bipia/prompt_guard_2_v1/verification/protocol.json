@@ -1,0 +1,16 @@
+{
+  "predictions_sha256": "171b715abf385526315cd8a554269ded6583e4f7262a4abb5ce53b3ae4182063",
+  "verifier_sha256": "01211afe01c52e2bf6eedbe6968aabc386fdab5b06cc1f595e186774afde9dff",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "repo": "meta-llama/Llama-Prompt-Guard-2-22M",
+  "revision": "11614a155199674a0a95e6602d6ab0417b790ed0",
+  "records": [
+    {
+      "file": "LICENSE",
+      "hash_type": "git_blob_sha1",
+      "expected": "be16bdcf5eac8030d7d92c9cc0503480471263c4",
+      "actual": "be16bdcf5eac8030d7d92c9cc0503480471263c4",
+      "match": true
+    },
+    {
+      "file": "MODEL_CARD.md",
+      "hash_type": "git_blob_sha1",
+      "expected": "25d63a29784ed2684a44b4cc551801886def4657",
+      "actual": "25d63a29784ed2684a44b4cc551801886def4657",
+      "match": true
+    },
+    {
+      "file": "README.md",
+      "hash_type": "git_blob_sha1",
+      "expected": "8ea282fb56a69496052a26d049fa7b21080f2840",
+      "actual": "8ea282fb56a69496052a26d049fa7b21080f2840",
+      "match": true
+    },
+    {
+      "file": "USE_POLICY.md",
+      "hash_type": "git_blob_sha1",
+      "expected": "b3f1fcefae19f6396ba6081636479a3b8e39d5f7",
+      "actual": "b3f1fcefae19f6396ba6081636479a3b8e39d5f7",
+      "match": true
+    },
+    {
+      "file": "checklist.chk",
+      "hash_type": "git_blob_sha1",
+      "expected": "f984f3e780e57662c24dd4afab96d6dd3c53b57b",
+      "actual": "f984f3e780e57662c24dd4afab96d6dd3c53b57b",
+      "match": true
+    },
+    {
+      "file": "config.json",
+      "hash_type": "git_blob_sha1",
+      "expected": "dee8822dafaea58a27fdbe96eb3b6be58472c745",
+      "actual": "dee8822dafaea58a27fdbe96eb3b6be58472c745",
+      "match": true
+    },
+    {
+      "file": "model.safetensors",
+      "hash_type": "sha256",
+      "expected": "****************************************************************",
+      "actual": "5120e30bcd536ce285345d9ec104bea6bd6e8f94365b99a340c764f417ea5fa1",
+      "match": false
+    },
+    {
+      "file": "special_tokens_map.json",
+      "hash_type": "git_blob_sha1",
+      "expected": "2c9cb07c8fdeeb5ac3ceafb170592e990b204dcd",
+      "actual": "2c9cb07c8fdeeb5ac3ceafb170592e990b204dcd",
+      "match": true
+    },
+    {
+      "file": "tokenizer.json",
+      "hash_type": "git_blob_sha1",
+      "expected": "cbff3984b6c696631375e5aa3638183791f3dfc3",
+      "actual": "cbff3984b6c696631375e5aa3638183791f3dfc3",
+      "match": true
+    },
+    {
+      "file": "tokenizer_config.json",
+      "hash_type": "git_blob_sha1",
+      "expected": "13d6406af565bd9e59dd649afd4c2b48bddb6a4c",
+      "actual": "13d6406af565bd9e59dd649afd4c2b48bddb6a4c",
+      "match": true
+    }
+  ]
+}

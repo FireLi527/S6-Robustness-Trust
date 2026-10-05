@@ -1,0 +1,98 @@
+{
+  "common_n": 144,
+  "overlap": {
+    "injecagent": {
+      "RISK": {
+        "n": 1054,
+        "pa_only": 748,
+        "pg_only": 0,
+        "both": 15,
+        "neither": 291
+      }
+    },
+    "notinject": {
+      "NORMAL": {
+        "n": 339,
+        "pa_only": 145,
+        "pg_only": 0,
+        "both": 2,
+        "neither": 192
+      }
+    },
+    "secopd": {
+      "RISK": {
+        "n": 40,
+        "pa_only": 19,
+        "pg_only": 0,
+        "both": 14,
+        "neither": 7
+      },
+      "NORMAL": {
+        "n": 40,
+        "pa_only": 1,
+        "pg_only": 0,
+        "both": 0,
+        "neither": 39
+      }
+    }
+  },
+  "fusion": {
+    "or": {
+      "injecagent": {
+        "RISK": {
+          "n": 64,
+          "decisions": {
+            "RISK": 62,
+            "UNKNOWN": 2
+          }
+        }
+      },
+      "secopd": {
+        "RISK": {
+          "n": 40,
+          "decisions": {
+            "RISK": 37,
+            "NORMAL": 2,
+            "UNKNOWN": 1
+          }
+        },
+        "NORMAL": {
+          "n": 40,
+          "decisions": {
+            "UNKNOWN": 4,
+            "NORMAL": 34,
+            "RISK": 2
+          }
+        }
+      }
+    },
+    "consensus_review": {
+      "injecagent": {
+        "RISK": {
+          "n": 64,
+          "decisions": {
+            "RISK": 37,
+            "UNKNOWN": 27
+          }
+        }
+      },
+      "secopd": {
+        "RISK": {
+          "n": 40,
+          "decisions": {
+            "RISK": 30,
+            "UNKNOWN": 8,
+            "NORMAL": 2
+          }
+        },
+        "NORMAL": {
+          "n": 40,
+          "decisions": {
+            "UNKNOWN": 6,
+            "NORMAL": 34
+          }
+        }
+      }
+    }
+  }
+}

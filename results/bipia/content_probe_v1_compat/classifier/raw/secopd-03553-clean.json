@@ -1,0 +1,63 @@
+{
+  "id": "secopd-03553-clean",
+  "source": "secopd",
+  "expected": "NORMAL",
+  "decision": "NORMAL",
+  "score": 0.000288317387457937,
+  "whole_score": 0.000288317387457937,
+  "whole_decision": "NORMAL",
+  "coverage": [
+    {
+      "segment": 0,
+      "tokens": 25,
+      "windows": [
+        [
+          0,
+          25
+        ]
+      ]
+    },
+    {
+      "segment": 1,
+      "tokens": 12,
+      "windows": [
+        [
+          0,
+          12
+        ]
+      ]
+    },
+    {
+      "segment": 2,
+      "tokens": 13,
+      "windows": [
+        [
+          0,
+          13
+        ]
+      ]
+    }
+  ],
+  "window_scores": [
+    {
+      "segment": 0,
+      "start": 0,
+      "end": 25,
+      "risk_probability": 0.000288317387457937
+    },
+    {
+      "segment": 1,
+      "start": 0,
+      "end": 12,
+      "risk_probability": 7.550114969490096e-05
+    },
+    {
+      "segment": 2,
+      "start": 0,
+      "end": 13,
+      "risk_probability": 3.1725348890176974e-06
+    }
+  ],
+  "seconds": 0.014832341999976961,
+  "valid": true
+}

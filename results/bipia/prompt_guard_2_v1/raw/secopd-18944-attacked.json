@@ -1,0 +1,159 @@
+{
+  "id": "secopd-18944-attacked",
+  "source": "secopd",
+  "expected": "RISK",
+  "decision": "RISK",
+  "score": 0.9975538849830627,
+  "whole_score": 0.9182500243186951,
+  "whole_decision": "RISK",
+  "coverage": [
+    {
+      "segment": 0,
+      "tokens": 94,
+      "windows": [
+        [
+          0,
+          94
+        ]
+      ]
+    },
+    {
+      "segment": 1,
+      "tokens": 9,
+      "windows": [
+        [
+          0,
+          9
+        ]
+      ]
+    },
+    {
+      "segment": 2,
+      "tokens": 6,
+      "windows": [
+        [
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "segment": 3,
+      "tokens": 8,
+      "windows": [
+        [
+          0,
+          8
+        ]
+      ]
+    },
+    {
+      "segment": 4,
+      "tokens": 5,
+      "windows": [
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "segment": 5,
+      "tokens": 7,
+      "windows": [
+        [
+          0,
+          7
+        ]
+      ]
+    },
+    {
+      "segment": 6,
+      "tokens": 16,
+      "windows": [
+        [
+          0,
+          16
+        ]
+      ]
+    },
+    {
+      "segment": 7,
+      "tokens": 11,
+      "windows": [
+        [
+          0,
+          11
+        ]
+      ]
+    },
+    {
+      "segment": 8,
+      "tokens": 32,
+      "windows": [
+        [
+          0,
+          32
+        ]
+      ]
+    }
+  ],
+  "window_scores": [
+    {
+      "segment": 0,
+      "start": 0,
+      "end": 94,
+      "risk_probability": 0.9182500243186951
+    },
+    {
+      "segment": 1,
+      "start": 0,
+      "end": 9,
+      "risk_probability": 0.0012565612560138106
+    },
+    {
+      "segment": 2,
+      "start": 0,
+      "end": 6,
+      "risk_probability": 0.001432883902452886
+    },
+    {
+      "segment": 3,
+      "start": 0,
+      "end": 8,
+      "risk_probability": 0.0405874028801918
+    },
+    {
+      "segment": 4,
+      "start": 0,
+      "end": 5,
+      "risk_probability": 0.9975538849830627
+    },
+    {
+      "segment": 5,
+      "start": 0,
+      "end": 7,
+      "risk_probability": 0.0025745388120412827
+    },
+    {
+      "segment": 6,
+      "start": 0,
+      "end": 16,
+      "risk_probability": 0.002506077056750655
+    },
+    {
+      "segment": 7,
+      "start": 0,
+      "end": 11,
+      "risk_probability": 0.9930825233459473
+    },
+    {
+      "segment": 8,
+      "start": 0,
+      "end": 32,
+      "risk_probability": 0.0019888603128492832
+    }
+  ],
+  "seconds": 0.016934109999994007,
+  "valid": true
+}

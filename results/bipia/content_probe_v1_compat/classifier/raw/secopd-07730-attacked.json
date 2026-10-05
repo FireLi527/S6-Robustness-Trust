@@ -1,0 +1,239 @@
+{
+  "id": "secopd-07730-attacked",
+  "source": "secopd",
+  "expected": "RISK",
+  "decision": "NORMAL",
+  "score": 0.41187289357185364,
+  "whole_score": 1.4017188050274854e-06,
+  "whole_decision": "NORMAL",
+  "coverage": [
+    {
+      "segment": 0,
+      "tokens": 168,
+      "windows": [
+        [
+          0,
+          168
+        ]
+      ]
+    },
+    {
+      "segment": 1,
+      "tokens": 13,
+      "windows": [
+        [
+          0,
+          13
+        ]
+      ]
+    },
+    {
+      "segment": 2,
+      "tokens": 18,
+      "windows": [
+        [
+          0,
+          18
+        ]
+      ]
+    },
+    {
+      "segment": 3,
+      "tokens": 28,
+      "windows": [
+        [
+          0,
+          28
+        ]
+      ]
+    },
+    {
+      "segment": 4,
+      "tokens": 25,
+      "windows": [
+        [
+          0,
+          25
+        ]
+      ]
+    },
+    {
+      "segment": 5,
+      "tokens": 3,
+      "windows": [
+        [
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "segment": 6,
+      "tokens": 2,
+      "windows": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "segment": 7,
+      "tokens": 7,
+      "windows": [
+        [
+          0,
+          7
+        ]
+      ]
+    },
+    {
+      "segment": 8,
+      "tokens": 2,
+      "windows": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "segment": 9,
+      "tokens": 15,
+      "windows": [
+        [
+          0,
+          15
+        ]
+      ]
+    },
+    {
+      "segment": 10,
+      "tokens": 2,
+      "windows": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "segment": 11,
+      "tokens": 21,
+      "windows": [
+        [
+          0,
+          21
+        ]
+      ]
+    },
+    {
+      "segment": 12,
+      "tokens": 24,
+      "windows": [
+        [
+          0,
+          24
+        ]
+      ]
+    },
+    {
+      "segment": 13,
+      "tokens": 8,
+      "windows": [
+        [
+          0,
+          8
+        ]
+      ]
+    }
+  ],
+  "window_scores": [
+    {
+      "segment": 0,
+      "start": 0,
+      "end": 168,
+      "risk_probability": 1.4017188050274854e-06
+    },
+    {
+      "segment": 1,
+      "start": 0,
+      "end": 13,
+      "risk_probability": 9.2036140131313e-07
+    },
+    {
+      "segment": 2,
+      "start": 0,
+      "end": 18,
+      "risk_probability": 1.4572759027942084e-05
+    },
+    {
+      "segment": 3,
+      "start": 0,
+      "end": 28,
+      "risk_probability": 5.846496424055658e-05
+    },
+    {
+      "segment": 4,
+      "start": 0,
+      "end": 25,
+      "risk_probability": 1.8659344505067565e-06
+    },
+    {
+      "segment": 5,
+      "start": 0,
+      "end": 3,
+      "risk_probability": 0.00035521993413567543
+    },
+    {
+      "segment": 6,
+      "start": 0,
+      "end": 2,
+      "risk_probability": 2.0749939722009003e-06
+    },
+    {
+      "segment": 7,
+      "start": 0,
+      "end": 7,
+      "risk_probability": 0.41187289357185364
+    },
+    {
+      "segment": 8,
+      "start": 0,
+      "end": 2,
+      "risk_probability": 1.2789968195647816e-06
+    },
+    {
+      "segment": 9,
+      "start": 0,
+      "end": 15,
+      "risk_probability": 0.05621689185500145
+    },
+    {
+      "segment": 10,
+      "start": 0,
+      "end": 2,
+      "risk_probability": 1.2262771633686498e-06
+    },
+    {
+      "segment": 11,
+      "start": 0,
+      "end": 21,
+      "risk_probability": 1.2124553450121311e-06
+    },
+    {
+      "segment": 12,
+      "start": 0,
+      "end": 24,
+      "risk_probability": 8.036152394197416e-06
+    },
+    {
+      "segment": 13,
+      "start": 0,
+      "end": 8,
+      "risk_probability": 8.694407824805239e-07
+    }
+  ],
+  "seconds": 0.0915376510000101,
+  "valid": true
+}

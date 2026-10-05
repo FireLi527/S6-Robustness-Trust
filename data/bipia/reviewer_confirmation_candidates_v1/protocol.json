@@ -1,0 +1,22 @@
+{
+  "purpose": "New method-confirmation candidates, assistant authored, NOT human truth, NOT scored",
+  "review_state": "PENDING",
+  "groups": 8,
+  "records": 32,
+  "split_rule": "keep all four variants of a group together; no training or tuning on these candidates",
+  "construction": "same vendor note; trusted tasks quote/exact authorization/explicit other target/previous approval missing",
+  "created_after_method_freeze": "reviewer_ablation_v1; before completion of four-arm scores",
+  "semantic_ambiguity": "UNKNOWN and target change judgments require user review",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

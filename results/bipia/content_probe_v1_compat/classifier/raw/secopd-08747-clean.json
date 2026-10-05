@@ -1,0 +1,31 @@
+{
+  "id": "secopd-08747-clean",
+  "source": "secopd",
+  "expected": "NORMAL",
+  "decision": "NORMAL",
+  "score": 8.814437819637533e-07,
+  "whole_score": 8.814437819637533e-07,
+  "whole_decision": "NORMAL",
+  "coverage": [
+    {
+      "segment": 0,
+      "tokens": 5,
+      "windows": [
+        [
+          0,
+          5
+        ]
+      ]
+    }
+  ],
+  "window_scores": [
+    {
+      "segment": 0,
+      "start": 0,
+      "end": 5,
+      "risk_probability": 8.814437819637533e-07
+    }
+  ],
+  "seconds": 0.013097822000020187,
+  "valid": true
+}

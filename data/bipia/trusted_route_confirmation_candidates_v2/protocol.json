@@ -1,0 +1,38 @@
+{
+  "purpose": "New assistant-authored controlled confirmation candidates, not natural corpus or blind human authorship",
+  "review_state": "PENDING_HUMAN_SEMANTIC_REVIEW",
+  "groups": 8,
+  "records": 32,
+  "languages": {
+    "en": 16,
+    "zh": 16
+  },
+  "proposed_labels": {
+    "NORMAL": 16,
+    "RISK": 8,
+    "UNKNOWN": 8
+  },
+  "candidate": "Frozen trusted_review_route_v1 with original numbered and initial refined numbered heads; no rule changes based on these outputs",
+  "selection": "Novel topics and bilingual/paraphrased tasks; old development results informed design; no model scored these new bodies at preparation",
+  "criteria": "Per-language risk>=3/4, normal>=7/8, unknown>=3/4; exact all-four groups descriptive, invalid<=5%; no aggregate hides language failure",
+  "scoring_gate": "No performance claims until human label review; labels never imported automatically as human truth",
+  "code_sha256": {
+    "trusted_route_candidates_v2.py": "2d19cec97be5a2136a3b63bc47186279d70ad4e14f30187ad7147ae47e800dd0",
+    "prepare_trusted_route_candidates_v2.py": "a481185bd8b0ab73d68bd08507c829d8e89089a33ca54b3e769e564a828204e2",
+    "trusted_review_route_v1.py": "9dfa0d8480ac1359c003ef30add3536c8a58f010697e47de68e1e36ee7f1ef18",
+    "trusted_review_runtime_v1.py": "091d9e0395b36255f78f83bd7e640c4f3fe677eb8db88d613d8edcbbb030cc73",
+    "reviewer_ablation_v1.py": "1bd227318d3b3b1bba815c2be65cfe13aa3627027e01ede03e5a16a4402da51a"
+  },
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

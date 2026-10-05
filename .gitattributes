@@ -8,3 +8,17 @@
 *.txt text eol=lf
 *.cmd text eol=crlf
 *.sh text eol=lf
+
+# Preserve exact frozen experiment bytes; protocols hash the recorded CRLF files.
+data/bipia/reviewer_confirmation_candidates_v1/REVIEW_ZH.md -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/bipia/prompt_guard_2_sanity_v1/upstream_file_check.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/bipia/prompt_guard_2_sanity_v1/upstream_file_check_v2.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/bipia/reviewer_ablation_v1/report_ZH.md -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/bipia/reviewer_confirmation_v1/report_ZH.md -text whitespace=trailing-space,space-before-tab,cr-at-eol
+results/bipia/reviewer_pressure_v2/report_ZH.md -text whitespace=trailing-space,space-before-tab,cr-at-eol
+s6/prompt_injection/experiment_approval_readiness_validation_v1.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+s6/prompt_injection/run_content_probe_v1_compat.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+
+# These reviewed, hashed Markdown snapshots include a final empty line.
+data/bipia/approval_readiness_validation_candidates_v1/REVIEW_ZH.md whitespace=trailing-space,space-before-tab,-blank-at-eof
+data/bipia/trusted_route_confirmation_candidates_v2/REVIEW_ZH.md whitespace=trailing-space,space-before-tab,-blank-at-eof

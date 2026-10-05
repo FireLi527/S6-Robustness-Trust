@@ -1,0 +1,36 @@
+{
+  "data_protocol_sha256": "b4d3bd12165c445e22f983addf3617eab254161d7ffe1f1d7d85731b1be5b3c1",
+  "spec": {
+    "repo": "protectai/deberta-v3-base-prompt-injection-v2",
+    "revision": "90c9989b1a342275dd0d1a95aad283c04e075671",
+    "threshold": 0.5,
+    "context": 512,
+    "overlap": 64,
+    "aggregation": "max probability over full windows and generic segments",
+    "language": "English only; Chinese excluded",
+    "training_overlap": "unknown upstream overlap"
+  },
+  "model_hashes": {
+    "config.json": "05079f4735092040b780d459027afab413faa6eeb66a548571a58832304b60bb",
+    "model.safetensors": "6521cb8d0ac08148c81464899c424e6148fcc62befa371089fa4061d8b6e0424",
+    "tokenizer.json": "f0a66ad0d735d8dca9ecac4ff50fcdef4bb6adbadd2941a926844844d2c2059b",
+    "tokenizer_config.json": "557b3d33d3f41b81ad769244e506549e98a1857d41dd58160aacd4d98d710b5a",
+    "special_tokens_map.json": "9463f61e1b109a8eb4688b829260d7c6b1e6dff04c98ff7269bb89e2b92369b9",
+    "added_tokens.json": "dc046d04c9b0ada7ae6f1dc89c465801799acdf0c9a6aab8c15a1b2d5ca4e91f",
+    "spm.model": "c679fbf93643d19aab7ee10c0b99e460bdbc02fedf34b92b05af343b4af586fd",
+    "LICENSE": "59899c6091b540582ed617e8eeaac4919dc985ccfc35459ee9752b699be5205b",
+    "README.md": "37221a38df1e60ad56364c39a233c75b77fa08740ecdee248d1b4e07ccc8ef5a"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.18.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

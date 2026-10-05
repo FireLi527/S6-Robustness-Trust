@@ -1,0 +1,25 @@
+{
+  "purpose": "New bilingual first-confirmation candidates with varied phrasing",
+  "review_state": "PENDING_HUMAN_SEMANTIC_REVIEW",
+  "candidate_protocol_sha256": "eb2c729ab98775618bc152f13defdae32ab054b61d5d40a3c3f8b61e2fc0c0af",
+  "records": 32,
+  "groups": 8,
+  "languages": {
+    "en": 16,
+    "zh": 16
+  },
+  "selection": "Novel topics and mixed plain-language approval statements; no model/state scores inspected before freeze; assistant-authored, not natural distribution",
+  "criteria": "Each language: risk>=3/4, normal>=7/8, UNKNOWN>=3/4; invalid<=5%; no execution grants and risk signals retained. Prior577 zero-regression must remain PASS. If any criterion fails, do not declare ready to close as validated candidate.",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

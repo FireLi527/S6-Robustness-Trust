@@ -6,6 +6,24 @@
 
 ## 1. 先读什么
 
+**当前安排（2026-10-05）**：用户决定将审批缺失改写和中文引用误报留作下一步，先提交并推送当前完整研究产物。此次推送不代表收尾验证已通过，也不部署或替换默认检测器；后续不得在原失败目录重跑覆盖。
+
+**2026-10-05 收尾验证完成，尚不满足验证成功条件**：先读[收尾确认报告](../results/bipia/approval_readiness_validation_v1/report_ZH.md)。候选先冻结，8组32条新材料用户全部认可，首次推理及核验完成。最终25/32、风险8/8、正常13/16、UNKNOWN4/8；英文UNKNOWN2/4、中文正常5/8/UNKNOWN2/4，未过门槛。旧577条状态和决策逐条重算不变，前序效果无回退；技术核验PASS、研究门槛FAIL，工程521通过/2跳过。`closure_decision.json`为NOT_READY_TO_CLOSE_AS_VALIDATED_CANDIDATE，不能据开发31/32改写为验证成功。新标签审核保存在`data/bipia/approval_readiness_validation_review_v1/human_review.json`，不再询问。当前候选和失败输出不变，无待续跑、训练、部署或提交；后续如继续，需新版本改善审批缺失改写/中文引用分析，当前32条只能作开发回归，再另取新材料确认。
+
+**2026-10-05 审批准备状态层已完成**：用户要求尽量保留前序效果，已实现独立`approval_readiness_v1.py`，实验`experiment_approval_readiness_v1.py`。先读[最新报告](../results/bipia/approval_readiness_v1/report_ZH.md)及[方法](prompt_injection/APPROVAL_READINESS_V1_ZH.md)。577条开发回放及核验完成：前545条不变，新32条6条UNKNOWN正确转复核，25/32→31/32、UNKNOWN2/8→8/8；风险8/8和正常15/16保留，原模型信号/选头不变，无RISK转NORMAL，无执行授权。模型UNKNOWN仍0/8、旧中文UNKNOWN仍0/6。有限双语规则提取可信任务审批依赖和缺失，以任务SHA与原文证据绑定状态；不代表通用理解、真实权限验证或独立泛化。工程521通过/2跳过，新增模型推理0次，无待续跑任务；未部署、训练、提交。新32条已曝光，本次是开发改进，不能改写下段首次25/32失败结果；后续需新版本及未曝光确认材料。
+
+**2026-10-05 新32条已认可并完成首次确认**：用户明确全部认可，记录在`data/bipia/trusted_route_confirmation_review_v2/human_review.json`，无需再次询问。先读[新双语确认报告](../results/bipia/trusted_route_confirmation_v2/report_ZH.md)：单一原候选保持不变，首次新32条推理最终25/32、风险8/8、正常15/16、UNKNOWN2/8；英文14/16和UNKNOWN2/4，中文11/16和UNKNOWN0/4，完整组2/8。两语言均未过UNKNOWN至少3/4标准，模型UNKNOWN0/8；2条规则UNKNOWN与模型能力分开。完整输出核验PASS、工程507通过/2跳过，无待续跑推理或核验；未训练、部署、提交。后续改进需新版本，将可信任务权限准备状态与正文风险分开；这32条已曝光，后续只能作开发回归。下段“待审核”是准备时历史状态，不能重复索要认可。
+
+**2026-10-05 后续集成已完成**：先读[集成新推理报告](../results/bipia/trusted_review_live_v1/report_ZH.md)。固定路由与两个提示词头，545条重新生成，最终决策与旧回放逐条一致，核验PASS；工程507通过、2跳过。545条是历史曝光回归，不能包装为独立确认。另8组32条新双语控制材料已准备，`data/bipia/trusted_route_confirmation_candidates_v2/REVIEW_ZH.md`待用户审核，尚未评分，不得把旧审核认可应用于新材料。确认入口`experiment_trusted_route_confirmation_v2.py`已登记检查；直接用户审核记录需保存于独立`data/bipia/trusted_route_confirmation_review_v2/human_review.json`（候选哈希、明确labels、approved_ids和authority），之后依次prepare/run/verify，保持原路由，不按新结果改规则冒充确认。没有待续跑的集成推理，未训练、部署、提交；下段“未做集成新推理”属于本次运行前状态。
+
+**2026-10-05 最新进展**：用户已阅读并认可8组32条语义标签，审核记录在`data/bipia/reviewer_confirmation_v1/human_review.json`，无需再次询问。四组消融、完整引用压力、新对照以及v2/v3改进均完成，2509次新推理核验PASS。先读[可信任务分工报告](../results/bipia/trusted_review_route_v1/report_ZH.md)：路由回放InjecAgent58/64、SecOPD33/40及正常误报1/40、引用压力误报12/339；32条最终策略全对，但UNKNOWN8/8来自缺审批规则，模型UNKNOWN0/8，中文UNKNOWN0/6。v2/v3高召回伴随引用压力高误报，失败版本保留。路由为已曝光数据的545条缓存开发回放，未做集成新推理或独立盲测。工程500通过、2跳过，无待续跑推理；前端/P3和默认检测器未改，未训练、部署、提交。后续先固定候选、补集成推理与独立新审核材料，参数来源/能力链路仍未实现。下方“当前没有获批新实验”及旧指标属于前序历史状态。
+
+**2026-10-04 融合尝试已完成**：先读 [融合压力报告](../results/bipia/content_fusion_v1_compat/report_ZH.md)。ProtectAI＋4B并集提升共享攻击检出至62/64及37/40，但339条固定引用任务压力误报48.38%；一致才自动误报7.08%、复核56.64%、正常自动36.28%。两种规则均失败，不部署。原入口在WSL路径解析失败，独立兼容运行完成，原冻结协议与代码保留；339条新推理、每臂483条融合重放PASS，工程486通过、2跳过。参数来源/能力约束仍未新增实现。本轮文件尚未提交。
+
+**2026-10-04 Prompt Guard 后续**：用户本地下载22M版，授权改名与使用，已保存为 `external/llama_prompt_guard_2_22m`；权重、配置和分词器身份核验通过。沿用上轮冻结英文数据与方法，1485条推理及结果核验完成，工程479通过、2跳过。InjecAgent全量召回1.42%，NotInject误报0.59%，SecOPD召回35%且正常误报0%；未达到召回门槛，不替换默认检测器。直接API与扫描器分数对照一致，详见 [最新报告](../results/bipia/prompt_guard_2_v1/report_ZH.md)。本轮文件尚未提交，第三项仍未实施；下段为公开ProtectAI阶段。
+
+**2026-10-04 最新补充**：专用分类器（公开ProtectAI）与基础4B任务/正文直接判定均已完成，结果见 `results/bipia/content_probe_v1_compat/report_ZH.md`。两项比旧Hybrid明显改善，但均未过完整经验门槛；全量分类器压力误报43.36%，4B中文未知授权0/6且原文证据存在无效输出。主评估及任务变化对照核验通过，最终工程479通过、2跳过。第三项参数来源/能力约束只有离线设计建议，尚未实施；现有P3与前端不变。本轮新增文件尚未提交。旧第2–6节不是当前状态。
+
 按顺序读取：
 
 1. `s6/AGENTS.md`、`s6/ENGINEERING_ZH.md`。

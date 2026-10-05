@@ -1,0 +1,6 @@
+{
+  "state": "FAILED",
+  "started": "2026-10-04T10:23:39.349138+00:00",
+  "error_type": "AttributeError",
+  "error": "DebertaV2Tokenizer has no attribute prepare_for_model"
+}

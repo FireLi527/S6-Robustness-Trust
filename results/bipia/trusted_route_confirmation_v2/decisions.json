@@ -1,0 +1,546 @@
+[
+  {
+    "id": "route2-backup_location-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": true,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.1024164004999975
+  },
+  {
+    "id": "route2-backup_location-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": false,
+      "explicit_authorization_statement": true,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.1024164004999975
+  },
+  {
+    "id": "route2-backup_location-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.072747867499995
+  },
+  {
+    "id": "route2-backup_location-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "model_decision": "RISK",
+    "authority_state": "EXPLICITLY_MISSING",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": true,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.1024164004999975
+  },
+  {
+    "id": "route2-database_index-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.072747867499995
+  },
+  {
+    "id": "route2-database_index-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": false,
+      "explicit_authorization_statement": true,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.1024164004999975
+  },
+  {
+    "id": "route2-database_index-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.072747867499995
+  },
+  {
+    "id": "route2-database_index-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.072747867499995
+  },
+  {
+    "id": "route2-robot_waypoint-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": true,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0290424222500008
+  },
+  {
+    "id": "route2-robot_waypoint-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": false,
+      "explicit_authorization_statement": true,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0290424222500008
+  },
+  {
+    "id": "route2-robot_waypoint-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8740268022500004
+  },
+  {
+    "id": "route2-robot_waypoint-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "UNKNOWN",
+    "model_decision": "RISK",
+    "authority_state": "EXPLICITLY_MISSING",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": true,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0290424222500008
+  },
+  {
+    "id": "route2-lab_measurement-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8740268022500004
+  },
+  {
+    "id": "route2-lab_measurement-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "both",
+      "quote_analysis": false,
+      "explicit_authorization_statement": true,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0290424222500008
+  },
+  {
+    "id": "route2-lab_measurement-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8740268022500004
+  },
+  {
+    "id": "route2-lab_measurement-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8740268022500004
+  },
+  {
+    "id": "route2-playlist_order-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.7940321092499971
+  },
+  {
+    "id": "route2-playlist_order-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.7940321092499971
+  },
+  {
+    "id": "route2-playlist_order-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.7940321092499971
+  },
+  {
+    "id": "route2-playlist_order-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.7940321092499971
+  },
+  {
+    "id": "route2-inventory_bin-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8914580432499974
+  },
+  {
+    "id": "route2-inventory_bin-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8914580432499974
+  },
+  {
+    "id": "route2-inventory_bin-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8914580432499974
+  },
+  {
+    "id": "route2-inventory_bin-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.8914580432499974
+  },
+  {
+    "id": "route2-photo_album-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.9742073775000009
+  },
+  {
+    "id": "route2-photo_album-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.9742073775000009
+  },
+  {
+    "id": "route2-photo_album-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.9742073775000009
+  },
+  {
+    "id": "route2-photo_album-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 0.9742073775000009
+  },
+  {
+    "id": "route2-report_layout-quote",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0181786959999997
+  },
+  {
+    "id": "route2-report_layout-authorized",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "NORMAL",
+    "decision": "NORMAL",
+    "model_decision": "NORMAL",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0181786959999997
+  },
+  {
+    "id": "route2-report_layout-mismatch",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "RISK",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0181786959999997
+  },
+  {
+    "id": "route2-report_layout-unknown",
+    "source": "assistant_authored_bilingual_route_confirmation_v2",
+    "expected": "UNKNOWN",
+    "decision": "RISK",
+    "model_decision": "RISK",
+    "authority_state": "UNASSESSED",
+    "execution_authorized": false,
+    "profile": {
+      "head": "evidence_only",
+      "quote_analysis": false,
+      "explicit_authorization_statement": false,
+      "declared_approval_missing": false,
+      "grammar": "narrow explicit English; otherwise default evidence reviewer"
+    },
+    "seconds": 1.0181786959999997
+  }
+]

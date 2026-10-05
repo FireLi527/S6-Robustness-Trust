@@ -1,0 +1,280 @@
+{
+  "state": "PASS",
+  "classifier_records": 1473,
+  "direct_records": 162,
+  "common_english": {
+    "classifier": {
+      "injecagent": {
+        "n": 64,
+        "decisions": {
+          "RISK": 49,
+          "NORMAL": 15
+        },
+        "risk_recall": {
+          "hits": 49,
+          "n": 64,
+          "rate": 0.765625,
+          "wilson95": [
+            0.6486650974929234,
+            0.8525023278036498
+          ]
+        },
+        "normal_false_risk": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_automatic": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 0,
+          "n": 64,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.056626022971156334
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 64,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.056626022971156334
+          ]
+        },
+        "median_seconds": 0.023434495000003608
+      },
+      "secopd": {
+        "n": 80,
+        "decisions": {
+          "NORMAL": 46,
+          "RISK": 34
+        },
+        "risk_recall": {
+          "hits": 33,
+          "n": 40,
+          "rate": 0.825,
+          "wilson95": [
+            0.6804970794560755,
+            0.9125469700311694
+          ]
+        },
+        "normal_false_risk": {
+          "hits": 1,
+          "n": 40,
+          "rate": 0.025,
+          "wilson95": [
+            0.0044267174077949195,
+            0.1288165948800778
+          ]
+        },
+        "normal_automatic": {
+          "hits": 39,
+          "n": 40,
+          "rate": 0.975,
+          "wilson95": [
+            0.8711834051199223,
+            0.9955732825922052
+          ]
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 0,
+          "n": 80,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.0458197362645751
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 80,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.0458197362645751
+          ]
+        },
+        "median_seconds": 0.014984132999984467,
+        "accuracy": {
+          "hits": 72,
+          "n": 80,
+          "rate": 0.9,
+          "wilson95": [
+            0.8148912101660255,
+            0.9484530008223144
+          ]
+        }
+      }
+    },
+    "direct": {
+      "injecagent": {
+        "n": 64,
+        "decisions": {
+          "RISK": 50,
+          "INVALID": 13,
+          "NORMAL": 1
+        },
+        "risk_recall": {
+          "hits": 50,
+          "n": 64,
+          "rate": 0.78125,
+          "wilson95": [
+            0.665669836692222,
+            0.8649780253865025
+          ]
+        },
+        "normal_false_risk": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "normal_automatic": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 13,
+          "n": 64,
+          "rate": 0.203125,
+          "wilson95": [
+            0.12273302562695812,
+            0.3171386755121659
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 64,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.056626022971156334
+          ]
+        },
+        "median_seconds": 3.2073619120000103
+      },
+      "secopd": {
+        "n": 80,
+        "decisions": {
+          "NORMAL": 40,
+          "RISK": 35,
+          "INVALID": 5
+        },
+        "risk_recall": {
+          "hits": 34,
+          "n": 40,
+          "rate": 0.85,
+          "wilson95": [
+            0.7092737396097997,
+            0.9293890829149256
+          ]
+        },
+        "normal_false_risk": {
+          "hits": 1,
+          "n": 40,
+          "rate": 0.025,
+          "wilson95": [
+            0.0044267174077949195,
+            0.1288165948800778
+          ]
+        },
+        "normal_automatic": {
+          "hits": 35,
+          "n": 40,
+          "rate": 0.875,
+          "wilson95": [
+            0.7388757932976187,
+            0.9454058022645873
+          ]
+        },
+        "unknown_recall": {
+          "hits": 0,
+          "n": 0,
+          "rate": null,
+          "wilson95": null
+        },
+        "invalid": {
+          "hits": 5,
+          "n": 80,
+          "rate": 0.0625,
+          "wilson95": [
+            0.026988977697985535,
+            0.1381032915335177
+          ]
+        },
+        "review": {
+          "hits": 0,
+          "n": 80,
+          "rate": 0.0,
+          "wilson95": [
+            0,
+            0.0458197362645751
+          ]
+        },
+        "median_seconds": 3.1040579460000117,
+        "accuracy": {
+          "hits": 69,
+          "n": 80,
+          "rate": 0.8625,
+          "wilson95": [
+            0.7703270280036946,
+            0.9214536632044886
+          ]
+        }
+      }
+    }
+  },
+  "secopd_both_correct": {
+    "classifier": {
+      "correct": 32,
+      "n": 40
+    },
+    "direct": {
+      "correct": 29,
+      "n": 40
+    }
+  },
+  "frozen_baseline_same_injecagent": {
+    "rule": {
+      "flagged": 2,
+      "n": 64
+    },
+    "semantic": {
+      "flagged": 0,
+      "n": 64
+    },
+    "hybrid": {
+      "flagged": 2,
+      "n": 64
+    }
+  },
+  "limitations": "EXPOSED diagnostic; probability/logit inference not rerun; token identity, evidence, score aggregation and metrics replayed"
+}

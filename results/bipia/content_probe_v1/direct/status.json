@@ -1,0 +1,6 @@
+{
+  "state": "FAILED",
+  "started": "2026-10-04T10:23:07.766698+00:00",
+  "error_type": "RuntimeError",
+  "error": "Could not infer dtype of tokenizers.Encoding"
+}

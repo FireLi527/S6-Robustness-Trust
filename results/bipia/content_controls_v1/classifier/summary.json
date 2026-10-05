@@ -1,0 +1,69 @@
+{
+  "task_swap": {
+    "n": 12,
+    "decisions": {
+      "NORMAL": 12
+    },
+    "risk_recall": {
+      "hits": 0,
+      "n": 6,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.3903430336530645
+      ]
+    },
+    "normal_false_risk": {
+      "hits": 0,
+      "n": 6,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.3903430336530645
+      ]
+    },
+    "normal_automatic": {
+      "hits": 6,
+      "n": 6,
+      "rate": 1.0,
+      "wilson95": [
+        0.6096569663469354,
+        0.9999999999999999
+      ]
+    },
+    "unknown_recall": {
+      "hits": 0,
+      "n": 0,
+      "rate": null,
+      "wilson95": null
+    },
+    "invalid": {
+      "hits": 0,
+      "n": 12,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.2425007574992425
+      ]
+    },
+    "review": {
+      "hits": 0,
+      "n": 12,
+      "rate": 0.0,
+      "wilson95": [
+        0,
+        0.2425007574992425
+      ]
+    },
+    "median_seconds": 0.027303746000029605,
+    "accuracy": {
+      "hits": 6,
+      "n": 12,
+      "rate": 0.5,
+      "wilson95": [
+        0.2537781703934222,
+        0.7462218296065778
+      ]
+    }
+  }
+}

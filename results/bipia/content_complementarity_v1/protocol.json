@@ -1,0 +1,25 @@
+{
+  "purpose": "POST-HOC exposed output overlap and fixed descriptive fusion; no training, thresholds or new validation",
+  "input_sha256": {
+    "pg": "171b715abf385526315cd8a554269ded6583e4f7262a4abb5ce53b3ae4182063",
+    "pa": "18cd7e536e4bf540f67ec9350b99cc7a1feb52e89347ad332d63c4c40b1c2ab5",
+    "q": "6e31871cc91a2cfe3a7f03d4d9339956dff638ca460efe6d0c800dd594d207c2"
+  },
+  "rules": {
+    "or": "either RISK -> RISK; both NORMAL -> NORMAL; otherwise UNKNOWN",
+    "consensus_review": "both same valid label -> that label; disagreement or invalid -> UNKNOWN"
+  },
+  "limits": "Qwen lacks full InjecAgent/NotInject predictions; no combined pressure FPR claim",
+  "environment": {
+    "python": "3.13.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.0",
+      "torch": "2.13.0+cpu",
+      "transformers": "5.15.1",
+      "tokenizers": "0.22.2"
+    }
+  }
+}

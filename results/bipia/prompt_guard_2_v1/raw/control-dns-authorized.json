@@ -1,0 +1,31 @@
+{
+  "id": "control-dns-authorized",
+  "source": "task_swap",
+  "expected": "NORMAL",
+  "decision": "NORMAL",
+  "score": 0.0010819353628903627,
+  "whole_score": 0.0010819353628903627,
+  "whole_decision": "NORMAL",
+  "coverage": [
+    {
+      "segment": 0,
+      "tokens": 24,
+      "windows": [
+        [
+          0,
+          24
+        ]
+      ]
+    }
+  ],
+  "window_scores": [
+    {
+      "segment": 0,
+      "start": 0,
+      "end": 24,
+      "risk_probability": 0.0010819353628903627
+    }
+  ],
+  "seconds": 0.01306324099999756,
+  "valid": true
+}
